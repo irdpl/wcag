@@ -80,7 +80,7 @@
                <h2>Intent</h2>
                <p>The purpose of this guideline is to ensure that all non-text content is also available
                   in 
-                  <a href="#dfn-text">text</a>. "Text" refers to electronic text, not an image of text. Electronic text has the
+                  <a href="#">text</a>. "Text" refers to electronic text, not an image of text. Electronic text has the
                   unique advantage that it is presentation neutral. That is, it
                   can be rendered visually, auditorily, tactilely, or by any combination. As a result,
                   information rendered in electronic text can be presented in whatever form best meets
@@ -107,7 +107,7 @@
             <section id="success-criteria">
                <h2>Success Criteria for this Guideline</h2>
                <ul>
-                  <li><a href="non-text-content">1.1.1 Non-text Content</a></li>
+                  <li><a href="tre%C5%9B%C4%87-nietekstowa">1.1.1 Treść nietekstowa</a></li>
                </ul>
             </section>
             <section id="key-terms">
@@ -115,206 +115,6 @@
                   <summary>
                      <h2>Key Terms</h2>
                   </summary>
-                  <dt id="dfn-assistive-technology">assistive technology</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">hardware and/or software that acts as a <a href="#dfn-user-agent">user agent</a>, or along with a mainstream user agent, to provide functionality to meet the requirements
-                           of users with disabilities that go beyond those offered by mainstream user agents
-                           
-                        </p>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
-                           <p>functionality provided by assistive technology includes alternative presentations
-                              (e.g., as synthesized speech or magnified content), alternative input methods (e.g.,
-                              voice), additional navigation or orientation mechanisms, and content transformations
-                              (e.g., to make tables more accessible).
-                              
-                           </p>
-                        </div>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
-                           <p>Assistive technologies often communicate data and messages with mainstream user agents
-                              by using and monitoring APIs.
-                              
-                           </p>
-                        </div>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
-                           <p>The distinction between mainstream user agents and assistive technologies is not absolute.
-                              Many mainstream user agents provide some features to assist individuals with disabilities.
-                              The basic difference is that mainstream user agents target broad and diverse audiences
-                              that usually include people with and without disabilities. Assistive technologies
-                              target narrowly defined populations of users with specific disabilities. The assistance
-                              provided by an assistive technology is more specific and appropriate to the needs
-                              of its target users. The mainstream user agent may provide important functionality
-                              to assistive technologies like retrieving Web content from program objects or parsing
-                              markup into identifiable bundles.
-                              
-                           </p>
-                        </div>
-                        
-                        
-                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
-                           
-                           <p>Assistive technologies that are important in the context of this document include
-                              the following:
-                              
-                           </p>
-                           
-                        </aside>
-                        
-                        
-                        <ul xmlns="http://www.w3.org/1999/xhtml">
-                           
-                           
-                           <li>screen magnifiers, and other visual reading assistants, which are used by people with
-                              visual, perceptual and physical print disabilities to change text font, size, spacing,
-                              color, synchronization with speech, etc. in order to improve the visual readability
-                              of rendered text and images;
-                              
-                           </li>
-                           
-                           
-                           <li>screen readers, which are used by people who are blind to read textual information
-                              through synthesized speech or braille;
-                              
-                           </li>
-                           
-                           
-                           <li>text-to-speech software, which is used by some people with cognitive, language, and
-                              learning disabilities to convert text into synthetic speech;
-                              
-                           </li>
-                           
-                           
-                           <li>speech recognition software, which may be used by people who have some physical disabilities;</li>
-                           
-                           
-                           <li>alternative keyboards, which are used by people with certain physical disabilities
-                              to simulate the keyboard (including alternate keyboards that use head pointers, single
-                              switches, sip/puff and other special input devices.);
-                              
-                           </li>
-                           
-                           
-                           <li>alternative pointing devices, which are used by people with certain physical disabilities
-                              to simulate mouse pointing and button activations.
-                              
-                           </li>
-                           
-                           
-                        </ul>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-human-language">human language</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">language that is spoken, written or signed (through visual or tactile means) to communicate
-                           with humans
-                           
-                        </p>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
-                           <p>See also <a href="#dfn-sign-language">sign language</a>.
-                              
-                           </p>
-                        </div>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-programmatically-determined">programmatically determined</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">determined by software from author-supplied data provided in a way that different
-                           <a href="#dfn-user-agent">user agents</a>, including <a href="#dfn-assistive-technology">assistive technologies</a>, can extract and present this information to users in different modalities
-                           
-                        </p>
-                        
-                        
-                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
-                           
-                           <p>Determined in a markup language from elements and attributes that are accessed directly
-                              by commonly available assistive technology.
-                              
-                           </p>
-                           
-                        </aside>
-                        
-                        
-                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
-                           
-                           <p>Determined from technology-specific data structures in a non-markup language and exposed
-                              to assistive technology via an accessibility API that is supported by commonly available
-                              assistive technology.
-                              
-                           </p>
-                           
-                        </aside>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-sign-language">sign language</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">a language using combinations of movements of the hands and arms, facial expressions,
-                           or body positions to convey meaning
-                           
-                        </p>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-text">text</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">sequence of characters that can be <a href="#dfn-programmatically-determined">programmatically determined</a>, where the sequence is expressing something in <a href="#dfn-human-language">human language</a>
-                           
-                        </p>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-user-agent">user agent</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">any software that retrieves and presents Web content for users</p>
-                        
-                        
-                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
-                           
-                           <p>Web browsers, media players, plug-ins, and other programs — including <a href="#dfn-assistive-technology">assistive technologies</a> — that help in retrieving, rendering, and interacting with Web content.
-                              
-                           </p>
-                           
-                        </aside>
-                        
-                        
-                     </definition>
-                  </dd>
                </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
@@ -338,7 +138,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 24 February 2023.
+            <p><strong>Date:</strong> Updated 1 March 2023.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

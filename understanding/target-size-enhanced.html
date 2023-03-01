@@ -41,11 +41,11 @@
                         <svg alt="up" focusable="false" aria-hidden="true" class="icon-arrow-up-thin pager-icon" viewBox="0 0 16 16">
                            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path>
                         </svg> Guideline: Input Modalities</a></li>
-                  <li class="nav__item"><a href="motion-actuation">
+                  <li class="nav__item"><a href="aktywowanie-ruchem">
                         <svg focusable="false" aria-hidden="true" class="icon-arrow-left-thin pager-icon" viewBox="0 0 16 16">
                            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path>
-                        </svg>Previous SC: Motion Actuation</a></li>
-                  <li class="nav__item"><a href="concurrent-input-mechanisms">Next SC: Concurrent Input Mechanisms
+                        </svg>Previous SC: Aktywowanie ruchem</a></li>
+                  <li class="nav__item"><a href="r%C3%B3wnoleg%C5%82y-mechanizm-wprowadzania-danych">Next SC: Równoległy mechanizm wprowadzania danych
                         <svg focusable="false" aria-hidden="true" class="icon-arrow-right-thin pager-icon" viewBox="0 0 16 16">
                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                         </svg></a></li>
@@ -75,29 +75,30 @@
             <aside class="box">
                <header class="box-h  box-h-icon"> Success Criterion (SC)</header>
                <div class="box-i">
-                  <p>The size of the <a href="#dfn-target">target</a> for <a href="#dfn-pointer-input">pointer inputs</a> is at least 44 by 44 <a href="#dfn-css-pixel">CSS pixels</a> except when:
+                  <p>Rozmiar <a href="#">celu</a> 
+                     <a href="#">punktu dotykowego</a> wynosi co najmniej 44 na 44 <a href="#">piksele CSS</a>, chyba że: 
                   </p>
                   <dl>
                      	                 
-                     <dt>Equivalent</dt> 
+                     <dt>Odpowiednik</dt> 
                      
-                     <dd>The target is available through an equivalent link or control on the same page that
-                        is at least 44 by 44 CSS pixels;
+                     <dd>Cel jest dostępny za pośrednictwem równoważnego łącza lub kontrolki na tej samej stronie,
+                        która ma co najmniej 44 na 44 piksele CSS;
                      </dd>
                      	                 
-                     <dt>Inline</dt> 
+                     <dt>Śródliniowe</dt> 
                      
-                     <dd>The target is in a sentence or block of text;</dd>
+                     <dd>Cel znajduje się w zdaniu lub w bloku tekstu;</dd>
                      	                 
-                     <dt>User Agent Control</dt> 
+                     <dt>Kontrola programu użytkownika</dt> 
                      
-                     <dd>The size of the target is determined by the user agent and is not modified by the
-                        author;
+                     <dd>Rozmiar obiektu docelowego jest określony przez program użytkownika (przeglądarkę)
+                        i nie jest modyfikowany przez autora;
                      </dd>
                      	                 
-                     <dt>Essential</dt> 
+                     <dt>Istotny</dt> 
                      
-                     <dd>A particular presentation of the target is <a href="#dfn-essential">essential</a> to the information being conveyed.
+                     <dd>Szczególna prezentacja celu ma <a href="#">istotne</a> znaczenie dla przekazywanych informacji.
                      </dd>
                      
                   </dl>
@@ -249,79 +250,6 @@
                   <summary>
                      <h2>Key Terms</h2>
                   </summary>
-                  <dt id="dfn-css-pixel">css pixel</dt>
-                  <dd>
-                     <definition xmlns="">
-                        					
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">visual angle of about 0.0213 degrees</p>
-                        					
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">A CSS pixel is the canonical unit of measure for all lengths and measurements in CSS.
-                           This unit is density-independent, and distinct from actual hardware pixels present
-                           in a display. User agents and operating systems should ensure that a CSS pixel is
-                           set as closely as possible to the <a href="https://www.w3.org/TR/css3-values/#reference-pixel">CSS Values and Units Module Level 3 reference pixel</a> [[!css3-values]], which takes into account the physical dimensions of the display
-                           and the assumed viewing distance (factors that cannot be determined by content authors).
-                           
-                        </p>
-                        				
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-essential">essential</dt>
-                  <dd>
-                     <definition xmlns="">
-                        					
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">if removed, would fundamentally change the information or functionality of the content,
-                           <strong>and</strong> information and functionality cannot be achieved in another way that would conform
-                           
-                        </p>
-                        				
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-pointer-input">pointer input</dt>
-                  <dd>
-                     <definition xmlns="">
-                        					
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">input from a device that can target a specific coordinate (or set of coordinates)
-                           on a screen,
-                           such as a mouse, pen, or touch contact
-                           
-                        </p>
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
-                           <p>See the <a href="https://www.w3.org/TR/pointerevents/#dfn-pointer">Pointer Events
-                                 definition for "pointer"</a> [[!pointerevents]].
-                           </p>
-                        </div>
-                        				
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-target">target</dt>
-                  <dd>
-                     <definition xmlns="">
-                        					
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">region of the display that will accept a pointer action, such as the interactive area
-                           of a user interface component
-                        </p> 
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
-                           <p>If two or more targets are overlapping, the overlapping area should not be included
-                              in the measurement of the target size, except when the overlapping targets perform
-                              the same action or open the same page.
-                           </p>
-                        </div>
-                        
-                        
-                     </definition>
-                  </dd>
                </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
@@ -345,7 +273,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 24 February 2023.
+            <p><strong>Date:</strong> Updated 1 March 2023.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

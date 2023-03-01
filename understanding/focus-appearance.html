@@ -41,10 +41,10 @@
                         <svg alt="up" focusable="false" aria-hidden="true" class="icon-arrow-up-thin pager-icon" viewBox="0 0 16 16">
                            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path>
                         </svg> Guideline: Navigable</a></li>
-                  <li class="nav__item"><a href="section-headings">
+                  <li class="nav__item"><a href="nag%C5%82%C3%B3wki-sekcji">
                         <svg focusable="false" aria-hidden="true" class="icon-arrow-left-thin pager-icon" viewBox="0 0 16 16">
                            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path>
-                        </svg>Previous SC: Section Headings</a></li>
+                        </svg>Previous SC: Nagłówki sekcji</a></li>
                   <li class="nav__item"><a href="focus-not-obscured-minimum">Next SC: Focus Not Obscured (Minimum)
                         <svg focusable="false" aria-hidden="true" class="icon-arrow-right-thin pager-icon" viewBox="0 0 16 16">
                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
@@ -85,7 +85,7 @@
                         <ul>
                            
                            <li>
-                              <a href="#dfn-encloses">encloses</a> the <a href="#dfn-user-interface-component">user interface component</a>  or sub-component that is focused, and
+                              <a href="#dfn-encloses">encloses</a> the <a href="#">user interface component</a>  or sub-component that is focused, and
                            </li>
                            
                            <li>has a contrast ratio of at least 3:1 between the same pixels in the focused and unfocused
@@ -102,7 +102,7 @@
                         
                         <ul>
                            
-                           <li>is at least as large as the area of a 1 <a href="#dfn-css-pixel">CSS pixel</a> thick <a href="#dfn-perimeter">perimeter</a> of the unfocused component or sub-component, or is at least as large as a 4 CSS pixel
+                           <li>is at least as large as the area of a 1 <a href="#">CSS pixel</a> thick <a href="#dfn-perimeter">perimeter</a> of the unfocused component or sub-component, or is at least as large as a 4 CSS pixel
                               thick line along the shortest side of the <a href="#dfn-minimum-bounding-box">minimum bounding box</a> of the unfocused component or sub-component, and
                            </li>
                            
@@ -533,7 +533,7 @@
                      
                      <div class="note">
                         <div role="heading" class="note-title marker" aria-level="5">Note</div>
-                        <p>A <a href="#dfn-css-pixel">CSS pixel</a> is what developers use in CSS declarations like “width: 200px”. It is device-independent
+                        <p>A <a href="#">CSS pixel</a> is what developers use in CSS declarations like “width: 200px”. It is device-independent
                            and not to be confused with device pixels which vary depending on the physical pixel
                            density. <br />
                            The rest of this document notates CSS pixels as "px".
@@ -1195,25 +1195,6 @@
                   <summary>
                      <h2>Key Terms</h2>
                   </summary>
-                  <dt id="dfn-css-pixel">css pixel</dt>
-                  <dd>
-                     <definition xmlns="">
-                        					
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">visual angle of about 0.0213 degrees</p>
-                        					
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">A CSS pixel is the canonical unit of measure for all lengths and measurements in CSS.
-                           This unit is density-independent, and distinct from actual hardware pixels present
-                           in a display. User agents and operating systems should ensure that a CSS pixel is
-                           set as closely as possible to the <a href="https://www.w3.org/TR/css3-values/#reference-pixel">CSS Values and Units Module Level 3 reference pixel</a> [[!css3-values]], which takes into account the physical dimensions of the display
-                           and the assumed viewing distance (factors that cannot be determined by content authors).
-                           
-                        </p>
-                        				
-                        
-                     </definition>
-                  </dd>
                   <dt id="dfn-encloses">encloses</dt>
                   <dd>
                      <definition xmlns="">
@@ -1272,58 +1253,6 @@
                         
                      </definition>
                   </dd>
-                  <dt id="dfn-user-interface-component">user interface component</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">a part of the content that is perceived by users as a single control for a distinct
-                           function
-                           
-                        </p>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
-                           <p>Multiple user interface components may be implemented as a single programmatic element.
-                              "Components" here is not tied to programming techniques, but rather to what the user
-                              perceives as separate controls.
-                              
-                           </p>
-                        </div>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
-                           <p>User interface components include form elements and links as well as components generated
-                              by scripts.
-                              
-                           </p>
-                        </div>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
-                           <p>What is meant by "component" or "user interface component" here is also sometimes
-                              called "user interface element".
-                              
-                           </p>
-                        </div>
-                        
-                        
-                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
-                           
-                           <p>An applet has a "control" that can be used to move through content by line or page
-                              or random access. Since each of these would need to have a name and be settable independently,
-                              they would each be a "user interface component."
-                              
-                           </p>
-                           
-                        </aside>
-                        
-                        
-                     </definition>
-                  </dd>
                </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
@@ -1347,7 +1276,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 24 February 2023.
+            <p><strong>Date:</strong> Updated 1 March 2023.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
