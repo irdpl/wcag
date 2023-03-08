@@ -134,11 +134,24 @@ var respecConfig = {
 		{ uri: 'wcag21.pdf', label: "PDF version" }
 	],
 	*/
+  
+  logos: [
+      {
+        src: "https://avatars.githubusercontent.com/u/126906955?s=200&v=4",
+        url: "https://github.com/irdpl/wcag",
+        alt: "Polska Izba Rzemiosła Dostępnościowego",
+        width: 68,
+        height: 68,
+        id: "irdpl-logo",
+      },
+    ],
+    
+    latestVersion: null,
 	
 	// errata: 'https://www.w3.org/2010/02/rdfa/errata.html',
 	
 	// name of the WG
-	group:           "ag",
+	group: "ag",
 	github: "w3c/wcag",
 
 	maxTocLevel: 4,
