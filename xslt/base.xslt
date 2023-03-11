@@ -133,7 +133,7 @@
 	
 	<xsl:template match="html:p[@class = 'note'] | html:div[@class = 'note']">
 		<div class="note">
-			<div role="heading" class="note-title marker" aria-level="{count(ancestor::html:section) + 2}">Note</div>
+			<div role="heading" class="note-title marker" aria-level="{count(ancestor::html:section) + 2}">Uwaga</div>
 			<xsl:copy><xsl:apply-templates select="@*[not(name() = 'class')]|node()"/></xsl:copy>
 		</div>
 	</xsl:template>
@@ -142,7 +142,7 @@
 		<xsl:copy>
 			<xsl:apply-templates select="@*[not(name() = 'class')]"/>
 			<div class="note">
-				<div role="heading" class="note-title marker" aria-level="{count(ancestor::html:section) + 2}">Note</div>
+				<div role="heading" class="note-title marker" aria-level="{count(ancestor::html:section) + 2}">Uwaga</div>
 				<xsl:apply-templates/>
 			</div>
 		</xsl:copy>

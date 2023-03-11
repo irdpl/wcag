@@ -252,10 +252,10 @@
         <xsl:otherwise>
           <em><xsl:choose>
             <xsl:when test="$notenumber = '1'">
-              <xsl:text>Note: </xsl:text>
+              <xsl:text>Uwaga: </xsl:text>
             </xsl:when>
             <xsl:otherwise>
-              <xsl:text>Note </xsl:text>
+              <xsl:text>Uwaga </xsl:text>
               <xsl:number count="p" format="1"/>:
 					</xsl:otherwise>
           </xsl:choose></em>

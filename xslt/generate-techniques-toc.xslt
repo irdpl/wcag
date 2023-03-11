@@ -39,7 +39,7 @@
 		</xsl:variable>
 		<h2 id="{$technology-id}">
 			<xsl:value-of select="$technology-title"/>
-			<span class="permalink"><a href="#{$technology-id}" aria-label="Permalink for {$technology-title}" title="Permalink for {$technology-title}"><span>§</span></a></span>
+			<span class="permalink"><a href="#{$technology-id}" aria-label="Stały link do {$technology-title}" title="Stały link do {$technology-title}"><span>§</span></a></span>
 		</h2>
 		<ul class="toc-wcag-docs">
 		<xsl:apply-templates select="technique">
