@@ -48,7 +48,9 @@
 		<xsl:choose>
 			<xsl:when test="$title = 'Parsing (Obsolete and removed)'">parsing</xsl:when>
 			<xsl:otherwise>
-				<xsl:value-of select="lower-case(replace(replace($title, '\s+', '-'), '[\s,\():]+', ''))"/>
+				<xsl:value-of select=" lower-case( replace( replace( replace( replace( replace( replace( replace( replace( replace( replace( replace( 
+					$title, '\s+', '-' ), '[\s,\():]+', ''
+				), 'ą', 'a' ), 'ć', 'c' ), 'ę', 'e' ), 'ł', 'l' ), 'ń', 'n' ), 'ó', 'o' ), 'ś', 's' ), 'ź', 'z' ), 'ż', 'z' ) )"/>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:function>

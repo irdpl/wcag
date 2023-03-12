@@ -1,7 +1,22 @@
 var version="22";
 
 function titleToPathFrag (title) {
-	return title.toLowerCase().replace(/[\s,]+/g, "-").replace(/[\(\)]/g, "");
+	return title.toLowerCase()
+    .replace(/[\s,]+/g, "-")
+    .replace(/[\(\)]/g, "")
+    .replace(/[ąćęłńóśźż]/g, function(match) {
+      switch(match) {
+        case 'ą': return 'a';
+        case 'ć': return 'c';
+        case 'ę': return 'e';
+        case 'ł': return 'l';
+        case 'ń': return 'n';
+        case 'ó': return 'o';
+        case 'ś': return 's';
+        case 'ź': return 'z';
+        case 'ż': return 'z';
+      }
+    });
 }
 
 function findHeading(el) {
