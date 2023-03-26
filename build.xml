@@ -12,7 +12,7 @@
 	<property name="uri.prefix" value="file:///" description="Prefix if any that must be prepended to URIs to make it resolve on the platform"/>
 	<property name="guidelines.version" value="22" description="Which version of WCAG is being built"/>
 	<property name="repository.name" value="irdpl" description="Project folder name"/>
-	<property name="repository.branch" value="structure-update" description="Version of a project "/>
+	<property name="repository.branch" value="pl-WCAG-2.2" description="Version of a project "/>
 	<!--property name="repository.branch" value="pl-WCAG-2.2" description="Version of a project "/-->
 	<property name="w3ccvs.location" location="../../../w3ccvs"/>
 	
