@@ -48,7 +48,9 @@
 		<xsl:choose>
 			<xsl:when test="$title = 'Parsing (Obsolete and removed)'">parsing</xsl:when>
 			<xsl:otherwise>
-				<xsl:value-of select="lower-case(replace(replace($title, '\s+', '-'), '[\s,\():]+', ''))"/>
+				<xsl:value-of select=" lower-case( replace( replace( replace( replace( replace( replace( replace( replace( replace( replace( replace( 
+					$title, '\s+', '-' ), '[\s,\():]+', ''
+				), 'ą', 'a' ), 'ć', 'c' ), 'ę', 'e' ), 'ł', 'l' ), 'ń', 'n' ), 'ó', 'o' ), 'ś', 's' ), 'ź', 'z' ), 'ż', 'z' ) )"/>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:function>
@@ -133,7 +135,7 @@
 	
 	<xsl:template match="html:p[@class = 'note'] | html:div[@class = 'note']">
 		<div class="note">
-			<div role="heading" class="note-title marker" aria-level="{count(ancestor::html:section) + 2}">Note</div>
+			<div role="heading" class="note-title marker" aria-level="{count(ancestor::html:section) + 2}">Uwaga</div>
 			<xsl:copy><xsl:apply-templates select="@*[not(name() = 'class')]|node()"/></xsl:copy>
 		</div>
 	</xsl:template>
@@ -142,7 +144,7 @@
 		<xsl:copy>
 			<xsl:apply-templates select="@*[not(name() = 'class')]"/>
 			<div class="note">
-				<div role="heading" class="note-title marker" aria-level="{count(ancestor::html:section) + 2}">Note</div>
+				<div role="heading" class="note-title marker" aria-level="{count(ancestor::html:section) + 2}">Uwaga</div>
 				<xsl:apply-templates/>
 			</div>
 		</xsl:copy>

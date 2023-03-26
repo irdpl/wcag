@@ -1286,7 +1286,7 @@
 	<xsl:template match="note">
 		<div class="note">
 			<p class="prefix">
-				<b>Note:</b>
+				<b>Uwaga:</b>
 			</p>
 			<xsl:apply-templates/>
 		</div>

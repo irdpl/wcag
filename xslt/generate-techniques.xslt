@@ -400,13 +400,13 @@
 			<xsl:choose>
 				<xsl:when test="$technology = 'flash'">
 					<div class="note">
-						<div role="heading" class="note-title marker" aria-level="3">Note</div>
+						<div role="heading" class="note-title marker" aria-level="3">Uwaga</div>
 						<p>Adobe has plans to stop updating and distributing the Flash Player at the end of 2020, and encourages authors interested in creating accessible web content to use HTML.</p>
 					</div>
 				</xsl:when>
 				<xsl:when test="$technology = 'silverlight'">
 					<div class="note">
-						<div role="heading" class="note-title marker" aria-level="3">Note</div>
+						<div role="heading" class="note-title marker" aria-level="3">Uwaga</div>
 						<p>Microsoft has stopped updating and distributing Silverlight, and authors are encouraged to use HTML for accessible web content.</p>
 					</div>
 				</xsl:when>
@@ -591,7 +591,7 @@
 	<xsl:template match="html:section[@class='example']">
 		<xsl:variable name="heading" select="wcag:find-heading(.)"/>
 		<xsl:variable name="heading-text">
-			<xsl:text>Example </xsl:text>
+			<xsl:text>Przykład </xsl:text>
 			<xsl:value-of select="count(preceding-sibling::html:section[@class='example']) + 1"/>
 			<xsl:if test="normalize-space($heading) != ''">
 				<xsl:text>: </xsl:text>
