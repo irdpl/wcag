@@ -2,7 +2,7 @@
 <!-- This is a build file for Apache ant (http://ant.apache.org/). This has been tested with Ant 1.7. -->
 <project name="wcag" basedir="." default="usage">
 	
-	<description>Generate WCAG 2.1 and related documents</description>
+	<description>Generate WCAG 2.2 and related documents</description>
 	
 	<!-- Load overriding properties -->
 	<xmlproperty file="build.properties" keeproot="false" semanticattributes="true"/>
@@ -11,6 +11,9 @@
 	<property name="outputdir" location="." description="Directory within which the output folders are created, normally &quot;../YYYY&quot; unless doing TR in which case it is &quot;../../../TR/&lt;YYYY&gt;&quot;"/>
 	<property name="uri.prefix" value="file:///" description="Prefix if any that must be prepended to URIs to make it resolve on the platform"/>
 	<property name="guidelines.version" value="22" description="Which version of WCAG is being built"/>
+	<property name="repository.name" value="irdpl" description="Project folder name"/>
+	<property name="repository.branch" value="pl-WCAG-2.2" description="Version of a project "/>
+	<!--property name="repository.branch" value="pl-WCAG-2.2" description="Version of a project "/-->
 	<property name="w3ccvs.location" location="../../../w3ccvs"/>
 	
 	<property name="xslt.factory" value="net.sf.saxon.TransformerFactoryImpl" description="Class name of the XSLT transformer factory, which sets which XSLT engine to use; must be an XSLT 2.0 processor"/>
@@ -51,6 +54,7 @@
 		<delete file="${inputdir.techniques}/technique-associations.xml" failonerror="false"/>
 		<delete file="${inputdir.techniques}/about-flat.html" failonerror="false"/>
 		<delete file="${inputdir.understanding}/about-flat.html" failonerror="false"/>
+		<delete file="${inputdir.understanding}/toc.html" failonerror="false"/>
 		<delete file="output.html" failonerror="false"/>
 		<delete dir="output" failonerror="false"/>
 		<delete dir="input" failonerror="false"/>
@@ -107,7 +111,7 @@
 		<copy file="guidelines/guidelines.css" todir="output/guidelines/${guidelines.version}"/>
 		<copy file="guidelines/relative-luminance.html" todir="output/guidelines/${guidelines.version}"/>
 		<exec executable="curl">
-			<arg value="&quot;https://labs.w3.org/spec-generator/?type=respec&amp;url=https://raw.githack.com/w3c/wcag/master/guidelines/index.html&quot;"/>
+			<arg value="https://labs.w3.org/spec-generator/?type=respec&amp;url=https://raw.githack.com/${repository.name}/wcag/${repository.branch}/guidelines/index.html"/>
 			<arg value="-o"/>
 			<arg value="output/guidelines/${guidelines.version}/index.html"/>
 			<arg value="-f"/>
