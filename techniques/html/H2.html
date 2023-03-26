@@ -56,7 +56,10 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/tre%C5%9B%C4%87-nietekstowa">1.1.1: Treść nietekstowa</a></span>.
+                  <p>This technique is
+                     
+                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/tresc-nietekstowa">1.1.1: Treść nietekstowa</a> and <strong>Advisory</strong> for <a href="https://w3c.github.io/wcag/understanding/cel-lacza-w-kontekscie">2.4.4: Cel łącza (w kontekście)</a> and <strong>Advisory</strong> for <a href="https://w3c.github.io/wcag/understanding/cel-lacza-z-samego-lacza">2.4.9: Cel łącza (z samego łącza)</a>
+                     					.
                   </p>
                </div>
             </aside>
@@ -64,8 +67,15 @@
             <section id="applicability">
                <h2 id="applicability">Applicability</h2>
                <p>HTML documents that contain links.</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/tre%C5%9B%C4%87-nietekstowa">1.1.1: Treść nietekstowa</a> (Sufficient)</span>.
-               </p>
+               <p>This technique relates to:</p>
+               <ul>
+                  <li><a href="https://w3c.github.io/wcag/understanding/tresc-nietekstowa">1.1.1: Treść nietekstowa</a> (Sufficient)
+                  </li>
+                  <li><a href="https://w3c.github.io/wcag/understanding/cel-lacza-w-kontekscie">2.4.4: Cel łącza (w kontekście)</a> (Advisory)
+                  </li>
+                  <li><a href="https://w3c.github.io/wcag/understanding/cel-lacza-z-samego-lacza">2.4.9: Cel łącza (z samego łącza)</a> (Advisory)
+                  </li>
+               </ul>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -97,15 +107,15 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
+               <section class="example" id="przyklad-1">
+                  <h3>Przykład 1</h3>
                   <p>The icon and text are contained in the same <code class="language-html">a</code> element.
                   </p><pre xml:space="preserve"> &lt;a href="products.html"&gt;
    &lt;img src="icon.gif" alt=""&gt;
    Products page
  &lt;/a&gt;</pre></section>
-               <section class="example" id="example-2">
-                  <h3>Example 2</h3>
+               <section class="example" id="przyklad-2">
+                  <h3>Przykład 2</h3>
                   <p>A link contains an icon and text, and the site help refers to the icon. The
                      <code class="language-html">img</code> has a text alternative which is the name used for the icon in the
                      site help, which describes clicking the home page icon.

@@ -56,7 +56,11 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a></span>.
+                  <p>This technique is
+                     
+                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a> when used with <a href="../general/G10">G10: Creating components using a technology that supports the accessibility notification
+                        of changes</a>
+                     					.
                   </p>
                </div>
             </aside>
@@ -65,8 +69,21 @@
                <h2 id="applicability">Applicability</h2>
                <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
                </p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a> (Sufficient)</span>.
-               </p>
+               <p>This technique relates to:</p>
+               <ul>
+                  <li><a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a> (Sufficient)
+                  </li>
+                  <li><a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a> (Sufficient)
+                  </li>
+                  <li><a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a> (Sufficient when used with Exposing the names and roles, allowing user-settable properties
+                     to be directly set,
+                     and providing notification of changes using one of the following techniques:
+                     )
+                  </li>
+                  <li><a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a> (Sufficient when used with <a href="../general/G10">G10: Creating components using a technology that supports the accessibility notification
+                        of changes</a>)
+                  </li>
+               </ul>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -107,23 +124,23 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1-labelling-a-simple-text-field">
-                  <h3>Example 1: Labelling a simple text field</h3>
+               <section class="example" id="przyklad-1-labelling-a-simple-text-field">
+                  <h3>Przykład 1: Labelling a simple text field</h3>
                   <p>The following is an example of <code class="att">aria-labelledby</code> used on a simple text field to provide a label in a situation where there is no text
                      available for a dedicated label but there is other text on the page that can be used
                      to accurately label the control.
                   </p><pre xml:space="preserve">&lt;input name="searchtxt" type="text" aria-labelledby="searchbtn"&gt;
 &lt;input name="searchbtn" id="searchbtn" type="submit" value="Search"&gt;</pre></section>
-               <section class="example" id="example-2-labelling-a-slider">
-                  <h3>Example 2: Labelling a slider</h3>
+               <section class="example" id="przyklad-2-labelling-a-slider">
+                  <h3>Przykład 2: Labelling a slider</h3>
                   <p>Below is an example of <code class="att">aria-labelledby</code> used to provide a label for a slider control. In this case the label text is selected
                      from within a longer adjacent text string. Please note that this example is simplified
                      to show only the labeling relationship; authors implementing custom controls also
                      need to ensure that controls meet other success criteria.
                   </p><pre xml:space="preserve">&lt;p&gt;Please select the &lt;span id="mysldr-lbl"&gt;number of days for your trip&lt;/span&gt;&lt;/p&gt;
 &lt;div id="mysldr" role="slider" aria-labelledby="mysldr-lbl"&gt;&lt;/div&gt;</pre></section>
-               <section class="example" id="example-3-a-label-from-multiple-sources">
-                  <h3>Example 3: A label from multiple sources</h3>
+               <section class="example" id="przyklad-3-a-label-from-multiple-sources">
+                  <h3>Przykład 3: A label from multiple sources</h3>
                   <p>The following example of <code class="att">aria-labelledby</code> with multiple references uses the <code class="el">label</code> element. For additional detail on concatenating multiple sources of information into
                      a label with <code class="att">aria-labelledby</code>, please view the technique <a href="ARIA9">Using ARIA labelledby to concatenate a label from several text nodes</a>.
                      

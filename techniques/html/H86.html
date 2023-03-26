@@ -55,7 +55,7 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/tre%C5%9B%C4%87-nietekstowa">1.1.1: Treść nietekstowa</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/tresc-nietekstowa">1.1.1: Treść nietekstowa</a></span>.
                   </p>
                </div>
             </aside>
@@ -63,7 +63,7 @@
             <section id="applicability">
                <h2 id="applicability">Applicability</h2>
                <p><abbr title="HyperText Markup Language">HTML</abbr></p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/tre%C5%9B%C4%87-nietekstowa">1.1.1: Treść nietekstowa</a> (Sufficient)</span>.
+               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/tresc-nietekstowa">1.1.1: Treść nietekstowa</a> (Sufficient)</span>.
                </p>
             </section>
             <section id="description">
@@ -99,8 +99,8 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1-marking-up-emojis-in-a-sentence">
-                  <h3>Example 1: Marking up emojis in a sentence</h3>
+               <section class="example" id="przyklad-1-marking-up-emojis-in-a-sentence">
+                  <h3>Przykład 1: Marking up emojis in a sentence</h3>
                   <p>This shows a technique to mark up emojis with accessible names that differ from their
                      default. Because you can't use an <code class="language-html">alt</code> attribute on a <code class="language-html">span</code> element and the <abbr title="Accessible Rich Internet Applications">ARIA</abbr> recommendation disallows accessible names on generic elements, to give the emojis
                      accessible names they are defined as images with the ARIA <code class="language-html">role="img"</code> property which then allows the creation of an accessible name using the <code class="language-html">aria-label</code> property.
@@ -108,16 +108,16 @@
    &lt;span aria-label="you" role="img"&gt;👉🏾&lt;/span&gt;
    &lt;span aria-label="rock" role="img"&gt;🤘🏾&lt;/span&gt;!
 &lt;/p&gt;</pre></section>
-               <section class="example" id="example-2-four-options-for-providing-alternatives-for-an-emoticon-representing-&#34;smile&#34;">
-                  <h3>Example 2: Four options for providing alternatives for an emoticon representing "smile"</h3>
+               <section class="example" id="przyklad-2-four-options-for-providing-alternatives-for-an-emoticon-representing-&#34;smile&#34;">
+                  <h3>Przykład 2: Four options for providing alternatives for an emoticon representing "smile"</h3>
                   <p>The following shows four options for providing alternatives for an emoticon representing
                      "smile", which is consists of a colon followed by a closing parenthesis.
                   </p><pre xml:space="preserve">:) (smile)
 &lt;abbr title="smile"&gt;:)&lt;/abbr&gt;
 &lt;span aria-label="smile" role="img"&gt;:)&lt;/span&gt;
 &lt;img alt="smile" src="smile.gif"&gt;</pre></section>
-               <section class="example" id="example-3-using-the-aria-label-and-role=&#34;img&#34;-properties">
-                  <h3>Example 3: Using the <code class="language-html">aria-label</code> and <code class="language-html">role="img"</code> properties
+               <section class="example" id="przyklad-3-using-the-aria-label-and-role=&#34;img&#34;-properties">
+                  <h3>Przykład 3: Using the <code class="language-html">aria-label</code> and <code class="language-html">role="img"</code> properties
                   </h3>
                   <p>Adding the <code class="language-html">role="img"</code> property to the ASCII content's containing element defines it as an image, and the
                      <code class="language-html">aria-label</code> property gives it the required text alternative. <a href="#ascii-butterfly">Skip to the next ASCII example</a>.
@@ -132,8 +132,8 @@ oooooo   oooooo     oooo   .oooooo.         .o.         .oooooo.
         `8'      `8'        `Y8bood8P'  o88o     o8888o  `Y8bood8P'
 &lt;/div&gt;        
 </pre></section>
-               <section class="example" id="example-4-ascii-art-with-an-explanation-of-the-picture-preceding-it">
-                  <h3>Example 4: ASCII art with an explanation of the picture preceding it</h3>
+               <section class="example" id="przyklad-4-ascii-art-with-an-explanation-of-the-picture-preceding-it">
+                  <h3>Przykład 4: ASCII art with an explanation of the picture preceding it</h3>
                   <p>This example includes a link to skip over the ASCII art. <a href="#leetspeek">Skip to the Leetspeak example</a>.
                   </p><pre xml:space="preserve">&lt;figure&gt;
   &lt;figcaption&gt;
@@ -189,8 +189,8 @@ LLLLLLLLLLLLLLLL_  __L       _L  LLLLLLLL      LLL_ LLLLLLLLLLLLLLLLLLLLL
                                  ~~~~~~~~~
 &lt;/figure&gt;
 &lt;p id="skipbutterfly"&gt;New content after the ASCII image.&lt;/p&gt;</pre></section>
-               <section class="example" id="example-5-marking-up-leetspeak">
-                  <h3>Example 5: Marking up Leetspeak</h3>
+               <section class="example" id="przyklad-5-marking-up-leetspeak">
+                  <h3>Przykład 5: Marking up Leetspeak</h3>
                   <p>The following is Leetspeak for "Austin Rocks".</p><pre xml:space="preserve">
 &lt;abbr title="Austin Rocks"&gt;Au5t1N r0xx0rz&lt;/abbr&gt;</pre></section>
             </section>

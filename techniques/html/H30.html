@@ -56,7 +56,10 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/tre%C5%9B%C4%87-nietekstowa">1.1.1: Treść nietekstowa</a></span>.
+                  <p>This technique is
+                     
+                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/tresc-nietekstowa">1.1.1: Treść nietekstowa</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/cel-lacza-w-kontekscie">2.4.4: Cel łącza (w kontekście)</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/cel-lacza-z-samego-lacza">2.4.9: Cel łącza (z samego łącza)</a>
+                     					.
                   </p>
                </div>
             </aside>
@@ -64,8 +67,15 @@
             <section id="applicability">
                <h2 id="applicability">Applicability</h2>
                <p>HTML documents that contain links, (&lt;a href&gt; elements)</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/tre%C5%9B%C4%87-nietekstowa">1.1.1: Treść nietekstowa</a> (Sufficient)</span>.
-               </p>
+               <p>This technique relates to:</p>
+               <ul>
+                  <li><a href="https://w3c.github.io/wcag/understanding/tresc-nietekstowa">1.1.1: Treść nietekstowa</a> (Sufficient)
+                  </li>
+                  <li><a href="https://w3c.github.io/wcag/understanding/cel-lacza-w-kontekscie">2.4.4: Cel łącza (w kontekście)</a> (Sufficient)
+                  </li>
+                  <li><a href="https://w3c.github.io/wcag/understanding/cel-lacza-z-samego-lacza">2.4.9: Cel łącza (z samego łącza)</a> (Sufficient)
+                  </li>
+               </ul>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -86,28 +96,28 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
+               <section class="example" id="przyklad-1">
+                  <h3>Przykład 1</h3>
                   <p>Describing the purpose of a link in HTML in the text content of the <code class="el">a</code> element.
                   </p><pre xml:space="preserve">&lt;a href="routes.html"&gt;
   Current routes at Boulders Climbing Gym
 &lt;/a&gt;</pre></section>
-               <section class="example" id="example-2">
-                  <h3>Example 2</h3>
+               <section class="example" id="przyklad-2">
+                  <h3>Przykład 2</h3>
                   <p>Using the <code class="att">alt</code> attribute for the <code class="el">img</code> element to describe the purpose of a graphical link.
                   </p><pre xml:space="preserve">&lt;a href="routes.html"&gt;
   &lt;img src="topo.gif" alt="Current routes at Boulders Climbing Gym"&gt; 
 &lt;/a&gt; </pre></section>
-               <section class="example" id="example-3">
-                  <h3>Example 3</h3>
+               <section class="example" id="przyklad-3">
+                  <h3>Przykład 3</h3>
                   <p>Using an empty <code class="att">alt</code> attribute when the anchor (<code class="el">a</code>) element contains text that describes the purpose of the link in addition to the
                      <code class="el">img</code> element. Note that the link text will appear on the page next to the image.
                   </p><pre xml:space="preserve">&lt;a href="routes.html"&gt;
   &lt;img src="topo.gif" alt=""&gt;
   Current routes at Boulders Climbing Gym
 &lt;/a&gt;</pre></section>
-               <section class="example" id="example-4">
-                  <h3>Example 4</h3>
+               <section class="example" id="przyklad-4">
+                  <h3>Przykład 4</h3>
                   <p>A site allows users to provide feedback on products by clicking on the "Feedback"
                      link in a product detail page. Other users are able to provide a response to any feedback.
                      When a response to the user's feedback is available, the feedback link displays an
@@ -121,16 +131,16 @@
   Feedback 
   &lt;img src="response.gif" width="15" height="15" alt="response received"&gt;
 &lt;/a&gt;</pre></section>
-               <section class="example" id="example-5">
-                  <h3>Example 5</h3>
+               <section class="example" id="przyklad-5">
+                  <h3>Przykład 5</h3>
                   <p>A link contains text and an icon, and the icon provides additional information about
                      the target.
                   </p><pre xml:space="preserve">&lt;a href="WMFP.pdf"&gt;
   Woodend Music Festival Program
   &lt;img src="pdficon.gif" alt="PDF format"&gt;
 &lt;/a&gt;</pre></section>
-               <section class="example" id="example-6">
-                  <h3>Example 6</h3>
+               <section class="example" id="przyklad-6">
+                  <h3>Przykład 6</h3>
                   <p>The "MyCorp" company's annual report is made available on the corporate website as
                      a PDF file, and the annual corporate budget is made available as an Excel file on
                      the web site.

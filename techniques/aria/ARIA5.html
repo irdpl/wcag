@@ -60,7 +60,9 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is not referenced from any Understanding document.</p>
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a> when used with <a href="../general/G10">G10: Creating components using a technology that supports the accessibility notification
+                           of changes</a></span>.
+                  </p>
                </div>
             </aside>
             <div class="excol-all"></div>
@@ -68,7 +70,9 @@
                <h2 id="applicability">Applicability</h2>
                <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
                </p>
-               <p>This technique is not referenced from any Understanding document.</p>
+               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a> (Sufficient when used with <a href="../general/G10">G10: Creating components using a technology that supports the accessibility notification
+                        of changes</a>)</span>.
+               </p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -83,8 +87,8 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1-a-toggle-button">
-                  <h3>Example 1: A toggle button</h3>
+               <section class="example" id="przyklad-1-a-toggle-button">
+                  <h3>Przykład 1: A toggle button</h3>
                   <p>A widget with role <code class="att">button</code> acts as a toggle button when it implements the attribute <code class="att">aria-pressed</code>. When <code class="att">aria-pressed</code> is true, the button is in a "pressed" state. When <code class="att">aria-pressed</code> is false, it is not pressed. If the attribute is not present, the button is a simple
                      command button.
                   </p>
@@ -113,8 +117,8 @@ function toggleButtonState(button) {
   …
 }
 </pre></section>
-               <section class="example" id="example-2-a-slider">
-                  <h3>Example 2: A slider</h3>
+               <section class="example" id="przyklad-2-a-slider">
+                  <h3>Przykład 2: A slider</h3>
                   <p>A widget with role <code class="att">slider</code> lets a user select a value from within a given range. The slider represents the current
                      value and the range of possible values via the size of the slider and the position
                      of the handle. These properties of the slider are represented by the attributes <code class="att">aria-valuemin</code>, <code class="att">aria-valuemax</code>, and <code class="att">aria-valuenow</code>.

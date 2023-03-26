@@ -54,7 +54,11 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is not referenced from any Understanding document.</p>
+                  <p>This technique is
+                     
+                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/komunikaty-o-stanie">4.1.3: Komunikaty o stanie</a>, using a more specific technique. and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/komunikaty-o-stanie">4.1.3: Komunikaty o stanie</a>, if combined with <a href="../general/G193">G193: Providing help by an assistant in the Web page</a>
+                     					.
+                  </p>
                </div>
             </aside>
             <div class="excol-all"></div>
@@ -62,7 +66,13 @@
                <h2 id="applicability">Applicability</h2>
                <p>Content using <a href="https://www.w3.org/TR/wai-aria/">WAI-<abbr title="Accessible Rich Internet Applications">ARIA</abbr></a>.
                </p>
-               <p>This technique is not referenced from any Understanding document.</p>
+               <p>This technique relates to:</p>
+               <ul>
+                  <li><a href="https://w3c.github.io/wcag/understanding/komunikaty-o-stanie">4.1.3: Komunikaty o stanie</a> (Sufficient using a more specific technique)
+                  </li>
+                  <li><a href="https://w3c.github.io/wcag/understanding/komunikaty-o-stanie">4.1.3: Komunikaty o stanie</a> (Sufficient, together with <a href="../general/G193">G193: Providing help by an assistant in the Web page</a>)
+                  </li>
+               </ul>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -82,8 +92,8 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1-including-a-search-results-message">
-                  <h3>Example 1: Including a search results message</h3>
+               <section class="example" id="przyklad-1-including-a-search-results-message">
+                  <h3>Przykład 1: Including a search results message</h3>
                   <p>After a user presses a Search button, the page content is updated to include the results
                      of the search, which are displayed in a section below the Search button. The change
                      to content also includes the message "5 results returned" near the top of this new
@@ -95,8 +105,8 @@
 </code>
 					</pre><p class="working-example"><a href="../../working-examples/aria-role-status-searchresults/">Working example: role=status on search results</a></p>
                </section>
-               <section class="example" id="example-2-updating-the-shopping-cart-status">
-                  <h3>Example 2: Updating the shopping cart status</h3>
+               <section class="example" id="przyklad-2-updating-the-shopping-cart-status">
+                  <h3>Przykład 2: Updating the shopping cart status</h3>
                   <p>After a user presses an Add to Shopping Cart button, content near the Shopping Cart
                      icon updates to read "1 items". The container for this text (in this case a <code>&lt;p&gt;</code>) is marked with the role of <code>status</code>. Because it adds visual context, the shopping cart image -- with succinct and accurate
                      ALT text -- is also placed in the container. Due to the default <code>aria-atomic</code> value, a screen reader will announce "Shopping cart, six items".

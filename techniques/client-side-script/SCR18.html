@@ -55,14 +55,28 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is not referenced from any Understanding document.</p>
+                  <p>This technique is
+                     
+                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/identyfikacja-bledu">3.3.1: Identyfikacja błędu</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/sugestie-korekty-bledow">3.3.3: Sugestie korekty błędów</a> and <strong>Advisory</strong> for <a href="https://w3c.github.io/wcag/understanding/sugestie-korekty-bledow">3.3.3: Sugestie korekty błędów</a> and <strong>Advisory</strong> for <a href="https://w3c.github.io/wcag/understanding/zapobieganie-bledom-prawnym-finansowym-w-danych">3.3.4: Zapobieganie błędom (prawnym, finansowym, w danych)</a>
+                     					.
+                  </p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
                <h2 id="applicability">Applicability</h2>
                <p>Content that validates user input.</p>
-               <p>This technique is not referenced from any Understanding document.</p>
+               <p>This technique relates to:</p>
+               <ul>
+                  <li><a href="https://w3c.github.io/wcag/understanding/identyfikacja-bledu">3.3.1: Identyfikacja błędu</a> (Sufficient)
+                  </li>
+                  <li><a href="https://w3c.github.io/wcag/understanding/sugestie-korekty-bledow">3.3.3: Sugestie korekty błędów</a> (Sufficient)
+                  </li>
+                  <li><a href="https://w3c.github.io/wcag/understanding/sugestie-korekty-bledow">3.3.3: Sugestie korekty błędów</a> (Advisory)
+                  </li>
+                  <li><a href="https://w3c.github.io/wcag/understanding/zapobieganie-bledom-prawnym-finansowym-w-danych">3.3.4: Zapobieganie błędom (prawnym, finansowym, w danych)</a> (Advisory)
+                  </li>
+               </ul>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -75,8 +89,8 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1-checking-a-single-control-with-an-event-handler">
-                  <h3>Example 1: Checking a single control with an event handler</h3>
+               <section class="example" id="przyklad-1-checking-a-single-control-with-an-event-handler">
+                  <h3>Przykład 1: Checking a single control with an event handler</h3>
                   <p>The following script will check that a valid date has been entered in the form control.</p><pre xml:space="preserve">
 &lt;label for="date"&gt;Date:&lt;/label&gt;
 &lt;input type="text" name="date" id="date" 
@@ -84,8 +98,8 @@ onchange="if(isNaN(Date.parse(this.value)))
 alert('This control is not a valid date. 
 Please re-enter the value.');" /&gt;
 </pre></section>
-               <section class="example" id="example-2-checking-multiple-controls-when-the-user-submits-the-form">
-                  <h3>Example 2: Checking multiple controls when the user submits the form</h3>
+               <section class="example" id="przyklad-2-checking-multiple-controls-when-the-user-submits-the-form">
+                  <h3>Przykład 2: Checking multiple controls when the user submits the form</h3>
                   <p>The following sample shows multiple controls in a form. The <code class="el">form</code> element uses the <code class="att">onsubmit</code> attribute which creates an event handler to execute the validation script when the
                      user attempts to submit the form. If the validation is successful, the event returns
                      <code class="propval">true</code> and the form submission proceeds; if the validation finds errors, it displays an

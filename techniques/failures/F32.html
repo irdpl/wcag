@@ -58,14 +58,16 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is not referenced from any Understanding document.</p>
+                  <p>This technique is <span>a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/zrozumiala-kolejnosc">1.3.2: Zrozumiała kolejność</a></span>.
+                  </p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
                <h2 id="applicability">Applicability</h2>
                <p>All technologies.</p>
-               <p>This technique is not referenced from any Understanding document.</p>
+               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/zrozumiala-kolejnosc">1.3.2: Zrozumiała kolejność</a> (Failure)</span>.
+               </p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -86,8 +88,8 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1-failure-due-to-adding-white-space-in-the-middle-of-a-word">
-                  <h3>Example 1: Failure due to adding white space in the middle of a word</h3>
+               <section class="example" id="przyklad-1-failure-due-to-adding-white-space-in-the-middle-of-a-word">
+                  <h3>Przykład 1: Failure due to adding white space in the middle of a word</h3>
                   <p>This example has white spaces within a word to space out the letters
                      in a heading. Screen readers may read each letter individually
                      instead of the word "Welcome."
@@ -98,8 +100,8 @@
                   </p><pre xml:space="preserve">
 &lt;h1&gt;H&amp;nbsp;E&amp;nbsp;L&amp;nbsp;L&amp;nbsp;O&lt;/h1&gt;
 </pre></section>
-               <section class="example" id="example-2-white-space-in-the-middle-of-a-word-changing-its-meaning">
-                  <h3>Example 2: White space in the middle of a word changing its meaning</h3>
+               <section class="example" id="przyklad-2-white-space-in-the-middle-of-a-word-changing-its-meaning">
+                  <h3>Przykład 2: White space in the middle of a word changing its meaning</h3>
                   <p>In Japanese, Han characters (Kanji) may have multiple readings that
                      mean very different things. In this example, the word is read
                      incorrectly because screen readers may not recognize these
@@ -109,8 +111,8 @@
                   </p><pre xml:space="preserve">
 &lt;h1&gt;東　京&lt;/h1&gt;
 </pre></section>
-               <section class="example" id="example-3-using-line-break-characters-to-format-vertical-text">
-                  <h3>Example 3: Using line break characters to format vertical text</h3>
+               <section class="example" id="przyklad-3-using-line-break-characters-to-format-vertical-text">
+                  <h3>Przykład 3: Using line break characters to format vertical text</h3>
                   <p>In the row header cell of a data table containing Japanese text,
                      authors often create vertical text by using line break characters.
                      However screen readers are not able to read the words in vertical

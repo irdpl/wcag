@@ -57,7 +57,8 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is not referenced from any Understanding document.</p>
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/etykieta-w-nazwie">2.5.3: Etykieta w nazwie</a></span>.
+                  </p>
                </div>
             </aside>
             <div class="excol-all"></div>
@@ -66,7 +67,8 @@
                <p>This Technique applies to all web technologies that include interactive controls (such
                   as links or form inputs)
                </p>
-               <p>This technique is not referenced from any Understanding document.</p>
+               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/etykieta-w-nazwie">2.5.3: Etykieta w nazwie</a> (Sufficient)</span>.
+               </p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -101,15 +103,15 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1-link-text-matches-the-beginning-of-the-accessible-name">
-                  <h3>Example 1: Link text matches the beginning of the accessible name</h3>
+               <section class="example" id="przyklad-1-link-text-matches-the-beginning-of-the-accessible-name">
+                  <h3>Przykład 1: Link text matches the beginning of the accessible name</h3>
                   <p>A link contains visible text and hidden link text. Both together make up the link's
                      accessible name. The visible text comes first. The idea is to make the link more descriptive
                      for users of assistive technologies. 
                   </p><code>&lt;p&gt;Go to &lt;a href="code-of-conduct.html"&gt;Code of conduct &lt;span class="hidden_accessibly"&gt;
                      of ACME Corporation&lt;/span&gt;&lt;/a&gt;&lt;p&gt;</code></section>
-               <section class="example" id="example-2-generic-link-text-concatenated-with-heading">
-                  <h3>Example 2: Generic link text concatenated with heading</h3>
+               <section class="example" id="przyklad-2-generic-link-text-concatenated-with-heading">
+                  <h3>Przykład 2: Generic link text concatenated with heading</h3>
                   <p>A generic link is combined with the heading of the paragraph to give context. It is
                      a variation on the first example, this time using <code>aria-labelledby</code>. The advantage of this implementation is that it uses existing visible text on the
                      page, and so is more likely to be properly translated during any localization transformations.
@@ -127,15 +129,15 @@
                      		
                   </section>
                </section>
-               <section class="example" id="example-3-link-text-included-in-aria-label">
-                  <h3>Example 3: Link text included in <code>aria-label</code></h3>
+               <section class="example" id="przyklad-3-link-text-included-in-aria-label">
+                  <h3>Przykład 3: Link text included in <code>aria-label</code></h3>
                   <p>Where two strings cannot be grammatically or seamlessly combined using <code>aria-labelledby</code>, <code>aria-label</code> can be used to make a new name which includes the visible label.
                   </p><code>
                      			...end of news story. &lt;a href="poor.html" aria-label="Read more about Insufficient
                      link names"&gt;Read more&lt;/a&gt;
                      		</code></section>
-               <section class="example" id="example-4-the-visible-button-text-matches-the-beginning-of-the-accessible-name">
-                  <h3>Example 4: The visible button text matches the beginning of the accessible name</h3>
+               <section class="example" id="przyklad-4-the-visible-button-text-matches-the-beginning-of-the-accessible-name">
+                  <h3>Przykład 4: The visible button text matches the beginning of the accessible name</h3>
                   <p>The visible text inside a <code>button</code> element matches the beginning of accessible name, which also includes hidden text.
                      The idea of the hidden text is to make the button more descriptive for users of assistive
                      technologies.

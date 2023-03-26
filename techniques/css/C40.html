@@ -56,7 +56,10 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/widoczny-fokus">2.4.7: Widoczny fokus</a></span>.
+                  <p>This technique is
+                     
+                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/widoczny-fokus">2.4.7: Widoczny fokus</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/wyglad-fokusu">2.4.11: Wygląd fokusu</a>
+                     					.
                   </p>
                </div>
             </aside>
@@ -64,8 +67,13 @@
             <section id="applicability">
                <h2 id="applicability">Applicability</h2>
                <p>All technologies that support CSS.</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/widoczny-fokus">2.4.7: Widoczny fokus</a> (Sufficient)</span>.
-               </p>
+               <p>This technique relates to:</p>
+               <ul>
+                  <li><a href="https://w3c.github.io/wcag/understanding/widoczny-fokus">2.4.7: Widoczny fokus</a> (Sufficient)
+                  </li>
+                  <li><a href="https://w3c.github.io/wcag/understanding/wyglad-fokusu">2.4.11: Wygląd fokusu</a> (Sufficient)
+                  </li>
+               </ul>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -103,15 +111,15 @@
                   all links and inputs. In use on a more complex website care would need to be taken
                   that these styles are not overridden by more specific styles.
                </p>
-               <section class="example" id="example-1-a-light-and-dark-dotted-indicator">
-                  <h3>Example 1: A light and dark dotted indicator</h3>
+               <section class="example" id="przyklad-1-a-light-and-dark-dotted-indicator">
+                  <h3>Przykład 1: A light and dark dotted indicator</h3>
                   <p>Description</p><pre><code>*:focus {
 	box-shadow: 0 0 0px 2px white;
 	outline: dotted;
 }</code></pre><p class="working-example"><a href="../../working-examples/css-two-focus-colors/dotted.html">Working example of combining a dark outline and light text shadow</a></p>
                </section>
-               <section class="example" id="example-2-a-thicker-light-and-dark-indicator">
-                  <h3>Example 2: A thicker light and dark indicator</h3>
+               <section class="example" id="przyklad-2-a-thicker-light-and-dark-indicator">
+                  <h3>Przykład 2: A thicker light and dark indicator</h3>
                   <p>Description</p><pre><code>*:focus { 
 	/* ensure high-contrast mode still has an indicator */
 	outline: 2px transparent solid;

@@ -58,7 +58,8 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is not referenced from any Understanding document.</p>
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/zmiana-na-zadanie">3.2.5: Zmiana na żądanie</a></span>.
+                  </p>
                </div>
             </aside>
             <div class="excol-all"></div>
@@ -67,7 +68,8 @@
                <p> Server-side technologies, including server-side scripting languages and
                   server configuration files with URLs or URL patterns for redirects. 
                </p>
-               <p>This technique is not referenced from any Understanding document.</p>
+               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/zmiana-na-zadanie">3.2.5: Zmiana na żądanie</a> (Sufficient)</span>.
+               </p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -86,8 +88,8 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1-jsp/servlets">
-                  <h3>Example 1: JSP/Servlets</h3>
+               <section class="example" id="przyklad-1-jsp/servlets">
+                  <h3>Przykład 1: JSP/Servlets</h3>
                   <p> In Java Servlets or JavaServer Pages (JSP), developers can use
                      HttpServletResponse.sendRedirect(String url). 
                   </p><pre xml:space="preserve">
@@ -120,8 +122,8 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
                      url). 
                   </p>
                </section>
-               <section class="example" id="example-2-asp">
-                  <h3>Example 2: ASP</h3>
+               <section class="example" id="przyklad-2-asp">
+                  <h3>Przykład 2: ASP</h3>
                   <p> In Active Server Page (ASP) with VBScript, developers can use
                      Response.Redirect. 
                   </p><pre xml:space="preserve">
@@ -134,8 +136,8 @@ Response.Status = 301
 Response.AddHeader "Location", "newUserLogin.asp"
 Response.Flush
 Response.End</pre></section>
-               <section class="example" id="example-3-php">
-                  <h3>Example 3: PHP</h3>
+               <section class="example" id="przyklad-3-php">
+                  <h3>Przykład 3: PHP</h3>
                   <p> In PHP, developers can send a raw HTTP header with the
                      header method. The code below sends a 301 status code
                      and a new location. If the status is not explicitly set, the
@@ -145,8 +147,8 @@ Response.End</pre></section>
 header("HTTP/1.1 301 Moved Permanently);
 header("Location: http://www.example.com/newUserLogin.php");
 ?&gt;</pre></section>
-               <section class="example" id="example-4-apache">
-                  <h3>Example 4: Apache</h3>
+               <section class="example" id="przyklad-4-apache">
+                  <h3>Przykład 4: Apache</h3>
                   <p> Developers can configure the Apache Web server to handle redirects,
                      as in the following example. 
                   </p><pre xml:space="preserve">

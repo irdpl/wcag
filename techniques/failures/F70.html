@@ -57,14 +57,16 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is not referenced from any Understanding document.</p>
+                  <p>This technique is <span>a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/poprawnosc-kodu-przestarzale-i-usuniete">4.1.1: Poprawność kodu (Przestarzałe i usunięte)</a></span>.
+                  </p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
                <h2 id="applicability">Applicability</h2>
                <p>Markup languages: HTML, XHTML, and other SGML or XML-based technologies.</p>
-               <p>This technique is not referenced from any Understanding document.</p>
+               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/poprawnosc-kodu-przestarzale-i-usuniete">4.1.1: Poprawność kodu (Przestarzałe i usunięte)</a> (Failure)</span>.
+               </p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -98,43 +100,43 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1-missing-angle-brackets-in-xhtml">
-                  <h3>Example 1: Missing angle brackets in XHTML</h3>
+               <section class="example" id="przyklad-1-missing-angle-brackets-in-xhtml">
+                  <h3>Przykład 1: Missing angle brackets in XHTML</h3>
                   <p>The following code fails because the opening tag is missing an angle bracket, and
                      the intended boundary of the tag is unclear.
                   </p><pre xml:space="preserve">
 &lt;p This is a paragraph&lt;/p&gt;
 </pre></section>
-               <section class="example" id="example-2-missing-slash-on-closing-tag-in-xhtml">
-                  <h3>Example 2: Missing slash on closing tag in XHTML</h3>
+               <section class="example" id="przyklad-2-missing-slash-on-closing-tag-in-xhtml">
+                  <h3>Przykład 2: Missing slash on closing tag in XHTML</h3>
                   <p>The following code fails because the closing tag is missing the slash, making it look
                      like it is in fact another opening tag.
                   </p><pre xml:space="preserve">
 &lt;p&gt;This is a paragraph&lt;p&gt;
 </pre></section>
-               <section class="example" id="example-3-unbalanced-attribute-quoting">
-                  <h3>Example 3: Unbalanced attribute quoting</h3>
+               <section class="example" id="przyklad-3-unbalanced-attribute-quoting">
+                  <h3>Przykład 3: Unbalanced attribute quoting</h3>
                   <p>The following code fails because the attribute value is missing the closing quote,
                      which makes the boundary of the attribute-value pair unclear.
                   </p><pre xml:space="preserve">
 &lt;input title="name type="text"&gt;
 </pre></section>
-               <section class="example" id="example-4-lack-of-whitespace-between-attributes">
-                  <h3>Example 4: Lack of whitespace between attributes</h3>
+               <section class="example" id="przyklad-4-lack-of-whitespace-between-attributes">
+                  <h3>Przykład 4: Lack of whitespace between attributes</h3>
                   <p>The following code fails because the there is not whitespace between attributes, which
                      makes the boundary between attribute-value pairs unclear.
                   </p><pre xml:space="preserve">
 &lt;input title="name"type="text"&gt;
 </pre></section>
-               <section class="example" id="example-5-unquoted-attribute-with-whitespace-value">
-                  <h3>Example 5: Unquoted attribute with whitespace value</h3>
+               <section class="example" id="przyklad-5-unquoted-attribute-with-whitespace-value">
+                  <h3>Przykład 5: Unquoted attribute with whitespace value</h3>
                   <p>The following code fails because an attribute value is not quoted and contains whitespace,
                      which makes the boundary of the attribute-value pair unclear.
                   </p><pre xml:space="preserve">
 &lt;input title=Enter name here type=text&gt;
 </pre></section>
-               <section class="example" id="example-6-missing-end-tags-in-xhtml">
-                  <h3>Example 6: Missing end tags in XHTML</h3>
+               <section class="example" id="przyklad-6-missing-end-tags-in-xhtml">
+                  <h3>Przykład 6: Missing end tags in XHTML</h3>
                   <p>The following code fails because the closing tag of the first paragraph is missing,
                      making it unclear whether the second paragraph is a child or sibling of the first.
                   </p><pre xml:space="preserve">

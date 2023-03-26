@@ -57,7 +57,10 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/widoczny-fokus">2.4.7: Widoczny fokus</a></span>.
+                  <p>This technique is
+                     
+                     						a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/kontrast-elementow-nietekstowych">1.4.11: Kontrast elementów nietekstowych</a> and a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/widoczny-fokus">2.4.7: Widoczny fokus</a>
+                     					.
                   </p>
                </div>
             </aside>
@@ -65,8 +68,13 @@
             <section id="applicability">
                <h2 id="applicability">Applicability</h2>
                <p>Any technology</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/widoczny-fokus">2.4.7: Widoczny fokus</a> (Failure)</span>.
-               </p>
+               <p>This technique relates to:</p>
+               <ul>
+                  <li><a href="https://w3c.github.io/wcag/understanding/kontrast-elementow-nietekstowych">1.4.11: Kontrast elementów nietekstowych</a> (Failure)
+                  </li>
+                  <li><a href="https://w3c.github.io/wcag/understanding/widoczny-fokus">2.4.7: Widoczny fokus</a> (Failure)
+                  </li>
+               </ul>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -81,19 +89,19 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1-the-focus-indicator-is-turned-off-with-css">
-                  <h3>Example 1: The focus indicator is turned off with CSS</h3>
+               <section class="example" id="przyklad-1-the-focus-indicator-is-turned-off-with-css">
+                  <h3>Przykład 1: The focus indicator is turned off with CSS</h3>
                   <p>The following CSS example will remove the default focus indicator, which fails the
                      requirement to provide a visible focus indicator.
                   </p><pre xml:space="preserve">:focus {outline: none}</pre></section>
-               <section class="example" id="example-2-the-outline-of-elements-is-visually-similar-to-the-focus-indicator">
-                  <h3>Example 2: The outline of elements is visually similar to the focus indicator</h3>
+               <section class="example" id="przyklad-2-the-outline-of-elements-is-visually-similar-to-the-focus-indicator">
+                  <h3>Przykład 2: The outline of elements is visually similar to the focus indicator</h3>
                   <p>The following CSS example will create an outline around links that looks the same
                      as the focus indicator. This makes it impossible for users to determine which one
                      in fact has the focus, even though the user agent does draw the focus indicator.
                   </p><pre xml:space="preserve">a {outline: thin dotted black}</pre></section>
-               <section class="example" id="example-3-elements-have-a-border-that-occludes-the-focus-indicator">
-                  <h3>Example 3: Elements have a border that occludes the focus indicator</h3>
+               <section class="example" id="przyklad-3-elements-have-a-border-that-occludes-the-focus-indicator">
+                  <h3>Przykład 3: Elements have a border that occludes the focus indicator</h3>
                   <p>The following CSS example creates a border around links that does not have enough
                      contrast for the focus indicator to be seen when drawn on top of it. In this case
                      the focus indicator is drawn just ouside the border, but as both are black and the

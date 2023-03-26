@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -37,7 +37,7 @@
                   <li class="nav__item"><a href=".">
                         								All Understanding Docs
                         							</a></li>
-                  <li class="nav__item"><a href="przewidywalno%C5%9B%C4%87">
+                  <li class="nav__item"><a href="przewidywalnosc">
                         <svg alt="up" focusable="false" aria-hidden="true" class="icon-arrow-up-thin pager-icon" viewBox="0 0 16 16">
                            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path>
                         </svg> Guideline: Przewidywalność</a></li>
@@ -71,7 +71,7 @@
             <aside class="box">
                <header class="box-h  box-h-icon"> Success Criterion (SC)</header>
                <div class="box-i">
-                  <p>Przyjęcie fokusu przez dowolny <a href="#dfn-komponent-interfejsu-u%C5%BCytkownika">komponent interfejsu użytkownika</a> nie powoduje nieoczekiwanej <a href="#dfn-zmiany-kontekstu">zmiany kontekstu</a>.
+                  <p>Przyjęcie fokusu przez dowolny <a href="#dfn-komponent-interfejsu-uzytkownika">komponent interfejsu użytkownika</a> nie powoduje nieoczekiwanej <a href="#dfn-zmiany-kontekstu">zmiany kontekstu</a>.
                      
                   </p>
                </div>
@@ -109,7 +109,7 @@
                   
                </p>
                <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                  <div role="heading" class="note-title marker" aria-level="3">Uwaga</div>
                   <div>
                      
                      
@@ -214,12 +214,12 @@
                      
                   </ol>
                   <div class="note">
-                     <div role="heading" class="note-title marker" aria-level="4">Note</div>
+                     <div role="heading" class="note-title marker" aria-level="4">Uwaga</div>
                      <div>
                         
                         
                         <p>A change of content is not always a 
-                           <a href="#">change of context</a>. This success criterion is automatically met if changes in content are not also changes
+                           <a href="#dfn-zmiany-kontekstu">zmiana kontekstu</a>. This success criterion is automatically met if changes in content are not also changes
                            of context.
                            
                         </p>
@@ -280,7 +280,7 @@
                   <summary>
                      <h2>Key Terms</h2>
                   </summary>
-                  <dt id="dfn-komponent-interfejsu-użytkownika">komponent interfejsu użytkownika</dt>
+                  <dt id="dfn-komponent-interfejsu-uzytkownika">komponent interfejsu użytkownika</dt>
                   <dd>
                      <definition xmlns="">
                         
@@ -293,7 +293,7 @@
                         
                         
                         <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <div role="heading" class="note-title marker" aria-level="2">Uwaga</div>
                            <p>
                               Wiele komponentów interfejsu użytkownika może być implementowanych w postaci pojedynczego
                               elementu. Tutaj komponenty nie są związane z konkretną techniką programistyczną, a
@@ -304,7 +304,7 @@
                         
                         
                         <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <div role="heading" class="note-title marker" aria-level="2">Uwaga</div>
                            <p>
                               Do komponentów interfejsu użytkownika należą elementy formularzy i linków, jak również
                               komponenty generowane przez skrypty.
@@ -314,7 +314,7 @@
                         
                         
                         <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <div role="heading" class="note-title marker" aria-level="2">Uwaga</div>
                            <p>
                               To, co jest tutaj rozumiane jako „komponent” lub „komponent interfejsu użytkownika”
                               jest również czasami nazywane „elementem interfejsu użytkownika”.
@@ -337,18 +337,85 @@
                         
                      </definition>
                   </dd>
+                  <dt id="dfn-obszar-roboczy">obszar roboczy</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">obiekt, w którym oprogramowanie użytkownika prezentuje treść</p>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Uwaga</div>
+                           <p>
+                              <a href="#dfn-program-uzytkownika">Oprogramowanie użytkownika</a> prezentuje treść poprzez jeden lub więcej obszarów roboczych. Do obszarów roboczych
+                              (operacyjnych) zaliczamy okna, ramki, głośniki, wirtualne okulary. Obszar roboczy
+                              może zawierać w sobie inny obszar roboczy (na przykład osadzone ramki). Komponenty
+                              interfejsu użytkownika generowane przez oprogramowanie użytkownika, jak podpowiedzi,
+                              menu i komunikaty, nie są obszarami roboczymi.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Uwaga</div>
+                           <p>
+                              Definicja jest oparta o słowniczek z <a href="https://www.w3.org/TR/WAI-USERAGENT/glossary.html">User Agent Accessibility Guidelines 1.0 Glossary</a> [[UAAG10]].
+                              
+                           </p>
+                        </div>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-program-uzytkownika">program użytkownika</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych</p>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Przeglądarki internetowe, odtwarzacze multimediów, wtyczki oraz inne programy — również
+                              technologie wspomagające — które pomagają w wyszukiwaniu, przetwarzaniu i interakcji
+                              z treściami internetowymi.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-przedstawianie">przedstawianie</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           renderowanie <a href="#dfn-tresc">treści</a> w sposób, który jest postrzegalny dla użytkownika
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
                   <dt id="dfn-strona-internetowa">strona internetowa</dt>
                   <dd>
                      <definition xmlns="">
                         
                         
                         <p xmlns="http://www.w3.org/1999/xhtml">nieosadzony zasób uzyskany z pojedynczego identyfikatora URI za pomocą protokołu HTTP
-                           wraz z wszelkimi innymi zasobami użytymi do renderowania strony w <a href="#">programie użytkownika</a> lub takimi, które potencjalnie mogą być użyte do renderowania
+                           wraz z wszelkimi innymi zasobami użytymi do renderowania strony w <a href="#dfn-program-uzytkownika">programie użytkownika</a> lub takimi, które potencjalnie mogą być użyte do renderowania
                         </p>
                         
                         
                         <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <div role="heading" class="note-title marker" aria-level="2">Uwaga</div>
                            <p>
                               Mimo że każdy z „pozostałych zasobów” mógłby być renderowany razem z podstawowym zasobem,
                               to niekoniecznie muszą być renderowane równocześnie.
@@ -358,7 +425,7 @@
                         
                         
                         <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <div role="heading" class="note-title marker" aria-level="2">Uwaga</div>
                            <p>
                               Dla zgodności z wytycznymi zasób musi być „nieosadzony”, czyli występować w taki sposób,
                               by nie był uwzględniany jako strona internetowa.
@@ -416,6 +483,45 @@
                         
                      </definition>
                   </dd>
+                  <dt id="dfn-struktura">struktura</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <ol xmlns="http://www.w3.org/1999/xhtml">
+                           
+                           
+                           <li>
+                              Sposób, w jaki poszczególne części <a href="#dfn-strona-internetowa">strony internetowej</a> są ułożone i połączone ze sobą; oraz
+                              
+                           </li>
+                           
+                           
+                           <li>
+                              Sposób ułożenia zbioru <a href="#dfn-strona-internetowa">stron internetowych</a>.
+                              
+                           </li>
+                           
+                           
+                        </ol>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-tresc">treść</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           informacje i wrażenia sensoryczne, które mają być przekazywane użytkownikowi za pośrednictwem
+                           <a href="#dfn-program-uzytkownika">programu użytkownika</a>, w tym kod lub znaczniki definiujące <a href="#dfn-struktura">strukturę</a>, <a href="#dfn-przedstawianie">prezentację</a> i interakcje
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
                   <dt id="dfn-zmiany-kontekstu">zmiany kontekstu</dt>
                   <dd>
                      <definition xmlns="">
@@ -435,22 +541,22 @@
                            
                            
                            <li>
-                              <a href="#">w programie użytkownika;</a>;
+                              <a href="#dfn-program-uzytkownika">w programie użytkownika</a>,
                               
                            </li>
                            
                            
                            <li>
-                              <a href="#">obszaru roboczego;</a>;
+                              <a href="#dfn-obszar-roboczy">obszaru roboczego</a>,
                               
                            </li>
                            
                            
-                           <li>fokusu;</li>
+                           <li>fokusu,</li>
                            
                            
                            <li>
-                              <a href="#">treści</a>, która zmienia sens <a href="#dfn-strona-internetowa">strony internetowej</a>.
+                              <a href="#dfn-tresc">treści</a>, która zmienia sens <a href="#dfn-strona-internetowa">strony internetowej</a>.
                               
                            </li>
                            
@@ -459,7 +565,7 @@
                         
                         
                         <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <div role="heading" class="note-title marker" aria-level="2">Uwaga</div>
                            <p>
                               Zmiana treści nie zawsze oznacza zmianę kontekstu. Zmiana w treści, na przykład rozwinięcie
                               drzewa, dynamicznego menu lub zakładki niekoniecznie zmieniają kontekst, dopóki nie

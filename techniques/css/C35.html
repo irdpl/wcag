@@ -55,7 +55,8 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is not referenced from any Understanding document.</p>
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/odstepy-w-tekscie">1.4.12: Odstępy w tekście</a></span>.
+                  </p>
                </div>
             </aside>
             <div class="excol-all"></div>
@@ -63,7 +64,8 @@
                <h2 id="applicability">Applicability</h2>
                <p>Content using technologies that support <a href="https://www.w3.org/TR/CSS/"><abbr title="Cascading Style Sheets">CSS</abbr></a>.
                </p>
-               <p>This technique is not referenced from any Understanding document.</p>
+               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/odstepy-w-tekscie">1.4.12: Odstępy w tekście</a> (Sufficient)</span>.
+               </p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -100,8 +102,8 @@
                </p>
                <p class="note">The <code>ex</code> unit has been used as as the closest available unit for character width, <code>ex </code>"Represents the x-height of the element's font." (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">MDN page for CSS units</a>). It is not perfect, different characters have different default widths.
                </p>
-               <section class="example" id="example-1-a-box-sized-with-space-to-allow-for-expansion">
-                  <h3>Example 1: A box sized with space to allow for expansion</h3>
+               <section class="example" id="przyklad-1-a-box-sized-with-space-to-allow-for-expansion">
+                  <h3>Przykład 1: A box sized with space to allow for expansion</h3>
                   <p>The containers are sized to a value greater than the default width of the text.</p><pre xml:space="preserve"><code>/* Links are less than 8ex wide, so 10ex width of each li allows for expanded letter and word width*/
  nav li { width: 10em; }
 
@@ -116,8 +118,8 @@
                      need to allow for text 20% larger than the longest word.
                   </p>
                </section>
-               <section class="example" id="example-2-a-box-which-expands-with-the-text-size">
-                  <h3>Example 2: A box which expands with the text size</h3><pre xml:space="preserve"><code>/* CSS containers are given a display of inline-block. No negative margins set. */
+               <section class="example" id="przyklad-2-a-box-which-expands-with-the-text-size">
+                  <h3>Przykład 2: A box which expands with the text size</h3><pre xml:space="preserve"><code>/* CSS containers are given a display of inline-block. No negative margins set. */
  nav li { display: inline-block; }
 
 &lt;!-- HTML --&gt;

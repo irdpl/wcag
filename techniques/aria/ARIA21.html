@@ -56,7 +56,8 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is not referenced from any Understanding document.</p>
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/identyfikacja-bledu">3.3.1: Identyfikacja błędu</a></span>.
+                  </p>
                </div>
             </aside>
             <div class="excol-all"></div>
@@ -64,7 +65,8 @@
                <h2 id="applicability">Applicability</h2>
                <p>HTML with <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications</a>.
                </p>
-               <p>This technique is not referenced from any Understanding document.</p>
+               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/identyfikacja-bledu">3.3.1: Identyfikacja błędu</a> (Sufficient)</span>.
+               </p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -106,8 +108,8 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1-using-aria-invalid-on-required-fields">
-                  <h3>Example 1: Using aria-invalid on required fields</h3>
+               <section class="example" id="przyklad-1-using-aria-invalid-on-required-fields">
+                  <h3>Przykład 1: Using aria-invalid on required fields</h3>
                   <p>The <code class="att">aria-invalid</code> attribute is used on required fields that have no input. A message above the form
                      conveys that form submission has failed due to this.
                   </p>
@@ -156,8 +158,8 @@ label.failed {
 &lt;/code&gt;            </pre><p class="working-example"><a href="../../working-examples/aria-invalid-required-fields/">Working example: Using aria-invalid on required fields</a>.
                   </p>
                </section>
-               <section class="example" id="example-2-identifying-errors-in-data-format">
-                  <h3>Example 2: Identifying errors in data format</h3>
+               <section class="example" id="przyklad-2-identifying-errors-in-data-format">
+                  <h3>Przykład 2: Identifying errors in data format</h3>
                   <p><code class="att">Aria-invalid</code> and <code class="att">aria-describedby</code> are used together to indicate an error when the personal identification number (PIN),
                      email address, or start date are not in the expected format. The error message is
                      associated with the field using <code class="att">aria-describedby</code>, and <code class="att">aria-invalid</code> makes it easier to programmatically find fields with errors.

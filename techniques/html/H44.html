@@ -58,7 +58,8 @@
                <div class="box-i">
                   <p>This technique is
                      
-                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/tre%C5%9B%C4%87-nietekstowa">1.1.1: Treść nietekstowa</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/etykiety-lub-instrukcje">3.3.2: Etykiety lub instrukcje</a>
+                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/tresc-nietekstowa">1.1.1: Treść nietekstowa</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/etykiety-lub-instrukcje">3.3.2: Etykiety lub instrukcje</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a> when used with <a href="../general/G108">G108: Using markup features to expose the name and role, allow user-settable properties
+                        to be directly set, and provide notification of changes</a>
                      					.
                   </p>
                </div>
@@ -70,7 +71,7 @@
                </p>
                <p>This technique relates to:</p>
                <ul>
-                  <li><a href="https://w3c.github.io/wcag/understanding/tre%C5%9B%C4%87-nietekstowa">1.1.1: Treść nietekstowa</a> (Sufficient)
+                  <li><a href="https://w3c.github.io/wcag/understanding/tresc-nietekstowa">1.1.1: Treść nietekstowa</a> (Sufficient)
                   </li>
                   <li><a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a> (Sufficient when used with Making information and relationships conveyed through
                      presentation programmatically
@@ -78,6 +79,9 @@
                      )
                   </li>
                   <li><a href="https://w3c.github.io/wcag/understanding/etykiety-lub-instrukcje">3.3.2: Etykiety lub instrukcje</a> (Sufficient)
+                  </li>
+                  <li><a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a> (Sufficient when used with <a href="../general/G108">G108: Using markup features to expose the name and role, allow user-settable properties
+                        to be directly set, and provide notification of changes</a>)
                   </li>
                </ul>
             </section>
@@ -199,16 +203,16 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1-a-text-input-field">
-                  <h3>Example 1: A text input field</h3>
+               <section class="example" id="przyklad-1-a-text-input-field">
+                  <h3>Przykład 1: A text input field</h3>
                   <p>The text field in this example has the explicit label of "First name:". The <code class="language-html">label</code> element's <code class="language-html">for</code> attribute matches the <code class="language-html">id</code> attribute of the <code class="language-html">input</code> element.
                   </p><pre xml:space="preserve">&lt;label for="firstname"&gt;First name:&lt;/label&gt; 
 &lt;input id="firstname" name="firstname" type="text"&gt;</pre></section>
-               <section class="example" id="example-2-a-checkbox">
-                  <h3>Example 2: A checkbox</h3><pre xml:space="preserve">&lt;input checked id="markuplang" name="computerskills" type="checkbox"&gt;
+               <section class="example" id="przyklad-2-a-checkbox">
+                  <h3>Przykład 2: A checkbox</h3><pre xml:space="preserve">&lt;input checked id="markuplang" name="computerskills" type="checkbox"&gt;
 &lt;label for="markuplang"&gt;HTML&lt;/label&gt;</pre></section>
-               <section class="example" id="example-3-a-group-of-radio-buttons">
-                  <h3>Example 3: A group of radio buttons</h3>
+               <section class="example" id="przyklad-3-a-group-of-radio-buttons">
+                  <h3>Przykład 3: A group of radio buttons</h3>
                   <p>A small, related group of radio buttons with a clear description and labels for each
                      individual element.
                   </p><pre xml:space="preserve">&lt;h1&gt;Doughnut Selection&lt;/h1&gt;

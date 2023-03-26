@@ -55,14 +55,17 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is not referenced from any Understanding document.</p>
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/poprawnosc-kodu-przestarzale-i-usuniete">4.1.1: Poprawność kodu (Przestarzałe i usunięte)</a></span>.
+                  </p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
                <h2 id="applicability">Applicability</h2>
                <p> Any XML-based markup languages. </p>
-               <p>This technique is not referenced from any Understanding document.</p>
+               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/poprawnosc-kodu-przestarzale-i-usuniete">4.1.1: Poprawność kodu (Przestarzałe i usunięte)</a> (Sufficient when used with Ensuring that Web pages can be parsed  by using one of
+                     the following techniques:)</span>.
+               </p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -78,16 +81,16 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
+               <section class="example" id="przyklad-1">
+                  <h3>Przykład 1</h3>
                   <p>XML files include a document type declaration, a xsi:schemaLocation attribute or
                      other type of reference to a schema. The developer can use off-line or online
                      validators, an XML editor or an IDE with XML support (see Resources below) to check
                      well-formedness. 
                   </p>
                </section>
-               <section class="example" id="example-2">
-                  <h3>Example 2</h3>
+               <section class="example" id="przyklad-2">
+                  <h3>Przykład 2</h3>
                   <p> When XML files do not include a document type declaration, a xsi:schemaLocation
                      attribute or a processing instruction referencing a schema even though there is a
                      schema for them, the relevant schema is specified by a command line instruction, a
@@ -95,8 +98,8 @@
                      schema.
                   </p>
                </section>
-               <section class="example" id="example-3">
-                  <h3>Example 3</h3>
+               <section class="example" id="przyklad-3">
+                  <h3>Przykład 3</h3>
                   <p>When XML files do not include a document type declaration, a xsi:schemaLocation
                      attribute or a processing instruction referencing a schema even though there is a
                      schema for them, the namespace is dereferenced to retrieve a schema document or
@@ -104,8 +107,8 @@
                      schema.
                   </p>
                </section>
-               <section class="example" id="example-4">
-                  <h3>Example 4</h3>
+               <section class="example" id="przyklad-4">
+                  <h3>Przykład 4</h3>
                   <p>When a Website generates XML dynamically instead of serving only static documents,
                      a developer can use <a href="http://xmlunit.sourceforge.net/">XMLUnit</a>, <a href="http://xmltestsuite.sourceforge.net/">XML Test Suite</a> or a similar
                      framework to test the generated XML code. 

@@ -59,14 +59,16 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is not referenced from any Understanding document.</p>
+                  <p>This technique is <span>a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a></span>.
+                  </p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
                <h2 id="applicability">Applicability</h2>
                <p>General</p>
-               <p>This technique is not referenced from any Understanding document.</p>
+               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a> (Failure)</span>.
+               </p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -83,8 +85,8 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
+               <section class="example" id="przyklad-1">
+                  <h3>Przykład 1</h3>
                   <p>A US telephone number consists of a 3-digit area code, a 3-digit prefix, and a 4-digit
                      suffix. They are typically formatted as follows ([area code]) [prefix]-[suffix], such
                      as (206) 555-1212. Often, forms asking for a telephone number will include 3 separate
@@ -98,16 +100,16 @@
                      is not very useful.
                   </p>
                </section>
-               <section class="example" id="example-2">
-                  <h3>Example 2</h3>
+               <section class="example" id="przyklad-2">
+                  <h3>Przykład 2</h3>
                   <p>The same US telephone number. In this case, the label is not programatically associated
                      with any of the parts. 
                   </p><pre xml:space="preserve">Phone number: (&lt;input type="text" size="3"&gt;) &lt;input type="text" size="3"&gt;-&lt;input type="text" size="4"&gt;</pre><p> A user with assistive technology will experience these as three undefined text fields.
                      
                   </p>
                </section>
-               <section class="example" id="example-3">
-                  <h3>Example 3</h3>
+               <section class="example" id="przyklad-3">
+                  <h3>Przykład 3</h3>
                   <p>The same US telephone number. In this case, the label is programatically associated
                      with the first part.
                   </p><pre xml:space="preserve">&lt;label for="area"&gt;Phone number:&lt;/label&gt; 

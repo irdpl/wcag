@@ -54,7 +54,10 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/prezentacja-wizualna">1.4.8: Prezentacja wizualna</a></span>.
+                  <p>This technique is
+                     
+                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/prezentacja-wizualna">1.4.8: Prezentacja wizualna</a> and <strong>Advisory</strong> for <a href="https://w3c.github.io/wcag/understanding/odstepy-w-tekscie">1.4.12: Odstępy w tekście</a>
+                     					.
                   </p>
                </div>
             </aside>
@@ -62,8 +65,13 @@
             <section id="applicability">
                <h2 id="applicability">Applicability</h2>
                <p>All technologies that support CSS</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/prezentacja-wizualna">1.4.8: Prezentacja wizualna</a> (Sufficient)</span>.
-               </p>
+               <p>This technique relates to:</p>
+               <ul>
+                  <li><a href="https://w3c.github.io/wcag/understanding/prezentacja-wizualna">1.4.8: Prezentacja wizualna</a> (Sufficient)
+                  </li>
+                  <li><a href="https://w3c.github.io/wcag/understanding/odstepy-w-tekscie">1.4.12: Odstępy w tekście</a> (Advisory)
+                  </li>
+               </ul>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -74,18 +82,18 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
+               <section class="example" id="przyklad-1">
+                  <h3>Przykład 1</h3>
                   <p>Setting the element to 1.5 line height. In the style sheet set the characteristics
                      of the element.
                   </p><pre xml:space="preserve">p { line-height: 150%; }</pre><p>In the content the element will now be 1.5 line height, throughout the document.</p><pre xml:space="preserve">&lt;p&gt; Lorem ipsum dolor sit …  &lt;/p&gt;</pre></section>
-               <section class="example" id="example-2">
-                  <h3>Example 2</h3>
+               <section class="example" id="przyklad-2">
+                  <h3>Przykład 2</h3>
                   <p>Setting a class to 1.5 line height (space-and-a-half line spacing). In the stylesheet,
                      define the class.
                   </p><pre xml:space="preserve">p.tall {line-height:150%}</pre><p>In the content, call up the class = "left".</p><pre xml:space="preserve">&lt;p class="tall"&gt; Lorem ipsum dolor sit …  &lt;/p&gt;</pre></section>
-               <section class="example" id="example-3">
-                  <h3>Example 3</h3>
+               <section class="example" id="przyklad-3">
+                  <h3>Przykład 3</h3>
                   <p>Setting a class to double-spaced line height. In the stylesheet, define the class.</p><pre xml:space="preserve">p.tall {line-height:200%}</pre><p>In the content, call up the class = "right".</p><pre xml:space="preserve">&lt;p class="tall"&gt; Lorem ipsum dolor sit …  &lt;/p&gt;</pre></section>
             </section>
             <section id="tests">

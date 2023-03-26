@@ -55,7 +55,11 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is not referenced from any Understanding document.</p>
+                  <p>This technique is
+                     
+                     						<strong>Advisory</strong> for <a href="https://w3c.github.io/wcag/understanding/identyfikacja-bledu">3.3.1: Identyfikacja błędu</a> and <strong>Advisory</strong> for <a href="https://w3c.github.io/wcag/understanding/sugestie-korekty-bledow">3.3.3: Sugestie korekty błędów</a>
+                     					.
+                  </p>
                </div>
             </aside>
             <div class="excol-all"></div>
@@ -64,7 +68,13 @@
                <p>Content that accepts user data input, with restrictions on the format, value, and/or
                   type of the input.
                </p>
-               <p>This technique is not referenced from any Understanding document.</p>
+               <p>This technique relates to:</p>
+               <ul>
+                  <li><a href="https://w3c.github.io/wcag/understanding/identyfikacja-bledu">3.3.1: Identyfikacja błędu</a> (Advisory)
+                  </li>
+                  <li><a href="https://w3c.github.io/wcag/understanding/sugestie-korekty-bledow">3.3.3: Sugestie korekty błędów</a> (Advisory)
+                  </li>
+               </ul>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -80,8 +90,8 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1-server-side-error-checking">
-                  <h3>Example 1: Server-side error checking</h3>
+               <section class="example" id="przyklad-1-server-side-error-checking">
+                  <h3>Przykład 1: Server-side error checking</h3>
                   <p>The user inputs invalid data on a form field and submits the form. The server returns
                      the form, with the user's data still present, and indicates clearly in text at the
                      top of the page that there were not accepted. The text describes the nature of the
@@ -89,16 +99,16 @@
                      navigate to it to fix the problem.
                   </p>
                </section>
-               <section class="example" id="example-2-client-side-error-checking-with-a-popup">
-                  <h3>Example 2: Client-side error checking with a popup</h3>
+               <section class="example" id="przyklad-2-client-side-error-checking-with-a-popup">
+                  <h3>Przykład 2: Client-side error checking with a popup</h3>
                   <p>The user inputs invalid data on a form field and attempts to submit the form. Client-side
                      scripting detects the error, cancels the submit, and modifies the document to provide
                      a text message describing the error, with links to the field(s) with the error. The
                      script also modifies the labels of the fields with the problems to highlight them.
                   </p>
                </section>
-               <section class="example" id="example-3-client-side-error-checking-with-no-popup">
-                  <h3>Example 3: Client-side error checking with no popup</h3>
+               <section class="example" id="przyklad-3-client-side-error-checking-with-no-popup">
+                  <h3>Przykład 3: Client-side error checking with no popup</h3>
                   <p>When the user submits a form, instead of taking them to a new page, a script automatically
                      sets focus to a text link that says "Errors have occurred." The link goes to the first
                      item in an ordered list of descriptive error messages. Each list item is a link to

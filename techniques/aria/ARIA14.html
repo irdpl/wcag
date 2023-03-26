@@ -56,7 +56,8 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is not referenced from any Understanding document.</p>
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a></span>.
+                  </p>
                </div>
             </aside>
             <div class="excol-all"></div>
@@ -64,7 +65,8 @@
                <h2 id="applicability">Applicability</h2>
                <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
                </p>
-               <p>This technique is not referenced from any Understanding document.</p>
+               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a> (Sufficient)</span>.
+               </p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -85,8 +87,8 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1-a-close-button-x-in-a-pop-up-box">
-                  <h3>Example 1: A close button (X) in a pop-up box</h3>
+               <section class="example" id="przyklad-1-a-close-button-x-in-a-pop-up-box">
+                  <h3>Przykład 1: A close button (X) in a pop-up box</h3>
                   <p>On a page, a link displays a pop-up box (a div) with additional information. The 'close'
                      element is implemented as a button containing merely the letter 'x'. The property
                      aria-label="close" is used to provide an accessible name to the button.
@@ -98,8 +100,8 @@
                      
                   </p>
                </section>
-               <section class="example" id="example-2-a-phone-number-with-multiple-fields">
-                  <h3>Example 2: A phone number with multiple fields</h3><pre xml:space="preserve">&lt;div role="group" aria-labelledby="groupLabel"&gt;
+               <section class="example" id="przyklad-2-a-phone-number-with-multiple-fields">
+                  <h3>Przykład 2: A phone number with multiple fields</h3><pre xml:space="preserve">&lt;div role="group" aria-labelledby="groupLabel"&gt;
   &lt;span id="groupLabel&gt;Work Phone&lt;/span&gt;
   +&lt;input type="number" aria-label="country code"&gt;
   &lt;input type="number" aria-label="area code"&gt;
