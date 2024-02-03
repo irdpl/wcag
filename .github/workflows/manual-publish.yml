@@ -41,6 +41,14 @@ jobs:
           curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/irdpl/wcag/pl-wcag-22-nowe/requirements/22/index.html -o output/requirements/22/index.html -f  --retry 3
           curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/irdpl/wcag/pl-wcag-22-nowe/conformance-challenges/index.html -o output/conformance-challenges/index.html -f  --retry 3
           ant deploy
+
+      - name: Upload Artifact
+        if: failure()  # Upload artifact only if the previous step (Build) fails
+        uses: actions/upload-artifact@v2
+        with:
+          name: failed-artifact
+          path: output
+
       - name: deploy
         run: .github/scripts/deploy.sh
         env:
