@@ -48,7 +48,7 @@
             </nav>
          </aside>
          <main id="main" class="standalone-resource__main">
-            <h1><span>Technique SM2:</span>Adding extended audio description in SMIL 2.0
+            <h1><span>Technique SM2:</span>Adding extended audio description in <abbr title="Synchronized Multimedia Integration Language">SMIL</abbr> 2.0
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
@@ -56,98 +56,81 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is
-                     
-                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/audiodeskrypcja-lub-alternatywa-tekstowa-dla-mediow-nagranie">1.2.3: Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)</a> when used with <a href="../general/G8">G8: Providing a movie with extended audio descriptions</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/audiodeskrypcja-nagranie">1.2.5: Audiodeskrypcja (nagranie)</a> when used with <a href="../general/G8">G8: Providing a movie with extended audio descriptions</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/rozszerzona-audiodeskrypcja-nagranie">1.2.7: Rozszerzona audiodeskrypcja (nagranie)</a> when used with <a href="../general/G8">G8: Providing a movie with extended audio descriptions</a>
-                     					.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p> Applies whenever SMIL 2.0 player is available </p>
-               <p>This technique relates to:</p>
-               <ul>
-                  <li><a href="https://w3c.github.io/wcag/understanding/audiodeskrypcja-lub-alternatywa-tekstowa-dla-mediow-nagranie">1.2.3: Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)</a> (Sufficient when used with <a href="../general/G8">G8: Providing a movie with extended audio descriptions</a>)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/audiodeskrypcja-nagranie">1.2.5: Audiodeskrypcja (nagranie)</a> (Sufficient when used with <a href="../general/G8">G8: Providing a movie with extended audio descriptions</a>)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/rozszerzona-audiodeskrypcja-nagranie">1.2.7: Rozszerzona audiodeskrypcja (nagranie)</a> (Sufficient when used with <a href="../general/G8">G8: Providing a movie with extended audio descriptions</a>)
-                  </li>
-               </ul>
+               <h2>Applicability</h2>
+               <p>Applies whenever SMIL 2.0 player is available</p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
-               <p> The purpose of this technique is to allow there to be more audio description
-                  than will fit into the gaps in the dialogue of the audio-visual material. 
+               <p> The purpose of this technique is to allow there to be more audio description than
+                  will fit into the gaps in the dialogue of the audio-visual material.
                </p>
-               <p> With SMIL 2.0 it is possible to specify that particular audio files be
-                  played at particular times, and that the program be frozen (paused) while
-                  the audio file is being played. 
+               <p> With SMIL 2.0 it is possible to specify that particular audio files be played at
+                  particular times, and that the program be frozen (paused) while the audio file is
+                  being played.
                </p>
-               <p> The effect is that the video appears to play through from end to end but
-                  freezes in places while a longer audio description is provided. It then
-                  continues automatically when the audio description is complete. 
+               <p> The effect is that the video appears to play through from end to end but freezes
+                  in places while a longer audio description is provided. It then continues automatically
+                  when the audio description is complete.
                </p>
-               <p> To turn the extended audio description on and off one could use script to
-                  switch back and forth between two SMIL scripts, one with and one without the
-                  extended audio description lines. Or script could be used to add or remove
-                  the extended audio description lines from the SMIL file so that the film
-                  clips would just play uninterrupted. 
+               <p> To turn the extended audio description on and off one could use script to switch
+                  back and forth between two SMIL scripts, one with and one without the extended audio
+                  description lines. Or script could be used to add or remove the extended audio description
+                  lines from the SMIL file so that the film clips would just play uninterrupted.
                </p>
-               <p> If scripting is not available then two versions of the SMIL file could be
-                  provided, one with and one without extended audio description. 
+               <p> If scripting is not available then two versions of the SMIL file could be provided,
+                  one with and one without extended audio description.
                </p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-video-with-extended-audio-description.">
-                  <h3>Przykład 1: Video with extended audio description.</h3><pre xml:space="preserve">
-&lt;smil xmlns="https://www.w3.org/2001/SMIL20/Language"&gt; 
-&lt;head&gt; 
-&lt;layout&gt; 
-&lt;root-layout backgroundColor="black" height="266" width="320"/&gt; 
-&lt;region id="video" backgroundColor="black" top="26" left="0" 
-height="144" width="320"/&gt; 
-&lt;/layout&gt; 
+               <section class="example" id="example-1-video-with-extended-audio-description">
+                  <h3>Example 1: Video with extended audio description</h3><pre xml:space="preserve"><code class="language-xml">&lt;smil xmlns="https://www.w3.org/2001/SMIL20/Language"&gt; 
+&lt;head&gt;
+  &lt;layout&gt; 
+    &lt;root-layout backgroundColor="black" height="266" width="320"/&gt; 
+    &lt;region id="video" backgroundColor="black" top="26" left="0" 
+     height="144" width="320"/&gt; 
+  &lt;/layout&gt; 
 &lt;/head&gt; 
 &lt;body&gt;	 
-&lt;excl&gt; 
-&lt;priorityClass peers="pause"&gt; 
-&lt;video src="movie.rm" region="video" title="video" alt="video" /&gt; 
-&lt;audio src="desc1.rm" begin="12.85s" alt="Description 1" /&gt; 
-&lt;audio src="desc2.rm" begin="33.71s" alt="Description 2" /&gt; 
-&lt;audio src="desc3.rm" begin="42.65s" alt="Description 3" /&gt; 
-&lt;audio src="desc4.rm" begin="59.80s" alt="Description 4" /&gt; 
-&lt;/priorityClass&gt; 
-&lt;/excl&gt; 
+  &lt;excl&gt; 
+    &lt;priorityClass peers="pause"&gt; 
+      &lt;video src="movie.rm" region="video" title="video" alt="video" /&gt; 
+      &lt;audio src="desc1.rm" begin="12.85s" alt="Description 1" /&gt; 
+      &lt;audio src="desc2.rm" begin="33.71s" alt="Description 2" /&gt; 
+      &lt;audio src="desc3.rm" begin="42.65s" alt="Description 3" /&gt; 
+      &lt;audio src="desc4.rm" begin="59.80s" alt="Description 4" /&gt; 
+    &lt;/priorityClass&gt; 
+  &lt;/excl&gt; 
 &lt;/body&gt; 
-     &lt;/smil&gt; </pre></section>
+&lt;/smil&gt;</code></pre></section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
                <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
                <ul>
-                  
-                  <li> 
-                     <a href="https://www.w3.org/TR/SMIL/">Synchronized Multimedia
-                        Integration Language (SMIL 2.0)</a>
-                     								       
+                  			
+                  <li>
+                     				<a href="https://www.w3.org/TR/SMIL/">Synchronized Multimedia Integration Language (SMIL 2.0)</a>
+                     			
                   </li>
-                  
-                  <li> 
-                     <a href="https://www.w3.org/TR/SMIL-access/">Accessibility
-                        Features of SMIL</a>
-                     								       
+                  			
+                  <li>
+                     				<a href="https://www.w3.org/TR/SMIL3/">Synchronized Multimedia Integration Language (SMIL 3.0)</a>
+                     			
+                  </li>			
+                  			
+                  <li>
+                     				<a href="https://www.w3.org/TR/SMIL-access/">Accessibility Features of SMIL</a>
+                     			
                   </li>
-                  
-                  <li> 
-                     <a href="http://ncam.wgbh.org/invent_build/web_multimedia/accessible-digital-media-guide/guideline-h-multimedia#techH12">NCAM Rich Media Accessibility, Accessible SMIL
-                        Templates</a>
-                     								       
-                  </li>
-                  
+                  		
                </ul>
             </section>
             <section id="related">
@@ -159,34 +142,34 @@ height="144" width="320"/&gt;
                   <li><a href="../smil/SM7">SM7</a></li>
                   
                   <li><a href="../smil/SM11">SM11</a></li>
-                  
+                  		
                </ul>
             </section>
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  			
                   <h3>Procedure</h3>
-                  
+                  			
                   <ol>
-                     
-                     <li> Play file with extended audio description </li>
-                     
-                     <li> Check whether video freezes in places and plays extended audio
-                        description 
-                     </li>
-                     
+                     				
+                     <li>Play file with extended audio description</li>
+                     				
+                     <li>Check whether video freezes in places and plays extended audio description</li>
+                     			
                   </ol>
-                  
+                  		
                </section>
                <section class="results" id="expected-results">
+                  			
                   <h3>Expected Results</h3>
-                  
+                  			
                   <ul>
-                     
-                     <li> #2 is true </li>
-                     
+                     				
+                     <li>#2 is true</li>
+                     			
                   </ul>
-                  
+                  		
                </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
@@ -202,15 +185,15 @@ height="144" width="320"/&gt;
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -247,28 +230,26 @@ height="144" width="320"/&gt;
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

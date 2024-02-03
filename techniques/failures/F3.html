@@ -58,16 +58,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/tresc-nietekstowa">1.1.1: Treść nietekstowa</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p> All technologies that support CSS. </p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/tresc-nietekstowa">1.1.1: Treść nietekstowa</a> (Failure)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -94,66 +92,62 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1">
-                  <h3>Przykład 1</h3>
+               <section class="example" id="example-1">
+                  <h3>Example 1</h3>
                   <p> In the following example, part of the content is contained in an
                      image that is presented by CSS alone. In this example, the image
                      TopRate.png is a 180 by 200 pixel image that contains the text,
                      "19.3% APR Typical Variable." 
-                  </p><pre xml:space="preserve"> The CSS contains: 
-p#bestinterest {
-  padding-left: 200px;
-  background: transparent url(/images/TopRate.png) no-repeat top left;
-}</pre><p> It is used in this excerpt: </p><pre xml:space="preserve"> 
-&lt;p id="bestinterest"&gt;
-  Where else would you find a better interest rate?
-&lt;/p&gt;</pre></section>
-               <section class="example" id="przyklad-2">
-                  <h3>Przykład 2</h3>
+                  </p><pre xml:space="preserve"><code class="language-css">p#bestinterest {
+   padding-left: 200px;
+   background: transparent url(/images/TopRate.png) no-repeat top left;
+ }</code>
+</pre><p> It is used in this excerpt: </p><pre xml:space="preserve"><code class="language-html">&lt;p id="bestinterest"&gt;Where else would you find a better interest rate?&lt;/p&gt;</code>
+</pre></section>
+               <section class="example" id="example-2">
+                  <h3>Example 2</h3>
                   <p> A book distributor uses background images to provide icons against a
                      list of book titles to indicate whether they are new, limited,
                      in-stock, or out of stock. 
                   </p>
-                  <p>The CSS contains: </p><pre xml:space="preserve">
-ul#booklist li {
-  padding-left: 20px;
-}
-
-ul#booklist li.new {
-  background: transparent url(new.png) no-repeat top left; 
-}
-                            
-ul#booklist li.limited {
-  background: transparent url(limited.png) no-repeat top left; 
-}
-                            
-ul#booklist li.instock {
-  background: transparent url(instock.png) no-repeat top left; 
-}
-
-ul#booklist li.outstock {
-  background: transparent url(outstock.png) no-repeat top left; 
-}</pre><p>It is used in this excerpt: </p><pre xml:space="preserve">
-&lt;ul id="booklist"&gt;
+                  <p>The CSS contains: </p><pre xml:space="preserve"><code class="language-css">ul#booklist li {
+   padding-left: 20px;
+ }
+ 
+ ul#booklist li.new {
+   background: transparent url(new.png) no-repeat top left; 
+ }
+                             
+ ul#booklist li.limited {
+   background: transparent url(limited.png) no-repeat top left; 
+ }
+                             
+ ul#booklist li.instock {
+   background: transparent url(instock.png) no-repeat top left; 
+ }
+ 
+ ul#booklist li.outstock {
+   background: transparent url(outstock.png) no-repeat top left; 
+ }</code>
+</pre><p>It is used in this excerpt: </p><pre xml:space="preserve"><code class="language-html">&lt;ul id="booklist"&gt;
   &lt;li class="new"&gt;Some book&lt;/li&gt;
   &lt;li class="instock"&gt;Some other book&lt;/li&gt;
   &lt;li class="limited"&gt;A book we desperately want to get rid of&lt;/li&gt;
   ...
   &lt;li class="outstock"&gt;A book you actually want &lt;/li&gt;
-&lt;/ul&gt;</pre></section>
-               <section class="example" id="przyklad-3">
-                  <h3>Przykład 3</h3>
+&lt;/ul&gt;</code></pre></section>
+               <section class="example" id="example-3">
+                  <h3>Example 3</h3>
                   <p>Using the code from example 1, the same background image is declared in the HTML style
                      attribute:
-                  </p><pre xml:space="preserve">&lt;p id="bestinterest" style="background: transparent url(/images/TopRate.png) no-repeat top left;" &gt;
-Where else would you find a better interest rate?
-&lt;p&gt;</pre><p>In the following code, the background image declaration is created in a client script:</p><pre xml:space="preserve">&lt;script type="text/javascript"&gt;
-var newP = document.createElement('p');
-var newPText = document.createTextNode('Where else would you find a better interest rate?');
-newP.appendChild(newPText);
-newP.style.background = 'transparent url(/images/TopRate.png) no-repeat top left';
-document.body.appendChild(newP);
-&lt;/script&gt; </pre></section>
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;p id="bestinterest" style="background: transparent url(/images/TopRate.png) no-repeat top left;"&gt;
+   Where else would you find a better interest rate?&lt;p&gt;</code></pre><p>In the following code, the background image declaration is created in a client script:</p><pre xml:space="preserve"><code class="language-javascript">&lt;script&gt;
+   var newP = document.createElement('p');
+   var newPText = document.createTextNode('Where else would you find a better interest rate?');
+   newP.appendChild(newPText);
+   newP.style.background = 'transparent url(/images/TopRate.png) no-repeat top left';
+   document.body.appendChild(newP);
+&lt;/script&gt;</code></pre></section>
             </section>
             <section id="related">
                <h2>Related Techniques</h2>
@@ -178,7 +172,7 @@ document.body.appendChild(newP);
                      
                      <li>If an image does convey important information,  the information is
                         provided to assistive technologies and is also available when the CSS image is
-                        not displayed.  
+                        not displayed.
                      </li>
                      
                   </ol>
@@ -210,15 +204,15 @@ document.body.appendChild(newP);
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -255,28 +249,26 @@ document.body.appendChild(newP);
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

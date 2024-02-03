@@ -57,19 +57,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/mozliwosc-pominiecia-blokow">2.4.1: Możliwość pominięcia bloków</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Technologies that provide client side scripting.</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/mozliwosc-pominiecia-blokow">2.4.1: Możliwość pominięcia bloków</a> (Sufficient when used with Grouping blocks of repeated material in a way that can
-                     be skipped, using one of the
-                     following techniques:
-                     )</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -82,7 +77,7 @@
                </p>
                <div class="note">
                   
-                  <p>Similiar approaches can be implemented using server-side scripting and reloading a
+                  <p>Similar approaches can be implemented using server-side scripting and reloading a
                      modified version of the Web page.
                   </p>
                   
@@ -90,61 +85,43 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1">
-                  <h3>Przykład 1</h3>
-                  <p>The navigation links at top of a Web page are all entries in a menu implemented using
-                     HTML, CSS, and Javascript. When the navigation bar is expanded, the navigation links
-                     are available to the user. When the navigation bar is collapsed, the links are not
-                     available.
-                  </p><pre xml:space="preserve">
-...
-
-  &lt;script type="text/javascript"&gt;
-  function toggle(id){
-    var n = document.getElementById(id);
-    n.style.display =  (n.style.display != 'none' ? 'none' : '' );
-  }
-  &lt;/script&gt;
-
-...
-
-  &lt;a href="#" onclick="toggle('navbar')"&gt;Toggle Navigation Bar&lt;/a&gt;
-
-  &lt;ul id="navbar"&gt;
-  &lt;li&gt;&lt;a href="http://target1.html"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="http://target2.html"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="http://target3.html"&gt;Link 3&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="http://target4.html"&gt;Link 4&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-
-...
-</pre><p class="working-example">Working example of this code: <a href="../../working-examples/script-toggle-navbar-link/">Toggle navigation bar with a link</a>.
-                  </p>
-               </section>
-               <section class="example" id="przyklad-2">
-                  <h3>Przykład 2</h3>
+               <section class="example" id="example-1-toggling-a-table-of-contents">
+                  <h3>Example 1: Toggling a table of contents</h3>
                   <p>The table of contents for a set of Web pages is repeated near the beginning of each
                      Web page. A button at the beginning of the table of contents lets the user remove
                      or restore it on the page.
-                  </p><pre xml:space="preserve">
-...
+                  </p><pre xml:space="preserve"><code class="language-html">...
+&lt;script&gt;
+let tocToggle = document.querySelector(".toc-toggle");
+let toc = document.querySelector("#toc");
+tocToggle.addEventListener("click", toggle, false);
 
-   &lt;script type="text/javascript"&gt;
-  function toggle(id){
-    var n = document.getElementById(id);
-    n.style.display =  (n.style.display != 'none' ? 'none' : '' );
+function toggle(e){
+  let elm = e.currentTarget;
+  if(elm.getAttribute("aria-expanded") === "false"){
+    elm.setAttribute("aria-expanded", "true");
   }
-  &lt;/script&gt;
-
-  ...
-
-  &lt;button onclick="return toggle('toc');"&gt;Toggle Table of Contents&lt;/button&gt;
-  &lt;div id="toc"&gt;
-    ...
-  &lt;/div&gt;
+  else{
+    elm.setAttribute("aria-expanded", "false");
+  }
+}
+&lt;/script&gt;
 
 ...
-</pre><p class="working-example">Working example of this code: <a href="../../working-examples/script-toggle-toc-button/">Toggle table of contents with a button</a>.
+
+&lt;button aria-controls="toc" aria-expanded="true" class="toc-toggle" type="button"&gt;
+  Toggle Table Of Contents
+&lt;/button&gt;
+&lt;nav aria-labelledby="toc-header" id="toc"&gt;
+  &lt;h2 id="toc-header"&gt;Table of Contents&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#sec1"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#sec2"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#sec3"&gt;Section 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#sec4"&gt;Section 4&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+...</code></pre><p class="working-example">Working example of this code: <a href="../../working-examples/script-toggle-toc-button/">Toggle table of contents with a button</a>.
                   </p>
                </section>
             </section>
@@ -154,12 +131,7 @@
                <ul>
                   
                   <li>
-                     <a href="http://www.bobbyvandersluis.com/articles/unobtrusive-show-hide/">Unobtrusive show/hide behavior reloaded</a>
-                     
-                  </li>
-                  
-                  <li>
-                     <a href="http://www.dustindiaz.com/seven-togglers/">Seven ways to toggle an element with JavaScript</a>
+                     <a href="https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/">ARIA - Disclosure (Show/Hide) pattern.</a>
                      
                   </li>
                   
@@ -171,10 +143,7 @@
                   
                   <li><a href="../html/H69">H69</a></li>
                   
-                  <li><a href="../html/H50">H50</a></li>
-                  
-                  <li><a href="../html/H70">H70</a></li>
-                  
+                  <li><a href="../html/H70">H70</a></li>  
                   
                </ul>
             </section>
@@ -235,15 +204,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -280,28 +249,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

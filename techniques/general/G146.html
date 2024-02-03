@@ -39,7 +39,6 @@
                         <li><a href="#applicability">Applicability</a></li>
                         <li><a href="#description">Description</a></li>
                         <li><a href="#examples">Examples</a></li>
-                        <li><a href="#resources">Related Resources</a></li>
                         <li><a href="#related">Related Techniques</a></li>
                         <li><a href="#tests">Tests</a></li>
                      </ul>
@@ -56,36 +55,21 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is
-                     
-                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/zmiana-rozmiaru-tekstu">1.4.4: Zmiana rozmiaru tekstu</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/prezentacja-wizualna">1.4.8: Prezentacja wizualna</a>, using a more specific technique.
-                     					.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Applies to all technologies.</p>
-               <p>This technique relates to:</p>
-               <ul>
-                  <li><a href="https://w3c.github.io/wcag/understanding/zmiana-rozmiaru-tekstu">1.4.4: Zmiana rozmiaru tekstu</a> (Sufficient when used with 
-                     Ensuring that text containers resize when the text resizes 
-                     AND using measurements that are relative to other measurements in the content  by
-                     using
-                     one or more of the following techniques:
-                     Techniques for text container resizing)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/prezentacja-wizualna">1.4.8: Prezentacja wizualna</a> (Sufficient using a more specific technique)
-                  </li>
-               </ul>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
                <p>The objective of this technique is to be able to present content without introducing
                   horizontal scroll bars by using layout techniques that adapt to the available horizontal
-                  space. Liquid layouts define layout regions that both resize with text, and
-                  reflow as needed to display the region on the screen. Although the exact layout therefore
+                  space. Liquid layouts define layout regions that both resize with text, and reflow
+                  as needed to display the region on the screen. Although the exact layout therefore
                   varies, the relationship of elements and the reading order remains the same. This
                   is an effective way to create designs that present well on different devices and for
                   users with different font size preferences.
@@ -110,8 +94,8 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-simple-liquid-layout-in-html-and-css">
-                  <h3>Przykład 1: Simple liquid layout in HTML and CSS</h3>
+               <section class="example" id="example-1-simple-liquid-layout-in-html-and-css">
+                  <h3>Example 1: Simple liquid layout in <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr></h3>
                   <p>The following fairly simple example uses HTML and CSS to create a liquid layout. The
                      three columns adjust their size as text size is adjusted. When the total horizontal
                      width exceeds the available width of the columns, the last column wraps to be positioned
@@ -119,103 +103,93 @@
                      either clipping or introducing horizontal scrolling until the longest word no longer
                      fits in a column. This particular example uses percent sizes for the columns and defines
                      them as floating regions using the "float" property.
-                  </p><pre xml:space="preserve">
-              &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
-                &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-                &lt;head&gt;
-                &lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;
-                &lt;title&gt;Example of Basic Liquid Layout&lt;/title&gt;
-                &lt;style type="text/css"&gt;
-                .column
-                {
-                border-left: 1px solid green;
-                padding-left:1%;
-                float: left;
-                width: 32%;
-                }
-                #footer
-                {
-                border-top: 1px solid green;
-                clear: both;
-                }
-                &lt;/style&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                &lt;h1&gt;WCAG Example&lt;/h1&gt;
-                &lt;h2&gt;Text in Three Columns&lt;/h2&gt;
-                &lt;div title="column one" class="column"&gt;
-                &lt;h3&gt;Block 1&lt;/h3&gt;
-                &lt;p&gt; The objective of this technique is to be able to present content 
-                without introducing horizontal scroll bars by using layout 
-                techniques that adapt to the available horizontal space.
-                &lt;/p&gt;
-                &lt;/div&gt;
-                &lt;div title="column two" class="column"&gt;
-                &lt;h3&gt;Block 2&lt;/h3&gt;
-                &lt;p&gt; This is a very simple example of a page layout that adapts as the
-                text size changes.
-                &lt;/p&gt;
-                &lt;/div&gt;
-                &lt;div title="column three" class="column"&gt;
-                &lt;h3&gt;Block 3&lt;/h3&gt;
-                &lt;p&gt; For techniques that support more complex page layouts, see the
-                Resources listed below.
-                &lt;/p&gt;
-                &lt;/div&gt;
-                &lt;p id="footer"&gt;Footer text&lt;/p&gt;
-                &lt;/body&gt;
-                &lt;/html&gt;
-            </pre></section>
-            </section>
-            <section id="resources">
-               <h3 style="margin-bottom: 0;">Other sources</h3>
-               <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
-               <ul>
-                  
-                  <li>
-                     	<a href="http://webreference.com/authoring/style/sheets/css_mastery2/index-2.html">CSS Mastery: Fixed-Width, Liquid, and Elastic Layouts and Faux Columns</a>
-                     
-                  </li>
-                  
-               </ul>
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Example of Basic Liquid Layout&lt;/title&gt;
+  &lt;style&gt;
+  .column {
+    border-left: 1px solid green;
+    padding-left:1%;
+    float: left;
+    width: 32%;
+  }
+
+  .column:nth-of-type(1){
+    border:0;
+  }
+	
+  footer {
+    border-top: 1px solid green;
+    clear: both;
+  }
+  &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;WCAG Example&lt;/h1&gt;
+    &lt;h2&gt;Text in Three Columns&lt;/h2&gt;
+    &lt;div class="column"&gt;
+      &lt;h3&gt;Block 1&lt;/h3&gt;
+      &lt;p&gt;The objective of this technique is to be able to present content 
+        without introducing horizontal scroll bars by using layout 
+        techniques that adapt to the available horizontal space.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+      &lt;h3&gt;Block 2&lt;/h3&gt;
+      &lt;p&gt;This is a very simple example of a page layout that adapts as the
+	text size changes.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+      &lt;h3&gt;Block 3&lt;/h3&gt;
+      &lt;p&gt;For techniques that support more complex page layouts, see the
+	Resources listed below.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;footer&gt;
+      &lt;p&gt;Footer text&lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre></section>
             </section>
             <section id="related">
                <h2>Related Techniques</h2>
                <ul>
-                  
+                  		
                   <li><a href="../css/C12">C12</a></li>
-                  
+                  		
                   <li><a href="../css/C13">C13</a></li>
-                  
+                  		
                   <li><a href="../css/C14">C14</a></li>
-                  
+                  	
                </ul>
             </section>
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  		
                   <h3>Procedure</h3>
-                  
+                  		
                   <ol>
-                     
+                     			
                      <li>Display content in a user agent.</li>
-                     
+                     			
                      <li>Increase text size to 200%.</li>
-                     
+                     			
                      <li>Check whether all content and functionality is available with no horizontal scrolling.</li>
-                     
+                     		
                   </ol>
-                  
+                  	
                </section>
                <section class="results" id="expected-results">
+                  		
                   <h3>Expected Results</h3>
-                  
+                  		
                   <ul>
-                     
+                     			
                      <li>Check #3 is true.</li>
-                     
+                     		
                   </ul>
-                  
+                  	
                </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
@@ -231,15 +205,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -276,28 +250,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

@@ -48,7 +48,7 @@
             </nav>
          </aside>
          <main id="main" class="standalone-resource__main">
-            <h1><span>Technique PDF21:</span>Using List tags for lists in PDF documents
+            <h1><span>Technique PDF21:</span>Using List tags for lists in <abbr title="Portable Document Format">PDF</abbr> documents
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
@@ -56,339 +56,176 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Tagged PDF documents with lists.</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a> (Sufficient when used with Making information and relationships conveyed through
-                     presentation programmatically
-                     determinable using the following techniques:
-                     )</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
-               <p>The intent of this technique is to create lists of related items using
-                  				list elements appropriate for their purposes. PDF files containing
-                  				lists are normally created or repaired using a tool for authoring PDF. 
+               <p>The intent of this technique is to create lists of related items using list elements
+                  appropriate for their purposes. PDF files containing lists are normally created or
+                  repaired using a tool for authoring PDF.
                </p>
-               <p>When markup is used that visually formats items as a list but does
-                  				not indicate the list relationship, users may have difficulty navigating
-                  				the information. An example of such visual formatting is simply using
-                  				line-breaks to separate list items. 
+               <p>When markup is used that visually formats items as a list but does not indicate the
+                  list relationship, users may have difficulty navigating the information. An example
+                  of such visual formatting is simply using line-breaks to separate list items.
                </p>
-               <p>Some assistive technologies allow users to navigate from list to list
-                  				or item to item. If the lists are not correctly formatted with list
-                  				tags, these users will have difficulty understanding the list content. 
+               <p>Some assistive technologies allow users to navigate from list to list or item to item.
+                  If the lists are not correctly formatted with list tags, these users will have difficulty
+                  understanding the list content.
                </p>
-               <p>The easiest way to create lists in PDF content is to format them properly
-                  				using list markup in the authoring tool, for example, Microsoft Word
-                  				or OpenOffice.org Writer. However, if you do not have access to the
-                  				source file and authoring tool, you can use Acrobat Pro's TouchUp Reading
-                  				Order tool and the Tags panel. 
+               <p>The easiest way to create lists in PDF content is to format them properly using list
+                  markup in the authoring tool, for example, Microsoft Word or OpenOffice Writer. However,
+                  if you do not have access to the source file and authoring tool, you can use Acrobat
+                  Pro's Reading Order tool and the Tags panel.
                </p>
-               <p>The <a href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf">PDF
-                     				specification</a> defines list structure in section 14.8.4.3.3 (List
-                  				Elements). The structure types for lists in PDF documents are: 
-               </p>
+               <p>The structure types for lists in PDF documents are:</p>
                <ul>
-                  
-                  <li> L - the List tag, which contains one or more LI tags. </li>
-                  
-                  <li> LI - the List Item tag. List item tags can contain Lbl and LBody
-                     				tags. 
+                  				
+                  <li><code>L</code> - the List tag, which contains one or more <code>LI</code> tags. 
                   </li>
                   
-                  <li> Lbl - the list item label. Contains distinguishing information
-                     					such as a item number or bullet character. 
+                  <li><code>LI</code> - the List Item tag. List item tags can contain <code>Lbl</code> and <code>LBody</code> tags.
                   </li>
                   
-                  <li> LBody - the list item body. Contains list item content, or in
-                     						the case of a nested list, it may contain additional List tag trees. 
+                  <li><code>Lbl</code> - the list item label. Contains distinguishing information such as a item number
+                     or bullet character.
+                  </li>
+                  
+                  <li><code>LBody</code> - the list item body. Contains list item content, or in the case of a nested list,
+                     it may contain additional List tag trees.
                   </li>
                   
                </ul>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-adding-lists-to-microsoft-word-2007-documents">
-                  <h3>Przykład 1: Adding lists to Microsoft Word 2007 documents</h3>
+               <section class="example" id="example-1-adding-lists-to-microsoft-word-documents">
+                  <h3>Example 1: Adding lists to Microsoft Word documents</h3>
                   <p>This example is shown with Microsoft Word. There are other software tools that perform
-                     similar functions. See the list of other software tools in <a href="#pdf_notes_acc-sup_files_applications"></a>.
+                     similar functions.
                   </p>
-                  <p>On the Home ribbon, use the lists tools to create or repair lists
-                     						in Word documents. This is the easiest way to ensure that lists are
-                     						formatted correctly when they are converted to PDF. 
-                  </p>
-                  <p>In the image below, the numbered and bullet lists were created using
-                     						the list tools. The third list did not use the list tool (see the ribbon)
-                     						and the list will not be tagged as list elements when converted to
-                     						PDF. 
-                  </p>
-                  <figure id="figure-pdf-lists">
-                     <img src="img/lists-word.jpg" />
-                     
-                     
-                     <figcaption>Screenshot showing correctly formatted ordered and unordered lists, and a third section
-                        of text formatted to appear as a list, but not using the list formatting tool in Microsoft
-                        Word.
-                     </figcaption>
-                     
-                     
-                  </figure>
-               </section>
-               <section class="example" id="przyklad-2-adding-lists-to-openoffice.org-writer-2.2-documents">
-                  <h3>Przykład 2: Adding lists to OpenOffice.org Writer 2.2 documents</h3>
-                  <p>This example is shown with OpenOffice.org Writer. There are other software tools that
-                     perform similar functions. See the list of other software tools in <a href="#pdf_notes_acc-sup_files_applications"></a>.
-                  </p>
-                  <p>Use the Bullets and Numbering tool to create or repair lists in OpenOffice.org
-                     						Writer documents. This is the easiest way to ensure that lists are
-                     						formatted correctly when they are converted to PDF. 
-                  </p>
-                  <p>In the image below, the numbered and bullet lists were created using
-                     						the list tools. The third list did not use the list tool (see the toolbar)
-                     						and the list will not be tagged as list elements when converted to
-                     						PDF. 
-                  </p>
-                  <figure id="figure-openoffice-lists">
-                     <img src="img/lists-oo.jpg" />
-                     
-                     
-                     <figcaption>Screenshot showing correctly formatted ordered and unordered lists, and a third section
-                        of text formatted to appear as a list, but not using the list formatting tool in OpenOffice.org
-                        Writer.
-                     </figcaption>
-                     
-                     
-                  </figure>
-                  <p class="working-example">This example is shown in operation in the <a href="../../working-examples/pdf-lists/lists.odt">working example of adding lists to OpenOffice Writer documents</a>.
+                  <p>On the Home ribbon, use the lists tools to create or repair lists in Word documents.
+                     This is the easiest way to ensure that lists are formatted correctly when they are
+                     converted to PDF.
                   </p>
                </section>
-               <section class="example" id="przyklad-3-ensuring-that-lists-are-correctly-formatted-using-adobe-acrobat-9-pro">
-                  <h3>Przykład 3: Ensuring that lists are correctly formatted using Adobe
-                     				Acrobat 9 Pro
-                  </h3>
+               <section class="example" id="example-2-adding-lists-to-openoffice-writer-documents">
+                  <h3>Example 2: Adding lists to OpenOffice Writer documents</h3>
+                  <p>This example is shown with OpenOffice Writer. There are other software tools that
+                     perform similar functions.
+                  </p>
+                  <p>Use the Bullets and Numbering tool to create or repair lists in OpenOffice Writer
+                     documents. This is the easiest way to ensure that lists are formatted correctly when
+                     they are converted to PDF.
+                  </p>
+               </section>
+               <section class="example" id="example-3-ensuring-that-lists-are-correctly-formatted-using-adobe-acrobat-pro">
+                  <h3>Example 3: Ensuring that lists are correctly formatted using Adobe Acrobat Pro</h3>
                   <p>This example is shown with Adobe Acrobat Pro. There are other software tools that
-                     perform similar functions. See the list of other software tools in <a href="#pdf_notes_acc-sup_files_applications"></a>.
+                     perform similar functions.
                   </p>
                   <ol>
-                     
-                     <li> View &gt; Navigation Panels... &gt; Tags </li>
-                     
-                     <li> Inspect the lists in the document to determine which, if any,
-                        						are not formatted properly. 
-                     </li>
-                     
+                     					
+                     <li>View → Navigation Panels... → Accessibility Tags</li>
+                     					
+                     <li>Inspect the lists in the document to determine which, if any, are not formatted properly.</li>
+                     				
                   </ol>
-                  <p>In the following image, the third list is formatted as text. The list
-                     						items are separated only by line-breaks. Assistive technology may not
-                     						be able to render the list intelligibly for users. 
+                  <p>In the following image, the third list is formatted as text. The list items are separated
+                     only by line-breaks. Assistive technology may not be able to render the list intelligibly
+                     for users.
                   </p>
-                  <figure id="figure-tags-panel-lists">
-                     <img src="img/unformattedlist.jpg" />
-                     
-                     
-                     <figcaption>Tags panel showing incorrectly formatted list as text beneath a Text body tag rather
-                        than nested under list tags.
-                     </figcaption>
-                     
-                     
-                  </figure>
-                  <p>To repair the list, use the Tags panel to create list tags in the
-                     						content. 
-                  </p>
-                  <p>The following image shows the resulting first list item correctly
-                     						formatted. 
-                  </p>
-                  <figure id="figure-tags-panel-nesting">
-                     <img src="img/listrepair.jpg" />
-                     
-                     
-                     <figcaption>Tags panel showing first list item correctly nested under list tags.</figcaption>
-                     
-                     
-                  </figure>
-                  <p class="working-example">This example is shown in operation in the <a href="../../working-examples/pdf-lists/lists.pdf">working example of ensuring lists are properly formatted in Acrobat Pro</a>.
+                  <div>
+                     					<img alt="Tags panel showing two list items as p tags underneath a L tag." src="img/acrobat-incorrectly-formatted-list.png" width="748" />
+                     				
+                  </div>
+                  <p>To repair the list, use the Tags panel to create list tags in the content.</p>
+                  <p>The following image shows the resulting first list item correctly formatted.</p>
+                  <div>
+                     <img alt="Tags panel showing first list item correctly nested under list tags." src="img/acrobat-correctly-formatted-list.png" width="419" />
+                     						
+                  </div>
+                  <p class="working-example">This example, with two list items not nested inside the list element, is shown in
+                     the <a href="../../working-examples/pdf-lists/lists.pdf">working example of ensuring lists are properly formatted</a>.
                   </p>
                </section>
-               <section class="example" id="przyklad-4-marking-up-lists-using-list-structure-elements">
-                  <h3>Przykład 4: Marking up lists using List structure elements</h3>
-                  <p>The following code fragment illustrates code that is typical marking
-                     						up a list hierarchy in PDF documents. It uses the simple numbered list
-                     						in the previous examples. This is typically accomplished by an authoring
-                     						tool. 
-                  </p><pre xml:space="preserve">4 0 obj
-  &lt;&lt;/Type /Page
-    /Contents 5 0 R
-  &gt;&gt;
-
-endobj
-5 0 obj
-  &lt;&lt; /Length 3 0 R &gt;&gt;
-  stream
-   /P &lt;&lt;/MCID 1&gt;&gt; BDC
-      BT T* (The most popular sports are:) Tj ET EMC
-   /Lbl &lt;&lt;/MCID 11&gt;&gt; BDC
-      BT T* (1. ) Tj ET EMC
-   /LBody &lt;&lt;/MCID 12&gt;&gt; /BDC
-      BT (Snow-shoeing ) Tj ET EMC
-   /Lbl &lt;&lt;/MCID 21&gt;&gt; BDC
-      BT T* (2. ) Tj ET EMC
-   /LBody &lt;&lt;/MCID 22&gt;&gt; /BDC
-      BT (Ice-skating ) Tj ET EMC
-   /Lbl &lt;&lt;/MCID 31&gt;&gt; BDC
-      BT T* (3. ) Tj ET EMC
-   /LBody &lt;&lt;/MCID 32&gt;&gt; /BDC
-      BT (Skiing ) Tj ET EMC
-endstream
-endobj
-
-101 0 obj                 % Structure element for intro paragraph to list ("The most popular sports are:")
-  &lt;&lt; /Type /StructElem
-     /S /P
-     /P 201 0 R
-     /Pg 4 0 R
-     /K 1
-  &gt;&gt;
-endobj
-
-111 0 obj                  % Structure element for first item, list label (Lbl): "1."
-  &lt;&lt; /Type /StructElem
-     /S /Lbl
-     /P 211 0 R
-     /Pg 4 0 R
-     /K 11
-  &gt;&gt;
-endobj
-
-112 0 obj
-  &lt;&lt; /Type /StructElem     % Structure element for first item, list text (LBody): ("Snow-shoeing")
-     /S /LBody
-     /P 211 0 R
-     /Pg 4 0 R
-     /K 12
-  &gt;&gt;
-endobj
-
-... [ objects 121-122 and 131-132, referencing MCIDs 21-22 and 31-32 are omitted in the interest of space. ]
-
-201 0 obj
-  &lt;&lt; /Type /StructElem
-     /S /Caption            % Intro paragraph
-     /P 400 0 R
-     /K [101 0 R]
-  &gt;&gt;
-endobj
-
-211 0 obj
-  &lt;&lt; /Type /StructElem
-     /S /LI                 % List item for "1. Snow-shoeing"
-     /P 400 0 R
-     /K [111 0 R 112 0 R]
-  &gt;&gt;
-endobj
-
-212 0 obj
-  &lt;&lt; /Type /StructElem
-     /S /LI                 % List item for "2. Ice-skating"
-     /P 301 0 R
-     /K [121 0 R 122 0 R]
-  &gt;&gt;
-endobj
-
-213 0 obj
-  &lt;&lt; /Type /StructElem
-     /S /LI                 % List item for "3. Skiing"
-     /P 301 0 R
-     /K [131 0 R 132 0 R]
-  &gt;&gt;
-endobj
-
-400 0 obj
-  &lt;&lt; /Type /StructElem
-     /S /L                   % Top-level structure element in the list hierarchy                
-     /K [201 0 R 211 0 R 212 0 R 213 0 R]
-  &gt;&gt;
-endobj
-</pre></section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
                <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
                <ul>
-                  
-                  <li> Section 14.8.4.3.3 (List Elements) in <a href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf">PDF
-                        					1.7 (ISO 32000-1)</a> 
-                     
+                  						
+                  <li>Section 14.8.4.3.3 (List Elements) in <a href="https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/PDF32000_2008.pdf">PDF 1.7 (ISO 32000-1) (PDF)</a>
+                     						
                   </li>
-                  
+                  						
                   <li>
-                     <a href="http://www.adobe.com/accessibility/products/acrobat.html">PDF and Accessibility</a>
-                     
+                     							<a href="https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html">Create and verify PDF accessibility (Acrobat Pro)</a>
+                     						
                   </li>
-                  
+                  					
                </ul>
             </section>
             <section id="related">
                <h2>Related Techniques</h2>
                <ul>
-                  
+                  						
                   <li><a href="../general/G115">G115</a></li>
-                  
+                  					
                </ul>
             </section>
             <section id="tests">
                <h2>Tests</h2>
-               <section class="procedure" id="procedura">
-                  <h3>Procedura</h3>
-                  
+               <section class="procedure" id="procedure">
+                  				
+                  <h3>Procedure</h3>
+                  				
                   <ol>
-                     
+                     					
                      <li>
-                        
-                        <p> For a list in a PDF document, verify in one of the following
+                        						
+                        <p>For a list in a PDF document, verify in one of the following
                            					ways:
                         </p>
-                        
+                        							
                         <ul>
-                           
-                           <li> Read the PDF document with a screen reader, listening to hear
-                              						that list is read correctly when reading the content line-by-line. 
+                           								
+                           <li>Read the PDF document with a screen reader, listening to hear that list is read correctly
+                              when reading the content line-by-line.
                            </li>
                            
-                           <li> Use a tool that is capable of showing lists to open the PDF
-                              							document and view the list to check that it is correctly structured. 
+                           <li>Use a tool that is capable of showing lists to open the PDF document and view the
+                              list to check that it is correctly structured.
                            </li>
                            
-                           <li> Inspect the tag tree to verify that the list is structured
-                              								according to the PDF specification. 
-                           </li>
+                           <li> Inspect the tag tree to verify that the list is structured according to the PDF specification.</li>
                            
-                           <li> Use a tool that exposes the document through the accessibility
-                              									API and verify that the list is correctly structured. 
+                           <li>Use a tool that exposes the document through the accessibility <abbr title="Application Programming Interface">API</abbr> and verify that the list is correctly structured.
                            </li>
-                           
+                           								
                         </ul>
-                        
+                        							
                      </li>
-                     
+                     						
                   </ol>
-                  
+                  					
                </section>
-               <section class="results" id="oczekiwane-wyniki">
-                  <h3>Oczekiwane wyniki</h3>
-                  
+               <section class="results" id="expected-results">
+                  						
+                  <h3>Expected Results</h3>
+                  						
                   <ul>
-                     
+                     							
                      <li>#1 is true </li>
-                     
+                     						
                   </ul>
-                  
+                  					
                </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
@@ -404,15 +241,15 @@ endobj
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -449,28 +286,26 @@ endobj
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

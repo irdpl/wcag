@@ -59,32 +59,18 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is
-                     
-                     						a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/dostosowanie-czasu">2.2.1: Dostosowanie czasu</a> and a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/przerywanie">2.2.4: Przerywanie</a> and a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/zmiana-na-zadanie">3.2.5: Zmiana na żądanie</a>
-                     					.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p> All pages</p>
-               <p>This technique relates to:</p>
-               <ul>
-                  <li><a href="https://w3c.github.io/wcag/understanding/dostosowanie-czasu">2.2.1: Dostosowanie czasu</a> (Failure)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/przerywanie">2.2.4: Przerywanie</a> (Failure)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/zmiana-na-zadanie">3.2.5: Zmiana na żądanie</a> (Failure)
-                  </li>
-               </ul>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
-               <p> 
-                  meta
-                  						   http-equiv of {time-out}; url=... is often used to
+               <p><code class="language-html">meta http-equiv content="{time} url=..."</code> is often used to
                   automatically redirect users. When this occurs after a time delay, it is an
                   unexpected change of context that may interrupt the user.
                </p>
@@ -97,27 +83,23 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1">
-                  <h3>Przykład 1</h3>
-                  <p> The page below is a failure because it will redirect to the URI
-                     http://www.example.com/newpage after a time limit of 5 seconds.
-                  </p><pre xml:space="preserve">
-&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en"&gt;
-   &lt;head&gt;     
-      &lt;title&gt;Do not use this!&lt;/title&gt;     
-      &lt;meta http-equiv="refresh"
-      content="5; url=http://www.example.com/newpage" /&gt;   
-   &lt;/head&gt;   
-   &lt;body&gt;     
-      &lt;p&gt;       
-         If your browser supports Refresh, you'll be       
-         transported to our        
-         &lt;a href="http://www.example.com/newpage"&gt;new site&lt;/a&gt;        
-         in 5 seconds, otherwise, select the link manually.     
-      &lt;/p&gt;   
-   &lt;/body&gt; 
-&lt;/html&gt;
-</pre></section>
+               <section class="example" id="example-1">
+                  <h3>Example 1</h3>
+                  <p> The page below is a failure because it will redirect to the <abbr title="Uniform Resource Identifier">URI</abbr> https://www.example.com/newpage after a time limit of 5 seconds.
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;!doctype&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;title&gt;Do not use this!&lt;/title&gt;     
+  &lt;meta http-equiv="refresh" content="5; url=https://www.example.com/newpage"&gt;
+&lt;/head&gt;   
+&lt;body&gt;     
+  &lt;p&gt;
+    If your browser supports Refresh, you'll be transported to our
+    &lt;a href="https://www.example.com/newpage"&gt;new site&lt;/a&gt; in 5 seconds,
+    otherwise select the link manually.     
+  &lt;/p&gt;   
+&lt;/body&gt; 
+&lt;/html&gt;</code></pre></section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -146,7 +128,7 @@
                <section class="procedure" id="procedure">
                   <h3>Procedure</h3>
                   
-                  <p>For a page that uses <code>meta http-equiv="refresh"</code>:
+                  <p>For a page that uses <code class="language-html">meta http-equiv="refresh"</code>:
                   </p> 
                   
                   <ol>
@@ -207,15 +189,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -252,28 +234,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

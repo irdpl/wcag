@@ -57,16 +57,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/zmiana-rozmiaru-tekstu">1.4.4: Zmiana rozmiaru tekstu</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>HTML, XHTML and CSS</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/zmiana-rozmiaru-tekstu">1.4.4: Zmiana rozmiaru tekstu</a> (Failure)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -99,19 +97,17 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1">
-                  <h3>Przykład 1</h3>
+               <section class="example" id="example-1-overflowing-text">
+                  <h3>Example 1: Overflowing text</h3>
                   <p>The font size is set in a scalable way, but the container is set to a fixed pixel
                      size. A gray border shows the boundaries of the text container. When the text is resized,
-                     it spills out of its container, and obsures the next paragraph.
-                  </p><pre xml:space="preserve">
-&lt;div style="font-size:100%; width:120px; height:100px; border: thin solid gray;"&gt; 
+                     it spills out of its container, and obscures the next paragraph.
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;div style="font-size:100%; width:120px; height:100px; border: thin solid gray;"&gt; 
   Now is the time for all good men to come to the aid of their country. 
 &lt;/div&gt;
-&lt;p&gt;Now is the time for all good men to come to the aid of their country.&lt;/p&gt;
-</pre><p>Illustration of example 1:</p>
+&lt;p&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;</code></pre><p>Illustration of example 1:</p>
                   <figure id="figure-text-out-of-container">
-                     	<img src="img/F69-obscured.gif" />
+                     	<img alt="The 'now is the time' text extends out of the bottom of its container, and obscures the start of the 'quick brown fox' text that is outside of the container." src="img/F69-obscured.png" height="129" width="335" />
                      	
                      <figcaption>Example showing text that spills outside of its container, obscuring other text on
                         the page.
@@ -119,19 +115,19 @@
                      
                   </figure>
                </section>
-               <section class="example" id="przyklad-2">
-                  <h3>Przykład 2</h3>
+               <section class="example" id="example-2-truncated-text">
+                  <h3>Example 2: Truncated text</h3>
                   <p>This example is identical to the last one, except that the container is set to clip
                      the text. The text is no longer bleeding into the next paragraph, but now it is truncated.
                      This is also a failure.
-                  </p><pre xml:space="preserve">
-&lt;div style="font-size:100%; width:120px; height:100px; overflow: hidden; border: thin solid gray;"&gt;
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;div style="font-size:100%; width:120px; height:100px; overflow: hidden; 
+ border: thin solid gray;"&gt;
  Now is the time for all good men to come to the aid of their country. 
 &lt;/div&gt;
-&lt;p&gt;Now is the time for all good men to come to the aid of their country.&lt;/p&gt;
+&lt;p&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;</code>
 </pre><p>Illustration of example 2:</p>
                   <figure id="figure-text-truncated-resized">
-                     	<img src="img/F69-truncated.gif" />
+                     	<img alt="The 'now is the time' text is clipped so that content after the word 'their' is hidden." src="img/F69-truncated.png" height="129" width="335" />
                      	
                      <figcaption>Example showing text that truncated due to resized text.</figcaption>
                      
@@ -188,15 +184,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -233,28 +229,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

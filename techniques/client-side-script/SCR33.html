@@ -39,7 +39,6 @@
                         <li><a href="#applicability">Applicability</a></li>
                         <li><a href="#description">Description</a></li>
                         <li><a href="#examples">Examples</a></li>
-                        <li><a href="#resources">Related Resources</a></li>
                         <li><a href="#related">Related Techniques</a></li>
                         <li><a href="#tests">Tests</a></li>
                      </ul>
@@ -56,24 +55,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is
-                     
-                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/dostosowanie-czasu">2.2.1: Dostosowanie czasu</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/pauza-zatrzymanie-ukrycie">2.2.2: Pauza, zatrzymanie, ukrycie</a>
-                     					.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Technologies that support script-controlled scrolling of content. </p>
-               <p>This technique relates to:</p>
-               <ul>
-                  <li><a href="https://w3c.github.io/wcag/understanding/dostosowanie-czasu">2.2.1: Dostosowanie czasu</a> (Sufficient)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/pauza-zatrzymanie-ukrycie">2.2.2: Pauza, zatrzymanie, ukrycie</a> (Sufficient)
-                  </li>
-               </ul>
+               <h2>Applicability</h2>
+               <p>Technologies that support script-controlled scrolling of content.</p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -81,97 +70,104 @@
                   when the scrolling is created by a script. Scrolling content can be difficult or impossible
                   to read by users with low vision or with cognitive disabilities. The movement can
                   also be distracting for some people making it difficult for them to concentrate on
-                  other parts of the Web page. 
+                  other parts of the Web page.
                </p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1">
-                  <h3>Przykład 1</h3>
-                  <p>In this example CSS and Javascript are used to visually present some text in a scrolling
-                     format. A link is included to pause the scrolling movement. 
+               <section class="example" id="example-1-the-html-component">
+                  <h3>Example 1: The HTML component</h3>
+                  <p>In this example <abbr title="Cascading Style Sheets">CSS</abbr> and JavaScript are used to visually present some text in a scrolling format. A link
+                     is included to pause the scrolling movement.
                   </p>
-                  <p>This implementation will display the full text and omit the link when Javascript or
-                     CSS are unsupported or inactive. 
-                  </p>
-                  <p>The following code is an amended version of webSemantic's Accessible Scroller (as
-                     at July 2008). 
-                  </p>
-                  <p>The XHTML component: </p><pre xml:space="preserve">
-...
+                  <p>This implementation will display the full text and omit the link when JavaScript or
+                     CSS are unsupported or inactive.
+                  </p><pre xml:space="preserve"><code class="language-html">...
 &lt;div id="scroller"&gt;
-&lt;p id="tag"&gt;This text will scroll and a Pause/Scroll link will be present 
-when Javascript and CSS are supported and active.&lt;/p&gt;
+  &lt;p id="tag"&gt;This text will scroll and a Pause/Scroll link will be present 
+  when JavaScript and CSS are supported and active.&lt;/p&gt;
 &lt;/div&gt;
-...
-</pre><p>The CSS component: </p><pre xml:space="preserve">
-...
-body {font:1em verdana,sans-serif; color:#000; margin:0}
+...</code></pre><pre xml:space="preserve"><code class="language-css">...
+body {
+  font:1em verdana,sans-serif;
+  color:#000;
+  margin:0
+}
 
-/* position:relative and overflow:hidden are required */
-#scroller { position:relative; overflow:hidden; width:15em; border:1px solid #008080; }
+#scroller {
+  position:relative;
+  overflow:hidden;
+  width:15em;
+  border:1px solid #008080;
+}
+  
+#tag {
+  margin:2px 0;
+}
 
-/* add formatting for the scrolling text */
-#tag { margin:2px 0; }
+#testP {
+  visibility:hidden;
+  position:absolute;
+  white-space:nowrap;
+} 
 
-/* #testP must also contain all text-sizing properties of #tag  */
-#testP { visibility:hidden; position:absolute; white-space:nowrap; } 
-
-/* used as a page top marker and to limit width */
-#top { width:350px; margin:auto; }
-...
-</pre><p>The JavaScript component: </p><pre xml:space="preserve">
-var speed=50        // speed of scroller
+ #top {
+  width:350px;
+  margin:auto;
+}
+...</code></pre><pre xml:space="preserve"><code class="language-javascript">var speed=50        // speed of scroller
 var step=3          // smoothness of movement
 var StartActionText= "Scroll"  // Text for start link
 var StopActionText = "Pause"   // Text for stop link
-
+ 
 var x, scroll, divW, sText=""
-
+ 
 function onclickIE(idAttr,handler,call){
   if ((document.all)&amp;&amp;(document.getElementById)){idAttr[handler]="Javascript:"+call}
 }
-
+ 
 function addLink(id,call,txt){
-  var e=document.createElement('a')
-  e.setAttribute('href',call)
-  var linktext=document.createTextNode(txt)
-  e.appendChild(linktext)
-  document.getElementById(id).appendChild(e)
+  var e=document.createElement('a');
+  e.setAttribute('href',call);
+  var linktext=document.createTextNode(txt);
+  e.appendChild(linktext);
+  document.getElementById(id).appendChild(e);
 }
-
+ 
 function getElementStyle() {
-    var elem = document.getElementById('scroller');
-    if (elem.currentStyle) {
-        return elem.currentStyle.overflow;
-    } else if (window.getComputedStyle) {
-        var compStyle = window.getComputedStyle(elem, '');
-        return compStyle.getPropertyValue("overflow");
-    }
-    return "";
+  var elem = document.getElementById('scroller');
+  if (elem.currentStyle) {
+    return elem.currentStyle.overflow;
+  }
+  else if (window.getComputedStyle) {
+    var compStyle = window.getComputedStyle(elem, '');
+    return compStyle.getPropertyValue("overflow");
+  }
+  return "";
 }
 
 function addControls(){
-// test for CSS support first 
-// test for the overlow property value set in style element or external file
-if (getElementStyle()=="hidden") {
-  var f=document.createElement('div');
-  f.setAttribute('id','controls');
-  document.getElementById('scroller').parentNode.appendChild(f);
-  addLink('controls','Javascript:clickAction(0)',StopActionText);
-  onclickIE(document.getElementById('controls').childNodes[0],"href",'clickAction(0)');
-  document.getElementById('controls').style.display='block';
+  
+  // test for CSS support first 
+  // test for the overlow property value set in style element or external file
+  if (getElementStyle()=="hidden") {
+    var f=document.createElement('div');
+    f.setAttribute('id','controls');
+    document.getElementById('scroller').parentNode.appendChild(f);
+    addLink('controls','Javascript:clickAction(0)',StopActionText);
+    onclickIE(document.getElementById('controls').childNodes[0],"href",'clickAction(0)');
+    document.getElementById('controls').style.display='block';
   }
 }
-
+ 
 function stopScroller(){clearTimeout(scroll)}
-
+  
 function setAction(callvalue,txt){
   var c=document.getElementById('controls')
   c.childNodes[0].setAttribute('href','Javascript:clickAction('+callvalue+')')
-  onclickIE(document.getElementById('controls').childNodes[0],"href",'clickAction
+    onclickIE(document.getElementById('controls').childNodes[0],"href",'clickAction
 
-('+callvalue+')')
+  ('+callvalue+')')
   c.childNodes[0].firstChild.nodeValue=txt
 }
 
@@ -195,16 +191,16 @@ function startScroller(){
   x-=step
   if (document.getElementById('tag').className) p.className=document.getElementById
 
-('tag').className
-  p.appendChild(document.createTextNode(sText))
-  document.body.appendChild(p)
-  pw=p.offsetWidth
-  document.body.removeChild(p)
-  if (x&lt;(pw*4)*-1){x=divW}
-  document.getElementById('tag').style.left=x+'px'
-  scroll=setTimeout('startScroller()',speed)
+  ('tag').className
+    p.appendChild(document.createTextNode(sText))
+    document.body.appendChild(p)
+    pw=p.offsetWidth
+    document.body.removeChild(p)
+    if (x&lt;(pw*4)*-1){x=divW}
+    document.getElementById('tag').style.left=x+'px'
+    scroll=setTimeout('startScroller()',speed)
 }
-
+  
 function initScroller(){
   if (document.getElementById &amp;&amp; document.createElement &amp;&amp; document.body.appendChild) {
     addControls();
@@ -217,7 +213,7 @@ function initScroller(){
     scroll=setTimeout('startScroller()',speed);
   }
 }
-
+  
 function addLoadEvent(func) {
   if (!document.getElementById | !document.getElementsByTagName) return
   var oldonload = window.onload
@@ -230,23 +226,10 @@ function addLoadEvent(func) {
     }
   }
 }
-
-addLoadEvent(initScroller)
-</pre><p class="working-example">A working example of this code, <a href="../../working-examples/script-scroll-pause/">Example of using script to scroll content and providing a mechanism to pause it</a>, is available.
+  
+addLoadEvent(initScroller)</code></pre><p class="working-example">A working example of this code, <a href="../../working-examples/script-scroll-pause/">Example of using script to scroll content and providing a mechanism to pause it</a>, is available.
                   </p>
                </section>
-            </section>
-            <section id="resources">
-               <h3 style="margin-bottom: 0;">Other sources</h3>
-               <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
-               <ul>
-                  
-                  <li>
-                     <a href="http://www.websemantics.co.uk/tutorials/accessible_scroller/">webSemantics Accessible Scroller</a>
-                     
-                  </li>
-                  
-               </ul>
             </section>
             <section id="related">
                <h2>Related Techniques</h2>
@@ -302,15 +285,15 @@ addLoadEvent(initScroller)
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -347,28 +330,26 @@ addLoadEvent(initScroller)
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

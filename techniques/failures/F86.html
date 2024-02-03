@@ -59,23 +59,21 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>General</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a> (Failure)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
                <p>This describes a failure condition of Success Criterion 4.1.2 where some or all of
                   the parts of multi-part form field do not have names. Often there is a label for the
-                  multi-part field, which is either programatically associated with the first part,
-                  or not programatically associated with any parts.
+                  multi-part field, which is either programmatically associated with the first part,
+                  or not programmatically associated with any parts.
                </p>
                <div class="note">
                   
@@ -85,35 +83,36 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1">
-                  <h3>Przykład 1</h3>
-                  <p>A US telephone number consists of a 3-digit area code, a 3-digit prefix, and a 4-digit
-                     suffix. They are typically formatted as follows ([area code]) [prefix]-[suffix], such
-                     as (206) 555-1212. Often, forms asking for a telephone number will include 3 separate
-                     fields, but with a single label, such as:
-                  </p><pre xml:space="preserve">Phone number: 
-(&lt;input type="text" size="3"&gt;) &lt;input type="text" size="3"&gt;-&lt;input type="text" size="4"&gt;</pre><p>The failure occurs when there is not a name for each of the 3 fields in the Accessibility
+               <section class="example" id="example-1">
+                  <h3>Example 1</h3>
+                  <p>A US telephone number consists of a three-digit area code, a three-digit prefix, and
+                     a four-digit suffix. They are typically formatted as follows ([area code]) [prefix]-[suffix],
+                     such as (939) 555-0113. Often, forms asking for a telephone number will include three
+                     separate fields, but with a single label, such as:
+                  </p><pre xml:space="preserve"><code class="language-html">Phone number: (&lt;input type="text" size="3"&gt;) 
+&lt;input type="text" size="3"&gt;-&lt;input type="text" size="4"&gt;</code></pre><p>The failure occurs when there is not a name for each of the three fields in the Accessibility
                      API. A user with assistive technology will experience these as three undefined text
                      fields. Some assistive technologies will read the punctuation as identification for
-                     the text fields, which can be even more confusing. In the case of a 3-field US phone
-                     number, some assistive technologies would name the fields "(", ")" and "-", which
-                     is not very useful.
+                     the text fields, which can be even more confusing. In the case of a three-field US
+                     phone number, some assistive technologies would name the fields "(", ")" and "-",
+                     which is not very useful.
                   </p>
                </section>
-               <section class="example" id="przyklad-2">
-                  <h3>Przykład 2</h3>
-                  <p>The same US telephone number. In this case, the label is not programatically associated
+               <section class="example" id="example-2">
+                  <h3>Example 2</h3>
+                  <p>The same US telephone number. In this case, the label is not programmatically associated
                      with any of the parts. 
-                  </p><pre xml:space="preserve">Phone number: (&lt;input type="text" size="3"&gt;) &lt;input type="text" size="3"&gt;-&lt;input type="text" size="4"&gt;</pre><p> A user with assistive technology will experience these as three undefined text fields.
+                  </p><pre xml:space="preserve"><code class="language-html">Phone number: (&lt;input type="text" size="3"&gt;) 
+&lt;input type="text" size="3"&gt;-&lt;input type="text" size="4"&gt;</code></pre><p> A user with assistive technology will experience these as three undefined text fields.
                      
                   </p>
                </section>
-               <section class="example" id="przyklad-3">
-                  <h3>Przykład 3</h3>
-                  <p>The same US telephone number. In this case, the label is programatically associated
+               <section class="example" id="example-3">
+                  <h3>Example 3</h3>
+                  <p>The same US telephone number. In this case, the label is programmatically associated
                      with the first part.
-                  </p><pre xml:space="preserve">&lt;label for="area"&gt;Phone number:&lt;/label&gt; 
-(&lt;input id="area" type="text" size="3"&gt;) &lt;input type="text" size="3"&gt;-&lt;input type="text" size="4"&gt;</pre><p>A user with assistive technology will be led to believe that the first field is for
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;label for="area"&gt;Phone number:&lt;/label&gt; (&lt;input id="area" type="text" size="3"&gt;)
+&lt;input type="text" size="3"&gt;-&lt;input type="text" size="4"&gt;</code></pre><p>A user with assistive technology will be led to believe that the first field is for
                      the entire phone number, and will experience the second and third fields as undefined
                      text fields.
                   </p>
@@ -125,20 +124,8 @@
                <ul>
                   
                   <li>
-                     <a href="https://msdn.microsoft.com/en-us/library/ms695716.aspx">Microsoft Active Accessibility 2.0 SDK</a>. Includes Inspect32.exe and other MSAA tools.
-                  </li>
-                  
-                  <li>
                      <a href="https://developer.gnome.org/atk/unstable/">Gnome Accessibility Toolkit documentation</a>
                      
-                  </li>
-                  
-                  <li>
-                     <a href="http://www.microsoft.com/en-us/download/details.aspx?id=18359">Microsoft Internet Explorer Developer Toolbar</a>. Allows examination of script-generated DOM in Microsoft Internet Explorer.
-                  </li>
-                  
-                  <li>
-                     <a href="http://getfirebug.com/">Firebug</a>. Allows examination of script-generated DOM in Firefox.
                   </li>
                   
                </ul>
@@ -201,15 +188,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -246,28 +233,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -37,7 +37,7 @@
                   <li class="nav__item"><a href=".">
                         								All Understanding Docs
                         							</a></li>
-                  <li class="nav__item">~Beginning of suite~</li>
+                  <li class="nav__item"></li>
                   <li class="nav__item"><a href="refer-to-wcag">Next : How to Refer to WCAG  from Other Documents
                         <svg focusable="false" aria-hidden="true" class="icon-arrow-right-thin pager-icon" viewBox="0 0 16 16">
                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
@@ -52,15 +52,15 @@
                <header class="box-h ">Page Contents</header>
                <div class="box-i">
                   <ul>
-                     <li><a href="#conformance-whatis">Co oznacza zgodność?</a></li>
-                     <li><a href="#conformance-requirements">Objaśnienie wymagań zgodności</a></li>
-                     <li><a href="#conformance-claims">Objaśnienie Oświadczeń zgodności</a></li>
-                     <li><a href="#levels">Objaśnienie poziomów zgodności</a></li>
-                     <li><a href="#accessibility-support">Objaśnienie wsparcia dostępności (wspierania dostępności)</a></li>
-                     <li><a href="#programmatically-determined">Objaśnienie pojęcia „programowo określony”</a></li>
-                     <li><a href="#conforming-alt-versions">Objaśnienie pojęcia zgodne wersje alternatywne</a></li>
-                     <li><a href="#web-page">Objaśnienie pojęcia "Strona internetowa"</a></li>
-                     <li><a href="#text-alternatives">Objaśnienie „alternatyw tekstowych”</a></li>
+                     <li><a href="#conformance-whatis">What does conformance mean?</a></li>
+                     <li><a href="#conformance-requirements">Understanding Conformance Requirements</a></li>
+                     <li><a href="#conformance-claims">Understanding Conformance Claims</a></li>
+                     <li><a href="#levels">Understanding Levels of Conformance</a></li>
+                     <li><a href="#accessibility-support">Understanding Accessibility Support</a></li>
+                     <li><a href="#programmatically-determined">Understanding "Programmatically Determined"</a></li>
+                     <li><a href="#conforming-alt-versions">Understanding Conforming Alternate Versions</a></li>
+                     <li><a href="#web-page">Understanding "Web Page"</a></li>
+                     <li><a href="#text-alternatives">Understanding "Text Alternatives"</a></li>
                      <li><a href="#key-terms">Key Terms</a></li>
                   </ul>
                </div>
@@ -73,32 +73,24 @@
                
                
                
-               <p xmlns:wcag="https://www.w3.org/WAI/GL/">Wszystkie kryteria sukcesu WCAG 2 są zapisane jako testowalne kryteria obiektywnego
-                  ustalenia, 
-                  czy treść je spełnia. Testowanie kryteriów sukcesu wymaga kombinacji testów automatycznych
-                  
-                  i oceny ludzkiej. Treść powinna być testowana przez testerów, którzy rozumieją, w
-                  jaki sposób 
-                  osoby z różnymi rodzajami niepełnosprawności korzystają z internetu.
+               <p xmlns:wcag="https://www.w3.org/WAI/GL/">
+                  All WCAG 2.0 Success Criteria are written as testable criteria for objectively determining
+                  if content satisfies them. Testing the Success Criteria would involve a combination
+                  of automated testing and human evaluation. The content should be tested by those who
+                  understand how people with different types of disabilities use the Web.
                   
                </p>
                
                
-               <p xmlns:wcag="https://www.w3.org/WAI/GL/">Testowanie i testowalność w tym kontekście odnoszą się do testowania funkcjonalnego,
-                  czyli 
-                  sprawdzania, czy treść działa zgodnie z oczekiwaniami lub, w tym przypadku, czy spełnia
-                  
-                  kryteria sukcesu. Chociaż treść może spełniać wszystkie kryteria sukcesu, nie zawsze
-                  może być 
-                  użyteczna dla osób z różnymi rodzajami niepełnosprawności. Dlatego oprócz wymaganych
-                  testów 
-                  funkcjonalnych zaleca się przeprowadzanie testów użyteczności. Testy użyteczności
-                  mają na celu 
-                  określenie, jak skutecznie ludzie mogą korzystać z treści zgodnie z jej przeznaczeniem.
-                  
-                  Zaleca się, aby w grupach testowych, które przeprowadzają testy użyteczności, znaleźli
-                  się 
-                  użytkownicy z niepełnosprawnościami podczas przeprowadzania testów użyteczności.
+               <p xmlns:wcag="https://www.w3.org/WAI/GL/">
+                  Testing and testable in the context refer to functional testing, that is verifying
+                  that the content functions as expected, or in this case, that it satisfies the Success
+                  Criteria. Although content may satisfy all Success Criteria, the content may not always
+                  be usable by people with a wide variety of disabilities. Therefore, usability testing
+                  is recommended, in addition to the required functional testing. Usability testing
+                  aims to determine how well people can use the content for its intended purpose. It
+                  is recommended that users with disabilities be included in test groups when performing
+                  usability testing.
                   
                </p>
                
@@ -106,28 +98,26 @@
                <section xmlns:wcag="https://www.w3.org/WAI/GL/" id="conformance-whatis">
                   
                   
-                  <h2>Co oznacza zgodność?</h2>
+                  <h2>What does conformance mean?</h2>
                   
                   
-                  <p>Zgodność z normą oznacza, że spełniasz lub zaspokajasz „wymagania” normy. W WCAG 2
-                     
-                     „wymaganiami” są kryteria sukcesu. Aby zachować zgodność z WCAG 2, musisz spełnić
-                     kryteria 
-                     sukcesu, co oznacza, że treść nie może naruszać kryteriów sukcesu, albo inaczej –
-                     że ​​nie ma 
-                     treści, które naruszają kryteria sukcesu.
+                  <p>
+                     Conformance to a standard means that you meet or satisfy the 'requirements' of the
+                     standard. In WCAG 2.0 the 'requirements' are the Success Criteria. To conform to WCAG
+                     2.0, you need to satisfy the Success Criteria, that is, there is no content which
+                     violates the Success Criteria.
                      
                   </p>
                   
                   
                   <div class="note">
-                     <div role="heading" class="note-title marker" aria-level="3">Uwaga</div>
+                     <p class="note-title marker">Note</p>
                      <div>
                         
                         
-                        <p>W przypadku, gdy nie ma treści, do której odnosi się kryterium sukcesu, oznacza to,
-                           
-                           że kryterium sukcesu jest spełnione.
+                        <p>
+                           This means that if there is no content to which a success criterion applies, the success
+                           criterion is satisfied.
                            
                         </p>
                         
@@ -136,13 +126,10 @@
                   </div>
                   
                   
-                  <p>Większość standardów ma tylko jeden poziom zgodności. Natomiast WCAG mają aż trzy
-                     poziomy 
-                     zgodności, trzy poziomy kryteriów sukcesu. Ustalono je, aby uwzględnić różne sytuacje,
-                     które 
-                     mogą albo wymagać wyższego poziomu dostępności niż inne, albo umożliwiać wyższy poziom
-                     
-                     zgodności niż inne.
+                  <p>
+                     Most standards only have one level of conformance. In order to accommodate different
+                     situations that may require or allow greater levels of accessibility than others,
+                     WCAG 2.0 has three levels of conformance, and therefore, three levels of Success Criteria.
                      
                   </p>
                   
@@ -153,16 +140,14 @@
                <section xmlns:wcag="https://www.w3.org/WAI/GL/" id="conformance-requirements">
                   
                   
-                  <h2>Objaśnienie wymagań zgodności</h2>
+                  <h2>Understanding Conformance Requirements</h2>
                   
                   
-                  <p>Istnieje pięć wymagań, które muszą być spełnione, aby treść została sklasyfikowana
-                     jako 
-                     „zgodna” z WCAG 2. Ta część zawiera krótkie uwagi na temat tych wymagań. Z czasem
-                     ta część 
-                     będzie rozszerzana o kwestie, które mogą się pojawić lub o nowe przykłady sposobów
-                     spełnienia 
-                     różnych wymagań zgodności.
+                  <p>
+                     There are five requirements that must be met in order for content to be classified
+                     as 'conforming' to WCAG 2.0. This section provides brief notes on those requirements.
+                     This section will be expanded over time to address questions that may arise or to
+                     provide new examples of ways to meet the different conformance requirements.
                      
                   </p>
                   
@@ -170,73 +155,72 @@
                   <section id="conf-req1">
                      
                      
-                     <h3>Objaśnienie wymagania 1</h3>
+                     <h3>Understanding Requirement 1</h3>
                      
                      
                      <blockquote class="scquote" id="cc1">
-                        	
-                        <p><strong>Poziom zgodności</strong>: Jeden z następujących poziomów zgodności jest w całości spełniony.
+                        
+                        <p><strong>Conformance Level</strong>: One of the following levels of conformance is met in full.
                         </p>
-                        	
+                        
                         <ul>
-                           		
-                           <li>Aby uzyskać zgodność z poziomem A (minimalny poziom zgodności) <a href="#dfn-strona-internetowa">strona internetowa</a> musi <a href="#">spełniać wszystkie kryteria sukcesu</a> 
-                              dla poziomu A lub udostępniona jest <a href="#">wersja alternatywna zgodna</a>.
+                           
+                           <li>
+                              For Level A conformance (the minimum level of conformance), the <a href="#dfn-web-page">Web page</a>
+                              <a href="#dfn-satisfies-a-success-criterion">satisfies</a> all the Level A Success Criteria, or a <a href="#dfn-conforming-alternate-version">conforming alternate version</a> is provided.
+                              
                            </li>
-                           		
-                           <li>Aby uzyskać zgodność z poziomem AA, strona internetowa musi spełniać wszystkie kryteria
-                              sukcesu dla poziomu A i poziomu AA 
-                              lub udostępniona jest  wersja alternatywna zgodna z poziomem AA.
+                           
+                           <li>For Level AA conformance, the Web page satisfies all the Level A and Level AA Success
+                              Criteria, or a Level AA conforming alternate version is provided.
                            </li>
-                           		
-                           <li>Aby uzyskać zgodność z poziomem AAA, strona internetowa musi spełniać wszystkie kryteria
-                              sukcesu dla poziomu A, poziomu AA 
-                              oraz poziomu AAA lub udostępniona jest wersja alternatywna zgodna z poziomem AAA.
+                           
+                           <li>For Level AAA conformance, the Web page satisfies all the Level A, Level AA and Level
+                              AAA Success Criteria, or a Level AAA conforming alternate version is provided.
                            </li>
-                           	
+                           
                         </ul>
-                        	
+                        
                         <div class="note">
-                           <div role="heading" class="note-title marker" aria-level="4">Uwaga</div>
-                           <p>Chociaż zgodność można osiągnąć tylko na określonych poziomach, zachęca się autorów
-                              do odnotowania (w swoich oświadczeniach) wszelkich postępów w spełnianiu kryteriów
-                              sukcesu na wszystkich poziomach poza osiągniętym poziomem zgodności.
+                           <p class="note-title marker">Note</p>
+                           <p>Although conformance can only be achieved at the stated levels, authors are encouraged
+                              to report (in their claim) any progress toward meeting success criteria from all levels
+                              beyond the achieved level of conformance.
                            </p>
                         </div>
-                        	
+                        
                         <div class="note">
-                           <div role="heading" class="note-title marker" aria-level="4">Uwaga</div>
-                           <p>Nie zaleca się, aby zgodność z poziomem AAA była wymagana jako ogólna zasada dla całych
-                              witryn, ponieważ nie jest możliwe spełnienie wszystkich kryteriów sukcesu poziomu
-                              AAA dla niektórych treści.
+                           <p class="note-title marker">Note</p>
+                           <p>It is not recommended that Level AAA conformance be required as a general policy for
+                              entire sites because it is not possible to satisfy all Level AAA Success Criteria
+                              for some content.
                            </p>
                         </div>
-                        	
+                        
                         
                      </blockquote>
                      
                      
-                     <p>Pierwszy wymóg dotyczy poziomów zgodności. Zasadniczo mówi on, że wszystkie informacje
-                        
-                        na stronie muszą być zgodne lub mają <a href="#">wersję alternatywną zgodną</a> udostępnioną 
-                        na stronie. Wymóg ten wyjaśnia również, że żadna zgodność nie jest możliwe bez spełnienia
-                        
-                        co najmniej wszystkich kryteriów sukcesu na poziomie A.
-                        
-                     </p>
-                     
-                     
-                     <p>Uwaga wskazuje, że autorzy są zachęcani do wykraczania poza zgodność z określonym
-                        poziomem 
-                        oraz do uzupełniania i raportowania, jeśli chcą, wszelkich postępów w kierunku osiągnięcia
-                        
-                        wyższych poziomów zgodności.
+                     <p>
+                        The first requirement deals with the levels of conformance. It basically says that
+                        all information on a page conforms or has a
+                        <a href="#dfn-conforming-alternate-version">conforming alternate version</a> that is available from the page. The requirement also explains that no conformance
+                        is possible without at least satisfying all of the Level A Success Criteria.
                         
                      </p>
                      
                      
-                     <p>Zobacz także część 
-                        <a href="#wersja-alternatywna-zgodna">Objaśnienie Wersji alternatywnych zgodnych</a>, która określa techniki udostępniania wersji alternatywnych zgodnych.
+                     <p>
+                        The note points out that authors are encouraged to go beyond conformance to a particular
+                        level and to complete, and report if they desire, any progress toward higher levels
+                        of conformance.
+                        
+                     </p>
+                     
+                     
+                     <p>
+                        See also
+                        <a href="#conforming-alt-versions">Understanding Conforming Alternate Versions</a> which includes techniques for providing Conforming Alternate Versions.
                         
                      </p>
                      
@@ -247,81 +231,79 @@
                   <section id="conf-req2">
                      
                      
-                     <h3>Objaśnienie wymagania 2</h3>
+                     <h3>Understanding Requirement 2</h3>
                      
                      
                      <blockquote class="scquote" id="cc2">
-                        	
-                        <p><strong>Całe strony</strong>: <a href="#dfn-zgodnosc">Zgodność</a> (i poziom zgodności) dotyczy tylko całych <a href="#dfn-strona-internetowa">stron internetowych</a> i nie może być osiągnięta, jeśli część strony internetowej jest z niej wyłączona.
+                        
+                        <p><strong>Full pages</strong>: <a href="#dfn-conformance">Conformance</a> (and conformance level) is for full <a href="#dfn-web-page">Web page(s)</a> only, and cannot be achieved if part of a Web page is excluded.
                         </p>
-                        	
+                        
                         <div class="note">
-                           <div role="heading" class="note-title marker" aria-level="4">Uwaga</div>
-                           <p>Do celów określenia zgodności, alternatywy dla części treści strony są uważane za
-                              część strony, gdy alternatywy można uzyskać bezpośrednio ze strony, np. długi opis
-                              lub alternatywną prezentację filmu.
+                           <p class="note-title marker">Note</p>
+                           <p>For the purpose of determining conformance, alternatives to part of a page's content
+                              are considered part of the page when the alternatives can be obtained directly from
+                              the page, e.g., a long description or an alternative presentation of a video.
                            </p>
                         </div>
-                        	
+                        
                         <div class="note">
-                           <div role="heading" class="note-title marker" aria-level="4">Uwaga</div>
-                           <p>Autorzy stron internetowych, które nie mogą spełnić wymogów z powodu treści pozostających
-                              poza kontrolą autora, mogą rozważyć <a href="#conformance-partial">Oświadczenie o częściowej zgodności</a>.
+                           <p class="note-title marker">Note</p>
+                           <p>Authors of Web pages that cannot conform due to content outside of the author's control
+                              may consider a <a href="#conformance-partial">Statement of Partial Conformance</a>.
                            </p>
                         </div>
-                        	
+                        
                         <div class="note">
-                           <div role="heading" class="note-title marker" aria-level="4">Uwaga</div>
-                           <p>Cała strona zawiera każdą odmianę strony, która jest automatycznie prezentowana przez
-                              stronę dla różnych rozmiarów ekranu (np. odmiany responsywnej strony internetowej).
-                              Każda z tych odmian musi być zgodna (lub musi mieć wersję alternatywną zgodną), aby
-                              cała strona była zgodna.
+                           <p class="note-title marker">Note</p>
+                           <p>A full page includes each variation of the page that is automatically presented by
+                              the page for various screen sizes (e.g. variations in a responsive Web page). Each
+                              of these variations needs to conform (or needs to have a conforming alternate version)
+                              in order for the entire page to conform.
                            </p>
                         </div>
                         
                      </blockquote>
                      
                      
-                     <p>Przepis ten wymaga po prostu, aby cała strona była zgodna. Nie można składać oświadczeń
-                        
-                        o „części strony zgodnej” („stronie częściowo zgodnej”).
+                     <p>
+                        This provision simply requires that the whole page conform. Statements about "part
+                        of a page conforming" cannot be made.
                         
                         
                      </p>
                      
                      
-                     <p>Czasami informacje uzupełniające mogą być podane na innej stronie. Przykładem jest
-                        
-                        atrybut <em>longdesc</em> w HTML. Dzięki <em>longdesc</em> długi opis grafiki 
-                        może znajdować się na osobnej stronie, na którą użytkownik może przejść ze strony
-                        
-                        z grafiką. To sprawia, że taka treść jest uważana za część strony internetowej, 
-                        więc wymaganie #2 jest spełnione dla połączonego zestawu stron internetowych 
-                        traktowanych jako pojedyncza strona internetowa. Alternatywy można również podać 
-                        na tej samej stronie. Na przykład utworzenie odpowiednika formantu interfejsu użytkownika.
+                     <p>
+                        Sometimes, supplemental information may be available from another page for information
+                        on a page. The longdesc attribute in HTML is an example. With longdesc, a long description
+                        of a graphic might be on a separate page that the user can jump
+                        to from the page with the graphic. This makes it clear that such content is considered
+                        part of the Web page, so that requirement #2 is satisfied for the combined set of
+                        Web pages considered as a single Web page. Alternatives can also be provided on the
+                        same page. For example creating an equivalent to a user interface control.
                         
                         
                      </p>
                      
                      
                      <div class="note">
-                        <div role="heading" class="note-title marker" aria-level="4">Uwaga</div>
+                        <p class="note-title marker">Note</p>
                         <div>
                            
                            
-                           <p>Ze względu na wymóg zgodności 5 cała strona może być zgodna, nawet jeśli części strony
-                              
-                              korzystają z technologii treści niezgodnych z dostępnością, o ile nie kolidują one
-                              
-                              z resztą strony, a wszystkie informacje i funkcje są dostępne w innym miejscu na stronie
-                              
-                              lub na innej stronie, na którą może przejść z tej strony.
+                           <p>
+                              Because of conformance requirement 5, a whole page may conform even if parts of the
+                              page use non accessibility-supported content technologies as long as they do not interfere
+                              with the rest of the page and all information and function is available elsewhere
+                              on or from the page.
                               
                            </p>
                            
                            
-                           <p>Możliwe jest dołączenie treści niezgodnych. Zobacz 
-                              <a href="#conf-req5">Objaśnienie wymagania zgodności 5</a>.
+                           <p>
+                              It is possible to include non-conforming content. See
+                              <a href="#conf-req5">Understanding Conformance Requirement 5</a>.
                               
                            </p>
                            
@@ -336,32 +318,30 @@
                   <section id="conf-req3">
                      
                      
-                     <h3>Objaśnienie wymagania 3</h3>
+                     <h3>Understanding Requirement 3</h3>
                      
                      
                      <blockquote class="scquote" id="cc3">
-                        	
-                        <p><strong>Całe procedury</strong>: Gdy <a href="#dfn-strona-internetowa">strona internetowa</a> jest jedną z serii stron prezentujących jakąś <a href="#dfn-procedura">procedurę</a> (tzn. sekwencję kroków, które należy wykonać, aby dokończyć jakąś czynność), to wszystkie
-                           strony prezentujące etapy procedury są zgodne co najmniej na tym samym poziomie zgodności
-                           lub wyższym. (Inaczej - zgodność na określonym poziomie nie jest osiągnięta, jeżeli
-                           którakolwiek ze stron prezentujących którykolwiek z etapów procedury nie jest zgodna
-                           na tym poziomie lub wyższym (nie spełnia wszystkich wymogów zgodności na tym poziomie
-                           lub wyższym.)
+                        
+                        <p><strong>Complete processes</strong>: When a <a href="#dfn-web-page">Web page</a> is one of a series of Web pages presenting a <a href="#dfn-process">process</a> (i.e., a sequence of steps that need to be completed in order to accomplish an activity),
+                           all Web pages in the process conform at the specified level or better. (Conformance
+                           is not possible at a particular level if any page in the process does not conform
+                           at that level or better.)
                         </p>
-                        	
-                        <p class="example">Sklep internetowy ma serię stron, które służą do wyboru i zakupu produktów. Wszystkie
-                           strony w serii od początku do końca (do kasy) są zgodne, aby każda strona, która jest
-                           częścią procesu, była zgodna.
+                        
+                        <p class="example">An online store has a series of pages that are used to select and purchase products.
+                           All pages in the series from start to finish (checkout) conform in order for any page
+                           that is part of the process to conform.
                         </p>
                         
                      </blockquote>
                      
                      
-                     <p>Ten warunek uniemożliwia uznanie za zgodną strony internetowej, która jest 
-                        częścią większej procedury, jeśli cała procdura nie jest zgodna. Zapobiegnie to 
-                        zaklasyfikowaniu witryny handlowej jako zgodnej z wymogami, w przypadku, gdy kasa
-                        
-                        lub inne funkcjonalności witryny, które są częścią procesu zakupów, nie są zgodne.
+                     <p>
+                        This provision prevents a Web page that is part of a larger process from being considered
+                        conforming if the process overall is not. This would prevent a shopping site from
+                        being classified as conforming if the checkout or other features of the site that
+                        are part of the shopping and buying process do not conform.
                         
                      </p>
                      
@@ -372,22 +352,22 @@
                   <section id="conf-req4">
                      
                      
-                     <h3>Objaśnienie wymagania 4</h3>
+                     <h3>Understanding Requirement 4</h3>
                      
-                     	
+                     
                      <blockquote class="scquote" id="cc4">
-                        <!-- Tylko sposoby korzystania z technologii wspierane przez dostępność -->
-                        		
-                        <p><strong>Tylko sposoby korzystania z technologii wspierane pod względem dostępności</strong>: Tylko <a href="#">wspierane pod względem dostępności</a> sposoby korzystania z <a href="#">technologii</a> są <a href="#">stosowane w celu</a> ((są podstawą) spełnienia kryteriów sukcesu. Wszelkie informacje lub funkcjonalności,
-                           które jest przedstawione w sposób, który nie jest wspierany przez dostępność, muszą
-                           być również przedstawione w sposób, który jest wspierany przez dostępność. (Zobacz
-                           <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#accessibility-support">Objaśnienie obsługi/wspierania dostępności</a>.)
+                        
+                        <p><strong>Only Accessibility-Supported Ways of Using Technologies</strong>: Only <a href="#">accessibility-supported</a> ways of using <a href="#dfn-technology">technologies</a> are <a href="#dfn-relied-upon">relied upon</a> to satisfy the success criteria. Any information or functionality that is provided
+                           in a way that is not accessibility supported is also available in a way that is accessibility
+                           supported. (See <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#accessibility-support">Understanding accessibility support</a>.)
                         </p>
+                        
                      </blockquote>
                      
                      
-                     <p>Ten wymóg zgodności jest wyjaśniony poniżej w sekcji 
-                        <a href="#accessibility-support">Objaśnienie obsługi/wspierania dostępności</a>.
+                     <p>
+                        This conformance requirement is explained below under
+                        <a href="#accessibility-support">Understanding Accessibility Support</a>.
                         
                      </p>
                      
@@ -398,83 +378,83 @@
                   <section id="conf-req5">
                      
                      
-                     <h3>Objaśnienie wymagania 5</h3>
+                     <h3>Understanding Requirement 5</h3>
                      
-                     	
+                     
                      <blockquote class="scquote" id="cc5">
-                        		
-                        <p><strong>Bez zakłóceń</strong>: Jeśli na stronie wykorzystywane są <a href="#dfn-technologia">technologie</a>, które nie <a href="#">wspierają dostępności</a> lub są użyte tak, że nie zapewniają zgodności, to technologie te nie blokują użytkownikom
-                           dostępu do reszty strony. Dodatkowo, <a href="#dfn-strona-internetowa">strona internetowa</a> jako całość nadal spełnia wymogi zgodności pod każdym z następujących warunków:
+                        
+                        <p><strong>Non-Interference</strong>: If <a href="#"> technologies </a> are used in a way that is not <a href="#">accessibility supported</a>, or if they are used in a non-conforming way, then they do not block the ability
+                           of users to access the rest of the page. In addition, the <a href="#dfn-web-page">Web page</a> as a whole continues to meet the conformance requirements under each of the following
+                           conditions:
                         </p>
-                        		
+                        
                         <ol>
-                           			
-                           <li>gdy jakaś technologia, która nie jest <a href="#">wiarygodną podstawą</a> zgodności, jest włączona w programie użytkownika,
+                           
+                           <li>when any technology that is not <a href="#dfn-relied-upon">relied upon</a> is turned on in a user agent,
                            </li>
-                           			
-                           <li>gdy jakaś technologia, która nie jest <a href="#">wiarygodną podstawą</a> zgodności, jest wyłączona w programie użytkownika, oraz
-                           </li>
-                           			
-                           <li>gdy jakaś technologia, która nie jest <a href="#">wiarygodną podstawą</a> zgodności, nie jest obsługiwana przez program użytkownika.
-                           </li>
-                           		
+                           
+                           <li>when any technology that is not relied upon is turned off in a user agent, and</li>
+                           
+                           <li>when any technology that is not relied upon is not supported by a user agent</li>
+                           
                         </ol>
-                        		
-                        <p>Ponadto, następujące kryteria sukcesu odnoszą się do wszystkich treści na stronie,
-                           włącznie z treściami, które w innych przypadkach nie są <a href="#">wiarygodną podstawą</a>  zgodności, ponieważ ich niespełnienie mogłoby uniemożliwiać korzystanie ze strony:
+                        
+                        <p>In addition, the following success criteria apply to all content on the page, including
+                           content that is not otherwise relied upon to meet conformance, because failure to
+                           meet them could interfere with any use of the page:
                         </p>
-                        		
+                        
                         <ul>
-                           			
-                           <li><strong>1.4.2 - Kontrola odtwarzania dźwięku</strong>,
+                           
+                           <li><strong>1.4.2 - Audio Control</strong>,
                            </li>
-                           			
-                           <li><strong>2.1.2 - Bez pułapki na klawiaturę</strong>,
+                           
+                           <li><strong>2.1.2 - No Keyboard Trap</strong>,
                            </li>
-                           			
-                           <li><strong>2.3.1 - Trzy błyski lub wartości poniżej progu</strong>, oraz
+                           
+                           <li><strong>2.3.1 - Three Flashes or Below Threshold</strong>, and
                            </li>
-                           			
-                           <li><strong>2.2.2 - Pauza, zatrzymanie, ukrycie</strong>.
+                           
+                           <li><strong>2.2.2 - Pause, Stop, Hide</strong>.
                            </li>
-                           		
+                           
                         </ul>
-                        		
+                        
                         <div class="note">
-                           <div role="heading" class="note-title marker" aria-level="4">Uwaga</div>
-                           <p>Jeśli strona nie może być zgodna (na przykład strona testu zgodności lub strona przykładowa),
-                              to nie można jej uwzględnić w zakresie zgodności, ani w deklaracji zgodności.
+                           <p class="note-title marker">Note</p>
+                           <p>If a page cannot conform (for example, a conformance test page or an example page),
+                              it cannot be included in the scope of conformance or in a conformance claim.
                            </p>
                         </div>
-                        	
+                        
                      </blockquote>
                      
                      
-                     <p>Zasadniczo oznacza to, że można stosować technologie, które 
-                        <strong>nie są wspierane pod względem dostępności</strong> , o ile wszystkie informacje są dostępne również przy użyciu technologii, które 
-                        <strong>są wspierane pod względem dostępności</strong> i o ile 
-                        materiały <strong>niewspierane pod względem dostępności</strong> nie powodują zakłóceń.
+                     <p>
+                        This basically says that technologies that are
+                        <strong>not accessibility supported</strong> can be used, as long as all the information is also available using technologies
+                        that
+                        <strong>are accessibility supported</strong> and as long as the
+                        <strong>non-accessibility-supported</strong> material does not interfere.
                         
                      </p>
                      
                      
-                     <p>Technologie, które nie są wspierane pod względem dostępności, mogą być stosowane 
-                        lub technologie, które są wspierane pod względem dostępności, mogą być stosowane 
-                        w sposób niezgodny z wymogami, o ile wszystkie informacje są również dostępne 
-                        przy użyciu technologii, które są wspierane pod względem dostępności, w sposób zgodny
-                        
-                        i tak długo, jak materiały niewspierane pod względem dostępności nie powodują zakłóceń.
+                     <p>
+                        Technologies that are not accessibility supported can be used, or technologies that
+                        are accessibility supported can be used in a non conforming manner, as long as all
+                        the information is also available using technologies that are accessibility supported,
+                        in a manner that does conform, and as long as the non-accessibility-supported material
+                        does not interfere.
                         
                      </p>
                      
                      
-                     <p>Są cztery punkty, które szczególnie dotyczą kwestii zakłóceń w korzystaniu ze strony.
-                        
-                        Te cztery punkty zostały ujęte tutaj w uwadze. Uwaga dotycząca każdego z punktów wskazuje,
-                        
-                        że te Kryteria sukcesu muszą być spełnione w przypadku wszystkich treści, w tym treści
-                        
-                        utworzonych przy użyciu technologii, które nie wspierają dostępności.
+                     <p>
+                        There are four provisions that particularly deal with issues of interference with
+                        use of the page. These four are included in a note here. A note on each of the provisions
+                        indicates that these Success Criteria need to be met for all content including content
+                        created using technologies that are not accessibility supported.
                         
                      </p>
                      
@@ -482,22 +462,18 @@
                      <div class="example">
                         
                         
-                        <p>Strona internetowa zawiera nową interaktywną technologię graficzną o nazwie "ZAP".
-                           
-                           Mimo, że ZAP nie wspiera dostępności (nie jest obsługiwany przez dostępność), 
-                           informacje prezentowane w ZAP są również prezentowane na stronie w formacie HTML,
-                           
-                           więc ZAP nie jest wiarygodną podstawą zgodności (nie można polegać na ZAP). 
-                           Tak więc, strona ta spełniałaby wymaganie zgodności nr 1. Jeśli jednak użytkownik
-                           
-                           spróbuje przejrzeć zawartość ZAP, fokus wejdzie do obiektu ZAP i utknie w nim. 
-                           Po wejściu do środka użytkownik nie może nic zrobić, aby przywrócić fokus 
-                           (możliwość przenoszenia fokusu). W efekcie użytkownicy klawiatury nie mogą korzystać
-                           
-                           z dolnej połowy strony. Zawartość ZAP również nieustannie miga w różnym tempie 
-                           i nie zatrzymuje się. W efekcie, osoby z zaburzeniami uwagi są rozproszone, 
-                           a osoby z zaburzeniami wrażliwości na światło mogą mieć drgawki. Wymóg zgodności 
-                           nr 5 zapobiega sytuacjom takim jak te, które są możliwe na zgodnej stronie.
+                        <p>
+                           A Web page incorporates a new interactive graphic technology called "ZAP". Although
+                           ZAP is not accessibility-supported, the information that is presented in ZAP is also
+                           presented
+                           on the page in HTML, so ZAP is not relied upon. So, this page would pass conformance
+                           requirement #1.  However, if the user tries to tab through the ZAP content, the focus
+                           drops into the ZAP object and gets stuck there.  Once inside, there is nothing the
+                           user can do to get the focus back out.  So keyboard users cannot use the bottom half
+                           of the page. The ZAP content also is continually flashing brightly at different rates
+                           and doesn't stop.   So, people with attention deficit are distracted and those with
+                           photosensitive seizure disorders may have seizures.  Conformance requirement #5 prevents
+                           situations like these from being possible on a conforming page.
                            
                         </p>
                         
@@ -514,93 +490,86 @@
                <section xmlns:wcag="https://www.w3.org/WAI/GL/" id="conformance-claims">
                   
                   
-                  <h2>Objaśnienie Oświadczeń zgodności</h2>
+                  <h2>Understanding Conformance Claims</h2>
                   
                   
-                  <p>Nie jest wymagane składanie jakichkolwiek deklaracji zgodności w celu uzyskania zgodności.
-                     
-                     Jeśli jednak ktoś składa taką deklarację, należy podać wszystkie informacje wymagane
-                     w oświadczeniu o zgodności. 
-                     Informacje te można przekazać na kilka sposobów.
+                  <p>
+                     It is not required to make any conformance claim in order to conform. If one does
+                     make a claim, however, all the information required in a conformance claim must be
+                     provided. There are a number of ways this information can be provided.
                      
                   </p>
                   
-                  <p>Schema.org zapewnia jedną z takich możliwości włączenia metadanych dotyczących dostępności
-                     strony internetowej. Zestaw opisowych właściwości dostępności jest dostępny w ramach
-                     typu CreativeWork, który, między innymi, zapewnia możliwość zawarcia podsumowania
-                     ogólnej dostępności strony (np. twierdzenie o zgodności z WCAG), opisania dostępnych
-                     cech treści (np. dostępność tekstu alternatywnego, rozszerzone audiodeskrypcje, napisy)
-                     oraz ostrzeżenia użytkowników o potencjalnych zagrożeniach (np. miganie). Informacje
-                     te mogą być osadzone na stronie za pomocą dowolnego z RDFa, JSON i mikrodanych. Więcej
-                     informacji na temat tych właściwości i ich oczekiwanych wartości jest również dostępnych
-                     na wiki Web Schemas.
+                  <p>Schema.org provides one such option for including discovery metadata within a Web
+                     page. A set of descriptive accessibility properties is available under the CreativeWork
+                     type which, among other uses, provides the ability to include a summary of the overall
+                     accessibility of the page (e.g., the WCAG conformance claim), describe the accessible
+                     features of the content (e.g., availability of alternative text, extended descriptions
+                     and captions), and alert users to potential hazards (e.g., flashing). This information
+                     can be embedded in the page using any of RDFa, JSON and microdata. More information
+                     about these properties and their expected values is also available on the Web Schemas
+                     wiki.
                   </p>
                   
                   
-                  <p>Oto oświadczenie, które zostało wzbogacone o metadane schema.org:</p>
+                  <p>Here is a claim which has been enhanced with schema.org metadata:</p>
                   
                   <pre>
 &lt;div typeof="WebPage" vocab="http://schema.org/"&gt;
-    &lt;p property="accessibilitySummary"&gt;W dniu 23 marca 2009 r. cała treść dostępna na
-       serwerze pod adresem &lt;a 
+    &lt;p property="accessibilitySummary"&gt;On 23 March 2009, all content available on
+       the server at &lt;a 
          href="http://www.wondercall.example.com"&gt;http://www.wondercall.example.com&lt;/a&gt;
-       jest zgodny z wytycznymi dla dostępności treści internetowych 2.0 opublikowanymi pod adresem &lt;a 
+       conforms to Web Content Accessibility Guidelines 2.0 at &lt;a 
          href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/"
          &gt;https://www.w3.org/TR/2008/REC-WCAG20-20081211/&lt;/a&gt;.
-       Zgodność na poziomie A.&lt;/p&gt;
+       Single-A conformance.&lt;/p&gt;
     &lt;ul&gt;
-        &lt;li&gt;Technologia, na której ta treść "&lt;a&gt;się opiera&lt;/a&gt;" to: 
+        &lt;li&gt;The technology that this content "&lt;a&gt;relies upon&lt;/a&gt;" is: 
             HTML 4.01.&lt;/li&gt;
-        &lt;li&gt;Technologie, których ta treść "&lt;strong&gt;używa, ale nie opiera się na stronie 
-            &lt;/strong&gt;" to: CSS2 oraz gif.&lt;/li&gt;
-        &lt;li&gt;Ta treść została przetestowana przy użyciu następujących programów użytkownika 
-            i technologii wspomagających: Firefox 1.5 na Windows Vista z Screenreaderem X 4.0, 
-            Firefox 1.5 na Windows XP SP 2 z Screenreaderem X 3.5, IE 6.0 na Windows 
-            2000 SP4 z Screenreaderem Y 5.0, IE 6.0 na Windows 2000 SP4 z
-            Screenreaderem Z 2.0 oraz Firefox 1.5 na Windows XP SP2 z Screenreaderem
-            X 4.0, Safari 2.0 z OS X 10.4.&lt;/li&gt;
+        &lt;li&gt;The technologies that this content "&lt;strong&gt;uses but does not rely 
+            upon&lt;/strong&gt;" are: CSS2, and gif.&lt;/li&gt;
+        &lt;li&gt;This content was tested using the following user agents and assistive 
+            technologies: Firefox 1.5 on Windows Vista with Screenreader X 4.0, 
+            Firefox 1.5 on Windows XP SP 2 with Screenreader X 3.5, IE 6.0 on Windows 
+            2000 SP4 with Screenreader Y 5.0, IE 6.0 on Windows 2000 SP4 with
+            Screenreader Z 2.0, and Firefox 1.5 on Windows XP SP2 with Screenreader
+            X 4.0, Safari 2.0 with OS X 10.4.&lt;/li&gt;
     &lt;/ul&gt;
-    &lt;p&gt;Ta strona zawiera &lt;span property="accessMode" content="textual"&gt;tekst&lt;/span&gt;
-       and &lt;span property="accessMode" content="visual"&gt;obrazy&lt;/span&gt;.
-       &lt;span property="accessibilityFeature" content="alternativeText"&gt;Tekst 
-       alternatywny&lt;/span&gt; jest dodany do wszystkich treści graficznych oraz &lt;span 
-         property="accessibilityFeature" content="longDescription"&gt;długie 
-         opisy&lt;/span&gt; są zapewnione dla obrazów, które wymagają więcej 
-       niż zwykłego tekstu alternatywnego.Wszystkie treści są dostępne w formie tekstowej, 
-       która może być dostępna za pomocą technologii wspomagających.&lt;/p&gt;
+    &lt;p&gt;This page includes both &lt;span property="accessMode" content="textual"&gt;text&lt;/span&gt;
+       and &lt;span property="accessMode" content="visual"&gt;images&lt;/span&gt;.
+       &lt;span property="accessibilityFeature" content="alternativeText"&gt;Alternative 
+       text&lt;/span&gt; is included for all image content and &lt;span 
+         property="accessibilityFeature" content="longDescription"&gt;long 
+         descriptions&lt;/span&gt; are also provided for images that require more 
+       than simple alternate text. All content is available in text, which 
+       can be accessed by assistive technology.&lt;/p&gt;
 &lt;/div&gt;
      </pre>
                   
-                  <p>Czasami ktoś może chcieć złożyć oświadczenie dotyczące tylko treści, które zostały
-                     dodane 
-                     po określonej dacie. Można też deklarować zgodność z WCAG 1.0 dla treści opublikowanych
-                     
-                     do tej daty i zgodność z WCAG 2.0 dla treści utworzonych lub zmodyfikowanych po tej
-                     dacie. 
-                     W WCAG 2.0 nie ma zakazów żadnej z tych praktyk, o ile jest jasne, które strony są
-                     zgodne 
-                     z którą wersją WCAG.
+                  <p>
+                     Sometimes, one may want to make a claim for just the content that was added after
+                     a certain date. Or, one may want to claim WCAG 1.0 conformance for content up to a
+                     date and WCAG 2.0 for content that was created or modified after that date. There
+                     are no prohibitions in WCAG 2.0 to any of these practices as long as it is clear which
+                     pages are claiming conformance to which version of WCAG.
                      
                   </p>
                   
                   
                   <div class="note">
-                     <div role="heading" class="note-title marker" aria-level="3">Uwaga</div>
+                     <p class="note-title marker">Note</p>
                      <div>
                         
                         
-                        <p>Kiedy mówimy o technologiach, na których _można polegać_, mówimy o technologiach treści
-                           
-                           internetowych (HTML, CSS, JavaScript itp.), a nie o programach użytkownika (przeglądarkach,
-                           
-                           technologiach wspomagających itp.).
+                        <p>
+                           When talking about technologies that are "relied upon," we're talking about Web content
+                           technologies (HTML, CSS, JavaScript, etc.), not user agents (browsers, assistive technologies,
+                           etc.).
                            
                         </p>
                         
                         
-                        <p>Deklaracje zgodności zwykle nie są umieszczane na każdej stronie internetowej objętej
-                           zakresem zgodności.
-                        </p>
+                        <p>Conformance claims are not usually located on each Web page within the scope of conformance.</p>
                         
                         
                      </div>
@@ -610,42 +579,36 @@
                   <section id="partial-third">
                      
                      
-                     <h3>Oświadczenia o częściowej zgodności ze względu na treści osób trzecich</h3>
+                     <h3>Partial conformance claims due to third party content</h3>
                      
                      
-                     <p>Gdy autor podejmuje decyzję o skorzystaniu z implementacji strony trzeciej, powinien
-                        
-                        wybrać produkty spełniające wymagania WCAG. Jeśli wszystkie treści na stronie, w tym
-                        
-                        treści osób trzecich, spełniają wszystkie kryteria sukcesu WCAG, wówczas strona 
-                        jest zgodna z WCAG. Jeśli jednak strona nie jest zgodna z WCAG tylko z powodów, 
-                        które są prawnie niezależne od autora, wówczas autor może złożyć oświadczdenie 
-                        o częściowej zgodności. Ważne jest, aby uznać, że jest to oświadczenie o niezgodności
-                        
-                        i że niektórzy użytkownicy mogą nie mieć dostępu do niektórych treści tej strony.
+                     <p>
+                        When an author makes a decision to use a third party implementation, they should choose
+                        products that meet WCAG requirements. If all content on a page, including third party
+                        content, meets all WCAG success criteria then the page conforms to WCAG. However,
+                        if the page does not conform to WCAG only for reasons that are legitimately outside
+                        the author's control then the author can make a claim of partial conformance. It is
+                        important to recognize that this is a statement of non-conformance and there are users
+                        who may not be able to access some of the content this page.
                         
                      </p>
                      
                      
-                     <p>Jednym z powodów, dla których treść może być poza kontrolą autora, jest fakt, 
-                        że jest ona dostarczana przez stronę trzecią (blogi, portale, serwisy informacyjne).
-                        
-                        Strony internetowe mogą również zawierać treści za pośrednictwem bibliotek, wtyczek
-                        
-                        lub widżetów stron trzecich.
+                     <p>
+                        One reason that content may be outside the author's control is because it is being
+                        provided by a third party (blogs, portals, news sites). Web pages may also include
+                        content via third party libraries, plugins, or widgets.
                         
                      </p>
                      
                      
-                     <p>Pamiętaj, aby monitorować wszelkie treści, które mogą ulec zmianie bez zgody autora
-                        
-                        strony internetowej, ponieważ strona, która raz była zgodna, może nagle przestać 
-                        być zgodna. Jeśli nie jest możliwe monitorowanie i naprawa treści osób trzecich, 
-                        konieczne jest określenie niezgodnych części strony dla użytkowników. Jeśli reszta
-                        
-                        strony jest zgodna z WCAG, taka strona kwalifikuje się do oświadczenia o częściowej
-                        
-                        zgodności ze względu na treści osób trzecich.
+                     <p>
+                        Be sure to monitor any content that can change without approval from the web page
+                        author, as a page which once conformed may suddenly fail to conform. If it is not
+                        possible to monitor and repair the third party content, it is necessary to identify
+                        the non-conforming parts of the page for users. If the rest of the web page conforms
+                        to WCAG, such a page qualifies for a statement of partial conformance, third party
+                        content.
                         
                      </p>
                      
@@ -653,24 +616,19 @@
                   </section>
                   
                   
-                  <section id="informacje-o-wszelkich-dodatkowych-krokach-ktore-wykraczaja-poza-kryteria-sukcesu">
+                  <section id="information-about-any-additional-steps-taken-that-go-beyond-the-success-criteria">
                      
                      
-                     <h3>Informacje o wszelkich dodatkowych krokach, które wykraczają poza kryteria sukcesu</h3>
+                     <h3>Information about any additional steps taken that go beyond the Success Criteria</h3>
                      
                      
-                     <p>Jednym z opcjonalnych elementów oświadczenia o zgodności jest „Informacja o wszelkich
-                        
-                        dodatkowych krokach wykraczających poza kryteria sukcesu podjętych w celu zwiększenia
-                        
-                        dostępności”. Może to obejmować dodatkowe spełnione kryteria sukcesu, wdrożone techniki
-                        
-                        pomocnicze, informacje o wszelkich dodatkowych protokołach zastosowanych w celu 
-                        ułatwienia dostępu osobom ze szczególnymi niepełnosprawnościami lub potrzebami itp.
-                        
-                        Wszelkie informacje, które byłyby przydatne dla osób w zrozumieniu dostępności strony
-                        
-                        mogą być uwzględnione.
+                     <p>
+                        One of the optional components of a conformance claim is "Information about any additional
+                        steps taken that go beyond the Success Criteria to enhance accessibility." This can
+                        include additional Success Criteria that have been met, advisory techniques that were
+                        implemented, information about any additional protocols used to aid access for people
+                        with particular disabilities or needs, etc. Any information that would be useful to
+                        people in understanding the accessibility of the pages may be included.
                         
                      </p>
                      
@@ -681,37 +639,32 @@
                   <section id="meta-claims">
                      
                      
-                     <h3>Wykorzystanie metadanych w oświadczeniach o zgodności</h3>
+                     <h3>Use of metadata to report conformance claims</h3>
                      
                      
-                     <p>Najbardziej użytecznym sposobem dołączania oświadczeń o zgodności do treści byłoby
-                        byłoby 
-                        zrobienie tego w standardowej formie do odczytu maszynowego. Gdy ta praktyka stanie
-                        się 
-                        powszechna, narzędzia wyszukiwania lub specjalne programy użytkownika będą mogły wykorzystać
-                        
-                        te informacje do znalezienia i dostarczenia treści, które są bardziej dostępne lub
-                        programy 
-                        użytkownika będą mogły dostosować się do treści. Istnieje wiele opcji opartych na
-                        metadanych, 
-                        które są opracowywane w celu składania oświadczeń, a autorzy i twórcy narzędzi są
-                        zachęcani 
-                        do ich wspierania.
+                     <p>
+                        The most useful way of attaching conformance claims to content would be to do so in
+                        standard machine readable form. When this practice is widespread, search tools or
+                        special user agents will be able to make use of this information to find and provide
+                        content that is more accessible or so the user agents can adjust to the content. There
+                        are a number of metadata based options under development for making claims, and authors
+                        and tool developers are encouraged to support them.
                         
                      </p>
                      
                      
-                     <p>Ponadto metadanych można użyć do zgłaszania zgodności z indywidualnymi kryteriami
-                        sukcesu 
-                        po osiągnięciu zgodności na poziomie A.
+                     <p>
+                        In addition, metadata can be used to report conformance to individual Success Criteria
+                        once Level A conformance has been achieved.
                         
                      </p>
                      
                      
-                     <p>Opracowywane są również formaty raportowania programowego, takie jak 
-                        <a href="https://www.w3.org/WAI/intro/earl.php" hreflang="en" lang="en">Evaluation and Report Language (EARL)</a> (Język Oceny i Raportowania), które mogą zapewnić formaty odczytywane maszynowo w
-                        celu uzyskania szczegółowych informacji o zgodności. Ponieważ formaty raportowania
-                        są sformalizowane i rozwija się ich obsługa, zostaną one tutaj udokumentowane.
+                     <p>
+                        There are also programmatic reporting formats such as
+                        <a href="https://www.w3.org/WAI/intro/earl.php">Evaluation and Report Language (EARL)</a> that are being developed that could provide machine readable formats for detailed
+                        conformance information. As the reporting formats are formalized and support for them
+                        develops, they will be documented here.
                         
                      </p>
                      
@@ -722,57 +675,57 @@
                   
                   
                   <section id="conformance-claims-techniques">
-                     	
-                     <h3>Techniki składania oświadczeń o zgodności</h3>
+                     
+                     <h3>Techniques for Conformance Claims</h3>
                      
                      <section id="conformance-claims-sufficient">
-                        	
+                        
                         <ul>
                            
-                           <li>   
+                           <li>
                               <a class="script" href="https://w3c.github.io/wcag/techniques/client-side-script/SCR38">SCR38: Creating a conforming alternate version for a web page designed with progressive enhancement</a>
                               
-                           </li>         
+                           </li>
                            
-                           <li>   
+                           <li>
                               <a class="script" href="https://w3c.github.io/wcag/techniques/server-side-script/SVR2">SVR2: Using .htaccess to ensure that the only way to access non-conforming content is from
                                  conforming content</a>
                               
-                           </li>         
+                           </li>
                            
-                           <li>   
+                           <li>
                               <a class="script" href="https://w3c.github.io/wcag/techniques/server-side-script/SVR3">SVR3: Using HTTP referer to ensure that the only way to access non-conforming content is
                                  from conforming content</a>
                               
-                           </li>         
+                           </li>
                            
-                           <li>   
+                           <li>
                               <a class="script" href="https://w3c.github.io/wcag/techniques/server-side-script/SVR4">SVR4: Allowing users to provide preferences for the display of conforming alternate versions</a>
                               
-                           </li>         
+                           </li>
                            
-                           <li>   
+                           <li>
                               <a class="css" href="https://w3c.github.io/wcag/techniques/css/C29">C29: Using a style switcher to provide a conforming alternate version</a>
                               
-                           </li>         
+                           </li>
                            
-                           <li>   
+                           <li>
                               <a class="failure" href="https://w3c.github.io/wcag/techniques/failures/F19">F19: Failure of Conformance Requirement 1 due to not providing a method for the user to
                                  find the alternative conforming version of a non-conforming Web page</a>
                               
-                           </li>         
+                           </li>
                            
-                           <li>   
+                           <li>
                               <a class="general" href="https://w3c.github.io/wcag/techniques/general/G136">G136: Providing a link at the beginning of a nonconforming Web page that points to a conforming
                                  alternate version</a>
                               
-                           </li>         
+                           </li>
                            
-                           <li>   
+                           <li>
                               <a class="general" href="https://w3c.github.io/wcag/techniques/general/G190">G190: Providing a link adjacent to or associated with a non-conforming object that links
                                  to a conforming alternate version</a>
                               
-                           </li>         
+                           </li>
                            
                         </ul>
                         
@@ -781,14 +734,14 @@
                      
                      <section id="conformance-claims-advisory">
                         
-                        	
-                        <h4>Pomocnicze techniki składania oświadczeń o zgodności</h4>
+                        
+                        <h4>Advisory Techniques for Conformance Claims</h4>
                         
                         
                         <ul>
                            
                            
-                           <li>Wyrażanie oświadczenia o zgodności z WCAG 2.0 w elementach Dublin Core (łącze w przyszłości)</li>
+                           <li>Expressing a conformance claim to WCAG 2.0 in Dublin Core elements (future link)</li>
                            
                            
                         </ul>
@@ -806,12 +759,12 @@
                <section xmlns:wcag="https://www.w3.org/WAI/GL/" id="levels">
                   
                   
-                  <h2>Objaśnienie poziomów zgodności</h2>
+                  <h2>Understanding Levels of Conformance</h2>
                   
                   
-                  <p>Po pierwsze, istnieje szereg warunków, które muszą być spełnione, aby Kryterium sukcesu
-                     
-                     w ogóle zostało uwzględnione. Obejmują one:
+                  <p>
+                     First, there are a number of conditions that must be met for a Success Criterion to
+                     be included at all. These include:
                      
                   </p>
                   
@@ -819,27 +772,22 @@
                   <ol>
                      
                      
-                     <li>Wszystkie kryteria sukcesu muszą być 
-                        <strong>istotnymi kwestiami dostępu dla osób z niepełnosprawnościami</strong>, które 
-                        rozwiązują problemy wykraczające poza problemy z użytecznością, z którymi mogą się
-                        
-                        zetknąć wszyscy użytkownicy. Innymi słowy, kwestia dostępu musi powodować proporcjonalnie
-                        
-                        większy problem dla osób z niepełnosprawnościami niż dla osób bez niepełnosprawności,
-                        
-                        aby można ją było uznać za kwestię dostępności (i objętą niniejszymi wytycznymi 
-                        dotyczącymi dostępności).
+                     <li>
+                        All Success Criteria must be
+                        <strong>important access issues for people with disabilities</strong> that address problems beyond the usability problems that might be faced by all users.
+                        In other words, the access issue must cause a proportionately greater problem for
+                        people with disabilities than it causes people without disabilities in order to be
+                        considered an accessibility issue (and covered under these accessibility guidelines).
                         
                      </li>
                      
                      
-                     <li>Wszystkie kryteria sukcesu muszą być również testowalne. Jest to ważne, bo w przeciwnym
-                        
-                        razie nie byłoby możliwe stwierdzenie, czy strona spełnia kryteria sukcesu. Kryteria
-                        sukcesu 
-                        mogą być testowane poprzez połączenie oceny maszynowej i ludzkiej, o ile możliwe jest
-                        
-                        określenie z dużym stopniem pewności, czy dane kryterium sukcesu zostało spełnione.
+                     <li>
+                        All Success Criteria must also be testable. This is important since otherwise it would
+                        not be possible to determine whether a page met or failed to meet the Success Criteria.
+                        The Success Criteria can be tested by a combination of machine and human evaluation
+                        as long as it is possible to determine whether a Success Criterion has been satisfied
+                        with a high level of confidence.
                         
                      </li>
                      
@@ -847,10 +795,10 @@
                   </ol>
                   
                   
-                  <p>Kryteria sukcesu zostały przypisane do jednego z trzech poziomów zgodności przez 
-                     grupę roboczą po uwzględnieniu szerokiego zakresu interakcji. Niektóre z typowych
-                     
-                     czynników ocenianych podczas ustalania poziomu obejmowały:
+                  <p>
+                     The Success Criteria were assigned to one of the three levels of conformance by the
+                     working group after taking into consideration a wide range of interacting issues.
+                     Some of the common factors evaluated when setting the level included:
                      
                   </p>
                   
@@ -858,37 +806,39 @@
                   <ul>
                      
                      
-                     <li>czy kryterium sukcesu jest 
-                        <strong>niezbędne</strong> (innymi słowy, jeśli kryterium sukcesu nie jest spełnione, 
-                        to nawet technologia wspomagająca nie może zapewnić dostępności treści)
+                     <li>
+                        whether the Success Criterion is
+                        <strong>essential</strong> (in other words, if the Success Criterion isn't met, then even assistive technology
+                        can't make content accessible)
                         
                      </li>
                      
                      
-                     <li>czy możliwe jest spełnienie kryterium sukcesu dla 
-                        <strong>wszystkich stron internetowych i rodzajów treści</strong>, których dotyczy 
-                        (np. różne tematy, rodzaje treści, rodzaje technologii internetowych)
+                     <li>
+                        whether it is possible to satisfy the Success Criterion for
+                        <strong>all Web sites and types of content</strong> that the Success Criteria would apply to (e.g., different topics, types of content,
+                        types of Web technology)
                         
                      </li>
                      
                      
-                     <li>czy kryterium sukcesu wymaga umiejętności, które <strong>mogą zostać osiągnięte przez 
-                           twórców treści</strong> (tj. wiedza i umiejętności potrzebne do spełnienia kryterium sukcesu 
-                        mogą zostać nabyte w czasie tygodniowego lub krótszego szkolenia)
+                     <li>
+                        whether the Success Criterion requires skills that could
+                        <strong>reasonably be achieved by the content creators</strong> (that is, the knowledge and skill to meet the Success Criteria could be acquired
+                        in a week's training or less)
                         
                      </li>
                      
                      
-                     <li>czy Kryterium sukcesu nakładałoby ograniczenia na „wygląd i sposób działania” i/lub
-                        funkcję 
-                        strony internetowej (ograniczenia dotyczące funkcji, prezentacji, swobody wypowiedzi,
-                        
-                        projektu lub estetyki, które Kryteria sukcesu mogą nałożyć na autorów)
+                     <li>
+                        whether the Success Criterion would impose limits on the "look &amp; feel" and/or function
+                        of the Web page. (limits on function, presentation, freedom of expression, design
+                        or aesthetic that the Success Criteria might place on authors)
                         
                      </li>
                      
                      
-                     <li>czy nie można obejść problemu, jeśli kryterium sukcesu nie jest spełnione</li>
+                     <li>whether there are no workarounds if the Success Criterion is not met</li>
                      
                      
                   </ul>
@@ -900,66 +850,49 @@
                <section xmlns:wcag="https://www.w3.org/WAI/GL/" id="accessibility-support">
                   
                   
-                  <h2>Objaśnienie wsparcia dostępności (wspierania dostępności)</h2>
+                  <h2>Understanding Accessibility Support</h2>
                   
                   
-                  <p>Wiele kryteriów sukcesu dotyczy zapewniania dostępności za pomocą technologii wspomagających
-                     
-                     lub specjalnych funkcji dostępności w popularnych aplikacjach klienckich (na przykład
-                     opcja 
-                     „pokaż napisy” w odtwarzaczu multimedialnym). Oznacza to, że kryteria sukcesu wymagają,
-                     
-                     aby w treści strony internetowej zostało zrobione coś, co umożliwiłoby technologiom
-                     
-                     wspomagającym skuteczne przedstawienie użytkownikowi informacji o treści. Na przykład,
-                     
-                     obrazek, który miał zostać kliknięty, aby przejść do tematu, nie będzie dostępny dla
-                     osoby 
-                     niewidomej, jeśli tekst alternatywny dla obrazka nie zostanie podany w taki sposób,
-                     aby 
-                     programy użytkownika, w tym technologie wspomagające, mogły go znaleźć i wyświetlić.
-                     
-                     Kluczem jest to, że tekst alternatywny musi być umieszczony w sposób, który programy
-                     
-                     użytkownika, w tym technologie wspomagające, mogą zrozumieć i wykorzystać - w sposób,
-                     
-                     który jest „wspierany przez dostępność”.
+                  <p>
+                     Many of the Success Criteria deal with providing accessibility through assistive technologies
+                     or special accessibility features in mainstream user agents (for example, a 'show
+                     captions' option in a media player). That is, the Success Criteria require that something
+                     be done in the Web content that would make it possible for assistive technologies
+                     to successfully present the content's information to the user. For example, a picture
+                     that you were supposed to click on to go to a topic would not be accessible to a person
+                     who was blind unless text alternatives for the picture were provided in a way that
+                     user agents including assistive technologies can find and display them. The key here
+                     is that the text alternative must be included in a way that user agents including
+                     assistive technologies can understand and use – in a way that is "Accessibility Supported."
                      
                   </p>
                   
                   
-                  <p>Innym przykładem może być niestandardowa kontrola umieszczona na stronie internetowej.
-                     
-                     W takim przypadku standardowy program użytkownika zwykle nie byłby w stanie przedstawić
-                     
-                     użytkownikowi alternatywy. Jeśli jednak informacje o kontrolce, w tym jej nazwa, rola,
-                     
-                     wartość, jej ustawienia itp., zostaną podane w taki sposób, że technologie wspomagające
-                     
-                     mogą je zrozumieć i kontrolować, wówczas użytkownicy z technologiami wspomagającymi
-                     
-                     będą mogli korzystać z tej kontrolki.
+                  <p>
+                     Another example would be a custom control that is included on a Web page. In this
+                     case, a standard user agent would not ordinarily be able to present an alternative
+                     to the user. If, however, information about the control including its name, role,
+                     value, how to set it etc. are provided in a way that assistive technologies can understand
+                     and control them, then users with assistive technologies will be able to use these
+                     controls.
                      
                   </p>
                   
                   
-                  <p>Gdy wprowadzane są nowe technologie, muszą się wydarzyć dwie rzeczy, aby osoby korzystające
-                     
-                     z technologii asystujących miały do ​​nich dostęp. Po pierwsze, technologie muszą
-                     być 
-                     zaprojektowane w taki sposób, aby programy użytkownika, w tym technologie wspomagające,
-                     
-                     miały dostęp do wszystkich informacji potrzebnych do przedstawienia treści użytkownikowi.
-                     
-                     Po drugie, programy użytkownika i technologie wspomagające mogą wymagać przeprojektowania
-                     
-                     lub modyfikacji, aby mogły faktycznie pracować z tymi nowymi technologiami.
+                  <p>
+                     When new technologies are introduced, two things must happen in order for people using
+                     assistive technologies to be able to access them. First, the technologies must be
+                     designed in a way that user agents including assistive technologies could access all
+                     the information they need to present the content to the user. Secondly, the user agents
+                     and assistive technologies may need to be redesigned or modified to be able to actually
+                     work with these new technologies.
                      
                   </p>
                   
                   
-                  <p>„<strong>Wspieranie dostępności</strong>” oznacza, że ​​obie te czynności zostały wykonane 
-                     i że technologia będzie działać z programami użytkownika i technologiami wspomagającymi.
+                  <p>
+                     "<strong>Accessibility Supported</strong>" means that both of these have been done and that the technology will work with user
+                     agents and assistive technologies.
                      
                   </p>
                   
@@ -967,24 +900,17 @@
                   <section id="support-level">
                      
                      
-                     <h3>Poziom wsparcia technicznego potrzebnego do „wsparcia dostępności”</h3>
+                     <h3>Level of Assistive Technology Support Needed for "Accessibility Support"</h3>
                      
                      
-                     <p>W związku z tym problemem pojawia się pytanie, ile lub jakie technologie wspomagające
-                        
-                        muszą wspierać technologię internetową, aby tę technologię internetową można było
-                        uznać 
-                        za „wspierającą dostępność” („obsługiwaną przez dostępność”). Grupa robocza WCAG i
-                        W3C 
-                        nie określają, które lub ile technologii wspomagających musi obsługiwać (musi wspierać)
-                        
-                        technologię internetową, aby została sklasyfikowana jako wspierająca dostępność 
-                        (obsługująca dostępność). Jest to złożone problem, który różni się zarówno w zależności
-                        
-                        od środowiska, jak i języka. Istnieje potrzeba prowadzenia zewnętrznego i międzynarodowego
-                        
-                        dialogu na ten temat. Oto kilka uwag, które pomogą w zrozumieniu i zgłębieniu tego
-                        problemu:
+                     <p>
+                        This topic raises the question of how many or which assistive technologies must support
+                        a Web technology in order for that Web technology to be considered "accessibility
+                        supported". The WCAG Working group and the W3C do not specify which or how many assistive
+                        technologies must support a Web technology in order for it to be classified as accessibility
+                        supported. This is a complex topic and one that varies both by environment and by
+                        language. There is a need for an external and international dialogue on this topic.
+                        Some notes to help in understanding and exploring this topic are:
                         
                      </p>
                      
@@ -995,24 +921,23 @@
                         <li>
                            
                            
-                           <p>Wsparcie dostępności przez technologie internetowe różni się w zależności od środowiska</p>
+                           <p>Accessibility support of Web technologies varies by environment</p>
                            
                            
                            <ul>
                               
                               
-                              <li>Technologie internetowe mogą być wspierane tylko przez konkretne programy użytkownika
-                                 
-                                 i technologie wspomagające wdrożone w firmie. (Mogą to być starsze wersje programów
-                                 
-                                 użytkownika i technologii wspomagających lub najnowsze wersje).
+                              <li>
+                                 Web technologies may only need to be supported by those specific user agents and assistive
+                                 technologies deployed at a company. (These may be older versions of user agents and
+                                 assistive technologies or the very newest versions).
                                  
                               </li>
                               
                               
-                              <li>Treści umieszczone w publicznej sieci internetowej mogą wymagać współpracy z szerszą
-                                 
-                                 gamą programów użytkownika i technologii wspomagających, w tym ze starszymi wersjami.
+                              <li>
+                                 Content posted to the public Web may need to work with a broader range of user agents
+                                 and assistive technologies, including older versions.
                                  
                               </li>
                               
@@ -1026,101 +951,91 @@
                         <li>
                            
                            
-                           <p>Wsparcie dostępności przez technologie internetowe różni się w zależności od języka
-                              (i dialektu)
+                           <p>Accessibility support of Web technologies varies by language (and dialect)</p>
+                           
+                           
+                           <ul>
+                              
+                              
+                              <li>
+                                 There are different levels of older assistive technologies support in different languages
+                                 and even countries. Some environments or countries may provide free assistive technologies.
+                                 
+                              </li>
+                              
+                              
+                           </ul>
+                           
+                           
+                        </li>
+                        
+                        
+                        <li>
+                           
+                           
+                           <p>New technologies won't be supported in older assistive technologies</p>
+                           
+                           
+                           <ul>
+                              
+                              
+                              <li>
+                                 Clearly, a new technology cannot be supported by all past assistive technologies,
+                                 so requiring that a technology be supported by all assistive technologies is not possible.
+                                 
+                              </li>
+                              
+                              
+                           </ul>
+                           
+                           
+                        </li>
+                        
+                        
+                        <li>
+                           
+                           
+                           <p>Support for a single older assistive technology is usually not sufficient</p>
+                           
+                           
+                           <ul>
+                              
+                              
+                              <li>
+                                 Support by just one assistive technology (for a given disability) would not usually
+                                 be enough, especially if most users who need it in order to access content do not
+                                 have and cannot afford that assistive technology. The exception here would be information
+                                 distributed to company employees only where they all have one assistive technology
+                                 (of that type).
+                                 
+                              </li>
+                              
+                              
+                           </ul>
+                           
+                           
+                        </li>
+                        
+                        
+                        <li>
+                           
+                           
+                           <p>
+                              Currently assistive technology that is affordable by the general public is often very
+                              poor
+                              
                            </p>
                            
                            
                            <ul>
                               
                               
-                              <li>Istnieją różne poziomy obsługi starszych technologii wspomagających w różnych językach,
-                                 
-                                 a nawet krajach. Niektóre środowiska lub kraje mogą zapewniać bezpłatne technologie
-                                 wspomagające.
-                                 
-                              </li>
-                              
-                              
-                           </ul>
-                           
-                           
-                        </li>
-                        
-                        
-                        <li>
-                           
-                           
-                           <p>Nowe technologie nie będą obsługiwane w starszych technologiach wspomagających</p>
-                           
-                           
-                           <ul>
-                              
-                              
-                              <li>Nie ulega wątpliwości, że nowa technologia nie może być obsługiwana przez wszystkie
-                                 
-                                 dotychczasowe technologie wspomagające, dlatego wymaganie, by dana technologia była
-                                 
-                                 obsługiwana przez wszystkie technologie wspomagające, nie jest możliwe.
-                                 
-                              </li>
-                              
-                              
-                           </ul>
-                           
-                           
-                        </li>
-                        
-                        
-                        <li>
-                           
-                           
-                           <p>Obsługa pojedynczej starszej (wsparcie tylko jednej starszej) technologii wspomagającej
-                              zwykle nie jest wystarczająca
-                           </p>
-                           
-                           
-                           <ul>
-                              
-                              
-                              <li>Wsparcie tylko jednej technologii wspomagającej (dla danej niepełnosprawności) 
-                                 zwykle nie byłoby wystarczające, zwłaszcza jeśli większość użytkowników, którzy 
-                                 jej potrzebują, aby uzyskać dostęp do treści, nie ma takiej technologii wspomagającej
-                                 
-                                 i nie może sobie na nią pozwolić. Wyjątkiem byłyby tu informacje przekazywane 
-                                 pracownikom danej firmy tylko wtedy, gdzie wszyscy mają jedną technologię 
-                                 wspomagającą (tego typu).
-                                 
-                              </li>
-                              
-                              
-                           </ul>
-                           
-                           
-                        </li>
-                        
-                        
-                        <li>
-                           
-                           
-                           <p>Obecnie technologie wspomagające, które są dostępne dla ogółu społeczeństwa, są często
-                              bardzo słabe
-                           </p>
-                           
-                           
-                           <ul>
-                              
-                              
-                              <li>Należy unikać tworzenia treści, które nie mogą być używane przez ogół społeczeństwa
-                                 
-                                 z niepełnosprawnościami. W wielu przypadkach koszt technologii wspomagających jest
-                                 
-                                 zbyt wysoki dla użytkowników, którzy ich potrzebują. Ponadto możliwości bezpłatnego
-                                 
-                                 lub taniego AT są dziś często tak słabe, że treści internetowych nie można 
-                                 realistycznie ograniczyć do tego najniższego (lub nawet średniego) wspólnego mianownika.
-                                 
-                                 Stwarza to bardzo trudny dylemat, który należy rozwiązać.
+                              <li>
+                                 Creating content that can't be used by the general public with disabilities should
+                                 be avoided. In many cases, the cost of assistive technologies is too high for users
+                                 who need it. Also, the capabilities of free or low cost AT is often so poor today
+                                 that Web content cannot be realistically restricted to this lowest (or even middle)
+                                 common denominator. This creates a very difficult dilemma that needs to be addressed.
                                  
                               </li>
                               
@@ -1134,21 +1049,19 @@
                      </ol>
                      
                      
-                     <p>Grupa Robocza ograniczyła się więc do zdefiniowania tego, co stanowi wsparcie, a osąd
-                        tego, 
-                        ile lub które technologie wspomagające muszą wspierać daną technologię, pozostawia
-                        
-                        społeczności i podmiotom bliższym każdej sytuacji, które ustalają wymagania 
-                        dla organizacji, zakupu, społeczności itp.
+                     <p>
+                        The Working Group, therefore, limited itself to defining what constituted support
+                        and defers the judgment of how much, how many, or which AT must support a technology
+                        to the community and to entities closer to each situation that set requirements for
+                        an organization, purchase, community, etc.
                         
                      </p>
                      
                      
-                     <p>Grupa robocza zachęca do szerszej dyskusji na ten temat na ogólnym forum społeczeństwa,
-                        
-                        ponieważ brak ogólnie dostępnych, ale solidnych technologii wspomagających jest problemem,
-                        
-                        który negatywnie wpływa na użytkowników, twórców technologii i autorów.
+                     <p>
+                        The Working Group encourages more discussion of this topic in the general forum of
+                        society since this lack of generally available yet robust assistive technologies is
+                        a problem that affects users, technology developers and authors negatively.
                         
                      </p>
                      
@@ -1159,134 +1072,128 @@
                   <section id="accessibility-supported-definition">
                      
                      
-                     <h3>Techniczna definicja „wsparcie dostępności”</h3>
+                     <h3>Technical Definition of "Accessibility Support"</h3>
                      
                      
-                     <p>Zasadniczo, technologia treści internetowych jest „wspierana pod względem dostępności”
-                        
-                        („obsługiwana przez dostępność”), gdy technologie wspomagające użytkowników będą działać
-                        
-                        z technologiami internetowymi <strong>ORAZ</strong> gdy funkcje dostępności głównych 
-                        technologii będą działać z tą technologią. W szczególności, aby zakwalifikować się
-                        
-                        jako technologia wspierana pod względem dostępności („obsługująca dostępność”), muszą
-                        
-                        być spełnione następujące warunki dla danej technologii:
+                     <p>
+                        Basically, a Web content technology is "accessibility supported" when users' assistive
+                        technologies will work with the Web technologies
+                        <strong>AND</strong> when the accessibility features of mainstream technologies will work with the technology.
+                        Specifically, to qualify as an accessibility-supported technology, the following must
+                        be true for a technology:
                         
                      </p>
                      
-                     	
-                     <blockquote class="scquote"><dt><dfn data-lt="obsługujące dostępność|obsługują dostępności|obsługuje dostępności|obsługiwania dostępności|obsługiwany przez dostępność|wspierania (obsługiwania) dostępności|obsługującego dostępność">obsługiwana dostępność</dfn></dt>
+                     
+                     <blockquote class="scquote"><dt><dfn id="dfn-accessibility-supported" data-lt="accessibility-supported|accessibility support">accessibility supported</dfn></dt>
 <dd>
-
-  <p>obsługiwana przez <a>technologie wspomagające</a> oraz przez przeglądarki i inne <a>programy użytkownika</a></p>
-  <!--   <p>obsługiwana przez użytkowników <a>technologii wspomagających</a> oraz przez przeglądarki i inne <a>programy użytkownika</a></p> -->
-
-  <p>
-    Żeby zakwalifikować użycie technologii tworzenia treści internetowych jako obsługiwane przez dostępność, muszą być spełnione oba poniższe warunki:
-  </p>
-
-  <ol>
-
-    <li>
-
-      <p>
-        <strong><a>Technologia treści internetowych</a> musi współpracować z technologiami wspomagającymi.</strong> Oznacza to, że sposoby wykorzystywania tej technologii zostały przetestowane pod kątem współdziałania z technologiami wspomagającymi i umożliwiają odczytywanie treści w <a>języku naturalnym</a>
-      </p>
-
-      <p><strong>ORAZ</strong></p>
-
-    </li>
-
-    <li>
-
-      <p>
-        Muszą istnieć łatwo osiągalne przez użytkowników narzędzia obsługujące tę technologię. Oznacza to, że co najmniej jedno z czterech poniższych stwierdzeń jest prawdziwe:
-      </p>
-
-      <ol>
-
-        <li>
-
-          <p>
-            Taka technologia z założenia jest powszechnie obsługiwana przez programy użytkownika, które również obsługują dostępność (tak jak HTML i CSS);
-          </p>
-
-          <p><strong>LUB</strong></p>
-        </li>
-
-        <li>
-          <p>
-            Technologia jest obsługiwana za pomocą szeroko rozpowszechnionej wtyczki, która również obsługuje dostępność;
-          </p>
-
-          <p><strong>LUB</strong></p>
-        </li>
-
-        <li>
-          <p>
-            Treść strony jest dostępna dla zamkniętych środowisk, takich jak środowisko uniwersyteckie lub sieć korporacyjna, gdzie wymagany przez tę technologię program użytkownika i użyty do treści internetowych także obsługuje dostępność;
-          </p>
-
-          <p><strong>LUB</strong></p>
-        </li>
-
-        <li>
-          <p>
-            Programy użytkownika obsługujące technologię, obsługują dostępność i można je z łatwością pobrać lub zakupić w następujący sposób:
-          </p>
-
-          <ul>
-
+   
+   <p>supported by users' <a>assistive technologies</a> as well as the accessibility features in browsers and other <a>user agents</a></p>
+   
+   <p>To qualify as an accessibility-supported use of a Web content technology (or feature
+      of a technology), both 1 and 2 must be satisfied for a Web content technology (or
+      feature):
+   </p>
+   
+   <ol>
+      
+      <li>
+         
+         <p><strong>The way that the <a>Web content technology</a> is used must be supported by users' assistive technology (AT). </strong> This means that the way that the technology is used has been tested for interoperability
+            with users' assistive technology in the <a>human language(s)</a> of the content,
+         </p>
+         
+         <p><strong>AND</strong></p>
+         
+      </li>
+      
+      <li>
+         
+         <p><strong>The Web content technology must have accessibility-supported user agents that are
+               available to users. </strong> This means that at least one of the following four statements is true:
+         </p>
+         
+         <ol>
+            
             <li>
-              osób z niepełnosprawnością nie kosztuje to więcej niż osoby pełnosprawne oraz
-              <strong>oraz</strong>
+               
+               <p>The technology is supported natively in widely-distributed user agents that are also
+                  accessibility supported (such as HTML and CSS);
+               </p>
+               
+               <p><strong>OR</strong></p>
             </li>
-
+            
             <li>
-              są równie łatwe do znalezienia i nabycia przez osoby z niepełnosprawnością, jak i pełnosprawne.
+               <p>The technology is supported in a widely-distributed plug-in that is also accessibility
+                  supported;
+               </p>
+               
+               <p><strong>OR</strong></p>
             </li>
-
-          </ul>
-
-        </li>
-
-      </ol>
-
-    </li>
-
-  </ol>
-
-  <p class="note">
-    Grupa Robocza WCAG i W3C nie precyzują ani sposobu, ani poziomu obsługi technologii treści internetowych przez technologie wspomagające, aby móc uznać dane technologie internetowe za obsługujące dostępność. Czytaj więcej: <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#support-level">Level of Assistive Technology Support Needed for "Accessibility Support"</a> (Poziom wsparcia technologii wspomagających potrzebny do „obsługi dostępności”).
-  </p>
-
-  <p class="note">
-    Technologie internetowe mogą być wykorzystywane, nawet jeśli nie obsługują dostępności, dopóki nie są uwzględniane w ocenie dostępności, a strona jako całość będzie zgodna z wymogami, w tym z <a href="#cc4">Wymogiem zgodności: 4</a>. Użycie technologii obsługujących dostępność oraz <a href="#cc5">Wymogiem zgodności 5. Brak zakłóceń</a>.
-  </p>
-
-  <p class="note">
-    Kiedy <a>technologia</a> używana jest w sposób obsługujący dostępność, nie oznacza to, że wszystkie jej komponenty i ich użycie będą obsługiwały dostępność. Większość technologii, w tym HTML, nie obsługuje dostępności w co najmniej jednym ze swoich komponentów lub sposobie użycia. Strony są zgodne z wytycznymi WCAG tylko wówczas, kiedy użycie technologii obsługującej dostępność, może być uwzględniane jako podstawa oceny zgodności z WCAG.
-  </p>
-
-  <p class="note">
-    Opierając się na technologiach tworzenia treści internetowych, które mają wiele wersji, należy określić, która wersja obsługuje dostępność.
-  </p>
-
-  <p class="note">
-    Jednym ze sposobów dotarcia przez twórców treści internetowych do zastosowań technologii, które obsługują dostępność, jest zapoznanie się z zestawieniami zastosowań udokumentowanych jako obsługujące dostępność (zobacz: <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#documented-lists">Understanding Accessibility-Supported Web Technology Uses</a> - Zrozumieć zastosowania technologii internetowych obsługujących dostępność). Autorzy, firmy, sprzedawcy technologii i inni mogą dokumentować sposoby korzystania z technologii treści internetowych obsługujące dostępność. Jednak dokumentacja wszystkich sposobów i metod zastosowania tych technologii w dokumentacji musiałyby odpowiadać powyższej definicji technologii treści WWW obsługujących dostępność.
-  </p>
-
-</dd>
-
-<!--
-Web technologies can be used in ways that are not accessibility supported as long
+            
+            <li>
+               <p>The content is available in a closed environment, such as a university or corporate
+                  network, where the user agent required by the technology and used by the organization
+                  is also accessibility supported;
+               </p>
+               
+               <p><strong>OR</strong></p>
+            </li>
+            
+            <li>
+               <p>The user agent(s) that support the technology are accessibility supported and are
+                  available for download or purchase in a way that:
+               </p>
+               
+               <ul>
+                  
+                  <li>does not cost a person with a disability any more than a person without a disability
+                     <strong>and</strong></li>
+                  
+                  <li>is as easy to find and obtain for a person with a disability as it is for a person
+                     without disabilities.
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+         </ol>
+         
+      </li>
+      
+   </ol>
+   
+   <p class="note">The Accessibility Guidelines Working Group and the W3C do not specify which or how much support by assistive
+      technologies there must be for a particular use of a Web technology in order for it
+      to be classified as accessibility supported. (See <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#support-level">Level of Assistive Technology Support Needed for "Accessibility Support"</a>.)
+   </p>
+   
+   <p class="note">Web technologies can be used in ways that are not accessibility supported as long
       as they are not <a>relied upon</a> and the page as a whole meets the conformance requirements, including <a href="#cc4">Conformance Requirement 4</a> and <a href="#cc5">Conformance Requirement 5</a>.
-
-<a>relied upon</a>
-
-Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dostępność, nie oznacza to, że wszystkie jej komponenty i ich użycie będą obsługiwały dostępność. Większość technologii, w tym HTML, nie obsługuje dostępności w co najmniej jednym ze swoich komponentów lub sposobie użycia. Strony są zgodne z wytycznymi WCAG tylko wówczas, kiedy użycie technologii obsługującej dostępność, może być uwzględniane jako podstawa oceny zgodności z WCAG.
--->
+   </p>
+   
+   <p class="note">When a <a>Web Technology</a> is used in a way that is "accessibility supported," it does not imply that the entire
+      technology or all uses of the technology are supported. Most technologies, including
+      HTML, lack support for at least one feature or use. Pages conform to WCAG only if
+      the uses of the technology that are accessibility supported can be relied upon to
+      meet WCAG requirements.
+   </p>
+   
+   <p class="note">When citing Web content technologies that have multiple versions, the version(s) supported
+      should be specified.
+   </p>
+   
+   <p class="note">One way for authors to locate uses of a technology that are accessibility supported
+      would be to consult compilations of uses that are documented to be accessibility supported.
+      (See <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#documented-lists">Understanding Accessibility-Supported Web Technology Uses</a>.) Authors, companies, technology vendors, or others may document accessibility-supported
+      ways of using Web content technologies. However, all ways of using technologies in
+      the documentation would need to meet the definition of accessibility-supported Web
+      content technologies above.
+   </p>
+   
+</dd>
 </blockquote>
                      
                      
@@ -1296,70 +1203,48 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
                   <section id="documented-lists">
                      
                      
-                     <h3>Objaśnienie zastosowań technologii internetowych wspieranych przez dostępność</h3>
+                     <h3>Understanding Accessibility-Supported Web Technology Uses</h3>
                      
                      
-                     <p>Poszczególni autorzy zwykle nie są w stanie przeprowadzić wszystkich testów 
-                        niezbędnych do określenia, które sposoby korzystania z technologii internetowych 
-                        są faktycznie wspierane przez które wersje technologii wspomagających i programów
-                        
-                        użytkownika. Autorzy mogą zatem polegać na publicznie udokumentowanych zestawieniach
-                        
-                        dokumentujących, które technologie wspomagające wspierają jakie sposoby korzystania
-                        
-                        z jakich technologii internetowych. Mówiąc publicznie, nie mamy na myśli tego, 
-                        że zestawienie i jej dokumentacja są koniecznie tworzone przez agencję publiczną,
-                        
-                        a jedynie, że są dostępne publicznie. Każdy może tworzyć publicznie udokumentowane
-                        
-                        zestawienia „Zastosowań technologii internetowych i ich dostępności”. Ludzie mogą
-                        
-                        tworzyć zestawienia i nadawać im nazwy, za pomocą których autorzy mogą się do nich
-                        
-                        odwoływać. Tak długo jak są one publicznie udokumentowane, autorzy lub klienci itp.
-                        
-                        mogą łatwo wybrać zastosowania, które odpowiadają ich potrzebom. Klienci lub inne
-                        
-                        osoby mogą wybrać technologie, które pasują do ich środowiska lub języka w dowolnym
-                        
-                        momencie i określić te, które mają być używane do tworzenia ich treści. Autorzy są
-                        
-                        zdecydowanie zachęcani do korzystania ze źródeł, które mają ugruntowaną reputację
-                        
-                        w zakresie dokładności i użyteczności. Zdecydowanie zachęca się twórców technologii
-                        
-                        do podawania informacji na temat wsparcia dostępności przez ich technologie. Grupa
-                        
-                        robocza przewiduje, że tylko dokumenty, które dostarczają dokładnych informacji 
-                        i przynoszą korzyści zarówno autorom, jak i użytkownikom, osiągną w dłuższej 
-                        perspektywie uznanie na rynku.
+                     <p>
+                        Individual authors will not usually be able to do all of the testing necessary to
+                        determine which ways of using which Web technologies are actually supported by which
+                        versions of assistive technologies and user agents. Authors may therefore rely on
+                        publicly documented compilations that document which assistive technologies support
+                        which ways of using which Web technologies. By public, we do not mean that the compilation
+                        and its documentation are necessarily generated by a public agency, only that they
+                        are available to the public. Anyone can create publicly documented compilations of
+                        "Web Technology Uses and their Accessibility Support." People may create compilations
+                        and give them names that authors can refer to them by. As long as they are publicly
+                        documented, authors or customers etc. can easily select uses that meet their needs.
+                        Customers or others can pick technologies that fit their environment or language at
+                        any point in time and specify those to be used in creating their content. Authors
+                        are strongly encouraged to use sources that have an established reputation for accuracy
+                        and usefulness. Technology developers are strongly encouraged to provide information
+                        about the accessibility support for their technologies. The Working Group anticipates
+                        that only documents that provide accurate information and benefit both authors and
+                        users will achieve market recognition in the long term.
                         
                      </p>
                      
                      
-                     <p>WCAG nie wymaga, aby korzystano z publicznie udokumentowanej kompilacji lub używano
-                        
-                        wyłącznie technologii z takiej kompilacji. Publicznie udokumentowane kompilacje są
-                        
-                        opisane jedynie jako jako metoda ułatwiająca krytyczny, ale nieco skomplikowanego
-                        
-                        aspektu zgodności autorom, którzy sami nie są ekspertami w dziedzinie wsparcia 
-                        technologii wspomagających (lub po prostu nie mają czasu, aby nadążyć za postępem
-                        
-                        w zakresie głównego nurtu i wsparcia technologii wspomagających).
+                     <p>
+                        There is no requirement in WCAG that a publicly documented compilation be used or
+                        that only technology uses from such a compilation be used. The publicly documented
+                        compilations are described only as a method to make an otherwise critical, but somewhat
+                        complicated, aspect of conformance easier for authors who are not themselves experts
+                        on assistive technology support (or who just don't have the time to keep up with advances
+                        in mainstream and assistive technology support for each other).
                         
                      </p>
                      
                      
-                     <p>Autorzy, firmy lub inne osoby mogą zechcieć tworzyć i wykorzystywać własne kompilacje
-                        
-                        (zestawienia) zastosowań technologii wspierających dostępność i jest to dozwolone
-                        
-                        w przypadku spełnienia wymogów WCAG. Klienci, firmy lub inne osoby mogą jednak określić,
-                        
-                        że mają być wykorzystywane technologie z kompilacji niestandardowej lub publicznej.
-                        
-                        Zobacz <a href="#accessibility-support-documenting"></a>.
+                     <p>
+                        Authors, companies or others may wish to create and use their own compilations of
+                        accessibility-supported technology uses and this is allowed in meeting WCAG. Customers,
+                        companies or others may, however, specify that technology uses from a custom or public
+                        compilation be used. See
+                        <a href="documenting-accessibility-support">Documenting Accessibility Support for Uses of a Web Technology</a>.
                         
                         
                      </p>
@@ -1371,10 +1256,12 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
                   <section id="support-statements">
                      
                      
-                     <h3>Oświadczenia o wsparciu dostępności</h3>
+                     <h3>Accessibility Support Statements</h3>
                      
                      
-                     <p>Przykłady sposobów, w jakie deklaracja zgodności może dokumentować wsparcie dostępności:
+                     <p>
+                        Examples of ways in which a conformance claim might document its accessibility support
+                        include:
                         
                      </p>
                      
@@ -1382,45 +1269,39 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
                      <ol>
                         
                         
-                        <li>To oświadczenie o zgodności spełnia wymagania wsparcia dostępności w oparciu 
-                           o testowanie treści w języku (językach) treści za pomocą programów użytkownika 
-                           A, B i C oraz technologii wspomagających X, Y i Z. Oznacza to, że udało nam się 
-                           spełnić wszystkie kryteria sukcesu dla poziomu A WCAG 2.2 przy użyciu tych produktów.
+                        <li>
+                           This conformance claim meets the accessibility support requirement based on testing
+                           content in language(s) of the content with User Agents A, B, and  C,  and Assistive
+                           Technologies X, Y, and Z.    This means that we were able to pass all of the success
+                           criteria for level A of WCAG 2.0 using these products.
                            
                         </li>
                         
                         
-                        <li>To oświadczenie o zgodności spełnia wymagania wsparcia dostępności dla języka (języków)
-                           
-                           treści w oparciu o wykorzystanie technik i uwag programu użytkownika udokumentowanych
-                           
-                           w Technikach dla WCAG 2.0. Opiera się również na dokumentacji wsparcia dostępności
-                           
-                           dla technologii (na której oparliśmy się w celu zapewnienia zgodności), która jest
-                           dostępna 
-                           w „Dokumentacji wsparcia dostępności organizacji XYZ”.
+                        <li>
+                           This conformance claim meets the accessibility support requirement for the language(s)
+                           of the content based on the use of techniques and user agent notes documented in Techniques
+                           for WCAG 2.0.  It is also based on the accessibility support documentation for the
+                           technologies (that we relied upon for conformance), which is available in " XYZ Organization's
+                           Documentation of Accessibility Support."
                            
                         </li>
                         
                         
-                        <li>To oświadczenie o zgodności spełnia wymóg wsparcia dostępności dla języka (języków)
-                           treści 
-                           w oparciu o wykorzystanie technologii Z, jak udokumentowano w „Techniki wspomagane
-                           
-                           dostępnością technologii Z dla WCAG 2.0”.
+                        <li>
+                           This conformance claim meets the accessibility support requirement for the language(s)
+                           of the content based on the use of technology Z as documented in "Technology Z accessibility
+                           supported techniques for WCAG 2.0."
                            
                         </li>
                         
                         
-                        <li>To oświadczenie o zgodności spełnia wymagania wsparcia dostępności dla języka treści
-                           
-                           w oparciu o Wytyczne dotyczące dostępności dla technologii A i Wytyczne dotyczące
-                           
-                           dostępności dla technologii B. Informacje dotyczące wsparcia dla programu użytkownika
-                           
-                           i wsparcia dla technologii wspomagających można znaleźć w „Wymaganiach dotyczących
-                           wsparcia 
-                           dostępności produktu XYZ”, które są udokumentowane w tych wytycznych.
+                        <li>
+                           This conformance claim meets the accessibility support requirement for the language
+                           of the content based on the use of Accessibility Guidelines for Technology A and Accessibility
+                           Guidelines for Technology B. User agent and assistive technology support information
+                           can be found in "Product XYZ Accessibility Support Requirements", which are documented
+                           in these guidelines.
                            
                         </li>
                         
@@ -1437,60 +1318,47 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
                <section xmlns:wcag="https://www.w3.org/WAI/GL/" id="programmatically-determined">
                   
                   
-                  <h2>Objaśnienie pojęcia „programowo określony”</h2>
+                  <h2>Understanding "Programmatically Determined"</h2>
                   
                   
-                  <p>Kilka kryteriów sukcesu wymaga, aby treść (lub niektóre aspekty treści) mogła być
-                     
-                     „określona programowo”. Oznacza to, że treść jest napisana w taki sposób, że programy
-                     
-                     użytkownika, w tym technologie wspomagające, mają dostęp do informacji.
+                  <p>
+                     Several Success Criteria require that content (or certain aspects of content) can
+                     be "programmatically determined." This means that the content is authored in such
+                     a way that user agents, including assistive technologies, can access the information.
                      
                   </p>
                   
                   
-                  <p>Aby treści tworzone za pomocą technologii internetowych (takich jak HTML, CSS, PDF,
-                     
-                     GIF, MPEG itp.) były dostępne dla osób z różnymi rodzajami niepełnosprawności, konieczne
-                     
-                     jest, aby zastosowane technologie współpracowały z funkcjami dostępności przeglądarek
-                     
-                     i innych programów użytkownika, w tym technologii wspomagających. Aby coś spełniało
-                     
-                     kryterium sukcesu, które wymaga, aby było „określone programowo”, musiałoby zostać
-                     
-                     zaimplementowane przy użyciu technologii, która posiada wsparcie technologii wspomagających.
+                  <p>
+                     In order for content created with Web technologies (such as HTML, CSS, PDF, GIF, MPEG,
+                     etc.) to be accessible to people with different types of disabilities, it is
+                     essential that the technologies used work with the accessibility features of browsers
+                     and other user agents, including assistive technologies. In order for something to
+                     meet a Success Criterion that requires it to be "programmatically determined," it
+                     would need to be implemented using a technology that has assistive technology support.
                      
                   </p>
                   
                   
-                  <p>Treść, którą można „określić programowo”, może być przekształcona (przez oprogramowanie
-                     
-                     użytkownika, w tym technologie wspomagające) na różne formaty sensoryczne (np. wizualne,
-                     
-                     słuchowe) lub style prezentacji potrzebne poszczególnym użytkownikom. Jeśli istniejące
-                     
-                     technologie wspomagające nie są w stanie tego zrobić, to nie można powiedzieć, 
-                     że informacje są określane programowo.
+                  <p>
+                     Content that can be "programmatically determined" can be transformed (by user agents
+                     including AT) into different sensory formats (e.g., visual, auditory) or styles of
+                     presentation need by individual users. If existing assistive technologies cannot do
+                     this, then the information cannot be said to be programmatically determined.
                      
                   </p>
                   
                   
-                  <p>Termin został stworzony, aby umożliwić grupie roboczej jasne określenie miejsc, w
-                     których 
-                     informacje muszą być dostępne dla technologii wspomagających (i innych programów 
-                     użytkownika działających jako pomoce w zakresie dostępności), bez określania dokładnie,
-                     
-                     jak należy to zrobić. Jest to ważne ze względu na stale zmieniający się charakter
-                     tych 
-                     technologii. Termin ten pozwala na określenie w wytycznych tego, co należy „programowo
-                     
-                     określić”, aby spełnić wytyczne, a następnie w osobnych dokumentach (dokumenty 
-                     Jak spełnić, Objaśnienia i Techniki), które mogą być aktualizowane w czasie, wymieniać
-                     
-                     konkretne techniki, które będą działać i będą wystarczające w dowolnym momencie w
-                     oparciu 
-                     o program użytkownika i wsparcie technologii wspomagającej.
+                  <p>
+                     The term was created in order to allow the working group to clearly identify those
+                     places where information had to be accessible to assistive technologies (and other
+                     user agents acting as accessibility aids) without specifying exactly how this needed
+                     to be done. This is important because of the continually changing nature of the technologies.
+                     The term allows the guidelines to identify what needs to be "programmatically determined"
+                     in order to meet the guidelines, and then have separate documents (the How to Meet,
+                     Understanding, and Technique documents), which can be updated over time, list the
+                     specific techniques that will work and be sufficient at any point in time based on
+                     user agent and assistive technology support.
                      
                   </p>
                   
@@ -1498,43 +1366,33 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
                   <section id="ASvsPD">
                      
                      
-                     <h3>„Wsparcie dostępności” a „określona programowo”</h3>
+                     <h3>"Accessibility Supported" vs. "Programmatically Determined"</h3>
                      
                      
-                     <p>„Wsparcie dostępności” odnosi się do wspierania przez programy użytkownika (w tym
-                        technologie 
-                        wspomagające) określonych sposobów korzystania z technologii internetowych. Zastosowania
-                        
-                        technologii internetowych wspieranych, które są wspierane przez dostępność, będą działać
-                        
-                        z technologiami wspomagającymi i funkcjami dostępu w głównych programach użytkownika
-                        
-                        (przeglądarki i odtwarzacze itp.).
+                     <p>
+                        "Accessibility supported" relates to support by user agents (including assistive technologies)
+                        of particular ways of using Web technologies. Uses of Web technologies that are accessibility
+                        supported will work with assistive technologies and access features in mainstream
+                        user agents (browsers and players etc.).
                         
                      </p>
                      
                      
-                     <p>„Określone programowo” odnosi się do informacji zawartych w treściach internetowych.
-                        
-                        Jeśli technologie wspierające dostępność są używane właściwie, wówczas technologie
-                        
-                        wspomagające i programy użytkownika mogą uzyskiwać dostęp do informacji w treści (tj.
-                        
-                        programowo określać informacje w treści) i przedstawić je użytkownikowi.
+                     <p>
+                        "Programmatically determined" relates to the information in Web Content. If technologies
+                        that are accessibility supported are used properly, then assistive technologies and
+                        user agents can access the information in the content (i.e., programmatically determine
+                        the information in the content) and present it to the user.
                         
                      </p>
                      
                      
-                     <p>Te dwie koncepcje współpracują ze sobą, aby zapewnić, że informacje mogą być przedstawiane
-                        
-                        użytkownikowi przez oprogramowanie użytkownika, w tym technologie wspomagające. 
-                        Autorzy muszą polegać wyłącznie wyłącznie na technologiach, które są wspierane przez
-                        
-                        dostępność i muszą używać ich we właściwy sposób, aby informacje można było określić
-                        
-                        programowo — a tym samym prezentować za pomocą technologii wspomagających i programów
-                        
-                        klienckich użytkownikom z niepełnosprawnościami.
+                     <p>
+                        The two concepts work together to ensure that information can be presented to the
+                        user by user agents including assistive technologies. Authors must rely only on uses
+                        of technologies that are accessibility-supported — and must use them properly in order
+                        for the information to be programmatically determinable — and hence presentable, by
+                        assistive technologies and user agents to users with disabilities.
                         
                      </p>
                      
@@ -1548,42 +1406,45 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
                <section xmlns:wcag="https://www.w3.org/WAI/GL/" id="conforming-alt-versions">
                   
                   
-                  <h2>Objaśnienie pojęcia zgodne wersje alternatywne</h2>
+                  <h2>Understanding Conforming Alternate Versions</h2>
                   
                   
-                  <p>Wymóg zgodności nr 1 umożliwia uwzględnienie stron niezgodnych w zakresie zgodności,
-                     
-                     o ile mają one „zgodną wersję alternatywną”". Zgodna wersja alternatywna jest zdefiniowana
-                     
-                     jako:
+                  <p>
+                     Conformance requirement #1 allows non-conforming pages to be included within the scope
+                     of conformance as long as they have a "conforming alternate version". The conforming
+                     alternative version is defined as:
                      
                   </p>
                   
-                  	
-                  <blockquote class="scquote"><dt><dfn data-lt="wersje alternatywne zapewniająca zgodność|wersja alternatywna spełniająca kryteria sukcesu">wersja alternatywna zapewniająca zgodność</dfn></dt>
+                  
+                  <blockquote class="scquote"><dt><dfn id="dfn-conforming-alternate-versions" data-lt="conforming alternate versions">conforming alternate version</dfn></dt>
 <dd>
    
-   <p>to taka wersja, która</p>
+   <p>version that</p>
    
    <ol>
       
-      <li>jest zgodna z określonym poziomem, oraz</li>
+      <li>conforms at the designated level, and</li>
       
-      <li>zapewnia te same informacje i <a>funkcjonalności</a> w tym samym <a>naturalnym języku</a>, oraz
+      <li>provides all of the same information and <a>functionality</a> in the same <a>human language</a>, and
       </li>
       
-      <li>jest tak samo aktualna jak wersja niezgodna, oraz</li>
+      <li>is as up to date as the non-conforming content, and</li>
       
       <li>
-         <p>dla której przynajmniej jeden z poniższych warunków jest spełniony:</p>
+         <p>for which at least one of the following is true:</p>
          
          <ol>
             
-            <li>wersja zgodna jest osiągalna z wersji niezgodnej za pomocą <a>mechanizmu</a> <a>obsługującego dostępność</a>, lub</li>
+            <li>the conforming version can be reached from the non-conforming page via an <a>accessibility-supported</a>
+               <a>mechanism</a>, or
+            </li>
             
-            <li>niezgodna wersja jest osiągalna jedynie z wersji zgodnej, lub</li>
+            <li>the non-conforming version can only be reached from the conforming version, or</li>
             
-            <li>wersja niezgodna może być osiągalna tylko z wersji zgodnej, o ile zawiera mechanizm osiągnięcia wersji zgodnej.</li>
+            <li>the non-conforming version can only be reached from a conforming page that also provides
+               a mechanism to reach the conforming version
+            </li>
             
          </ol>
          
@@ -1591,65 +1452,69 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
       
    </ol>
    
-   <p class="note">W tej definicji „może być osiągalna tylko” oznacza, że zapewniony jest jakiś mechanizm, jak na przykład warunkowe przekierowanie, który uchroni użytkownika przed „osiągnięciem” (załadowaniem) niezgodnej wersji, dopóki nie przejdzie z wersji zgodnej.
+   <p class="note">In this definition, "can only be reached" means that there is some mechanism, such
+      as a conditional redirect, that prevents a user from "reaching" (loading) the non-conforming
+      page unless the user had just come from the conforming version.
    </p>
    
-   <p class="note">Alternatywna wersja nie musi być identyczna, co do ilości stron z podstawową (np. może się składać z kilku podstron).
+   <p class="note">The alternate version does not need to be matched page for page with the original
+      (e.g., the conforming alternate version may consist of multiple pages).
    </p>
    
-   <p class="note">Jeżeli dostępne są różne wersje językowe serwisu, to dla każdej powinny być zapewnione zgodne wersje.
+   <p class="note">If multiple language versions are available, then conforming alternate versions are
+      required for each language offered.
    </p>
    
-   <p class="note">Alternatywne wersje mogą być zapewniane dla różnych technologii lub grup odbiorców. Każda wersja powinna być zgodna w jak najwyższym stopniu. Jedna wersja powinna być w pełni zgodna, aby uzyskać <a href="#cc1">Wymóg zgodności nr 1</a>.
+   <p class="note">Alternate versions may be provided to accommodate different technology environments
+      or user groups. Each version should be as conformant as possible. One version would
+      need to be fully conformant in order to meet <a href="#cc1">conformance requirement 1</a>.
    </p>
    
-   <p class="note">Zgodna wersja alternatywna nie musi znajdować się w zakresie zgodności, ani nawet w tym samym serwisie internetowym, jeżeli jest równie łatwo dostępna, jak jej wersja niezgodna.
+   <p class="note">The conforming alternative version does not need to reside within the scope of conformance,
+      or even on the same Web site, as long as it is as freely available as the non-conforming
+      version.
    </p>
    
-   <p class="note">Alternatywna wersja nie powinna być mylona z <a>treścią uzupełniającą</a>, która ma wspierać i rozszerzać wersję podstawową.
+   <p class="note">Alternate versions should not be confused with <a>supplementary content</a>, which support the original page and enhance comprehension.
    </p>
    
-   <p class="note">Ustawienie w preferencjach użytkownika, które pozwala na uzyskanie zgodnej wersji jest akceptowalnym mechanizmem dla osiągnięcia innej wersji, o ile mechanizm ustawień obsługuje dostępność.
+   <p class="note">Setting user preferences within the content to produce a conforming version is an
+      acceptable mechanism for reaching another version as long as the method used to set
+      the preferences is accessibility supported.
    </p>
    
-   <p>Czytaj więcej <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#conforming-alt-versions">Understanding Conforming Alternate Versions</a> (Zrozumieć alternatywne wersje zapewniające zgodność).</p>
+   <p>See <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#conforming-alt-versions">Understanding Conforming Alternate Versions</a></p>
    
 </dd>
 </blockquote>
                   
                   
-                  <p>Gwarantuje to, że wszystkie informacje i wszystkie funkcje, które znajdują się na
-                     
-                     stronach objętych zakresem zgodności, są dostępne na zgodnych stronach internetowych.
+                  <p>
+                     This ensures that all of the information and all of the functionality that is on the
+                     pages inside of the scope of conformance is available on conforming Web pages.
                      
                   </p>
                   
                   
-                  <p>Autorzy polegający na zgodnych wersjach alternatywnych muszą uświadomić użytkownikom
-                     
-                     końcowym, że dostępna jest zgodna wersja alternatywna. Można to osiągnąć, podając
-                     
-                     łącze do bardziej dostępnej wersji, wyraźnie oznaczonej tekstem łącza. Alternatywnie
-                     
-                     można podać link do instrukcji, które dokumentują, jak uzyskać dostęp do bardziej
-                     
-                     dostępnej wersji, a także konkretne sposoby, w jakie alternatywna wersja jest 
-                     bardziej dostępna (np. „wersja o wysokim kontraście”).
-                     
+                  <p>Authors relying on conforming alternate versions must make end users aware that a
+                     conforming alternate version is available. This may be accomplished by providing a
+                     link to a more accessible version, identified clearly by link text. Alternatively
+                     a link to instructions may be provided which documents how to access a more accessible
+                     version as well as the specific ways the alternate version is more accessible (e.g.
+                     a "high contrast version").
                   </p>
                   
                   
                   <section id="whypermit">
                      
                      
-                     <h3>Dlaczego zezwalać na alternatywne wersje?</h3>
+                     <h3>Why permit alternate versions?</h3>
                      
                      
-                     <p>Dlaczego WCAG zezwala na uwzględnienie zgodnych alternatywnych wersji stron internetowych
-                        
-                        w deklaracjach zgodności? To znaczy, po co umieszczać strony, które nie spełniają
-                        
-                        kryteriów sukcesu dla poziomu zgodności w zakresie zgodności lub oświadczenia?
+                     <p>
+                        Why does WCAG permit conforming alternate versions of Web pages to be included in
+                        conformance claims? That is, why include pages that do not satisfy the Success Criteria
+                        for a conformance level in the scope of conformance or a claim?
                         
                      </p>
                      
@@ -1657,17 +1522,18 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
                      <ul>
                         
                         
-                        <li>Czasami strony wykorzystują technologie, które nie są jeszcze wspierane pod 
-                           względem dostępności. Kiedy pojawia się nowa technologia, wsparcie technologii 
-                           wspomagających może być opóźnione lub dostępne tylko dla niektórych odbiorców. 
-                           Autorzy mogą więc nie być w stanie polegać na nowej technologii w przypadku 
-                           wszystkich użytkowników. Może się jednak okazać, że zastosowanie nowej 
-                           technologii przyniesie inne korzyści, np. lepszą wydajność, szerszy zakres 
-                           dostępnych modalności itp. Wymóg alternatywnej wersji umożliwia autorom 
-                           włączenie takich stron internetowych do swoich witryn internetowych poprzez 
-                           udostępnienie dostępnej alternatywnej strony w technologiach, które są 
-                           wspierane przez dostępność. Użytkownicy, dla których nowa technologia jest 
-                           odpowiednio wspierana, czerpią korzyści z nowej wersji.
+                        <li>
+                           Sometimes, pages use technologies that are not yet accessibility supported. When a
+                           new technology emerges, assistive technology support may lag behind, or may only be
+                           available to some target audiences. So authors may not be able to rely on the new
+                           technology for all users. However, there may be other benefits to using the new technology,
+                           e.g., better performance, a wider range of modalities available, etc. The alternate
+                           version requirement allows authors to include such Web pages in their Web site by
+                           providing an accessible alternative page in technologies that are accessibility supported.
+                           Users for whom the new technology is adequately supported get the benefits of the
+                           new version. Authors who look ahead to future accessibility support can satisfy the
+                           Success Criteria now with the alternate version page, and also work with the other
+                           page to build in future access when assistive technology (AT) support is available.
                            
                         </li>
                         
@@ -1675,9 +1541,9 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
                         <li>
                            
                            
-                           <p>Z różnych powodów modyfikacja niektórych treści na stronie internetowej może być niemożliwa.
-                              
-                              Na przykład,
+                           <p>
+                              For a variety of reasons, it may not be possible to modify some content on a Web page.
+                              For instance,
                               
                            </p>
                            
@@ -1685,28 +1551,30 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
                            <ul>
                               
                               
-                              <li>Ze względów prawnych lub historycznych konieczne może być zamieszczenie dokładnej
-                                 
-                                 wizualnej kopii dokumentu,
-                                 
-                              </li>
-                              
-                              
-                              <li>Strona internetowa może być włączona do witryny, ale właściciel witryny może nie mieć
-                                 
-                                 praw do modyfikacji treści na oryginalnej stronie,
+                              <li>
+                                 It may be critical to include an exact visual copy of a document for legal or historical
+                                 reasons
                                  
                               </li>
                               
                               
-                              <li>Firma może nie mieć prawnej możliwości usunięcia lub zmiany w jakikolwiek sposób 
-                                 czegoś, co zostało wcześniej zamieszczone,
+                              <li>
+                                 The Web page may be included in a site but the site owner may not have the legal rights
+                                 to modify the content on the original page
                                  
                               </li>
                               
                               
-                              <li>Autor może nie mieć pozwolenia na zmianę dokumentu pochodzącego z innego działu, 
-                                 agencji lub firmy.
+                              <li>
+                                 The company may not legally be able to remove, or alter in any way, something that
+                                 was previously posted.
+                                 
+                              </li>
+                              
+                              
+                              <li>
+                                 An author may not have permission to alter a document from another department, agency,
+                                 or company
                                  
                               </li>
                               
@@ -1717,32 +1585,28 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
                         </li>
                         
                         
-                        <li>Czasami najlepszym rozwiązaniem dla użytkowników z pewnymi rodzajami niepełnosprawności
-                           
-                           jest dostosowanie strony internetowej specjalnie do tej niepełnosprawności. W takiej
-                           
-                           sytuacji, może nie być możliwe lub praktyczne dostosowanie strony do wszystkich 
-                           niepełnosprawności poprzez spełnienie wszystkich kryteriów Sukcesu. Wymóg wersji 
-                           alternatywnych pozwala na włączenie takich wyspecjalizowanych stron do oświadczenia
-                           
-                           o zgodności, o ile istnieje w pełni zgodna „wersja alternatywna”.
+                        <li>
+                           Sometimes, the best experience for users with certain types of disabilities is provided
+                           by tailoring a Web page specifically to accommodate that disability. In such a situation,
+                           it may not be possible or practical to make the Web page accommodate all disabilities
+                           by satisfying all of the Success Criteria. The alternate versions requirement permits
+                           such specialized pages to be included within a conformance claim as long as there
+                           is a fully conformant 'alternate version' page.
                            
                         </li>
                         
                         
-                        <li>Wiele witryn, którym zależy na dostępności, ma duże ilości starych dokumentów. 
-                           Mimo, że informacje zostały udostępnione w dostępnych formatach, istniałby znaczny
-                           
-                           opór instytucjonalny i przeszkody proceduralne w masowym usuwaniu tych plików. 
-                           Niektóre organizacje, zwłaszcza rządowe, stawiają na pierwszym miejscu tradycyjne
-                           
-                           procesy zorientowane na druk. Nawet jeśli organizacje te przystosowały się 
-                           do publikowania w internecie i przyjęły potrzebę stosowania dostępnych formatów, 
-                           wciąż zachowują mentalność papierową i często nalegają na stosowanie formatów 
-                           zaprojektowanych dla wersji papierowej jako wersji „pierwotnej” („podstawowej”) 
-                           (nawet w przypadku dokumentów, które są „publikowane” wyłącznie elektronicznie). 
-                           Mimo, że Grupa Robocza uważa, że takie podejście powinno zostać zarzucone, 
-                           nie uważa, że można tego zabronić, o ile dostępne wersje są łatwo dostępne.
+                        <li>
+                           Many sites which are committed to accessibility have large quantities of legacy documents.
+                           While the information has been made available in accessible formats, there would be
+                           significant institutional resistance and procedural obstacles to removing these files
+                           en mass. Some organizations, especially governmental bodies, give precedence to traditional
+                           print-oriented processes. Even as these organizations have adapted to Internet publishing
+                           and embraced the need for accessible formats, they still retain a paper mindset and
+                           often insist on formats designed for hard copy as the "primary" version (even for
+                           documents that are only ever "published" electronically). Although the Working Group
+                           feels these approaches should be deprecated it does not feel they can be forbidden
+                           so long as accessible versions are readily available.
                            
                         </li>
                         
@@ -1750,24 +1614,21 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
                      </ul>
                      
                      
-                     <p>Problemem przy dopuszczaniu stron internetowych, które nie spełniają kryteriów 
-                        sukcesu, jest to, że osoby z niepełnosprawnościami mogą natknąć się na te niezgodne
-                        
-                        strony i nie będą w stanie  uzyskać dostępu do ich treści ani znaleźć „zgodnej 
-                        wersji alternatywnej”.  Kluczową częścią przepisu o wersjach alternatywnych jest 
-                        więc możliwość znalezienia zgodnej strony (wersji alternatywnej) ze strony niezgodnej,
-                        
-                        gdy zostanie ona napotkana. Dlatego wymóg zgodności, który dopuszcza strony alternatywne,
-                        
-                        wymaga również, aby użytkownicy mogli znaleźć wersję dostępną wśród wersji alternatywnych.
+                     <p>
+                        A concern when permitting Web pages that do not satisfy the Success Criteria is that
+                        people with disabilities will encounter these non-conforming pages, not be able to
+                        access their content, and not be able to find the “conforming alternate version."
+                        A key part of the Alternate Versions provision, therefore, is the ability to find
+                        the conforming page (the alternate version) from the non-conforming page when it is
+                        encountered. The conformance requirement that permits alternate pages, therefore,
+                        also requires a way for users to find the accessible version among the alternate versions.
                         
                      </p>
                      
                      
-                     <p>Należy pamiętać, że udostępnienie alternatywnej wersji jest rozwiązaniem awaryjnym
-                        
-                        zapewniającym zgodność z WCAG, a preferowaną metodą zapewnienia zgodności jest 
-                        zapewnienie bezpośredniego dostępu do całej treści.
+                     <p>
+                        Note that providing an alternate version is a fallback option for conformance to WCAG
+                        and the preferred method of conformance is to make all content directly accessible.
                         
                      </p>
                      
@@ -1778,54 +1639,46 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
                   <section id="techsaltver">
                      
                      
-                     <h3>Techniki dostarczania zgodnej wersji alternatywnej</h3>
+                     <h3>Techniques for Providing a Conforming Alternate Version</h3>
                      
                      
-                     <p>Najważniejszą częścią dostarczania zgodnej wersji alternatywnej jest zapewnienie 
-                        mechanizmu wyszukiwania jej na podstawie wersji niezgodnej. Zidentyfikowano szereg
-                        
-                        różnych metod realizacji tego celu, ponieważ określone techniki nie zawsze są 
-                        możliwe w przypadku określonych technologii lub sytuacji. Na przykład, jeśli 
-                        autor ma kontrolę nad serwerem, istnieje kilka potężnych technik, które pozwolą 
-                        użytkownikom zawsze mieć wybór z góry. Jednak w wielu przypadkach autor może 
-                        nie mieć kontroli nad usługami na swoim serwerze internetowym. W takich przypadkach
-                        
-                        stosowane są inne techniki. Link na niezgodnej stronie to kolejna potężna technika,
-                        
-                        ale nie wszystkie niezgodne technologie obsługują łącza hipertekstowe.
+                     <p>
+                        The most important part of providing a conforming alternate version is providing a
+                        mechanism to find it from the non-conforming version. A number of different methods
+                        for doing this have been identified since particular techniques may not always be
+                        possible for specific technologies or situations. For example, if the author has control
+                        of the server there are some powerful techniques that will allow users to always have
+                        the choice up front. In many cases however the author may not have control of the
+                        services on their Web server. In these cases other techniques are provided. A link
+                        on the non-conforming page is another powerful technique but not all non-conforming
+                        technologies support hypertext links.
                         
                      </p>
                      
                      
-                     <p>Poniżej przedstawiamy techniki, które zostały określone do tej pory. Spodziewamy się,
-                        
-                        że z czasem zostaną opracowane dodatkowe techniki i będą dodawane tutaj w miarę 
-                        ich pojawiania się, a wsparcie dla tych podejść przez programy użytkownika, w tym
-                        
-                        technologie wspomagające, będzie można wykazać.  Na przykład twórca nowej technologii,
-                        
-                        do której niektóre technologie wspomagające nie mają dostępu, może wbudować funkcję,
-                        
-                        która pozwoli tym technologiom  automatycznie prezentować użytkownikom link, który
-                        
-                        mógłby ich przenieść do alternatywnej wersji.
+                     <p>
+                        Below are the techniques that have been identified to date. We expect that additional
+                        techniques will also be developed over time and they will be added here as they arise
+                        and the support for these approaches by user agents including assistive technologies
+                        can be demonstrated. For example a developer of a new technology that some assistive
+                        technologies cannot access might build in a feature that would allow those technologies
+                        to automatically present a link to users that could take them to an alternate version.
                         
                      </p>
                      
-                     	
+                     
                      <section id="techsaltver-sufficient">
                         
-                        <h4>Wystarczające techniki dostarczania zgodnych alternatywnych wersji stron internetowych</h4>
+                        <h4>Sufficient Techniques for Providing Conforming Alternative Versions of Web pages</h4>
                         
                         
-                        <p>Każda ponumerowana pozycja w tej sekcji reprezentuje technikę lub kombinację technik,
-                           
-                           które Grupa Robocza WCAG uważa za wystarczające do spełnienia tego kryterium sukcesu.
-                           
-                           Jednakże, nie jest konieczne używanie tych konkretnych technik. Informacje na temat
-                           
-                           stosowania innych technik znajdziesz w 
-                           <a href="understanding-techniques"></a>, zwłaszcza w sekcji „Inne techniki”.
+                        <p>
+                           Each numbered item in this section represents a technique or combination of techniques
+                           that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
+                           it is
+                           not necessary to use these particular techniques. For information on using other techniques,
+                           see
+                           <a href="understanding-techniques"></a>, particularly the "Other Techniques" section.
                            
                         </p>
                         
@@ -1834,61 +1687,61 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
                            
                            
                            <li>
-                              										                    
+                              
                               <a href="https://w3c.github.io/wcag/techniques/general/G136">G136: Providing a link at the beginning of a nonconforming Web page that points to a conforming
                                  alternate version</a>
-                              									                  
+                              
                               
                            </li>
                            
                            
                            <li>
-                              										                    
+                              
                               <a href="https://w3c.github.io/wcag/techniques/general/G190">G190: Providing a link adjacent to or associated with a non-conforming object that links
                                  to a conforming alternate version</a>
-                              									                  
+                              
                               
                            </li>
                            
                            
                            <li>
-                              										                    
+                              
                               <a href="https://w3c.github.io/wcag/techniques/css/C29">C29: Using a style switcher to provide a conforming alternate version</a>
-                              									                  
+                              
                               
                            </li>
                            
                            
                            <li>
-                              										                    
+                              
                               <a href="https://w3c.github.io/wcag/techniques/client-side-script/SCR38">SCR38: Creating a conforming alternate version for a web page designed with progressive enhancement</a>
-                              									                  
+                              
                               
                            </li>
                            
                            
                            <li>
-                              										                    
+                              
                               <a href="https://w3c.github.io/wcag/techniques/server-side-script/SVR2">SVR2: Using .htaccess to ensure that the only way to access non-conforming content is from
                                  conforming content</a>
-                              									                  
+                              
                               
                            </li>
                            
                            
                            <li>
-                              										                    
+                              
                               <a href="https://w3c.github.io/wcag/techniques/server-side-script/SVR3">SVR3: Using HTTP referer to ensure that the only way to access non-conforming content is
                                  from conforming content</a>
-                              									                  
+                              
                               
                            </li>
                            
                            
                            <li>
-                              										                    
+                              
                               <a href="https://w3c.github.io/wcag/techniques/server-side-script/SVR4">SVR4: Allowing users to provide preferences for the display of conforming alternate versions</a>
-                              									                  
+                              
                               
                            </li>
                            
@@ -1898,20 +1751,20 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
                         
                      </section>
                      
-                     	
+                     
                      <section id="techsaltver-failure">
                         
-                        <h4>Typowe błędy wskazywane przez Grupę Roboczą</h4>
+                        <h4>Common Failures Identified by the Working Group</h4>
                         
                         
                         <ul>
                            
                            
                            <li>
-                              										                    
+                              
                               <a href="https://w3c.github.io/wcag/techniques/failures/F19">F19: Failure of Conformance Requirement 1 due to not providing a method for the user to
                                  find the alternative conforming version of a non-conforming Web page</a>
-                              									                  
+                              
                               
                            </li>
                            
@@ -1921,10 +1774,12 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
                         
                      </section>
                      
-                     	
+                     
                      <section id="techsaltver-advisory">
                         
-                        <h4>Pomocnicze techniki dla zapewnienia zgodnych alternatywnych wersji stron internetowych
+                        <h4>
+                           Additional Techniques (Advisory) for providing conforming alternative versions of
+                           Web pages
                            
                         </h4>
                         
@@ -1932,28 +1787,29 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
                         <ul>
                            
                            
-                           <li>Zapewnienie wzajemnych linków między wersjami zgodnymi i niezgodnymi z wymogami 
-                              (przyszłe łącze)
+                           <li>
+                              Providing reciprocal links between conforming and non-conforming versions (future
+                              link)
                               
                            </li>
                            
                            
-                           <li>Wykluczanie niezgodnych treści z wyników wyszukiwania (przyszły link)</li>
+                           <li>Excluding non-conforming content from search results (future link)</li>
                            
                            
-                           <li>Stosowanie negocjacji treści (przyszłe łącze)</li>
+                           <li>Using content negotiation (future link)</li>
                            
                            
-                           <li>Niewyświetlanie treści, które opierają się na technologiach nieobsługiwanych 
-                              pod względem dostępności, gdy dana technologia jest wyłączona lub nieobsługiwana.
-                              
-                              (przyszły link)
+                           <li>
+                              Not displaying content that relies on technologies that are not accessibility-supported
+                              when the technology is turned off or not supported. (future link)
                               
                            </li>
                            
                            
-                           <li>Wykorzystanie metadanych w celu umożliwienia zlokalizowania alternatywnej wersji 
-                              zgodnej z URI strony niezgodnej z wymogami (przyszły link)
+                           <li>
+                              Using metadata to allow location of a conforming alternative version from the URI
+                              of a non-conforming page (future link)
                               
                            </li>
                            
@@ -1963,10 +1819,10 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
                         
                      </section>
                      
-                     	
+                     
                      <section id="techsaltver-examples">
                         
-                        <h4>Przykłady zgodnych wersji alternatywnych</h4>
+                        <h4>Examples of Conforming Alternate Versions</h4>
                         
                         
                         <ul>
@@ -1976,25 +1832,23 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
                               
                               
                               <p>
-                                 										                    
-                                 <strong>Witryna intranetowa z wieloma wersjami.</strong>
-                                 									                  
+                                 
+                                 <strong>An intranet site with multiple versions. </strong>
+                                 
                                  
                               </p>
                               
                               
-                              <p>Duża firma obawiała się, że wykorzystanie nowych technologii internetowych w witrynie
+                              <p>
+                                 A large company was concerned that the use of emerging Web technologies on an intranet
+                                 site might limit their ability to address the needs of diverse office locations that
+                                 have different technology bases and individual employees who use a wide variety of
+                                 user agents and assistive technologies. To address these concerns, the company created
+                                 an alternate version of the content that met all Level A Success Criteria using a
+                                 more limited set of uses of accessibility-supported content technologies.
+                                 The two versions link to each other.
                                  
-                                 intranetowej może ograniczyć jej zdolność do zaspokojenia potrzeb różnych 
-                                 lokalizacji biurowych, które mają różne bazy technologiczne i poszczególnych 
-                                 pracowników korzystających z szerokiej gamy programów programów użytkownika i 
-                                 technologii wspomagających. Aby rozwiązać te problemy, firma stworzyła alternatywną
                                  
-                                 wersję treści, która spełniała wszystkie kryteria sukcesu poziomu A, wykorzystując
-                                 
-                                 bardziej ograniczony zestaw zastosowanych technologii treści wspierających dostępność.
-                                 
-                                 Obie wersje łączą się ze sobą.
                                  
                               </p>
                               
@@ -2006,23 +1860,21 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
                               
                               
                               <p>
-                                 										                    
-                                 <strong>Witryna informacyjna zapewniająca kompatybilność wsteczną.</strong>
-                                 									                  
+                                 
+                                 <strong>An informational site ensuring backward compatibility.</strong>
+                                 
                                  
                               </p>
                               
                               
-                              <p>Witryna informacyjna obejmuje szeroki zakres tematów i chce umożliwić odwiedzającym
-                                 
-                                 szybkie znalezienie poszukiwanych tematów. Aby to osiągnąć, witryna wdrożyła system
-                                 
-                                 interaktywnego menu, który jest obsługiwany tylko w najnowszych wersjach dwóch 
-                                 popularnych programów użytkownika. Aby odwiedzający, którzy nie korzystają z tych
-                                 
-                                 konkretnych programów użytkownika, mogli nadal efektywnie korzystać z witryny, 
-                                 prezentowany jest mechanizm nawigacji, który nie zależy od interaktywnego systemu
-                                 menu.
+                              <p>
+                                 An information site covers a wide variety of subjects and wants to enable visitors
+                                 to quickly find the topics they are looking for. To do this, the site has implemented
+                                 an interactive menu system that is only supported in the most recent version of two
+                                 popular user agents. To ensure that visitors who do not use these specific user agents
+                                 are still able to effectively use the site, a navigation mechanism that does not depend
+                                 on the interactive menu system is presented to user agents that do not support the
+                                 newer technology.
                                  
                               </p>
                               
@@ -2045,71 +1897,59 @@ Kiedy <a>technologia internetowa</a> używana jest w sposób obsługujący dost�
                <section xmlns:wcag="https://www.w3.org/WAI/GL/" id="web-page">
                   
                   
-                  <h2>Objaśnienie pojęcia "Strona internetowa"</h2>
+                  <h2>Understanding "Web Page"</h2>
                   
                   
-                  <p>Definicja strony internetowej to:</p>
+                  <p>The definition of a Web Page is:</p>
                   
-                  	
-                  <blockquote class="scquote"><dt><dfn data-lt="strony internetowe|strony internetowej|stronach internetowych|stron internetowych|stronę internetową">strona internetowa</dfn></dt>
+                  
+                  <blockquote class="scquote"><dt><dfn id="dfn-web-page-s" data-lt="web page(s)|web pages">Web page</dfn></dt>
 <dd>
-
-  <p>nieosadzony zasób uzyskany z pojedynczego identyfikatora URI za pomocą protokołu HTTP wraz z wszelkimi innymi zasobami użytymi do renderowania strony w <a>programie użytkownika</a> lub takimi, które potencjalnie mogą być użyte do renderowania</p>
-
-  <p class="note">
-    Mimo że każdy z „pozostałych zasobów” mógłby być renderowany razem z podstawowym zasobem, to niekoniecznie muszą być renderowane równocześnie.
-  </p>
-
-  <p class="note">
-    Dla zgodności z wytycznymi zasób musi być „nieosadzony”, czyli występować w taki sposób, by nie był uwzględniany jako strona internetowa.
-  </p>
-
-  <aside class="example"><p>Zasób sieciowy wraz ze wszystkimi osadzonymi obrazami i multimediami.</p></aside>
-
-  <aside class="example">
-    <p>
-      Internetowy program pocztowy zbudowany w technologii AJAX (asynchroniczny Java Script i XML). Program znajduje się pod adresem http://przyklad.com/mail, ale posiada skrzynkę odbiorczą, kontakty i kalendarz. Wszystkie łącza lub przyciski są zaprojektowane w sposób pozwalający na wyświetlanie skrzynki, kontaktów i kalendarza bez zmiany adresu URI.
-    </p>
-  </aside>
-
-  <aside class="example">
-    <p>
-      Konfigurowalny portal internetowy, w którym użytkownik może wybrać wyświetlaną treść spośród różnych modułów.
-    </p>
-  </aside>
-
-  <aside class="example">
-    <p>
-      Kiedy wprowadzasz np. adres "http://zakupy.przyklad.com/" w przeglądarce, wchodzisz do wyglądającego jak film sklepu, po którym możesz się poruszać, zabierać towar z półek i umieszczać go w wózku przed sobą. Kliknięcie na produkt powoduje wyświetlenie go wraz ze specyfikacją. Może to być jednostronicowy serwis lub jedna ze stron internetowych w serwisie internetowym.
-
-    </p>
-  </aside>
-
+   
+   <p>a non-embedded resource obtained from a single URI using HTTP plus any other resources
+      that are used in the rendering or intended to be rendered together with it by a <a>user agent</a></p>
+   
+   <p class="note">Although any "other resources" would be rendered together with the primary resource,
+      they would not necessarily be rendered simultaneously with each other.
+   </p>
+   
+   <p class="note">For the purposes of conformance with these guidelines, a resource must be "non-embedded"
+      within the scope of conformance to be considered a Web page.
+   </p>
+   
+   <aside class="example"><p>A Web resource including all embedded images and media.</p></aside>
+   
+   <aside class="example"><p>A Web mail program built using Asynchronous JavaScript and XML (AJAX). The program
+      lives entirely at http://example.com/mail, but includes an inbox, a contacts area
+      and a calendar. Links or buttons are provided that cause the inbox, contacts, or calendar
+      to display, but do not change the URI of the page as a whole.
+   </p></aside>
+   
+   <aside class="example"><p>A customizable portal site, where users can choose content to display from a set of
+      different content modules.
+   </p></aside>
+   
+   <aside class="example"><p>When you enter "http://shopping.example.com/" in your browser, you enter a movie-like
+      interactive shopping environment where you visually move around in a store dragging
+      products off of the shelves around you and into a visual shopping cart in front of
+      you. Clicking on a product causes it to be demonstrated with a specification sheet
+      floating alongside. This might be a single-page Web site or just one page within a
+      Web site.
+   </p></aside>
+   
 </dd>
-
-<!--
-Tego nie ma w 2.2
-Zarówno pojedyncza strona internetowa, jak i serwis złożony z wielu stron internetowych, czyli witryna, potocznie określane są jako „strona internetowa”. Ta definicja ogranicza stosowanie terminu „strona internetowa” tylko do zasobu uzyskanego z pojedynczego identyfikatora URI, a więc do jednej, pojedynczej samodzielnej strony internetowej albo jednej, pojedynczej strony w witrynie złożonej z wielu stron.
-
-Czy tu nie powinno być ... i mediami
-Zasób sieciowy wraz ze wszystkimi osadzonymi obrazami i multimediami.
-
--->
 </blockquote>
                   
                   
-                  <p>Należy zauważyć, że w tym standardzie termin „strona internetowa” obejmuje znacznie
-                     
-                     więcej niż tylko statyczne strony HTML. Termin „strona internetowa” został użyty 
-                     w tych wytycznych, aby były one bardziej zrozumiałe.  Jednak termin ten zyskał 
-                     na znaczeniu wraz z rozwojem technologii i obejmuje szeroki zakres technologii, 
-                     z których wiele wcale nie jest „stronopodobnych”. Obejmuje to również coraz bardziej
-                     
-                     dynamiczne strony internetowe, które pojawiają się w sieci, w tym „strony”, które
-                     
-                     mogą przedstawiać całe wirtualne interaktywne społeczności. Na przykład termin 
-                     „strona internetowa” obejmowałby wciągające interaktywne doświadczenie 
-                     przypominające film, które można znaleźć w jednym URI.
+                  <p>
+                     It is important to note that, in this standard, the term "Web page" includes much
+                     more than static HTML pages. The term 'Web Page' was used in these guidelines to allow
+                     the guidelines to be more understandable. But the term has grown in meaning with advancing
+                     technologies to encompass a wide range of technologies, many of which are not at all
+                     'page-like'. It also includes the increasingly dynamic Web pages that are emerging
+                     on the Web, including "pages" that can present entire virtual interactive communities.
+                     For example, the term "Web page" would include an immersive interactive movie-like
+                     experience that you find at a single URI.
                      
                   </p>
                   
@@ -2120,42 +1960,37 @@ Zasób sieciowy wraz ze wszystkimi osadzonymi obrazami i multimediami.
                <section xmlns:wcag="https://www.w3.org/WAI/GL/" id="text-alternatives">
                   
                   
-                  <h2>Objaśnienie „alternatyw tekstowych”</h2>
+                  <h2>Understanding "Text Alternatives"</h2>
                   
                   
-                  <p>Alternatywa tekstowa to tekst używany zamiast treści nietekstowych dla tych, 
-                     którzy nie mogą przeglądać treści nietekstowych. Treści nietekstowe obejmują 
-                     takie rzeczy jak obrazy, wykresy, aplety, pliki audio itp. Osoby, które nie widzą,
-                     
-                     nie będą w stanie zobaczyć informacji przedstawionych na obrazie lub wykresie. 
-                     W związku z tym zapewniona jest alternatywa tekstowa, która umożliwia użytkownikowi
-                     
-                     przekształcenie informacji (tekstu) na mowę. W przyszłości, posiadanie informacji
-                     
-                     w formie tekstowej umożliwi również przetłumaczenie informacji na język migowy, 
-                     obrazki lub prostszą formę pisma.
+                  <p>
+                     A text alternative is text that is used in place of non-text content for those who
+                     cannot view the non-text content. Non-text content includes  such things as pictures,
+                     charts, applets, audio files, etc. People who cannot see for example would not be
+                     able to see information presented in a picture or chart. A text alternative is therefore
+                     provided that allows the user to be able to convert the information (the text) into
+                     speech. In the future, having the information in text also makes it possible to translate
+                     the information into sign language, into pictures, or into a simpler form of writing.
                      
                   </p>
                   
                   
-                  <p>Aby osoby niepełnosprawne mogły korzystać z tego tekstu - tekst musi być „programowo
-                     
-                     określalny”. Oznacza to, że tekst musi być możliwy do odczytania i wykorzystania 
-                     przez technologie wspomagające (oraz funkcje dostępności w przeglądarkach), z których
-                     
-                     korzystają osoby z niepełnosprawnościami.
+                  <p>
+                     In order for people with disabilities to be able to use this text - the text must
+                     be "programmatically determinable."  This means that the text must be able to be read
+                     and used by the assistive technologies (and the accessibility features in browsers)
+                     that people with disabilities use.
                      
                   </p>
                   
                   
-                  <p>Osoby korzystające z technologii wspomagających muszą mieć możliwość znalezienia 
-                     tych alternatywnych tekstów, gdy napotkają treść nietekstową, której nie mogą 
-                     wykorzystać. Aby to osiągnąć, mówimy, że tekst musi być „programowo powiązany” 
-                     z treścią nietekstową.  Oznacza to, że użytkownik musi być w stanie użyć technologii
-                     
-                     wspomagającej, aby znaleźć tekst alternatywny (który może wykorzystać), gdy natrafi
-                     
-                     na treść nietekstową (której nie może wykorzystać).
+                  <p>
+                     It must also be possible for people using assistive technologies to find these text
+                     alternatives when they encounter non-text content that they cannot use. To accomplish
+                     this, we say that the text must be "programmatically associated" with the non-text
+                     content.  This means that the user must be able to use their assistive technology
+                     to find the alternative text (that they can use) when they land on the non-text content
+                     (that they can't use).
                      
                   </p>
                   
@@ -2178,15 +2013,15 @@ Zasób sieciowy wraz ze wszystkimi osadzonymi obrazami i multimediami.
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -2223,28 +2058,26 @@ Zasób sieciowy wraz ze wszystkimi osadzonymi obrazami i multimediami.
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

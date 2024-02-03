@@ -59,18 +59,16 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/odstepy-w-tekscie">1.4.12: Odstępy w tekście</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>This techniques applies to text content created in markup languages that support text
                   style properties.
                </p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/odstepy-w-tekscie">1.4.12: Odstępy w tekście</a> (Failure)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -84,7 +82,7 @@
                <ul>
                   			  
                   <li>
-                     			   Setting the overflow property of the enclosing element to hidden
+                     			   Setting the <code class="language-css">overflow</code> property of the enclosing element to <code class="language-css">hidden</code>
                      		      
                   </li>
                   			  
@@ -103,63 +101,58 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-text-inside-a-box-overflows-and-overlaps-text-below-it-when-text-spacing-is-implemented.">
-                  <h3>Przykład 1: Text inside a box overflows and overlaps text below it when text spacing
+               <section class="example" id="example-1-text-inside-a-box-overflows-and-overlaps-text-below-it-when-text-spacing-is-implemented.">
+                  <h3>Example 1: Text inside a box overflows and overlaps text below it when text spacing
                      is implemented.
                   </h3>
                   <p>The code below is what is implemented in the DOM <em><strong>before</strong></em> the user implements any CSS test spacing overrides. The text renders correctly in
                      the box and doesn't interfere with the next paragraph.
+                  </p><pre><code class="language-html">&lt;div style="font-size:100%; width:130px; height:125px; border: thin solid gray;"&gt;
+  &lt;p style="margin:0;"&gt;Now is the time for all good men to come to 
+   the aid of their country.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p style="margin:0;"&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;</code></pre><div style="font-size:100%; width:130px; height:125px; border:thin solid gray;"> 
+                     
+                     <p style="margin:0;">Now is the time for all good men to come to the aid of their country.</p>
+                     
+                  </div>
+                  <p style="margin:0;">The quick brown fox jumps over the lazy dog.</p>
+                  <p>Here is the view AFTER the text spacing has been overridden by the user with the text
+                     spacing in the success criterion. The text overlaps the paragraph below it.
                   </p>
-                  <p><code>&lt;div style="font-size:100%; width:130px; height:95px; border: thin solid gray;"&gt;
-                        			    Now is the time for all good men to come to the aid of their country.
-                        &lt;/div&gt;
-                        &lt;p&gt;Now is the time for all good men to come to the aid of their country.&lt;/p&gt;</code></p>
-                  <p>
-                     <div style="font-size:100%; width:130px; height:95px; border: thin solid gray;"> 
-                        Now is the time for all good men to come to the aid of their country. 
-                        				
-                     </div>
-                  </p>
-                  <p>Now is the time for all good men to come to the aid of their country.</p>
-                  <p>Here is the  view AFTER the text spacing has been overridden by the user with the
-                     text spacing in the success criterion. The text overlaps the paragraph below it.
-                  </p>
-                  <p>
-                     <div style="font-size:100%; width:130px; height:95px;  border: thin solid gray; line-height: 1.5; margin-bottom: 2em; letter-spacing: 0.12em; word-spacing: 0.16em;">
-                        				Now is the time for all good men to come to the aid of their country. 
-                        
-                     </div>
-                  </p>
-                  <p>Now is the time for all good men to come to the aid of their country.</p>
+                  <div style="font-size:100%; width:130px; height:125px; border:thin solid gray;">
+                     					
+                     <p style="margin:0; line-height: 1.5; margin-bottom: 2em; letter-spacing: 0.12em; word-spacing: 0.16em;">Now is the time for all good men to come to the aid of their country.</p>
+                     				
+                  </div>
+                  <p style="margin:0;">The quick brown fox jumps over the lazy dog.</p>
                </section>
-               <section class="example" id="przyklad-2-text-inside-a-box-is-clipped-when-text-spacing-is-implemented.">
-                  <h3>Przykład 2: Text inside a box is clipped when text spacing is implemented.</h3>
+               <section class="example" id="example-2-text-inside-a-box-is-clipped-when-text-spacing-is-implemented.">
+                  <h3>Example 2: Text inside a box is clipped when text spacing is implemented.</h3>
                   <p>The code below is what is implemented in the DOM <em><strong>before</strong></em> the user implements any CSS test spacing overrides. The text renders correctly in
                      the box and doesn't interfere with the next paragraph.
+                  </p><pre><code class="language-html">&lt;div style="font-size:100%; width:130px;
+ height:95px; overflow:hidden; border:thin solid gray;"&gt;
+  &lt;p&gt;Now is the time for all good men to come to the aid of their country.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;</code></pre><p>Here is the default view before the text spacing has been overridden by the user,
+                     The text renders properly in the box.
                   </p>
-                  <p><code>&lt;div style="font-size:100%; width:130px; height:95px; overflow: hidden; border: thin
-                        solid gray;"&gt;  Now is the time for all good men to come to the aid of their country.
-                        &lt;/div&gt; &lt;p&gt;Now is the time for all good men to come to the aid of their country.&lt;/p&gt;</code></p>
-                  <p>Here is the default view before the text spacing has been overridden by the user,
-                     The text renders properly in the box
-                  </p>
-                  <p>
-                     <div style="font-size:100%; width:130px; height:95px; overflow: hidden; border: thin solid gray;">
-                        Now is the time for all good men to come to the aid of their country. 
-                        				
-                     </div>
-                  </p>
-                  <p>Now is the time for all good men to come to the aid of their country.</p>
+                  <div style="font-size:100%; width:130px; height:125px; overflow:hidden; border:thin solid gray;">
+                     					
+                     <p style="margin:0;">Now is the time for all good men to come to the aid of their country.</p>
+                     				
+                  </div>
+                  <p style="margin:0;">The quick brown fox jumps over the lazy dog.</p>
                   <p>Here is the  view AFTER the text spacing has been overridden by the user with the
                      maximum text spacing in the success criterion,  the text is clipped.
                   </p>
-                  <p>
-                     <div style="font-size:100%; width:130px; height:95px; overflow: hidden; border: thin solid gray; line-height: 1.5; margin-bottom: 2em; letter-spacing: 0.12em; word-spacing: 0.16em;">
-                        Now is the time for all good men to come to the aid of their country. 
-                        				
-                     </div>
-                  </p>
-                  <p>Now is the time for all good men to come to the aid of their country.</p>
+                  <div style="font-size:100%; width:130px; height:125px; overflow: hidden; border: thin solid gray;">
+                     	
+                     <p style="margin:0; line-height: 1.5; margin-bottom: 2em; letter-spacing: 0.12em; word-spacing: 0.16em;">Now is the time for all good men to come to the aid of their country.</p>
+                     
+                  </div>
+                  <p style="margin:0;">The quick brown fox jumps over the lazy dog.</p>
                </section>
             </section>
             <section id="resources">
@@ -234,15 +227,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -279,28 +272,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

@@ -58,16 +58,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/zrozumiala-kolejnosc">1.3.2: Zrozumiała kolejność</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>All technologies.</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/zrozumiala-kolejnosc">1.3.2: Zrozumiała kolejność</a> (Failure)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -88,52 +86,44 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-failure-due-to-adding-white-space-in-the-middle-of-a-word">
-                  <h3>Przykład 1: Failure due to adding white space in the middle of a word</h3>
+               <section class="example" id="example-1-failure-due-to-adding-white-space-in-the-middle-of-a-word">
+                  <h3>Example 1: Failure due to adding white space in the middle of a word</h3>
                   <p>This example has white spaces within a word to space out the letters
                      in a heading. Screen readers may read each letter individually
                      instead of the word "Welcome."
-                  </p><pre xml:space="preserve">
-&lt;h1&gt;W e l c o m e&lt;/h1&gt;
-</pre><p>&amp;nbsp; can also be used to add white space, producing similar
-                     failures:
-                  </p><pre xml:space="preserve">
-&lt;h1&gt;H&amp;nbsp;E&amp;nbsp;L&amp;nbsp;L&amp;nbsp;O&lt;/h1&gt;
-</pre></section>
-               <section class="example" id="przyklad-2-white-space-in-the-middle-of-a-word-changing-its-meaning">
-                  <h3>Przykład 2: White space in the middle of a word changing its meaning</h3>
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;h1&gt;W e l c o m e&lt;/h1&gt;</code>
+</pre><p>&amp;nbsp; can also be used to add white space, producing similar failures:</p><pre xml:space="preserve"><code class="language-html">&lt;h1&gt;H&amp;nbsp;E&amp;nbsp;L&amp;nbsp;L&amp;nbsp;O&lt;/h1&gt;</code></pre></section>
+               <section class="example" id="example-2-white-space-in-the-middle-of-a-word-changing-its-meaning">
+                  <h3>Example 2: White space in the middle of a word changing its meaning</h3>
                   <p>In Japanese, Han characters (Kanji) may have multiple readings that
                      mean very different things. In this example, the word is read
                      incorrectly because screen readers may not recognize these
                      characters as a word because of the white space between the
                      characters. The characters mean "Tokyo," but screen readers say
                      "Higashi Kyo".
-                  </p><pre xml:space="preserve">
-&lt;h1&gt;東　京&lt;/h1&gt;
-</pre></section>
-               <section class="example" id="przyklad-3-using-line-break-characters-to-format-vertical-text">
-                  <h3>Przykład 3: Using line break characters to format vertical text</h3>
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;h1&gt;東　京&lt;/h1&gt;</code></pre></section>
+               <section class="example" id="example-3-using-line-break-characters-to-format-vertical-text">
+                  <h3>Example 3: Using line break characters to format vertical text</h3>
                   <p>In the row header cell of a data table containing Japanese text,
                      authors often create vertical text by using line break characters.
                      However screen readers are not able to read the words in vertical
                      text correctly because the line breaks occur within the word. In the
                      following example, "東京都"(Tokyo-to) will be read "Higashi Kyo
                      Miyako".
-                  </p><pre xml:space="preserve">
-&lt;table&gt;
-&lt;caption&gt;表1.　都道府県別一覧表&lt;/caption&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;th scope="col"&gt;（見出しセル 1.）&lt;/th&gt;
-&lt;th scope="col"&gt;（見出しセル 2.）&lt;/th&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th scope="row"&gt;東&lt;br /&gt;京&lt;br /&gt;都&lt;/th&gt;
-&lt;td&gt;（データセル 1.）&lt;/td&gt;
-&lt;td&gt;（データセル 2.）&lt;/td&gt;
-&lt;/tr&gt;
-・・・・・・
-&lt;/table&gt;
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;table&gt;
+   &lt;caption&gt;表1.　都道府県別一覧表&lt;/caption&gt;
+   &lt;tr&gt;
+     &lt;td&gt;&lt;/td&gt;
+     &lt;th scope="col"&gt;（見出しセル 1.）&lt;/th&gt;
+     &lt;th scope="col"&gt;（見出しセル 2.）&lt;/th&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+     &lt;th scope="row"&gt;東&lt;br /&gt;京&lt;br /&gt;都&lt;/th&gt;
+     &lt;td&gt;（データセル 1.）&lt;/td&gt;
+     &lt;td&gt;（データセル 2.）&lt;/td&gt;
+   &lt;/tr&gt;
+   ...
+&lt;/table&gt;</code>
 </pre></section>
             </section>
             <section id="related">
@@ -188,15 +178,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -233,28 +223,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

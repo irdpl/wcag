@@ -48,7 +48,7 @@
             </nav>
          </aside>
          <main id="main" class="standalone-resource__main">
-            <h1><span>Technique C32:</span>Using media queries and grid CSS to reflow columns
+            <h1><span>Technique C32:</span>Using media queries and grid <abbr title="Cascading Style Sheets">CSS</abbr> to reflow columns
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
@@ -56,17 +56,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/dopasowanie-do-ekranu">1.4.10: Dopasowanie do ekranu</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Content using technologies that support <a href="https://www.w3.org/TR/CSS/"><abbr title="Cascading Style Sheets">CSS</abbr></a>.
-               </p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/dopasowanie-do-ekranu">1.4.10: Dopasowanie do ekranu</a> (Sufficient)</span>.
-               </p>
+               <h2>Applicability</h2>
+               <p>CSS</p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -101,8 +98,8 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-example-1-grid-layout-in-html-and-css---medium-complexity">
-                  <h3>Przykład 1: Example 1: Grid layout in HTML and CSS - Medium complexity</h3>
+               <section class="example" id="example-1-grid-layout-in-html-and-css---medium-complexity">
+                  <h3>Example 1: Grid layout in HTML and CSS - Medium complexity</h3>
                   <p>The following medium complexity example uses HTML and CSS to create a grid layout.
                      The layout regions adjust their size as the viewport is adjusted. When the total viewport
                      width matches the width defined via media queries, columns wrap to be positioned below,
@@ -112,7 +109,7 @@
                      direction. This particular example uses fr units as a fraction of the free space of
                      the grid container for the grid items by using the "grid-template-columns" property
                      and are laid out in source order.
-                  </p><pre><code>
+                  </p><pre><code class="language-html">
   &lt;!DOCTYPE html&gt;
     &lt;html lang="en"&gt;
       &lt;head&gt;
@@ -121,10 +118,10 @@
         &lt;style&gt;
 
         /* Reflow Styling */
-        header[role="banner"]       { grid-area: header; }
-        main[role="main"]           { grid-area: main; }
-        aside[role="complementary"] { grid-area: aside; }
-        footer[role="contentinfo"]  { grid-area: footer; }
+        header { grid-area: header; }
+        main   { grid-area: main; }
+        aside  { grid-area: aside; }
+        footer { grid-area: footer; }
 
         .grid,
         .subgrid {
@@ -177,11 +174,11 @@
 
       &lt;body class="grid"&gt;
 
-        &lt;header role="banner" class="grid-item"&gt;
+        &lt;header class="grid-item"&gt;
           ...
         &lt;/header&gt;
 
-        &lt;main role="main" class="grid-item"&gt;        
+        &lt;main class="grid-item"&gt;        
           ...
           ...
           &lt;div class="subgrid"&gt;
@@ -194,11 +191,11 @@
           &lt;/div&gt;
         &lt;/main&gt;
 
-        &lt;aside role="complementary" class="grid-item"&gt;
+        &lt;aside class="grid-item"&gt;
           ...
         &lt;/aside&gt;
 
-        &lt;footer role="contentinfo" class="grid-item"&gt;
+        &lt;footer class="grid-item"&gt;
           ...
         &lt;/footer&gt;
 
@@ -272,15 +269,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -317,28 +314,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

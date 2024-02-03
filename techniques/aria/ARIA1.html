@@ -58,25 +58,15 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is
-                     
-                     						<strong>Advisory</strong> for <a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/etykiety-lub-instrukcje">3.3.2: Etykiety lub instrukcje</a> when used with <a href="../general/G131">G131: Providing descriptive labels</a>
-                     					.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>.
                </p>
-               <p>This technique relates to:</p>
-               <ul>
-                  <li><a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a> (Advisory)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/etykiety-lub-instrukcje">3.3.2: Etykiety lub instrukcje</a> (Sufficient when used with <a href="../general/G131">G131: Providing descriptive labels</a>)
-                  </li>
-               </ul>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -91,26 +81,25 @@
                <div class="note">
                   
                   <p>The <code class="language-html">aria-describedby</code> property is not designed to reference descriptions on an external resource - since
-                     it is an <code class="att">id</code>, it must reference an element in the same <abbr title="Document Object Model">DOM</abbr> document.
+                     it is an <code class="language-html">id</code>, it must reference an element in the same <abbr title="Document Object Model">DOM</abbr> document.
                   </p>
                   
                </div>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-using-aria-describedby-to-associate-instructions-with-form-fields">
-                  <h3>Przykład 1: Using <code class="language-html">aria-describedby</code> to associate instructions with form fields
+               <section class="example" id="example-1-using-aria-describedby-to-associate-instructions-with-form-fields">
+                  <h3>Example 1: Using <code class="language-html">aria-describedby</code> to associate instructions with form fields
                   </h3>
                   <p>Sample form field using <code class="language-html">aria-describedby</code> to associate instructions with form fields while there is a form label.
-                  </p><pre xml:space="preserve">&lt;form&gt;
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;form&gt;
   &lt;label for="fname"&gt;First name&lt;/label&gt;
   &lt;input aria-describedby="int2" autocomplete="given-name" id="fname" type="text"&gt;
   &lt;p id="int2"&gt;Your first name is sometimes called your "given name".&lt;/p&gt;
-&lt;/form&gt;
-</pre></section>
-               <section class="example" id="przyklad-2-using-aria-describedby-property-to-provide-more-detailed-information-about-the-button">
-                  <h3>Przykład 2: Using <code class="language-html">aria-describedby</code> property to provide more detailed information about the button
-                  </h3><pre xml:space="preserve">&lt;div&gt;
+&lt;/form&gt;</code></pre></section>
+               <section class="example" id="example-2-using-aria-describedby-property-to-provide-more-detailed-information-about-the-button">
+                  <h3>Example 2: Using <code class="language-html">aria-describedby</code> property to provide more detailed information about the button
+                  </h3><pre xml:space="preserve"><code class="language-html">&lt;div&gt;
   &lt;span id="fontDesc"&gt;Select the font faces and sizes to be used on this page&lt;/span&gt;
   &lt;button aria-describedby="fontDesc" id="fontB" type="button"&gt;Fonts&lt;/button&gt;
 &lt;/div&gt;
@@ -121,8 +110,7 @@
 &lt;div&gt;
   &lt;span id="customDesc"&gt;Customize the layout and styles used on this page&lt;/span&gt;
   &lt;button aria-describedby="customDesc" id="customB" type="button"&gt;Customize&lt;/button&gt;
-&lt;/div&gt;
-</pre></section>
+&lt;/div&gt;</code></pre></section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -136,6 +124,11 @@
                   
                   <li>
                      <a href="https://www.w3.org/WAI/ARIA/apg/">WAI-ARIA Authoring Practices Guide</a>.
+                     
+                  </li>
+                  
+                  <li>
+                     <a href="https://www.w3.org/TR/html-aam/">HTML Accessibility API Mappings</a>
                      
                   </li>
                   
@@ -209,15 +202,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -254,28 +247,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

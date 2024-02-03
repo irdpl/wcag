@@ -60,17 +60,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/mozliwosc-pominiecia-blokow">2.4.1: Możliwość pominięcia bloków</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>All technologies that contain links.</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/mozliwosc-pominiecia-blokow">2.4.1: Możliwość pominięcia bloków</a> (Sufficient when used with Creating links to skip blocks of repeated material using
-                     one of the following techniques:)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -83,24 +80,24 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-skip-navigation-links">
-                  <h3>Przykład 1: Skip navigation links</h3>
+               <section class="example" id="example-1-skip-navigation-links">
+                  <h3>Example 1: Skip navigation links</h3>
                   <p>The pages on an organization's Web site include a navigation bar or main menu containing
                      links to major sections of the site, the site map, information about the organization,
                      and how to contact the organization. The first link in this area is titled "Skip Navigation
                      Links". A user activates the link to skip over these links.
                   </p>
                </section>
-               <section class="example" id="przyklad-2-a-book-index">
-                  <h3>Przykład 2: A book index</h3>
+               <section class="example" id="example-2-a-book-index">
+                  <h3>Example 2: A book index</h3>
                   <p>A book contains an index that is divided into a set of pages. In the content at the
                      beginning of each page of the index are links for each letter of the alphabet, linking
                      into the index where the entries start with that letter. The first link in the set
                      is titled "Skip Links into Index". A user activates this link to skip over the links.
                   </p>
                </section>
-               <section class="example" id="przyklad-3-several-sets-of-links">
-                  <h3>Przykład 3: Several sets of links</h3>
+               <section class="example" id="example-3-several-sets-of-links">
+                  <h3>Example 3: Several sets of links</h3>
                   <p>All the pages on a Web site include a section containing links to the site map, information
                      about the organization, and how to contact the organization. All the pages in each
                      section of the site also contain a set of links to its subsections. The first link
@@ -109,112 +106,94 @@
                      over the subsection links.
                   </p>
                </section>
-               <section class="example" id="przyklad-4-html-page-with-several-blocks-of-navigation-links">
-                  <h3>Przykład 4: HTML page with several blocks of navigation links</h3>
-                  <p>This example demonstrates both the use of Heading elements at the beginning of each
-                     section (H69) and links that skip to the end of each section. This allows people to
-                     skip blocks of repeated content using keyboard navigation or using heading navigation,
-                     depending on the capabilities of their user agents. Note that some sections of the
-                     content are wrapped in a
-                     <code class="el">div</code>
-                     element to work around a limitation of Internet Explorer (see the User Agents Notes
-                     for Creating HTML links to skip blocks of content (future link)).
-                  </p><pre xml:space="preserve">
-              &lt;p&gt;&lt;a href="#content"&gt;Content title&lt;/a&gt;&lt;/p&gt;
-                &lt;h2&gt;Main Navigation&lt;/h2&gt;
-                &lt;ul&gt;
-                &lt;li&gt;&lt;a href="#subnav"&gt;Sub Navigation&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="/a/"&gt;Link A&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="/b/"&gt;Link B&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="/c/"&gt;Link C&lt;/a&gt;&lt;/li&gt;
-                ...
-                &lt;li&gt;&lt;a href="/j/"&gt;Link J&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-                &lt;div class="iekbfix"&gt;
-                &lt;h2 id="subnav"&gt;Sub Navigation&lt;/h2&gt;
-                &lt;ul&gt;
-                &lt;li&gt;&lt;a href="#ultranav"&gt;Ultra Sub Navigation&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="/suba/"&gt;Sub A&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="/subb/"&gt;Sub B&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="/subc/"&gt;Sub C&lt;/a&gt;&lt;/li&gt;
-                ...
-                &lt;li&gt;&lt;a href="/subj/"&gt;Sub J&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-                &lt;/div&gt;
-                &lt;div class="iekbfix"&gt;
-                &lt;h2 id="ultranav"&gt;Ultra Sub Navigation&lt;/h2&gt;
-                &lt;ul&gt;
-                &lt;li&gt;&lt;a href="#content"&gt;Content title&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="/ultraa/"&gt;Ultra A&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="/ultrab/"&gt;Ultra B&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="/ultrac/"&gt;Ultra C&lt;/a&gt;&lt;/li&gt;
-                ...
-                &lt;li&gt;&lt;a href="/ultraj/"&gt;Ultra J&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-                &lt;/div&gt;
-                &lt;div&gt;
-                &lt;h2 id="content"&gt;Content title&lt;/h2&gt;
-                &lt;p&gt;Now that I have your attention...&lt;/p&gt;
-                &lt;/div&gt;
-            </pre><p>And the CSS</p><pre xml:space="preserve">
-              div.iekbfix {
-                width: 100%;
-                }
-            </pre></section>
+               <section class="example" id="example-4-html-page-with-several-blocks-of-navigation">
+                  <h3>Example 4: <abbr title="HyperText Markup Language">HTML</abbr> page with several blocks of navigation
+                  </h3>
+                  <p>This example demonstrates both the use of heading elements at the beginning of each
+                     section (<a href="../html/H69.html">H69</a>) and links that skip to the end of each section. This allows people to skip blocks
+                     of repeated content using keyboard navigation or using heading navigation, depending
+                     on the capabilities of their user agents.
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;a href="#content"&gt;skip navigation&lt;/a&gt;
+&lt;h2&gt;&lt;span id="main-label"&gt;Main&lt;/span&gt; Navigation&lt;/h2&gt;
+&lt;nav aria-labelledby="main-label"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#subnav"&gt;Sub Navigation&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/a/"&gt;Link A&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/b/"&gt;Link B&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/c/"&gt;Link C&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;nav&gt;
+
+&lt;h2 id="subnav"&gt;&lt;span id="sub-label"&gt;Sub&lt;/span&gt; Navigation&lt;/h2&gt;
+&lt;nav aria-labelledby="sub-label"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#ultranav"&gt;Ultra Sub Navigation&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/suba/"&gt;Sub A&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/subb/"&gt;Sub B&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/subc/"&gt;Sub C&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;main id="content"&gt;
+  &lt;h1&gt;Content title&lt;/h1&gt;
+  &lt;p&gt;Now that I have your attention...&lt;/p&gt;
+&lt;/main&gt;</code></pre></section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
                <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
                <ul>
-                  
+                  			
                   <li>
-                     <a href="http://www.jimthatcher.com/skipnav.htm">Skip Navigation Links</a>
-                     
+                     				<a href="https://webaim.org/techniques/skipnav/">Skip Navigation Links</a>
+                     			
                   </li>
-                  
+                  		
                </ul>
             </section>
             <section id="related">
                <h2>Related Techniques</h2>
                <ul>
-                  
+                  			
                   <li><a href="../general/G1">G1</a></li>
-                  
+                  			
                   <li><a href="../general/G124">G124</a></li>
-                  
+                  		
                </ul>
             </section>
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  			
                   <h3>Procedure</h3>
-                  
+                  			
                   <ol>
-                     
+                     				
                      <li>Check that a link is the last focusable control before the block of repeated content
                         or the first link in the block.
                      </li>
-                     
+                     				
                      <li>Check that the description of the link communicates that it skips the block.</li>
-                     
+                     				
                      <li>Check that the link is either always visible or visible when it has keyboard focus.</li>
-                     
+                     				
                      <li>Check that after activating the link, the keyboard focus has moved to the content
                         immediately after the block.
                      </li>
-                     
+                     			
                   </ol>
-                  
+                  		
                </section>
                <section class="results" id="expected-results">
+                  			
                   <h3>Expected Results</h3>
-                  
+                  			
                   <ul>
-                     
+                     				
                      <li>All checks above are true.</li>
-                     
+                     			
                   </ul>
-                  
+                  		
                </section>
             </section>
             <section id="test-rules">
@@ -241,15 +220,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -286,28 +265,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

@@ -46,7 +46,7 @@
             </nav>
          </aside>
          <main id="main" class="standalone-resource__main">
-            <h1><span>Technique C38:</span>Using <code>CSS width</code>, <code>max-width</code> and <code>flexbox</code> to fit labels and inputs
+            <h1><span>Technique C38:</span>Using <abbr title="Cascading Style Sheets">CSS</abbr> width, <code class="language-css">max-width</code> and flexbox to fit labels and inputs
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
@@ -54,16 +54,15 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/dopasowanie-do-ekranu">1.4.10: Dopasowanie do ekranu</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>This technique is applicable to Cascading Style Sheet / HTML technologies.</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/dopasowanie-do-ekranu">1.4.10: Dopasowanie do ekranu</a> (Sufficient)</span>.
+               <h2>Applicability</h2>
+               <p>CSS and <abbr title="HyperText Markup Language">HTML</abbr>.
                </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -71,7 +70,7 @@
                   introducing a horizontal scroll bar at a width equivalent to 320 CSS pixels for content
                   intended to scroll vertically. When space is limited in the viewport for the label
                   and input to sit next to each other horizontally, they will be changed to a vertical
-                  alignment. This is done by using CSS properties for <code>width</code>, <code>max-width</code> and <code>flexbox</code> that adapt to the available space.
+                  alignment. This is done by using CSS properties for <code class="language-css">width</code>, <code class="language-css">max-width</code> and flexbox that adapt to the available space.
                </p>
                <p>Responsive layouts can add or remove columns or layout blocks, and each part of the
                   layout can be wider or smaller at different points. This technique ensures labels
@@ -103,20 +102,17 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-fitting-labels-inputs-and-flexbox-layout-with-html-and-css.">
-                  <h3>Przykład 1: Fitting labels, inputs and flexbox layout with HTML and CSS.</h3>
+               <section class="example" id="example-1-fitting-labels-inputs-and-flexbox-layout-with-html-and-css.">
+                  <h3>Example 1: Fitting labels, inputs and flexbox layout with HTML and CSS.</h3>
                   <p>The following example uses HTML and CSS to fit labels and inputs within various width
                      containers, including the viewport. The layout regions adjust their size as the viewport
                      is adjusted. The labels and inputs subsequently adjust their size to fit within the
                      layout region containers.
                   </p>
                   <p>The zoom level can be increased to 400% without requiring horizontal scrolling. This
-                     particular example uses a percent size for the <code>width</code> and <code>max-width</code> for the labels and inputs. The <code>max-width</code> is applied in order to fix elements spilling out of the grid in a cross-browser way,
-                     as replaced elements such as the <code>select</code> have intrinsic sizing.
-                  </p><pre>
-<code>
-
-&lt;style&gt;
+                     particular example uses a percent size for the <code class="language-css">width</code> and <code class="language-css">max-width</code> for the labels and inputs. The <code class="language-css">max-width</code> is applied in order to fix elements spilling out of the grid in a cross-browser way,
+                     as replaced elements such as the <code class="language-css">select</code> have intrinsic sizing.
+                  </p><pre><code class="language-html">&lt;style&gt;
 
 /* Fitting Inputs Styling */
 
@@ -141,11 +137,10 @@
     flex: 0 0 66.66667%;
     max-width: 66.66667%;
   }
-  
+
   .offset-form-col-4 {
     margin-left: 33.33333%;
   }
-  
 }
 
 input {
@@ -153,8 +148,7 @@ input {
   width: 100%;
 }
 
-label,
-select {
+label, select {
   display: block;
   width: 100%;
   max-width: 100%;
@@ -184,8 +178,8 @@ select {
   &lt;div class="form-col-4"&gt;
    &lt;label for="favorite-fruit"&gt;Favorite fruit&lt;/label&gt;
   &lt;/div&gt;
-  &lt;div id="favorite-fruit" class="form-col-8"&gt;
-    &lt;select&gt;
+  &lt;div class="form-col-8"&gt;
+    &lt;select id="favorite-fruit"&gt;
       &lt;option&gt;Banana&lt;/option&gt;
       &lt;option&gt;Pineapple&lt;/option&gt;
       &lt;option&gt;Strawberry&lt;/option&gt;
@@ -195,7 +189,7 @@ select {
 
 &lt;div class="form-group"&gt;
   &lt;div class="offset-form-col-4 form-col-8"&gt;
-    &lt;button&gt;Submit&lt;/button&gt;
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code>
@@ -242,15 +236,15 @@ select {
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -287,28 +281,26 @@ select {
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

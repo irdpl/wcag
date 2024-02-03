@@ -57,17 +57,15 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/komunikaty-o-stanie">4.1.3: Komunikaty o stanie</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>.
                </p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/komunikaty-o-stanie">4.1.3: Komunikaty o stanie</a> (Failure)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -98,16 +96,19 @@
                   					
                   <ul>
                      						
-                     <li><code>role="status"</code></li>
-                     						
-                     <li><code>role="alert"</code></li>
-                     						
-                     <li>the use of an <code>aria-live</code> attribute on an element, set to either "polite" or "assertive"
+                     <li>the HTML <code class="language-html">output</code> element
                      </li>
                      						
-                     <li><code>role="log"</code></li>
+                     <li><code class="language-html">role="status"</code></li>
                      						
-                     <li><code>role="progressbar"</code></li>
+                     <li><code class="language-html">role="alert"</code></li>
+                     						
+                     <li>the use of an <code class="language-html">aria-live</code> attribute on an element, set to either "<code class="language-html">polite</code>" or "<code class="language-html">assertive</code>"
+                     </li>
+                     						
+                     <li><code class="language-html">role="log"</code></li>
+                     						
+                     <li><code class="language-html">role="progressbar"</code></li>
                      						
                   </ul>
                   				The absence of all of these techniques predicts a failure for the status message
@@ -122,8 +123,8 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-including-a-search-results-message-without-a-status-role">
-                  <h3>Przykład 1: Including a search results message without a status role</h3>
+               <section class="example" id="example-1-including-a-search-results-message-without-a-status-role">
+                  <h3>Example 1: Including a search results message without a status role</h3>
                   <p>When a user carries out a search by pressing a Search button, the page content is
                      updated with the results of the search, displayed in a section below the Search button.
                      Since the search has no results, the change to content conveys the status message
@@ -144,19 +145,21 @@
                      					
                      <li>Check that the element containing the updated content does not take focus</li>
                      					
-                     <li>Check that the new content provides information to the user on one of the following:</li>
-                     						
-                     <ul>
-                        							
-                        <li>the success or result of an action</li>
-                        							
-                        <li>the waiting state of an application</li>
-                        							
-                        <li>the progress of a process</li>
-                        							
-                        <li>the existence of errors</li>
+                     <li>Check that the new content provides information to the user on one of the following:
                         						
-                     </ul>
+                        <ul>
+                           							
+                           <li>the success or result of an action</li>
+                           							
+                           <li>the waiting state of an application</li>
+                           							
+                           <li>the progress of a process</li>
+                           							
+                           <li>the existence of errors</li>
+                           						
+                        </ul>
+                        					
+                     </li>
                      					
                      <li>Check that the element containing the new content does not have a pre-existing aria
                         role of <code>status</code>, <code>alert</code>, <code>log</code>, or <code>progressbar</code>, or an <code>aria-live</code> attribute
@@ -188,15 +191,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -233,28 +236,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

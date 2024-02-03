@@ -55,81 +55,57 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is
-                     
-                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/identyfikacja-bledu">3.3.1: Identyfikacja błędu</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/sugestie-korekty-bledow">3.3.3: Sugestie korekty błędów</a> and <strong>Advisory</strong> for <a href="https://w3c.github.io/wcag/understanding/komunikaty-o-stanie">4.1.3: Komunikaty o stanie</a>
-                     					.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
                </p>
-               <p>This technique relates to:</p>
-               <ul>
-                  <li><a href="https://w3c.github.io/wcag/understanding/identyfikacja-bledu">3.3.1: Identyfikacja błędu</a> (Sufficient)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/sugestie-korekty-bledow">3.3.3: Sugestie korekty błędów</a> (Sufficient)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/komunikaty-o-stanie">4.1.3: Komunikaty o stanie</a> (Advisory)
-                  </li>
-               </ul>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
-               <p>The purpose of this technique is to alert people that an input error has occured.
-                  Using role="alertdialog" creates a notification. This notification should be modal
-                  with the following characteristics:
+               <p>The purpose of this technique is to alert people that an input error has occurred.
+                  Using <code class="language-html">role="alertdialog"</code> creates a notification. This notification should be modal with the following characteristics:
                   
                </p>
                <ul>
                   
-                  <li>
-                     <code class="att">aria-label</code> or <code class="att">aria-labelledby</code> attribute gives the alertdialog an accessible name.
-                     
+                  <li><code class="language-html">aria-label</code> or <code class="language-html">aria-labelledby</code> attribute gives the alertdialog an accessible name.
                   </li>
                   
-                  <li>
-                     <code class="att">aria-describedby</code> provides a reference to the text of the alert.
-                     
+                  <li>The <code class="language-html">alertdialog</code> contains at least one focusable element, and the focus should move to that element
+                     when the <code class="language-html">alertdialog</code> opens.
                   </li>
                   
-                  <li>The alertdialog contains at least one focusable control, and the focus should move
-                     to that control when the alertdialog opens.
-                     
+                  <li>The tab order is constrained within the <code class="language-html">alertdialog</code> whilst it is open.
                   </li>
                   
-                  <li>The tab order is constrained within the alertdialog whilst it is open.
-                     
-                  </li>
-                  
-                  <li>When the dialog is dismissed, the focus moves back to the position it had before the
-                     dialog opened, if possible.
-                     
+                  <li>When the <code class="language-html">alertdialog</code> is dismissed, the focus moves back to the position it had before the <code class="language-html">alertdialog</code> opened, if possible.
                   </li>
                   
                </ul>
-               <p>Note that the alertdialog should not be present in a way that it will be accessed
-                  by AT until it is needed. One way to do this is not to include it in the static HTML
-                  and instead to insert it into the DOM via script when the error condition is triggered.
-                  The insertion would correspond to the following HTML sample.
+               <p>Note that the <code class="language-html">alertdialog</code> should not be present in a way that it will be accessed by assistive technology until
+                  it is needed. One way to do this is not to include it in the static HTML and instead
+                  to insert it into the DOM via script when the error condition is triggered. The insertion
+                  would correspond to the following HTML sample.
                   
                </p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-alert-dialog">
-                  <h3>Przykład 1: Alert dialog</h3>
-                  <p>This example shows how a notification using role="alertdialog" can be used to notify
-                     someone they have entered invalid information.
-                  </p><pre xml:space="preserve">&lt;div role="alertdialog" aria-labelledby="alertHeading" aria-describedby="alertText"&gt;
-&lt;h1 id="alertHeading"&gt;Error&lt;/h1&gt;
-&lt;div id="alertText"&gt;Employee's Birth Date is after their hire date. Please verify the birth date and hire date.&lt;/div&gt;
-&lt;button&gt;Save and Continue&lt;/button&gt;
-&lt;button&gt;Return to page and correct error&lt;/button&gt;
-&lt;/div&gt;</pre><p class="working-example">Working example: <a href="../../working-examples/aria-alertdialog-identify-errors/">Alert dialog</a>.
+               <section class="example" id="example-1-alert-dialog">
+                  <h3>Example 1: Alert dialog</h3>
+                  <p>This example shows how a notification using <code class="language-html">role="alertdialog"</code> can be used to notify someone they have entered invalid information.
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;div role="alertdialog" aria-labelledby="alertHeading"&gt;
+  &lt;h1 id="alertHeading"&gt;Error&lt;/h1&gt;
+  &lt;p&gt;Employee's Birth Date is after their hire date.
+   Please verify the birth date and hire date.&lt;/p&gt;
+  &lt;button&gt;Save and Continue&lt;/button&gt;
+  &lt;button&gt;Return to page and correct error&lt;/button&gt;
+&lt;/div&gt;</code></pre><p class="working-example">Working example: <a href="../../working-examples/aria-alertdialog-identify-errors/">Alert dialog</a>.
                   </p>
                </section>
             </section>
@@ -152,35 +128,26 @@
                   
                   <ol>
                      
-                     <li>Trigger the error that causes the alertdialog to appear.
-                        
+                     <li>Trigger the error that causes the <code class="language-html">alertdialog</code> to appear.
                      </li>
                      
-                     <li>Determine that the alertdialog contains at least one focusable control, and the focus
-                        moves to that control when the alertdialog opens.
-                        
+                     <li>Determine that the <code class="language-html">alertdialog</code> contains at least one focusable element, and the focus moves to that element when
+                        the <code class="language-html">alertdialog</code> opens.
                      </li>
                      
-                     <li>Determine that the tab order is constrained within the alertdialog while it is open,
-                        and when the dialog is dismissed, the focus moves back to the position it had before
-                        the dialog opene, if possible.
-                        
+                     <li>Determine that the tab order is constrained within the <code class="language-html">alertdialog</code> while it is open, and when the <code class="language-html">alertdialog</code> is dismissed, the focus moves back to the position it had before the <code class="language-html">alertdialog</code> opened, if possible.
                      </li>
                      
-                     <li>Examine the element with role="alertdialog" applied.
-                        
+                     <li>Examine the element with <code class="language-html">alertdialog</code> applied.
                      </li>
                      
-                     <li>Determine that either the <code class="att">aria-label</code> or <code class="att">aria-labelledby</code> attribute has been correctly used to give the alertdialog an accessible name.
-                        
+                     <li>Determine that either the <code class="language-html">aria-label</code> or <code class="language-html">aria-labelledby</code> attribute has been correctly used to give the alertdialog an accessible name.
                      </li>
                      
-                     <li>Determine that the contents of the alertdialog identifies the input error.
-                        
+                     <li>Determine that the contents of the <code class="language-html">alertdialog</code> identifies the input error.
                      </li>
                      
-                     <li>Determine whether contents of the alertdialog suggests how to fix the error.
-                        
+                     <li>Determine whether contents of the <code class="language-html">alertdialog</code> suggests how to fix the error.
                      </li>
                      
                   </ol>
@@ -191,7 +158,7 @@
                   
                   <ul>
                      
-                     <li>Checks 2, 3, 5 and 6 are true. For SC 3.3.3, Check 7 is also true.</li>
+                     <li>Checks 2, 3, 5 and 6 are true. For Success Criterion 3.3.3, Check 7 is also true.</li>
                      
                   </ul>
                   
@@ -210,15 +177,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -255,28 +222,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

@@ -2,9 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>H63: Using the scope attribute to associate header cells and data cells in data
-         tables | WAI | W3C
-      </title>
+      <title>H63: Using the scope attribute to associate header cells with data cells in data tables | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
    </head>
@@ -50,8 +48,7 @@
             </nav>
          </aside>
          <main id="main" class="standalone-resource__main">
-            <h1><span>Technique H63:</span>Using the scope attribute to associate header cells and data cells in data
-               tables
+            <h1><span>Technique H63:</span>Using the <code class="att">scope</code> attribute to associate header cells with data cells in data tables
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
@@ -59,56 +56,33 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a> (Sufficient when used with Making information and relationships conveyed through
-                     presentation programmatically
-                     determinable using the following techniques:
-                     )</span>.
-               </p>
+               <h2>Applicability</h2>
+               <p>HTML</p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
                <p>The objective of this technique is to associate header cells with data cells in complex
-                  tables using the
-                  <code class="att">scope</code> attribute. The <code class="att">scope</code> attribute may be used to clarify
-                  the scope of any cell used as a header. The scope identifies whether the cell is a
-                  header for a row, column, or group of rows or columns. The values row,
-                  col, rowgroup, and colgroup identify these
-                  possible scopes respectively.
+                  tables using the <code class="att">scope</code> attribute. The <code class="att">scope</code> attribute may be used to clarify the scope of any cell used as a header. The <code class="att">scope</code> identifies whether the cell is a header for a row, column, or group of rows or columns.
+                  The values <code class="attval">row</code>, <code class="attval">col</code>, <code class="attval">rowgroup</code>, and <code class="attval">colgroup</code> identify these possible scopes, respectively.
                </p>
                <p>For simple data tables where the header is not in the first row or column, like the
-                  one
-                  in Example 1, this technique can be used. Based on screen reader support today, its
-                  use
-                  is suggested in two situations both relating to simple tables:
+                  one in Example 1, this technique can be used.
                </p>
-               <ul>
-                  
-                  <li>data cells marked up with <code class="el">td</code> that also function as row header or column
-                     header 
-                  </li>
-                  
-                  <li>header cells marked up with <code class="el">td</code> instead of <code class="el">th</code>. Sometimes, authors
-                     use this to avoid the display characteristics associated with <code class="el">th</code> and also
-                     do not choose to use CSS to control the display for <code class="el">th</code>. 
-                  </li>
-                  
-               </ul>
                <div class="note">
                   
-                  <p>For simple tables that have the headers in the first row or column then it is
-                     sufficient to simply use the TH elements without scope. 
+                  <p>For simple tables that have the headers in the first row or column, it is sufficient
+                     to simply use the <code class="el">th</code> elements without <code class="att">scope</code>.
                   </p>
                   
-                  <p>For complex tables use ids and headers as in <a href="../html/H43">H43</a>. 
+                  <p>For complex tables use <code class="att">id</code>s and <code class="att">headers</code> as in <a href="../html/H43">Using <code class="att">id</code> and <code class="att">headers</code> attributes to associate data cells with header cells in data tables</a>.
                   </p>
+                  
                   
                   <p>Some users may find it easier to work with several simple tables than one more complex
                      table. Authors may wish to consider whether they can convert complex tables to one
@@ -119,40 +93,36 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-a-simple-schedule">
-                  <h3>Przykład 1: A simple schedule</h3>
+               <section class="example" id="example-1-a-simple-schedule">
+                  <h3>Example 1: A simple schedule</h3>
                   <p>In the following example, column #1 contains serial numbers for rows in the table
                      and the second column contains the key value for the row. The cells in the second
-                     column may then use 
-                     									<code class="att">scope</code>="row". The cells in the first row too are
-                     marked up with <code class="el">td</code> and use 
-                     									<code class="att">scope</code>="col". 
-                  </p><pre xml:space="preserve"> &lt;table border="1"&gt;
+                     column may then use <code class="att">scope="row"</code>. The cells in the first row too are marked up with <code class="el">td</code> and use <code class="att">scope="col"</code>.
+                  </p><pre xml:space="preserve"> &lt;table&gt;
   &lt;caption&gt;Contact Information&lt;/caption&gt;
   &lt;tr&gt;
     &lt;td&gt;&lt;/td&gt;
     &lt;th scope="col"&gt;Name&lt;/th&gt;
-    &lt;th scope="col"&gt;Phone#&lt;/th&gt;
-    &lt;th scope="col"&gt;Fax#&lt;/th&gt;
+    &lt;th scope="col"&gt;Phone Number&lt;/th&gt;
     &lt;th scope="col"&gt;City&lt;/th&gt;
-  &lt;/tr&gt;&lt;tr&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
     &lt;td&gt;1.&lt;/td&gt;
-    &lt;th scope="row"&gt;Joel Garner&lt;/th&gt;
+    &lt;th scope="row"&gt;Charlotte Smith&lt;/th&gt;
     &lt;td&gt;412-212-5421&lt;/td&gt;
-    &lt;td&gt;412-212-5400&lt;/td&gt;
     &lt;td&gt;Pittsburgh&lt;/td&gt;
-  &lt;/tr&gt;&lt;tr&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
     &lt;td&gt;2.&lt;/td&gt;
-    &lt;th scope="row"&gt;Clive Lloyd&lt;/th&gt;
-    &lt;td&gt;410-306-1420&lt;/td&gt;
+    &lt;th scope="row"&gt;Joetta Frere&lt;/th&gt;
     &lt;td&gt;410-306-5400&lt;/td&gt;
     &lt;td&gt;Baltimore&lt;/td&gt;
-  &lt;/tr&gt;&lt;tr&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
     &lt;td&gt;3.&lt;/td&gt;
-    &lt;th scope="row"&gt;Gordon Greenidge&lt;/th&gt;
-    &lt;td&gt;281-564-6720&lt;/td&gt;
+    &lt;th scope="row"&gt;David Walls&lt;/th&gt;
     &lt;td&gt;281-511-6600&lt;/td&gt;
-    &lt;td&gt;Houston&lt;/td&gt;
+    &lt;td&gt;New York&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt; </pre></section>
             </section>
@@ -161,18 +131,19 @@
                <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
                <ul>
                   
-                  <li>HTML 4.01 <a href="https://www.w3.org/TR/1999/REC-html401-19991224/struct/tables.html#adef-scope ">Table Cells: scope attribute</a>
-                     								       
-                  </li>
-                  
-                  <li>HTML 4.01 <a href="https://www.w3.org/TR/html401/struct/tables.html#h-11.2.6">Table cells: The TH and TD elements</a>
-                     								       
+                  <li>
+                     <a href="https://html.spec.whatwg.org/multipage/tables.html#attr-th-scope">HTML - the <code class="att">scope</code> attribute</a>.
+                     
                   </li>
                   
                   <li>
-                     									         <a href="http://www.eramp.com/david/tablesample2.htm">Assistive technology
-                        reading tables</a>
-                     								       
+                     <a href="https://html.spec.whatwg.org/multipage/tables.html#the-th-element">HTML - the <code class="el">th</code> element</a>.
+                     
+                  </li>
+                  
+                  <li>
+                     <a href="https://html.spec.whatwg.org/multipage/tables.html#the-td-element">HTML - the <code class="el">td</code> element</a>.
+                     
                   </li>
                   
                </ul>
@@ -190,27 +161,26 @@
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  
                   <h3>Procedure</h3>
                   
-                  <p>For each data table: </p>
+                  <p>For each data table where the relationship between table header cells and table data
+                     cells needs to be specified:
+                  </p>
                   
                   <ol>
                      
                      <li>Check that all <code class="el">th</code> elements have a <code class="att">scope</code> attribute.
                      </li>
                      
-                     <li>Check that all <code class="el">td</code> elements that act as headers for other elements
-                        have a <code class="att">scope</code> attribute.
-                     </li>
-                     
-                     <li>Check that all <code class="att">scope</code> attributes have the value row,
-                        col, rowgroup, or colgroup.
+                     <li>Check that all <code class="att">scope</code> attributes have the value <code class="attval">row</code>, <code class="attval">col</code>, <code class="attval">rowgroup</code>, or <code class="attval">colgroup</code>.
                      </li>
                      
                   </ol>
                   
                </section>
                <section class="results" id="expected-results">
+                  
                   <h3>Expected Results</h3>
                   
                   <ul>
@@ -234,15 +204,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -279,28 +249,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

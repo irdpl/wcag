@@ -55,17 +55,15 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/odstepy-w-tekscie">1.4.12: Odstępy w tekście</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Content using technologies that support <a href="https://www.w3.org/TR/CSS/"><abbr title="Cascading Style Sheets">CSS</abbr></a>.
                </p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/odstepy-w-tekscie">1.4.12: Odstępy w tekście</a> (Sufficient)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -78,9 +76,9 @@
                <p><strong>Where text is not intended to wrap</strong>, authors should either:
                </p>
                <ul>
-                  
+                  					
                   <li>size containers to a have a value greater than the default width of the text, or</li>
-                  
+                  					
                   <li>allow the containers to expand in the direction of text.</li>
                   
                </ul>
@@ -90,9 +88,7 @@
                   for 20 characters, allowing enough width for 24 characters should allow enough space
                   for text-spacing to be applied.
                </p>
-               <p>For boxes which can expand with the text, authors can take advantage of the inline-block
-                  value of the CSS display property and not set negative margins to allow for text-spacing
-                  overrides.
+               <p>For boxes which can expand with the text, authors can take advantage of the <code class="language-css">inline-block</code> value of the <abbr title="Cascading Style Sheets">CSS</abbr> <code class="language-css">display</code> property and not set negative margins to allow for text-spacing overrides.
                </p>
             </section>
             <section id="examples">
@@ -100,36 +96,56 @@
                <p>When a user adapts the page to increase the text spacing, text fits within the bounds
                   of its containing box.
                </p>
-               <p class="note">The <code>ex</code> unit has been used as as the closest available unit for character width, <code>ex </code>"Represents the x-height of the element's font." (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">MDN page for CSS units</a>). It is not perfect, different characters have different default widths.
+               <p class="note">The <code class="language-css">ex</code> unit has been used as as the closest available unit for character width, <code class="language-css">ex</code> <q>Represents the x-height of the element's font.</q> (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">MDN page for CSS units</a>). It is not perfect, different characters have different default widths.
                </p>
-               <section class="example" id="przyklad-1-a-box-sized-with-space-to-allow-for-expansion">
-                  <h3>Przykład 1: A box sized with space to allow for expansion</h3>
-                  <p>The containers are sized to a value greater than the default width of the text.</p><pre xml:space="preserve"><code>/* Links are less than 8ex wide, so 10ex width of each li allows for expanded letter and word width*/
- nav li { width: 10em; }
-
-&lt;!-- HTML --&gt;
- &lt;nav&gt;
+               <section class="example" id="example-1-a-box-sized-with-space-to-allow-for-expansion">
+                  <h3>Example 1: A box sized with space to allow for expansion</h3>
+                  <p>The containers are sized to a value greater than the default width of the text.</p>
+                  <section id="the-css">
+                     
+                     <h4>The CSS</h4>
+                     <pre xml:space="preserve"><code class="language-css">&lt;style&gt;
+/* Links are less than 8ex wide,
+so 10ex width of each li allows for expanded letter and word width */
+nav li { width: 10em; }
+&lt;/style&gt;</code></pre>
+                     </section>
+                  <section id="the-html">
+                     
+                     <h4>The <abbr title="HyperText Markup Language">HTML</abbr></h4>
+                     <pre xml:space="preserve"><code class="language-html">&lt;nav&gt;
   &lt;ul&gt;
-   &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
-   &lt;li&gt;&lt;a href="/contact/"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/contact/"&gt;Contact&lt;/a&gt;&lt;/li&gt;
   &lt;ul&gt;
- &lt;/nav&gt;</code>
-</pre><p>If the navigation element used fix-width containers of the same size, the width would
+&lt;/nav&gt;</code></pre>
+                     </section>
+                  <p>If the navigation element used fix-width containers of the same size, the width would
                      need to allow for text 20% larger than the longest word.
                   </p>
                </section>
-               <section class="example" id="przyklad-2-a-box-which-expands-with-the-text-size">
-                  <h3>Przykład 2: A box which expands with the text size</h3><pre xml:space="preserve"><code>/* CSS containers are given a display of inline-block. No negative margins set. */
+               <section class="example" id="example-2-a-box-which-expands-with-the-text-size">
+                  <h3>Example 2: A box which expands with the text size</h3>
+                  <section id="the-css2">
+                     
+                     <h4>The CSS</h4>
+                     <pre xml:space="preserve"><code class="language-css">&lt;style&gt;
+/* CSS containers are given a display of inline-block. No negative margins set. */
  nav li { display: inline-block; }
-
-&lt;!-- HTML --&gt;
- &lt;nav&gt;
+ &lt;/style&gt;</code></pre>
+                     </section>
+                  <section id="the-html2">
+                     
+                     <h4>The HTML</h4>
+                     <pre xml:space="preserve"><code class="language-html">&lt;nav&gt;
   &lt;ul&gt;
-   &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
-   &lt;li&gt;&lt;a href="/contact/"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/contact/"&gt;Contact&lt;/a&gt;&lt;/li&gt;
   &lt;ul&gt;
- &lt;/nav&gt;</code>
-</pre><p>In the case of variable-width text containers for each item, the parent item may need
+&lt;/nav&gt;</code>
+</pre>
+                     </section>
+                  <p>In the case of variable-width text containers for each item, the parent item may need
                      to allow for wrapping of the items.
                   </p>
                   <p class="working-example"><a href="../../working-examples/css-text-spacing/">Working examples of #1 and #2</a> are available.
@@ -188,15 +204,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -233,28 +249,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

@@ -64,7 +64,7 @@
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Content residing on a Web server that supports .htaccess (typically Apache) where
                   a conforming version of content is provided as an alternative to a non-conforming
                   version.
@@ -78,8 +78,7 @@
                   is provided in a format that does not conform to WCAG, the site as a whole can still
                   conform if alternate versions of the inaccessible content are provided. Conformance
                   Requirement 4 requires that alternate versions can be derived from the nonconforming
-                  content or from its URI. 
-                  
+                  content or from its <code class="Uniform Resource Identifier">URI</code>.
                </p>
                <p>Since it is not always possible to provide an accessible link from within non-conforming
                   content, this technique describes how authors can use Apache's Module "mod_access"
@@ -90,50 +89,47 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1">
-                  <h3>Przykład 1</h3>
-                  <p>The following .htaccess file uses Apache's mod_redirect module to redirect requests
-                     for "inaccessible.html" to "accessible.html" unless the request comes from "accessible.html".
-                  </p><pre xml:space="preserve">
-# If the request for inaccessible content comes from a file 
+               <section class="example" id="example-1-using-apache's-mod_redirect-module-to-redirect-requests">
+                  <h3>Example 1: Using Apache's <code class="language-apache">mod_redirect</code> module to redirect requests
+                  </h3>
+                  <p>The following .htaccess file uses Apache's <code class="language-apache">mod_redirect</code> module to redirect requests for "inaccessible.html" to "accessible.html" unless the
+                     request comes from "accessible.html".
+                  </p><pre xml:space="preserve"><code class="language-apache"># If the request for inaccessible content comes from a file 
 # called accessible.html, then set an environment variable that 
 # allows the inaccessible version to be displayed.
 SetEnvIf Referer .*(accessible.html)$ let_me_in
 &lt;FilesMatch ^(inaccessible.html)$&gt;
-    Order Deny,Allow
-    Deny from all
-    Allow from env=let_me_in
+  Order Deny,Allow
+  Deny from all
+  Allow from env=let_me_in
 &lt;/FilesMatch&gt;
 
 # If the request comes from anyplace but accessible.html, then 
 # redirect the error condition to a location where the accessible 
 # version resides
-ErrorDocument 403 /example_directory/accessible.html
-</pre></section>
-               <section class="example" id="przyklad-2">
-                  <h3>Przykład 2</h3>
+ErrorDocument 403 /example_directory/accessible.html</code></pre></section>
+               <section class="example" id="example-2-redirecting-direct-requests-for-files">
+                  <h3>Example 2: Redirecting direct requests for files</h3>
                   <p>This example assumes a directory structure where documents are available in multiple
                      formats. One of the formats does not meet WCAG at the level claimed and uses the file
                      extension "jna" (Just Not Accessible). All of these files are stored in a folder called
                      "jna" with an .htaccess file which ensures that any direct request for a file with
                      the .jna extension from pages where inaccessible versions are not already available
                      is redirected to an index page that lists all of the available formats.
-                  </p><pre xml:space="preserve">
-# If the request for inaccessible content comes from a file at 
-# http://example.com/documents/index.html, then set an environment 
+                  </p><pre xml:space="preserve"><code class="language-apache"># If the request for inaccessible content comes from a file at 
+# https://example.com/documents/index.html, then set an environment 
 # variable that allows the inaccessible version to be displayed.
-SetEnvIf Referer ^http://example.com/documents/index.html$ let_me_in
+SetEnvIf Referer ^https://example.com/documents/index.html$ let_me_in
 &lt;FilesMatch ^(.*\.jna)$&gt;
-    Order Deny,Allow
-    Deny from all
-    Allow from env=let_me_in
+  Order Deny,Allow
+  Deny from all
+  Allow from env=let_me_in
 &lt;/FilesMatch&gt;
 
-# If the request comes from anyplace but http://example.com/documents/index.html, then 
+# If the request comes from anyplace but https://example.com/documents/index.html, then 
 # redirect the error condition to a location where a link the accessible 
 # version resides
-ErrorDocument 403 http://example.com/documents/index.html
-</pre></section>
+ErrorDocument 403 https://example.com/documents/index.html</code></pre></section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -141,17 +137,17 @@ ErrorDocument 403 http://example.com/documents/index.html
                <ul>
                   
                   <li> 
-                     <a href="http://httpd.apache.org/docs/2.4/mod/mod_env.html">Apache Module mod_env</a> 
+                     <a href="https://httpd.apache.org/docs/2.4/mod/mod_env.html">Apache Module mod_env</a> 
                      
                   </li>
                   
                   <li> 
-                     <a href="http://httpd.apache.org/docs/2.4/howto/auth.html">Authentication, Authorization and Access Control</a> 
+                     <a href="https://httpd.apache.org/docs/2.4/howto/auth.html">Authentication, Authorization and Access Control</a> 
                      
                   </li>
                   
                   <li> 
-                     <a href="http://httpd.apache.org/docs/2.4/howto/htaccess.html">Apache Tutorial: .htaccess files</a> 
+                     <a href="https://httpd.apache.org/docs/2.4/howto/htaccess.html">Apache Tutorial: .htaccess files</a> 
                      
                   </li>
                   
@@ -195,7 +191,7 @@ ErrorDocument 403 http://example.com/documents/index.html
                         
                         <ol>
                            
-                           <li>a <a href="https://w3c.github.io/wcag/guidelines/#" target="terms">conforming alternate version</a> for the non-conforming content
+                           <li>a <a href="https://w3c.github.io/wcag/guidelines/#dfn-conforming-alternate-version" target="terms">conforming alternate version</a> for the non-conforming content
                            </li>
                            
                            <li>a page that includes a link to both the conforming alternate version and the non-conforming
@@ -210,12 +206,13 @@ ErrorDocument 403 http://example.com/documents/index.html
                   
                </section>
                <section class="results" id="expected-results">
+                  	
                   <h3>Expected Results</h3>
-                  
+                  	
                   <ul>
-                     
+                     		
                      <li>Check #3.1 or #3.2 is true.</li>
-                     
+                     	
                   </ul>
                   
                </section>
@@ -233,15 +230,15 @@ ErrorDocument 403 http://example.com/documents/index.html
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -278,28 +275,26 @@ ErrorDocument 403 http://example.com/documents/index.html
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

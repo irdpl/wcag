@@ -56,38 +56,22 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is
-                     
-                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/okreslenie-przeznaczenia">1.3.6: Określenie przeznaczenia</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/mozliwosc-pominiecia-blokow">2.4.1: Możliwość pominięcia bloków</a>
-                     					.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
                </p>
-               <p>This technique relates to:</p>
-               <ul>
-                  <li><a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a> (Sufficient)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/okreslenie-przeznaczenia">1.3.6: Określenie przeznaczenia</a> (Sufficient)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/mozliwosc-pominiecia-blokow">2.4.1: Możliwość pominięcia bloków</a> (Sufficient when used with Grouping blocks of repeated material in a way that can
-                     be skipped, using one of the
-                     following techniques:
-                     )
-                  </li>
-               </ul>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
                <p>The purpose of this technique is to provide programmatic access to sections of a web
                   page.  Landmark roles (or "landmarks") programmatically identify sections of a page.
                   Landmarks help assistive technology (AT) users orient themselves to a page and help
-                  them navigate easily to various sections of a page. 
-                  
+                  them navigate easily to various sections of a page.
                </p>
                <p>They also provide an easy way for users of assistive technology to skip over blocks
                   of content that are repeated on multiple pages and notify them of programmatic structure
@@ -104,111 +88,121 @@
                   
                </p>
                <p>Landmarks also can help sighted keyboard-only users navigate to sections of a page
-                  using a <a href="https://www.paciellogroup.com/blog/2013/07/enabling-landmark-based-keyboard-navigation-in-firefox/">browser plugin</a>. 
+                  using a <a href="https://www.tpgi.com/improving-access-to-landmark-navigation/">browser plugin</a>. 
                   
                </p>
                <p>Landmarks are inserted into the page using the role attribute on an element that marks
                   the section. The value of the attribute is the name of the landmark. These role values
                   are listed below:
-                  
                </p>
                <ul>
                   
-                  <li>banner: A region that contains the prime heading or internal title of a page.
-                     
+                  <li><code class="language-html">banner</code>: A region that contains the prime heading or internal title of a page.
                   </li>
                   
-                  <li>complementary: Any section of the document that supports the main content, yet is
-                     separate and meaningful on its own.
-                     
+                  <li><code class="language-html">navigation</code>: A region that contains navigation links links to other pages or different parts
+                     of the same page.
                   </li>
                   
-                  <li>contentinfo:  A region that contains information about the parent document such as
-                     copyrights and links to privacy statements.
-                     
+                  <li><code class="language-html">main</code>: A region that contains a page's main content.
                   </li>
                   
-                  <li>form: A region of the document that represents a collection of form-associated elements,
+                  <li><code class="language-html">region</code>: A region that contains a perceivable section of the page containing content that
+                     is sufficiently important for users to be able to navigate to the section. A <code class="language-html">region</code> landmark isn't exposed as a landmark region unless it has an accessible name.
+                  </li>
+                  
+                  <li><code class="language-html">form</code>: A region of the document that represents a collection of form-associated elements,
                      some of which can represent editable values that can be submitted to a server for
                      processing.
-                     
                   </li>
                   
-                  <li>main: Main content in a document. In almost all cases a page will have only one role="main".
-                     
+                  <li><code class="language-html">search</code>: A region of the page containing search functionality.
                   </li>
                   
-                  <li>navigation: A collection of links suitable for use when navigating the document or
-                     related documents.
-                     
+                  <li><code class="language-html">complementary</code>: Any section of the document that supports the main content, yet is separate and
+                     meaningful on its own.
                   </li>
                   
-                  <li>search: The search tool of a Web document.
-                     
+                  <li><code class="language-html">contentinfo</code>: A region that contains information about the parent document such as copyrights
+                     and links to privacy statements.
                   </li>
                   
                </ul>
                <p>There are cases when a particular landmark role could be used more than once on a
-                  page, such as on primary and secondary navigation menus. In these cases, identical
-                  roles should be disambiguated from each other using a valid technique for labelling
-                  regions (see examples below).
-                  
+                  page, such as on primary and secondary blocks of navigation. In these cases, identical
+                  roles should be labeled using a valid technique for labelling regions.
                </p>
                <p>Landmarks should supplement native semantic markup such as HTML headings, lists and
                   other structural markup. Landmarks are interpretable by WAI-ARIA-aware assistive technologies
                   and are not exposed by browsers directly to users.
-                  
                </p>
-               <p>It is a best practice to include ALL content on the page in landmarks, so that screen
+               <p>It is a best practice to include all content on the page in landmarks, so that screen
                   reader users who rely on them to navigate from section to section do not lose track
                   of content.
-                  
                </p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-simple-landmarks">
-                  <h3>Przykład 1: Simple landmarks</h3>
-                  <p>The following example shows how landmarks might be added to an HTML4 or XHTML 1.0
-                     document:
-                  </p><pre xml:space="preserve">&lt;div id="header" role="banner"&gt;A banner image and introductory title&lt;/div&gt;
-&lt;div id="sitelookup" role="search"&gt;....&lt;/div&gt;
-&lt;div id="nav" role="navigation"&gt;...a list of links here ... &lt;/div&gt;
-&lt;div id="content" role="main"&gt; ... Ottawa is the capital of Canada ...&lt;/div&gt;
-&lt;div id="rightsideadvert" role="complementary"&gt;....an advertisement here...&lt;/div&gt;
-&lt;div id="footer" role="contentinfo"&gt;(c)The Freedom Company, 123 Freedom Way, Helpville, USA&lt;/div&gt;</pre></section>
-               <section class="example" id="przyklad-2-multiple-landmarks-of-the-same-type-and-aria-labelledby">
-                  <h3>Przykład 2: Multiple landmarks of the same type and aria-labelledby</h3>
+               <section class="example" id="example-1-simple-landmarks">
+                  <h3>Example 1: Simple landmarks</h3>
+                  <p>The following example shows how landmarks might be added to an HTML document:</p><pre xml:space="preserve"><code class="language-html">&lt;div role="banner"&gt;site logo and name, etc. here&lt;/div&gt;
+&lt;div role="search"&gt;search functionality here&lt;/div&gt;
+&lt;div role="navigation"&gt;a list of navigation links here&lt;/div&gt;
+&lt;div role="form"&gt;a sign-up form here&lt;/div&gt;
+&lt;div role="main"&gt;the page's main content here&lt;/div&gt;
+&lt;div role="region"&gt;a sponsor's promotion here&lt;/div&gt;
+&lt;div role="complementary"&gt;sidebar content here&lt;/div&gt;
+&lt;div role="contentinfo"&gt; site contact details, copyright information, etc. here &lt;/div&gt;</code></pre></section>
+               <section class="example" id="example-2-multiple-landmarks-of-the-same-type-and-aria-labelledby">
+                  <h3>Example 2: Multiple landmarks of the same type and aria-labelledby</h3>
                   <p>The following example shows a best practice of how landmarks might be added to an
-                     HTML4 or XHTML 1.0 document in situations where there are more than two of the same
-                     type of landmark on the same page. For instance, if a navigation role is used multiple
-                     times on a Web page, each instance may have a unique label specified using <code class="att">aria-labelledby</code>:
-                     
-                     
-                  </p><pre xml:space="preserve">&lt;div id="leftnav" role="navigation" aria-labelledby="leftnavheading"&gt;
-&lt;h2 id="leftnavheading"&gt;Institutional Links&lt;/h2&gt;
-&lt;ul&gt;&lt;li&gt;...a list of links here ...&lt;/li&gt; &lt;/ul&gt;&lt;/div&gt;
-&lt;div id="rightnav" role="navigation" aria-labelledby="rightnavheading"&gt;
-&lt;h2 id="rightnavheading"&gt;Related topics&lt;/h2&gt;
-&lt;ul&gt;&lt;li&gt;...a list of links here ...&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;</pre></section>
-               <section class="example" id="przyklad-3-multiple-landmarks-of-the-same-type-and-aria-label">
-                  <h3>Przykład 3: Multiple landmarks of the same type and aria-label</h3>
+                     HTML document in situations where there are two or more of the same type of landmark
+                     on the same page. For instance, if a navigation role is used multiple times on a page,
+                     each instance may have a unique label specified using <code class="language-html">aria-labelledby</code>:
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;div aria-labelledby="site-nav-heading" role="navigation"&gt;
+  &lt;h2 id="site-nav-heading"&gt;Site&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="..."&gt;nav link 1&lt;/a&gt;&lt;/li&gt;  
+      &lt;li&gt;&lt;a href="..."&gt;nav link 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="..."&gt;nav link 3&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div aria-labelledby="related-nav-heading" role="navigation"&gt;
+  &lt;h2 id="related-nav-heading"&gt;Related Topics&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="..."&gt;topic link 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="..."&gt;topic link 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="..."&gt;topic link 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre></section>
+               <section class="example" id="example-3-multiple-landmarks-of-the-same-type-and-aria-label">
+                  <h3>Example 3: Multiple landmarks of the same type and aria-label</h3>
                   <p>The following example shows a best practice of how landmarks might be added to an
-                     HTML4 or XHTML 1.0 document in situations where there are more than two of the same
-                     type of landmark on the same page, and there is no existing text on the page that
-                     can be referenced as the label.
-                  </p><pre xml:space="preserve">&lt;div id="leftnav" role="navigation" aria-label="Primary"&gt;
-&lt;ul&gt;&lt;li&gt;...a list of links here ...&lt;/li&gt;&lt;/ul&gt; &lt;/div&gt;
-&lt;div id="rightnav" role="navigation" aria-label="Secondary"&gt;
-&lt;ul&gt;&lt;li&gt;...a list of links here ...&lt;/li&gt; &lt;/ul&gt;&lt;/div&gt;</pre></section>
-               <section class="example" id="przyklad-4-search-form">
-                  <h3>Przykład 4: Search form</h3>
-                  <p>The following example shows a search form with a "search" landmark. The search role
-                     typically goes on the form element or a div surrounding the form.
-                  </p><pre xml:space="preserve">&lt;form role="search"&gt;
-&lt;label for="s6"&gt;search&lt;/label&gt;&lt;input id="s6" type="text" size="20"&gt;
-...
-&lt;/form&gt; </pre></section>
+                     HTML document in situations where there are two or more of the same type of landmark
+                     on the same page, and there is no existing text on the page that can be referenced
+                     as the label:
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;div aria-label="Site" role="navigation"&gt;
+   &lt;ul&gt;
+      &lt;li&gt;&lt;a href="..."&gt;nav link 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="..."&gt;nav link 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="..."&gt;nav link 3&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div aria-label="Tags" role="navigation"&gt;
+   &lt;ul&gt;
+      &lt;li&gt;&lt;a href="..."&gt;tag link 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="..."&gt;tag link 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="..."&gt;tag link 3&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+&lt;/div&gt;</code></pre></section>
+               <section class="example" id="example-4-search-form">
+                  <h3>Example 4: Search form</h3>
+                  <p>The following example shows a search form with a "search" landmark. The <code class="language-html">search</code> role typically goes on the <code class="language-html">form</code> element or a <code class="language-html">div</code> surrounding the form:
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;form role="search"&gt;
+   &lt;label for="product-search" id="search-label"&gt;Search&lt;/label&gt;
+   &lt;input id="product-search" placeholder="title, author, or ISBN" type="text"&gt;
+   &lt;button type="submit"&gt;Find Books&lt;/button&gt;
+&lt;/form&gt;</code></pre></section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -216,27 +210,27 @@
                <ul>
                   
                   <li>
-                     <a href="https://www.w3.org/WAI/ARIA/apg/">WAI-ARIA Authoring Practices Guide</a> 
+                     <a href="https://www.w3.org/TR/wai-aria-practices/">WAI-ARIA Authoring Practices</a> 
                      
                   </li>
                   
                   <li>
-                     <a href="https://www.w3.org/TR/wai-aria/#usage_intro">Accessible Rich Internet Applications (WAI-ARIA) 1.0, Using WAI-ARIA Roles</a>
+                     <a href="https://www.w3.org/TR/wai-aria/#usage_intro">Accessible Rich Internet Applications (WAI-ARIA), Using WAI-ARIA Roles</a>
                      
                   </li>
                   
                   <li>
-                     <a href="https://www.w3.org/TR/wai-aria/#states_and_properties">Accessible Rich Internet Applications (WAI-ARIA) 1.0, Supported States and Properties</a>
+                     <a href="https://www.w3.org/TR/wai-aria/#states_and_properties">Accessible Rich Internet Applications (WAI-ARIA), Supported States and Properties</a>
                      
                   </li>
                   
                   <li>
-                     <a href="https://www.paciellogroup.com/blog/2013/07/enabling-landmark-based-keyboard-navigation-in-firefox/">Enabling landmark-based keyboard navigation in Firefox</a>
+                     <a href="https://www.tpgi.com/improving-access-to-landmark-navigation/">Improving access to landmark navigation</a>
                      
                   </li>
                   
                   <li>
-                     <a href="http://matatk.agrip.org.uk/landmarks/">Landmarks browser extension</a>
+                     <a href="https://matatk.agrip.org.uk/landmarks/">Landmarks browser extension</a>
                      
                   </li>
                   
@@ -245,12 +239,14 @@
             <section id="related">
                <h2>Related Techniques</h2>
                <ul>
-                  	
+                  
                   <li><a href="../general/G1">G1</a></li>
-                  	
+                  
                   <li><a href="../general/G124">G124</a></li>
                   
                   <li><a href="../html/H69">H69</a></li>
+                  
+                  <li><a href="../html/H100">H100</a></li>
                   
                   <li><a href="../client-side-script/SCR28">SCR28</a></li>
                   
@@ -258,30 +254,33 @@
             </section>
             <section id="tests">
                <h2>Tests</h2>
-               <section class="procedure" id="procedure">
+               <section class="procedure" id="test-procedure">
+                  
                   <h3>Procedure</h3>
                   
                   <ol>
                      
                      <li>Examine each element with a <a href="https://www.w3.org/TR/wai-aria/#landmark_roles">landmark role</a>.
-                        
                      </li>
                      
-                     <li>Examine whether the landmark role attribute is applied to the section of the page
-                        that corresponds with that role. (i.e., the "navigation" role is applied to a navigation
-                        section, the "main" role is applied to where the main content begins.)
-                        
+                     <li>Examine whether the correct element has been used to mark up content. For example:
+                        a <code class="language-html">navigation</code> role has been used to mark up a section with navigation links, or the <code class="language-html">main</code> role is used to contain the page's main content.
+                     </li>
+                     
+                     <li>If a landmark region needs to have an accessible name to be exposed as a landmark,
+                        check to see that there is an accessible name.
                      </li>
                      
                   </ol>
                   
                </section>
-               <section class="results" id="expected-results">
+               <section class="results" id="expected-test-results">
+                  
                   <h3>Expected Results</h3>
                   
                   <ul>
                      
-                     <li>#1 and #2 are true.</li>
+                     <li>#1, #2, and #3 are true.</li>
                      
                   </ul>
                   
@@ -300,15 +299,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -345,28 +344,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

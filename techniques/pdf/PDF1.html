@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>PDF1: Stosowanie alternatyw tekstowych do obrazów za pomocą wpisu Alt w dokumentach PDF | WAI | W3C</title>
+      <title>PDF1: Applying text alternatives to images with the Alt entry in PDF documents | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
    </head>
@@ -48,7 +48,7 @@
             </nav>
          </aside>
          <main id="main" class="standalone-resource__main">
-            <h1><span>Technique PDF1:</span>Stosowanie alternatyw tekstowych do obrazów za pomocą wpisu Alt w dokumentach PDF
+            <h1><span>Technique PDF1:</span>Applying text alternatives to images with the Alt entry in <abbr title="Portable Document Format">PDF</abbr> documents
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
@@ -56,325 +56,208 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/tresc-nietekstowa">1.1.1: Treść nietekstowa</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Oznakowane dokumenty PDF z obrazami</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/tresc-nietekstowa">1.1.1: Treść nietekstowa</a> (Sufficient)</span>.
-               </p>
+               <h2>Applicability</h2>
+               <p>Tagged PDF documents with images</p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
-               <p>Celem tej techniki jest zapewnienie tekstowych alternatyw dla obrazów za pośrednictwem
-                  wpisu /Alt na liście właściwości znacznika. Zwykle osiąga się to za pomocą narzędzia
-                  do tworzenia plików PDF.
+               <p>The objective of this technique is to provide text alternatives for
+                  		images via an <code>/Alt</code> entry in the property list for a Tag. This is normally
+                  		accomplished using a tool for authoring PDF.
                </p>
-               <p>Dokumenty PDF mogą być ulepszone poprzez zapewnienie alternatywnych opisów dla obrazów,
-                  formuł i innych elementów, które nie są naturalnie tłumaczone na tekst. W rzeczywistości,
-                  takie alternatywne teksty są wymagane dla dostępności: alternatywne opisy są tekstem
-                  czytelnym dla człowieka, który może być głosowo odtwarzany przez technologię tekst-na-mowę
-                  dla dobra użytkowników z niepełnosprawnością wzroku.
+               <p>PDF documents may be enhanced by providing alternative descriptions
+                  			for images, formulas, and other items that do not translate naturally
+                  			into text. In fact, such text alternatives are required for accessibility:
+                  			alternate descriptions are human-readable text that can be vocalized
+                  			by text-to-speech technology for the benefit of users with vision disabilities.
+                  
                </p>
-               <p>Jeśli obraz zawiera słowa, które są ważne dla zrozumienia treści, tekst alternatywny
-                  powinien zawierać te słowa. Dzięki temu alternatywa będzie dokładnie przedstawiać
-                  obraz. Należy pamiętać, że tekst alternatywy nie musi opisywać wizualnych cech samego
-                  obrazu, ale musi przekazywać to samo znaczenie co obraz.
+               <p>When an image contains words that are important to understanding the
+                  				content, the text alternative should include those words. This will
+                  				allow the alternative to accurately represent the image. Note that
+                  				it does not necessarily describe the visual characteristics of the
+                  				image itself but must convey the same meaning as the image.
                </p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-dodawanie-wpisu-/alt-do-obrazu-za-pomoca-narzedzia-touchup-object-tool-programu-adobe-acrobat-9-pro">
-                  <h3>Przykład 1: Dodawanie wpisu /Alt do obrazu za pomocą narzędzia TouchUp Object Tool
-                     programu Adobe Acrobat 9 Pro
-                  </h3>
-                  <p>Ten przykład odnosi się do programu Adobe Acrobat Pro. Istnieją inne narzędzia programowe,
-                     które wykonują podobne funkcje. Zobacz listę innych narzędzi programowych w <a href="#pdf_notes_acc-sup_files_applications"></a>.
+               <section class="example" id="example-1-adding-alt-text-to-an-image-in-adobe-acrobat-dc-pro">
+                  <h3>Example 1: Adding alt text to an image in Adobe Acrobat DC Pro</h3>
+                  <p>This example is shown with Adobe Acrobat Pro. There are other software tools that
+                     perform similar functions.
                   </p>
                   <ol>
-                     
-                     <li>
-                        
-                        <p> Wybierz Narzędzia &gt; Edycja zaawansowana &gt; TouchUp Object Tool </p>
-                        
-                        <figure id="figure-touchup-object-tool">
-                           <img src="img/textalt1.gif" />
-                           
-                           
-                           <figcaption>The TouchUp Object Tool w menu Edycja zaawansowana.</figcaption>
-                           
-                           
-                        </figure>
-                        
+                     						
+                     <li>Open the Accessibility panel via the Tools → Accessibility options.</li>
+                     						
+                     <li>Select the image in the document and select the "Set Alternative Text" option in the
+                        Accessibility tools panel.
                      </li>
-                     			   
-                     
-                     <li>Uzyskaj dostęp do menu kontekstowego obrazu i wybierz Właściwości.</li>
-                     
-                     <li>W oknie dialogowym Właściwości retuszu wybierz kartę Znacznik.</li>
-                     
+                     						
                      <li>
-                        
-                        <p>W panelu Znacznik wpisz alternatywny tekst w polu tekstowym Tekst alternatywny.	</p>
-                        
-                        <figure id="figure-tag-tab">
-                           <img src="img/textalt2.gif" />
-                           
-                           
-                           <figcaption>Karta Znacznik w oknie dialogowym Właściwości TouchUp.</figcaption>
-                           
-                           
-                        </figure>
-                        
-                     </li>
-                     
-                  </ol>
-                  <p class="working-example">Ten przykład pokazano w działaniu w <a href="../../working-examples/pdf-alt-entry-to-an-image/alt-entry-to-an-image.pdf">przykładzie roboczym Dodawania wpisu /Alt do obrazu</a>.
-                  </p>
-               </section>
-               <section class="example" id="przyklad-2-dodawanie-wpisu-/alt-do-obrazu-za-pomoca-narzedzia-touchup-reading-order-w-programie-adobe-acrobat-9-pro">
-                  <h3>Przykład 2: Dodawanie wpisu /Alt do obrazu za pomocą narzędzia TouchUp Reading Order
-                     w programie Adobe Acrobat 9 Pro
-                  </h3>
-                  <p>Ten przykład pokazano w programie Adobe Acrobat Pro. Istnieją inne narzędzia programowe,
-                     które wykonują podobne funkcje. Zobacz listę innych narzędzi programowych w <a href="#pdf_notes_acc-sup_files_applications"></a>.
-                  </p>
-                  <ol>
-                     
-                     <li>
-                        
-                        <p>Wybierz Narzędzia &gt; Edycja zaawansowana &gt; Narzędzie poprawiania kolejności czytania
-                           
+                        							
+                        <p>In the Set Alternative Text dialog that appears, type in your alternative text, then
+                           press the Save &amp; Close button.
                         </p>
-                        
-                        <figure id="figure-turo-tool">
-                           <img src="img/textalt3.gif" />
-                           
-                           
-                           <figcaption>The TouchUp Reading Order Tool in the Advanced Editing menu.</figcaption>
-                           
-                           
-                        </figure>
-                        
+                        							
+                        <div>
+                           								<img alt="Acrobat's Set Alternate Text dialog, containing some alt text, next to an image in a PDF." height="350" src="img/acrobat-set-alternate-text.png" />
+                           							
+                        </div>
+                        						
                      </li>
-                     
-                     <li>Zostanie wyświetlone okno dialogowe Retusz kolejności czytania.</li>
-                     
-                     <li>Kliknij obraz prawym przyciskiem myszy i wybierz opcję Edytuj tekst alternatywny.</li>
-                     
-                     <li>Wpisz alternatywny tekst w polu tekstowym Tekst alternatywny.  </li>
-                     
-                     <li>
-                        
-                        <p>Type the text alternative in the Alternate Text text box. </p>
-                        
-                        <figure id="figure-alt-text-box">
-                           <img src="img/textalt4.gif" />
-                           
-                           
-                           <figcaption>Pole Tekst alternatywny.</figcaption>
-                           
-                           
-                        </figure>
-                        
-                     </li>
-                     
+                     					
                   </ol>
-               </section>
-               <section class="example" id="przyklad-3-dodawanie-wpisu-/alt-do-obrazu-w-dokumentach-pdf-generowanych-za-pomoca-programu-microsoft-word">
-                  <h3>Przykład 3: Dodawanie wpisu /Alt do obrazu w dokumentach PDF generowanych za pomocą
-                     programu Microsoft Word
-                  </h3>
-                  <p>Ten przykład jest pokazany z programem Microsoft Word. Istnieją inne narzędzia programowe,
-                     które wykonują podobne funkcje. Zobacz listę innych narzędzi programowych w <a href="#pdf_notes_acc-sup_files_applications"></a>.
+                  <p class="working-example">This example is shown in operation in the <a href="../../working-examples/pdf-alt-entry-to-an-image/alt-entry-to-an-image.pdf">working example of Adding an <code>/Alt</code> entry to an image</a>.
                   </p>
-                  <section id="PDF1_word_2003">
-                     
-                     <h4> Word 2000-2003 </h4>
-                     
-                     <ol>
-                        
-                        <li>Kliknij obraz prawym przyciskiem myszy i wybierz Formatuj obraz</li>
-                        
-                        <li>Wybierz kartę Internet</li>
-                        
-                        <li>Wpisz tekst alternatywny w odpowiednim polu tekstowym, a następnie kliknij przycisk
-                           OK.
-                        </li>
-                        
-                     </ol>
-                     
-                     <figure id="figure-web-tab">
-                        <img src="img/word2003alt.gif" />
-                        
-                        
-                        <figcaption>Karta Internet w oknie dialogowym Formatowanie obrazu.</figcaption>
-                        
-                        
-                     </figure>
-                     	
-                  </section>
-                  <section id="PDF1_word_2007">
-                     
-                     <h4> Word 2007 </h4>
-                     
-                     <ol>
-                        
-                        <li>Kliknij obraz prawym przyciskiem myszy i wybierz Rozmiar</li>
-                        
-                        <li>Wybierz kartę Tekst alternatywny</li>
-                        
-                        <li>Wpisz tekst alternatywny w odpowiednim polu tekstowym, a następnie kliknij przycisk
-                           OK.
-                        </li>
-                        
-                     </ol>
-                     
-                     <figure id="figure-alt-text-tab">
-                        <img src="img/word2007alt.gif" />
-                        
-                        
-                        <figcaption>Karta Tekst alternatywny w oknie dialogowym Rozmiar.</figcaption>
-                        
-                        
-                     </figure>
-                     	
-                  </section>
                </section>
-               <section class="example" id="przyklad-4-dodawanie-wpisu-/alt-do-obrazu-w-dokumentach-pdf-generowanych-za-pomoca-openoffice.org-writer-2.2">
-                  <h3>Przykład 4: Dodawanie wpisu /Alt do obrazu w dokumentach PDF generowanych za pomocą
-                     OpenOffice.org Writer 2.2
-                  </h3>
-                  <p>Ten przykład jest pokazany z programem Open Office.org Writer. Istnieją inne narzędzia
-                     programowe, które wykonują podobne funkcje. Zobacz listę innych narzędzi programowych
-                     w <a href="#pdf_notes_acc-sup_files_applications"></a>.
+               <section class="example" id="example-2-adding-alt-text-to-an-image-in-microsoft-word">
+                  <h3>Example 2: Adding alt text to an image in Microsoft Word</h3>
+                  <ol>
+                     						
+                     <li>Right-click on the image and choose View Alt Text</li>
+                     						
+                     <li>Type the alternative text into the text box provided.</li>
+                     					
+                  </ol>
+                  <div>
+                     						<img alt="Word's Alt Text interface being used to add alt text to a photograph of a dog." height="430" src="img/word-set-alternate-text.png" width="770" />
+                     					
+                  </div>
+               </section>
+               <section class="example" id="example-3-adding-alt-text-to-an-image-in-openoffice-with-the-writer-add-on">
+                  <h3>Example 3: Adding alt text to an image in OpenOffice with the Writer add-on</h3>
+                  <p>This example is shown with Open Office Writer. There are other software tools that
+                     perform similar functions.
                   </p>
                   <ol>
-                     
-                     <li>Wejdź do menu kontekstowego obrazu i wybierz Obraz... </li>
-                     
-                     <li>Wybierz kartę Opcje </li>
-                     
-                     <li>Wpisz tekst alternatywny w polu tekstowym Alternatywny (tylko tekst) i kliknij OK.</li>
-                     
+                     						
+                     <li>Select "Insert" then "picture", select the image to be inserted</li>
+                     						
+                     <li>Right click on the  mouse</li>
+                     						
+                     <li>Select "Description"
+                        							
+                        <div>
+                           								<img src="img/oomenu.jpg" alt="the menu for editing images" />
+                           							
+                        </div>
+                        						
+                     </li>
+                     						
+                     <li>Enter a text title and a good text description
+                        							
+                        <div>
+                           								<img src="img/ooalt.jpg" alt="the menu for adding alt text to an image" />
+                           							
+                        </div>
+                        						
+                     </li>
+                     						
+                     <li>Click OK.</li>
+                     					
                   </ol>
-                  <figure id="figure-options-tab">
-                     <img src="img/ooalt.jpg" />
-                     
-                     
-                     <figcaption>Karta Opcje w oknie dialogowym Obraz.</figcaption>
-                     
-                     
-                  </figure>
                </section>
-               <section class="example" id="przyklad-5-dodawanie-tekstu-alternatywnego-do-obrazu-w-dokumencie-pdf-za-pomoca-wpisu-/alt">
-                  <h3>Przykład 5: Dodawanie tekstu alternatywnego do obrazu w dokumencie PDF za pomocą wpisu
-                     /Alt
+               <section class="example" id="example-4-adding-a-text-alternative-to-an-image-in-a-pdf-document-using-an-/alt-entry">
+                  <h3>Example 4: Adding a text alternative to an image in a PDF document using an <code>/Alt</code> entry
                   </h3>
-                  <p>Właściwość /Alt używana na obrazie gór z księżycem i drzewami byłaby zazwyczaj używana
-                     w następujący sposób (zwykle wykonywana przez narzędzie autorskie):
-                  </p><pre xml:space="preserve">/Figure &lt;&lt;/Alt Szkic gór z księżycem wschodzącym nad drzewami) &gt;&gt;</pre><p>Obraz może być również reprezentowany przez znacznik o innej nazwie. Inna nazwa może
-                     być użyta, ponieważ nazwa znacznika jest napisana w języku innym niż angielski lub
-                     ponieważ określone narzędzie używa innej nazwy z innego powodu. W tej sytuacji konieczne
-                     jest również, aby RoleMap zawarta w StructTreeRoot dla dokumentu PDF zawierała wpis,
-                     który jednoznacznie odwzorowuje nazwę znacznika użytego dla obrazu ze standardowym
-                     typem struktury używanym w dokumentach PDF (w tym przypadku Figure). Gdyby RoleMap
-                     zawierała tylko wpis mapujący znaczniki Shape na znaczniki Figure, informacja o RoleMap
-                     wyglądałaby następująco:
-                  </p><pre xml:space="preserve">/RoleMap &lt;&lt; /Shape /Figure &gt;&gt;</pre><p>W takim przypadku prawidłowe byłoby również użycie wpisu /Alt w następujący sposób:</p><pre xml:space="preserve">/Shape &lt;&lt;/Alt (Jezioro Kraterowe latem, z błękitnym niebem, chmurami i ścianami krateru doskonale odbijającymi się w jeziorze) &gt;&gt;
-    					</pre><p>Należy pamiętać, że wpis /Alt na listach właściwości można łączyć z innymi wpisami.</p>
+                  <p>The <code>/Alt</code> property used on an image of mountains with a moon and trees typically would be used
+                     like this (typically accomplished by an authoring tool):
+                  </p><pre><code>/Figure &lt;&lt;/Alt (Sketch of Mountains with moon rising over trees)&gt;&gt;</code></pre><p>The image might also be represented by a tag with a different name. A different name
+                     might be used because the tag name is written in a language other than English or
+                     because a specific tool uses a different name for some other reason. In this situation,
+                     it is also necessary that the <code>RoleMap</code> contained within the <code>StructTreeRoot</code> for the PDF document contain an entry which explicitly maps the name of the tag used
+                     for the image with the standard structure type used in PDF documents (in this case,
+                     Figure). If the RoleMap contains only an entry mapping Shape tags to Figure tags,
+                     the <code>rolemap</code> information would appear as follows:
+                  </p><pre><code>/RoleMap &lt;&lt; /Shape /Figure &gt;&gt;</code></pre><p>In this case, the usage of the <code>/Alt</code> entry as follows would also be correct:
+                  </p><pre><code>/Shape &lt;&lt;/Alt (Crater Lake in the summer, with the blue sky, clouds and
+ crater walls perfectly reflected in the lake) &gt;&gt;</code></pre><p>Note that the <code>/Alt</code> entry in property lists can be combined with other entries.
+                  </p>
                </section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
                <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
                <ul>
-                  
-                  <li> Sekcja 14.9.4 (Tekst zastępczy) w <a href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" lang="en" hreflang="en">PDF 1.7 (ISO 32000-1)</a> 
-                     
+                  					
+                  <li>Section 14.9.4 (Replacement Text) in <a href="https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/PDF32000_2008.pdf">PDF 1.7 (ISO 32000-1) (PDF)</a>
+                     					
                   </li>
-                  
+                  					
                   <li>
-                     <a href="http://webaim.org/techniques/acrobat/acrobat" lang="en" hreflang="en">Acrobat and Accessibility</a> 
-                     
+                     						<a href="https://webaim.org/techniques/acrobat/acrobat">Acrobat and Accessibility</a>
+                     					
                   </li>
-                  
+                  					
                   <li>
-                     <a href="http://partners.adobe.com/public/developer/en/pdf/PDFReference16.pdf#page=892" lang="en" hreflang="en">PDF
-                        					Reference 1.6, 10.8.2 Alternate Descriptions</a> 
-                     
+                     						<a href="https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html">Create and verify PDF accessibility (Acrobat Pro)</a>
+                     					
                   </li>
-                  
-                  <li>
-                     <a href="http://www.adobe.com/accessibility/products/acrobat.html" lang="en" hreflang="en">PDF and Accessibility</a> 
-                     
-                  </li>
-                  
+                  				
                </ul>
             </section>
             <section id="related">
                <h2>Related Techniques</h2>
                <ul>
-                  
+                  					
                   <li><a href="../general/G94">G94</a></li>
-                  
+                  				
                </ul>
             </section>
             <section id="tests">
                <h2>Tests</h2>
-               <section class="procedure" id="procedura">
-                  <h3>Procedura</h3>
-                  
-                  <p>Dla wszystkich obrazów, które wymagają odpowiedników:</p>
-                  
+               <section class="procedure" id="procedure">
+                  					
+                  <h3>Procedure</h3>
+                  					
+                  <p>For all images which need equivalents:</p>
+                  					
                   <ol>
-                     
-                     <li>       
-                        
-                        <p>Sprawdź, czy obrazy mają wpisy /Alt w znaczniku osadzającym, wykonując jedną z następujących
-                           czynności:
+                     						
+                     <li>
+                        							
+                        <p>Verify the images have <code>/Alt</code> entries on an enclosing tag by one of the following:
                         </p>
-                        
+                        							
                         <ul>
-                           
-                           <li>Przeczytaj dokument PDF za pomocą czytnika ekranu, słuchając, jak odczytywany jest
-                              równoważny tekst, gdy przechodzisz tabulatorem do obiektu nietekstowego (jeśli można
-                              go zapisywać) lub słuchając tekstu alternatywnego podczas czytania treści wiersz po
-                              wierszu.
+                           								
+                           <li>Read the PDF document with a screen reader, listening to hear that the equivalent
+                              text is read when tabbing to the non-text object (if it is tabbable) or hearing the
+                              alternative text read when reading the content line-by-line.
                            </li>
-                           
-                           <li>Korzystając z edytora PDF, sprawdź, czy tekst alternatywny jest wyświetlany dla każdego
-                              obrazu.
+                           								
+                           <li>Using a PDF editor, check that a text alternative is displayed for each image.</li>
+                           								
+                           <li>Use a tool which is capable of showing the <code>/Alt</code> entry value, such as aDesigner, to open the PDF document and view the <abbr title="Graphical User Interface">GUI</abbr> summary to read the text alternatives for images.
                            </li>
-                           
-                           <li>Użyj narzędzia, które może wyświetlać wartość wpisu /Alt, takiego jak aDesigner, aby
-                              otworzyć dokument PDF i wyświetlić podsumowanie GUI, aby przeczytać tekstowe alternatywy
-                              dla obrazów.
+                           								
+                           <li>Use a tool that exposes the document through the accessibility <abbr title="Application Programming Interface">API</abbr> and verify that images have required text equivalents.
                            </li>
-                           
-                           <li>Użyj narzędzia, które udostępnia dokument za pośrednictwem interfejsu API dostępności
-                              i sprawdź, czy obrazy mają wymagane odpowiedniki tekstowe. 
-                           </li>
-                           
+                           							
                         </ul>
-                        
+                        						
                      </li>
-                     
+                     					
                   </ol>
-                  
+                  				
                </section>
-               <section class="results" id="oczekiwane-wyniki">
-                  <h3>Oczekiwane wyniki</h3>
-                  
+               <section class="results" id="expected-results">
+                  					
+                  <h3>Expected Results</h3>
+                  					
                   <ul>
-                     
-                     <li>Test 1: zaliczony, jeśli, obrazy mają wpisy /Alt w znacznikach osadzających.</li>
-                     
+                     						
+                     <li>Check 1 is true.</li>
+                     					
                   </ul>
-                  
+                  				
                </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
@@ -390,15 +273,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -435,28 +318,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

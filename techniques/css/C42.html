@@ -46,7 +46,7 @@
             </nav>
          </aside>
          <main id="main" class="standalone-resource__main">
-            <h1><span>Technique C42:</span>Using min-height and min-width to ensure sufficient target spacing
+            <h1><span>Technique C42:</span>Using <code class="language-css">min-height</code> and <code class="language-css">min-width</code> to ensure sufficient target spacing
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
@@ -54,21 +54,20 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/rozmiar-celu-minimalny">2.5.8: Rozmiar celu (minimalny)</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>All technologies that support CSS and pointer input.</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/rozmiar-celu-minimalny">2.5.8: Rozmiar celu (minimalny)</a> (Sufficient)</span>.
+               <h2>Applicability</h2>
+               <p>All technologies that support <abbr title="Cascading Style Sheets">CSS</abbr> and pointer input.
                </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
                <p>The objective of this technique is to ensure that links in navigation or pagination
-                  menus will be spaced so that they fall within an area that measures at least 44 x
+                  menus will be spaced so that they fall within an area that measures at least 44 ×
                   44 CSS pixels if the target area itself is smaller than that. The aim is to provide
                   an adequate target clearance so the offset to adjacent targets is sufficient to prevent
                   accidental pointer activation of adjacent targets.
@@ -78,11 +77,11 @@
                <h2>Examples</h2>
                <p>The following examples can be seen as rendered versions in the <a href="../../working-examples/css-pointer-spacing/">working examples</a>.
                </p>
-               <section class="example" id="przyklad-1-using-a-display-value-of-inline-block-and-min-height-/-width">
-                  <h3>Przykład 1: Using a display value of inline-block and min-height / width</h3>
+               <section class="example" id="example-1-using-a-display-value-of-inline-block-min-height-and-min-width">
+                  <h3>Example 1: Using a display value of <code class="language-css">inline-block</code>, <code class="language-css">min-height</code>, and <code class="language-css">min-width</code></h3>
                   <p>The first example shows a situation where the targets (in this case, the linked numbers
-                     in th pagination menu) are smaller than 44 x 44 CSS pixels. However, the list items
-                     that contain them have a minimum height and width of 44 px set, so that sufficient
+                     in the pagination navigation) are smaller than 44 × 44 CSS pixels. However, the list
+                     items that contain them have a minimum height and width of 44 px set, so that sufficient
                      target spacing is assured.
                   </p>
                   <figure id="pointer-spacing-block">
@@ -91,52 +90,71 @@
                      <figcaption>Example of using CSS to ensure enough spacing around targets</figcaption>
                      				
                   </figure>
-                  <p>Given the following HTML:</p><pre><code>&lt;nav class="pag" aria-label="pagination menu"&gt;
-	&lt;ol class="pagination-1"&gt;
-		&lt;li&gt;&lt;span&gt;previous&lt;/span&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;strong&gt;1&lt;/strong&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;next&lt;/a&gt;&lt;/li&gt;
-	&lt;/ol&gt;
-&lt;/nav&gt;</code></pre><p>The following CSS would ensure the minimum spacing is applied:</p><pre><code>ol.pagination-1 li {
-	display: inline-block; 
-	min-width: 44px;
-	min-height: 44px;
-}</code></pre></section>
-               <section class="example" id="przyklad-2-using-a-display-value-of-flex-and-min-height-/-width">
-                  <h3>Przykład 2: Using a display value of flex and min-height / width</h3>
-                  <p>The second example uses min-width and min-height on the targets (the linked numbers
-                     in the pagination menu) and not on the parent container, thereby meeting this target
-                     spacing Success Criterion and incidentally also the AAA Success Criterion 2.5.5 Target
-                     Size.
+                  <section id="the-html">
+                     					
+                     <h4>The <abbr title="HyperText Markup Language">HTML</abbr></h4>
+                     <pre><code class="language-html">&lt;nav aria-label="pagination"&gt;
+  &lt;ol class="pagination-1"&gt;
+    &lt;li&gt;&lt;a class="previous"&gt;previous&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a aria-current="page"&gt;1&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/page-2"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/page-3"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/page-4"&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/page-5"&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/pages-6-10"&gt;next&lt;/a&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+                     <h4>The CSS</h4>
+                     <pre><code class="language-css">.pagination-1 li {
+  display: inline-block; 
+  min-height: 44px;
+  min-width: 44px;
+}</code></pre>
+                     				</section>
+               </section>
+               <section class="example" id="example-2-using-a-display-value-of-flex-and-min-height-/-width">
+                  <h3>Example 2: Using a <code class="language-css">display</code> value of <code class="language-css">flex</code> and <code class="language-css">min-height</code> / <code class="language-css">width</code></h3>
+                  <p>The second example uses <code class="language-css">min-width</code> and <code class="language-css">min-height</code> on the targets (the linked numbers in the pagination menu) and not on the parent
+                     container, thereby meeting this target spacing Success Criterion and incidentally
+                     also the AAA Success Criterion 2.5.5 Target Size.
                   </p>
                   <figure id="pointer-spacing-flex">
-                     					<img src="img/pointer-spacing-1.png" alt="A horizontal pagination component immediately above the search results. It looks identical to the previous example. " />
+                     					<img src="img/pointer-spacing-2.png" alt="A horizontal pagination component immediately above the search results." />
                      					
                      <figcaption>Example of using CSS to ensure enough spacing within targets</figcaption>
                      				
                   </figure>
-                  <p>Given the following HTML:</p><pre><code>&lt;nav class="pag" aria-label="pagination menu"&gt;
-	&lt;ol class="pagination-2"&gt;
-		&lt;li&gt;&lt;span&gt;previous&lt;/span&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;strong&gt;1&lt;/strong&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;next&lt;/a&gt;&lt;/li&gt;
-	&lt;/ol&gt;
-  &lt;/nav&gt;</code></pre><p>The following CSS ensures the minimum size is applied:</p><pre><code>ol.pagination-2 a,
-ol.pagination-2 strong,
-ol.pagination-2 span {
-	display: block;
-	line-height:44px;
-	min-height:44px;
-	min-width: 44px;
-}</code></pre></section>
+                  <section id="the-html">
+                     					
+                     <h4>The HTML</h4>
+                     <pre><code class="language-html">&lt;nav aria-label="pagination"&gt;
+  &lt;ol class="pagination-2"&gt;
+    &lt;li&gt;&lt;a class="previous"&gt;previous&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a aria-current="page"&gt;1&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/page-2"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/page-3"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/page-4"&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/page-5"&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/pages-6-10"&gt;next&lt;/a&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+                     				</section>
+                  <section id="the-css">
+                     					
+                     <h4>The CSS</h4>
+                     <pre><code class="language-css">.pagination-2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ol.pagination-2 a {
+  display: block;
+  line-height: 44px;
+  min-height: 44px;
+  min-width: 44px;
+}</code></pre>
+                     				</section>
+               </section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -175,15 +193,15 @@ ol.pagination-2 span {
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -220,28 +238,26 @@ ol.pagination-2 span {
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

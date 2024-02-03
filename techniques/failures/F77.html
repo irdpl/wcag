@@ -56,57 +56,49 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/poprawnosc-kodu-przestarzale-i-usuniete">4.1.1: Poprawność kodu (Przestarzałe i usunięte)</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>HTML, and any XML-based markup languages including XHTML and SVG</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/poprawnosc-kodu-przestarzale-i-usuniete">4.1.1: Poprawność kodu (Przestarzałe i usunięte)</a> (Failure)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
-               <p>This describes a failure condition where duplicate ID errors are known to cause problems
-                  for assistive technologies when they are trying to interact with content. Duplicate
-                  values of type ID can be problematic for user agents that rely on this attribute to
-                  accurately convey relationships between different parts of content to users. For example,
-                  a screen reader may use ID values to identify the applicable header content for a
-                  data cell within a data table, or an input control to which a given label applies.
-                  If these values are not unique, the screen reader will be unable to programmatically
-                  determine which headers are associated with the data cell or which control is associated
-                  with which label or name.
+               <p>This describes a failure condition where duplicate <code class="language-html">id</code> errors are known to cause problems for assistive technologies when they are trying
+                  to interact with content. Duplicate values of type <code class="language-html">id</code> can be problematic for user agents that rely on this attribute to accurately convey
+                  relationships between different parts of content to users. For example, a screen reader
+                  may use <code class="language-html">id</code> values to identify the applicable header content for a data cell within a data table,
+                  or an input control to which a given label applies. If these values are not unique,
+                  the screen reader will be unable to programmatically determine which headers are associated
+                  with the data cell or which control is associated with which label or name.
                </p>
-               <p>Checking that ID attribute values are unique within a document can be done by validating
-                  the document against its specification, because the specification defines which attributes
-                  contain document-wide unique identifiers.
+               <p>Checking that <code class="language-html">id</code> attribute values are unique within a document can be done by validating the document
+                  against its specification, because the specification defines which attributes contain
+                  document-wide unique identifiers.
                </p>
                <div class="note">
                   
-                  <p>In most markup languages, ID values are attribute values, for example in HTML and
-                     SVG.
+                  <p>In most markup languages, <code class="language-html">id</code> values are attribute values, for example in HTML and SVG.
                   </p>
                   
-                  <p>XML documents that use only the xml:id attribute as an ID attribute, parsing the XML
-                     document with a validating parser that supports the <a href="https://www.w3.org/TR/2005/REC-xml-id-20050909/">xml:id specification</a> is sufficient.
+                  <p>XML documents that use only the <code class="language-xml">xml:id</code> attribute as an <code class="language-xml">id</code> attribute, parsing the XML document with a validating parser that supports the <a href="https://www.w3.org/TR/2005/REC-xml-id-20050909/">xml:id specification</a> is sufficient.
                   </p>
                   
                </div>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1">
-                  <h3>Przykład 1</h3>
-                  <p>An author uses an online validation service to check that all id attribute values
-                     are unique.
+               <section class="example" id="example-1">
+                  <h3>Example 1</h3>
+                  <p>An author uses an online validation service to check that all <code class="language-html">id</code> attribute values are unique.
                   </p>
                </section>
-               <section class="example" id="przyklad-2">
-                  <h3>Przykład 2</h3>
-                  <p>A developer utilizes features in their authoring tool to ensure that id attribute
-                     values are unique.
+               <section class="example" id="example-2">
+                  <h3>Example 2</h3>
+                  <p>A developer utilizes features in their authoring tool to ensure that <code class="language-html">id</code> attribute values are unique.
                   </p>
                </section>
             </section>
@@ -116,10 +108,6 @@
                <ul>
                   
                   <li>HTML 5: <a href="https://www.w3.org/TR/html5/dom.html#the-id-attribute">id attribute</a> 
-                     
-                  </li>
-                  
-                  <li>HTML 4.01: <a href="https://www.w3.org/TR/html4/struct/global.html#adef-id">id attribute</a> 
                      
                   </li>
                   			
@@ -150,7 +138,8 @@
                   
                   <ol>
                      
-                     <li>Check that all values of type ID are unique in the Web page</li>
+                     <li>Check that all values of type <code class="language-html">id</code> are unique in the Web page
+                     </li>
                      
                   </ol>
                   
@@ -181,15 +170,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -226,28 +215,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

@@ -60,19 +60,15 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a> when used with <a href="../general/G10">G10: Creating components using a technology that supports the accessibility notification
-                           of changes</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
                </p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a> (Sufficient when used with <a href="../general/G10">G10: Creating components using a technology that supports the accessibility notification
-                        of changes</a>)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -87,65 +83,54 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-a-toggle-button">
-                  <h3>Przykład 1: A toggle button</h3>
-                  <p>A widget with role <code class="att">button</code> acts as a toggle button when it implements the attribute <code class="att">aria-pressed</code>. When <code class="att">aria-pressed</code> is true, the button is in a "pressed" state. When <code class="att">aria-pressed</code> is false, it is not pressed. If the attribute is not present, the button is a simple
+               <section class="example" id="example-1-a-toggle-button">
+                  <h3>Example 1: A toggle button</h3>
+                  <p>A widget with role <code class="language-html">button</code> acts as a toggle button when it implements the attribute <code class="language-html">aria-pressed</code>. When <code class="language-html">aria-pressed</code> is true, the button is in a "pressed" state. When <code class="language-html">aria-pressed</code> is false, it is not pressed. If the attribute is not present, the button is a simple
                      command button.
                   </p>
                   <p>The following snippet from the <a href="https://www.w3.org/WAI/ARIA/apg/example-index/button/button.html">ARIA Authoring Practices Guide (APG) examples for button</a> shows WAI-ARIA mark-up for a toggle button to mute/unmute audio:
-                  </p><pre xml:space="preserve">
-&lt;a tabindex="0"
-   role="button"
-   id="toggle"
-   aria-pressed="false"&gt;
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;a tabindex="0"
+  role="button"
+  id="toggle"
+  aria-pressed="false"&gt;
   Mute
-  …
-&lt;/a&gt;
-</pre><p>The <code class="el">a</code> element has a <code>role="button"</code> and an <code>aria-pressed</code> attribute. The following excerpt from the Javascript for this example updates the
+  ...
+&lt;/a&gt;</code></pre><p>The <code class="language-html">a</code> element has a <code>role="button"</code> and an <code>aria-pressed</code> attribute. The following excerpt from the Javascript for this example updates the
                      value of the <code>aria-pressed</code> attribute:
-                  </p><pre xml:space="preserve">                   
-/**
- * Toggles the toggle button’s state between *pressed* and *not pressed*.
- *
- * @param {HTMLElement} button
- */
+                  </p><pre xml:space="preserve"><code class="language-javascript">/**
+* Toggles the toggle button's state between *pressed* and *not pressed*.
+*
+* @param {HTMLElement} button
+*/
+
 function toggleButtonState(button) {
   var isAriaPressed = button.getAttribute('aria-pressed') === 'true';
-
   button.setAttribute('aria-pressed', isAriaPressed ? 'false' : 'true');
-
-  …
-}
-</pre></section>
-               <section class="example" id="przyklad-2-a-slider">
-                  <h3>Przykład 2: A slider</h3>
-                  <p>A widget with role <code class="att">slider</code> lets a user select a value from within a given range. The slider represents the current
+  ...
+}</code></pre></section>
+               <section class="example" id="example-2-a-slider">
+                  <h3>Example 2: A slider</h3>
+                  <p>A widget with role <code class="language-html">slider</code> lets a user select a value from within a given range. The slider represents the current
                      value and the range of possible values via the size of the slider and the position
-                     of the handle. These properties of the slider are represented by the attributes <code class="att">aria-valuemin</code>, <code class="att">aria-valuemax</code>, and <code class="att">aria-valuenow</code>.
+                     of the handle. These properties of the slider are represented by the attributes <code class="language-html">aria-valuemin</code>, <code class="language-html">aria-valuemax</code>, and <code class="language-html">aria-valuenow</code>.
                   </p>
                   <p>The following snippet from the <a href="https://www.w3.org/WAI/ARIA/apg/example-index/slider/slider-color-viewer.html">ARIA Authoring Practices Guide (APG) color viewer slider example</a> shows WAI-ARIA mark-up for one of the sliders:
-                  </p><pre xml:space="preserve">
-&lt;div id="id-red" class="color-slider-label"&gt;
-   Red
-&lt;/div&gt;
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;div id="id-red" class="color-slider-label"&gt;Red&lt;/div&gt;
 &lt;div class="color-slider red"
-      role="slider"
-      tabindex="0"
-      aria-valuemin="0"
-      aria-valuenow="128"
-      aria-valuemax="255"
-      aria-labelledby="id-red"&gt;
-   …
-&lt;/div&gt;
-</pre><p>The following excerpt from the Javascript for this example updates the value of the
+  role="slider"
+  tabindex="0"
+  aria-valuemin="0"
+  aria-valuenow="128"
+  aria-valuemax="255"
+  aria-labelledby="id-red"&gt;
+   ...
+&lt;/div&gt;</code></pre><p>The following excerpt from the Javascript for this example updates the value of the
                      <code>aria-valuenow</code> attribute when the value of the slider handle is changed:
-                  </p><pre xml:space="preserve">
-moveSliderTo(slider, value) {
-  …
+                  </p><pre xml:space="preserve"><code class="language-javascript">moveSliderTo(slider, value) {
+  ...
   slider.sliderNode.setAttribute('aria-valuenow', value);
-  …
-}
-</pre></section>
+  ...
+}</code></pre></section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -256,15 +241,15 @@ moveSliderTo(slider, value) {
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -301,28 +286,26 @@ moveSliderTo(slider, value) {
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

@@ -46,29 +46,27 @@
             </nav>
          </aside>
          <main id="main" class="standalone-resource__main">
-            <h1><span>Technique ARIA24:</span>Semantically identifying a font icon with <code>role="img"</code></h1>
+            <h1><span>Technique ARIA24:</span>Semantically identifying a font icon with <code class="language-html">role="img"</code></h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
                   					About this Technique
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Content using <a href="https://www.w3.org/TR/wai-aria/">WAI-<abbr title="Accessible Rich Internet Applications">ARIA</abbr></a>.
                </p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a> (Sufficient)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
                <p>The objective of this technique is to show how to semantically identify an element
-                  that uses a font file for icons. When a user  overrides font-family these icons typically
+                  that uses a font file for icons. When a user overrides font-family these icons typically
                   disappear unless there is a means to identify them. The point is to provide a technique
                   to differentiate icon fonts from general font (text) usage.
                </p>
@@ -77,13 +75,11 @@
                   icon fonts that are meaningful, such as a star signifying a favorite, or an email
                   icon in a link.
                </p>
-               <p>The key is for the author to semantically markup icon fonts with <code>role="img"</code>. Then the user's font replacement selector can hook into that semantic and exclude
-                  <code>role="img"</code>. This results in those icon fonts being shown.
+               <p>The key is for the author to semantically markup icon fonts with <code class="language-html">role="img"</code>. Then the user's font replacement selector can hook into that semantic and exclude
+                  <code class="language-html">role="img"</code>. This results in those icon fonts being shown.
                </p>
-               <p>The first step is used for adding a font face with icons via the CSS file.</p><pre>
-            <code>
-/* specify font-family name for icons */
-@font-face { font-family: 'IconFontRoleImg';/ }
+               <p>The first step is used for adding a font face with icons via the CSS file.</p><pre><code class="language-html">/* specify font-family name for icons */
+@font-face { font-family: 'IconFontRoleImg'; }
 
 /* default class for fonts-face with icons */
 .icon,
@@ -91,44 +87,30 @@
 [class*=" icon-"] { font-family: 'IconFontRoleImg' !important; }
 
 /* specific class for icon */
-.icon-star-bg:before { content: "\e982"; }
-            </code>
-         </pre><p>The second step adds classes, the role="img" attribute for semantics and an accessible
+.icon-star-bg:before { content: "\e982"; }</code></pre><p>The second step adds classes, the role="img" attribute for semantics and an accessible
                   name.
-               </p><pre>
-            <code>            
-&lt;!-- Icon via class names, role="img" and a text alternative --&gt;
+               </p><pre><code class="language-html">&lt;!-- icon via class names, role="img" and a text alternative --&gt;
 &lt;p&gt;
-   &lt;span class="icon icon-star-bg" role="img" aria-label="Favorite"&gt;&lt;/span&gt;
-&lt;/p&gt;
-            </code>
-         </pre><p>The third step uses the ":not selector" in combination with the "[attribute] selector"
+  &lt;span class="icon icon-star-bg" role="img" aria-label="Favorite"&gt;&lt;/span&gt;
+&lt;/p&gt;</code></pre><p>The third step uses the ":not selector" in combination with the "[attribute] selector"
                   to only replace font faces for regular text.
-               </p><pre>
-            <code>
-/* Replaces font faces but excludes all elements with attribute role=""img" */
-*:not([role="img"]) { font-family: Verdana, sans-serif !important; }
-         </code>
-      </pre></section>
+               </p><pre><code class="language-html">/* replaces font faces but excludes all elements with attribute role="img" */
+*:not([role="img"]) { font-family: Verdana, sans-serif !important; }</code></pre></section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-star-icon-font-used-as-an-indicator-not-interactive">
-                  <h3>Przykład 1: Star Icon Font used as an indicator (not interactive)</h3>
+               <section class="example" id="example-1-star-icon-font-used-as-an-indicator-not-interactive">
+                  <h3>Example 1: Star Icon Font used as an indicator (not interactive)</h3>
                   <p>In this example a star icon is used to indicate a favorite. It is not interactive
                      and does not disappear if the user overrides the font family via CSS.
                   </p>
                   <section id="author-css">
                      
                      <h4>Author CSS</h4>
-                     <pre>
-               <code>
-/* default class for fonts-face with icons */
+                     <pre><code class="language-css">/* default class for fonts-face with icons */
 .icon { font-family: 'IconFontRoleImg' !important; }
 
 /* specific class for icon */
-.icon-star-bg:before { content: "\e982"; }
-               </code>
-            </pre>
+.icon-star-bg:before { content: "\e982"; }</code></pre>
                      			</section>
                   <section id="html">
                      
@@ -137,36 +119,24 @@
                      <section id="--instead-of...--">
                         
                         <h5><strong>- Instead of... -</strong></h5>
-                        <pre>
-               <code>
-&lt;p&gt;
-   &lt;span class="icon icon-star-bg"&gt;&lt;/span&gt;
-&lt;/p&gt;
-               </code>
-            </pre>
+                        <pre><code class="language-html">&lt;p&gt;
+  &lt;span class="icon icon-star-bg"&gt;&lt;/span&gt;
+&lt;/p&gt;</code></pre>
                         			</section>
                      	
                      <section id="--do...--">
                         
                         <h5><strong>- Do... -</strong></h5>
-                        <pre>
-               <code>
-&lt;p&gt;
-   &lt;span class="icon icon-star-bg" role="img" aria-label="Favorite"&gt;&lt;/span&gt;
-&lt;/p&gt;
-               </code>
-            </pre>
+                        <pre><code>&lt;p&gt;
+  &lt;span class="icon icon-star-bg" role="img" aria-label="Favorite"&gt;&lt;/span&gt;
+&lt;/p&gt;</code></pre>
                         	</section>
-                     	
+                     
                   </section>
                   <section id="user-css">
                      
                      <h4>User CSS</h4>
-                     <pre>
-               <code>
-*:not([role="img"]) { font-family: Verdana, sans-serif !important; }
-               </code>
-            </pre>
+                     <pre><code class="language-css">*:not([role="img"]) { font-family: Verdana, sans-serif !important; }</code></pre>
                      	</section>
                   <section id="working-example">
                      
@@ -179,8 +149,8 @@
                      	
                   </section>
                </section>
-               <section class="example" id="przyklad-2-two-colored-/-stacked-star-icon-font-used-as-an-indicator">
-                  <h3>Przykład 2: Two colored / stacked star Icon Font used as an indicator</h3>
+               <section class="example" id="example-2-two-colored-/-stacked-star-icon-font-used-as-an-indicator">
+                  <h3>Example 2: Two colored / stacked star Icon Font used as an indicator</h3>
                   <p>In this example a two colored star icon is created by stacking two fonts with different
                      colors on top of each other. This way it's possible to mimic only half the star is
                      filled. It is not interactive and does not disappear if the user overrides the font
@@ -189,16 +159,12 @@
                   <section id="author-css">
                      
                      <h4>Author CSS</h4>
-                     <pre>
-               <code>
-/* default class for fonts-face with icons */
+                     <pre><code class="language-css">/* default class for fonts-face with icons */
 .icon { font-family: 'IconFontRoleImg' !important; }
 
 /* specific classes for icons */
 .icon-star-bg:before    {content: "\e982"; }
-.icon-star-half:before  {content: "\e983"; }
-               </code>
-            </pre>
+.icon-star-half:before  {content: "\e983"; }</code></pre>
                      			</section>
                   <section id="html">
                      
@@ -207,38 +173,26 @@
                      <section id="--instead-of...--">
                         
                         <h5><strong>- Instead of... -</strong></h5>
-                        <pre>
-               <code>
-&lt;span class="icon-stacked"&gt;
-   &lt;span class="icon icon-star-bg grey"&gt;&lt;/span&gt;
-   &lt;span class="icon icon-star-half yellow"&gt;&lt;/span&gt;
-&lt;/span&gt;
-               </code>
-            </pre>
+                        <pre><code class="language-html">&lt;span class="icon-stacked"&gt;
+  &lt;span class="icon icon-star-bg grey"&gt;&lt;/span&gt;
+  &lt;span class="icon icon-star-half yellow"&gt;&lt;/span&gt;
+&lt;/span&gt;</code></pre>
                         			</section>
                      	
                      <section id="--do...--">
                         
                         <h5><strong>- Do... -</strong></h5>
-                        <pre>
-               <code>
-&lt;span class="icon-stacked" role="img" aria-label="Favorite star half filled"&gt;
-   &lt;span class="icon icon-star-bg grey" role="img" aria-hidden="true"&gt;&lt;/span&gt;
-   &lt;span class="icon icon-star-half yellow" role="img" aria-hidden="true"&gt;&lt;/span&gt;
-&lt;/span&gt;
-               </code>
-            </pre>
+                        <pre><code class="language-html">&lt;span class="icon-stacked" role="img" aria-label="Favorite star half filled"&gt;
+  &lt;span class="icon icon-star-bg grey" role="img" aria-hidden="true"&gt;&lt;/span&gt;
+  &lt;span class="icon icon-star-half yellow" role="img" aria-hidden="true"&gt;&lt;/span&gt;
+&lt;/span&gt;</code></pre>
                         	</section>
                      	
                   </section>
                   <section id="user-css">
                      
                      <h4>User CSS</h4>
-                     <pre>
-               <code>
-*:not([role="img"]) { font-family: Verdana, sans-serif !important; }
-               </code>
-            </pre>
+                     <pre><code class="language-css">*:not([role="img"]) { font-family: Verdana, sans-serif !important; }</code></pre>
                      	</section>
                   <section id="working-example">
                      
@@ -251,8 +205,8 @@
                      	
                   </section>
                </section>
-               <section class="example" id="przyklad-3-email-icon-font-in-a-link-without-visible-text">
-                  <h3>Przykład 3: Email Icon Font in a link WITHOUT visible text</h3>
+               <section class="example" id="example-3-email-icon-font-in-a-link-without-visible-text">
+                  <h3>Example 3: Email Icon Font in a link WITHOUT visible text</h3>
                   <p>In this example an email icon is in a link with no visible text. It does not disappear
                      if a user overrides font family. The icon font is identified by assistive technology
                      as a "link image" and the name "Email" (keyboard or mouse).
@@ -260,15 +214,11 @@
                   <section id="author-css">
                      
                      <h4>Author CSS</h4>
-                     <pre>
-               <code>
-/* default class for fonts-face with icons */
+                     <pre><code class="language-css">/* default class for fonts-face with icons */
 .icon { font-family: 'IconFontRoleImg' !important; }
 
 /* specific class for icon */
-.icon-email:before { content: "\e93e"; }
-               </code>
-            </pre>
+.icon-email:before { content: "\e93e"; }</code></pre>
                      			</section>
                   <section id="html">
                      
@@ -277,36 +227,24 @@
                      <section id="--instead-of...--">
                         
                         <h5><strong>- Instead of... -</strong></h5>
-                        <pre>
-               <code>
-&lt;a href="email.html"&gt;
-   &lt;span class="icon icon-email"&gt;&lt;/span&gt;
-&lt;/a&gt;
-               </code>
-            </pre>
+                        <pre><code class="language-html">&lt;a href="email.html"&gt;
+  &lt;span class="icon icon-email"&gt;&lt;/span&gt;
+&lt;/a&gt;</code></pre>
                         			</section>
                      	
                      <section id="--do...--">
                         
                         <h5><strong>- Do... -</strong></h5>
-                        <pre>
-               <code>
-&lt;a href="email.html"&gt;
-   &lt;span class="icon icon-email" role="img" aria-label="Email"&gt;&lt;/span&gt;
-&lt;/a&gt;
-               </code>
-            </pre>
+                        <pre><code class="language-html">&lt;a href="email.html"&gt;
+  &lt;span class="icon icon-email" role="img" aria-label="Email"&gt;&lt;/span&gt;
+&lt;/a&gt;</code></pre>
                         	</section>
                      	
                   </section>
                   <section id="user-css">
                      
                      <h4>User CSS</h4>
-                     <pre>
-               <code>
-*:not([role="img"]) { font-family: Verdana, sans-serif !important; }
-               </code>
-            </pre>
+                     <pre><code class="language-css">*:not([role="img"]) { font-family: Verdana, sans-serif !important; }</code></pre>
                      	</section>
                   <section id="working-example">
                      
@@ -319,8 +257,8 @@
                      	
                   </section>
                </section>
-               <section class="example" id="przyklad-4-multiple-icon-fonts-as-part-of-another-sematic-element-with-visible-text">
-                  <h3>Przykład 4: Multiple Icon Fonts as part of another sematic element WITH visible text</h3>
+               <section class="example" id="example-4-multiple-icon-fonts-as-part-of-another-sematic-element-with-visible-text">
+                  <h3>Example 4: Multiple Icon Fonts as part of another sematic element WITH visible text</h3>
                   <p>This example already has a visible text label in the link to be used as an accessible
                      name, the mail and chevron font icons must stay visible when the font family is changed.
                      This can be done by ensuring the icons are contained in their own element and the
@@ -329,16 +267,11 @@
                   <section id="author-css">
                      
                      <h4>Author CSS</h4>
-                     <pre>
-               <code>
-/* default class for fonts-face with icons */
+                     <pre><code class="language-css">/* default class for fonts-face with icons */
 .icon { font-family: 'IconFontRoleImg' !important; }
 
 /* specific class for icon */
-- See style declarations in HTML examples -
-
-               </code>
-            </pre>
+- See style declarations in HTML examples -</code></pre>
                      			</section>
                   <section id="html">
                      
@@ -347,50 +280,35 @@
                      <section id="--instead-of...--">
                         
                         <h5><strong>- Instead of... -</strong></h5>
-                        <pre>
-               <code>
-&lt;style&gt;
+                        <pre><code class="language-html">&lt;style&gt;
 .icon-double-link:before   { content: "\e93e"; }
 .icon-double-link:after    { content: "\e993"; }
 &lt;/style&gt;
 
-&lt;a href="email.html" class="icon-double-link"&gt;
-   Email
-&lt;/a&gt;
-               </code>
-            </pre>
+&lt;a href="email.html" class="icon-double-link"&gt;Email&lt;/a&gt;</code></pre>
                         			</section>
                      	
                      <section id="--do...--">
                         
                         <h5><strong>- Do... -</strong></h5>
-                        <pre>
-               <code>
-&lt;style&gt;
-.icon-email:before   { content: "\e93e"; }
-.icon-chevron:before {  content: "\e993";  }
-
-.icon-double-link .icon-chevron  { float: right; margin-left: 1.5rem; }
+                        <pre><code class="language-html">&lt;style&gt;
+  .icon-email:before   { content: "\e93e"; }
+  .icon-chevron:before { content: "\e993"; }
+  .icon-double-link .icon-chevron  { float: right; margin-left: 1.5rem; }
 &lt;/style&gt;
 
 &lt;a href="email.html" class="icon-double-link"&gt;
-   &lt;span class="icon icon-email" role="img" aria-hidden="true"&gt;&lt;/span&gt;
-   &lt;span class="icon icon-chevron" role="img" aria-hidden="true"&gt;&lt;/span&gt;
+  &lt;span class="icon icon-email" role="img" aria-hidden="true"&gt;&lt;/span&gt;
+  &lt;span class="icon icon-chevron" role="img" aria-hidden="true"&gt;&lt;/span&gt;
    Email
-&lt;/a&gt;
-               </code>
-            </pre>
+&lt;/a&gt;</code></pre>
                         	</section>
                      	
                   </section>
                   <section id="user-css">
                      
                      <h4>User CSS</h4>
-                     <pre>
-               <code>
-*:not([role="img"]) { font-family: Verdana, sans-serif !important; }
-               </code>
-            </pre>
+                     <pre><code class="language-css">*:not([role="img"]) { font-family: Verdana, sans-serif !important; }</code></pre>
                      	</section>
                   <section id="working-example">
                      
@@ -438,15 +356,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -483,28 +401,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

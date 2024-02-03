@@ -58,24 +58,22 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/kontrola-odtwarzania-dzwieku">1.4.2: Kontrola odtwarzania dźwięku</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>HTML5</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/kontrola-odtwarzania-dzwieku">1.4.2: Kontrola odtwarzania dźwięku</a> (Failure)</span>.
-               </p>
+               <h2>Applicability</h2>
+               <p>HTML</p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
-               <p>This failure occurs when an <code class="el">audio</code> or <code class="el">video</code> element with an audio track contains the <code class="att">autoplay</code> attribute and does not contain the <code class="att">muted</code> attribute, and no controls or commands have been provided to pause or stop the media
+               <p>This failure occurs when an <code class="language-html">audio</code> or <code class="language-html">video</code> element with an audio track contains the <code class="language-html">autoplay</code> attribute and does not contain the <code class="language-html">muted</code> attribute, and no controls or commands have been provided to pause or stop the media
                   resource.
                </p>
-               <p>When the <code class="att">autoplay</code> attribute is present, the user agent will automatically begin playback of the media
-                  resource as soon as it can do so without stopping. When the <code class="att">muted</code> attribute is present, the user agent will initially mute the media resource's audio
+               <p>When the <code class="language-html">autoplay</code> attribute is present, the user agent will automatically begin playback of the media
+                  resource as soon as it can do so without stopping. When the <code class="language-html">muted</code> attribute is present, the user agent will initially mute the media resource's audio
                   output, overriding any user preference.
                </p>
                <p>If the media element is shorter than 3 seconds, the failure does not occur. If the
@@ -85,11 +83,11 @@
                <p>The HTML spec contains the following notes:</p>
                <ul>
                   <li>User agents do not need to support autoplay, and it is suggested that user agents
-                     honor user preferences on the matter. Authors are urged to use the <code class="att">autoplay</code> attribute rather than using script to force the video to play, so as to allow the
+                     honor user preferences on the matter. Authors are urged to use the <code class="language-html">autoplay</code> attribute rather than using script to force the video to play, so as to allow the
                      user to override the behavior if so desired.
                   </li>
                   
-                  <li>Authors are urged to use the <code class="att">autoplay</code> attribute rather than using script to trigger automatic playback, as this allows
+                  <li>Authors are urged to use the <code class="language-html">autoplay</code> attribute rather than using script to trigger automatic playback, as this allows
                      the user to override the automatic playback when it is not desired, e.g. when using
                      a screen reader. Authors are also encouraged to consider not using the automatic playback
                      behavior at all, and instead to let the user agent wait for the user to start playback
@@ -99,14 +97,13 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-an-auto-playing-audio-track">
-                  <h3>Przykład 1: An auto-playing audio track</h3>
+               <section class="example" id="example-1-an-auto-playing-audio-track">
+                  <h3>Example 1: An auto-playing audio track</h3>
                   <p>In this example, the advertising video contains an audio track. The video will play
-                     continuously because of the <code class="att">loop</code> attribute, and the video will start automatically because of the <code class="att">autoplay</code> attribute and because there does not appear to be any controls to allow the user
+                     continuously because of the <code class="language-html">loop</code> attribute, and the video will start automatically because of the <code class="language-html">autoplay</code> attribute and because there does not appear to be any controls to allow the user
                      to stop the video.
-                  </p><pre xml:space="preserve">
-				 &lt;video src="ads.cgi?kind=video" autoplay loop&gt;&lt;/video&gt;
-            </pre></section>
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;video src="ads.cgi?kind=video" autoplay loop&gt;&lt;/video&gt;</code>
+</pre></section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -132,15 +129,15 @@
                   
                   <ol>
                      
-                     <li>Check if an <code class="el">audio</code> or <code class="el">video</code> element has an active audio track.
+                     <li>Check if an <code class="language-html">audio</code> or <code class="language-html">video</code> element has an active audio track.
                      </li>
                      
                      <li>Check if the audio or video lasts longer than 3 seconds.</li>
                      
-                     <li>Check if the element has an <code class="att">autoplay</code> attribute.
+                     <li>Check if the element has an <code class="language-html">autoplay</code> attribute.
                      </li>
                      
-                     <li>Check if the element does not have a <code class="att">muted</code> attribute.
+                     <li>Check if the element does not have a <code class="language-html">muted</code> attribute.
                      </li>
                      
                      <li>Check if no command or control has been provided to stop or pause the media element.</li>
@@ -174,15 +171,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -219,28 +216,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

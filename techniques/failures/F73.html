@@ -58,16 +58,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/uzycie-koloru">1.4.1: Użycie koloru</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Any technology.</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/uzycie-koloru">1.4.1: Użycie koloru</a> (Failure)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -110,34 +108,30 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1">
-                  <h3>Przykład 1</h3>
+               <section class="example" id="example-1-links-with-no-underlines-and-similar-contrast-to-body-text">
+                  <h3>Example 1: Links with no underlines and similar contrast to body text</h3>
                   <p>A Web page includes a large number of links within the body text. The links are styled
                      so that they do not have underlines and are very similar in color to the body text.
                      This would be a failure because users would be unable to differentiate the links from
                      the body text.
                   </p>
                </section>
-               <section class="example" id="przyklad-2">
-                  <h3>Przykład 2</h3>
-                  <p>The following code is an example of removing the underline from a link in a sentence
-                     or paragraph without providing another visual cue besides color.
-                  </p><pre xml:space="preserve">
-&lt;head&gt;
-&lt;style type="text/css"&gt;
-p a:link {text-decoration: none}
-p a:visited {text-decoration: none}
-p a:active {text-decoration: none}
-p a:hover {text-decoration: underline; color: red;}
-&lt;/style&gt;
+               <section class="example" id="example-2-removing-the-underline-from-a-link-in-a-sentence-or-paragraph-without-providing-another-visual-cue-besides-color">
+                  <h3>Example 2: Removing the underline from a link in a sentence or paragraph without providing
+                     another visual cue besides color
+                  </h3><pre xml:space="preserve"><code class="language-html">&lt;head&gt;
+  &lt;style&gt;
+    p a:link {text-decoration: none}
+    p a:visited {text-decoration: none}
+    p a:active {text-decoration: none}
+    p a:hover {text-decoration: underline; color: red;}
+  &lt;/style&gt;
 &lt;/head&gt;
-
 &lt;body&gt;
-
-&lt;p&gt;To find out more about the &lt;a href="rain_in_spain.htm"&gt;rain in spain&lt;/a&gt;there are many resources.&lt;/p&gt;
-
-&lt;/body&gt;
-</pre><div class="note">
+  &lt;p&gt;There are many resources to find out more about the
+     &lt;a href="rain-in-spain.html"&gt;rain in spain&lt;/a&gt;.
+  &lt;/p&gt;
+&lt;/body&gt;</code></pre><div class="note">
                      
                      <p>If the visual cue is only provided on hover (as in the example above), it would still
                         fail.
@@ -198,15 +192,15 @@ p a:hover {text-decoration: underline; color: red;}
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -243,28 +237,26 @@ p a:hover {text-decoration: underline; color: red;}
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

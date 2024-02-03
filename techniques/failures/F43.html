@@ -58,16 +58,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>HTML and XHTML</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a> (Failure)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -85,7 +83,7 @@
                   
                   <p>Though an element's semantic meaning is generally exposed to AT, the WAI-ARIA presentation
                      role can be used to suppress the native semantics of an element so that they are not
-                     mapped to the accessibility API. Setting an element's <code class="att">role</code> to presentation may avoid this failure by hiding that element's semantics from the
+                     mapped to the accessibility API. Setting an element's <code class="language-html">role</code> to presentation may avoid this failure by hiding that element's semantics from the
                      user.
                   </p>
                   
@@ -93,19 +91,16 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-a-heading-used-only-for-visual-effect">
-                  <h3>Przykład 1: A heading used only for visual effect</h3>
+               <section class="example" id="example-1-a-heading-used-only-for-visual-effect">
+                  <h3>Example 1: A heading used only for visual effect</h3>
                   <p>In this example, a heading element is used to display an address in a
                      large, bold font. The address does not identify a new section of the
                      document, however, so it should not be marked as a heading.
-                  </p><pre xml:space="preserve">
-&lt;p&gt;Interested in learning more? Write to us at&lt;/p&gt; 
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;p&gt;Interested in learning more? Write to us at&lt;/p&gt; 
 &lt;h4&gt;3333 Third Avenue, Suite 300 · New York City&lt;/h4&gt;
-
-&lt;p&gt;And we'll send you the complete informational packet absolutely Free!&lt;/p&gt;
-</pre></section>
-               <section class="example" id="przyklad-2-using-heading-elements-for-presentational-effect">
-                  <h3>Przykład 2: Using heading elements for presentational effect</h3>
+&lt;p&gt;And we'll send you the complete informational packet absolutely Free!&lt;/p&gt;</code></pre></section>
+               <section class="example" id="example-2-using-heading-elements-for-presentational-effect">
+                  <h3>Example 2: Using heading elements for presentational effect</h3>
                   <p>In this example, heading markup is used in two different ways: to
                      convey document structure and to create visual effects. The
                      h1 and h2 elements are used appropriately
@@ -114,42 +109,35 @@
                      elements between the title and the abstract are used only for visual
                      effect — to control the fonts used to display the authors' names and
                      the date.
-                  </p><pre xml:space="preserve">
-&lt;h1&gt;Study on the Use of Heading  Elements in Web Pages&lt;/h1&gt;
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;h1&gt;Study on the Use of Heading Elements in Web Pages&lt;/h1&gt;
 &lt;h3&gt;Joe Jones and Mary Smith&lt;h3&gt;
 &lt;h4&gt;March 14, 2006&lt;/h4&gt;
 &lt;h2&gt;Abstract&lt;/h2&gt;
-&lt;p&gt;A study was conducted in early 2006 ...
-&lt;/p&gt;
-</pre></section>
-               <section class="example" id="przyklad-3-using-blockquote-elements-to-provide-additional-indentation">
-                  <h3>Przykład 3: Using <code class="el">blockquote</code> elements to provide additional
+&lt;p&gt;A study was conducted in early 2006 ...&lt;/p&gt;</code></pre></section>
+               <section class="example" id="example-3-using-blockquote-elements-to-provide-additional-indentation">
+                  <h3>Example 3: Using <code class="language-html">blockquote</code> elements to provide additional
                      indentation
                   </h3>
                   <p>The following example uses blockquote for text that is
                      not a quotation to give it prominence by indenting it when displayed
                      in graphical browsers.
-                  </p><pre xml:space="preserve">
-&lt;p&gt;After extensive study of the company Web site, the task force 
-identified the following common problem.&lt;/p&gt;
-
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;p&gt;After extensive study of the company Web site, the task force identified 
+   the following common problem.&lt;/p&gt;
+   
 &lt;blockquote&gt;
-&lt;p&gt;The use of markup for presentational effects made Web 
-pages confusing to screen reader users.&lt;/p&gt;
+  &lt;p&gt;The use of markup for presentational effects made Web 
+   pages confusing to screen reader users.&lt;/p&gt;
 &lt;/blockquote&gt;
-
+   
 &lt;p&gt;The committee lists particular examples of the problems 
-introduced by this practice below.&lt;/p&gt;
-</pre></section>
-               <section class="example" id="przyklad-4-using-the-fieldset-and-legend-elements-to-give-a-border-to-text">
-                  <h3>Przykład 4: Using the fieldset and legend elements to
+  introduced by this practice below.&lt;/p&gt;</code></pre></section>
+               <section class="example" id="example-4-using-the-fieldset-and-legend-elements-to-give-a-border-to-text">
+                  <h3>Example 4: Using the fieldset and legend elements to
                      give a border to text
-                  </h3><pre xml:space="preserve">
-&lt;fieldset&gt;
-&lt;legend&gt;Bargain Corner&lt;/legend&gt;
-&lt;p&gt;Buy today, and save 20%&lt;/p&gt;
-&lt;/fieldset&gt;
-</pre></section>
+                  </h3><pre xml:space="preserve"><code class="language-html">&lt;fieldset&gt;
+  &lt;legend&gt;Bargain Corner&lt;/legend&gt;
+  &lt;p&gt;Buy today, and save 20%&lt;/p&gt;
+&lt;/fieldset&gt;</code></pre></section>
             </section>
             <section id="related">
                <h2>Related Techniques</h2>
@@ -203,15 +191,15 @@ introduced by this practice below.&lt;/p&gt;
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -248,28 +236,26 @@ introduced by this practice below.&lt;/p&gt;
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

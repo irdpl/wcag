@@ -56,52 +56,48 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/zmiana-na-zadanie">3.2.5: Zmiana na żądanie</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p> HTML 4.01 and XHTML 1.0 </p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/zmiana-na-zadanie">3.2.5: Zmiana na żądanie</a> (Sufficient when used with Including pop-up windows using one of the following techniques:
-                     )</span>.
-               </p>
+               <h2>Applicability</h2>
+               <p>HTML</p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
-               <p> The objective of this technique is to avoid confusion that may be caused by
-                  the appearance of new windows that were not requested by the user. Suddenly
-                  opening new windows can disorient or be missed completely by some users.
-                  If the document type does not allow the target attribute (it
-                  does not exist in HTML 4.01 Strict or XHTML 1.0 Strict) or if the developer
-                  prefers not to use it, new windows can be opened with ECMAScript. The
-                  example below demonstrates how to open new windows with script: it adds an
-                  event handler to a link (a element) and warns the user that the
-                  content will open in a new window. 
+               <p>The objective of this technique is to avoid confusion that may be caused by the appearance
+                  of new windows that were not requested by the user. Suddenly opening new windows can
+                  disorient or be missed completely by some users. New windows / tabs can be opened
+                  with the HTML <code class="language-html">target</code> attribute or JavaScript. The example below demonstrates how to open new windows with
+                  script: it adds an event handler to a link and warns the user that the content will
+                  open in a new window.
                </p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1">
-                  <h3>Przykład 1</h3>
-                  <p>Markup:</p>
-                  <p> The script is included in the head of the document, and the link has
-                     an id that can be used as a hook by the script. 
-                  </p><pre xml:space="preserve">
-&lt;script type="text/javascript" src="popup.js"&gt;&lt;/script&gt;
-…
-&lt;a href="help.html" id="newwin"&gt;Show Help&lt;/a&gt;</pre><p>Script:</p><pre xml:space="preserve"> 
-// Use traditional event model whilst support for event registration
-// amongst browsers is poor.
-window.onload = addHandlers;
+               <section class="example" id="example-1-using-javascript-to-open-a-new-tab-/-window">
+                  <h3>Example 1: Using JavaScript to open a new tab / window</h3>
+                  <section id="markup">
+                     				
+                     <h4>Markup:</h4>
+                     				
+                     <p>The script is included in the head of the document, and the link has an <code class="language-html">id</code> that can be used as a hook by the script.
+                     </p>
+                     
+                     <pre xml:space="preserve"><code class="language-html">&lt;script src="popup.js"&gt;&lt;/script&gt;
+...
+&lt;a href="help.html" id="newwin"&gt;Show Help&lt;/a&gt;</code></pre>
+                     
+                     <h4>Script:</h4>
+                     
+                     <pre xml:space="preserve"><code class="language-javascript">window.onload = addHandlers;
 
-function addHandlers()
-{
+function addHandlers(){
   var objAnchor = document.getElementById('newwin');
-
-  if (objAnchor)
-  {
+  
+  if (objAnchor){
     objAnchor.firstChild.data = objAnchor.firstChild.data + ' (opens in a new window)';
     objAnchor.onclick = function(event){return launchWindow(this, event);}
     // UAAG requires that user agents handle events in a device-independent manner
@@ -109,98 +105,107 @@ function addHandlers()
     objAnchor.onkeypress = function(event){return launchWindow(this, event);}
   }
 }
-
-function launchWindow(objAnchor, objEvent)
-{
-  var iKeyCode, bSuccess=false;
-
-  // If the event is from a keyboard, we only want to open the
-  // new window if the user requested the link (return or space)
-  if (objEvent &amp;&amp; objEvent.type == 'keypress')
-  {
-    if (objEvent.keyCode)
-      iKeyCode = objEvent.keyCode;
-    else if (objEvent.which)
-      iKeyCode = objEvent.which;
-
-    // If not carriage return or space, return true so that the user agent
-    // continues to process the action
-    if (iKeyCode != 13 &amp;&amp; iKeyCode != 32)
-      return true;
-  }
-
-  bSuccess = window.open(objAnchor.href);
-
-  // If the window did not open, allow the browser to continue the default
-  // action of opening in the same window
-  if (!bSuccess)
-    return true;
-
-  // The window was opened, so stop the browser processing further
-  return false;
-}</pre></section>
+   
+   function launchWindow(objAnchor, objEvent)
+   {
+     var iKeyCode, bSuccess=false;
+   
+     // If the event is from a keyboard, we only want to open the
+     // new window if the user requested the link (return or space)
+     if (objEvent &amp;&amp; objEvent.type == 'keypress')
+     {
+       if (objEvent.keyCode)
+         iKeyCode = objEvent.keyCode;
+       else if (objEvent.which)
+         iKeyCode = objEvent.which;
+   
+       // If not carriage return or space, return true so that the user agent
+       // continues to process the action
+       if (iKeyCode != 13 &amp;&amp; iKeyCode != 32)
+         return true;
+     }
+   
+     bSuccess = window.open(objAnchor.href);
+   
+     // If the window did not open, allow the browser to continue the default
+     // action of opening in the same window
+     if (!bSuccess)
+       return true;
+   
+     // The window was opened, so stop the browser processing further
+     return false;
+   }</code></pre>
+                     
+                     				</section>
+               </section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
                <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
                <ul>
-                  
+                  				
                   <li>
-                     <a href="https://en.wikipedia.org/wiki/Progressive_enhancement">Wikipedia: Progressive Enhancement</a>
-                     
+                     					<a href="https://html.spec.whatwg.org/multipage/document-sequences.html#navigable-target-names">HTML - Navigable target names</a>
+                     				
                   </li>
-                  
+                  				
+                  <li>
+                     					<a href="https://en.wikipedia.org/wiki/Progressive_enhancement">Wikipedia: Progressive Enhancement</a>
+                     				
+                  </li>
+                  			
                </ul>
             </section>
             <section id="related">
                <h2>Related Techniques</h2>
                <ul>
-                  
+                  				
                   <li><a href="../html/H83">H83</a></li>
-                  
+                  			
                </ul>
             </section>
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  				
                   <h3>Procedure</h3>
-                  
+                  				
                   <ol>
-                     
-                     <li> Activate each link in the document to check if it opens a new window. </li>
-                     
+                     					
+                     <li>Activate each link in the document to check if it opens a new window.</li>
+                     					
                      <li>
-                        
                         <p>For each link that opens a new window, check that it uses script to accomplish each
                            of the following:
                         </p>
-                        
+                        						
                         <ol>
-                           
+                           							
                            <li>indicates that the link will open in a new window,</li>
-                           
+                           							
                            <li>uses device-independent event handlers, and</li>
-                           
+                           							
                            <li>allows the browser to open the content in the same window if a new window was not
                               opened.
                            </li>
-                           
+                           						
                         </ol>
-                        
+                        					
                      </li>
-                     
+                     				
                   </ol>
-                  
+                  			
                </section>
                <section class="results" id="expected-results">
+                  				
                   <h3>Expected Results</h3>
-                  
+                  				
                   <ul>
-                     
-                     <li> #2 is true. </li>
-                     
+                     					
+                     <li>#2 is true.</li>
+                     				
                   </ul>
-                  
+                  			
                </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
@@ -216,15 +221,15 @@ function launchWindow(objAnchor, objEvent)
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -261,28 +266,26 @@ function launchWindow(objAnchor, objEvent)
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

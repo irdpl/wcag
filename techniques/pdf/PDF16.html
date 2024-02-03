@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>PDF16: Setting the default language using the /Lang entry in the document
-         			catalog of a PDF document | WAI | W3C
+      <title>PDF16: Setting the default language using the /Lang entry in the document catalog of a PDF
+         document | WAI | W3C
       </title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
@@ -50,8 +50,7 @@
             </nav>
          </aside>
          <main id="main" class="standalone-resource__main">
-            <h1><span>Technique PDF16:</span>Setting the default language using the /Lang entry in the document
-               			catalog of a PDF document
+            <h1><span>Technique PDF16:</span>Setting the default language using the <code>/Lang</code> entry in the document catalog of a <abbr title="Portable Document Format">PDF</abbr> document
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
@@ -59,151 +58,95 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/jezyk-strony">3.1.1: Język strony</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p id="pdf.applicability.general">Tagged PDF documents</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/jezyk-strony">3.1.1: Język strony</a> (Sufficient)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
-               <p>The objective of this technique is to specify a document's default
-                  				language by setting the /Lang entry in the document catalog. This is
-                  				normally accomplished using a tool for authoring PDF. 
+               <p>The objective of this technique is to specify a document's default language by setting
+                  the <code>/Lang</code> entry in the document catalog. This is normally accomplished using a tool for authoring
+                  PDF.
                </p>
                <p>Both assistive technologies and conventional user agents can render
                   				text more accurately when the language of the document is identified.
                   				Screen readers can load the correct pronunciation rules. Visual browsers
                   				can display characters and scripts correctly. Media players can show
                   				captions correctly. As a result, users with disabilities are better
-                  				able to understand the content. 
+                  				able to understand the content.
                </p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-adding-a-/lang-entry-to-specify-the-default-document-language-using-adobe-acrobat-9-pro">
-                  <h3>Przykład 1: Adding a /Lang entry to specify the default document language
-                     					using Adobe Acrobat 9 Pro
+               <section class="example" id="example-1-adding-a-/lang-entry-to-specify-the-default-document-language-using-adobe-acrobat-pro">
+                  <h3>Example 1: Adding a <code>/Lang</code> entry to specify the default document language using Adobe Acrobat Pro
                   </h3>
                   <p>This example is shown with Adobe Acrobat Pro. There are other software tools that
-                     perform similar functions. See the list of other software tools in <a href="#pdf_notes_acc-sup_files_applications"></a>.
+                     perform similar functions.
                   </p>
                   <ol>
-                     
-                     <li> Open the document in Adobe Acrobat Pro </li>
-                     
-                     <li> From the File menu, select "Properties..." </li>
-                     
-                     <li> In the "Properties" dialog, select the "Advanced" tab </li>
-                     
-                     <li> In the "Reading Options" field, select the default language
-                        						from the "Language" combo box 
+                     					
+                     <li>Open the document in Adobe Acrobat Pro</li>
+                     					
+                     <li>From the File menu, select "Properties..."</li>
+                     					
+                     <li>In the "Properties" dialog, select the "Advanced" tab</li>
+                     					
+                     <li>In the "Reading Options" field, select the default language from the "Language" combo
+                        box
                      </li>
-                     
+                     				
                   </ol>
-                  <figure id="figure-acrobat-define-lang">
-                     <img src="img/docprop.gif" />
-                     
-                     
-                     <figcaption>Specifying the default language in Adobe Acrobat's Properties dialog.</figcaption>
-                     
-                     
-                  </figure>
                   <div class="note">
-                     
-                     <p>Acrobat includes 16 preset language selections.
+                     					
+                     <p>Acrobat includes numerous preset language selections.
                         						If you need to specify a language that is not on the list, such as
-                        						Russian, you must type the ISO 639 code for the language, not its name. 
+                        						Russian, you must type the <abbr title="International Organization for Standardization">ISO</abbr> 639-2 code for the language, not its name.
                      </p>
-                     
+                     				
                   </div>
-                  <p class="working-example">This example is shown in operation in the <a href="../../working-examples/pdf-lang/language-en.pdf">working example of adding a /Lang entry using Acrobat Pro</a>.
-                  </p>
                </section>
-               <section class="example" id="przyklad-2-specifying-the-default-document-language-in-a-pdf-document-using-microsoft-word-2007">
-                  <h3>Przykład 2: Specifying the default document language in a PDF document
-                     				using Microsoft Word 2007
+               <section class="example" id="example-2-specifying-the-default-document-language-in-a-pdf-document-using-a-/lang-entry">
+                  <h3>Example 2: Specifying the default document language in a PDF document using a <code>/Lang</code> entry
                   </h3>
-                  <p>This example is shown with Microsoft Word. There are other software tools that perform
-                     similar functions. See the list of other software tools in <a href="#pdf_notes_acc-sup_files_applications"></a>.
+                  <p>The natural language used for text in a document is determined in a hierarchical fashion,
+                     based on whether an optional <code>/Lang</code> entry is present in any of several possible locations. At the highest level, the
+                     document's default language may be specified by a <code>/Lang</code> entry in the document catalog.
                   </p>
-                  <p>Documents authored in Microsoft Word: "In some instances, even
-                     						if the document language has been specified in the source file, the
-                     						information about document language is not conveyed to the PDFMaker.
-                     						Setting the language for an entire document in the Document Properties
-                     						dialog box [see Example 1] corrects all errors related to this option."(<a href="http://www.adobe.com/content/dam/Adobe/en/accessibility/products/acrobat/pdfs/A9-accessible-pdf-from-word.pdf">Adobe®
-                        							Acrobat® 9 Pro Accessibility Guide: Creating Accessible PDF from Microsoft®
-                        							Word</a>) 
-                  </p>
-               </section>
-               <section class="example" id="przyklad-3-specifying-the-default-document-language-in-a-pdf-document-using-a-/lang-entry">
-                  <h3>Przykład 3: Specifying the default document language in a PDF document
-                     				using a /Lang entry
-                  </h3>
-                  <p>The natural language used for text in a document is determined in
-                     						a hierarchical fashion, based on whether an optional /Lang entry is
-                     						present in any of several possible locations. At the highest level,
-                     						the document's default language may be specified by a /Lang entry in
-                     						the document catalog. 
-                  </p>
-                  <p>The following code fragment illustrates code that is typical for using
-                     						the /Lang entry in the document catalog for a document's default language
-                     						(in this case, US English). (This is typically accomplished by an authoring
-                     						tool.) 
-                  </p><pre xml:space="preserve"> 1 0 obj
+                  <p>The following code fragment illustrates code that is typical for using the <code>/Lang</code> entry in the document catalog for a document's default language (in this case English).
+                     (This is typically accomplished by an authoring tool.)
+                  </p><pre xml:space="preserve"><code>1 0 obj
    &lt;&lt; /Type /Catalog
       ...
-      /Lang (en-US)
+      /Lang (en)
       ...
    &gt;&gt; 
- endobj
-</pre></section>
+ endobj</code></pre></section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
                <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
                <ul>
-                  
-                  <li> Section 14.9.2 (Natural Language Specification) in <a href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf">PDF
-                        					1.7 (ISO 32000-1)</a> 
-                     
+                  			
+                  <li>Section 14.9.2 (Natural Language Specification) in <a href="https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/PDF32000_2008.pdf">PDF 1.7 (ISO 32000-1) (PDF)</a>
+                     			
                   </li>
-                  
-                  <li> 
-                     <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php">ISO
-                        						639-2 Codes</a> 
-                     
-                  </li>
-                  
-                  <li> 
-                     <a href="http://partners.adobe.com/public/developer/en/pdf/PDFReference16.pdf#page=886">PDF
-                        							Reference 1.6, 10.8.1 Natural Language Specification (PDF 8.7 Mb)</a> 
-                     
-                  </li>
-                  
-                  <li> 
-                     <a href="http://pdf.editme.com/pdfua-naturalLanguageSpecification">PDF
-                        								Standards: Natural Language Specification</a> 
-                     
-                  </li>
-                  
-                  <li> 
-                     <a href="http://www.adobe.com/content/dam/Adobe/en/accessibility/products/acrobat/pdfs/A9-accessible-pdf-from-word.pdf">Adobe®
-                        									Acrobat® 9 Pro Accessibility Guide: Creating Accessible PDF from
-                        									Microsoft® Word</a> 
-                     
-                  </li>
-                  
+                  			
                   <li>
-                     <a href="http://www.adobe.com/accessibility/products/acrobat.html">PDF and Accessibility</a>
-                     
+                     				<a href="https://www.loc.gov/standards/iso639-2/php/code_list.php">ISO 639-2 Codes</a>
+                     			
                   </li>
-                  
+                  			
+                  <li>
+                     				<a href="https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html">Create and verify PDF accessibility (Acrobat Pro)</a>
+                     			
+                  </li>
+                  		
                </ul>
             </section>
             <section id="related">
@@ -216,49 +159,47 @@
             </section>
             <section id="tests">
                <h2>Tests</h2>
-               <section class="procedure" id="procedura">
-                  <h3>Procedura</h3>
-                  
+               <section class="procedure" id="procedure">
+                  				
+                  <h3>Procedure</h3>
+                  				
                   <ol>
-                     
+                     					
                      <li>
-                        
-                        <p>Verify that the default language for the document is correctly
-                           					specified by applying one of the following:
+                        						
+                        <p>Verify that the default language for the document is correctly specified by applying
+                           one of the following:
                         </p>
-                        
+                        						
                         <ul>
-                           
-                           <li> Read the PDF document with a screen reader, listening to hear
-                              						that the text is read in the correct natural language. 
+                           							
+                           <li>Read the PDF document with a screen reader, listening to hear that the text is read
+                              in the correct natural language.
                            </li>
-                           
-                           <li> Using a PDF editor, check that the language is
-                              							set to the default document language. 
+                           							
+                           <li>Using a PDF editor, check that the language is set to the default document language.</li>
+                           							
+                           <li>Use a tool which is capable of showing the <code>/Lang</code> entry value in the document catalog to open the PDF document and view the language
+                              settings.
                            </li>
-                           
-                           <li> Use a tool which is capable of showing the /Lang entry value
-                              								in the document catalog to open the PDF document and view the
-                              								language settings. 
+                           							
+                           <li>Use a tool that exposes the document through the accessibility <abbr title="Application Programming Interface">API</abbr> and verify that the language is set to the default language.
                            </li>
-                           
-                           <li> Use a tool that exposes the document through the accessibility
-                              									API and verify that the language is set to the default language. 
-                           </li>
-                           
+                           						
                         </ul>
-                        
+                        					
                      </li>
-                     
+                     				
                   </ol>
                   
                </section>
-               <section class="results" id="oczekiwane-wyniki">
-                  <h3>Oczekiwane wyniki</h3>
+               <section class="results" id="expected-results">
+                  				
+                  <h3>Expected Results</h3>
                   
                   <ul>
                      
-                     <li>#1 is true. </li>
+                     <li>#1 is true.</li>
                      
                   </ul>
                   
@@ -277,15 +218,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -322,28 +263,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

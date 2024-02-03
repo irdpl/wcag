@@ -56,17 +56,15 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/tresc-nietekstowa">1.1.1: Treść nietekstowa</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
                </p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/tresc-nietekstowa">1.1.1: Treść nietekstowa</a> (Sufficient)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -76,30 +74,23 @@
                   
                </p>
                <p>A feature of WAI-ARIA is the ability to associate descriptive text with a section,
-                  drawing, form element, picture, and so on using the <code class="prop">aria-describedby</code> property. This is similar to the <code class="att">longdesc</code> attribute in that both are useful for providing additional information to help users
-                  understand complex images. Like <code class="att">longdesc</code>, descriptive text provided using <code class="att">aria-describedby</code> is separate from the short name provided using the <code class="att">alt</code> attribute in HTML. Unlike <code class="att">longdesc</code>, <code class="att">aria-describedby</code> cannot reference descriptions outside of the page containing the image. An advantage
-                  of providing long descriptions using content from the same page as the image is that
-                  the alternative is available to all, including sighted people who do not have assistive
-                  technology. It is worth noting that as of the time of writing (October 2013) some
-                  assistive technologies read <code class="att">aria-describedby</code> content immediately after an image's alt attribute information without user activation
-                  - whereas most implementations of <code class="att">longdesc</code> require the user to take explicit action to read the additional description.
-                  
+                  drawing, form element, picture, and so on using the <code class="language-html">aria-describedby</code> property. Descriptive text provided using <code class="language-html">aria-describedby</code> is separate from the short name provided using the <code class="language-html">alt</code> attribute in HTML. An advantage of providing long descriptions using content from
+                  the same page as the image is that the alternative is available to all, including
+                  sighted people who do not have assistive technology.
                </p>
-               <p>Like <code class="att">aria-labelledby</code>, <code class="att">aria-describedby</code> can accept multiple ids to point to other regions of the page using a space separated
-                  list. It is also limited to ids for defining these sets.
-                  
+               <p>Like <code class="language-html">aria-labelledby</code>, <code class="language-html">aria-describedby</code> can accept multiple <code class="language-html">id</code>s to point to other regions of the page using a space separated list. It is also limited
+                  to <code class="language-html">id</code>s for defining these sets.
                </p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-describing-an-image">
-                  <h3>Przykład 1: Describing an image</h3>
-                  <p>The following example shows how <code class="att">aria-describedby</code> can be applied to an image to provide a long description, where that text description
-                     is on the same page as the image. 
-                     
-                  </p><pre xml:space="preserve">&lt;img src="ladymacbeth.jpg" alt="Lady MacBeth" aria-describedby="p1"&gt;
-&lt;p id="p1"&gt;This painting dates back to 1730 and is oil on canvas. It was created by 
-Jean-Guy Millome, and represents ...&lt;/p&gt;</pre></section>
+               <section class="example" id="example-1-describing-an-image">
+                  <h3>Example 1: Describing an image</h3>
+                  <p>The following example shows how <code class="language-html">aria-describedby</code> can be applied to an image to provide a long description, where that text description
+                     is on the same page as the image.
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;img src="ladymacbeth.jpg" alt="Lady MacBeth" aria-describedby="p1"&gt;
+&lt;p id="p1"&gt;This painting dates back to 1889 and is oil on canvas. It was created by 
+ John Singer Sargent, and represents ...&lt;/p&gt;</code></pre></section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -138,12 +129,12 @@ Jean-Guy Millome, and represents ...&lt;/p&gt;</pre></section>
                   
                   <ol>
                      
-                     <li>Examine each image element where a <code class="att">aria-describedby</code> attribute is present.
+                     <li>Examine each image element where a <code class="language-html">aria-describedby</code> attribute is present.
                         
                      </li>
                      
-                     <li>Examine whether the <code class="att">aria-describedby</code> attribute  programatically associates an element with its text description, via the
-                        <code class="att">id</code> attribute on the element where the text to be used as the description is found. 
+                     <li>Examine whether the <code class="language-html">aria-describedby</code> attribute  programmatically associates an element with its text description, via
+                        the <code class="language-html">id</code> attribute on the element where the text to be used as the description is found. 
                         
                      </li>
                      
@@ -179,15 +170,15 @@ Jean-Guy Millome, and represents ...&lt;/p&gt;</pre></section>
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -224,28 +215,26 @@ Jean-Guy Millome, and represents ...&lt;/p&gt;</pre></section>
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

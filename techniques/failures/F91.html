@@ -55,22 +55,18 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>HTML and XHTML.</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a> (Failure)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
-               <p>This failure occurs when data tables do not use header elements (th) or other appropriate
-                  table mark-up (the scope attribute, headers and id or the ARIA roles columnheader
-                  / rowheader) to make the headers programatically determinable from within table content.
+               <p>This failure occurs when data tables do not use header elements (<code class="language-html">th</code>) or other appropriate table mark-up (the <code class="language-html">scope</code> attribute, <code class="language-html">headers</code> and <code class="language-html">id</code> or the ARIA <code class="language-html">columnheader</code> and <code class="language-html">rowheader</code>) roles to make the headers programmatically determinable from within table content.
                   Making headers programmatically determinable is especially important when data cells
                   are only intelligible together with header information. When screen reader users navigate
                   through the table content horizontally or vertically, the headers that change can
@@ -79,52 +75,44 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-headers-not-marked-up-appropriately">
-                  <h3>Przykład 1: Headers not marked up appropriately</h3>
-                  <p>This table does not use th (or other appropriate header markup) for headers. Instead,
-                     it uses td elements for all cells. Navigating cell by cell, screen readers will often
-                     fail to read the header cells associated with content.
+               <section class="example" id="example-1-headers-not-marked-up-appropriately">
+                  <h3>Example 1: Headers not marked up appropriately</h3>
+                  <p>This table does not use <code class="language-html">th</code> (or other appropriate header markup) for headers. Instead, it uses <code class="language-html">td</code> elements for all cells. Navigating cell by cell, screen readers will often fail to
+                     read the header cells associated with content.
                      							
                   </p>
-                  <p>Example Code:</p><pre xml:space="preserve">
-&lt;table&gt;
-   
-   &lt;tr&gt;
-      &lt;td&gt;Name&lt;/td&gt;
-      &lt;td&gt;Age&lt;/td&gt;
-      &lt;td&gt;Height (cm)&lt;/td&gt;
-      &lt;td&gt;Weight (kg)&lt;/td&gt;
-   &lt;/tr&gt;   
-   
-   &lt;tr&gt;
-      &lt;td&gt;Linda&lt;/td&gt;
-      &lt;td&gt;33&lt;/td&gt;
-      &lt;td&gt;169&lt;/td&gt;
-      &lt;td&gt;59&lt;/td&gt;
-   &lt;/tr&gt;   
-   
-   &lt;tr&gt;
-      &lt;td&gt;Jack&lt;/td&gt;
-      &lt;td&gt;37&lt;/td&gt;
-      &lt;td&gt;184&lt;/td&gt;
-      &lt;td&gt;74&lt;/td&gt;
-   &lt;/tr&gt;    
-   
-   &lt;tr&gt;
-      &lt;td&gt;Kira&lt;/td&gt;
-      &lt;td&gt;8&lt;/td&gt;
-      &lt;td&gt;120&lt;/td&gt;
-      &lt;td&gt;21&lt;/td&gt;
-   &lt;/tr&gt;   
-   
-   &lt;tr&gt;
-      &lt;td&gt;Daniel&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;79&lt;/td&gt;
-      &lt;td&gt;14&lt;/td&gt;
-   &lt;/tr&gt;  
-&lt;/table&gt;
-							</pre><p class="working-example">
+                  <p>Example Code:</p><pre xml:space="preserve"><code class="language-html">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Name&lt;/td&gt;
+    &lt;td&gt;Age&lt;/td&gt;
+    &lt;td&gt;Height (cm)&lt;/td&gt;
+    &lt;td&gt;Weight (kg)&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Linda&lt;/td&gt;
+    &lt;td&gt;33&lt;/td&gt;
+    &lt;td&gt;169&lt;/td&gt;
+    &lt;td&gt;59&lt;/td&gt;
+  &lt;/tr&gt;   
+  &lt;tr&gt;
+    &lt;td&gt;Jack&lt;/td&gt;
+    &lt;td&gt;37&lt;/td&gt;
+    &lt;td&gt;184&lt;/td&gt;
+    &lt;td&gt;74&lt;/td&gt;
+  &lt;/tr&gt;    
+  &lt;tr&gt;
+    &lt;td&gt;Kira&lt;/td&gt;
+    &lt;td&gt;8&lt;/td&gt;
+    &lt;td&gt;120&lt;/td&gt;
+    &lt;td&gt;21&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Daniel&lt;/td&gt;
+    &lt;td&gt;3&lt;/td&gt;
+    &lt;td&gt;79&lt;/td&gt;
+    &lt;td&gt;14&lt;/td&gt;
+  &lt;/tr&gt;  
+&lt;/table&gt;</code></pre><p class="working-example">
                      <a href="../../working-examples/failure-td-not-th/">View example 1 (opens in same browser window)</a>
                      							     
                   </p>
@@ -158,25 +146,22 @@
                   
                   <ol>
                      
-                     <li> headers marked up with table header (<code class="el">th</code>) elements
+                     <li> headers marked up with table header (<code class="language-html">th</code>) elements
                         						
                      </li>
                      	
-                     <li><code class="att">scope</code> attributes on <code class="el">th</code> for tables with more than a single row or column of table headers.
-                     </li>
-                     			
-                     <li><code class="att">scope</code> attributes on <code class="el">th</code> for tables with more than a single row or column of table headers.
+                     <li><code class="language-html">scope</code> attributes on <code class="language-html">th</code> for tables with more than a single row or column of table headers.
                      </li>
                      
-                     <li> headers and data cells associated using <code class="att">headers</code> and <code class="att">id</code> attributes
+                     <li> headers and data cells associated using <code class="language-html">headers</code> and <code class="language-html">id</code> attributes
                         						
                      </li>
                      
-                     <li> headers marked up as <code class="el">td</code> elements with the <code class="att">scope</code> attribute
+                     <li> headers marked up as <code class="language-html">td</code> elements with the <code class="language-html">scope</code> attribute
                         						
                      </li>
                      
-                     <li> headers marked up with ARIA role attributes <code class="att">rowheader</code> or <code class="att">columnheader</code>
+                     <li> headers marked up with ARIA role attributes <code class="language-html">rowheader</code> or <code class="language-html">columnheader</code>
                         						         
                      </li>
                      
@@ -209,15 +194,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -254,28 +239,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

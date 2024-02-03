@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>SM13: Providing sign language interpretation through synchronized video
-         streams in SMIL 1.0 | WAI | W3C
+      <title>SM13: Providing sign language interpretation through synchronized video streams in SMIL
+         1.0 | WAI | W3C
       </title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
@@ -50,8 +50,7 @@
             </nav>
          </aside>
          <main id="main" class="standalone-resource__main">
-            <h1><span>Technique SM13:</span>Providing sign language interpretation through synchronized video
-               streams in SMIL 1.0
+            <h1><span>Technique SM13:</span>Providing sign language interpretation through synchronized video streams in <abbr title="Synchronized Multimedia Integration Language">SMIL</abbr> 1.0
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
@@ -59,18 +58,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/jezyk-migowy-nagranie">1.2.6: Język migowy (nagranie)</a> when used with <a href="../general/G81">G81: Providing a synchronized video of the sign language interpreter that can be displayed
-                           in a different viewport or overlaid on the image by the player</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p> Applies whenever SMIL 1.0 player is available </p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/jezyk-migowy-nagranie">1.2.6: Język migowy (nagranie)</a> (Sufficient when used with <a href="../general/G81">G81: Providing a synchronized video of the sign language interpreter that can be displayed
-                        in a different viewport or overlaid on the image by the player</a>)</span>.
-               </p>
+               <h2>Applicability</h2>
+               <p>Applies whenever SMIL 1.0 player is available</p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -80,7 +75,7 @@
                   important sounds are available in a sign-language interpretation video that
                   is displayed in a caption area. 
                </p>
-               <p> With SMIL 1.0, separate regions can be defined for the two videos. The two
+               <p>With SMIL 1.0, separate regions can be defined for the two videos. The two
                   video playbacks are synchronized, with the content video displayed in one
                   region of the screen, while the corresponding sign-language interpretation
                   video is displayed in another region. 
@@ -88,62 +83,30 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-smil-1.0-sign-language-interpretation-sample-for-quicktime-player-">
-                  <h3>Przykład 1: SMIL 1.0 sign-language interpretation sample for QuickTime
+               <section class="example" id="example-1-smil-1.0-sign-language-interpretation-sample-for-quicktime-player-">
+                  <h3>Example 1: SMIL 1.0 sign-language interpretation sample for QuickTime
                      player 
-                  </h3><pre xml:space="preserve"> 
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+                  </h3><pre xml:space="preserve"><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;smil xmlns:qt="http://www.apple.com/quicktime/resources/smilextensions" 
-  xmlns="https://www.w3.org/TR/REC-smil" qt:time-slider="true"&gt;
-  &lt;head&gt;
-    &lt;layout&gt;
-      &lt;root-layout width="320" height="300" background-color="black"/&gt;
-      &lt;region top="0" width="320" height="240" left="0" background-color="black" 
-      id="videoregion"/&gt;
-      &lt;region top="240" width="320" height="60" left="0" background-color="black" 
-      id="signingregion"/&gt;
-    &lt;/layout&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;par&gt;
-      &lt;video dur="0:01:20.00" region="videoregion" src="salesdemo.mov" 
-      alt="Sales Demo"/&gt;
-      &lt;video dur="0:01:20.00" region="signingregion" system-captions="on" 
-      src="salesdemo_si.mov" alt="Sales Demo Sign Language Interpretation"/&gt;
-    &lt;/par&gt;
-  &lt;/body&gt;
-&lt;/smil&gt;</pre></section>
-               <section class="example" id="przyklad-2-smil-1.0-sign-language-sample-for-realmedia-player">
-                  <h3>Przykład 2: SMIL 1.0 sign-language sample for RealMedia player:</h3><pre xml:space="preserve"> 
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;smil xmlns="https://www.w3.org/TR/REC-smil"&gt;
-  &lt;head&gt;
-    &lt;layout&gt;
-      &lt;root-layout background-color="black" height="310" width="330"/&gt;
-      &lt;region top="0" width="320" height="240" left="0" background-color="black"
-       id="videoregion"/&gt;
-      &lt;region top="240" width="320" height="60" left="0" background-color="black" 
-      id="signingregion"/&gt;
-    &lt;/layout&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;par&gt;
-      &lt;video dur="0:01:20.00" region="videoregion" src="salesdemo.mov" 
-      alt="Sales Demo"/&gt;
-      &lt;video dur="0:01:20.00" region="signingregion" system-captions="on" 
-      src="salesdemo_si.mov" alt="Sales Demo Sign Language Interpretation"/&gt;
-    &lt;/par&gt;
-  &lt;/body&gt;
-&lt;/smil&gt;</pre><p> The example shows a &lt;par&gt; segment
-                     containing two &lt;video&gt; tags. The
-                     system-captions attribute indicates that the sign language video
-                     should be displayed when the user's player setting for captions
-                     indicates the preference for captions to be displayed. The
-                     &lt;layout&gt; section defines the regions
-                     used for the main video and the sign language interpretation video.
-                     
-                  </p>
-               </section>
+   xmlns="https://www.w3.org/TR/REC-smil" qt:time-slider="true"&gt;
+&lt;head&gt;
+  &lt;layout&gt;
+    &lt;root-layout width="320" height="300" background-color="black"/&gt;
+    &lt;region top="0" width="320" height="240" left="0" background-color="black" 
+     id="videoregion"/&gt;
+    &lt;region top="240" width="320" height="60" left="0" background-color="black" 
+     id="signingregion"/&gt;
+  &lt;/layout&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;par&gt;
+    &lt;video dur="0:01:20.00" region="videoregion" src="salesdemo.mov" 
+     alt="Sales Demo"/&gt;
+    &lt;video dur="0:01:20.00" region="signingregion" system-captions="on" 
+     src="salesdemo_si.mov" alt="Sales Demo Sign Language Interpretation"/&gt;
+  &lt;/par&gt;
+&lt;/body&gt;
+&lt;/smil&gt;</code></pre></section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -152,22 +115,22 @@
                   
                   <li> 
                      <a href="https://www.w3.org/TR/REC-smil/">Synchronized Multimedia Integration Language (SMIL) 1.0</a>
-                     								       
-                  </li>
-                  
-                  <li> 
-                     <a href="https://www.w3.org/TR/SMIL/">Synchronized Multimedia Integration Language (SMIL 2.0)</a>
-                     								       
-                  </li>
-                  
-                  <li> 
-                     <a href="https://www.w3.org/TR/SMIL-access/">Accessibility Features of SMIL</a> 
                      
                   </li>
                   
                   <li> 
-                     <a href="http://ncam.wgbh.org/invent_build/web_multimedia/accessible-digital-media-guide/guideline-h-multimedia#techH12">NCAM Rich Media Accessibility, Accessible SMIL Templates</a>
-                     								       
+                     <a href="https://www.w3.org/TR/SMIL/">Synchronized Multimedia Integration Language (SMIL 2.0)</a>
+                     
+                  </li>
+                  		 
+                  <li>
+                     			<a href="https://www.w3.org/TR/SMIL3/">Synchronized Multimedia Integration Language (SMIL 3.0)</a>
+                     		
+                  </li>		 
+                  
+                  <li> 
+                     <a href="https://www.w3.org/TR/SMIL-access/">Accessibility Features of SMIL</a> 
+                     
                   </li>
                   
                </ul>
@@ -175,9 +138,9 @@
             <section id="related">
                <h2>Related Techniques</h2>
                <ul>
-                  
+                  			
                   <li><a href="../smil/SM14">SM14</a></li>
-                  
+                  		
                </ul>
             </section>
             <section id="tests">
@@ -199,11 +162,12 @@
                   
                </section>
                <section class="results" id="expected-results">
+                  		
                   <h3>Expected Results</h3>
-                  
+                  		
                   <ul>
-                     
-                     <li> #3 is true </li>
+                     			
+                     <li>#3 is true</li>
                      
                   </ul>
                   
@@ -222,15 +186,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -267,28 +231,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

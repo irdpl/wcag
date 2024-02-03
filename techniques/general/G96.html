@@ -58,16 +58,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/wlasciwosci-zmyslowe">1.3.3: Właściwości zmysłowe</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>All technologies that present description of a content rendering to the user.</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/wlasciwosci-zmyslowe">1.3.3: Właściwości zmysłowe</a> (Sufficient)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -79,93 +77,119 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1">
-                  <h3>Przykład 1</h3>
+               <section class="example" id="example-1-button-referenced-by-shape-and-accessible-name">
+                  <h3>Example 1: Button referenced by shape and accessible name</h3>
                   <p>A round button is provided on a form to submit the form and move onto the next step
-                     in a progression.  The button is labeled with the text "go."  The instructions state,
-                     "to submit the form press the round button labeled
-                     <em>go</em>
-                     ".  This includes both shape and textual information to locate the button.
+                     in a progression. The button is labeled with the text "go". The instructions state,
+                     "to submit the form press the round button labeled <i>go</i>". This includes both shape and textual information to locate the button.
                   </p>
                </section>
-               <section class="example" id="przyklad-2">
-                  <h3>Przykład 2</h3>
+               <section class="example" id="example-2-a-section-of-navigation-links-referenced-by-location-and-heading">
+                  <h3>Example 2: A section of navigation links referenced by location and heading</h3>
                   <p>Instructions for a Web page providing on-line training state, "Use the list of links
                      to the right with the heading, 'Class Listing' to navigate to the desired on-line
                      course."  This description provides location as well as textual clues to help find
                      the correct list of links.
                   </p>
                </section>
-               <section class="example" id="przyklad-3">
-                  <h3>Przykład 3</h3>
+               <section class="example" id="example-3-button-referenced-by-position-and-accessible-name">
+                  <h3>Example 3: Button referenced by position and accessible name</h3>
                   <p>The following layout places a button in the lower right corner and indicates it by
                      position. An indication of the text label clarifies which button to use for users
-                     who access a linearized version in which the position is not meaningful.
-                  </p><pre xml:space="preserve">
-              &lt;table&gt;
-                &lt;tbody&gt;
-                &lt;tr&gt;
-                &lt;td colspan="2"&gt;Push the lower right [Preview] button.&lt;/td&gt;
-                &lt;td&gt;
-                &lt;span style="background: ButtonFace; color: ButtonText; border: 
-                medium outset ButtonShadow; 
-                width: 5em; display: block; font-weight: bold; text-align: center;"&gt;
-                Print&lt;/span&gt;
-                &lt;/td&gt;
-                &lt;/tr&gt;
-                &lt;tr&gt;
-                &lt;td&gt;
-                &lt;span style="background: ButtonFace; color: ButtonText; border: 
-                medium outset ButtonShadow; 
-                width: 5em; display: block; font-weight: bold; text-align: center;"&gt;
-                Cancel&lt;/span&gt;
-                &lt;/td&gt;
-                &lt;td&gt;
-                &lt;span style="background: ButtonFace; color: ButtonText; border: 
-                medium outset ButtonShadow; 
-                width: 5em; display: block; font-weight: bold; text-align: center;"&gt;
-                OK&lt;/span&gt;
-                &lt;/td&gt;
-                &lt;td&gt;
-                &lt;span style="background: ButtonFace; color: ButtonText; border: 
-                medium outset ButtonShadow; 
-                width: 5em; display: block; font-weight: bold; text-align: center;"&gt;
-                Preview&lt;/span&gt;
-                &lt;/td&gt;
-                &lt;/tr&gt;
-                &lt;/tbody&gt;
-                &lt;/table&gt;
-              
-              
-            </pre></section>
+                     for which the position is not meaningful.
+                  </p>
+                  <section id="the-html">
+                     				
+                     <h4>The <abbr title="HyperText Markup Language">HTML</abbr></h4>
+                     <pre xml:space="preserve"><code class="language-html">&lt;form class="wrapper"&gt;
+  &lt;h1&gt;Sign up to our mailing list&lt;/h1&gt;
+    &lt;div role="note"&gt;
+      Complete the form and then press the lower-right (&lt;i&gt;sign up&lt;/i&gt;) button.
+    &lt;/div&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="full-name"&gt;Your name&lt;/label&gt;
+    &lt;input autocomplete="name" id="full-name" type="text"&gt;
+  &lt;/div&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="email"&gt;Your email address&lt;/label&gt;
+    &lt;input autocomplete="email" id="email" type="text"&gt;
+  &lt;/div&gt;
+  &lt;button type="reset"&gt;Cancel&lt;/button&gt;
+  &lt;button type="submit"&gt;Sign up&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                     
+                     			</section>
+                  <section id="the-css">
+                     				
+                     <h4>The <abbr title="Cascading Style Sheets">CSS</abbr></h4>
+                     <pre><code class="language-css">.wrapper{
+  border:1px solid #aeaeae;
+  display:grid;
+  gap:1rem;
+  grid-template-columns:1fr 1fr;
+  padding:1rem;
+  width:50vw;
+ }
+ 
+ label{
+  display:block;
+ }
+ 
+ input, button{
+  font:inherit;
+ }
+ 
+ h1, [role=note]{
+  grid-column:1 / -1;
+ }
+ 
+ .form-group{
+  grid-column:1;
+ }
+ 
+ input{
+  width:100%;
+ }
+ 
+ button[type=reset]{
+  grid-column:1;
+ }
+ 
+ button[type=submit]{
+  grid-column:2;
+ }</code></pre>
+                     				</section>
+               </section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  			
                   <h3>Procedure</h3>
-                  
+                  			
                   <p>Find all references in the Web page that mention the shape, size, or position of an
                      object.  For each such item:
                   </p>
-                  
+                  			
                   <ol>
-                     
+                     				
                      <li>Check that the reference contains additional information that allows the item to be
                         located and identified without any knowledge of its shape, size, or relative position.
                      </li>
-                     
+                     			
                   </ol>
-                  
+                  		
                </section>
                <section class="results" id="expected-results">
+                  			
                   <h3>Expected Results</h3>
-                  
+                  			
                   <ul>
-                     
+                     				
                      <li>Check #1 is true.</li>
-                     
+                     			
                   </ul>
-                  
+                  		
                </section>
             </section>
             <section id="test-rules">
@@ -191,15 +215,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -236,28 +260,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

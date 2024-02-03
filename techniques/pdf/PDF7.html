@@ -48,7 +48,7 @@
             </nav>
          </aside>
          <main id="main" class="standalone-resource__main">
-            <h1><span>Technique PDF7:</span>Performing OCR on a scanned PDF document to provide actual text
+            <h1><span>Technique PDF7:</span>Performing <abbr title="Optical Character Recognition">OCR</abbr> on a scanned <abbr title="Portable Document Format">PDF</abbr> document to provide actual text
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
@@ -56,24 +56,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is
-                     
-                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/obrazy-tekstu">1.4.5: Obrazy tekstu</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/obrazy-tekstu-bez-wyjatkow">1.4.9: Obrazy tekstu (bez wyjątków)</a>
-                     					.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Scanned PDF documents</p>
-               <p>This technique relates to:</p>
-               <ul>
-                  <li><a href="https://w3c.github.io/wcag/understanding/obrazy-tekstu">1.4.5: Obrazy tekstu</a> (Sufficient)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/obrazy-tekstu-bez-wyjatkow">1.4.9: Obrazy tekstu (bez wyjątków)</a> (Sufficient)
-                  </li>
-               </ul>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -99,96 +89,50 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-generating-actual-text-rather-than-images-of-text-using-adobe-acrobat-9-pro">
-                  <h3>Przykład 1: Generating actual text rather than images of text using
-                     					Adobe Acrobat 9 Pro
-                  </h3>
+               <section class="example" id="example-1-generating-actual-text-rather-than-images-of-text-using-adobe-acrobat-pro">
+                  <h3>Example 1: Generating actual text rather than images of text using Adobe Acrobat Pro</h3>
                   <p>This example is shown with Adobe Acrobat Pro. There are other software tools that
-                     perform similar functions. See the list of other software tools in <a href="#pdf_notes_acc-sup_files_applications"></a>.
+                     perform similar functions.
                   </p>
-                  <p>This example uses a simple one-page scanned image of text. To ensure
-                     						that actual text is stored in the document, perform the following steps: 
+                  <p>This example uses a simple one-page scanned image of text. To ensure that actual text
+                     is stored in the document, perform the following steps:
                   </p>
                   <ol>
-                     
-                     <li> Scan the document using as high a resolution as possible to improve
-                        						the OCR performance. 
+                     								
+                     <li>Select Tools → Scan &amp; OCR.</li>
+                     								
+                     <li>In the Scan &amp; OCR toolbar, select Insert and then either From File or From Scanner.</li>
+                     								
+                     <li>Depending on the resolution and how clear the text was, OCR converts images of words
+                        and characters to actual text. Text that Acrobat Pro does not recognize is listed
+                        as an "OCR suspect", or text element that Acrobat suspects was not recognized correctly.
                      </li>
-                     
-                     <li> Load the scanned document in Acrobat Pro. Select Document &gt; OCR
-                        						Text Recognition &gt; Recognize Text Using OCR... 
+                     								
+                     <li>To fix the suspects, in the Scan &amp; OCR toolbar, choose Recognize Text → Correct Recognized
+                        Text. Acrobat Pro presents each suspect one at a time, which can then be corrected.
                      </li>
-                     
-                     <li> In the next dialog, select the All Pages radio button under Pages
-                        								(or Current Page if you are converting only one page), and then select
-                        								OK. 
-                     </li>
-                     
-                     <li> Under the Settings list, select Edit. In the next dialog, select
-                        									Formatted Text and Graphics in the PDF Output Style drop-down list.
-                        									This is important for ensuring accessibility. 
-                     </li>
-                     
-                     <li> Depending on the resolution and how clear the text was, OCR converts
-                        										images of words and characters to actual text. Text that Acrobat
-                        										Pro does not recognize is listed as an "OCR suspect," or
-                        										text element that Acrobat suspects was not recognized correctly. 
-                     </li>
-                     
-                     <li> To fix the suspects, choose Document &gt; OCR Text Recognition   &gt; Find
-                        											First OCR Suspect. Acrobat Pro presents each suspect one at a time,
-                        											which can be corrected using Acrobat Pro touchup tools. 
-                     </li>
-                     
-                     <li> Run Advanced &gt; Accessibility &gt; Add Tags to Document </li>
-                     
-                     <li> Test for accessibility: Advanced &gt; Accessibility &gt; Full
-                        						Check... 
-                     </li>
-                     
+                     								
+                     <li>Using the Accessibility Tags panel, add tags to the document.</li>
+                     								
+                     <li>Test for accessibility: Accessibility Tool → Accessibility Check.</li>
+                     							
                   </ol>
-                  <div class="note">
-                     
-                     <p>Alternatively, you can use Document &gt; OCR
-                        						Text Recognition &gt; Find All OCR Suspects to display all OCR suspects
-                        						at the same time for faster editing. 
-                     </p>
-                     
+                  <p>The following image shows a scanned one-page document in Adobe Acrobat Pro.</p>
+                  <div>
+                     								<img alt="A scanned page in Acrobat Pro showing a cheese recipe." src="img/ocr1.jpg" />
+                     							
                   </div>
-                  <p>The following image shows a scanned one-page document in Adobe Acrobat
-                     						Pro. 
+                  <p>The next image shows the converted content after adding tags to the document. It will
+                     be necessary to use the Reading Order tool and the Tags panel to tag the content properly.
+                     The Reading Order tool was used in this example to hide the image of the hand as decorative
+                     image / artifact (see <a href="../pdf/PDF4">PDF4</a>). The recipe title was tagged as a first level header.
                   </p>
-                  <figure id="figure-acrobat-scanned-image">
-                     <img src="img/ocr1.jpg" />
-                     
-                     
-                     <figcaption>A scanned page in Acrobat Pro showing soup recipes.</figcaption> 
-                     
-                     
-                  </figure>
-                  <p>The next image shows the converted content after adding tags to the
-                     						document. It will probably be necessary to use the TouchUp Reading
-                     						Order tool and the Tags panel to tag the content properly for the intended
-                     						final document. For this example, the image of the spiral book binding
-                     						was tagged in the conversion. The TouchUp Reading Order tool was used
-                     						to hide the image as a background (decorative) image (see <a href="../pdf/PDF4">PDF4</a>). The recipe
-                     						titles were tagged as first level headers. 
-                  </p>
-                  <figure id="figure-acrobat-converted-scanned">
-                     <img src="img/ocr3.jpg" />
-                     
-                     
-                     <figcaption>A tagged converted page in Acrobat Pro showing soup recipes. The name of each soup
-                        is a first level header. The image of the spiral book binding was hidden as a decorative
-                        image.
-                     </figcaption>
-                     
-                     
-                  </figure>
-                  <p>Note: Acrobat Pro may automatically add tags when the file is run
-                     					through OCR. 
-                  </p>
-                  <p class="working-example">This example is shown in operation in the <a href="../../working-examples/pdf-ocr/ocr-example.pdf">working example of generating actual text</a> and the <a href="../../working-examples/pdf-ocr/ocr-example-tagged.pdf">result of performing OCR</a>.
+                  <div>
+                     								<img alt="A tagged converted page in Acrobat Pro showing a cheese recipe. The name of the recipe is a first level header, and the ingredients are a list." src="img/ocr3.jpg" />
+                     							
+                  </div>
+                  <p>Note: Acrobat Pro may automatically add tags when the file is run through OCR.</p>
+                  <p class="working-example">This example is shown in operation in the <a href="../../working-examples/pdf-ocr/ocr-example.pdf">working example of generating actual text</a> and the <a href="../../working-examples/pdf-ocr/ocr-example-tagged.pdf">result of tagging text created with OCR</a>.
                   </p>
                </section>
             </section>
@@ -196,72 +140,70 @@
                <h3 style="margin-bottom: 0;">Other sources</h3>
                <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
                <ul>
-                  
+                  							
                   <li>
-                     <a href="http://www.adobe.com/accessibility/products/acrobat.html">PDF and Accessibility</a>
-                     
+                     								<a href="https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html">Create and verify PDF accessibility (Acrobat Pro)</a>
+                     							
                   </li>
-                  
+                  						
                </ul>
             </section>
             <section id="related">
                <h2>Related Techniques</h2>
                <ul>
-                  
+                  							
                   <li><a href="../general/G140">G140</a></li>
-                  
+                  						
                </ul>
             </section>
             <section id="tests">
                <h2>Tests</h2>
-               <section class="procedure" id="procedura">
-                  <h3>Procedura</h3>
-                  
+               <section class="procedure" id="procedure">
+                  							
+                  <h3>Procedure</h3>
+                  							
                   <ol>
-                     
+                     								
                      <li>
-                        
-                        <p> For each page converted to text using OCR, ensure that the resulting
-                           					PDF has been converted correctly, using one of the following ways:
+                        									
+                        <p>For each page converted to text using OCR, ensure that the resulting PDF has been
+                           converted correctly, using one of the following ways:
                         </p>
-                        
-                        <ul>
-                           
-                           <li> Read the PDF document with a screen reader or a tool that reads aloud, listening
-                              to hear that all text is read correctly
-                              						and in the correct reading order. 
+                        									
+                        <ol>
+                           										
+                           <li>Read the PDF document with a screen reader or a tool that reads aloud, listening to
+                              hear that all text is read correctly and in the correct reading order.
                            </li>
-                           
-                           <li> Save the document as text and check that the converted text
-                              							is complete and in the correct reading order. 
+                           										
+                           <li>Save the document as text and check that the converted text is complete and in the
+                              correct reading order.
                            </li>
-                           
-                           <li> Use a tool that is capable of showing the converted content
-                              								to open the PDF document and verify that all text was converted
-                              								and is in the correct reading order. 
+                           										
+                           <li>Use a tool that is capable of showing the converted content to open the PDF document
+                              and verify that all text was converted and is in the correct reading order.
                            </li>
-                           
-                           <li> Use a tool that exposes the document through the accessibility
-                              									API and verify that all text was converted and is in the correct
-                              									reading order. 
+                           										
+                           <li>Use a tool that exposes the document through the accessibility <abbr title="Application Programming Interface">API</abbr> and verify that all text was converted and is in the correct reading order.
                            </li>
-                           
-                        </ul>
-                        
+                           									
+                        </ol>
+                        								
                      </li>
-                     
+                     							
                   </ol>
-                  
+                  						
                </section>
-               <section class="results" id="oczekiwane-wyniki">
-                  <h3>Oczekiwane wyniki</h3>
-                  
+               <section class="results" id="expected-results">
+                  							
+                  <h3>Expected Results</h3>
+                  							
                   <ul>
-                     
-                     <li>#1 is true. </li>
-                     
+                     								
+                     <li>#1 is true.</li>
+                     							
                   </ul>
-                  
+                  						
                </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
@@ -277,15 +219,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -322,28 +264,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

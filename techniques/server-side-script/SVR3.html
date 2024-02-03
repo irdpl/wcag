@@ -49,8 +49,8 @@
             </nav>
          </aside>
          <main id="main" class="standalone-resource__main">
-            <h1><span>Technique SVR3:</span>Using HTTP referer to ensure that the only way to access non-conforming content is
-               from conforming content
+            <h1><span>Technique SVR3:</span>Using <abbr title="HyperText Transfer Protocol">HTTP</abbr> referer to ensure that the only way to access non-conforming content is from conforming
+               content
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
@@ -63,7 +63,7 @@
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Content created using server-side scripting where a conforming version of content
                   is provided as an alternative to a non-conforming version based on HTTP Referer.
                </p>
@@ -74,17 +74,15 @@
                <p>The objective of this technique is to ensure that users can obtain an accessible version
                   of content where both non-conforming and conforming versions are provided.
                </p>
-               <p>
-                  <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#conf-req1">Conformance Requirement 1</a> allows non-conforming pages to be included within the scope of conformance as long
+               <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#conf-req1">Conformance Requirement 1</a> allows non-conforming pages to be included within the scope of conformance as long
                   as they have a "<a href="https://www.w3.org/TR/WCAG21/#dfn-conforming-alternate-version">conforming alternate version</a>". It is not always possible for authors to include accessibility supported links
                   to conforming content from within non-conforming content. Therefore, authors may need
-                  to rely on the use of Server Side Scripting technologies (ex. PHP, ASP, JSP) to ensure
-                  that the non-conforming version can only be reached from a conforming page.
+                  to rely on the use of Server Side Scripting technologies (ex. <abbr title="PHP: Hypertext Preprocessor">PHP</abbr>, <abbr title="Active Server Pages">ASP</abbr>, <abbr title="Java Server Pages">JSP</abbr>) to ensure that the non-conforming version can only be reached from a conforming
+                  page.
                </p>
                <p>This technique describes how to use information provided by the HTTP referer to ensure
                   that non-conforming content can only be reached from a conforming page. The HTTP referer
-                  header is set by the user agent and contains the URI of the page (if any) which referred
-                  the user agent to the non-conforming page.
+                  header is set by the user agent and contains the <abbr title="Uniform Resource Identifier">URI</abbr> of the page (if any) which referred the user agent to the non-conforming page.
                </p>
                <p>To implement this technique, an author identifies the URI for the conforming version
                   of the content, for each non-conforming page. When a request for the non-conforming
@@ -99,8 +97,8 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-interactive-demonstrations-of-physical-processes">
-                  <h3>Przykład 1: Interactive demonstrations of physical processes</h3>
+               <section class="example" id="example-1-interactive-demonstrations-of-physical-processes">
+                  <h3>Example 1: Interactive demonstrations of physical processes</h3>
                   <p>An online physics course uses a proprietary modeling language to provide interactive
                      demonstrations of physical processes. The user agent for the modeling language is
                      not compatible with assistive technology. The site includes a script that uses the
@@ -111,70 +109,77 @@
                      those who do not are still able to learn about the process.
                   </p>
                </section>
-               <section class="example" id="przyklad-2-using-http-referer-in-php">
-                  <h3>Przykład 2: Using HTTP referer in PHP</h3>
+               <section class="example" id="example-2-using-http-referer-in-php">
+                  <h3>Example 2: Using HTTP referer in PHP</h3>
                   <p>The following example illustrates how this technique can be used in PHP. It includes
                      two files, conforming.php and non-conforming.php which work together to ensure that
                      the only way to access non-conforming content is from conforming content.
                   </p>
-                  <p>conforming.php:</p><pre xml:space="preserve">
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-	"https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-	&lt;head&gt;
-    		&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /&gt;
-    		&lt;title&gt;Conforming Content&lt;/title&gt;
-    	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;h1&gt;This is a conforming page&lt;/h1&gt;
-		&lt;p&gt;From here, you can visit the &lt;a href="non-conforming.php"&gt;non-conforming 
-		page&lt;/a&gt;. &lt;/p&gt;
-	&lt;/body&gt;
-&lt;/html&gt;
-    				</pre><p>non-conforming.php:</p><pre xml:space="preserve">
-&lt;?php 
-// if the request comes from a file that contains the string "conforming.php" then render the page
-	if(stristr($_SERVER['HTTP_REFERER'], "conforming.php")) {
-?&gt;
-
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-	"https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-	&lt;head&gt;
-		&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /&gt;
-		&lt;title&gt;Non-Conforming Content&lt;/title&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;h1&gt;This is a non-conforming page&lt;/h1&gt;
-		&lt;p&gt;Because you came from &lt;?php echo $_SERVER['HTTP_REFERER']; ?&gt;, you are 
-			able to view the content on this page. &lt;/p&gt;
-	&lt;/body&gt;
+                  <section id="conforming-php">
+                     
+                     <h4>Conforming PHP</h4>
+                     <pre xml:space="preserve"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Conforming Content&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;This is a conforming page&lt;/h1&gt;
+  &lt;p&gt;From here, you can visit the &lt;a href="non-conforming.php"&gt;non-conforming 
+    page&lt;/a&gt;.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                     </section>
+                  <section id="non-conforming-php">
+                     
+                     
+                     <h4>Non-conforming PHP</h4>
+                     
+                     <pre xml:space="preserve"><code class="language-php">&lt;?php 
+// if the request comes from a file that contains the string "conforming.php" 
+// then render the page
+  if(stristr($_SERVER['HTTP_REFERER'], "conforming.php")) {
+?&gt;	
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Non-Conforming Content&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;This is a non-conforming page&lt;/h1&gt;
+  &lt;p&gt;Because you came from &lt;?php echo $_SERVER['HTTP_REFERER']; ?&gt;, 
+   you are able to view the content on this page.&lt;/p&gt;
+&lt;/body&gt;
 &lt;/html&gt;
 &lt;?php
-}
-// if the referring page is not conforming.php, then redirect the user to the conforming version
+ }
+// if the referring page is not conforming.php, then redirect the user to 
+// the conforming version
 else  {
 header("Location: conforming.php");
 }
-?&gt;					
-    				</pre><p class="working-example">A working example, <a href="../../working-examples/server-referrer-access-nonconforming/non-conforming.php">Conforming content</a>, is available.
+?&gt;</code></pre>
+                     </section>
+                  <p class="working-example">A working example, <a href="../../working-examples/server-referrer-access-nonconforming/non-conforming.php">Conforming content</a>, is available.
                   </p>
                </section>
             </section>
             <section id="related">
                <h2>Related Techniques</h2>
                <ul>
-                  
+                  	      
                   <li><a href="../general/G136">G136</a></li>
-                  
+                  	      
                   <li><a href="../general/G190">G190</a></li>
-                  
+                  	     
                   <li><a href="../server-side-script/SVR2">SVR2</a></li>
-                  
+                  	     
                   <li><a href="../server-side-script/SVR4">SVR4</a></li>
-                  
+                  	     
                   <li><a href="../css/C29">C29</a></li>
-                  
+                  			
                </ul>
             </section>
             <section id="tests">
@@ -198,7 +203,7 @@ header("Location: conforming.php");
                         
                         <ol>
                            
-                           <li>a <a href="https://w3c.github.io/wcag/guidelines/#" target="terms">conforming alternate version</a> for the non-conforming content
+                           <li>a <a href="https://w3c.github.io/wcag/guidelines/#dfn-conforming-alternate-version" target="terms">conforming alternate version</a> for the non-conforming content
                            </li>
                            
                            <li>a page that includes a link to both the conforming alternate version and the non-conforming
@@ -213,6 +218,7 @@ header("Location: conforming.php");
                   
                </section>
                <section class="results" id="expected-results">
+                  				
                   <h3>Expected Results</h3>
                   
                   <ul>
@@ -236,15 +242,15 @@ header("Location: conforming.php");
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -281,28 +287,26 @@ header("Location: conforming.php");
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

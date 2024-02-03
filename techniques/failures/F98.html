@@ -54,18 +54,16 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/rownolegly-mechanizm-wprowadzania-danych">2.5.6: Równoległy mechanizm wprowadzania danych</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>All technologies that include interactive controls (such as links, form inputs, or
                   complex custom widgets) and that can detect the presence of different input modalities.
                </p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/rownolegly-mechanizm-wprowadzania-danych">2.5.6: Równoległy mechanizm wprowadzania danych</a> (Failure)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -85,15 +83,15 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-only-using-touch-specific-javascript-event-listeners-when-a-touchscreen-is-detected">
-                  <h3>Przykład 1: Only using touch-specific JavaScript event listeners when a touchscreen
+               <section class="example" id="example-1-only-using-touch-specific-javascript-event-listeners-when-a-touchscreen-is-detected">
+                  <h3>Example 1: Only using touch-specific JavaScript event listeners when a touchscreen
                      is detected
                   </h3>
                   <p>These types of approaches have historically been popular for "mobile" specific development,
                      to ensure that touchscreen interactions are more responsive and immediate (due to
                      the way that touch interactions used to add a delay of approximately 300ms between
-                     a "tap" interaction and the generic <code>click</code> event being fired).
-                  </p><pre><code>
+                     a "tap" interaction and the generic click event being fired).
+                  </p><pre><code class="language-javascript">
 /* inferring the presence of a touchscreen based on
    support for the Touch Events API */
 
@@ -101,12 +99,12 @@ if (window.TouchEvent || ('ontouchstart' in window)) {
   /* set up event listeners for touch */
   target.addEventListener('touchend', ...);
   ...
-} else {
+}
+else {
   /* set up event listeners for mouse/keyboard */
   target.addEventListener('click', ...);
   ...
-}
-				</code></pre><pre><code>
+}</code></pre><pre><code class="language-javascript">
 /* inferring the presence of a touchscreen based on
    the CSS Media Queries 4 Interaction Media Features
    match for a "coarse" primary input mechanism */
@@ -115,16 +113,16 @@ if (window.matchMedia &amp;&amp; window.matchMedia("(pointer:coarse)").matches) 
   /* set up event listeners for touch */
   target.addEventListener('touchend', ...);
   ...
-} else {
+}
+else {
   /* set up event listeners for mouse/keyboard */
   target.addEventListener('click', ...);
   ...
-}
-				</code></pre><p>Similarly, web content that omits relevant/necessary keyboard event listeners (e.g.
+}</code></pre><p>Similarly, web content that omits relevant/necessary keyboard event listeners (e.g.
                      for the correct keyboard interaction with a complex widget, such as a tab interface)
                      when a touchscreen is detected - under the assumption that on a touch device, keyboard
                      support won't be necessary.
-                  </p><pre><code>
+                  </p><pre><code class="language-javascript">
 /* inferring the presence of a touchscreen based on
    the navigator.maxTouchPoints property defined in
    the Pointer Events API */
@@ -133,17 +131,17 @@ if (window.PointerEvent &amp;&amp; ('maxTouchPoints' in navigator) &amp;&amp;
     (navigator.maxTouchPoints &gt; 0)) {
 	/* no need to listen to keyboard - there's a touchscreen... */
 	...
-} else {
+}
+else {
 	/* set up event listeners for keyboard interactions */
   target.addEventListener('keyup', ...);
   ...
-}
-				</code></pre><p class="note">Generally, these approaches will <em>also</em> result in a failure of Success Criterion 2.1.1 Keyboard - but only in situations
+}</code></pre><p class="note">Generally, these approaches will <em>also</em> result in a failure of Success Criterion 2.1.1 Keyboard - but only in situations
                      where a touchscreen interface was also detected.
                   </p>
                </section>
-               <section class="example" id="przyklad-2-hiding/omitting-controls-for-mouse-and-keyboard-users-when-a-touchscreen-is-detected">
-                  <h3>Przykład 2: Hiding/omitting controls for mouse and keyboard users when a touchscreen
+               <section class="example" id="example-2-hiding/omitting-controls-for-mouse-and-keyboard-users-when-a-touchscreen-is-detected">
+                  <h3>Example 2: Hiding/omitting controls for mouse and keyboard users when a touchscreen
                      is detected
                   </h3>
                   <p>Web content containing interactive widgets such as content carousels, with visible
@@ -151,15 +149,13 @@ if (window.PointerEvent &amp;&amp; ('maxTouchPoints' in navigator) &amp;&amp;
                      These visible controls are hidden/omitted when a touchscreen is detected, under the
                      assumption that users will simply use touch gestures to operate the widgets, and no
                      other alternatives are then provided for keyboard or mouse users.
-                  </p><pre><code>
-/* using CSS Media Queries 4 Interaction Media Features
+                  </p><pre><code class="language-css">/* using CSS Media Queries 4 Interaction Media Features
    to hide particular elements in the page (such as a container
    with visible controls) when a "coarse" primary input is present */
 
 @media (pointer: coarse) {
   #widget .controls { display: none; }
-}
-				</code></pre><p>Depending on the specific implementation, authors may allow mouse interactions with
+}</code></pre><p>Depending on the specific implementation, authors may allow mouse interactions with
                      widgets that mirror touch gestures - for instance, allowing mouse users to also drag/swipe
                      carousels, rather than just relying on clickable previous/next controls or scrollbars.
                      In these cases, hiding controls when a touchscreen is detected will still allow users
@@ -219,15 +215,15 @@ if (window.PointerEvent &amp;&amp; ('maxTouchPoints' in navigator) &amp;&amp;
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -264,28 +260,26 @@ if (window.PointerEvent &amp;&amp; ('maxTouchPoints' in navigator) &amp;&amp;
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

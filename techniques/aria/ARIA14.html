@@ -56,57 +56,50 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
                </p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a> (Sufficient)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
                <p>For sighted users, the context and visual appearance of an element can provide sufficient
                   cues to determine the purpose. An example is the 'X' often used in the top right corner
-                  of pop-up divs (light boxes) to indicate the control for closing the div.  
+                  of pop-up <code class="language-html">div</code>s (light boxes) to indicate the control for closing the div.  
                   
                </p>
-               <p>In some situations, elements can be given the attribute <code class="att">aria-label</code> to provide an accessible name for situations when there is no visible label due to
+               <p>In some situations, elements can be given the attribute <code class="language-html">aria-label</code> to provide an accessible name for situations when there is no visible label due to
                   a chosen design approach or layout but the context and visual appearance of the control
                   make its purpose clear.
-                  
                </p>
-               <p>In other situations, elements can be given the attribute <code class="att">aria-label</code> to provide an accessible name when the native HTML labeling element is not supported
-                  by the control - for example, when a <code class="el">div</code> set to <code class="att">contentEditable</code> is used instead of native form elements such as input type="text" or <code class="el">textarea</code> in order to provide a richer text editing experience.
-                  
+               <p>In other situations, elements can be given the attribute <code class="language-html">aria-label</code> to provide an accessible name when the native HTML labeling element is not supported
+                  by the control - for example, when a <code class="language-html">div</code> set to <code class="language-html">contentEditable</code> is used instead of native form elements such as <code class="language-html">input type="text"</code> or <code class="language-html">textarea</code> in order to provide a richer text editing experience.
                </p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-a-close-button-x-in-a-pop-up-box">
-                  <h3>Przykład 1: A close button (X) in a pop-up box</h3>
-                  <p>On a page, a link displays a pop-up box (a div) with additional information. The 'close'
-                     element is implemented as a button containing merely the letter 'x'. The property
-                     aria-label="close" is used to provide an accessible name to the button.
-                     
-                  </p><pre xml:space="preserve">&lt;div id="box"&gt;
+               <section class="example" id="example-1-a-close-button-in-a-pop-up-box">
+                  <h3>Example 1: A close button in a pop-up box</h3>
+                  <p>On a page, a link displays a pop-up box (a <code class="language-html">div</code>) with additional information. The 'close' element is implemented as a <code class="language-html">button</code> containing merely the letter 'X'. The property <code class="language-html">aria-label="close"</code> is used to provide an accessible name to the <code class="language-html">button</code>.
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;div id="box"&gt;
    This is a pop-up box.
-   &lt;button aria-label="Close" onclick="document.getElementById('box').style.display='none';" class="close-button"&gt;X&lt;/button&gt;				
-&lt;/div&gt;</pre><p class="working-example">Working example: <a href="../../working-examples/aria-label-invisible-label-box/">Close button example</a>.
+   &lt;button aria-label="Close"&gt;X&lt;/button&gt;				
+&lt;/div&gt;</code></pre><p class="working-example">Working example: <a href="../../working-examples/aria-label-invisible-label-box/">Close button example</a>.
                      
                   </p>
                </section>
-               <section class="example" id="przyklad-2-a-phone-number-with-multiple-fields">
-                  <h3>Przykład 2: A phone number with multiple fields</h3><pre xml:space="preserve">&lt;div role="group" aria-labelledby="groupLabel"&gt;
-  &lt;span id="groupLabel&gt;Work Phone&lt;/span&gt;
-  +&lt;input type="number" aria-label="country code"&gt;
-  &lt;input type="number" aria-label="area code"&gt;
-  &lt;input type="number" aria-label="subscriber number"&gt;
-&lt;/div&gt;</pre></section>
+               <section class="example" id="example-2-a-phone-number-with-multiple-fields">
+                  <h3>Example 2: A phone number with multiple fields</h3><pre xml:space="preserve"><code class="language-html">&lt;div role="group" aria-labelledby="groupLabel"&gt;
+  &lt;span id="groupLabel"&gt;Work Phone&lt;/span&gt;
+  +&lt;input autocomplete="tel-country-code" type="number" aria-label="country code"&gt;
+  &lt;input autocomplete="tel-area-code" type="number" aria-label="area code"&gt;
+  &lt;input autocomplete="tel-local" type="number" aria-label="subscriber number"&gt;
+&lt;/div&gt;</code></pre></section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -119,8 +112,7 @@
                   </li>
                   
                   <li> 
-                     <a href="https://www.w3.org/TR/html-aapi/#accessible-name-and-description-calculation">HTML to Platform Accessibility APIs Implementation Guide: Accessible Name and Description
-                        Calculation</a>
+                     <a href="https://www.w3.org/TR/html-aam/">HTML Accessibility API Mappings</a>
                      
                   </li>
                   
@@ -141,13 +133,13 @@
                <section class="procedure" id="procedure">
                   <h3>Procedure</h3>
                   
-                  <p>For elements that use <code class="att">aria-label</code>:
+                  <p>For elements that use <code class="language-html">aria-label</code>:
                      
                   </p>
                   
                   <ol>
                      
-                     <li>Check that the value of the <code class="att">aria-label</code> attribute properly describes the purpose of an element where user input is required
+                     <li>Check that the value of the <code class="language-html">aria-label</code> attribute properly describes the purpose of an element where user input is required
                         
                      </li>
                      
@@ -178,15 +170,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -223,28 +215,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

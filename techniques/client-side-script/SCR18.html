@@ -55,28 +55,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is
-                     
-                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/identyfikacja-bledu">3.3.1: Identyfikacja błędu</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/sugestie-korekty-bledow">3.3.3: Sugestie korekty błędów</a> and <strong>Advisory</strong> for <a href="https://w3c.github.io/wcag/understanding/sugestie-korekty-bledow">3.3.3: Sugestie korekty błędów</a> and <strong>Advisory</strong> for <a href="https://w3c.github.io/wcag/understanding/zapobieganie-bledom-prawnym-finansowym-w-danych">3.3.4: Zapobieganie błędom (prawnym, finansowym, w danych)</a>
-                     					.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Content that validates user input.</p>
-               <p>This technique relates to:</p>
-               <ul>
-                  <li><a href="https://w3c.github.io/wcag/understanding/identyfikacja-bledu">3.3.1: Identyfikacja błędu</a> (Sufficient)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/sugestie-korekty-bledow">3.3.3: Sugestie korekty błędów</a> (Sufficient)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/sugestie-korekty-bledow">3.3.3: Sugestie korekty błędów</a> (Advisory)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/zapobieganie-bledom-prawnym-finansowym-w-danych">3.3.4: Zapobieganie błędom (prawnym, finansowym, w danych)</a> (Advisory)
-                  </li>
-               </ul>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -89,21 +75,19 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-checking-a-single-control-with-an-event-handler">
-                  <h3>Przykład 1: Checking a single control with an event handler</h3>
-                  <p>The following script will check that a valid date has been entered in the form control.</p><pre xml:space="preserve">
-&lt;label for="date"&gt;Date:&lt;/label&gt;
+               <section class="example" id="example-1-checking-a-single-control-with-an-event-handler">
+                  <h3>Example 1: Checking a single control with an event handler</h3>
+                  <p>The following script will check that a valid date has been entered in the form control.</p><pre xml:space="preserve"><code class="language-html">&lt;label for="date"&gt;Date:&lt;/label&gt;
 &lt;input type="text" name="date" id="date" 
-onchange="if(isNaN(Date.parse(this.value))) 
-alert('This control is not a valid date. 
-Please re-enter the value.');" /&gt;
-</pre></section>
-               <section class="example" id="przyklad-2-checking-multiple-controls-when-the-user-submits-the-form">
-                  <h3>Przykład 2: Checking multiple controls when the user submits the form</h3>
-                  <p>The following sample shows multiple controls in a form. The <code class="el">form</code> element uses the <code class="att">onsubmit</code> attribute which creates an event handler to execute the validation script when the
+  onchange="if(isNaN(Date.parse(this.value))) 
+  alert('This control is not a valid date. 
+  Please re-enter the value.');"&gt;</code></pre></section>
+               <section class="example" id="example-2-checking-multiple-controls-when-the-user-submits-the-form">
+                  <h3>Example 2: Checking multiple controls when the user submits the form</h3>
+                  <p>The following sample shows multiple controls in a form. The <code class="language-html">form</code> element uses the <code class="language-html">onsubmit</code> attribute which creates an event handler to execute the validation script when the
                      user attempts to submit the form. If the validation is successful, the event returns
-                     <code class="propval">true</code> and the form submission proceeds; if the validation finds errors, it displays an
-                     error message and returns <code class="propval">false</code> to cancel the submit attempt so the user can fix the problems.
+                     <code class="javascript">true</code> and the form submission proceeds; if the validation finds errors, it displays an
+                     error message and returns <code class="javascript">false</code> to cancel the submit attempt so the user can fix the problems.
                   </p>
                   <div class="note">
                      				
@@ -113,46 +97,50 @@ Please re-enter the value.');" /&gt;
                         data fixes.
                      </p>
                      				
-                     <p>Although this example uses an <code class="att">onsubmit</code> attribute on the <code class="el">form</code> element for brevity, normal practice is to create a submit event listener when the
+                     <p>Although this example uses an <code class="language-javascript">onsubmit</code> attribute on the <code class="language-html">form</code> element for brevity, normal practice is to create a submit event listener when the
                         page is loaded.
                      </p>
                      			
                   </div>
-                  <p>Script code:</p><pre xml:space="preserve">
-function validate() {
-	// initialize error message
-	var msg = "";
+                  <p>Script code:</p><pre xml:space="preserve"><code class="language-javascript">function validate() {
+  // initialize error message
+  var msg = "";
 	
-	//validate name
-	var pattern = /^[a-zA-Z\s]+$/;
-	var el = document.getElementById("name");
-	if (!pattern.test(el.value))  msg += "Name can only have letters and spaces. ";
+  //validate name
+  var pattern = /^[a-zA-Z\s]+$/;
+  var el = document.getElementById("name");
+  
+  if (!pattern.test(el.value)) {
+    msg += "Name can only have letters and spaces. ";
+  }
 	
-	// validate number
-	var pattern = /^[\d\-+\.\s]+$/;
-	var el = document.getElementById("tel");
-	if (!pattern.test(el.value))  msg += "Telephone number can only have digits and separators. ";
+  // validate number
+  var pattern = /^[\d\-+\.\s]+$/;
+  var el = document.getElementById("tel");
+
+  if (!pattern.test(el.value)) {
+    msg += "Telephone number can only have digits and separators. ";
+  }
 	
-	if (msg != "") {
-		alert(msg);
-		return false;
-	} else return true;
-}
-</pre><p>Form code:</p><pre xml:space="preserve">
-&lt;form action="multiple-controls.html" onsubmit="return validate()"&gt;
-	&lt;p&gt;
-		&lt;label for="name"&gt;Name: &lt;/label&gt;
-		&lt;input type="text" name="name" id="name" /&gt;
-	&lt;/p&gt;
-	&lt;p&gt;
-		&lt;label for="tel"&gt;Telephone number: &lt;/label&gt;
-		&lt;input type="text" name="tel" id="tel" /&gt;				
-	&lt;/p&gt;
-	&lt;p&gt;
-		&lt;input type="submit" /&gt;
-	&lt;/p&gt;
-&lt;/form&gt;
-</pre><p class="working-example">This is demonstrated in the <a href="../../working-examples/script-check-multiple-controls/">working example of checking multiple controls when the user submits the form</a>.
+  if (msg != "") {
+    alert(msg);
+    return false;
+  }
+  else {
+  return true;
+  }</code></pre><p>Form code:</p><pre xml:space="preserve"><code class="language-html">&lt;form action="multiple-controls.html" onsubmit="return validate()"&gt;
+  &lt;div&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input autocomplete="name" id="name" name="name" type="text"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="tel"&gt;Telephone number:&lt;/label&gt;
+    &lt;input autocomplete="tel" id="tel" name="tel" type="tel"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;input type="submit"&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre><p class="working-example">This is demonstrated in the <a href="../../working-examples/script-check-multiple-controls/">working example of checking multiple controls when the user submits the form</a>.
                   </p>
                </section>
             </section>
@@ -204,15 +192,15 @@ function validate() {
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -249,28 +237,26 @@ function validate() {
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

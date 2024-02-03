@@ -58,16 +58,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>All technologies that support images or presentation markup.</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a> (Failure)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -78,66 +76,57 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-using-css-to-style-the-p-element-to-look-like-a-heading">
-                  <h3>Przykład 1: Using CSS to style the <code class="el">p</code> element to look like a heading
+               <section class="example" id="example-1-using-css-to-style-the-p-element-to-look-like-a-heading">
+                  <h3>Example 1: Using CSS to style the <code class="language-html">p</code> element to look like a heading
                   </h3>
                   <p>The author intended to make a heading but didn't want the look of the default HTML
                      heading. So they used CSS to style the P element to look like a heading and they called
                      it a heading. But they failed to use the proper HTML heading element. Therefore, the
-                     Assisitive Technology could not distinguish it as a heading.
-                  </p><pre xml:space="preserve">
- &lt;style type="text/css"&gt;
- .heading1{
-        font-family: Times, serif;
-        font-size:200%;
-        font-weight:bold;
- }
- &lt;/style&gt;
-
- &lt;p class="heading1"&gt;Introduction&lt;/p&gt;
- &lt;p&gt;This introduction provides detailed information about how to use this 
- ........
- &lt;/p&gt;
+                     Assistive Technology could not distinguish it as a heading.
+                  </p><pre xml:space="preserve"><code class="language-css">&lt;style&gt;
+.heading1{
+  font-family: Times, serif;
+  font-size:200%;
+  font-weight:bold;
+}
+&lt;/style&gt;
+</code>
+<code class="language-html">&lt;p class="heading1"&gt;Introduction&lt;/p&gt;
+&lt;p&gt;This introduction provides detailed information about how to use this ...&lt;/p&gt;</code>
 </pre><div class="note">
                      
-                     <p>In this case, the proper approach would be to use CSS to style the <code class="el">H1</code> element in HTML.
+                     <p>In this case, the proper approach would be to use CSS to style the <code class="language-html">H1</code> element in HTML.
                      </p>
                      
                   </div>
                </section>
-               <section class="example" id="przyklad-2-images-of-text-used-as-headings-where-the-images-are-not-marked-up-with-heading-tags">
-                  <h3>Przykład 2: Images of text used as headings where the images are not marked up with
+               <section class="example" id="example-2-images-of-text-used-as-headings-where-the-images-are-not-marked-up-with-heading-tags">
+                  <h3>Example 2: Images of text used as headings where the images are not marked up with
                      heading tags
                   </h3>
                   <p>Chapter1.gif is an image of the words, "Chapter One" in a Garamond font sized at 20
                      pixels. This is a failure because at a minimum the img element should be enclosed
                      within a header element. A better solution would be to eliminate the image and to
                      enclose the text within a header element which has been styled using CSS.
-                  </p><pre xml:space="preserve">
-&lt;img src="Chapter1.gif" alt="Chapter One"&gt;
- 
-&lt;p&gt;Once upon a time in the land of the Web.....
-&lt;/p&gt;
-</pre></section>
-               <section class="example" id="przyklad-3-using-css-to-visually-emphasize-a-phrase-or-word-without-conveying-that-emphasis-semantically">
-                  <h3>Przykład 3: Using CSS to visually emphasize a phrase or word without conveying that
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;img src="Chapter1.gif" alt="Chapter One"&gt;
+&lt;p&gt;Once upon a time in the land of the Web...&lt;/p&gt;</code></pre></section>
+               <section class="example" id="example-3-using-css-to-visually-emphasize-a-phrase-or-word-without-conveying-that-emphasis-semantically">
+                  <h3>Example 3: Using CSS to visually emphasize a phrase or word without conveying that
                      emphasis semantically
                   </h3>
                   <p>The following example fails because the information conveyed by using the CSS font-weight
                      property to change to a bold font is not conveyed through semantic markup or stated
                      explicitly in the text.
                   </p>
-                  <p>Here is a CSS class to specify bold:</p><pre xml:space="preserve">
-.yell {
-  font-weight:bold;
-  text-transform: uppercase;
-}
-</pre><p>And here is the corresponding HTML:</p><pre xml:space="preserve">
-&lt;p&gt;
- "I said, &lt;span class="yell"&gt;no&lt;/span&gt;, not before dinner!", 
- was the exasperated response when Timmy asked his mother for the 
- fourth time for an ice cream cone. 
- &lt;/p&gt;
+                  <p>Here is a CSS class to specify bold:</p><pre xml:space="preserve"><code class="language-css">.yell {
+   font-weight:bold;
+   text-transform: uppercase;
+ }</code>
+</pre><p>And here is the corresponding HTML:</p><pre xml:space="preserve"><code class="language-html">&lt;p&gt;
+   "I said, &lt;span class="yell"&gt;no&lt;/span&gt;, not before dinner!", 
+   was the exasperated response when Timmy asked his mother for the 
+   fourth time for an ice cream cone.
+&lt;/p&gt;</code>
 </pre></section>
             </section>
             <section id="related">
@@ -222,15 +211,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -267,28 +256,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

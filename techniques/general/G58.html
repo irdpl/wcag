@@ -58,26 +58,16 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is
-                     
-                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/audiodeskrypcja-lub-alternatywa-tekstowa-dla-mediow-nagranie">1.2.3: Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)</a> when used with <a href="../general/G69">G69: Providing an alternative for time based media</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/alternatywa-dla-mediow-nagranie">1.2.8: Alternatywa dla mediów (nagranie)</a> when used with <a href="../general/G69">G69: Providing an alternative for time based media</a>
-                     					.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>This technique is not technology specific and can be used in any technology that supports
                   links.
                </p>
-               <p>This technique relates to:</p>
-               <ul>
-                  <li><a href="https://w3c.github.io/wcag/understanding/audiodeskrypcja-lub-alternatywa-tekstowa-dla-mediow-nagranie">1.2.3: Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)</a> (Sufficient when used with <a href="../general/G69">G69: Providing an alternative for time based media</a>)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/alternatywa-dla-mediow-nagranie">1.2.8: Alternatywa dla mediów (nagranie)</a> (Sufficient when used with <a href="../general/G69">G69: Providing an alternative for time based media</a>)
-                  </li>
-               </ul>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -93,70 +83,69 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-an-.mov-document-in-an-html-document">
-                  <h3>Przykład 1: An .MOV Document in an HTML Document</h3>
-                  <p>Code on a page called "Olympic_Sports.htm"</p><pre xml:space="preserve">
-  &lt;a name="Olympic_Wrestling"&gt;&lt;/a&gt;
-  &lt;p&gt;&lt;a href="http://www.example.com/movies/olympic_wrestling.mov"&gt;Olympic Wrestling movie&lt;/a&gt;, 
-  &lt;a href="http://www.example.com/transcripts/olympic_wrestling_transcript.htm"&gt;Olympic 
-  Wrestling collated Transcript&lt;/a&gt;&lt;/p&gt;
-            </pre></section>
-               <section class="example" id="przyklad-2-the-link-back-to-the-.mov-document-in-an-html-document">
-                  <h3>Przykład 2: The link back to the .MOV Document in an HTML Document</h3>
-                  <p>Code on the page olympic_wrestling_transcript.htm</p><pre xml:space="preserve">
-  &lt;p&gt;Sports announcer 1: This is a great battle tonight between England's "Will Johnson" and 
-  "Theodore Derringo" from Argentina&lt;/p&gt;
-  &lt;p&gt;Scenery: There is a mat set out in the middle of the stadium with 500 people in the 
-  stands...&lt;/p&gt;
-  &lt;p&gt; ...more dialogue...&lt;p&gt;
-  &lt;p&gt; ...more scenery...&lt;/p&gt;
-  &lt;p&gt; ...etc...&lt;/p&gt;
-  &lt;p&gt;Sports announcer 2: And that is all for tonight, thank you for joining us tonight where 
-  Will Johnson is the new Gold Medalist. 
-  &lt;a href="../movies/Olympic_Sports.htm#Olympic_Wrestling&gt;Return to Movie page&lt;/a&gt; &lt;/p&gt;
-            </pre></section>
+               <section class="example" id="example-1-a-.mov-document-in-an-html-document">
+                  <h3>Example 1: A .MOV Document in an HTML Document</h3>
+                  <p>Code on a page called "olympic-sports.html"</p><pre xml:space="preserve"><code class="language-html">&lt;p id="olympic-wrestling"&gt;
+  &lt;a href="/movies/olympic-wrestling.mov"&gt;Olympic wrestling movie&lt;/a&gt;, 
+  &lt;a href="/transcripts/olympic-wrestling-transcript.html"&gt;Olympic 
+   wrestling collated transcript&lt;/a&gt;
+&lt;/p&gt;</code></pre></section>
+               <section class="example" id="example-2-the-link-back-to-the-.mov-document-in-an-html-document">
+                  <h3>Example 2: The link back to the .MOV Document in an HTML Document</h3>
+                  <p>Code on the page olympic-wrestling-transcript.html</p><pre xml:space="preserve"><code class="language-html">&lt;p&gt;Sports announcer 1: This is a great battle tonight between England's "Will Johnson"
+   and "Theodore Derringo" from Argentina.&lt;/p&gt;
+&lt;p&gt;Scenery: There is a mat set out in the middle of the stadium with 500 people in the 
+   stands...&lt;/p&gt;
+&lt;p&gt;...more dialogue...&lt;p&gt;
+&lt;p&gt;...more scenery...&lt;/p&gt;
+&lt;p&gt;...etc...&lt;/p&gt;
+&lt;p&gt;Sports announcer 2: And that is all for tonight, thank you for joining us tonight
+   where Will Johnson is the new Gold Medalist. 
+&lt;a href="../movies/olympic-sports.html#olympic-wrestling"&gt;Return to movie page&lt;/a&gt;&lt;/p&gt;</code></pre></section>
             </section>
             <section id="related">
                <h2>Related Techniques</h2>
                <ul>
-                  
+                  			
                   <li><a href="../general/G69">G69</a></li>
-                  
+                  			
                   <li><a href="../general/G159">G159</a></li>
-                  
+                  			
                   <li><a href="../html/H53">H53</a></li>
-                  
+                  		
                </ul>
             </section>
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  			
                   <h3>Procedure</h3>
-                  
+                  			
                   <ol>
-                     
+                     				
                      <li>Check for the presence of a link immediately before or after the non-text content.</li>
-                     
+                     				
                      <li>Check that it is a valid link that points directly to the collated document of this
                         particular synchronized media.
                      </li>
-                     
+                     				
                      <li>Check for the availability of a link or back function to get the user back to the
                         original location of the synchronized media content.
                      </li>
-                     
+                     			
                   </ol>
-                  
+                  		
                </section>
                <section class="results" id="expected-results">
+                  			
                   <h3>Expected Results</h3>
-                  
+                  			
                   <ul>
-                     
+                     				
                      <li>Items #1 through 3 are all true.</li>
-                     
+                     			
                   </ul>
-                  
+                  		
                </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
@@ -172,15 +161,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -217,28 +206,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

@@ -48,7 +48,7 @@
             </nav>
          </aside>
          <main id="main" class="standalone-resource__main">
-            <h1><span>Technique SVR5:</span>Specifying the default language in the HTTP header
+            <h1><span>Technique SVR5:</span>Specifying the default language in the <abbr title="HyperText Transfer Protocol">HTTP</abbr> header
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
@@ -56,82 +56,76 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Advisory</strong> for <a href="https://w3c.github.io/wcag/understanding/jezyk-strony">3.1.1: Język strony</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Server-side technologies, including server-side scripting languages and server configuration
-                  files for setting HTTP headers. 
+                  files for setting HTTP headers.
                </p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/jezyk-strony">3.1.1: Język strony</a> (Advisory)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
                <p>The objective of this technique is to provide information on the  primary language
-                  or languages in a Web Page, in order to identify the  audience of the content. The
-                  Content-Language HTTP header can contain a  list of one or more language codes, which
-                  can be used for language  negotiation between a user agent and a server. If the language
-                  preferences in a user agent are set correctly, language negotiation can  help the
-                  user to find a language version of the content that suits their preferences.
+                  or languages in a Web page, in order to identify the  audience of the content. The
+                  <code>Content-Language</code> HTTP header can contain a  list of one or more language codes, which can be used
+                  for language  negotiation between a user agent and a server. If the language  preferences
+                  in a user agent are set correctly, language negotiation can  help the user to find
+                  a language version of the content that suits their preferences.
                </p>
                <p>Note that the Content-Language HTTP header does not serve to  identify the language
                   used for processing the content. The content  processing language can be identified
-                  by means of other techniques,  such as the attributes lang and xml:lang in markup
-                  languages. 
+                  by means of other techniques, such as the attributes <code class="language-html">lang</code> and <code class="language-xml">xml:lang</code> in markup languages.
                </p>
                <p>This technique ensures that the primary language of the  document, as specified for
-                  example in the lang or xml:lang attribute,  is listed in the Content-Language HTTP
-                  header. 
+                  example in the <code class="language-html">lang</code> or <code class="language-xml">xml:lang</code> attribute, is listed in the <code>Content-Language</code> HTTP header.
                </p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-setting-content-language-in-java-servlet-and-jsp">
-                  <h3>Przykład 1: Setting content language in Java Servlet and JSP</h3>
-                  <p>In Java Servlet or JavaServer Pages (JSP), developers can use response.setHeader("Content-Language",
-                     lang), in which "lang" stands for a language tag (for example, "en" for English):
-                     
-                  </p><pre xml:space="preserve">…
+               <section class="example" id="example-1-setting-content-language-in-java-servlet-and-jsp">
+                  <h3>Example 1: Setting content language in Java Servlet and <abbr title="Java Server Pages">JSP</abbr></h3>
+                  <p>In Java Servlet or JavaServer Pages (JSP), developers can use <code class="language-java">response.setHeader("Content-Language", lang)</code>, in which "lang" stands for a language tag (for example, <code>"en"</code> for English): 
+                  </p><pre xml:space="preserve"><code class="language-java">...
 public void doGet(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException 
-{
-…
-  response.setHeader("Content-Language", "en");
-  PrintWriter out = response.getWriter();
-…
-}</pre></section>
-               <section class="example" id="przyklad-2-setting-content-language-in-php">
-                  <h3>Przykład 2: Setting content language in PHP</h3>
-                  <p>In PHP, developers can send a raw HTTP header with the header method. The following
-                     example sets the language to French: 
-                  </p><pre xml:space="preserve">&lt;?php  header('Content-language: fr');  …  ?&gt;  </pre></section>
+  throws ServletException, IOException {
+   ...
+   response.setHeader("Content-Language", "en");
+   PrintWriter out = response.getWriter();
+   ...
+}</code></pre></section>
+               <section class="example" id="example-2-setting-content-language-in-php">
+                  <h3>Example 2: Setting content language in <abbr title="PHP: Hypertext Preprocessor">PHP</abbr></h3>
+                  <p>In PHP, developers can send a raw <abbr title="HyperText Transfer Protocol">HTTP</abbr> header with the header method. The following example sets the language to French:
+                     
+                  </p><pre xml:space="preserve"><code class="language-php">&lt;?php header('Content-language: fr'); ... ?&gt;</code></pre></section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
                <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
-               <p> 
-                  <a href="https://www.w3.org/International/questions/qa-http-and-lang">W3C Internationalization FAQ: HTTP and meta for language information</a>
-                  						   
-               </p>
-               <p> 
-                  <a href="https://www.w3.org/TR/2014/NOTE-i18n-html-tech-lang-20140603/#metadata">Declaring metadata about the language(s) of the intended audience</a> in Authoring HTML: Language declarations - W3C Working Group Note 3 June 2014. 
-               </p>
-               <p> 
-                  <a href="https://tools.ietf.org/html/rfc7231#section-3.1.3.2">RFC 7321 3.1.3.2.  Content-Language</a></p>
-               <p> 
-                  <a href="http://php.net/manual/en/function.header.php">header</a> in the PHP Manual. 
-               </p>
+               <ul>
+                  		
+                  <li><a href="https://www.w3.org/International/questions/qa-http-and-lang">W3C Internationalization FAQ: HTTP and meta for language information</a></li>
+                  		
+                  <li><a href="https://www.w3.org/TR/2014/NOTE-i18n-html-tech-lang-20140603/#metadata">Declaring metadata about the language(s) of the intended audience</a> in Authoring HTML: Language declarations - W3C Working Group Note 3 June 2014.
+                  </li>
+                  		
+                  <li><a href="https://www.rfc-editor.org/rfc/rfc9110#field.content-language">RFC 9110, 8.5. Content-Language</a></li>
+                  		
+                  <li><a href="https://php.net/manual/en/function.header.php">PHP header</a>.
+                  </li>
+                  	
+               </ul>
             </section>
             <section id="related">
                <h2>Related Techniques</h2>
                <ul>
-                  
+                  		
                   <li><a href="../html/H57">H57</a></li>
-                  
+                  	
                </ul>
             </section>
             <section id="tests">
@@ -141,21 +135,21 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
                   
                   <ol>
                      
-                     <li> Use a Live HTTP Header viewer to find the value of the "Content-Language" header.
-                        
+                     <li>Use a Live HTTP Header viewer to find the value of the <code>Content-Language</code> header. 
                      </li>
                      
-                     <li> Check that this value matches the default language of the Web page. </li>
+                     <li>Check that this value matches the default language of the Web page.</li>
                      
                   </ol>
                   
                </section>
                <section class="results" id="expected-results">
+                  	
                   <h3>Expected Results</h3>
                   
                   <ul>
-                     
-                     <li> Step #2 is true. </li>
+                     		
+                     <li> Step #2 is true.</li>
                      
                   </ul>
                   
@@ -174,15 +168,15 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -219,28 +213,26 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

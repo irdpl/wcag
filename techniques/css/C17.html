@@ -54,16 +54,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Advisory</strong> for <a href="https://w3c.github.io/wcag/understanding/zmiana-rozmiaru-tekstu">1.4.4: Zmiana rozmiaru tekstu</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>(X)HTML, CSS</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/zmiana-rozmiaru-tekstu">1.4.4: Zmiana rozmiaru tekstu</a> (Advisory)</span>.
-               </p>
+               <h2>Applicability</h2>
+               <p><abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr></p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -72,65 +70,83 @@
                   what they have entered in input boxes because the text is displayed at the size required
                   by the user.
                </p>
-               <p>Text-based form controls include input boxes (text and textarea) as well as buttons.</p>
+               <p>Text-based form controls include <code class="language-html">input</code> boxes (<code class="language-html">text</code> and <code class="language-html">textarea</code>) as well as buttons.
+               </p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-a-contact-form">
-                  <h3>Przykład 1: A Contact Form</h3>
+               <section class="example" id="example-1-a-contact-form">
+                  <h3>Example 1: A Contact Form</h3>
                   <p>A Contact Us form has some introductory information and then form controls for users
                      to enter their first name, last name, telephone number and email address. All of the
-                     text and form controls have been implemented in a scalable way. This includes specifying
-                     a font size for the form controls themselves because the font size is not inherited
-                     in Internet Explorer.
+                     text and form controls have been implemented in a scalable way.
                   </p>
-                  <p>The XHTML component:</p><pre xml:space="preserve">&lt;h1&gt;Contact Us&lt;/h1&gt;
-&lt;p&gt;Please provide us with your details and we will contact you as soon as we can. Note that all of the form fields are required.&lt;/p&gt;
-&lt;label for="fname"&gt;First Name&lt;/label&gt;&lt;input type="text" name="fname" id="fname" /&gt;&lt;br /&gt;
-&lt;label for="lname"&gt;Last Name&lt;/label&gt;&lt;input type="text" name="lname" id="lname" /&gt;&lt;br /&gt;
-&lt;label for="phone"&gt;Telephone&lt;/label&gt;&lt;input type="text" name="phone" id="phone" /&gt;&lt;br /&gt;
-&lt;label for="email"&gt;Email&lt;/label&gt;&lt;input type="text" name="email" id="email" /&gt;&lt;br /&gt;
-&lt;input type="submit" name="Submit" value="Submit" id="Submit" /&gt;</pre><p>The CSS component:</p><pre xml:space="preserve">h1 { font-size: 2em; }
-            p, label, input { font-size: 1em; }</pre><p class="working-example">Working example of this code: <a href="../../working-examples/input-resize/">Example of resizing input with CSS</a>.
-                  </p>
-               </section>
-               <section class="example" id="przyklad-2-radio-button">
-                  <h3>Przykład 2: Radio button</h3>
-                  <p>This example works in IE with its text size feature. However, it doesn't scale in
-                     Firefox 2.0.
-                  </p>
-                  <p>The XHTML component:</p><pre xml:space="preserve">&lt;input type="radio" name="r1" value="r1" id="r1" class="geomsize" /&gt;
-&lt;input type="checkbox" name="c1" id="c1" value="c1" class="geomsize" /&gt;</pre><p>The CSS component:</p><pre xml:space="preserve">input.geomsize {
-width: 1.2em;
-height: 1.2em;}</pre><p class="working-example">Working example of this code: <a href="../../working-examples/radio-checkbox-resize/">Example of resizing radio buttons and checkboxes with CSS</a>.
+                  <section id="the-html">
+                     				
+                     <h4>The HTML</h4>
+                     
+                     <pre xml:space="preserve"><code class="language-html">&lt;h1&gt;Contact Us&lt;/h1&gt;
+&lt;p&gt;Please provide us with your details and we will contact you as soon as we can.
+  Note that all of the form fields are required.&lt;/p&gt;
+&lt;div&gt;
+  &lt;label for="fname"&gt;First Name&lt;/label&gt;
+  &lt;input autocomplete="given-name" id="fname" name="fname" type="text"&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;label for="lname"&gt;Last Name&lt;/label&gt;
+  &lt;input autocomplete="family-name" id="lname" name="lname" type="text"&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;label for="phone"&gt;Telephone&lt;/label&gt;
+  &lt;input autocomplete="tel" id="phone" name="phone" type="text"&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;label for="email"&gt;Email&lt;/label&gt;
+  &lt;input autocomplete="email" id="email" name="email" type="text"&gt;
+&lt;/div&gt;
+&lt;input id="submit" name="submit" type="submit" value="Submit"&gt;</code></pre>
+                     				</section>
+                  <section id="the-css">
+                     					
+                     <h4>The CSS component</h4>
+                     
+                     <pre xml:space="preserve"><code class="language-css">h1 { font-size: 2em; }
+p, label { font-size: 1em; }
+label { display:block; }
+input { font: inherit; }
+div { margin-bottom: 1rem; }</code></pre>
+                     				</section>
+                  <p class="working-example">Working example of this code: <a href="../../working-examples/input-resize/">Example of resizing input with CSS</a>.
                   </p>
                </section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  				
                   <h3>Procedure</h3>
-                  
+                  				
                   <ol>
-                     
+                     					
                      <li>Enter some text into text-based form controls that receive user entered text.</li>
-                     
+                     					
                      <li>Increase the text size of the content by 200%.</li>
-                     
+                     					
                      <li>Check that the text in text-based form controls has increased by 200%.</li>
-                     
+                     				
                   </ol>
-                  
+                  			
                </section>
                <section class="results" id="expected-results">
+                  				
                   <h3>Expected Results</h3>
-                  
+                  				
                   <ul>
-                     
+                     					
                      <li>#3 is true.</li>
-                     
+                     				
                   </ul>
-                  
+                  			
                </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
@@ -146,15 +162,15 @@ height: 1.2em;}</pre><p class="working-example">Working example of this code: <a
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -191,28 +207,26 @@ height: 1.2em;}</pre><p class="working-example">Working example of this code: <a
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

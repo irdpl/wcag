@@ -56,24 +56,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is
-                     
-                     						<strong>Advisory</strong> for <a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/naglowki-sekcji">2.4.10: Nagłówki sekcji</a>
-                     					.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Pages with content organized into sections.</p>
-               <p>This technique relates to:</p>
-               <ul>
-                  <li><a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a> (Advisory)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/naglowki-sekcji">2.4.10: Nagłówki sekcji</a> (Sufficient)
-                  </li>
-               </ul>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -81,60 +71,63 @@
                   them. Success Criterion 1.3.1 requires that the headings be marked such that they
                   can be programmatically identified.
                </p>
-               <p>In HTML, this could be done using the HTML heading elements (h1, h2, h3, h4, h5, and
-                  h6). These allow user agents to automatically identify section headings. Other technologies
+               <p>In <abbr title="HyperText Markup Language">HTML</abbr>, this could be done using the HTML heading elements (<code class="language-html">h1</code>, <code class="language-html">h2</code>, <code class="language-html">h3</code>, <code class="language-html">h4</code>, <code class="language-html">h5</code>, and <code class="language-html">h6</code>). These allow user agents to automatically identify section headings. Other technologies
                   use other techniques for identifying headers. To facilitate navigation and understanding
                   of overall document structure, authors should use headings that are properly nested
-                  (e.g., h1 followed by h2, h2 followed by h2 or h3, h3 followed by h3 or h4, etc.).
+                  (e.g., <code class="language-html">h1</code> followed by <code class="language-html">h2</code>, <code class="language-html">h2</code> followed by <code class="language-html">h2</code> or <code class="language-html">h3</code>, <code class="language-html">h3</code> followed by <code class="language-html">h3</code> or <code class="language-html">h4</code>, etc.).
                </p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-headings-used-to-organize-an-html-page">
-                  <h3>Przykład 1: Headings used to organize an HTML page</h3>
+               <section class="example" id="example-1-headings-used-to-organize-an-html-page">
+                  <h3>Example 1: Headings used to organize an HTML page</h3>
                   <p>A page on cooking techniques uses a h1 element for the overall title, and h2 elements
                      for major sections on cooking with oil vs cooking with butter, and h3 elements for
                      sub-sections on oil-cooking techniques.
-                  </p><pre xml:space="preserve">
-              &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-                &lt;head&gt;
-                &lt;title&gt;Cooking techniques&lt;/title&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                &lt;h1&gt;Cooking techniques&lt;/h1&gt;
-                ... some text here ...
-                &lt;h2&gt;Cooking with oil&lt;/h2&gt;
-                ... text of the section ...
-                &lt;h3&gt;Sautéeing&lt;/h3&gt;
-                ...
-                &lt;h3&gt;Deep frying&lt;/h3&gt;
-                &lt;h2&gt;Cooking with butter&lt;/h2&gt;
-                ... text of the section ...
-                &lt;/body&gt;
-              &lt;/html&gt;
-            </pre></section>
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Cooking techniques&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Cooking techniques&lt;/h1&gt;
+    ... some text here ...
+    &lt;h2&gt;Cooking with oil&lt;/h2&gt;
+    ... text of the section ...
+    &lt;h3&gt;Sautéeing&lt;/h3&gt;
+    ...
+    &lt;h3&gt;Deep frying&lt;/h3&gt;
+    &lt;h2&gt;Cooking with butter&lt;/h2&gt;
+    ... text of the section ...
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre></section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
                <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
                <ul>
-                  
+                  			
                   <li>
-                     <a href="http://webaim.org/techniques/semanticstructure/">WebAIM: Semantic Structure</a>
-                     
+                     				<a href="https://webaim.org/techniques/semanticstructure/">WebAIM: Semantic Structure</a>
+                     			
                   </li>
-                  
+                  			
                   <li>
-                     <a href="http://accessibility.psu.edu/headingshtml/">Heading Tags</a>
-                     
+                     				<a href="https://webaim.org/techniques/semanticstructure/">WebAIM: Semantic Structure</a>
+                     			
                   </li>
-                  
+                  			
+                  <li>
+                     				<a href="https://html.spec.whatwg.org/multipage/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">HTML - The <code class="language-html">h1</code>, <code class="language-html">h2</code>, <code class="language-html">h3</code>, <code class="language-html">h4</code>, <code class="language-html">h5</code>, and <code class="language-html">h6</code> elements</a>
+                     			
+                  </li>
+                  		
                </ul>
             </section>
             <section id="related">
                <h2>Related Techniques</h2>
                <ul>
-                  
+                  			
                   <li><a href="../aria/ARIA12">ARIA12</a></li>
                   
                   <li><a href="../html/H42">H42</a></li>
@@ -146,18 +139,20 @@
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  				
                   <h3>Procedure</h3>
-                  
+                  				
                   <ol>
-                     
+                     					
                      <li>Examine a page with content organized into sections.</li>
-                     
+                     					
                      <li>Check that a heading for each section exists.</li>
-                     
+                     				
                   </ol>
                   
                </section>
                <section class="results" id="expected-results">
+                  				
                   <h3>Expected Results</h3>
                   
                   <ul>
@@ -181,15 +176,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -226,28 +221,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

@@ -58,24 +58,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is
-                     
-                     						<strong>Advisory</strong> for <a href="https://w3c.github.io/wcag/understanding/zmiana-rozmiaru-tekstu">1.4.4: Zmiana rozmiaru tekstu</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/prezentacja-wizualna">1.4.8: Prezentacja wizualna</a>
-                     					.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>CSS</p>
-               <p>This technique relates to:</p>
-               <ul>
-                  <li><a href="https://w3c.github.io/wcag/understanding/zmiana-rozmiaru-tekstu">1.4.4: Zmiana rozmiaru tekstu</a> (Advisory)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/prezentacja-wizualna">1.4.8: Prezentacja wizualna</a> (Sufficient)
-                  </li>
-               </ul>
+               <h2>Applicability</h2>
+               <p><abbr title="Cascading Style Sheets">CSS</abbr></p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -85,77 +75,52 @@
                   have trouble keeping their place when reading long lines of text to view and interact
                   with the content more efficiently. This technique also allows for column width to
                   grow wider as font sizes increase, which will reduce the possibility of clipping as
-                  the text size increases..
+                  the text size increases.
                </p>
-               <p>
-                  Note that this technique does not require authors to use CSS to limit the width of
+               <p>Note that this technique does not require authors to use CSS to limit the width of
                   lines of text to less than 80 characters in the default view. Rather, the recommendation
                   to use relative measurements in CSS layouts helps to ensure that authors do not set
                   column widths in such a way that makes it impossible for users to view content with
-                  line lengths of 80 characters or less. 
+                  line lengths of 80 characters or less.
                </p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1">
-                  <h3>Przykład 1</h3>
-                  <p>In this example the <code class="el">div</code> width is set in ems in the stylesheet.
-                  </p>
-                  <div class="note">
-                     
-                     <p>The CSS property max-width is not supported in versions of Internet Explorer 6 and
-                        below.
-                     </p>
-                     
-                  </div><pre xml:space="preserve">#main_content {max-width: 70em}</pre><p>And the text block would be placed inside the <code class="el">div</code> in the content
-                  </p><pre xml:space="preserve">
-&lt;div id="main_content"&gt; 
+               <section class="example" id="example-1">
+                  <h3>Example 1</h3>
+                  <p>In this example the <code class="language-html">div</code> width is set in ems in the stylesheet.
+                  </p><pre xml:space="preserve"><code class="language-css">#main-content {max-width: 70em}</code></pre><p>And the text block would be placed inside the <code class="language-html">div</code> in the content
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;div id="main-content"&gt; 
   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing ...&lt;/p&gt;
-&lt;/div&gt;</pre></section>
-               <section class="example" id="przyklad-2">
-                  <h3>Przykład 2</h3>
-                  <p>In this example the <code class="el">div</code> width is set in percent in the stylesheet
-                  </p><pre xml:space="preserve">#main_content {width: 90%}</pre><p>And the text block would be placed inside the <code class="el">div</code> in the content
-                  </p><pre xml:space="preserve">
-&lt;div id="main_content"&gt; 
+&lt;/div&gt;</code></pre></section>
+               <section class="example" id="example-2">
+                  <h3>Example 2</h3>
+                  <p>In this example the <code class="language-html">div</code> width is set in percent in the stylesheet
+                  </p><pre xml:space="preserve"><code class="language-css">#main-content {width: 90%}</code></pre><p>And the text block would be placed inside the <code class="language-html">div</code> in the content
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;div id="main-content"&gt; 
   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing ...&lt;/p&gt;
-&lt;/div&gt;</pre></section>
+&lt;/div&gt;</code></pre></section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
                <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
                <ul>
-                  
-                  <li> 
-                     <a href="https://www.w3.org/TR/CSS2/box.html">CSS 2 Box Model</a> 
-                     
-                  </li>
-                  
-                  <li> 
-                     <a href="https://www.w3.org/TR/CSS2/visuren.html">CSS 2 Visual formatting Model</a> 
-                     
-                  </li>
-                  
-                  <li> 
-                     <a href="https://www.w3.org/TR/CSS2/visudet.html">CSS 2 Visual formatting Model Details</a> 
-                     
-                  </li>
-                  
+                  				
                   <li>
-                     <a href="https://www.smashingmagazine.com/2009/06/fixed-vs-fluid-vs-elastic-layout-whats-the-right-one-for-you/">Fixed, fluid and elastic layouts</a>
-                     
+                     					<a href="https://www.w3.org/TR/css-box-3/">CSS Box Model Module Level 3</a> 
+                     				
                   </li>
-                  
-                  <li> 
-                     <a href="http://cookiecrook.com/AIR/2003/train/accessiblecss.php">Accessible CSS</a> 
-                     
+                  				
+                  <li>
+                     					<a href="https://www.smashingmagazine.com/2009/06/fixed-vs-fluid-vs-elastic-layout-whats-the-right-one-for-you/">Fixed, fluid and elastic layouts</a>
+                     				
                   </li>
-                  
-                  <li> 
-                     <a href="https://www.maxdesign.com.au/articles/em.html">Ideal line length for content</a> 
-                     
+                  				
+                  <li>
+                     					<a href="http://webtypography.net/2.1.2">Choose a comfortable measure - The Elements of Typographic Style Applied to the Web</a>
+                     				
                   </li>
-                  
+                  			
                </ul>
             </section>
             <section id="tests">
@@ -175,12 +140,13 @@
                   
                </section>
                <section class="results" id="expected-results">
+                  				
                   <h3>Expected Results</h3>
-                  
+                  				
                   <ul>
-                     
+                     					
                      <li>Checks #1 and #2 are true.</li>
-                     
+                     				
                   </ul>
                   
                </section>
@@ -198,15 +164,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -243,28 +209,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

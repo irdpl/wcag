@@ -48,7 +48,7 @@
             </nav>
          </aside>
          <main id="main" class="standalone-resource__main">
-            <h1><span>Technique C7:</span>Using CSS to hide a portion of the link text
+            <h1><span>Technique C7:</span>Using <abbr title="Cascading Style Sheets">CSS</abbr> to hide a portion of the link text
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
@@ -56,30 +56,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is
-                     
-                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/cel-lacza-w-kontekscie">2.4.4: Cel łącza (w kontekście)</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/cel-lacza-z-samego-lacza">2.4.9: Cel łącza (z samego łącza)</a>
-                     					.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>All technologies that support CSS .</p>
-               <p>This technique relates to:</p>
-               <ul>
-                  <li><a href="https://w3c.github.io/wcag/understanding/cel-lacza-w-kontekscie">2.4.4: Cel łącza (w kontekście)</a> (Sufficient when used with Providing a supplemental description of the purpose of
-                     a link using one of the following
-                     techniques:
-                     )
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/cel-lacza-z-samego-lacza">2.4.9: Cel łącza (z samego łącza)</a> (Sufficient when used with Providing a supplemental description of the purpose of
-                     a link using one of the following
-                     techniques:    
-                     )
-                  </li>
-               </ul>
+               <h2>Applicability</h2>
+               <p>All technologies that support CSS.</p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -91,17 +75,15 @@
                   less complete text to be displayed.
                </p>
                <p>This technique works by creating a CSS selector to target text that is to be hidden.
-                  The rule set for the selector places the text to be hidden in a 1-pixel box with overflow
-                  hidden. This ensures the text does not display on screen but remains accessible to
-                  assistive technologies such as screen readers and braille displays. Note that the
-                  technique does not use visibility:hidden or display:none properties, since these can
-                  have the unintentional effect of hiding the text from assistive technology in addition
-                  to preventing on-screen display.
+                  The rule set for the selector places the text to be hidden in a 1-pixel box with <code class="language-css">overflow:hidden</code>. This ensures the text does not display on screen but remains accessible to assistive
+                  technologies such as screen readers and braille displays. Note that the technique
+                  does not use <code class="language-css">visibility:hidden</code> or <code class="language-css">display:none</code> properties, since these have the effect of hiding the text from assistive technology
+                  in addition to preventing on-screen display.
                </p>
-               <p>This technique is <strong>not</strong> a method for hiding complete links, only a section of text within a link. The <a href="#resources">resources</a> below include methods for hiding and showing links aimed at screenreader users.
+               <p>This technique is <strong>not</strong> a method for hiding complete links, only a section of text within a link. The <a href="#resources">resources</a> section includes methods for hiding and showing links aimed at screen reader users.
                </p>
                <div class="note">
-                  
+                  			
                   <p>This technique to hide link text has been advocated by some screen reader users and
                      corporate Web authors. It has proved effective on some Web sites. Other screen reader
                      users and accessibility experts don't recommend this as a general technique because
@@ -109,59 +91,60 @@
                      reader user to control the verbosity. The working group believes the technique can
                      be useful for Web pages that do not have repetitive content in the hidden text areas.
                   </p>
-                  
+                  			
                   <p>This technique can be used in combination with a style switching technique to present
-                     a page that is a <a href="https://w3c.github.io/wcag/guidelines/#" target="terms">conforming alternate version</a> for non-conforming content. Refer to <a href="../css/C29">C29</a> and <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#conforming-alt-versions">Understanding Conforming Alternate Versions</a> for more information. 
+                     a page that is a <a href="https://w3c.github.io/wcag/guidelines/#dfn-conforming-alternate-version" target="terms">conforming alternate version</a> for non-conforming content. Refer to <a href="../css/C29">C29</a> and <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#conforming-alt-versions">Understanding Conforming Alternate Versions</a> for more information.
                   </p>
-                  
+                  		
                </div>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <p>The following examples use the CSS selector and rule set below:</p><pre><code>.visually-hidden {
-   clip-path: inset(100%);
-   clip: rect(1px, 1px, 1px, 1px);
-   height: 1px;
-   overflow: hidden;
-   position: absolute;
-   white-space: nowrap;
-   width: 1px;
-}</code></pre><section class="example" id="przyklad-1">
-                  <h3>Przykład 1</h3>
+               <p>The following examples use the CSS selector and rule set below:</p><pre><code class="language-css">.visually-hidden {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}</code></pre><section class="example" id="example-1-a-news-site-with-&#34;full-story&#34;-links">
+                  <h3>Example 1: A news site with "full story" links</h3>
                   <p>This example describes a news site that has a series of short synopsis of stories
                      followed by a link that says "full story". Hidden link text describes the purpose
                      of the link.
-                  </p><pre><code>
+                  </p><pre><code class="language-html">
 &lt;p&gt;Washington has announced plans to stimulate economic growth.
-  &lt;a href="#"&gt;&lt;span class="visually-hidden"&gt;Washington stimulates economic growth &lt;/span&gt;
-  Full Story&lt;/a&gt;&lt;/p&gt;</code></pre></section>
-               <section class="example" id="przyklad-2">
-                  <h3>Przykład 2</h3>
+  &lt;a href="/washington-growth/"&gt;&lt;span class="visually-hidden"&gt;Washington stimulates
+   economic growth &lt;/span&gt;Full Story&lt;/a&gt;
+&lt;/p&gt;</code></pre></section>
+               <section class="example" id="example-2-a-list-of-books-in-different-formats">
+                  <h3>Example 2: A list of books in different formats</h3>
                   <p>This example describes a resource that has electronic books in different formats.
-                     The title of each book is followed by links that say "HTML" and "PDF." Hidden text
-                     describes the purpose of each link.
-                  </p><pre><code>&lt;dl&gt;
-&lt;dt&gt;Winnie the Pooh &lt;/dt&gt;
-   &lt;dd&gt;&lt;a href="winnie_the_pooh.html"&gt;
-      &lt;span class="visually-hidden"&gt;Winnie the Pooh &lt;/span&gt;HTML&lt;/a&gt;&lt;/dd&gt;
-   &lt;dd&gt;&lt;a href="winnie_the_pooh.pdf"&gt;
-         &lt;span class="visually-hidden"&gt;Winnie the Pooh &lt;/span&gt;PDF&lt;/a&gt;&lt;/dd&gt;
-&lt;dt&gt;War and Peace&lt;/dt&gt;
-    &lt;dd&gt;&lt;a href="war_and_peace.html"&gt;
-      &lt;span class="visually-hidden"&gt;War and Peace &lt;/span&gt;HTML&lt;/a&gt;&lt;/dd&gt; 
-    &lt;dd&gt;&lt;a href="war_and_peace.pdf"&gt;
-      &lt;span class="visually-hidden"&gt;War and Peace &lt;/span&gt;PDF&lt;/a&gt;&lt;/dd&gt;
+                     The title of each book is followed by links that say "HTML" and "PDF." Visually-hidden
+                     text describes the purpose of each link.
+                  </p><pre><code class="language-html">&lt;dl&gt;
+  &lt;dt&gt;Winnie the Pooh&lt;/dt&gt;
+  &lt;dd&gt;&lt;a href="winnie-the-pooh.html"&gt;
+    &lt;span class="visually-hidden"&gt;Winnie the Pooh &lt;/span&gt;HTML&lt;/a&gt;&lt;/dd&gt;
+  &lt;dd&gt;&lt;a href="winnie_the_pooh.pdf"&gt;
+    &lt;span class="visually-hidden"&gt;Winnie the Pooh &lt;/span&gt;PDF&lt;/a&gt;&lt;/dd&gt;
+  &lt;dt&gt;War and Peace&lt;/dt&gt;
+  &lt;dd&gt;&lt;a href="war-and-peace.html"&gt;
+    &lt;span class="visually-hidden"&gt;War and Peace &lt;/span&gt;HTML&lt;/a&gt;&lt;/dd&gt; 
+  &lt;dd&gt;&lt;a href="war_and_peace.pdf"&gt;
+    &lt;span class="visually-hidden"&gt;War and Peace &lt;/span&gt;PDF&lt;/a&gt;&lt;/dd&gt;
 &lt;/dl&gt;</code></pre></section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
                <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
                <ul>
-                  
+                  			
                   <li><a href="https://developer.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/">HTML5 Accessibility Chops: hidden and aria-hidden</a></li>
-                  
+                  			
                   <li><a href="http://webaim.org/techniques/css/invisiblecontent/">CSS in Action: Invisible Content Just for Screen Reader Users</a></li>
-                  
+                  		
                </ul>
             </section>
             <section id="related">
@@ -218,15 +201,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -263,28 +246,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

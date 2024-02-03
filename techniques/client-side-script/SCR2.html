@@ -54,32 +54,31 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/klawiatura">2.1.1: Klawiatura</a> when used with <a href="../general/G90">G90: Providing keyboard-triggered event handlers</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>HTML with scripting support.</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/klawiatura">2.1.1: Klawiatura</a> (Sufficient when used with <a href="../general/G90">G90: Providing keyboard-triggered event handlers</a>)</span>.
+               <h2>Applicability</h2>
+               <p><abbr title="HyperText Markup Language">HTML</abbr> with scripting support.
                </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
                <p>The objective of this technique is to demonstrate using device independent events
-                  to change a decorative image in response to a mouse or focus event. Use the <code>onmouseover</code> and <code>onmouseout</code> events to change a decorative image when the mouse moves on top of or away from an
-                  element on the page. Also, use the <code>onfocus</code> and <code>onblur</code> events to change the image when the element receives and loses focus.
+                  to change a decorative image in response to a mouse or focus event. Use the <code class="language-javascript">onmouseover</code> and <code class="language-javascript">onmouseout</code> events to change a decorative image when the mouse moves on top of or away from an
+                  element on the page. Also, use the <code class="language-javascript">onfocus</code> and <code class="language-javascript">onblur</code> events to change the image when the element receives and loses focus.
                </p>
                <p>The example below has a decorative image in front of an anchor element. When the user
                   mouses over the anchor tag, the decorative image in front of the anchor is changed.
                   When the mouse moves off of the anchor, the image is changed back to its original
                   version. The same image change effect occurs when the user gives keyboard focus to
                   the anchor element. When focus is received the image changes, when focus is lost the
-                  image is changed back. This is accomplished by attaching <code>onmouseover</code>, <code>onmouseout</code>, <code>onfocus</code> and <code class="language-javascript">onblur</code> event handlers to the anchor element. The event handler is a JavaScript function
+                  image is changed back. This is accomplished by attaching <code class="language-javascript">onmouseover</code>, <code class="language-javascript">onmouseout</code>, <code class="language-javascript">onfocus</code> and <code class="language-javascript">onblur</code> event handlers to the anchor element. The event handler is a JavaScript function
                   called <code class="language-javascript">updateImage()</code>, which changes the <code class="language-html">src</code> attribute of the image. The <code class="language-javascript">updateImage()</code> is called in response to the <code class="language-javascript">onmouseover</code>, <code class="language-javascript">onmouseout</code>, <code class="language-javascript">onfocus</code>, and <code class="language-javascript">onblur</code> events.
                </p>
-               <p>Each image is given a unique <code class="language-html">id</code>. This unique <code class="language-html">id</code> is passed to <code>updateImage()</code> along with a boolean value indicating which image is to be used: <code>updateImage(imgId, isOver)</code>;. The boolean value of true is passed when the mouse is over the anchor element or
+               <p>Each image is given a unique <code class="language-html">id</code>. This unique <code class="language-html">id</code> is passed to <code class="language-javascript">updateImage()</code> along with a boolean value indicating which image is to be used: <code class="language-javascript">updateImage(imgId, isOver)</code>;. The boolean value of true is passed when the mouse is over the anchor element or
                   it has focus. A false value is passed when the mouse moves off of the anchor element
                   or it loses focus. The <code class="language-javascript">updateImage()</code> function uses the image <code class="language-html">id</code> to load the image and then changes the <code class="language-html">src</code> attribute based on the boolean value. Note that since the image is for decorative
                   purposes, it has a null <code class="language-html">alt</code> attribute.
@@ -95,46 +94,45 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1">
-                  <h3>Przykład 1</h3><pre xml:space="preserve">&lt;!doctype html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;Changing Image Source in a Device Independent Manner&lt;/title&gt;
-  &lt;script&gt;
-    /* This function will change the image src of an image element.
-     * param imgId - the id of the image object to change
-     * param isOver - true when mouse is over or object has focus,
-      false when mouse move out or focus is lost
-    */
-    function updateImage(imgId, isOver) {
-    var theImage = document.getElementById(imgId);
-    if (theImage != null) {
-      if (isOver) {
-        theImage.setAttribute("src","yellowplus.gif");
-      }
-      else {
-        theImage.setAttribute("src","greyplus.gif");
-      }
-    }
-  }
-  &lt;/script&gt;
- &lt;/head&gt;
- &lt;body&gt;
- &lt;p&gt;Mouse over or tab to the links below and see the image change.&lt;/p&gt;
- &lt;a href="https://www.w3.org/WAI/"
-    onmouseover="updateImage('wai', true);" onfocus="updateImage('wai', true);"
-    onmouseout="updateImage('wai',false);" onblur="updateImage('wai',false);"&gt;
-    &lt;img alt="" id="wai" src="greyplus.gif"&gt;
-    W3C Web Accessibility Initiative&lt;/a&gt; &amp;amp;
- &lt;a href="https://www.w3.org/International/" onmouseover="updateImage('i18n', true);" 
-    onfocus="updateImage('i18n',true);" onmouseout="updateImage('i18n',false);"
-    onblur="updateImage('i18n',false);"&gt;
-    &lt;img alt="" id="i18n" src="greyplus.gif"&gt;
-    W3C Internationalization&lt;/a&gt;
- &lt;/body&gt;
- &lt;/html&gt;
-</pre></section>
+               <section class="example" id="example-1">
+                  <h3>Example 1</h3><pre xml:space="preserve"><code class="language-html">&lt;!doctype html&gt;
+  &lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Changing Image Source in a Device Independent Manner&lt;/title&gt;
+    &lt;script&gt;
+       /* This function will change the image src of an image element.
+        * param imgId - the id of the image object to change
+        * param isOver - true when mouse is over or object has focus,
+         false when mouse move out or focus is lost
+       */
+       function updateImage(imgId, isOver) {
+       var theImage = document.getElementById(imgId);
+       if (theImage != null) {
+         if (isOver) {
+           theImage.setAttribute("src","yellowplus.gif");
+         }
+         else {
+           theImage.setAttribute("src","greyplus.gif");
+         }
+       }
+     }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Mouse over or tab to the links below and see the image change.&lt;/p&gt;
+    &lt;a href="https://www.w3.org/WAI/"
+       onmouseover="updateImage('wai', true);" onfocus="updateImage('wai', true);"
+       onmouseout="updateImage('wai',false);" onblur="updateImage('wai',false);"&gt;
+       &lt;img alt="" id="wai" src="greyplus.gif"&gt;
+       W3C Web Accessibility Initiative&lt;/a&gt; &amp;amp;
+    &lt;a href="https://www.w3.org/International/" onmouseover="updateImage('i18n', true);" 
+       onfocus="updateImage('i18n',true);" onmouseout="updateImage('i18n',false);"
+       onblur="updateImage('i18n',false);"&gt;
+       &lt;img alt="" id="i18n" src="greyplus.gif"&gt;
+       W3C Internationalization&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre></section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -151,7 +149,7 @@
                      
                      <li>
                         
-                        <p>Using the Mouse</p>
+                        <p>Using the mouse:</p>
                         
                         <ol>
                            
@@ -169,7 +167,7 @@
                      
                      <li>
                         
-                        <p>Using the Keyboard</p>
+                        <p>Using the keyboard:</p>
                         
                         <ol>
                            
@@ -216,15 +214,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -261,28 +259,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

@@ -47,7 +47,7 @@
             </nav>
          </aside>
          <main id="main" class="standalone-resource__main">
-            <h1><span>Technique C18:</span>Using CSS margin and padding rules instead of spacer images for layout design
+            <h1><span>Technique C18:</span>Using <abbr title="Cascading Style Sheets">CSS</abbr> margin and padding rules instead of spacer images for layout design
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
@@ -55,16 +55,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Advisory</strong> for <a href="https://w3c.github.io/wcag/understanding/tresc-nietekstowa">1.1.1: Treść nietekstowa</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>All technologies that support CSS</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/tresc-nietekstowa">1.1.1: Treść nietekstowa</a> (Advisory)</span>.
-               </p>
+               <h2>Applicability</h2>
+               <p><abbr title="Cascading Style Sheets">CSS</abbr></p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -72,73 +70,49 @@
                   better control over layout, for example in tables or to indent a paragraph. However,
                   Cascading Style Sheets (CSS) allow sufficient control over layout to replace spacer
                   images. The CSS properties for margins and padding can be used on their own or in
-                  combination to control the layout. The margin properties ('margin-top', 'margin-right',
-                  'margin-bottom', 'margin-left', and the shorthand 'margin') can be used on any element
-                  that is displayed as a block; they add space at the outside of an element. The padding
-                  properties ('padding-top', 'padding-right', 'padding-bottom', 'padding-left', and
-                  the shorthand 'padding') can be used on any element; they add space inside the element.
+                  combination to control the layout. The margin properties ('<code class="language-css">margin-top</code>', '<code class="language-css">margin-right</code>', '<code class="language-css">margin-bottom</code>', '<code class="language-css">margin-left</code>', and the shorthand '<code class="language-css">margin</code>') can be used on any element that is displayed as a block; they add space at the
+                  outside of an element. The padding properties ('<code class="language-css">padding-top</code>', '<code class="language-css">padding-right</code>', '<code class="language-css">padding-bottom</code>', '<code class="language-css">padding-left</code>', and the shorthand '<code class="language-css">padding</code>') can be used on any element; they add space inside the element.
                </p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1">
-                  <h3>Przykład 1</h3>
+               <section class="example" id="example-1-the-css">
+                  <h3>Example 1: The CSS</h3>
                   <p>The following example consists of two parts: the CSS code, which specifies a margin
-                     on all sides of the table, and padding for the table cells; and the HTML code for
-                     the table, which does not contain spacer images and is not nested inside another table.
-                  </p><pre xml:space="preserve">
-              
-              table { margin: .5em; border-collapse: collapse; } 
-              td, th { padding: .4em; border: 1px solid #000; }
-            
-            ...
-            
-              &lt;table summary="Titles, authors and publication dates of books in Web development category"&gt;
-                &lt;caption&gt;Books in the category 'Web development'&lt;/caption&gt;
-                &lt;thead&gt;
-                  &lt;tr&gt;
-                    &lt;th&gt;Title&lt;/th&gt;
-                    &lt;th&gt;Author&lt;/th&gt;
-                    &lt;th&gt;Date&lt;/th&gt;
-                  &lt;/tr&gt;
-                &lt;/thead&gt;
-                &lt;tbody&gt;
-                  &lt;tr&gt;
-                    &lt;td&gt;How to Think Straight About Web Standards&lt;/td&gt;
-                    &lt;td&gt;Andrew Stanovich&lt;/td&gt;
-                    &lt;td&gt;1 April 2007&lt;/td&gt;
-                  &lt;/tr&gt;
-                &lt;/tbody&gt;
-              &lt;/table&gt;
-            
-            </pre></section>
+                     on all sides of the table, and padding for the table cells; and the <abbr title="HyperText Markup Language">HTML</abbr> code for the table, which does not contain spacer images and is not nested inside
+                     another table.
+                  </p><pre xml:space="preserve"><code class="language-css">table { margin: .5em; border-collapse: collapse; } 
+td, th { padding: .4em; border: 1px solid #000; }</code></pre><pre><code class="language-html">&lt;table&gt;
+  &lt;caption&gt;Books in the category 'Web development'&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Title&lt;/th&gt;
+      &lt;th&gt;Author&lt;/th&gt;
+      &lt;th&gt;Date&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;How to Think Straight About Web Standards&lt;/td&gt;
+      &lt;td&gt;Andrew Stanovich&lt;/td&gt;
+      &lt;td&gt;1 April 2007&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre></section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
                <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
                <ul>
-                  
+                  						
                   <li>
-                     <a href="https://www.w3.org/TR/CSS2/box.html#margin-properties">Margin properties: 'margin-top', 'margin-right', 'margin-bottom', 'margin-left', and
-                        'margin' in the CSS2 specification</a>
-                     
+                     							<a href="https://www.w3.org/TR/CSS2/box.html#margin-properties">Margin properties: '<code class="language-css">margin-top</code>', '<code class="language-css">margin-right</code>', '<code class="language-css">margin-bottom</code>', '<code class="language-css">margin-left</code>', and '<code class="language-css">margin</code>' in the CSS2 specification</a>
+                     						
                   </li>
                   
                   <li>
-                     <a href="https://www.w3.org/TR/CSS2/box.html#padding-properties">Padding properties: 'padding-top', 'padding-right', 'padding-bottom', 'padding-left',
-                        and 'padding' in the CSS2 specification</a>
-                     
-                  </li>
-                  
-                  
-                  <li>
-                     <a href="https://en.wikipedia.org/wiki/Internet_Explorer_box_model_bug">IE box model bug</a>
-                     
-                  </li>
-                  
-                  <li>
-                     <a href="http://www.456bereastreet.com/archive/200612/internet_explorer_and_the_css_box_model/">Internet Explorer and the CSS box model </a>
-                     
+                     							<a href="https://www.w3.org/TR/CSS2/box.html#padding-properties">Padding properties: '<code class="language-css">padding-top</code>', '<code class="language-css">padding-right</code>', '<code class="language-css">padding-bottom</code>', '<code class="language-css">padding-left</code>', and '<code class="language-css">padding</code>' in the CSS2 specification</a>
+                     						
                   </li>
                   
                </ul>
@@ -156,15 +130,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -201,28 +175,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

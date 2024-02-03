@@ -42,7 +42,6 @@
                         <li><a href="#applicability">Applicability</a></li>
                         <li><a href="#description">Description</a></li>
                         <li><a href="#examples">Examples</a></li>
-                        <li><a href="#resources">Related Resources</a></li>
                         <li><a href="#related">Related Techniques</a></li>
                         <li><a href="#tests">Tests</a></li>
                      </ul>
@@ -52,8 +51,7 @@
          </aside>
          <main id="main" class="standalone-resource__main">
             <h1><span>Technique C23:</span>Specifying text and background colors of secondary content such as banners, features
-               and navigation in CSS while not specifying text and background colors of the main
-               content
+               and navigation in <abbr title="Cascading Style Sheets">CSS</abbr> while not specifying text and background colors of the main content
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
@@ -61,16 +59,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/prezentacja-wizualna">1.4.8: Prezentacja wizualna</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Pages that use CSS.</p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/prezentacja-wizualna">1.4.8: Prezentacja wizualna</a> (Sufficient)</span>.
-               </p>
+               <h2>Applicability</h2>
+               <p>CSS</p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -79,7 +75,7 @@
                   of the main content while retaining visual clues to the groupings and organization
                   of the web page. When a user overrides the foreground and background colors of all
                   the text on a page, visual clues to the grouping and organization of the Web page
-                  may be lost, making it much more difficult to understand and use. 
+                  may be lost, making it much more difficult to understand and use.
                </p>
                <p>When an author does not specify the colors of the text and background of the main
                   content, it is possible to change the colors of those regions in the browser without
@@ -94,18 +90,18 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1">
-                  <h3>Przykład 1</h3>
-                  <p>An HTML Web page uses CSS to specify the text and background colors of all secondary
-                     content such as navigation bars, menu bars, and the table of contents. Neither the
-                     text color nor background of the main content is specified. The user sets their own
-                     color preferences in the browser so that they view the main content in colors and
-                     contrasts that work well for them. The distinction between the separate sections of
-                     the page are still visually obvious. 
+               <section class="example" id="example-1">
+                  <h3>Example 1</h3>
+                  <p>An <abbr title="HyperText Markup Language">HTML</abbr> Web page uses CSS to specify the text and background colors of all secondary content
+                     such as navigation bars, menu bars, and the table of contents. Neither the text color
+                     nor background of the main content is specified. The user sets their own color preferences
+                     in the browser so that they view the main content in colors and contrasts that work
+                     well for them. The distinction between the separate sections of the page are still
+                     visually obvious.
                   </p>
                </section>
-               <section class="example" id="przyklad-2">
-                  <h3>Przykład 2</h3>
+               <section class="example" id="example-2">
+                  <h3>Example 2</h3>
                   <p>A music magazine has an article that is blue text on a white background. The site
                      provides a link near the beginning of the page which assigns a different style sheet
                      to the page. The new style sheet does not have any colors specified for the text or
@@ -113,73 +109,63 @@
                   </p>
                </section>
             </section>
-            <section id="resources">
-               <h3 style="margin-bottom: 0;">Other sources</h3>
-               <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
-               <ul>
-                  
-                  <li>
-                     <a href="https://mcmw.abilitynet.org.uk/?Adjustment=Colour%20settings">AbilityNet guide to changing the colours in various browsers</a>
-                     
-                  </li>
-                  
-               </ul>
-            </section>
             <section id="related">
                <h2>Related Techniques</h2>
                <ul>
-                  
+                  					
                   <li><a href="../general/G148">G148</a></li>
-                  
+                  					
                   <li><a href="../general/G156">G156</a></li>
-                  
+                  					
                   <li><a href="../general/G175">G175</a></li>
-                  
+                  					
                   <li><a href="../css/C25">C25</a></li>
-                  
+                  				
                </ul>
             </section>
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  				
                   <h3>Procedure</h3>
-                  
+                  				
                   <ol>
-                     
+                     					
                      <li>
-                        
+                        						
                         <p>Change the text, link and background colors in the browser settings so they are different
                            from the default color and different from those specified in the secondary content.
                         </p>
-                        
+                        						
                         <div class="note">
-                           
+                           							
                            <p>Do not select the option that tells the browser to ignore the colors specified in
-                              the page. 
+                              the page.
                            </p>
-                           
+                           						
                         </div>
-                        
+                        					
                      </li>
                      
-                     <li>Check that the main content uses the new text, link and background colors. </li>
+                     <li>Check that the main content uses the new text, link and background colors.</li>
                      
                      <li>Check that the colors of the text, links and backgrounds in the secondary content
-                        has not changed. 
+                        has not changed.
                      </li>
-                     
+                     				
                   </ol>
-                  
+                  			
                </section>
                <section class="results" id="expected-results">
+                  				
                   <h3>Expected Results</h3>
                   
                   <ul>
-                     
-                     <li>Checks #2 and #3 are true. </li>
+                     					
+                     <li>Checks #2 and #3 are true.</li>
                      
                   </ul>
-                  
+                  				
                </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
@@ -195,15 +181,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -240,28 +226,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

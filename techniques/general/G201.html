@@ -55,24 +55,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is
-                     
-                     						<strong>Advisory</strong> for <a href="https://w3c.github.io/wcag/understanding/po-otrzymaniu-fokusu">3.2.1: Po otrzymaniu fokusu</a> and <strong>Advisory</strong> for <a href="https://w3c.github.io/wcag/understanding/podczas-wprowadzania-danych">3.2.2: Podczas wprowadzania danych</a>
-                     					.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Pages that open new windows</p>
-               <p>This technique relates to:</p>
-               <ul>
-                  <li><a href="https://w3c.github.io/wcag/understanding/po-otrzymaniu-fokusu">3.2.1: Po otrzymaniu fokusu</a> (Advisory)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/podczas-wprowadzania-danych">3.2.2: Podczas wprowadzania danych</a> (Advisory)
-                  </li>
-               </ul>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -90,72 +80,57 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-including-the-warning-in-the-text-describing-a-control">
-                  <h3>Przykład 1: Including the warning in the text describing a control</h3>
+               <section class="example" id="example-1-including-the-warning-in-the-text-describing-a-control">
+                  <h3>Example 1: Including the warning in the text describing a control</h3>
                   <p>The name or label that describes a control can include the warning
                      about opening in a new window.
-                  </p><pre xml:space="preserve">
-              &lt;a href="knitting.html" target="_blank"&gt;All about Knitting 
-                (opens in new window)&lt;/a&gt;
-            </pre></section>
-               <section class="example" id="przyklad-2-using-css-to-provide-a-warning-before-opening-a-new-window">
-                  <h3>Przykład 2: Using CSS to provide a warning before opening a new window</h3>
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;a href="knitting.html" rel="noopener" target="_blank"&gt;
+  All about Knitting (opens in new window)
+&lt;/a&gt;</code></pre></section>
+               <section class="example" id="example-2-using-css-to-provide-a-warning-before-opening-a-new-window">
+                  <h3>Example 2: Using CSS to provide a warning before opening a new window</h3>
                   <p>The code below uses CSS to provide a warning before opening a new
                      window.
-                  </p><pre xml:space="preserve">
-              &lt;html&gt;
-                &lt;head&gt;
-                &lt;title&gt;Pop-Up Warning&lt;/title&gt;
-                &lt;style type="text/css"&gt;
-                body {
-                margin-left:2em;
-                margin-right:2em;
-                }
-                :focus { outline: 0; }
-                a.info {
-                position:relative;
-                z-index:24;
-                background-color:#ccc;
-                color:#000;
-                text-decoration:none
-                }
-                a.info:hover, a.info:focus, a.info:active {
-                z-index:25;
-                background-color:#ff0
-                }
-                a.info span {
-                position: absolute;
-                left: -9000px;
-                width: 0;
-                overflow: hidden;
-                }
-                a.info:hover span, a.info:focus span, a.info:active span {
-                display:block;
-                position:absolute;
-                top:1em; left:1em; width:12em;
-                border:1px solid #0cf;
-                background-color:#cff;
-                color:#000;
-                text-align: center
-                }
-                div.example {
-                margin-left: 5em;
-                }
-                &lt;/style&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                &lt;h1&gt;Pop-Up Warning&lt;/h1&gt;
-                &lt;p&gt; This is an example of an &lt;a class="info"
-                href="popup_advisory_technique.html" target="_blank"&gt;
-                &lt;strong&gt;External link&lt;/strong&gt;&lt;span&gt;Opens a new
-                window&lt;/span&gt;&lt;/a&gt;
-                &lt;/p&gt;
-                &lt;/body&gt;
-                &lt;/html&gt;
-            </pre><p class="working-example">A
-                     <a href="../../working-examples/css-new-window-warn/">working
-                        example of Using CSS to provide a warning before opening a new window</a>
-                     is available.
+                  </p><pre xml:space="preserve"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Link opens in new window notification&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      background:#fff;
+      color: #000;
+      font: 1rem/1.5 system-ui, "Segoe UI", Roboto, Helvetica, sans-serif;
+    }
+
+    [hidden] {
+      display:none;
+    }
+
+    .new-window-icon {
+      fill:currentColor;
+      height:0.75rem;
+      margin-inline-start:0.3em;
+      vertical-align:middle;
+      width:0.75rem;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;svg hidden&gt;
+    &lt;symbol id="new-window-icon" viewBox="0 0 12 12"&gt;
+      &lt;title id="new-win-desc"&gt;opens in a new window&lt;/title&gt;			
+      ...
+    &lt;/symbol&gt;
+  &lt;/svg&gt;
+
+  &lt;h1&gt;Link opens in new window notification&lt;/h1&gt;
+  &lt;p&gt;This is an example of an 
+     &lt;a aria-describedby="new-win-desc" href="https://example.com" rel="noopener" 
+     target="_blank"&gt;external link&lt;svg class="new-window-icon" aria-hidden="true"
+     role="img"&gt;&lt;use href="#new-window-icon"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre><p class="working-example">A <a href="../../working-examples/css-new-window-warn/">working example of Using CSS to provide a warning before opening a new window</a> is available.
                   </p>
                </section>
             </section>
@@ -174,26 +149,26 @@
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  
                   <h3>Procedure</h3>
                   
-                  <p>For each link that opens automatically in a new window or tab when
-                     a change of context is initiated by a user request:
+                  <p>For each link that opens automatically in a new window or tab when a change of context
+                     is initiated by a user request:
                   </p>
                   
                   <ol>
                      
-                     <li>Check that there is a warning spoken in assistive technology that
-                        this link opens to a new window.
-                     </li>
-                     
-                     <li>Check that there is a visual warning in text that this link opens
+                     <li>Check that there is a warning spoken in assistive technology that this link opens
                         to a new window.
                      </li>
+                     
+                     <li>Check that there is a visual warning in text that this link opens to a new window.</li>
                      
                   </ol>
                   
                </section>
                <section class="results" id="expected-results">
+                  
                   <h3>Expected Results</h3>
                   
                   <ul>
@@ -217,15 +192,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -262,28 +237,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

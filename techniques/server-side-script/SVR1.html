@@ -3,7 +3,7 @@
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>SVR1: Implementing automatic redirects on the server side instead of on the
-         client side | WAI | W3C
+         	client side | WAI | W3C
       </title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
@@ -50,7 +50,7 @@
          </aside>
          <main id="main" class="standalone-resource__main">
             <h1><span>Technique SVR1:</span>Implementing automatic redirects on the server side instead of on the
-               client side
+               	client side
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
@@ -58,182 +58,147 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/zmiana-na-zadanie">3.2.5: Zmiana na żądanie</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p> Server-side technologies, including server-side scripting languages and
-                  server configuration files with URLs or URL patterns for redirects. 
+               <h2>Applicability</h2>
+               <p>Server-side technologies, including server-side scripting languages and
+                  		server configuration files with URLs or URL patterns for redirects.
                </p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/zmiana-na-zadanie">3.2.5: Zmiana na żądanie</a> (Sufficient)</span>.
-               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
-               <p> The objective of this technique is to avoid confusion that may be caused
-                  when two new pages are loaded in quick succession because one page (the one
-                  requested by the user) redirects to another. Some user agents support the
-                  use of the HTML meta element to redirect the user to another page
-                  after a specified number of seconds. This makes a page inaccessible to some
-                  users, especially users with screen readers. Server-side technologies
-                  provide methods to implement redirects in a way that does not confuse users.
-                  A server-side script or configuration file can cause the server to send an
-                  appropriate HTTP response with a status code in the 3xx range and a Location
-                  header with another URL. When the browser receives this response, the location
-                  bar changes and the browser makes a request with the new URL. 
+               <p>The objective of this technique is to avoid confusion that may be caused when two
+                  new pages are loaded in quick succession because one page (the one requested by the
+                  user) redirects to another. Some user agents support the use of the <abbr title="HyperText Markup Language">HTML</abbr> meta element to redirect the user to another page after a specified number of seconds.
+                  This makes a page inaccessible to some users, especially users with screen readers.
+                  Server-side technologies provide methods to implement redirects in a way that does
+                  not confuse users. A server-side script or configuration file can cause the server
+                  to send an appropriate <abbr title="HyperText Transfer Proto">HTTP</abbr> response with a status code in the 3xx range and a Location header with another <abbr title="Uniform Resource Locator">URL</abbr>. When the browser receives this response, the location bar changes and the browser
+                  makes a request with the new URL.
                </p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-jsp/servlets">
-                  <h3>Przykład 1: JSP/Servlets</h3>
-                  <p> In Java Servlets or JavaServer Pages (JSP), developers can use
-                     HttpServletResponse.sendRedirect(String url). 
-                  </p><pre xml:space="preserve">
-…
+               <section class="example" id="example-1-jsp/servlets">
+                  <h3>Example 1: JSP/Servlets</h3>
+                  <p>In Java Servlets or JavaServer Pages (JSP), developers can use
+                     				<code class="language-java">HttpServletResponse.sendRedirect(String url)</code>. 
+                  </p><pre xml:space="preserve"><code class="language-java">...
 public void doGet(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
-…
+throws ServletException, IOException {
+  ...
   response.sendRedirect("/newUserLogin.do");
-}</pre><p> This sends a response with a 302 status code ("Found") and a
-                     Location header with the new URL to the user agent. It is also
-                     possible to set another status code with
-                     response.sendError(int code, String message) with
-                     one of the constants defined in the interface
-                     javax.servlet.http.HttpServletResponse as status code. 
-                  </p><pre xml:space="preserve">
-…
+}</code></pre><p>This sends a response with a <code>302</code> status code ("Found") and a <code>Location</code> header with the new URL to the user agent. It is also possible to set another status
+                     code with <code class="language-java">response.sendError(int code, String message)</code> with one of the constants defined in the interface <code class="language-java">javax.servlet.http.HttpServletResponse</code> as status code.
+                  </p><pre xml:space="preserve"><code class="language-java">...
 public void doGet(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
-…
+throws ServletException, IOException {
+  ...
   response.sendError(response.SC_MOVED_PERMANENTLY, "/newUserLogin.do");
-}</pre><p> If an application uses HttpServletResponse.encodeURL(String
-                     url) for URL rewriting because the application depends on
-                     sessions, the method
-                     HttpServletResponse.encodeRedirectURL(String url)
-                     should be used instead of
-                     HttpServletResponse.sendRedirect(String url). It is
-                     also possible to rewrite a URL with
-                     HttpServletResponse.encodeURL(String url) and then
-                     pass this URL to HttpServletResponse.sendRedirect(String
-                     url). 
+}</code></pre><p> If an application uses <code class="language-java">HttpServletResponse.encodeURL(String
+                        					url)</code> for URL rewriting because the application depends on
+                     					sessions, the method <code class="language-java">HttpServletResponse.encodeRedirectURL(String url)</code> should be used instead of
+                     					<code class="language-java">HttpServletResponse.sendRedirect(String url)</code>. It is
+                     					also possible to rewrite a URL with <code class="language-java">HttpServletResponse.encodeURL(String url)</code> and then pass this URL to <code class="language-java">HttpServletResponse.sendRedirect(String url)</code>. 
                   </p>
                </section>
-               <section class="example" id="przyklad-2-asp">
-                  <h3>Przykład 2: ASP</h3>
-                  <p> In Active Server Page (ASP) with VBScript, developers can use
-                     Response.Redirect. 
-                  </p><pre xml:space="preserve">
-  Response.Redirect "newUserLogin.asp"</pre><p> or </p><pre xml:space="preserve">
-Response.Redirect("newUserLogin.asp")</pre><p> The code below is a more complete example with a specific HTTP
-                     status code. 
-                  </p><pre xml:space="preserve">
-Response.Clear
+               <section class="example" id="example-2-asp">
+                  <h3>Example 2: <abbr title="Active Server Pages">ASP</abbr></h3>
+                  <p>In Active Server Page (ASP) with VBScript, developers can use <code class="language-vbnet">Response.Redirect</code>.
+                  </p><pre xml:space="preserve"><code class="language-vbnet">Response.Redirect "newUserLogin.asp"</code></pre><p>or</p><pre xml:space="preserve"><code class="language-vbnet">Response.Redirect("newUserLogin.asp")</code></pre><p>The code below is a more complete example with a specific HTTP status code.</p><pre xml:space="preserve"><code class="language-vbnet">Response.Clear
 Response.Status = 301
 Response.AddHeader "Location", "newUserLogin.asp"
 Response.Flush
-Response.End</pre></section>
-               <section class="example" id="przyklad-3-php">
-                  <h3>Przykład 3: PHP</h3>
-                  <p> In PHP, developers can send a raw HTTP header with the
-                     header method. The code below sends a 301 status code
-                     and a new location. If the status is not explicitly set, the
-                     redirect response sends an HTTP status code 302. 
-                  </p><pre xml:space="preserve">
- &lt;?php
-header("HTTP/1.1 301 Moved Permanently);
-header("Location: http://www.example.com/newUserLogin.php");
-?&gt;</pre></section>
-               <section class="example" id="przyklad-4-apache">
-                  <h3>Przykład 4: Apache</h3>
-                  <p> Developers can configure the Apache Web server to handle redirects,
-                     as in the following example. 
-                  </p><pre xml:space="preserve">
-redirect 301 /oldUserLogin.jsp http://www.example.com/newUserLogin.do</pre></section>
+Response.End</code></pre></section>
+               <section class="example" id="example-3-php">
+                  <h3>Example 3: <abbr title="PHP: Hypertext Preprocessor">PHP</abbr></h3>
+                  <p>In PHP, developers can send a raw HTTP header with the header method. The code below
+                     sends a 301 status code and a new location. If the status is not explicitly set, the
+                     redirect response sends an HTTP status code <code>302</code>.
+                  </p><pre xml:space="preserve"><code class="language-php">&lt;?php
+header("HTTP/1.1 301 Moved Permanently");
+header("Location: https://www.example.com/newUserLogin.php");
+?&gt;</code></pre></section>
+               <section class="example" id="example-4-apache">
+                  <h3>Example 4: Apache</h3>
+                  <p>Developers can configure the Apache Web server to handle redirects, as in the following
+                     example.
+                  </p><pre xml:space="preserve"><code class="language-apache">redirect 301 /oldUserLogin.jsp http://www.example.com/newUserLogin.do</code></pre></section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
                <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
                <ul>
-                  
+                  			
                   <li> 
-                     <a href="https://www.w3.org/QA/Tips/reback">Use standard
-                        redirects: do not break the back button!</a> (W3C QA Tip).
-                     
+                     				<a href="https://www.w3.org/QA/Tips/reback">Use standard redirects: do not break the back button!</a> (W3C QA Tip).
+                     			
                   </li>
-                  
+                  		
                   <li> 
-                     <a href="https://tools.ietf.org/html/rfc7231#section-6.4">HTTP/1.1 Status Code Definitions: Redirection 3xx</a>.
-                     
+                     			<a href="https://tools.ietf.org/html/rfc7231#section-6.4">HTTP/1.1 Status Code Definitions: Redirection 3xx</a>.
+                     		
                   </li>
-                  
+                  		
                   <li> 
-                     <a href="http://www.somacon.com/p145.php">HTTP 301 Permanent
-                        Redirection Techniques</a> by Shailesh N. Humbad. 
+                     			<a href="http://docs.oracle.com/cd/E17802_01/products/products/servlet/2.3/javadoc/javax/servlet/http/HttpServletResponse.html">Interface javax.servlet.http.HttpServletResponse</a> in
+                     			the Java Servlets 2.3 API documentation.
                   </li>
-                  
+                  			
                   <li> 
-                     <a href="http://docs.oracle.com/cd/E17802_01/products/products/servlet/2.3/javadoc/javax/servlet/http/HttpServletResponse.html">Interface javax.servlet.http.HttpServletResponse</a> in
-                     the Java Servlets 2.3 API documentation. 
+                     				<a href="http://php.net/manual/en/function.header.php">PHP header</a>.
                   </li>
-                  
+                  			
                   <li> 
-                     <a href="http://php.net/manual/en/function.header.php">header</a> in the PHP
-                     Manual. 
+                     				<a href="http://httpd.apache.org/docs/2.2/mod/mod_alias.html">Apache Module mod_alias</a> in the <a href="http://httpd.apache.org/docs/2.2/">Apache HTTP Server
+                        				Version 2.2 Documentation</a> describes how redirects can
+                     			be specified in Apache 2.2. 
                   </li>
-                  
+                  			
                   <li> 
-                     <a href="http://httpd.apache.org/docs/2.2/mod/mod_alias.html">Apache Module mod_alias</a> in the <a href="http://httpd.apache.org/docs/2.2/">Apache HTTP Server
-                        Version 2.2 Documentation</a> describes how redirects can
-                     be specified in Apache 2.2. 
+                     				<a href="http://httpd.apache.org/docs/1.3/mod/mod_alias.html">Module mod_alias</a> in the <a href="http://httpd.apache.org/docs/1.3/">Apache HTTP Server
+                        				Version 1.3 Documentation</a> describes how redirects can
+                     			be specified in Apache 1.3. 
                   </li>
-                  
-                  <li> 
-                     <a href="http://httpd.apache.org/docs/1.3/mod/mod_alias.html">Module mod_alias</a> in the <a href="http://httpd.apache.org/docs/1.3/">Apache HTTP Server
-                        Version 1.3 Documentation</a> describes how redirects can
-                     be specified in Apache 1.3. 
-                  </li>
-                  
+                  		
                </ul>
             </section>
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  			
                   <h3>Procedure</h3>
-                  
+                  			
                   <ol>
-                     
-                     <li> Find each link or programmatic reference to another page or
-                        Web page. 
+                     				
+                     <li>Find each link or programmatic reference to another page or Web page.</li>
+                     				
+                     <li>For each link or programmatic reference to a URI in the set of Web pages being evaluated,
+                        check if the referenced Web page contains code (e.g., meta element or script) that
+                        causes a client-side redirect.
                      </li>
-                     
-                     <li> For each link or programmatic reference to a URI in the set of
-                        Web pages being evaluated, check if the referenced
-                        Web page contains code (e.g., meta element or script) that
-                        causes a client-side redirect. 
+                     				
+                     <li>For each link or programmatic reference to a URI in the set of Web pages being evaluated,
+                        check if the referenced <code class="Uniform Resource Identifier">URI</code> does not cause a redirect OR causes a server-side redirect without a time-out.
                      </li>
-                     
-                     <li> For each link or programmatic reference to a URI in the set of
-                        Web pages being evaluated, check if the referenced URI
-                        does not cause a redirect OR causes a server-side redirect
-                        without a time-out. 
-                     </li>
-                     
+                     			
                   </ol>
-                  
+                  		
                </section>
                <section class="results" id="expected-results">
+                  			
                   <h3>Expected Results</h3>
-                  
+                  			
                   <ul>
-                     
-                     <li> Step 2 is false AND step 3 is true. </li>
-                     
+                     				
+                     <li>Step 2 is false AND step 3 is true.</li>
+                     			
                   </ul>
-                  
+                  		
                </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
@@ -249,15 +214,15 @@ redirect 301 /oldUserLogin.jsp http://www.example.com/newUserLogin.do</pre></sec
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -294,28 +259,26 @@ redirect 301 /oldUserLogin.jsp http://www.example.com/newUserLogin.do</pre></sec
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

@@ -55,31 +55,21 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is
-                     
-                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/identyfikacja-bledu">3.3.1: Identyfikacja błędu</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/komunikaty-o-stanie">4.1.3: Komunikaty o stanie</a>, using a more specific technique.
-                     					.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
+               <h2>Applicability</h2>
                <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
                </p>
-               <p>This technique relates to:</p>
-               <ul>
-                  <li><a href="https://w3c.github.io/wcag/understanding/identyfikacja-bledu">3.3.1: Identyfikacja błędu</a> (Sufficient)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/komunikaty-o-stanie">4.1.3: Komunikaty o stanie</a> (Sufficient using a more specific technique)
-                  </li>
-               </ul>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
                <p>The purpose of this technique is to notify Assistive Technologies (AT) when an input
-                  error occurs. The <code class="att">aria-live</code> attribute makes it possible for an AT (such as a screen reader) to be notified when
-                  error messages are injected into a Live Region container. The content within the <code class="att">aria-live</code> region is automatically read by the AT, without the AT having to focus on the place
+                  error occurs. The <code class="language-html">aria-live</code> attribute makes it possible for an AT (such as a screen reader) to be notified when
+                  error messages are injected into a Live Region container. The content within the <code class="language-html">aria-live</code> region is automatically read by the AT, without the AT having to focus on the place
                   where the text is displayed.
                   
                </p>
@@ -88,8 +78,8 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-injecting-error-messages-into-a-container-with-role=alert-already-present-in-the-dom">
-                  <h3>Przykład 1: Injecting error messages into a container with role=alert already present
+               <section class="example" id="example-1-injecting-error-messages-into-a-container-with-role=alert-already-present-in-the-dom">
+                  <h3>Example 1: Injecting error messages into a container with role=alert already present
                      in the DOM
                   </h3>
                   <p>The following example uses role=alert which is equivalent to using aria-live=assertive.
@@ -106,43 +96,39 @@
                      into the live region containers if so. Each time a new submit is attempted the previous
                      error messages are removed from the container and new error messages injected.
                      
-                  </p><pre xml:space="preserve">&lt;script src="http://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-$(document).ready(function(e) {
-	$('#signup').submit(function() {
-		$('#errors').html('');
-		if ($('#first').val() === '') {
-			$('#errors').append('&lt;p&gt;Please enter your first name.&lt;/p&gt;');
-		}
-		if ($('#last').val() === '') {
-			$('#errors').append('&lt;p&gt;Please enter your last name.&lt;/p&gt;');
-		} 
-		if ($('#email').val() === '') {
-			$('#errors').append('&lt;p&gt;Please enter your email address.&lt;/p&gt;');
-		} 
-		return false;
-	});
-});
-&lt;/script&gt;
-
-&lt;form name="signup" id="signup" method="post" action=""&gt;
+                  </p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function(e) {
+  $('#signup').submit(function() {
+    $('#errors').html('');
+    if ($('#first').val() === '') {
+      $('#errors').append('&lt;p&gt;Please enter your first name.&lt;/p&gt;');
+    }
+    if ($('#last').val() === '') {
+      $('#errors').append('&lt;p&gt;Please enter your last name.&lt;/p&gt;');
+    } 
+    if ($('#email').val() === '') {
+      $('#errors').append('&lt;p&gt;Please enter your email address.&lt;/p&gt;');
+    }
+    return false;
+  });
+});</code>
+<code class="language-html">&lt;form name="signup" id="signup"&gt;
   &lt;p id="errors" role="alert" aria-atomic="true"&gt;&lt;/p&gt;
-  &lt;p&gt;
+  &lt;div&gt;
     &lt;label for="first"&gt;First Name (required)&lt;/label&gt;&lt;br&gt;
     &lt;input type="text" name="first" id="first"&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
     &lt;label for="last"&gt;Last Name (required)&lt;/label&gt;&lt;br&gt;
     &lt;input type="text" name="last" id="last"&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
     &lt;label for="email"&gt;Email (required)&lt;/label&gt;&lt;br&gt;
     &lt;input type="text" name="email" id="email"&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
     &lt;input type="submit" name="button" id="button" value="Submit"&gt;
-  &lt;/p&gt;
-&lt;/form&gt;</pre><p class="working-example">Working example: <a href="../../working-examples/aria-alert-identify-errors/">Using role=alert to identify errors</a>.
+  &lt;/div&gt;
+ &lt;/form&gt;</code></pre><p class="working-example">Working example: <a href="../../working-examples/aria-alert-identify-errors/">Using role=alert to identify errors</a>.
                   </p>
                </section>
             </section>
@@ -157,12 +143,7 @@ $(document).ready(function(e) {
                   </li>
                   
                   <li>
-                     <a href="https://www.paciellogroup.com/blog/2012/06/html5-accessibility-chops-aria-rolealert-browser-support/">HTML5 Accessibility Chops: ARIA role=alert browser support</a>
-                     
-                  </li>
-                  
-                  <li> 
-                     <a href="http://html.cita.illinois.edu/nav/form/aria/">Form Labels, ARIA Examples (Experimental)</a>
+                     	<a href="https://www.paciellogroup.com/blog/2012/06/html5-accessibility-chops-aria-rolealert-browser-support/">HTML5 Accessibility Chops: ARIA role=alert browser support</a>
                      
                   </li>
                   
@@ -176,11 +157,6 @@ $(document).ready(function(e) {
                      
                   </li>
                   
-                  <li> 
-                     <a href="https://www.w3.org/TR/html5/">HTML5, A vocabulary and associated APIs for HTML and XHTML</a>
-                     
-                  </li>
-                  
                </ul>
             </section>
             <section id="tests">
@@ -190,26 +166,22 @@ $(document).ready(function(e) {
                   
                   <ol>
                      
-                     <li>Determine that an empty error container role=alert or aria-live=assertive attribute
-                        is present in the DOM at page load.
+                     <li>Determine that an empty error container <code class="language-html">role=alert</code> or <code class="language-html">aria-live=assertive</code> attribute is present in the DOM at page load.
                      </li>
                      
-                     <li> Trigger the error that causes the content in the live region to appear or update.
-                        
-                     </li>
+                     <li> Trigger the error that causes the content in the live region to appear or update.</li>
                      
-                     <li> Determine that the error message was injected into the already present error container.
-                        
-                     </li>
+                     <li> Determine that the error message was injected into the already present error container.</li>
                      
                   </ol>
                   
                </section>
                <section class="results" id="expected-results">
+                  				
                   <h3>Expected Results</h3>
                   
                   <ul>
-                     
+                     	
                      <li>#1 and #3 are true.</li>
                      
                   </ul>
@@ -229,15 +201,15 @@ $(document).ready(function(e) {
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -274,28 +246,26 @@ $(document).ready(function(e) {
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

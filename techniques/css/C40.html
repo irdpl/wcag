@@ -56,78 +56,67 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is
-                     
-                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/widoczny-fokus">2.4.7: Widoczny fokus</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/wyglad-fokusu">2.4.11: Wygląd fokusu</a>
-                     					.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>All technologies that support CSS.</p>
-               <p>This technique relates to:</p>
-               <ul>
-                  <li><a href="https://w3c.github.io/wcag/understanding/widoczny-fokus">2.4.7: Widoczny fokus</a> (Sufficient)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/wyglad-fokusu">2.4.11: Wygląd fokusu</a> (Sufficient)
-                  </li>
-               </ul>
+               <h2>Applicability</h2>
+               <p><abbr title="Cascading Style Sheets">CSS</abbr>.
+               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
                <p>The objective of this technique is to create a two-color focus indicator that has
-                  sufficient contrast against any background color. This technique eliminates the need
-                  for multiple classes to ensure sufficient contrast of the focus indicator when viewed
-                  against different backgrounds.
+                  sufficient contrast against any solid background color. This technique can avoid the
+                  need for multiple classes to ensure sufficient contrast of the focus indicator when
+                  viewed against different backgrounds.
                </p>
-               <p>The default focus indicators provided by browsers are typically one color, so they
-                  are highly visible when some components have focus and not well seen on other components.
-                  For instance, if a focus indicator is dark blue and a button is on a white background
-                  then it will be easily seen, but if the background is also blue it will not be easily
-                  seen.
+               <p>Authors may apply this technique to sites that use a variety of different colored
+                  backgrounds. Although it is possible to create different colored focus indicators
+                  for different parts of a page, this can be time consuming and it can be easy to miss
+                  some components. However, if the focus indicator uses two highly-contrasting colors
+                  - a light color and a dark color - then the same indicator can be re-used, since at
+                  least one of the two colors will always have enough contrast against any background
+                  color.
                </p>
-               <p>Although it is possible to create individual CSS classes to address the different
-                  buttons across a site, this can be time consuming and easy to miss some types of interactive
-                  content. However, if the focus indicator is two colors - a light color and a dark
-                  color - then it will always have sufficient contrast against any background color.
-                  Currently, this can be done by combining the <code>text-shadow</code> property with the <code>outline</code> property on the <code>focus</code> indicator.
+               <p>As long as the two indicator colors have a contrast ratio of at least 9:1 with each
+                  other, at least one of the two colors is guaranteed to meet 3:1 contrast with any
+                  solid background color.
                </p>
-               <p>Developers may apply this technique to parts of the site where its hard to keep track
-                  of the focus indicator (such as when there are lots of different component colors).
-                  Developers can also provide a single-color focus indicator for components such as
-                  a navigation menus that are used across a site, have specific design requirements,
-                  and are easy to test and maintain.
+               <p class="note">This technique only guarantees that an indicator will pass if the entire indicator
+                  is drawn over the background, not within the boundary of the focused component, and
+                  if the entire background behind the indicator is one single, solid color. For example,
+                  if the background is an image or gradient, or if the indicator is partially overlaid
+                  on top of a different UI component, it may still be necessary to compare the indicator
+                  pixel-by-pixel against the background.
                </p>
-               <p class="note">If it can be determined that the two-color focus indicator CSS takes precedence then
-                  the test can be applied programmatically rather than by manually focusing on each
-                  interface component.
+               <p>In CSS, two-color indicators can be implemented by combining the <code class="language-css">outline</code> and <code class="language-css">box-shadow</code> properties with the <code class="language-css">:focus</code> or <code class="language-css">:focus-visible</code> pseudo-classes.
+               </p>
+               <p class="note">Avoid setting <code class="language-css">outline: none</code> to use <code class="language-css">box-shadow</code> on its own. User agents commonly suppress the <code class="language-css">box-shadow</code> property in forced-color modes, so authors should avoid relying on <code class="language-css">box-shadow</code> alone to implement focus indicators. If <code class="language-css">box-shadow</code> only styling is required, consider combining it with an <code class="language-css">outline: 2px transparent solid</code> property to ensure compatibility with forced-color modes.
                </p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <p>The examples demonstrate a simple implementation where focus styles are applied to
-                  all links and inputs. In use on a more complex website care would need to be taken
+               <p>This example demonstrates a simple implementation where focus styles are applied to
+                  all focusable components. In use on a more complex website care would need to be taken
                   that these styles are not overridden by more specific styles.
                </p>
-               <section class="example" id="przyklad-1-a-light-and-dark-dotted-indicator">
-                  <h3>Przykład 1: A light and dark dotted indicator</h3>
-                  <p>Description</p><pre><code>*:focus {
-	box-shadow: 0 0 0px 2px white;
-	outline: dotted;
-}</code></pre><p class="working-example"><a href="../../working-examples/css-two-focus-colors/dotted.html">Working example of combining a dark outline and light text shadow</a></p>
-               </section>
-               <section class="example" id="przyklad-2-a-thicker-light-and-dark-indicator">
-                  <h3>Przykład 2: A thicker light and dark indicator</h3>
-                  <p>Description</p><pre><code>*:focus { 
-	/* ensure high-contrast mode still has an indicator */
-	outline: 2px transparent solid;
-
-	/* Apply a thick yellow box-shadow with 
-	   a thin dark blue indicator in the middle */
-	box-shadow: 0 0 0 2px #F9F9D1, 0 0 0 4px #396196, 0 0 4px 8px #F9F9D1;
-}</code></pre><p class="working-example"><a href="../../working-examples/css-two-focus-colors/lined.html">Working example of combining a dark outline and light text shadow</a></p>
+               <section class="example" id="example-1-a-thick-two-color-indicator">
+                  <h3>Example 1: A thick two-color indicator</h3>
+                  <p>In this example, the indicator consists of two solid bands of color. Because each
+                     color band is 2 CSS pixels thick, either color band is large enough to meet the minimum
+                     indicator size requirement on its own. As long as one of the two colors has 3:1 change
+                     contrast with the pixels behind and around the focus indicator, the indicator will
+                     satisfy both the Focus Appearance and Non-Text Contrast success criteria.
+                  </p><pre><code class="language-css">*:focus {
+	/* inner indicator */
+	outline: 2px #F9F9F9 solid;
+	outline-offset: 0;
+	/* outer indicator */
+	box-shadow: 0 0 0 4px #193146;
+}</code></pre><p class="working-example"><a href="../../working-examples/css-two-focus-colors/">Working example of a thick two-color indicator</a></p>
                </section>
             </section>
             <section id="resources">
@@ -135,9 +124,9 @@
                <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
                <ul>
                   				
-                  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:focus">The :focus pseudo-class on the Mozilla Developer Network</a></li>
+                  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible">The <code class="language-css">:focus-visible</code> pseudo-class on the Mozilla Developer Network</a></li>
                   				
-                  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible">The :focus-visible pseudo-class on the Mozilla Developer Network</a></li>
+                  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:focus">The <code class="language-css">:focus</code> pseudo-class on the Mozilla Developer Network</a></li>
                   			
                </ul>
             </section>
@@ -155,16 +144,16 @@
                <h2>Tests</h2>
                <section class="test-procedure">
                   <h3>Procedure</h3>
-                  <p>For each focusable user interface element:</p>
+                  <p>For each focusable user interface component:</p>
                   <ol>
                      					
-                     <li>Check that the two-colors in the focus indicator are adjacent and have a contrast
-                        ratio that is 3:1 or greater with each other.
+                     <li>Check that the two colors in the focus indicator have a contrast ratio that is 9:1
+                        or greater with each other.
                      </li>
                      					
-                     <li>Check that the colors used contrast with the adjacent colors, or are at least 2 CSS
-                        pixels thick.
-                     </li>
+                     <li>Check that each color band is at least 2 CSS pixels thick.</li>
+                     					
+                     <li>Check that the indicator only appears overtop one solid background color at a time.</li>
                      				
                   </ol>
                </section>
@@ -172,7 +161,7 @@
                   <h3>Expected Results</h3>
                   <ul>
                      					
-                     <li>#1 and #2 are true.</li>
+                     <li>#1, #2, and #3 are true.</li>
                      				
                   </ul>
                </section>
@@ -190,15 +179,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -235,28 +224,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

@@ -48,7 +48,7 @@
             </nav>
          </aside>
          <main id="main" class="standalone-resource__main">
-            <h1><span>Technique PDF12:</span>Providing name, role, value information for form fields in PDF documents
+            <h1><span>Technique PDF12:</span>Providing name, role, value information for form fields in <abbr title="Portable Document Format">PDF</abbr> documents
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
@@ -56,50 +56,30 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is
-                     
-                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a> when used with <a href="../general/G135">G135: Using the accessibility API features of a technology to expose names and notification
-                        of changes</a>
-                     					.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Tagged PDF documents with interactive form fields. </p>
-               <p>This technique relates to:</p>
-               <ul>
-                  <li><a href="https://w3c.github.io/wcag/understanding/informacje-i-relacje">1.3.1: Informacje i relacje</a> (Sufficient when used with Making information and relationships conveyed through
-                     presentation programmatically
-                     determinable using the following techniques:
-                     )
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a> (Sufficient when used with <a href="../general/G135">G135: Using the accessibility API features of a technology to expose names and notification
-                        of changes</a>)
-                  </li>
-               </ul>
+               <h2>Applicability</h2>
+               <p>Tagged PDF documents with interactive form fields.</p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
                <p>The objective of this technique is to ensure that assistive technologies
                   				can gather information about and interact with form controls in PDF
-                  				content. 
+                  				content.
                </p>
                <p>The types of PDF form controls are: text input field, check box, radio
-                  				button, combo box, list box, and button. 
+                  				button, combo box, list box, and button.
                </p>
                <p>Providing name, role, state, and value information for all form components
                   				enables compatibility with assistive technology, such as screen readers,
                   				screen magnifiers, and speech recognition software used by people with
-                  				disabilities. 
+                  				disabilities.
                </p>
-               <p>The PDF specification defines how name, role, and value are set for
-                  				form controls in Section 12.7.4 (Field Types) of <a href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf">PDF
-                     					1.7 (ISO 32000-1)</a>, as shown in the following table. The Comments column explains how Adobe Acrobat
-                  Pro displays the corresponding information. 
-               </p>
-               <table id="PDF12_spec">
+               <table>
                   		
                   <tbody>
                      			
@@ -186,7 +166,7 @@
                   				Adobe LiveCycle Designer provides the same controls as well as several
                   				additional ones: see Example 2 below. 
                </p>
-               <table id="PDF12_acrobat">
+               <table>
                   		
                   <tbody>
                      			
@@ -334,160 +314,75 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="przyklad-1-specifying-name-role-value-and/or-state-for-a-form-field-using-adobe-acrobat-9-pro">
-                  <h3>Przykład 1: Specifying name, role, value and/or state for a form field
-                     					using Adobe Acrobat 9 Pro
+               <section class="example" id="example-1-specifying-name-role-value-and/or-state-for-a-form-field-using-adobe-acrobat-pro">
+                  <h3>Example 1: Specifying name, role, value and/or state for a form field using Adobe
+                     Acrobat Pro
                   </h3>
                   <p>This example is shown with Adobe Acrobat Pro. There are other software tools that
-                     perform similar functions. See the list of other software tools in <a href="#pdf_notes_acc-sup_files_applications"></a>.
+                     perform similar functions.
                   </p>
-                  <p>This example uses a check box for illustration; the procedure is the
-                     						same for other form controls. In Form Editing mode: 
+                  <p>This example uses a check box for illustration; the procedure is the same for other
+                     form controls.
                   </p>
                   <ol>
-                     
-                     <li> Access the context menu for the form field you are creating or
-                        						modifying. 
+                     				
+                     <li>Open the Prepare Form tool.</li>
+                     				
+                     <li>Select the form field you are creating or modifying and access the context menu for
+                        it.
                      </li>
-                     
-                     <li> Select the Properties... dialog for the form field. </li>
-                     
-                     <li> Specify the name by adding a value to the tool tip field. This
-                        							will used by the accessibility API as the Name for the control and
-                        							should usually be set to match the text used as a visual label for
-                        							the control. 
+                     				
+                     <li>Select the Properties... option.</li>
+                     				
+                     <li>Specify the name by adding a value to the Tooltip field. This
+                        							will used by the accessibility <abbr title="Application Programming Interface">API</abbr> as the Name for the control. To conform to the Label In Name Criterion, the Tooltip
+                        value must contain the text that presented visually.
                      </li>
-                     
-                     <li> Select the Options tab. </li>
-                     
-                     <li> Specify the default value and the default state, if appropriate. </li>
-                     
+                     				
+                     <li>If you need to specify the default value and state, select the Options tab for these
+                        options.
+                     </li>
+                     			
                   </ol>
-                  <p>The image below shows the Check Box Properties dialog, open in the
-                     						General tab. (The Name field in the dialog is not needed for accessibility.)
-                     
+                  <p>The image below shows the Check Box Properties dialog, open in the General tab. (The
+                     Name field in the dialog is not needed for accessibility.)
                   </p>
-                  <figure id="figure-general-tab">
-                     <img src="img/nrv1.jpg" />
-                     
-                     
-                     <figcaption>General tab on the Check Box Properties dialog, showing name and tool tip fields for
-                        a check box
-                     </figcaption>
-                     
-                     
-                  </figure>
-                  <p>The image below shows the Check Box Properties dialog, open in the
-                     						Options tab. 
-                  </p>
-                  <figure id="figure-check-box-props">
-                     <img src="img/nrv2.jpg" />
-                     
-                     
-                     <figcaption>Options tab on the Check Box Properties dialog, showing value and state fields for
-                        a check box.
-                     </figcaption>
-                     
-                     
-                  </figure>
-                  <p class="working-example">This example is shown in operation in the <a href="../../working-examples/pdf-form-labels/form.pdf">working example of specifying name, role, value using Acrobat Pro</a>.
+                  <div>
+                     				<img alt="General tab on the Check Box Properties dialog, showing name and tool tip fields for a check box" src="img/name-role-value.png" width="577" />
+                     			
+                  </div>
+                  <p class="working-example">This example is shown in operation in the <a href="../../working-examples/pdf-name-role-value-form-fields/form.pdf">working example of specifying name, role, value using Acrobat Pro</a>.
                   </p>
                </section>
-               <section class="example" id="przyklad-2-specifying-name-value-and-state-for-a-form-field-using-adobe-livecycle-designer-es-8.2.1">
-                  <h3>Przykład 2: Specifying name, value, and state for a form field using
-                     				Adobe LiveCycle Designer ES 8.2.1
+               <section class="example" id="example-2-adding-a-checkbox-in-a-pdf-document-using-the-/btn-field-type">
+                  <h3>Example 2: Adding a checkbox in a PDF document using the <code>/Btn</code> field type
                   </h3>
-                  <p>This example is shown with Adobe LiveCycle Designer. There are other software tools
-                     that perform similar functions. See the list of other software tools in <a href="#pdf_notes_acc-sup_files_applications"></a>.
-                  </p>
-                  <p>In Adobe LiveCycle Designer, you use the Object Library to create
-                     						form objects and the Object Palette to specify name, role, state or
-                     						value for the object. 
-                  </p>
-                  <p>The following image shows the Object Palette. </p>
-                  <figure id="figure-object-palette">
-                     <img src="img/lc-objlib.jpg" />
-                     
-                     
-                     <figcaption>LiveCycle Designer Object Library showing the form objects available for form creation.</figcaption>
-                     
-                     
-                  </figure>
-                  <p>The following three images show the tabs in the Object palette. In
-                     						the first the Field tab is open for specifying the type (or role) of
-                     						the field. 
-                  </p>
-                  <figure id="figure-LCD-object-palette">
-                     <img src="img/lc-objpal-t.jpg" />
-                     
-                     
-                     <figcaption>LiveCycle Designer Object palette, Field tab.</figcaption>
-                     
-                     
-                  </figure>
-                  <p>The next image shows the Value tab, with options that can be applied
-                     						to the field. 
-                  </p>
-                  <figure id="figure-LCD-value-tab">
-                     <img src="img/lc-objpal-v.jpg" />
-                     
-                     
-                     <figcaption>LiveCycle Designer Object palette, Value tab options.</figcaption>
-                     
-                     
-                  </figure>
-                  <p>The third images shows the Binding tab, specifying the name of the
-                     						field. 
-                  </p>
-                  <figure id="figure-binding-tab">
-                     <img src="img/lc-objpal-b.jpg" />
-                     
-                     
-                     <figcaption>LiveCycle Designer Object palette, Binding tab.</figcaption>
-                     
-                     
-                  </figure>
-                  <p class="working-example">This example is shown in operation in the <a href="../../working-examples/pdf-form-labels/form-lc.pdf">working example of specifying name, role, value using LiveCycle Designer</a>.
-                  </p>
-               </section>
-               <section class="example" id="przyklad-3-adding-a-checkbox-in-a-pdf-document-using-the-/btn-field-type">
-                  <h3>Przykład 3: Adding a checkbox in a PDF document using the /Btn field
-                     				type
-                  </h3>
-                  <p>The following code fragment illustrates code that is typical for a
-                     						simple check box field such as shown in Examples 1 and 2. This is typically
-                     						accomplished by an authoring tool. 
-                  </p><pre xml:space="preserve">1 0 obj
+                  <p>The following code fragment illustrates code that is typical for a simple check box
+                     field such as shown in Examples 1 and 2. This is typically accomplished by an authoring
+                     tool.
+                  </p><pre xml:space="preserve"><code>1 0 obj
   &lt;&lt; /FT /Btn     % Role
      /TU Retiree  % Name
      /V /Yes      % Value
      /AS /Yes
      /AP &lt;&lt; /N &lt;&lt; /Yes 2 0 R /Off 3 0 R&gt;&gt;
   &gt;&gt;
-endobj
-</pre></section>
+endobj</code></pre></section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
                <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
                <ul>
-                  
-                  <li> Section 12.7.4 (Field Types) of <a href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf">PDF
-                        					1.7 (ISO 32000-1)</a> 
-                     
+                  			
+                  <li>Section 12.7.4 (Field Types) in <a href="https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/PDF32000_2008.pdf">PDF 1.7 (ISO 32000-1) (PDF)</a>
+                     			
                   </li>
-                  
-                  <li> 
-                     <a href="http://partners.adobe.com/public/developer/xml/index_arch.html">Adobe
-                        						XML Forms Architecture (XFA)</a> 
-                     
-                  </li>
-                  
+                  			
                   <li>
-                     <a href="http://www.adobe.com/accessibility/products/acrobat.html">PDF and Accessibility</a>
-                     
+                     				<a href="https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html">Create and verify PDF accessibility (Acrobat Pro)</a>
+                     			
                   </li>
-                  
+                  		
                </ul>
             </section>
             <section id="related">
@@ -504,50 +399,50 @@ endobj
             </section>
             <section id="tests">
                <h2>Tests</h2>
-               <section class="procedure" id="procedura">
-                  <h3>Procedura</h3>
-                  
+               <section class="procedure" id="procedure">
+                  			
+                  <h3>Procedure</h3>
+                  			
                   <ol>
-                     
+                     				
                      <li>
-                        
-                        <p> For the form control, verify that name, role, and value/state
-                           					are specified by one of the following:
+                        					
+                        <p>For the form control, verify that name, role, and value/state are specified by one
+                           of the following:
                         </p>
-                        
+                        					
                         <ul>
-                           
-                           <li> Use a screen reader to navigate to the form control and check
-                              						that it can be activated or that its value can be changed. Verify
-                              						that the name (tooltip) and role are announced. 
+                           					
+                           <li>Use a screen reader to navigate to the form control and check that it can be activated
+                              or that its value can be changed. Verify that the name (tooltip) and role are announced.
                            </li>
-                           
-                           <li> Use a tool capable of showing the form field information to open the PDF document
+                           					
+                           <li>Use a tool capable of showing the form field information to open the PDF document
                               and verify that the form control has the correct name, role, value, and state (if
                               appropriate) information.
                            </li>
-                           
-                           <li> Use a tool that exposes the document through the accessibility
-                              								API, and verify that the form control has the correct name, role,
-                              								value, and state (if appropriate) information. 
+                           					
+                           <li>Use a tool that exposes the document through the accessibility <abbr title="Application Programming Interface">API</abbr>, and verify that the form control has the correct name, role, value, and state (if
+                              appropriate) information.
                            </li>
-                           
+                           					
                         </ul>
                         
                      </li>
                      
                   </ol>
-                  
+                  		
                </section>
-               <section class="results" id="oczekiwane-wyniki">
-                  <h3>Oczekiwane wyniki</h3>
-                  
+               <section class="results" id="expected-results">
+                  			
+                  <h3>Expected Results</h3>
+                  			
                   <ul>
-                     
-                     <li>#1 is true. </li>
-                     
+                     				
+                     <li>#1 is true.</li>
+                     			
                   </ul>
-                  
+                  		
                </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
@@ -563,15 +458,15 @@ endobj
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -608,28 +503,26 @@ endobj
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

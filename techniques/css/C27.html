@@ -48,7 +48,7 @@
             </nav>
          </aside>
          <main id="main" class="standalone-resource__main">
-            <h1><span>Technique C27:</span>Making the DOM order match the visual order
+            <h1><span>Technique C27:</span>Making the <abbr title="Document Object Model">DOM</abbr> order match the visual order
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
@@ -56,27 +56,14 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is
-                     
-                     						<strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/zrozumiala-kolejnosc">1.3.2: Zrozumiała kolejność</a> and <strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/kolejnosc-fokusu">2.4.3: Kolejność fokusu</a>
-                     					.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>CSS used with HTML and XHTML</p>
-               <p>This technique relates to:</p>
-               <ul>
-                  <li><a href="https://w3c.github.io/wcag/understanding/zrozumiala-kolejnosc">1.3.2: Zrozumiała kolejność</a> (Sufficient)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/kolejnosc-fokusu">2.4.3: Kolejność fokusu</a> (Sufficient when used with Giving focus to elements in an order that follows sequences
-                     and relationships within
-                     the content using one of the following techniques:
-                     )
-                  </li>
-               </ul>
+               <h2>Applicability</h2>
+               <p><abbr title="Cascading Style Sheets">CSS</abbr> used with <abbr title="HyperText Markup Language">HTML</abbr></p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
@@ -102,99 +89,104 @@
                   interact with it in the same (correct) order. 
                </p>
                <div class="note">
-                  
-                  <p>The <code class="att">tabindex</code> attribute in HTML has two functions. One is to make an element focusable and the
-                     other is to assign the element a position in the focus order. A <code class="att">tabindex</code> of 0 makes an element focusable, but adds it to the focus order in the order of source
+                  			
+                  <p>The <code class="language-html">tabindex</code> attribute in HTML has two functions. One is to make an element focusable and the
+                     other is to assign the element a position in the focus order. A <code class="language-html">tabindex</code> of 0 makes an element focusable, but adds it to the focus order in the order of source
                      elements. The focus order will follow positive values of tabindex in ascending order.
-                     Setting <code class="att">tabindex</code> values that result in an order different from the order of elements in the Document
+                     Setting <code class="language-html">tabindex</code> values that result in an order different from the order of elements in the Document
                      Object Model (DOM) can mean the order is incorrect for users of assistive technologies.
                      This is largely because the tabindex property is specified in the HTML or XHTML and
                      not the CSS. This may change in future specifications. It may also differ from the
                      visual presentation order. 
                   </p>
-                  
+                  		
                </div>
             </section>
             <section id="examples">
                <h2>Examples</h2>
                <ul>
-                  
+                  			
                   <li>An online newspaper has placed a navigation bar visually in the top left corner of
                      the page directly below its initial logo. In the source code, the navigation elements
                      appear after the elements encoding the logo. 
                   </li>
-                  
+                  		
                </ul>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
                <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
                <ul>
-                  
-                  <li><a href="https://accessibility.blog.gov.uk/2017/03/27/how-users-change-colours-on-websites/">How users change colours on websites (gov.uk)</a></li>
-                  
+                  			
+                  <li><a href="https://accessibility.blog.gov.uk/2017/03/27/how-users-change-colours-on-websites/">How users change colours on websites (gov.uk)</a>
+                     			
+                  </li>
+                  			
                   <li>Most browsers offer developer tools to inspect the source code. These tools can usually
                      be called up by pressing F12 or via the browser settings.      
-                     
+                     				
                      <ul>
                         
                         <li>
-                           <a href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm">Web Developer Toolbar (Chrome)</a>. Allows examination of the source code with CSS turned off in Chrome. This can be
+                           <a href="https://addons.mozilla.org/en/firefox/addon/web-developer/">The Web Developer Toolbar (Firefox)</a>. Allows examination of the source code with CSS turned off in Firefox. This can be
                            helpful in determining whether reading order and source code order match.
+                           
                         </li>
-                        
+                        					
                         <li>
-                           <a href="https://addons.mozilla.org/de/firefox/addon/web-developer/">The Web Developer Toolbar (Firefox)</a>. Allows examination of the source code with CSS turned off in Firefox. This can be
+                           						<a href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm">Web Developer Toolbar (Chrome)</a>. Allows examination of the source code with CSS turned off in Chrome. This can be
                            helpful in determining whether reading order and source code order match.
+                           					
                         </li>
-                        
+                        				
                      </ul>
-                     
+                     			
                   </li>
-                  
-                  
+                  		
                </ul>
             </section>
             <section id="related">
                <h2>Related Techniques</h2>
                <ul>
-                  
+                  			
                   <li><a href="../general/G57">G57</a></li>
-                  
+                  			
                   <li><a href="../general/G59">G59</a></li>
-                  
+                  		
                </ul>
             </section>
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  			
                   <h3>Procedure</h3>
-                  
+                  			
                   <ol>
-                     
+                     				
                      <li>Visually examine the order of the content in the Web page as it is presented to the
                         end user.
                      </li>
-                     
+                     				
                      <li>Examine the elements in the DOM using a tool that allows you to see the DOM. </li>
-                     
+                     				
                      <li>Ensure that the order of the content in the source code sections match the visual
                         presentation of the content in the Web page. (e.g., for an English language page the
                         order is from top to bottom and from left to right.) " 
                      </li>
-                     
+                     			
                   </ol>
-                  
+                  		
                </section>
                <section class="results" id="expected-results">
+                  			
                   <h3>Expected Results</h3>
-                  
+                  			
                   <ul>
-                     
+                     				
                      <li>Step #3 is true. </li>
-                     
+                     			
                   </ul>
-                  
+                  		
                </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
@@ -210,15 +202,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -255,28 +247,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];

@@ -2,9 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>SCR1: Allowing the user to extend the default time limit
-          | WAI | W3C
-      </title>
+      <title>SCR1: Allowing the user to extend the default time limit | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
    </head>
@@ -41,7 +39,6 @@
                         <li><a href="#applicability">Applicability</a></li>
                         <li><a href="#description">Description</a></li>
                         <li><a href="#examples">Examples</a></li>
-                        <li><a href="#resources">Related Resources</a></li>
                         <li><a href="#related">Related Techniques</a></li>
                         <li><a href="#tests">Tests</a></li>
                      </ul>
@@ -51,7 +48,6 @@
          </aside>
          <main id="main" class="standalone-resource__main">
             <h1><span>Technique SCR1:</span>Allowing the user to extend the default time limit
-               
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
@@ -59,28 +55,23 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/dostosowanie-czasu">2.2.1: Dostosowanie czasu</a>, if combined with <a href="../client-side-script/SCR16">SCR16: Providing a script that warns the user a time limit is about to expire</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>
-                  Time limits that are controlled by client-side scripting.
-                  
-               </p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/dostosowanie-czasu">2.2.1: Dostosowanie czasu</a> (Sufficient, together with <a href="../client-side-script/SCR16">SCR16: Providing a script that warns the user a time limit is about to expire</a>)</span>.
-               </p>
+               <h2>Applicability</h2>
+               <p>Time limits that are controlled by client-side scripting.</p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="description">
                <h2>Description</h2>
                <p>The objective of this technique is to allow user to extend the default time limit
                   by providing a mechanism to extend the time when scripts provide functionality that
                   has default time limits. In order to allow the user to request a longer time limit,
-                  the script can provide a form (for example) allowing the user to enter a larger time
-                  limit or indicating that more time is needed. If the user is being warned that a time
-                  limit is about to expire (see <a href="../client-side-script/SCR16">SCR16</a>), this form can be made available from the warning dialog. The user can extend the
+                  the script can provide a form allowing the user to enter a larger time limit or indicating
+                  that more time is needed. If the user is being warned that a time limit is about to
+                  expire (see <a href="SCR16">providing a script that warns the user a time limit is about to expire</a>), this form can be made available from the warning dialog. The user can extend the
                   time limit to at least 10 times the default time limit, either by allowing the user
                   to indicate how much additional time is needed or by repeatedly allowing the user
                   to extend the time limit.
@@ -89,76 +80,54 @@
             <section id="examples">
                <h2>Examples</h2>
                <ul>
-                  
-                  <li>
-                     A Web page contains current stock market statistics and is set to refresh periodically.
+                  			
+                  <li>A Web page contains current stock market statistics and is set to refresh periodically.
                      When the user is warned prior to refreshing the first time, the user is provided with
-                     an option to extend the time period between refreshes. 
-                     
+                     an option to extend the time period between refreshes.
                   </li>
-                  
-                  <li>
-                     In an online chess game, each player is given a time limit for completing each move.
+                  			
+                  <li>In an online chess game, each player is given a time limit for completing each move.
                      When the player is warned that time is almost up for this move, the user is provided
                      with an option to increase the time.
-                     
                   </li>
-                  
+                  		
                </ul>
-            </section>
-            <section id="resources">
-               <h3 style="margin-bottom: 0;">Other sources</h3>
-               <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
-               <ol>
-                  
-                  <li> 
-                     <a href="http://www.phpbuilder.com/tips/item.php?id=141">PHPBuilder Time-out Info</a> 
-                     
-                  </li>
-                  
-               </ol>
             </section>
             <section id="related">
                <h2>Related Techniques</h2>
                <ul>
-                  
+                  			
                   <li><a href="../client-side-script/SCR16">SCR16</a></li>
-                  
+                  		
                </ul>
             </section>
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  			
                   <h3>Procedure</h3>
-                  
+                  			
                   <ol>
-                     
-                     <li>
-                        On a Web page that uses scripts to enforce a time limit, wait until the time limit
+                     				
+                     <li>On a Web page that uses scripts to enforce a time limit, wait until the time limit
                         has expired.
-                        
                      </li>
-                     
-                     <li>
-                        Determine if an option was provided to extend the time limit.
-                        
-                     </li>
-                     
+                     				
+                     <li>Determine if an option was provided to extend the time limit.</li>
+                     			
                   </ol>
-                  
+                  		
                </section>
                <section class="results" id="expected-results">
+                  			
                   <h3>Expected Results</h3>
-                  
+                  			
                   <ul>
-                     
-                     <li>
-                        #2 is true and more time is provided to complete the interaction.
-                        
-                     </li>
-                     
+                     				
+                     <li>2 is true and more time is provided to complete the interaction.</li>
+                     			
                   </ul>
-                  
+                  		
                </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
@@ -174,15 +143,15 @@
             </header>
             <div class="box-i">
                <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
                </p>
-               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
             </div>
          </aside>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 26 March 2023.
+            <p><strong>Date:</strong> Updated 3 February 2024.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -219,28 +188,26 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2023 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
          <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
             <ul style="margin-bottom:0">
                <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/sitemap/">Site Map</a></li>
-               <li><a href="/news/">News</a></li>
-               <li><a href="/sitemap/#archive">Archive</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
                <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/translations/"> Translations</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
                <li><a href="/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-			document.addEventListener('DOMContentLoaded', (event) =&gt; {
-			document.querySelectorAll('pre').forEach((el) =&gt; {
-			hljs.highlightElement(el);
-			});
-			});
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
 			var translationStrings = {}; /* fix WAI JS */
 		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
       var _paq = _paq || [];
