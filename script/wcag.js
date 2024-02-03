@@ -1,7 +1,22 @@
 var version="22";
 
 function titleToPathFrag (title) {
-	return title.toLowerCase().replace(/[\s,]+/g, "-").replace(/[\(\)]/g, "");
+	return title.toLowerCase()
+    .replace(/[\s,]+/g, "-")
+    .replace(/[\(\)]/g, "")
+    .replace(/[ąćęłńóśźż]/g, function(match) {
+      switch(match) {
+        case 'ą': return 'a';
+        case 'ć': return 'c';
+        case 'ę': return 'e';
+        case 'ł': return 'l';
+        case 'ń': return 'n';
+        case 'ó': return 'o';
+        case 'ś': return 's';
+        case 'ź': return 'z';
+        case 'ż': return 'z';
+      }
+    });
 }
 
 function findHeading(el) {
@@ -26,7 +41,7 @@ function linkUnderstanding() {
 		if (node.id == "parsing") pathFrag = "parsing"; // special case parsing
 		var el = document.createElement("div");
 		el.setAttribute("class", "doclinks");
-		el.innerHTML = "<a href=\"" + understandingBaseURI + pathFrag + ".html\">Understanding " + heading + "</a> <span class=\"screenreader\">|</span> <br /><a href=\"https://www.w3.org/WAI/WCAG" + version + "/quickref/#" + pathFrag + "\">How to Meet " + heading + "</a>";
+		el.innerHTML = "<a href=\"" + understandingBaseURI + pathFrag + ".html\">Objaśnienie " + heading + "</a> <span class=\"screenreader\">|</span> <br /><a href=\"https://www.w3.org/WAI/WCAG" + version + "/quickref/#" + pathFrag + "\">Jak spełnić " + heading + "</a>";
 		if (node.className = "sc") node.insertBefore(el, node.children[2]);
 		if (node.className = "guideline") node.insertBefore(el, node.children[1]);
 	})
@@ -41,22 +56,22 @@ function addTextSemantics() {
 	// put level before and parentheses around the conformance level marker
 	document.querySelectorAll('p.conformance-level').forEach(function(node){
 		var level = node.textContent;
-		node.textContent = "(Level " + level + ")";
+		node.textContent = "(Poziom " + level + ")";
 	})
 	// put principle in principle headings
 	document.querySelectorAll('section.sc h2 bdi.secno').forEach(function(node){
 		var num = node.textContent;
-		node.textContent = "Principle " + num;
+		node.textContent = "Zasada " + num;
 	})
 	// put guideline in GL headings
 	document.querySelectorAll('section.guideline h3 bdi.secno').forEach(function(node){
 		var num = node.textContent;
-		node.textContent = "Guideline " + num;
+		node.textContent = "Wytyczna " + num;
 	})
 	// put success criterion in SC headings
 	document.querySelectorAll('section.sc h4 bdi.secno').forEach(function(node){
 		var num = node.textContent;
-		node.textContent = "Success Criterion " + num;
+		node.textContent = "Kryterium sukcesu " + num;
 	})
 }
 
@@ -104,7 +119,7 @@ function numberNotes() {
 			var count = 1;
 			sec.querySelectorAll(".note").forEach(function(note) {
 				var span = note.querySelector(".note-title span");
-				span.textContent = "Note " + count;
+				span.textContent = "Uwaga " + count;
 				count++;
 			});
 		}
@@ -133,15 +148,14 @@ function renumberExamples() {
 			var rmOrAdd = examples.length == 1 ? "rm" : "add";
 			sec.querySelectorAll(".example").forEach(function(example) {
 				var marker = example.querySelector(".marker");
-				if (rmOrAdd == "rm") marker.textContent = "Example";
-				else marker.textContent = "Example " + count;
+				if (rmOrAdd == "rm") marker.textContent = "Przykład";
+				else marker.textContent = "Przykład " + count;
 				count++;
 			});
 		}
 		sec.exprocessed = true;
 	});
 }
-
 // scripts after Respec has run
 function postRespec() {
 	addTextSemantics();
