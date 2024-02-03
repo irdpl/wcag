@@ -47,7 +47,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: failed-artifact
-          path: output
+          path: guidelines/index-flat.html
 
       - name: deploy
         run: .github/scripts/deploy.sh
