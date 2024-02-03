@@ -44,10 +44,12 @@ jobs:
 
       - name: Upload Artifact
         if: failure()  # Upload artifact only if the previous step (Build) fails
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: failed-artifact
-          path: guidelines/index-flat.html
+          path: |
+                {{ github.workspace }}
+                !output
 
       - name: deploy
         run: .github/scripts/deploy.sh
