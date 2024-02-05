@@ -43,12 +43,12 @@ jobs:
           ant deploy
 
       - name: Upload Artifact
-        if: failure()  # Upload artifact only if the previous step (Build) fails
+        #if: failure()  # Upload artifact only if the previous step (Build) fails
         uses: actions/upload-artifact@v4
         with:
           name: failed-artifact
           path: |
-                {{ github.workspace }}
+                ./
                 !output
 
       - name: deploy
