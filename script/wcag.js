@@ -30,7 +30,7 @@ function textNoDescendant(el) {
 	})
 	return textContent;
 }
-wcag.irdpl.pl/guidelines/22/
+
 function linkUnderstanding() {
 	var understandingBaseURI;
 	if (respecConfig.specStatus == "ED") understandingBaseURI = "../../understanding/";
