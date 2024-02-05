@@ -33,7 +33,7 @@ function textNoDescendant(el) {
 
 function linkUnderstanding() {
 	var understandingBaseURI;
-	if (respecConfig.specStatus == "ED") understandingBaseURI = "../../understanding/";
+	if (respecConfig.specStatus == "REC") understandingBaseURI = "../../understanding/";
 	else understandingBaseURI = "wcag.irdpl.pl/" + version + "/understanding/";
 	document.querySelectorAll('.sc,.guideline').forEach(function(node){
 		var heading = textNoDescendant(findHeading(node));
