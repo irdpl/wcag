@@ -30,11 +30,11 @@ function textNoDescendant(el) {
 	})
 	return textContent;
 }
-
+wcag.irdpl.pl/guidelines/22/
 function linkUnderstanding() {
 	var understandingBaseURI;
 	if (respecConfig.specStatus == "ED") understandingBaseURI = "../../understanding/";
-	else understandingBaseURI = "https://www.w3.org/WAI/WCAG" + version + "/Understanding/";
+	else understandingBaseURI = "wcag.irdpl.pl/" + version + "/understanding/";
 	document.querySelectorAll('.sc,.guideline').forEach(function(node){
 		var heading = textNoDescendant(findHeading(node));
 		var pathFrag = titleToPathFrag(heading);
