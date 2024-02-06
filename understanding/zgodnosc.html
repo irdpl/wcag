@@ -38,7 +38,7 @@
         <p><strong>Poziom zgodności</strong>: Jeden z poniższych poziomów zgodności jest spełniony w całości.</p>
         <ul>
           <li>
-            <a>Strona internetowa</a> osiąga zgodność na poziomie A (minimalny poziom zgodności), gdy <a>spełnia </a> wszystkie kryteria sukcesu poziomu A lub zapewniona jest <a>wersja alternatywna zgodna</a>.
+            <a>Strona internetowa</a> osiąga zgodność na poziomie A (minimalny poziom zgodności), gdy <a>spełnia</a> wszystkie kryteria sukcesu poziomu A lub zapewniona jest <a>wersja alternatywna zgodna</a>.
           </li>
           <li>
             Strona internetowa osiąga zgodność na poziomie AA, gdy spełnia wszystkie kryteria sukcesu poziomu A i poziomu AA lub zapewniona jest wersja alternatywna zgodna.
@@ -116,7 +116,7 @@
     <section id="conf-req4">
       <h3>Objaśnienie wymagania 4</h3>
       <blockquote class="scquote" id="cc4">
-        <p><strong>Only Accessibility-Supported Ways of Using Technologies</strong>: Only <a>accessibility-supported</a> ways of using <a>technologies</a> are <a>relied upon</a> to satisfy the success criteria. Any information or functionality that is provided in a way that is not accessibility supported is also available in a way that is accessibility supported. (See <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#accessibility-support">Understanding accessibility support</a>.)</p>
+        <p><strong>Tylko obsługujące dostępność sposoby korzystania z technologii</strong>: Aby spełnić kryteria sukcesu, należy <a>polegać</a> wyłącznie na obsługujących dostępność sposobach korzystania z <a>technologii</a> Wszelkie informacje lub funkcjonalności, które są zapewnione w sposób nieobsługujący dostępności, muszą być również zapewnione w sposób obsługujący dostępność.</p>
       </blockquote>
       <p>
         Ten wymóg zgodności został wyjaśniony poniżej w sekcji <a href="#accessibility-support">Objaśnienie obsługi dostępności</a>
@@ -126,14 +126,14 @@
       <h3>Objaśnienie wymagania 5</h3>
       <blockquote class="scquote" id="cc5">
         <p>
-          <strong>Bez zakłóceń</strong>: Jeśli <a>technologie</a> są używane w sposób, który nie <a>obsługuje dostępności</a> lub, jeśli są używane w sposób niezgodny, to technologie te nie blokują użytkownikom dostępu do reszty strony. Dodatkowo, <a>strona internetowa</a> jako całość nadal spełnia wymogi zgodności pod każdym z następujących warunków:
+          <strong>Bez zakłóceń</strong>: Jeśli stosowane na stronie <a>technologie</a> są użyte w sposób, który nie <a>obsługuje dostępności</a> lub, ub jeśli są użyte w sposób niezgodny z kryteriami sukcesu, , to technologie te nie blokują użytkownikom dostępu do reszty strony. Ponadto , <a>strona internetowa</a> jako całość nadal spełnia wymogi zgodności pod każdym z poniższych warunków:
         </p>
         <ol>
           <li>
-            gdy jakakolwiek technologia, która nie jest <a>wiarygodną podstawą</a>, jest włączona w programie użytkownika,
+            gdy jakakolwiek technologia, na której nie można <a>polegać</a>, jest włączona w programie użytkownika,
           </li>
-          <li>gdy jakaś technologia, która nie jest wiarygodną podstawą, jest wyłączona w programie użytkownika, oraz</li>
-          <li>gdy jakaś technologia, która nie jest wiarygodną podstawą, nie jest obsługiwana przez program użytkownika.</li>
+          <li>gdy jakaś technologia, na której nie można <a>polegać</a>, jest wyłączona w programie użytkownika, oraz</li>
+          <li>gdy jakaś technologia, na której nie można <a>polegać</a>, nie jest obsługiwana przez program użytkownika.</li>
         </ol>
         <p>
           Ponadto, następujące kryteria sukcesu dotyczą wszystkich treści na stronie, włącznie z treściami, które w innych przypadkach nie są podstawą spełnienia wymogów zgodności, ponieważ niezastosowanie poniższych kryteriów mogłoby uniemożliwiać korzystanie ze strony:
@@ -160,17 +160,18 @@
         </div>
       </blockquote>
       <p>
-        Zasadniczo oznacza to, że można stosować technologie, które <strong>nie obsługują dostępności</strong>, o ile wszystkie informacje są również dostępne przy użyciu technologii <strong>obsługujących dostępność</strong> i o ile materiały <strong>nieobsługiwane pod kątem dostępności</strong> nie powodują zakłóceń.
+        Zasadniczo oznacza to, że można stosować technologie, które <strong>nie obsługują dostępności</strong>, o ile wszystkie informacje są również zapewnione przy użyciu technologii <strong>obsługujących dostępność</strong> i o ile materiały <strong>nieobsługiwane pod kątem dostępności</strong> nie powodują zakłóceń.
       </p>
       <p>
-        Mogą być stosowane technologie, które nie obsługują dostępności, a także mogą być stosowane technologie, które obsługują dostępność w sposób niezgodny z wymogami, o ile wszystkie informacje są również dostępne przy użyciu technologii, które są obsługiwane pod względem dostępności, w sposób zgodny i tak długo, jak materiały nieobsługiwane pod względem dostępności nie powodują zakłóceń.
+        Mogą być stosowane technologie, które nie obsługują dostępności, a także mogą być stosowane technologie, które obsługują dostępność w sposób niezgodny z wymogami, o ile wszystkie informacje są również zapewnione przy użyciu technologii, które są obsługiwane pod względem dostępności, w sposób zgodny i tak długo, jak materiały nieobsługiwane pod względem dostępności nie powodują zakłóceń.
       </p>
       <p>
         Istnieją cztery regulacje, które w szczególności dotyczą kwestii zakłóceń w korzystaniu ze strony. Te cztery regulacje zostały ujęte tutaj w uwadze. Uwaga dotycząca każdej z regulacji wskazuje, że te kryteria sukcesu muszą być spełnione w przypadku wszystkich treści, w tym treści utworzonych przy użyciu technologii, które nie są obsługiwane pod kątem dostępności.
       </p>
       <div class="example">
         <p>
-          Strona internetowa wykorzystuje nową interaktywną technologię graficzną o nazwie „ZAP”. Chociaż ZAP nie obsługuje dostępności, informacje, które są prezentowane w ZAP, są również prezentowane na stronie w HTML, więc nie można polegać na ZAP. Tak więc ta strona spełnia wymóg zgodności nr 1. Jeśli jednak użytkownik spróbuje przejrzeć zawartość ZAP, fokus wejdzie do obiektu ZAP i w nim utknie. Po wejściu do środka użytkownik nie może nic zrobić, aby przenieść fokus dalej lub z powrotem. W efekcie użytkownicy klawiatury nie mogą korzystać z dolnej połowy strony. Zawartość ZAP również nieustannie miga w różnym tempie i nie zatrzymuje się. W efekcie, osoby z zaburzeniami uwagi są rozproszone, a osoby z zaburzeniami wrażliwości na światło mogą mieć drgawki. Wymóg zgodności nr 5 zapobiega sytuacjom takim jak te, które są możliwe na zgodnej stronie.
+          Strona internetowa wykorzystuje nową interaktywną technologię graficzną o nazwie „ZAP”. Ponieważ ZAP nie obsługuje dostępności, a więc nie można polegać na ZAP, informacje, które są prezentowane w ZAP, są również prezentowane na stronie w HTML. Tak więc ta strona spełnia wymóg zgodności nr 1.</p>
+		  <p>Jeśli jednak użytkownik spróbuje przejrzeć treść ZAP, to fokus wejdzie do obiektu ZAP i w nim utknie. Po wejściu do środka użytkownik nie może nic zrobić, aby przenieść fokus dalej lub z powrotem. W efekcie użytkownicy klawiatury nie mogą korzystać z dolnej połowy strony. Treść ZAP również nieustannie miga w różnym tempie i nie zatrzymuje się. W efekcie, osoby z zaburzeniami uwagi są rozproszone, a osoby z zaburzeniami wrażliwości na światło mogą mieć drgawki. Wymóg zgodności nr 5 zapobiega sytuacjom takim jak te, które są możliwe na zgodnej stronie.
         </p>
       </div>
     </section>
@@ -215,13 +216,13 @@ która może być dostępna za pomocą technologii wspomagających.&lt;/p>
 &lt;/div>
 </pre>
     <p>
-      Czasami ktoś może chcieć złożyć oświadczenie dotyczące tylko treści, które zostały dodane po określonej dacie. Można też deklarować zgodność z WCAG 1.0 dla treści opublikowanych do pewnej daty i zgodność z WCAG 2.0 dla treści utworzonych lub zmodyfikowanych po tej dacie. WCAG 2.2 nie zabrania żadnej z tych praktyk, o ile jest jasne, które strony z którą wersją WCAG są zgodne.
+      Czasami ktoś może chcieć złożyć deklarację dotyczącą tylko treści, które zostały dodane po określonej dacie. Można też deklarować zgodność z WCAG 1.0 dla treści opublikowanych do pewnej daty i zgodność z WCAG 2.0 dla treści utworzonych lub zmodyfikowanych po tej dacie. WCAG 2.2 nie zabrania żadnej z tych praktyk, o ile jest jasne, które strony z którą wersją WCAG są zgodne.
     </p>
     <div class="note">
       <div role="heading" class="note-title marker" aria-level="3">Uwaga</div>
       <div>
         <p>
-          Kiedy mówimy o technologiach, na których „można polegać”, mówimy o technologiach treści internetowych (HTML, CSS, JavaScript itp.), a nie o programach użytkownika (przeglądarkach, technologiach wspomagających itp.).
+          Kiedy mówimy o technologiach, na których „można <a>polegać</a>”, mówimy o technologiach treści internetowych (HTML, CSS, JavaScript itp.), a nie o programach użytkownika (przeglądarkach, technologiach wspomagających itp.).
         </p>
         <p>
           Deklaracje zgodności zwykle nie są umieszczane na każdej stronie internetowej objętej zakresem zgodności.
@@ -258,113 +259,98 @@ która może być dostępna za pomocą technologii wspomagających.&lt;/p>
       </p>
     </section>
     <section id="examples">
-      <h3>Examples of Conformance Claims</h3>
+      <h3>Przykłady deklaracji zgodności</h3>
       <section>
-        <h4>Examples of Required Components of Conformance Claims </h4>
+        <h4>Przykłady wymaganych składników deklaracji zgodności</h4>
         <div class="example">
           <p>
-            On 20 September 2009, all Web pages at http://www.example.com conform to Web Content
-            Accessibility Guidelines 2.0 at https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Level
-            A conformance.
+            Na dzień 20 września 2009 r. wszystkie strony internetowe pod adresem http://www.example.com są zgodne z Wytycznymi dla dostępności treści internetowych 2.0 pod adresem https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Zgodność na poziomie A.
           </p>
           <ul>
             <li>
-              The documented set of accessibility-supported content technologies
-              <strong>relied upon</strong> for this claim is a subset of ISA- AsCTset#1-2008 at http://ISA.example.gov/AsCTsets/AS2-2008.
+              Udokumentowany zestaw technologii treści obsługujących dostępność, na którym <strong>opiera się</strong> ta deklaracja, jest podzbiorem ISA- AsCTset#1-2008 pod adresem http://ISA.example.gov/AsCTsets/AS2-2008.
             </li>
           </ul>
           <p>
-            (using a regular expression) On 12 August 2009, pages matching the pattern http://www.example.com/(marketing|sales|contact)/.*
-            conform to Web Content
-            Accessibility Guidelines 2.0 at https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Level
-            AA conformance.
+            (przy użyciu wyrażenia regularnego) Na dzień 12 sierpnia 2009 r. strony pasujące do wzorca http://www.example.com/(marketing|sales|contact)/.* są zgodne są zgodne z Wytycznymi dla dostępności treści internetowych 2.0 pod adresem https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Zgodność na poziomie AA.
           </p>
           <ul>
             <li>
-              The technologies that this content "
-              <strong>relies upon</strong>" is: XHTML 1.0 Transitional, CSS 2.0 and JavaScript 1.2.
+              Technologie, na których <q><strong>opiera się</strong></q> ta treść to: XHTML 1.0 Transitional, CSS 2.0 oraz JavaScript 1.2.
             </li>
           </ul>
+
           <p>
-            (using boolean logic) On 6 January 2009, http://example.com/ AND NOT
+            (używając logiki boole'owskiej) 6 stycznia 2009, http://example.com/ AND NOT
             (http://example.com/archive/ OR http://example.com/publications/archive/)
-            conforms to Web Content Accessibility Guidelines 2.0 at
-            https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Level AA conformance.
+           są zgodne z Wytycznymi dla dostępności treści internetowych 2.0 pod adresem
+            https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Zgodność na poziomie AA.
           </p>
           <ul>
             <li>
-              The documented set of accessibility-supported content technologies
-              <strong>relied upon</strong> for this claim includes XHTML 1.0 and SMIL from ISA- AsCTset#1-2008 at
-              http://ISA.example.gov/AsCTsets/AS2-2008.
+              Udokumentowany zestaw technologii treści obsługujących dostępność, na którym <strong>opiera się</strong> ta deklaracja, obejmuje XHTML 1.0 i SMIL z ISA- AsCTset#1-2008 na stronie http://ISA.example.gov/AsCTsets/AS2-2008.
             </li>
           </ul>
         </div>
       </section>
+	  
+
+
+	  
+	  
+	  
+	  
+	  
+	  
       <section>
-        <h4>Examples of Conformance Claims including optional components</h4>
+        <h4>Przykłady deklaracji zgodności zawierających opcjonalne komponenty</h4>
         <div class="example">
           <p>
-            On 5 May 2009, the page
-            "G7: An Introduction" http://telcor.example.com/nav/G7/intro.html conforms to Web
-            Content Accessibility Guidelines 2.0 at https://www.w3.org/TR/2008/REC-WCAG20-20081211/.
-            Level AA conformance.
+            Na dzień 5 maja 2009 r. strona "G7: An Introduction" http://telcor.example.com/nav/G7/intro.html jest zgodna z Wytycznymi dla dostępności treści internetowych 2.0 pod adresem https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Zgodność na poziomie AA.
           </p>
           <ul>
             <li>
-              The following additional Success Criteria have also been met: 1.1.2, 1.2.5, and 1.4.3.
+              Spełnione zostały również następujące dodatkowe kryteria sukcesu: 1.1.2, 1.2.5 i 1.4.3.
             </li>
             <li>
-              The documented set of accessibility-supported content technologies used for this claim
-              is AsCTset#1-2006 at http://UDLabs.org/AsCTset#1-2006.html.
+              Udokumentowany zestaw technologii treści obsługujących dostępność, na którym <strong>opiera się</strong> ta deklaracja, to AsCTset#1-2006 na http://UDLabs.org/AsCTset#1-2006.html.
             </li>
             <li>
-              The technologies that this content "
-              <strong>relies upon</strong>" is: XHTML 1.0 (Strict), and Real Video.
+              Technologie, na których <q><strong>opiera się</strong></q> ta treść to: XHTML 1.0 (Strict) i Real Video.
             </li>
             <li>
-              The technologies that this content "
-              <strong>uses but does not rely upon</strong>" are: JavaScript 1.2, CSS2.
+              Technologie, których ta treść "<strong>używa, ale na nich nie polega</strong>" to: JavaScript 1.2, CSS2.
+            </li>
+          </ul>	  
+          <p>
+            Na dzień 21 czerwca 2009 r. cała treść rozpoczynająca się od URI http://example.com/nav i http://example.com/docs jest zgodna z Wytycznymi dla dostępności treści internetowych 2.0 opublikowanymi pod adresem https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Zgodność na poziomie AAA.
+          </p>
+          <ul>
+            <li>
+              Udokumentowany zestaw technologii treści obsługujących dostępność, na którym <strong>opiera się</strong> ta deklaracja, to SMITH- AsCTset#2-2008 na stronie http://smithreports.example.com/AsCTsets/AS2-2008.
+            </li>
+            <li>
+              Technologie, na których <q><strong>opiera się</strong></q> ta treść to: XHTML 1.0 (Strict), CSS2, JavaScript 1.2, JPEG, PNG.
+            </li>
+            <li>
+              Programy użytkownika, w tym technologie wspomagające, z którymi ta treść została przetestowana, można znaleźć na stronie  http://example.com/docs/WCAG20/test/technologies.html.
             </li>
           </ul>
           <p>
-            On 21 June 2009, all content beginning with the URI
-            http://example.com/nav and http://example.com/docs conform to Web Content Accessibility
-            Guidelines 2.0 at https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Level AAA conformance.
+            Na dzień 23 marca 2009 r. cała treść dostępna na serwerze pod adresem http://www.wondercall.example.com jest zgodna z Web Content Accessibility Guidelines 2.0 pod adresem https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Zgodność na poziomie A.
           </p>
           <ul>
             <li>
-              The documented set of accessibility-supported content technologies used for this claim
-              is SMITH- AsCTset#2-2008 at http://smithreports.example.com/AsCTsets/AS2-2008.
+              Technologia, na której <q><strong>opiera się</strong></q> ta treść to: HTML 4.01.
             </li>
             <li>
-              The technologies that this content "
-              <strong>relies upon</strong>" are: XHTML 1.0 (Strict), CSS2, JavaScript 1.2, JPEG, PNG.
+              Technologie, których ta treść "<strong>używa, ale na nich nie polega</strong>" to: CSS2 i gif.
             </li>
             <li>
-              The user agents, including assistive technologies, that this content has been tested
-              with can be found at http://example.com/docs/WCAG20/test/technologies.html.
-            </li>
-          </ul>
-          <p>
-            On 23 March 2009, all content available on the server at
-            http://www.wondercall.example.com conforms to Web Content Accessibility Guidelines
-            2.0 at https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Single-A conformance.
-          </p>
-          <ul>
-            <li>
-              The technology that this content "
-              <strong>relies upon</strong>" is: HTML 4.01.
-            </li>
-            <li>
-              The technologies that this content "
-              <strong>uses but does not rely upon</strong>" are: CSS2, and gif.
-            </li>
-            <li>
-              This content was tested using the following user agents and assistive technologies:
-              Firefox 1.5 on Windows Vista with Screenreader X 4.0, Firefox 1.5 on Windows XP SP
-              2 with Screenreader X 3.5, IE 6.0 on Windows 2000 SP4 with Screenreader Y 5.0, IE
-              6.0 on Windows 2000 SP4 with Screenreader Z 2.0, and Firefox 1.5 on Windows XP SP2
-              with Screenreader X 4.0, Safari 2.0 with OS X 10.4.
+              Ta treść została przetestowana za pomocą następujących programów użytkownika i technologii wspomagających: Firefox 1.5 na Windows Vista z Screenreaderem X 4.0, Firefox 1.5 na Windows XP SP
+              2 ze Screenreaderem X 3.5, IE 6.0 na Windows 2000 SP4 ze Screenreaderem Y 5.0, IE
+              6.0 na Windows 2000 SP4 ze Screenreaderem Z 2.0 i Firefox 1.5 i Windows XP SP2
+              ze Screenreaderem X 4.0, Safari 2.0 z OS X 10.4.
             </li>
           </ul>
         </div>
@@ -510,7 +496,7 @@ która może być dostępna za pomocą technologii wspomagających.&lt;/p>
         Grupa Robocza ograniczyła się więc do zdefiniowania tego, co stanowi obsługę (wsparcie), a osąd tego, ile lub które technologie wspomagające muszą obsługiwać daną technologię, pozostawia społeczności i podmiotom bliższym każdej sytuacji, które ustalają wymagania dla organizacji, zakupu, społeczności itp.
       </p>
       <p>
-        Grupa robocza zachęca do szerszej dyskusji na ten temat na ogólnym forum społeczności, ponieważ brak ogólnie dostępnych, ale solidnych technologii wspomagających jest problemem, który negatywnie wpływa na użytkowników, twórców technologii i twórców treści.
+        Grupa Robocza zachęca do szerszej dyskusji na ten temat na ogólnym forum społeczności, ponieważ brak ogólnie dostępnych, ale solidnych technologii wspomagających jest problemem, który negatywnie wpływa na użytkowników, twórców technologii i twórców treści.
       </p>
     </section>
     <section id="accessibility-supported-definition">
@@ -581,13 +567,13 @@ która może być dostępna za pomocą technologii wspomagających.&lt;/p>
               Technologie internetowe mogą być wykorzystywane, nawet jeśli nie obsługują dostępności, dopóki nie są uwzględniane w ocenie dostępności, a strona jako całość będzie zgodna z wymogami, w tym z <a href="#cc4">Wymogiem zgodności: 4</a>. Użycie technologii obsługujących dostępność oraz <a href="#cc5">Wymogiem zgodności 5. Brak zakłóceń</a>.
             </p>
             <p class="note">
-              Gdy <a>technologia internetowa </a> jest używana w sposób obsługujący dostępność („obsługiwany pod kątem dostępności”), nie oznacza to, to, że obsługiwana jest cała technologia lub wszystkie sposoby jej użycia są obsługiwane. Większość technologii, w tym HTML, nie obsługuje co najmniej jednej funkcji lub sposobu zastosowania. Strony są zgodne z WCAG tylko wtedy, gdy można <a>polegać na</a> stosowaniu technologii, które obsługują dostępność, aby spełnić wymagania WCAG (kiedy użycie technologii obsługującej dostępność, może być uwzględniane jako podstawa oceny zgodności z WCAG).
+              Gdy <a>technologia internetowa </a> jest używana w sposób obsługujący dostępność („obsługiwany pod kątem dostępności”), nie oznacza to,  że obsługiwana jest cała technologia lub wszystkie sposoby jej użycia są obsługiwane. Większość technologii, w tym HTML, nie obsługuje co najmniej jednej funkcji lub sposobu zastosowania. Strony są zgodne z WCAG tylko wtedy, gdy można <a>polegać na</a> stosowaniu technologii, które obsługują dostępność, aby spełnić wymagania WCAG (kiedy użycie technologii obsługującej dostępność, może być uwzględniane jako podstawa oceny zgodności z WCAG).
 			  </p>
             <p class="note">
               Przywołując technologie tworzenia treści internetowych, które mają wiele wersji, należy określić, która wersje obsługują dostępność.
             </p>
             <p class="note">
-              Jednym ze sposobów dotarcia przez twórców treści internetowych do zastosowań technologii, które obsługują dostępność, jest zapoznanie się z zestawieniami zastosowań udokumentowanych jako obsługujące dostępność (zobacz: <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#documented-lists">Understanding Accessibility-Supported Web Technology Uses</a> - Zrozumieć zastosowania technologii internetowych obsługujących dostępność). Autorzy, firmy, sprzedawcy technologii i inni mogą dokumentować sposoby korzystania z technologii treści internetowych obsługujące dostępność. Jednak dokumentacja wszystkich sposobów i metod zastosowania tych technologii w dokumentacji musiałyby odpowiadać powyższej definicji technologii treści WWW obsługujących dostępność.
+              Jednym ze sposobów dotarcia przez twórców treści internetowych do zastosowań technologii, które obsługują dostępność, jest zapoznanie się z zestawieniami zastosowań udokumentowanych jako obsługujące dostępność (zobacz: <a href="#documented-lists">Objaśnienie zastosowań technologii internetowych obsługujących dostępność</a>. Twórcy, firmy, sprzedawcy technologii i inni mogą dokumentować sposoby korzystania z technologii treści internetowych obsługujące dostępność. Jednak dokumentacja wszystkich sposobów i metod zastosowania tych technologii w dokumentacji musiałyby odpowiadać powyższej definicji technologii treści WWW obsługujących dostępność.
             </p>
           </dd>
           <!-- Koniec treści włączanej -->
@@ -597,7 +583,7 @@ która może być dostępna za pomocą technologii wspomagających.&lt;/p>
     <section id="documented-lists">
       <h3>Objaśnienie zastosowań technologii internetowych obsługujących dostępność</h3>
       <p>
-        Poszczególni autorzy zazwyczaj nie będą w stanie przeprowadzić wszystkich testów niezbędnych do ustalenia, w jaki sposób dane technologie internetowe są faktycznie obsługiwane przez które wersje technologii wspomagających i programów użytkownika. Twórcy mogą zatem polegać na publicznie udokumentowanych zestawieniach, które dokumentują, które technologie wspomagające obsługują określone sposoby korzystania z określonych technologii internetowych. Mówiąc publicznie, nie mamy na myśli tego, że zestawienie i jej dokumentacja są koniecznie tworzone przez agencję publiczną, a jedynie, że są one dostępne publicznie. Każdy może tworzyć publicznie udokumentowane zestawienia „Zastosowań technologii internetowych i ich dostępności”. Ludzie mogą tworzyć zestawienia i nadawać im nazwy, za pomocą których autorzy mogą się do nich odwoływać. Tak długo jak są one publicznie udokumentowane, twórcy lub klienci itp. mogą łatwo wybrać zastosowania, które odpowiadają ich potrzebom. Klienci lub inne osoby mogą wybrać technologie, które pasują do ich środowiska lub języka w dowolnym momencie i określić te, które mają być używane do tworzenia ich treści. Twórcy są zdecydowanie zachęcani do korzystania ze źródeł, które mają ugruntowaną reputację w zakresie dokładności i użyteczności. Zdecydowanie zachęca się twórców technologii do podawania informacji na temat obsługi dostępności przez ich technologie. Grupa robocza przewiduje, że tylko dokumenty, które dostarczają dokładnych informacji i przynoszą korzyści zarówno twórcom, jak i użytkownikom, osiągną w dłuższej perspektywie uznanie na rynku.
+        Poszczególnitwórcy zazwyczaj nie będą w stanie przeprowadzić wszystkich testów niezbędnych do ustalenia, w jaki sposób dane technologie internetowe są faktycznie obsługiwane przez które wersje technologii wspomagających i programów użytkownika. Twórcy mogą zatem polegać na publicznie udokumentowanych zestawieniach, które dokumentują, które technologie wspomagające obsługują określone sposoby korzystania z określonych technologii internetowych. Mówiąc publicznie, nie mamy na myśli tego, że zestawienie i jej dokumentacja są koniecznie tworzone przez agencję publiczną, a jedynie, że są one dostępne publicznie. Każdy może tworzyć publicznie udokumentowane zestawienia „Zastosowań technologii internetowych i ich dostępności”. Ludzie mogą tworzyć zestawienia i nadawać im nazwy, za pomocą których autorzy mogą się do nich odwoływać. Tak długo jak są one publicznie udokumentowane, twórcy lub klienci itp. mogą łatwo wybrać zastosowania, które odpowiadają ich potrzebom. Klienci lub inne osoby mogą wybrać technologie, które pasują do ich środowiska lub języka w dowolnym momencie i określić te, które mają być używane do tworzenia ich treści. Twórcy są zdecydowanie zachęcani do korzystania ze źródeł, które mają ugruntowaną reputację w zakresie dokładności i użyteczności. Zdecydowanie zachęca się twórców technologii do podawania informacji na temat obsługi dostępności przez ich technologie. Grupa robocza przewiduje, że tylko dokumenty, które dostarczają dokładnych informacji i przynoszą korzyści zarówno twórcom, jak i użytkownikom, osiągną w dłuższej perspektywie uznanie na rynku.
       </p>
       <p>
         WCAG nie wymaga, aby korzystano z publicznie udokumentowanego zestawienia lub używano wyłącznie technologii z takiego zestawienia. Publicznie udokumentowane zestawienia są opisywane jedynie jako metoda ułatwiająca skądinąd krytyczny, ale nieco skomplikowany osąd zgodności, twórcom, którzy sami nie są ekspertami w zakresie wsparcia technologii wspomagających (lub po prostu nie mają czasu, aby nadążyć za postępem w zakresie głównego nurtu i wsparcia technologii wspomagających).
@@ -849,7 +835,7 @@ która może być dostępna za pomocą technologii wspomagających.&lt;/p>
     </section>
   </section>
   <section xmlns:wcag="https://www.w3.org/WAI/GL/" id="web-page">
-    <h2>Objaśnienie pojęcia „strona internetowej”</h2>
+    <h2>Objaśnienie pojęcia „strona internetowa”</h2>
     <p>Definicja strony internetowej to</p>
     <blockquote class="scquote" data-include="../guidelines/terms/20/web-page.html">Strona internetowa</blockquote>
     <blockquote class="scquote">
