@@ -183,221 +183,169 @@
                <h2>In Brief</h2>
                <dl>
                   
+                  <dt>Cel</dt>
                   
-                  <dt>Goal</dt>
-                  <dd>Non-text information is available to more people.</dd>
+                  <dd>Treści nietekstowe są bardziej dostępne dla wielu ludzi.</dd>
                   
-                  <dt>What to do</dt>
-                  <dd>Create a text alternative for visual and auditory content.</dd>
+                  <dt>Co zrobić</dt>
                   
-                  <dt>Why it's important</dt>
-                  <dd>People who can’t fully see or hear content can understand it.</dd> 
+                  <dd>Utwórz alternatywę tekstową dla treści wizualnych i dźwiękowych.</dd>
+                  
+                  <dt>Dlaczego to jest ważne</dt>
+                  
+                  <dd>Ludzie, którzy nie mogą w pełni zobaczyć lub usłyszeć treści, mogą ją zrozumieć.</dd>
                   
                </dl>
             </section>
             <section id="intent">
                <h2>Intent</h2>
-               <p>The intent of this Success Criterion is to make information conveyed by non-text content
-                  accessible through the use of a text alternative.  Text alternatives are a primary
-                  way for making information accessible because they can be rendered through any sensory
-                  modality (for example, visual, auditory or tactile) to match the needs of the user.
-                  Providing text alternatives allows the information to be rendered in a variety of
-                  ways by a variety of user agents. For example, a person who cannot see a picture can
-                  have the text alternative read aloud using synthesized speech. A person who cannot
-                  hear an audio file can have the text alternative displayed so that he or she can read
-                  it. In the future, text alternatives will also allow information to be more easily
-                  translated into sign language or into a simpler form of the same language.
+               <p>
+                  Celem tego kryterium sukcesu jest udostępnienie informacji przekazywanych przez treści
+                  nietekstowe poprzez użycie alternatywy tekstowej. Alternatywy tekstowe są podstawowym
+                  sposobem udostępniania informacji, ponieważ mogą być renderowane za pomocą dowolnej
+                  modalności sensorycznej (na przykład wizualnej, słuchowej lub dotykowej), aby dopasować
+                  się do potrzeb użytkownika. Zapewnienie alternatyw tekstowych umożliwia renderowanie
+                  informacji na różne sposoby przez różne programy użytkownika. Na przykład osoba, która
+                  nie widzi obrazu, może mieć alternatywny tekst odczytany na głos za pomocą mowy syntezowanej.
+                  Osoba, która nie słyszy pliku audio, może wyświetlić alternatywny tekst, aby mogła
+                  go przeczytać. W przyszłości alternatywy tekstowe pozwolą również na łatwiejsze tłumaczenie
+                  informacji na język migowy lub prostszą formę tego samego języka.
                   
                </p>
-               <section id="-note-on-captcha-">
-                  
+               <section id="-uwaga-dotycząca-captcha-">
                   
                   <h3>
-                     Note on CAPTCHA
-                     
+                     Uwaga dotycząca CAPTCHA
                      
                   </h3>
                   
+                  <p>
+                     CAPTCHA są kontrowersyjnym tematem w społeczności zajmującej się dostępnością. Jak
+                     opisano w artykule <a href="https://www.w3.org/TR/turingtest/">Inaccessibility of CAPTCHA</a>, CAPTCHA z natury przesuwają granice ludzkich możliwości, próbując pokonać zautomatyzowane
+                     procesy. Każdy rodzaj CAPTCHA będzie niemożliwy do rozwiązania przez użytkowników
+                     z pewnymi niepełnosprawnościami. Są one jednak szeroko stosowane, a grupa robocza
+                     Web Content Accessibility Guidelines Working Group uważa, że gdyby CAPTCHA były całkowicie
+                     zabronione, strony internetowe zdecydowałyby się raczej nie dostosowywać do WCAG niż
+                     porzucić CAPTCHA. Stworzyłoby to bariery dla znacznie większej liczby użytkowników
+                     z niepełnosprawnościami. Z tego powodu grupa robocza zdecydowała się ustrukturyzować
+                     wymóg dotyczący CAPTCHA w sposób, który spełnia potrzeby większości osób z niepełnosprawnościami,
+                     a jednocześnie jest uważany za możliwy do przyjęcia przez witryny. Wymaganie dwóch
+                     różnych form CAPTCHA na danej stronie gwarantuje, że większość osób z niepełnosprawnościami
+                     znajdzie formularz, z którego mogą skorzystać.
+                     
+                  </p>
                   
                   <p>
-                     CAPTCHAs are a controversial topic in the accessibility community. As is described
-                     in the
-                     paper 
-                     <a href="https://www.w3.org/TR/turingtest/">Inaccessibility of CAPTCHA</a>, CAPTCHAs intrinsically push the edges of human abilities in an attempt to defeat
-                     automated processes. Every type of CAPTCHA will be unsolvable by users with certain
-                     disabilities. However, they are widely used, and the Web Content Accessibility Guidelines
-                     Working Group believes that if CAPTCHAs were forbidden outright, Web sites would choose
-                     not to conform to WCAG rather than abandon CAPTCHA. This would create barriers for
-                     a great many more users with disabilities. For this reason the Working Group has chosen
-                     to structure the requirement about CAPTCHA in a way that meets the needs of most people
-                     with disabilities, yet is also considered adoptable by sites. Requiring two different
-                     forms of CAPTCHA on a given site ensures that most people with disabilities will find
-                     a form they can use.
+                     Ponieważ niektórzy użytkownicy z niepełnosprawnościami nadal nie będą mogli uzyskać
+                     dostępu do witryn spełniających minimalne wymagania, grupa robocza przedstawia zalecenia
+                     dotyczące dodatkowych kroków. Organizacje zmotywowane do dostosowania się do WCAG
+                     powinny być świadome znaczenia tego tematu i powinny wykraczać tak daleko poza minimalne
+                     wymagania wytycznych, jak to tylko możliwe. Dodatkowe zalecane kroki obejmują:
                      
                   </p>
-                  
-                  
-                  <p>Because some users with disabilities will still not be able to access sites that meet
-                     the minimum requirements, the Working Group provides recommendations for additional
-                     steps. Organizations motivated to conform to WCAG should be aware of the importance
-                     of this topic and should go as far beyond the minimum requirements of the guidelines
-                     as possible. Additional recommended steps include:
-                     
-                  </p>
-                  
                   
                   <ul>
                      
+                     <li>Zapewnienie więcej niż dwóch trybów CAPTCHA</li>
                      
-                     <li>Providing more than two modalities of CAPTCHAs</li>
+                     <li>Zapewnienie dostępu do ludzkiego przedstawiciela obsługi klienta, który może ominąć
+                        CAPTCHA
+                     </li>
                      
-                     
-                     <li>Providing access to a human customer service representative who can bypass CAPTCHA</li>
-                     
-                     
-                     <li>Not requiring CAPTCHAs for authorized users</li>
-                     
+                     <li>Niewymaganie CAPTCHA dla autoryzowanych użytkowników</li>
                      
                   </ul>
                   
-                  
                </section>
-               <section id="additional-information">
+               <section id="dodatkowe-informacje">
                   
+                  <h3>Dodatkowe informacje</h3>
                   
-                  <h3>Additional information</h3>
-                  
-                  
-                  <p>Non-text content can take a number of forms, and this Success Criterion specifies
-                     how each is to be handled.
+                  <p>
+                     Treść nietekstowa może przybierać różne formy, a to kryterium sukcesu określa sposób
+                     obsługi każdej z nich.
                      
                   </p>
                   
-                  
-                  <p> 
-                     
-                     <strong>
-                        For non-text content that is not covered by one of the other situations listed below,
-                        </strong>
-                     such as charts, diagrams, audio recordings, pictures, and animations, text alternatives
-                     can make the same information available in a form that can be rendered through any
-                     modality (for example, visual, auditory or tactile).  Short and long text alternatives
-                     can be used as needed to convey the information in the non-text content.  Note that
-                     
-                     <strong>
-                        prerecorded
-                        audio-only
-                        </strong> and 
-                     
-                     <strong> prerecorded
-                        video-only
-                        </strong> files are covered here.  
-                     <strong>
-                        Live-audio-only
-                        </strong> and 
-                     <strong>
-                        Live-video-only
-                        </strong> files are covered below (see 3rd paragraph following this one).  
+                  <p>
+                     <strong> W przypadku treści nietekstowych, które nie są objęte jedną z innych sytuacji wymienionych
+                        poniżej, </strong> takich jak wykresy, diagramy, nagrania audio, zdjęcia i animacje, alternatywy tekstowe
+                     mogą udostępniać te same informacje w formie, która może być renderowana za pomocą
+                     dowolnej modalności (na przykład wizualnej, słuchowej lub dotykowej). Krótkie i długie
+                     alternatywy tekstowe mogą być używane w razie potrzeby do przekazywania informacji
+                     w treści nietekstowej. Należy pamiętać, że <strong>wcześniej nagrane</strong> pliki <strong> audio </strong> i <strong> wideo </strong> są tutaj uwzględnione.  Pliki <strong> Tylko audio na żywo </strong> i <strong> Tylko wideo na żywo </strong> zostały omówione poniżej (patrz 3 akapit po tym).
                      
                   </p>
                   
-                  
-                  <p> 
-                     
-                     <strong>
-                        For non-text content that is a control or accepts user input
-                        </strong>, such as images used as submit buttons, image maps or complex animations, a name
-                     is provided to describe the purpose of the non-text content so that the person at
-                     least knows what the non-text content is and why it is there.
+                  <p>
+                     <strong> W przypadku treści nietekstowej, która jest kontrolką lub akceptuje dane wprowadzane
+                        przez użytkownika </strong>, takie jak obrazy używane jako przyciski przesyłania, mapy obrazów lub złożone animacje,
+                     podawana jest nazwa opisująca cel treści nietekstowej, tak aby osoba przynajmniej
+                     wiedziała, czym jest treść nietekstowa i dlaczego się tam znajduje.
                      
                   </p>
                   
-                  
-                  <p> 
-                     
-                     <strong>
-                        Non-text content that is time-based media
-                        </strong>
-                     is made accessible through 
-                     <a href="time-based-media">1.2: Time-Based Media</a>.  However, it is important that users know what it is when they encounter it on a
-                     page so they can decide what action if any they want to take with it.  A text alternative
-                     that describes the time-based media and/or gives its title is therefore provided.
-                     
+                  <p>
+                     <strong> Treści nietekstowe, które są mediami opartymi na czasie </strong>, są dostępne za pośrednictwem <a href="media-oparte-na-czasie">1.2: Media oparte na czasie</a>. Ważne jest jednak, aby użytkownicy wiedzieli, co to jest, gdy napotkają je na stronie,
+                     aby mogli zdecydować, jakie działania chcą z nim podjąć. W związku z tym zapewniona
+                     jest alternatywa tekstowa opisująca medium oparte na czasie lub podająca jego tytuł.
                      
                   </p>
                   
-                  
-                  <p> 
-                     
-                     <strong>
-                        For Live Audio-only and live video-only content
-                        </strong>, it can be much more difficult to provide text alternatives that provide equivalent
-                     information as live audio-only and live video-only content. For these types of non-text
-                     content, text alternatives provide a descriptive label.  
-                     
+                  <p>
+                     <strong> W przypadku treści Tylko audio na żywo i Tylko wideo na żywo </strong> może być znacznie trudniej zapewnić alternatywy tekstowe, które dostarczają równoważnych
+                     informacji, jak treści Tylko audio na żywo i Tylko wideo na żywo. W przypadku tego
+                     typu treści nietekstowych alternatywy tekstowe zapewniają etykietę opisową.
                      
                   </p>
                   
-                  
-                  <p> 
-                     
-                     <strong>
-                        Sometimes a test or exercise must be partially or completely presented in non-text
-                        format.
-                        </strong>  Audio or visual information is provided that cannot be changed to text because the
-                     test or exercise must be conducted using that sense.  For example, a hearing test
-                     would be invalid if a text alternative were provided.  A visual skill development
-                     exercise would similarly make no sense in text form.  And a spelling test with text
-                     alternatives would not be very effective.  For these cases, text alternatives should
-                     be provided to describe the purpose of the non-text content; of course, the text alternatives
-                     would not provide the same information needed to pass the test. 
+                  <p>
+                     <strong> Czasami test lub ćwiczenie musi być częściowo lub całkowicie przedstawione w postaci
+                        nietekstowej. </strong> Dostarczane są informacje dźwiękowe lub wizualne, których nie można zmienić na tekst,
+                     ponieważ test lub ćwiczenie musi być przeprowadzone przy użyciu tego zmysłu. Na przykład
+                     test słuchu byłby nieważny, gdyby zapewniono alternatywę tekstową. Ćwiczenie rozwijające
+                     umiejętności wizualne również nie miałoby sensu w formie tekstowej. A test ortograficzny
+                     z alternatywami tekstowymi nie byłby zbyt skuteczny. W takich przypadkach należy zapewnić
+                     alternatywy tekstowe, aby opisać cel treści nietekstowych; oczywiście alternatywy
+                     tekstowe nie dostarczą tych samych informacji, które są potrzebne do zaliczenia testu.
                      
                   </p>
                   
-                  
-                  <p> 
-                     
-                     <strong>
-                        Sometimes content is primarily intended to create a specific sensory experience
-                        </strong> that words cannot fully capture. Examples include a symphony performance, works of
-                     visual art etc. For such content, text alternatives at least identify the non-text
-                     content with a descriptive label and where possible, additional descriptive text.
-                     If the reason for including the content in the page is known and can be described
-                     it is helpful to include that information. 
+                  <p>
+                     <strong> Czasami treści mają na celu przede wszystkim wywołanie konkretnych wrażeń zmysłowych
+                        </strong>, których słowa nie są w stanie w pełni uchwycić. Przykłady obejmują występ symfoniczny,
+                     dzieła sztuki wizualnej itp. W przypadku takich treści alternatywy tekstowe przynajmniej
+                     identyfikują zawartość nietekstową za pomocą etykiety opisowej i, jeśli to możliwe,
+                     dodatkowego tekstu opisowego. Jeśli powód umieszczenia treści na stronie jest znany
+                     i można go opisać, warto zamieścić tę informację.
                      
                   </p>
                   
-                  
-                  <p> 
-                     
-                     <strong>Sometimes there are non-text exercises that are used to prove you are human.</strong> To avoid spam robots and other software from gaining access to a site a device called
-                     a CAPTCHA is used. These usually involve visual or auditory tasks that are beyond
-                     the current capabilities of Web robots. Providing a text alternative to them would
-                     however make them operable by Robots, thus defeating their purpose. In this case a
-                     text alternative would describe the purpose of the CAPTCHA, and alternate forms using
-                     different modalities would be provided to address the needs of people with different
-                     disabilities.
+                  <p>
+                     <strong>Czasami istnieją ćwiczenia nietekstowe, które służą do udowodnienia, że jesteś człowiekiem.</strong> Aby uniemożliwić robotom spamującym i innemu oprogramowaniu uzyskanie dostępu do
+                     witryny, używane jest urządzenie zwane CAPTCHA. Zazwyczaj obejmują one zadania wizualne
+                     lub słuchowe, które wykraczają poza obecne możliwości robotów sieciowych. Zapewnienie
+                     tekstowej alternatywy dla nich sprawiłoby jednak, że byłyby one obsługiwane przez
+                     roboty, co zniweczyłoby ich cel. W tym przypadku alternatywny tekst opisywałby cel
+                     CAPTCHA, a alternatywne formularze wykorzystujące różne modalności byłyby dostarczane
+                     w celu zaspokojenia potrzeb osób z różnymi niepełnosprawnościami.
                      
                   </p>
                   
-                  
-                  <p> 
-                     
-                     <strong>
-                        Sometimes there is non-text content that really is not meant to be seen or understood
-                        by the user.
-                        </strong> Transparent images used to move text over on a page; an invisible image that is used
-                     to track usage statistics; and a swirl in the corner that conveys no information but
-                     just fills up a blank space to create an aesthetic effect are all examples of this.
-                     Putting alternative text on such items just distracts people using screen readers
-                     from the content on the page. Not marking the content in any way, though, leaves users
-                     guessing what the non-text content is and what information they may have missed (even
-                     though they have not missed anything in reality). This type of non-text content, therefore,
-                     is marked or implemented in a way that assistive technologies (AT) will ignore it
-                     and not present anything to the user.
+                  <p>
+                     <strong> Czasami istnieją treści nietekstowe, które tak naprawdę nie są przeznaczone do oglądania
+                        lub rozumienia przez użytkownika. </strong> Przezroczyste obrazy używane do przesuwania tekstu na stronie; niewidoczny obraz,
+                     który służy do śledzenia statystyk użytkowania; i wir w rogu, który nie przekazuje
+                     żadnych informacji, ale po prostu wypełnia puste miejsce, aby stworzyć efekt estetyczny,
+                     są tego przykładami. Umieszczanie alternatywnego tekstu dla takich elementów tylko
+                     odwraca uwagę osób korzystających z czytników ekranu od treści na stronie. Brak oznaczenia
+                     treści w jakikolwiek sposób sprawia jednak, że użytkownicy domyślają się, czym jest
+                     treść nietekstowa i jakie informacje mogli przegapić (nawet jeśli w rzeczywistości
+                     niczego nie przegapili). Tego typu treść nietekstowa jest zatem oznaczona lub zaimplementowana
+                     w taki sposób, że technologie wspomagające (AT) zignorują ją i nie zaprezentują niczego
+                     użytkownikowi.
                      
                   </p>
-                  
                   
                </section>
             </section>
@@ -405,44 +353,37 @@
                <h2>Benefits</h2>
                <ul>
                   
-                  
-                  <li>This Success Criterion helps people who have difficulty perceiving visual content.
-                     Assistive technology can read text aloud, present it visually, or convert it to braille.
+                  <li>
+                     To kryterium sukcesu pomaga osobom, które mają trudności z postrzeganiem treści wizualnych.
+                     Technologia wspomagająca może odczytywać tekst na głos, prezentować go wizualnie lub
+                     konwertować na alfabet Braille'a.
                      
                   </li>
-                  
-                  
-                  <li>Text alternatives may help some people who have difficulty understanding the meaning
-                     of photographs, drawings, and other images  (e.g., line drawings, graphic designs,
-                     paintings, three-dimensional representations), graphs, charts, animations, etc.
-                     
-                     
-                  </li>
-                  
                   
                   <li>
-                     People who are deaf, are hard of hearing, or who are having trouble understanding
-                     audio information for any reason can read the text presentation. Research is ongoing
-                     regarding automatic translation of text into sign language. 
-                     
+                     Alternatywy tekstowe mogą pomóc niektórym osobom, które mają trudności ze zrozumieniem
+                     znaczenia zdjęć, rysunków i innych obrazów (np. rysunków liniowych, projektów graficznych,
+                     obrazów, trójwymiarowych reprezentacji), wykresów, wykresów, animacji itp.
                      
                   </li>
-                  
                   
                   <li>
-                     People who are deaf-blind can read the text in braille.
-                     
+                     Osoby niesłyszące, niedosłyszące lub mające problemy ze zrozumieniem informacji audio
+                     z jakiegokolwiek powodu mogą przeczytać prezentację tekstową. Trwają badania nad automatycznym
+                     tłumaczeniem tekstu na język migowy.
                      
                   </li>
-                  
                   
                   <li>
-                     Additionally, text alternatives support the ability to search for non-text content
-                     and to repurpose content in a variety of ways.
-                     
+                     Osoby głuchoniewidome mogą czytać tekst w alfabecie Braille'a.
                      
                   </li>
                   
+                  <li>
+                     Ponadto alternatywy tekstowe wspierają możliwość wyszukiwania treści nietekstowych
+                     i zmiany przeznaczenia treści na różne sposoby.
+                     
+                  </li>
                   
                </ul>
             </section>
@@ -450,98 +391,95 @@
                <h2>Examples</h2>
                <dl>
                   
-                  <dt>A data chart</dt>
+                  <dt>Wykres danych</dt>
                   
-                  <dd>A bar chart compares how many widgets were sold in June, July, and August. The short
-                     label says, "Figure one - Sales in June, July and August." The longer description
-                     identifies the type of chart, provides a high-level summary of the data, trends and
-                     implications comparable to those available from the chart. Where possible and practical,
-                     the actual data is provided in a table.
+                  <dd>Wykres słupkowy porównuje liczbę sprzedanych widżetów w czerwcu, lipcu i sierpniu.
+                     Krótka etykieta głosi: „Wykres pierwszy - Sprzedaż w czerwcu, lipcu i sierpniu”. Dłuższy
+                     opis identyfikuje typ wykresu, zapewnia ogólne podsumowanie danych, trendów i implikacji
+                     porównywalnych z tymi dostępnymi z wykresu. Tam, gdzie jest to możliwe i praktyczne,
+                     rzeczywiste dane są przedstawione w tabeli.
                   </dd>
                   
-                  <dt>An audio recording of a speech</dt>
+                  <dt>Nagranie audio przemówienia</dt>
                   
-                  <dd>The link to an audio clip says, "Chairman's speech to the assembly." A link to a text
-                     transcript is provided immediately after the link to the audio clip.
+                  <dd>Link do klipu audio mówi: „Przemówienie przewodniczącego do zgromadzenia”. Link do
+                     transkrypcji tekstowej znajduje się bezpośrednio po linku do klipu audio.
                   </dd>
                   
-                  <dt>An animation that illustrates how a car engine works</dt>
+                  <dt>Animacja ilustrująca działanie silnika samochodowego</dt>
                   
-                  <dd>An animation shows how a car engine works. There is no audio and the animation is
-                     part of a tutorial that describes how an engine works. Since the text of the tutorial
-                     already provides a full explanation, the image is an alternative for text and the
-                     text alternative includes only a brief description of the animation and refers to
-                     the tutorial text for more information.
+                  <dd>Animacja pokazuje, jak działa silnik samochodowy. Nie ma dźwięku, a animacja jest
+                     częścią samouczka opisującego działanie silnika. Ponieważ tekst samouczka zawiera
+                     już pełne wyjaśnienie, obraz jest alternatywą dla tekstu, a alternatywa tekstowa zawiera
+                     tylko krótki opis animacji i odsyła do tekstu samouczka, aby uzyskać więcej informacji.
                   </dd>
                   
-                  <dt>A traffic Web camera</dt>
+                  <dt>Kamera internetowa</dt>
                   
-                  <dd>A Web site allows users to select from a variety of Web cameras positioned throughout
-                     a major city. After a camera is selected, the image updates every two minutes. A short
-                     text alternative identifies the Web camera as "traffic Web camera." The site also
-                     provides a table of travel times for each of the routes covered by the Web cameras.
-                     The table is also updated every two minutes.
+                  <dd>Witryna internetowa pozwala użytkownikom wybierać spośród różnych kamer internetowych
+                     rozmieszczonych w dużym mieście. Po wybraniu kamery obraz jest aktualizowany co dwie
+                     minuty. Krótki tekst alternatywny identyfikuje kamerę internetową jako „kamerę internetową
+                     ruchu drogowego”. Strona zawiera również tabelę czasów podróży dla każdej z tras objętych
+                     zasięgiem kamer internetowych. Tabela jest również aktualizowana co dwie minuty.
                   </dd>
                   
-                  <dt>A photograph of an historic event in a news story</dt>
+                  <dt>Zdjęcie historycznego wydarzenia w wiadomościach</dt>
                   
-                  <dd>A photograph of two world leaders shaking hands accompanies a news story about an
-                     international summit meeting. The text alternative says, "President X of Country X
-                     shakes hands with Prime Minister Y of country Y."
+                  <dd>Zdjęcie dwóch światowych przywódców ściskających sobie dłonie towarzyszy wiadomościom
+                     o międzynarodowym spotkaniu na szczycie. Alternatywny tekst brzmi: „Prezydent X z
+                     kraju X uścisnął dłoń premierowi Y z kraju Y”.
                   </dd>
                   
-                  <dt>A photograph of a historic event in content discussing diplomatic relationships</dt>
+                  <dt>Zdjęcie historycznego wydarzenia w treści omawiającej stosunki dyplomatyczne</dt>
                   
-                  <dd>The same image is used in a different context intended to explain nuances in diplomatic
-                     encounters. The image of the president shaking hands with the prime minister appears
-                     on a Web site discussing intricate diplomatic relationships. The first text alternative
-                     reads, "President X of country X shakes hands with Prime Minister Y of country Y on
-                     January 2, 2009." An additional text alternative describes the room where the leaders
-                     are standing as well as the expressions on the leaders' faces, and identifies the
-                     other people in the room. The additional description might be included on the same
-                     page as the photograph or in a separate file associated with the image through a link
-                     or other standard programmatic mechanism.
+                  <dd>Ten sam obraz jest używany w innym kontekście, mającym na celu wyjaśnienie niuansów
+                     w spotkaniach dyplomatycznych. Wizerunek prezydenta ściskającego dłoń premiera pojawia
+                     się na stronie internetowej omawiającej zawiłe stosunki dyplomatyczne. Pierwsza alternatywa
+                     tekstowa brzmi: „Prezydent X kraju X uścisnął dłoń premierowi Y kraju Y 2 stycznia
+                     2009 r.”. Dodatkowy tekst alternatywny opisuje pomieszczenie, w którym stoją liderzy,
+                     a także wyraz twarzy liderów i identyfikuje inne osoby w pomieszczeniu. Dodatkowy
+                     opis może znajdować się na tej samej stronie co zdjęcie lub w osobnym pliku powiązanym
+                     z obrazem za pośrednictwem łącza lub innego standardowego mechanizmu programowego.
                   </dd>
                   
-                  <dt>An audio recording of a press conference </dt>
+                  <dt>Nagranie audio z konferencji prasowej</dt>
                   
-                  <dd>A Web page includes a link to an audio recording of a press conference. The link text
-                     identifies the audio recording. The page also links to a text transcript of the press
-                     conference. The transcript includes a verbatim record of everything the speakers say.
-                     It identifies who is speaking as well as noting other significant sounds that are
-                     part of the recording, such as applause, laughter, questions from the audience, and
-                     so on.
+                  <dd>Strona internetowa zawiera łącze do nagrania audio konferencji prasowej. Tekst łącza
+                     identyfikuje nagranie audio. Strona zawiera również link do tekstowej transkrypcji
+                     konferencji prasowej. Transkrypcja zawiera dosłowny zapis wszystkich wypowiedzi prelegentów.
+                     Identyfikuje, kto mówi, a także odnotowuje inne znaczące dźwięki, które są częścią
+                     nagrania, takie jak oklaski, śmiech, pytania od publiczności itp.
                   </dd>
                   
-                  <dt>An e-learning application</dt>
+                  <dt>Aplikacja e-learningowa</dt>
                   
-                  <dd>An e-learning application uses sound effects to indicate whether or not the answers
-                     are correct. The chime sound indicates that the answer is correct and the beep sound
-                     indicates that the answer is incorrect. A text description is also included so that
-                     people who can't hear or understand the sound understand whether the answer is correct
-                     or incorrect.
+                  <dd>Aplikacja e-learningowa wykorzystuje efekty dźwiękowe, aby wskazać, czy odpowiedzi
+                     są poprawne. Dźwięk gongu wskazuje, że odpowiedź jest prawidłowa, a sygnał dźwiękowy
+                     wskazuje, że odpowiedź jest nieprawidłowa. Dołączony jest również opis tekstowy, aby
+                     osoby, które nie słyszą lub nie rozumieją dźwięku, mogły zrozumieć, czy odpowiedź
+                     jest poprawna czy niepoprawna.
                   </dd>
                   
-                  <dt>A linked thumbnail image</dt>
+                  <dt>Połączona miniatura obrazu</dt>
                   
-                  <dd>A thumbnail image of the front page of a newspaper links to the home page of the "Smallville
-                     Times". The text alternative says "Smallville Times".
+                  <dd>Miniaturka pierwszej strony gazety prowadzi do strony głównej „Smallville Times”.
+                     Alternatywny tekst to „Smallville Times”.
                   </dd>
                   
-                  <dt>The same image used on different sites</dt>
+                  <dt>Ten sam obraz używany na różnych stronach</dt>
                   
-                  <dd>Different alternatives for an image of the world: An image of the world that is used
-                     on a travel site as a link to the International Travel section has the text alternative
-                     "International Travel". The same image is used as a link on a university Web site
-                     with the text alternative "International Campuses".
+                  <dd>Różne alternatywy dla obrazu świata: Obraz świata, który jest używany w witrynie turystycznej
+                     jako łącze do sekcji Podróże międzynarodowe, ma alternatywny tekst „Podróże międzynarodowe”.
+                     Ten sam obraz jest używany jako link na stronie internetowej uniwersytetu z alternatywnym
+                     tekstem „Kampusy międzynarodowe”.
                   </dd>
                   
-                  <dt>An image map</dt>
+                  <dt>Mapa obrazu</dt>
                   
-                  <dd>An image of a building floor plan is interactive, allowing the user to select a
-                     particular room and navigate to a page containing information about that room.
-                     The short text alternative describes the image and its interactive purpose:
-                     "Building floor plan. Select a room for more information."
+                  <dd>Obraz planu piętra budynku jest interaktywny, umożliwiając użytkownikowi wybranie
+                     konkretnego pomieszczenia i przejście do strony zawierającej informacje o tym pomieszczeniu.
+                     Krótki tekst alternatywny opisuje obraz i jego interaktywny cel: „Plan piętra budynku.
+                     Wybierz pokój, aby uzyskać więcej informacji”.
                   </dd>
                   
                </dl>
@@ -549,56 +487,38 @@
             <section id="resources">
                <h2>Related Resources</h2>
                <p>Resources are for information purposes only, no endorsement implied.</p>
+               <p>Zasoby służą wyłącznie celom informacyjnym. Nie należy traktować ich jako zaleceń.</p>
                <ul>
                   
-                  
                   <li>
-                     								       
-                     <a href="https://www.w3.org/2000/08/nba-manual/Overview.html">Excerpts from the NBA Tape Recording Manual, Third Edition</a>
-                     							     
+                     <a href="https://www.w3.org/2000/08/nba-manual/Overview.html">Excerpts from the NBA Tape Recording Manual, Third Edition</a> (Fragmenty podręcznika NBA Tape Recording Manual, wydanie trzecie)
                      
                   </li>
                   
-                  
                   <li>
-                     								       
-                     <a href="https://www.w3.org/TR/turingtest/">Inaccessibility of CAPTCHA</a>
-                     							     
+                     <a href="https://www.w3.org/TR/turingtest/">Inaccessibility of CAPTCHA</a> (Niedostępność CAPTCHA)
                      
                   </li>
                   
-                  
                   <li>
-                     								       
-                     <a href="https://stuffandnonsense.co.uk/archives/accessible_alternatives.html">All That Malarkey: Accessible Alternatives</a>
-                     							     
+                     <a href="https://stuffandnonsense.co.uk/archives/accessible_alternatives.html">All That Malarkey: Accessible Alternatives</a> (All That Malarkey: Dostępne alternatywy)
                      
                   </li>
                   
-                  
                   <li>
-                     								       
-                     <a href="http://www.456bereastreet.com/archive/200412/the_alt_and_title_attributes/">456 Berea Street: The Alt and Title Attributes</a>
-                     							     
+                     <a href="http://www.456bereastreet.com/archive/200412/the_alt_and_title_attributes/">456 Berea Street: The Alt and Title Attributes</a> (456 Berea Street: Atrybuty Alt i Title)
                      
                   </li>
                   
-                  
                   <li>
-                     								       
-                     <a href="http://green-beast.com/blog/?p=81">The Alt and Accessibility</a>
-                     							     
+                     <a href="http://green-beast.com/blog/?p=81">The Alt and Accessibility</a> (Alt i dostępność)
                      
                   </li>
                   
-                  
                   <li>
-                     								       
-                     <a href="http://www.accessibilitynews.ca/cwdo/resources/resources.php?resources=187">Better Connected, Better Results: Alt Text</a>
-                     							     
+                     <a href="http://www.accessibilitynews.ca/cwdo/resources/resources.php?resources=187">Better Connected, Better Results: Alt Text</a> (Lepsze połączenie, lepsze wyniki: Alt Text)
                      
                   </li>
-                  
                   
                </ul>
             </section>
@@ -609,610 +529,398 @@
                   it is not necessary to use these particular techniques. For information on using other
                   techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
                </p>
+               <p>Każdy numerowany element w tej sekcji reprezentuje technikę lub kombinację technik,
+                  które grupa robocza WCAG uważa za wystarczające do spełnienia tego kryterium sukcesu.
+                  Nie jest jednak konieczne stosowanie tych konkretnych technik. Aby uzyskać informacje
+                  na temat korzystania z innych technik, zobacz <a href="../objasnienie-technik.html">Zrozumienie technik dla kryteriów sukcesu WCAG</a>, w szczególności sekcję „Inne techniki”.
+               </p>
                <section id="sufficient">
                   <h3>Sufficient Techniques</h3>
                   <p>Select the situation below that matches your content. Each situation includes techniques
                      or combinations of techniques that are known and documented to be sufficient for that
                      situation. 
                   </p>
+                  <p>Wybierz poniżej sytuację, która pasuje do Twojej treści. Każda sytuacja obejmuje techniki
+                     lub kombinacje technik, które są znane i udokumentowane jako wystarczające w danej
+                     sytuacji. 
+                  </p>
                   <section class="situation" id="non-text-content-situation-0">
                      
-                     
-                     <h4>Situation A: If a short description can serve the same purpose and present the same
-                        information as the non-text content:
+                     <h4>
+                        Sytuacja A: Jeżeli krótki opis może służyć temu samemu celowi i przedstawiać te same
+                        informacje, co treść nietekstowa:
                         
                      </h4>
                      
-                     
                      <ul>
                         
-                        
                         <li>
-                           
                            <a class="general" href="https://w3c.github.io/wcag/techniques/general/G94">G94: Providing short text alternative for non-text content that serves the same purpose
-                              and presents the same information as the non-text content</a> using one of the following 
-                           <strong>
-                              
-                              <a href="#text-equiv-all-situation-a-shorttext">Short text alternative techniques for Situation A</a>
-                              
-                              </strong>:
+                              and presents the same information as the non-text content</a> <strong><a href="#text-equiv-all-situation-a-shorttext">Techniki krótkiego tekstu alternatywnego w sytuacji A</a> </strong>:
                            
                         </li>
                         
-                        
                      </ul>
                      
-                     
                      <p id="text-equiv-all-situation-a-shorttext">
-                        
-                        <strong>Short text alternative techniques for Situation A</strong>:
+                        <strong>Krótki tekst alternatywny, techniki w sytuacji A</strong>:
                         
                      </p>
                      
-                     
                      <ul id="text-equiv-all-situation-a-shorttext-techs">
                         
-                        
                         <li>
-                           
                            <a class="aria" href="https://w3c.github.io/wcag/techniques/aria/ARIA6">ARIA6: Using aria-label to provide labels for objects</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="aria" href="https://w3c.github.io/wcag/techniques/aria/ARIA10">ARIA10: Using aria-labelledby to provide a text alternative for non-text content</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="general" href="https://w3c.github.io/wcag/techniques/general/G196">G196: Using a text alternative on one item within a group of images that describes all items
                               in the group</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="html" href="https://w3c.github.io/wcag/techniques/html/H2">H2: Combining adjacent image and text links for the same resource</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="html" href="https://w3c.github.io/wcag/techniques/html/H37">H37: Using alt attributes on img elements</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="html" href="https://w3c.github.io/wcag/techniques/html/H53">H53: Using the body of the object element</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="html" href="https://w3c.github.io/wcag/techniques/html/H86">H86: Providing text alternatives for emojis, emoticons, ASCII art, and leetspeak</a>
                            
-                           
                         </li>
-                        
                         
                         <li>
-                           
                            <a class="pdf" href="https://w3c.github.io/wcag/techniques/pdf/PDF1">PDF1: Applying text alternatives to images with the Alt entry in PDF documents</a>
-                           
                            
                         </li>
                         
-                        
                      </ul>
-                     
                      
                   </section>
                   <section class="situation" id="non-text-content-situation-1">
                      
-                     
-                     <h4>Situation B: If a short description can 
-                        <strong>not</strong> serve the same purpose and present the same information as the non-text content (e.g.,
-                        a chart or diagram):
+                     <h4>
+                        Sytuacja B: Jeśli krótki opis <strong>nie</strong> może służyć temu samemu celowi i przedstawiać tych samych informacji, co treść nietekstowa
+                        (np. wykres lub schemat):
                         
                      </h4>
                      
-                     
                      <ul>
                         
-                        
-                        <li> 
-                           
+                        <li>
                            <a class="general" href="https://w3c.github.io/wcag/techniques/general/G95">G95: Providing short text alternatives that provide a brief description of the non-text
-                              content</a> using one of the following 
-                           <strong>
-                              
-                              <a href="#text-equiv-all-situation-b-shorttext">Short text alternative techniques for Situation B</a>
-                              
-                              </strong>
-                           										           
-                           <strong>AND</strong> one of the following 
-                           <strong>
-                              
-                              <a href="#text-equiv-all-situation-b-longtext">Long text alternative techniques for Situation B</a>
-                              
-                              </strong>:
+                              content</a> przy użyciu jednej z następujących metod <strong> <a href="#text-equiv-all-situation-b-shorttext">Krótki tekst alternatywny, techniki w sytuacji B</a> </strong> <strong>ORAZ</strong> jednej z poniższych <strong> <a href="#text-equiv-all-situation-b-longtext">Długi opis alternatywny, techniki w Sytuacji B</a> </strong>:
                            
                         </li>
                         
-                        
                      </ul>
                      
-                     
                      <p id="text-equiv-all-situation-b-shorttext">
-                        
-                        <strong>Short text alternative techniques for Situation B</strong>:
+                        <strong>Krótki tekst alternatywny, techniki w sytuacji B</strong>:
                         
                      </p>
-                     
                      
                      <ul id="text-equiv-all-situation-a-shorttext-techs2">
                         
-                        
                         <li>
-                           
                            <a class="aria" href="https://w3c.github.io/wcag/techniques/aria/ARIA6">ARIA6: Using aria-label to provide labels for objects</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="aria" href="https://w3c.github.io/wcag/techniques/aria/ARIA10">ARIA10: Using aria-labelledby to provide a text alternative for non-text content</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="general" href="https://w3c.github.io/wcag/techniques/general/G196">G196: Using a text alternative on one item within a group of images that describes all items
                               in the group</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="html" href="https://w3c.github.io/wcag/techniques/html/H2">H2: Combining adjacent image and text links for the same resource</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="html" href="https://w3c.github.io/wcag/techniques//H35">H35: </a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="html" href="https://w3c.github.io/wcag/techniques/html/H37">H37: Using alt attributes on img elements</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="html" href="https://w3c.github.io/wcag/techniques/html/H53">H53: Using the body of the object element</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="html" href="https://w3c.github.io/wcag/techniques/html/H86">H86: Providing text alternatives for emojis, emoticons, ASCII art, and leetspeak</a>
                            
-                           
                         </li>
-                        
                         
                         <li>
-                           
                            <a class="pdf" href="https://w3c.github.io/wcag/techniques/pdf/PDF1">PDF1: Applying text alternatives to images with the Alt entry in PDF documents</a>
                            
-                           
                         </li>
-                        
                         
                      </ul>
                      
-                     
                      <p id="text-equiv-all-situation-b-longtext">
-                        
-                        <strong>Long text alternative techniques for Situation B</strong>:
+                        <strong>Długi opis alternatywny, techniki w Sytuacji B</strong>:
                         
                      </p>
                      
-                     
                      <ul id="text-equiv-all-situation-b-longtext-techs">
                         
-                        
                         <li>
-                           
                            <a class="aria" href="https://w3c.github.io/wcag/techniques/aria/ARIA15">ARIA15: Using aria-describedby to provide descriptions of images</a>
-                           
                            
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="general" href="https://w3c.github.io/wcag/techniques/general/G73">G73: Providing a long description in another location with a link to it that is immediately
                               adjacent to the non-text content</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="general" href="https://w3c.github.io/wcag/techniques/general/G74">G74: Providing a long description in text near the non-text content, with a reference to
                               the location of the long description in the short description</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="general" href="https://w3c.github.io/wcag/techniques/general/G92">G92: Providing long description for non-text content that serves the same purpose and presents
                               the same information</a>
                            
-                           
                         </li>
-                        
                         
                         <li>
-                           
                            <a class="html" href="https://w3c.github.io/wcag/techniques/html/H53">H53: Using the body of the object element</a>
-                           
                            
                         </li>
                         
-                        
                      </ul>
-                     
                      
                   </section>
                   <section class="situation" id="non-text-content-situation-2">
                      
-                     
-                     <h4>Situation C: If non-text content is a control or accepts user input:</h4>
-                     
+                     <h4>Sytuacja C: Jeśli treść nietekstowa jest kontrolką lub polem wprowadzania danych przez
+                        użytkownika:
+                     </h4>
                      
                      <ul>
                         
-                        
-                        <li> 
-                           
-                           <a class="general" href="https://w3c.github.io/wcag/techniques/general/G82">G82: Providing a text alternative that identifies the purpose of the non-text content</a> using one of the following 
-                           <strong>
-                              
-                              <a href="#text-equiv-all-situation-c-controls">Text alternative techniques for controls and input for Situation C</a>
-                              
-                              </strong>:
+                        <li>
+                           <a class="general" href="https://w3c.github.io/wcag/techniques/general/G82">G82: Providing a text alternative that identifies the purpose of the non-text content</a> przy użyciu jednej z następujących metod <strong> <a href="#text-equiv-all-situation-c-controls">Techniki tekstu alternatywnego dla kontrolek i pól wprowadzania danych przez użytkownika
+                                 w Sytuacji C</a> </strong>:
                            
                         </li>
                         
-                        
                      </ul>
                      
-                     
                      <p id="text-equiv-all-situation-c-controls">
-                        
-                        <strong>Text alternative techniques for controls and input for Situation C</strong>:
+                        <strong>Tekstowe alternatywne techniki kontroli i wprowadzania danych dla sytuacji C</strong>:
                         
                      </p>
                      
-                     
                      <ul id="text-equiv-all-situation-c-controls-techs">
                         
-                        
                         <li>
-                           
                            <a class="aria" href="https://w3c.github.io/wcag/techniques/aria/ARIA6">ARIA6: Using aria-label to provide labels for objects</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="aria" href="https://w3c.github.io/wcag/techniques/aria/ARIA9">ARIA9: Using aria-labelledby to concatenate a label from several text nodes</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="html" href="https://w3c.github.io/wcag/techniques/html/H24">H24: Providing text alternatives for the area elements of image maps</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="html" href="https://w3c.github.io/wcag/techniques/html/H30">H30: Providing link text that describes the purpose of a link for anchor elements</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="html" href="https://w3c.github.io/wcag/techniques/html/H36">H36: Using alt attributes on images used as submit buttons</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="html" href="https://w3c.github.io/wcag/techniques/html/H44">H44: Using label elements to associate text labels with form controls</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="html" href="https://w3c.github.io/wcag/techniques/html/H65">H65: Using the title attribute to identify form controls when the label element cannot
                               be used</a>
                            
-                           
                         </li>
                         
-                        
                      </ul>
-                     
                      
                   </section>
                   <section class="situation" id="non-text-content-situation-3">
                      
-                     
-                     <h4>Situation D: If non-text content is time-based media (including live video-only and
-                        live audio-only); a test or exercise that would be invalid if presented in text; or
-                        primarily intended to create a specific sensory experience:
+                     <h4>
+                        Sytuacja D: Jeżeli treścią nietekstową są media dynamiczne (w tym tylko wideo na żywo
+                        i tylko audio na żywo); test lub ćwiczenie, które utraciłoby swój sens, gdyby zostało
+                        przedstawione w tekście; lub miało na celu przede wszystkim stworzenie specyficznych
+                        odczuć zmysłowych:
                         
                      </h4>
                      
-                     
                      <ul>
                         
-                        
-                        <li>Providing a descriptive label using one of the following 
-                           <strong>
-                              
-                              <a href="#text-equiv-all-situation-d-shorttext">Short text alternative techniques for Situation D</a>
-                              
-                              </strong>:
+                        <li>
+                           Zapewnienie opisowej etykiety przy użyciu jednej z poniższych metod <strong> <a href="#text-equiv-all-situation-d-shorttext">Krótki tekst alternatywny, techniki w sytuacji D</a> </strong>:
                            
                         </li>
                         
-                        
-                        <li> 
-                           
+                        <li>
                            <a class="general" href="https://w3c.github.io/wcag/techniques/general/G68">G68: Providing a short text alternative that describes the purpose of live audio-only and
-                              live video-only content</a> using one of the following 
-                           <strong>
-                              
-                              <a href="#text-equiv-all-situation-d-shorttext">Short text alternative techniques for Situation D</a>
-                              
-                              </strong>:
+                              live video-only content</a> przy użyciu jednej z następujących metod <strong> <a href="#text-equiv-all-situation-d-shorttext">Krótki tekst alternatywny, techniki w sytuacji D:</a> </strong>:
                            
                         </li>
                         
-                        
-                        <li> 
-                           
+                        <li>
                            <a class="general" href="https://w3c.github.io/wcag/techniques/general/G100">G100: Providing a short text alternative which is the accepted name or a descriptive name
-                              of the non-text content</a> using one of the following 
-                           <strong>
-                              
-                              <a href="#text-equiv-all-situation-d-shorttext">Short text alternative techniques for Situation D</a>
-                              
-                              </strong>:
+                              of the non-text content</a> przy użyciu jednej z następujących metod <strong> <a href="#text-equiv-all-situation-d-shorttext">Krótki tekst alternatywny, techniki w sytuacji D</a> </strong>:
                            
                         </li>
-                        
                         
                      </ul>
                      
-                     
                      <p id="text-equiv-all-situation-d-shorttext">
-                        
-                        <strong>Short text alternative techniques for Situation D</strong>:
+                        <strong>Krótki tekst alternatywny, techniki w sytuacji D</strong>:
                         
                      </p>
                      
-                     
                      <ul id="text-equiv-all-situation-a-shorttext-techs3">
                         
-                        
                         <li>
-                           
                            <a class="aria" href="https://w3c.github.io/wcag/techniques/aria/ARIA6">ARIA6: Using aria-label to provide labels for objects</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="aria" href="https://w3c.github.io/wcag/techniques/aria/ARIA10">ARIA10: Using aria-labelledby to provide a text alternative for non-text content</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="general" href="https://w3c.github.io/wcag/techniques/general/G196">G196: Using a text alternative on one item within a group of images that describes all items
                               in the group</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="html" href="https://w3c.github.io/wcag/techniques/html/H2">H2: Combining adjacent image and text links for the same resource</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="html" href="https://w3c.github.io/wcag/techniques/html/H37">H37: Using alt attributes on img elements</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="html" href="https://w3c.github.io/wcag/techniques/html/H53">H53: Using the body of the object element</a>
                            
-                           
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="html" href="https://w3c.github.io/wcag/techniques/html/H86">H86: Providing text alternatives for emojis, emoticons, ASCII art, and leetspeak</a>
                            
-                           
                         </li>
-                        
                         
                         <li>
-                           
                            <a class="pdf" href="https://w3c.github.io/wcag/techniques/pdf/PDF1">PDF1: Applying text alternatives to images with the Alt entry in PDF documents</a>
-                           
                            
                         </li>
                         
-                        
                      </ul>
-                     
                      
                   </section>
                   <section class="situation" id="non-text-content-situation-4">
                      
-                     
-                     <h4>Situation E: If non-text content is a CAPTCHA:</h4>
-                     
-                     
                      <ul>
                         
-                        
                         <li>
-                           										           
-                           <a class="general" href="https://w3c.github.io/wcag/techniques/general/G143">G143: Providing a text alternative that describes the purpose of the CAPTCHA</a>
-                           										           
-                           <strong>AND</strong>
-                           										           
-                           <a class="general" href="https://w3c.github.io/wcag/techniques/general/G144">G144: Ensuring that the Web Page contains another CAPTCHA serving the same purpose using
+                           <a class="general" href="https://w3c.github.io/wcag/techniques/general/G143">G143: Providing a text alternative that describes the purpose of the CAPTCHA</a> <strong> ORAZ </strong> <a class="general" href="https://w3c.github.io/wcag/techniques/general/G144">G144: Ensuring that the Web Page contains another CAPTCHA serving the same purpose using
                               a different modality</a>
-                           									         
                            
                         </li>
                         
-                        
                      </ul>
-                     
                      
                   </section>
                   <section class="situation" id="non-text-content-situation-5">
                      
-                     
                      <h4>Situation F: If the non-text content should be ignored by assistive technology:</h4>
                      
+                     <h4>Sytuacja F: Jeśli treść nietekstowa powinna być ignorowana przez technologię wspomagającą:</h4>
                      
                      <ul>
                         
-                        
-                        <li>Implementing or marking the non-text content so that it will be ignored by assistive
-                           technology using one of the following 
-                           <strong>
-                              
-                              <a href="#text-equiv-all-situation-f-notrequired">Techniques to indicate that text alternatives are not required for Situation F</a>
-                              
-                              </strong>:
+                        <li>
+                           Osadzanie lub oznaczanie treści nietekstowych w taki sposób, aby były one ignorowane
+                           przez technologię wspomagającą przy użyciu jednej z następujących technik <strong> <a href="#text-equiv-all-situation-f-notrequired">Techniki wskazujące, że alternatywy tekstowe nie są wymagane w Sytuacji F</a> </strong>:
                            
                         </li>
                         
-                        
                      </ul>
                      
-                     
                      <p id="text-equiv-all-situation-f-notrequired">
-                        
-                        <strong>Techniques to indicate that text alternatives are not required for Situation F</strong>:
+                        <strong>Techniki wskazujące, że alternatywy tekstowe nie są wymagane w Sytuacji F</strong>:
                         
                      </p>
                      
-                     
                      <ul id="text-equiv-all-situation-f-notrequired-techs">
                         
-                        
                         <li>
-                           
                            <a class="css" href="https://w3c.github.io/wcag/techniques/css/C9">C9: Using CSS to include decorative images</a>
-                           
                            
                         </li>
                         
-                        
                         <li>
-                           
                            <a class="html" href="https://w3c.github.io/wcag/techniques/html/H67">H67: Using null alt text and no title attribute on img elements for images that assistive
                               technology should ignore</a>
                            
-                           
                         </li>
-                        
                         
                         <li>
-                           
                            <a class="pdf" href="https://w3c.github.io/wcag/techniques/pdf/PDF4">PDF4: Hiding decorative images with the Artifact tag in PDF documents</a>
-                           
                            
                         </li>
                         
-                        
                      </ul>
-                     
                      
                   </section>
                </section>
@@ -1222,25 +930,22 @@
                      be considered in order to make content more accessible. Not all techniques can be
                      used or would be effective in all situations.
                   </p>
-                  <section id="css-techniques-advisory">
+                  <p>Chociaż nie jest to wymagane do uzyskania zgodności, należy rozważyć następujące dodatkowe
+                     techniki, aby zwiększyć dostępność treści. Nie wszystkie techniki mogą być stosowane
+                     lub byłyby skuteczne we wszystkich sytuacjach.
+                  </p>
+                  <section id="techniki-css-zalecane">
                      
-                     
-                     <h4>CSS Techniques (Advisory)</h4>
-                     
+                     <h4>Techniki CSS (zalecane)</h4>
                      
                      <ul>
                         
-                        
                         <li>
-                           										           
                            <a class="css" href="https://w3c.github.io/wcag/techniques/css/C18">C18: Using CSS margin and padding rules instead of spacer images for layout design</a>
-                           									         
                            
                         </li>
                         
-                        
                      </ul>
-                     
                      
                   </section>
                </section>
@@ -1249,100 +954,72 @@
                   <p>The following are common mistakes that are considered failures of this Success Criterion
                      by the WCAG Working Group.
                   </p>
+                  <p>Poniżej wymieniono typowe błędy, które Grupa Robocza WCAG uważa za niespełnienie tego
+                     kryterium sukcesu.
+                  </p>
                   <ul>
                      
-                     
                      <li>
-                        									         
                         <a class="failure" href="https://w3c.github.io/wcag/techniques/failures/F3">F3: Failure of Success Criterion 1.1.1 due to using CSS to include images that convey
                            important information</a>
-                        								       
                         
                      </li>
                      
-                     
                      <li>
-                        									         
                         <a class="failure" href="https://w3c.github.io/wcag/techniques/failures/F13">F13: Failure of Success Criterion 1.1.1 and 1.4.1 due to having a text alternative that
                            does not include information that is conveyed by color differences in the image</a>
-                        								       
                         
                      </li>
                      
-                     
                      <li>
-                        									         
                         <a class="failure" href="https://w3c.github.io/wcag/techniques/failures/F20">F20: Failure of Success Criterion 1.1.1 and 4.1.2 due to not updating text alternatives
                            when changes to non-text content occur</a>
-                        								       
                         
                      </li>
                      
-                     
                      <li>
-                        									         
                         <a class="failure" href="https://w3c.github.io/wcag/techniques/failures/F30">F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are
                            not alternatives (e.g., filenames or placeholder text)</a>
-                        								       
                         
                      </li>
                      
-                     
                      <li>
-                        									         
                         <a class="failure" href="https://w3c.github.io/wcag/techniques/failures/F38">F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML
                            in a way that allows assistive technology to ignore them</a>
-                        								       
                         
                      </li>
                      
-                     
                      <li>
-                        									         
                         <a class="failure" href="https://w3c.github.io/wcag/techniques/failures/F39">F39: Failure of Success Criterion 1.1.1 due to providing a text alternative that is not
                            null (e.g., alt="spacer" or alt="image") for images that should be ignored by assistive
                            technology</a>
-                        								       
                         
                      </li>
                      
-                     
                      <li>
-                        									         
                         <a class="failure" href="https://w3c.github.io/wcag/techniques/failures/F65">F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute or text alternative
                            on img elements, area elements, and input elements of type "image"</a>
-                        								       
                         
                      </li>
                      
-                     
                      <li>
-                        									         
                         <a class="failure" href="https://w3c.github.io/wcag/techniques/failures/F67">F67: Failure of Success Criterion 1.1.1 and 1.2.1 due to providing long descriptions for
                            non-text content that does not serve the same purpose or does not present the same
                            information</a>
-                        								       
                         
                      </li>
                      
-                     
                      <li>
-                        									         
                         <a class="failure" href="https://w3c.github.io/wcag/techniques/failures/F71">F71: Failure of Success Criterion 1.1.1 due to using text look-alikes to represent text
                            without providing a text alternative</a>
-                        								       
                         
                      </li>
-                     
                      
                      <li>
-                        									         
                         <a class="failure" href="https://w3c.github.io/wcag/techniques/failures/F72">F72: Failure of Success Criterion 1.1.1 due to using ASCII art without providing a text
                            alternative</a>
-                        								       
                         
                      </li>
-                     
                      
                   </ul>
                </section>
