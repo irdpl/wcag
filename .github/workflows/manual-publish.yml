@@ -51,10 +51,9 @@ jobs:
                 ./
                 !output
 
-      - name: deploy
-        run: .github/scripts/deploy.sh
-        env:
-          BRANCH: gh-pages
-          LOCAL_DIR: output
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+         github_token: ${{ secrets.GITHUB_TOKEN }}
+         publish_dir: ./output
+         cname: wcag.irdpl.pl
