@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg4276"
+   width="380"
+   height="67"
+   viewBox="0 0 380 67"
+   sodipodi:docname="focus-indicator-background.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs4280" />
+  <sodipodi:namedview
+     id="namedview4278"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="2.4654354"
+     inkscape:cx="160.01231"
+     inkscape:cy="21.700021"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g4282" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g4282">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0"
+       id="rect5567"
+       width="380"
+       height="67"
+       x="0"
+       y="0" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke-width:0"
+       id="rect4403"
+       width="109"
+       height="44"
+       x="11.292719"
+       y="12.909363" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke-width:0"
+       id="rect4405"
+       width="109"
+       height="44"
+       x="133.95988"
+       y="12.909363" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke-width:0"
+       id="rect4407"
+       width="109"
+       height="44"
+       x="256.62704"
+       y="12.909363" />
+    <text
+       xml:space="preserve"
+       style="font-size:24px;line-height:0.1;font-family:Arial;-inkscape-font-specification:'Arial, Normal';fill:#555555;fill-opacity:1;stroke-width:0;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+       x="19.762259"
+       y="41.500744"
+       id="text5222"><tspan
+         sodipodi:role="line"
+         id="tspan5220"
+         x="19.762259"
+         y="41.500744"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff">Przykład</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:0.1;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#555555;fill-opacity:1;stroke-width:0"
+       x="266.50818"
+       y="41.500744"
+       id="text5282"><tspan
+         sodipodi:role="line"
+         id="tspan5280"
+         x="266.50818"
+         y="41.500744"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff">Przykład</tspan></text>
+    <rect
+       style="fill:#555555;fill-opacity:1;stroke-width:0"
+       id="rect5284"
+       width="102"
+       height="36"
+       x="137.45988"
+       y="16.909363" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:0.1;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#555555;fill-opacity:1;stroke-width:0"
+       x="143.41753"
+       y="41.500744"
+       id="text5278"><tspan
+         sodipodi:role="line"
+         id="tspan5276"
+         x="143.41753"
+         y="41.500744"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff">Przykład</tspan></text>
+  </g>
+</svg>

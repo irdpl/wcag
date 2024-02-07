@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg14040"
+   width="339"
+   height="52"
+   viewBox="0 0 339 52"
+   sodipodi:docname="focus-indicator-good-change-bad-adjacent.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs14044" />
+  <sodipodi:namedview
+     id="namedview14042"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.2157774"
+     inkscape:cx="408.38067"
+     inkscape:cy="-76.083004"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g14046" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g14046">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0"
+       id="rect15349"
+       width="339"
+       height="52"
+       x="0"
+       y="0"
+       ry="0"
+       inkscape:export-filename="focus-indicator-good-change-bad-adjacent.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g15355"
+       transform="translate(1.5611633e-6,-76.47346)">
+      <rect
+         style="fill:#000000;stroke-width:0"
+         id="rect14219"
+         width="91.015755"
+         height="30.237793"
+         x="9.7104416"
+         y="88.827698"
+         ry="3.7797241" />
+      <rect
+         style="fill:#a1cbf0;fill-opacity:1;stroke-width:0"
+         id="rect14268"
+         width="84.287849"
+         height="23.963449"
+         x="13.074394"
+         y="91.964867"
+         ry="0" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:0.1;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0"
+         x="24.503475"
+         y="107.98956"
+         id="text14600"><tspan
+           sodipodi:role="line"
+           id="tspan14598"
+           x="24.503475"
+           y="107.98956">Przykład</tspan></text>
+    </g>
+    <rect
+       style="fill:#c5c5c5;fill-opacity:1;stroke-width:0"
+       id="rect14652"
+       width="91.015755"
+       height="30.237793"
+       x="123.83015"
+       y="12.35424"
+       ry="3.7797241" />
+    <rect
+       style="fill:#a1cbf0;fill-opacity:1;stroke-width:0"
+       id="rect14654"
+       width="84.287849"
+       height="23.963449"
+       x="127.19411"
+       y="15.491409"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:0.1;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0"
+       x="138.62317"
+       y="31.516106"
+       id="text14658"><tspan
+         sodipodi:role="line"
+         id="tspan14656"
+         x="138.62317"
+         y="31.516106">Przykład</tspan></text>
+    <g
+       id="g15367"
+       transform="translate(1.5611633e-6,-76.47346)">
+      <rect
+         style="fill:#000000;stroke-width:0"
+         id="rect14660"
+         width="91.015755"
+         height="30.237793"
+         x="238.6622"
+         y="88.827698"
+         ry="3.7797241" />
+      <rect
+         style="fill:#a1cbf0;fill-opacity:1;stroke-width:0"
+         id="rect14662"
+         width="84.287849"
+         height="23.963449"
+         x="242.02615"
+         y="91.964867"
+         ry="0" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:0.1;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0"
+         x="253.45523"
+         y="107.98956"
+         id="text14666"><tspan
+           sodipodi:role="line"
+           id="tspan14664"
+           x="253.45523"
+           y="107.98956">Przykład</tspan></text>
+    </g>
+  </g>
+</svg>
