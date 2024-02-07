@@ -36,9 +36,7 @@ jobs:
       - name: script
         run: |
           mkdir output
-          #git clone --depth=1 --branch=gh-pages https://github.com/irdpl/wcag.git output
-          mkdir -p output/guidelines/22/ output/requirements/22/ output/conformance-challenges/
-          touch output/guidelines/22/index.html output/requirements/22/index.html output/conformance-challenges/index.html
+          git clone --depth=1 --branch=gh-pages https://github.com/irdpl/wcag.git output
           curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/irdpl/wcag/pl-wcag-22-nowe/guidelines/index.html -o output/guidelines/22/index.html -f  --retry 3
           curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/irdpl/wcag/pl-wcag-22-nowe/requirements/22/index.html -o output/requirements/22/index.html -f  --retry 3
           curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/irdpl/wcag/pl-wcag-22-nowe/conformance-challenges/index.html -o output/conformance-challenges/index.html -f  --retry 3
