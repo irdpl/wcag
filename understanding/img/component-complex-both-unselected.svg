@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg16047"
+   width="380"
+   height="130"
+   viewBox="0 0 380 130"
+   sodipodi:docname="component-complex-both-unselected.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs16051">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter17374"
+       x="-0.0095032335"
+       y="-0.042612907"
+       width="1.0190065"
+       height="1.0852258">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.84240993"
+         id="feGaussianBlur17376" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="namedview16049"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="2.7271224"
+     inkscape:cx="230.09601"
+     inkscape:cy="165.19244"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g16053" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g16053">
+    <rect
+       style="fill:#feffff;fill-opacity:1;stroke:none;stroke-width:1.31021;stroke-dasharray:none"
+       id="rect21973"
+       width="380"
+       height="130"
+       x="0"
+       y="0"
+       inkscape:export-filename="component-complex-both-unselected1.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="mix-blend-mode:normal;fill:#b3b3b3;fill-opacity:1;stroke:#b3b3b3;stroke-width:2;stroke-dasharray:none;filter:url(#filter17374)"
+       id="rect21975"
+       width="317.97427"
+       height="70.912407"
+       x="6.0350995"
+       y="607.28186"
+       transform="matrix(1.0991954,0,0,0.99900819,8.6083164,-550.54042)" />
+    <rect
+       style="fill:#fafbfe;fill-opacity:1;stroke-width:0"
+       id="rect21977"
+       width="348.44931"
+       height="71.57225"
+       x="15.77536"
+       y="57.003517" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;line-height:1.3;font-family:Arial;-inkscape-font-specification:'Arial, Normal';fill:#000000;stroke-width:0"
+       x="24.327515"
+       y="82.892006"
+       id="text21985"><tspan
+         sodipodi:role="line"
+         id="tspan21979"
+         x="24.327515"
+         y="82.892006">Michał Szpak to polski piosenkarz i autor </tspan><tspan
+         sodipodi:role="line"
+         x="24.327515"
+         y="103.69201"
+         id="tspan21981">tekstów wykonujący muzykę inspirowaną </tspan><tspan
+         sodipodi:role="line"
+         x="24.327515"
+         y="124.49201"
+         id="tspan21983">brzmieniem z lat 80. i 90. XX wieku</tspan></text>
+    <g
+       id="g21993"
+       transform="translate(113.92078,71.176723)">
+      <rect
+         style="fill:#e9ecf0;fill-opacity:1;stroke:#b3b3b3;stroke-width:1.08786;stroke-dasharray:none"
+         id="rect21987"
+         width="104.91214"
+         height="11.174189"
+         x="127.32007"
+         y="-45.694317"
+         ry="4.2687907" />
+      <rect
+         style="fill:#e9ecf1;fill-opacity:1;stroke:#b3b3b3;stroke-width:0.999371;stroke-dasharray:none"
+         id="rect21989"
+         width="105.00063"
+         height="24.479038"
+         x="127.27582"
+         y="-40.442215" />
+      <rect
+         style="fill:#eaecf1;fill-opacity:1;stroke:none;stroke-width:1.00624;stroke-dasharray:none"
+         id="rect21991"
+         width="104"
+         height="4.4110751"
+         x="127.77614"
+         y="-41.590134"
+         ry="0" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;line-height:0.1;font-family:Arial;-inkscape-font-specification:'Arial, Normal';fill:#000000;stroke-width:0"
+       x="246.5172"
+       y="49.538216"
+       id="text21997"><tspan
+         sodipodi:role="line"
+         id="tspan21995"
+         x="246.5172"
+         y="49.538216">Kwiat Jabłoni</tspan></text>
+    <g
+       id="g22017"
+       transform="translate(-481.36619,-145.18542)">
+      <rect
+         style="fill:#0055e8;fill-opacity:1;stroke:none;stroke-width:1.14905;stroke-dasharray:none"
+         id="rect22011"
+         width="106"
+         height="12.338757"
+         x="499.61774"
+         y="169.21347"
+         ry="4.7136827" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#b3b3b3;stroke-width:1;stroke-dasharray:none"
+         id="rect22013"
+         width="105.1873"
+         height="22.618004"
+         x="500.02408"
+         y="177.71259" />
+      <rect
+         style="fill:#feffff;fill-opacity:1;stroke:none;stroke-width:2.00616;stroke-dasharray:none"
+         id="rect22015"
+         width="104"
+         height="4.9721231"
+         x="500.61774"
+         y="177.49751" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;line-height:0.1;font-family:Arial;-inkscape-font-specification:'Arial, Normal';fill:#000000;stroke-width:0"
+       x="23.343506"
+       y="49.733528"
+       id="text22021"><tspan
+         sodipodi:role="line"
+         id="tspan22019"
+         x="23.343506"
+         y="49.733528">Michał Szpak</tspan></text>
+    <g
+       id="g21407"
+       transform="translate(-223.73318,-249.37727)">
+      <rect
+         style="fill:#e9ecf0;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-dasharray:none"
+         id="rect21389"
+         width="104.91214"
+         height="11.174189"
+         x="353.93231"
+         y="269.52585"
+         ry="4.2687907" />
+      <rect
+         style="fill:#e9ecf1;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-dasharray:none"
+         id="rect21391"
+         width="104.90389"
+         height="29.474709"
+         x="353.93643"
+         y="274.82632" />
+      <rect
+         style="fill:#eaecf1;fill-opacity:1;stroke:none;stroke-width:1.00139;stroke-dasharray:none"
+         id="rect21393"
+         width="103"
+         height="4.4110751"
+         x="354.88837"
+         y="273.63004"
+         ry="0" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;line-height:0.1;font-family:Arial;-inkscape-font-specification:'Arial, Normal';fill:#000000;stroke-width:0"
+       x="144.29581"
+       y="41.963387"
+       id="text21399"><tspan
+         sodipodi:role="line"
+         id="tspan21397"
+         x="144.29581"
+         y="41.963387">Lady Pank</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:2;stroke-dasharray:none"
+       id="rect22179"
+       width="350.19534"
+       height="44.71413"
+       x="15.243347"
+       y="14.466103" />
+  </g>
+</svg>
