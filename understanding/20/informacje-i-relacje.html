@@ -1,598 +1,312 @@
 <!DOCTYPE html>
 <html lang="pl" xml:lang="pl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-   <meta charset="UTF-8"></meta>
-   <title>Understanding Info and Relationships</title>
-   <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove"></link>
+  <meta charset="UTF-8"></meta>
+  <title>Objaśnienie kryterium sukcesu 1.3.1: Informacje i relacje </title>
+  <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove"></link>
 </head>
 <body>
-   <h1>Understanding Info and Relationships</h1>
-
-   <section id="brief">
-		<h2>In brief</h2>
-		<dl>
-
-         <dt>Goal</dt><dd>Information about content structure is available to more people.</dd>
-         <dt>What to do</dt><dd>Use code to reinforce relationships and information conveyed through presentation.</dd>
-         <dt>Why it's important</dt><dd>People can adapt the presentation to suit their needs while preserving the original meaning.</dd>
-
-		</dl>
-		
-		</section>
-   
-   <section id="intent">
-      <h2>Intent of Info and Relationships</h2>
-      
-      
-      <p>The intent of this Success Criterion is to ensure that information and relationships
-         that are implied by visual or auditory formatting are preserved when the presentation
-         format changes. For example, the presentation format changes when the content is read
-         by a screen reader or when a user style sheet is substituted for the style sheet provided
-         by the author.
-      </p>
-      
+  <h1>Objaśnienie kryterium sukcesu 1.3.1: Informacje i relacje </h1>
+  <section id="brief">
+    <h2>W skrócie</h2>
+    <dl>
+      <dt>Cel</dt>
+      <dd>Informacje o strukturze treści są dostępne dla większej liczby osób</dd>
+      <dt>Zadanie twórcy</dt>
+      <dd>Użyj kodu, aby wzmocnić relacje i informacje przekazywane w prezentacji</dd>
+    </dl>
+  </section>
+  <section id="intent">
+    <h2>Intencja</h2>
+    <p>
+      Intencją tego kryterium sukcesu jest zapewnienie, że informacje i relacje, które wynikają z formatowania wizualnego lub dźwiękowego, zostaną zachowane, gdy zmieni się forma prezentacji. Na przykład forma prezentacji zmienia się, gdy treść jest odczytywana przez czytnik ekranu lub gdy arkusz stylów użytkownika zastępuje arkusz stylów dostarczony przez autora.
+    </p>
+    <p>
+      Osoby, które widzą, postrzegają strukturę i relacje za pomocą różnych wskazówek wizualnych — nagłówki są często pisane większą, pogrubioną czcionką i są oddzielone od akapitów pustymi liniami; elementy listy są poprzedzone punktorem i często mają wcięcie; akapity oddzielone są pustą linią; elementy, które mają wspólną cechę, są zorganizowane w wiersze i kolumny tabeli; pola formularzy mogą być ułożone jako grupy, które mają wspólne etykiety tekstowe; do wskazania, że kilka elementów jest ze sobą powiązanych, może być użyty inny kolor tła; słowa, które mają specjalny status, oznacza się poprzez zmianę rodziny czcionek, pogrubienie, kursywę lub podkreślenie; elementy, które mają wspólną cechę, są zorganizowane w tabelę, w której do zrozumienia niezbędne są powiązania komórek dzielących ten sam wiersz lub kolumnę oraz powiązania każdej komórki z jej nagłówkiem wiersza i kolumny; i tak dalej. Dzięki temu, że te struktury i relacje są programowo określone lub dostępne w tekście, informacje ważne dla zrozumienia będą widoczne dla wszystkich..
+    </p>
+    <p>
+      Mogą być również używane sygnały dźwiękowe. Na przykład dzwonek może wskazywać początek nowej sekcji; zmiana wysokości głosu lub tempa mowy może być wykorzystana do podkreślenia ważnych informacji lub wskazania cytowanego tekstu; itp.
+    </p>
+    <p>
+      Gdy takie relacje są dostrzegalne dla jednej grupy użytkowników, można sprawić, że będą one dostrzegalne dla wszystkich. Jedną z metod ustalenia, czy informacje zostały prawidłowo dostarczone wszystkim użytkownikom, jest dostęp  szeregowy do informacji w różnych modalnościach.
+    </p>
+    <p>
+      Jeśli łącza do pozycji słownika są wdrożone za pomocą elementów zakotwiczenia (lub odpowiedniego elementu łącza dla używanej technologii) i są identyfikowane przy użyciu innego kroju czcionki, użytkownik czytnika ekranu usłyszy, że element jest łączem, gdy napotka termin słownikowy, nawet jeśli może nie otrzymać informacji o zmianie kroju czcionki. W katalogu internetowym ceny mogą być podawane większą czcionką w kolorze czerwonym. Czytnik ekranu lub osoba, która nie może postrzegać koloru czerwonego, nadal ma informację o cenie, o ile jest ona poprzedzona symbolem waluty.
+    </p>
+    <p>
+      Niektóre technologie nie umożliwiają programowego określania niektórych typów informacji i relacji. W takim przypadku powinien pojawić się tekstowy opis informacji i powiązań. Na przykład „wszystkie wymagane pola są oznaczone gwiazdką (*)”. Opis tekstowy powinien znajdować się w pobliżu informacji, które opisuje (gdy strona jest zlinearyzowana), np. w elemencie nadrzędnym lub w sąsiednim.
+    </p>
+    <p>
+      Mogą również zaistnieć przypadki, w których może to być kwestia oceny, czy relacje powinny zostać określone programowo, czy też przedstawione w tekście. Jednakże, gdy technologie obsługują relacje programowe, zdecydowanie zaleca się, aby informacje i relacje były określane programowo, a nie opisywane w tekście.
+    </p>
+    <div class="note">
       <p>
-         						Sighted users perceive structure and relationships through various visual cues
-         — headings are often in a larger, bold font separated from paragraphs by blank lines;
-         list items are preceded by a bullet and perhaps indented; paragraphs are separated
-         by a blank line; items that share a common characteristic are organized into tabular
-         rows and columns; form fields may be positioned as groups that share text labels;
-         a different background color may be used to indicate that several items are related
-         to each other; words that have special status are indicated by changing the font family
-         and /or bolding, italicizing, or underlining them; items that share a common characteristic
-         are organized into a table where the relationship of cells sharing the same row or
-         column and the relationship of each cell to its row and/or column header are necessary
-         for understanding; and so on. Having these structures and these relationships programmatically
-         determined or available in text ensures that information important for comprehension
-         will be perceivable to all.
-         
+        Nie jest wymagane, aby wartości kolorów były określane programowo. Informacji przekazywanej przez kolor nie można odpowiednio zaprezentować poprzez wyświetlenie wartości. Dlatego też do przypadku koloru odnosi się <a href="uzycie-koloru" class="guideline">kryterium sukcesu 1.4.1</a>, a nie kryterium sukcesu 1.3.1.
       </p>
-      
-      <p>Auditory cues may be used as well. For example, a chime might indicate the beginning
-         of a new section; a change in voice pitch or speech rate may be used to emphasize
-         important information or to indicate quoted text; etc.
-      </p>
-      
+    </div>
+  </section>
+  <section id="benefits">
+    <h2>Korzyści</h2>
+    <ul>
+      <li>
+        To kryterium sukcesu pomaga osobom z różnymi niepełnosprawnościami, umożliwiając programom użytkownika dostosowanie treści do potrzeb poszczególnych użytkowników.
+      </li>
+      <li>
+        Użytkownicy niewidomi (korzystający z czytnika ekranu) odnoszą korzyści, gdy informacje przekazywane za pomocą koloru są również dostępne w tekście (w tym tekstowe alternatywy dla obrazów, które wykorzystują kolor do przekazywania informacji).
+      </li>
+      <li>
+        Użytkownicy głuchoniewidomi korzystający z odświeżalnych wyświetlaczy brajlowskich (tekstowych) mogą nie być w stanie uzyskać dostępu do informacji zależnych od koloru.
+      </li>
+    </ul>
+  </section>
+  <section id="examples">
+    <h2>Przykłady</h2>
+    <dl>
+      <dt>Formularz z wymaganymi polami</dt>
+      <dd>
+        Formularz zawiera kilka wymaganych pól. Etykiety pól wymaganych są wyświetlane w kolorze czerwonym. Ponadto na końcu każdej etykiety znajduje się znak gwiazdki *. Instrukcje wypełniania formularza wskazują, że <q>Wszystkie wymagane pola są wyświetlane na czerwono i oznaczone gwiazdką *</q>, po czym następuje przykład.
+      </dd>
+      <dt>Formularz wykorzystujący kolor i tekst do wskazania wymaganych pól</dt>
+      <dd>
+        Formularz zawiera zarówno pola wymagane, jak i opcjonalne. Instrukcje w górnej części formularza wyjaśniają, że wymagane pola są oznaczone czerwonym tekstem, a także ikoną, której tekst alternatywny mówi <q>Wymagane</q>. Zarówno czerwony tekst, jak i ikona są programowo powiązane z odpowiednimi polami formularza, dzięki czemu użytkownicy technologii wspomagających mogą określić wymagane pola.
+      </dd>
+      <dt>Tabela rozkładu jazdy autobusów, w której nagłówki dla każdej komórki można określić programowo</dt>
+      <dd>
+        Rozkład jazdy autobusów składa się z tabeli z przystankami wymienionymi pionowo w pierwszej kolumnie i różnymi autobusami wymienionymi poziomo w pierwszym wierszu. Każda komórka zawiera czas, w którym autobus pojawi się na danym przystanku. Komórki przystanku i autobusu są identyfikowane jako nagłówki odpowiedniego wiersza lub kolumny, dzięki czemu technologia wspomagająca może programowo określić, który autobus i który przystanek są powiązane z czasem w każdej komórce.
+      </dd>
+      <dt>Formularz, w którym etykiety pól wyboru można określić programowod</dt>
+      <dd>
+        W formularzu etykiety dla każdego pola wyboru mogą być określane programowo przez technologię wspomagającą.
+      </dd>
+      <dt>Dokument tekstowy</dt>
+      <dd>
+        Prosty dokument tekstowy jest sformatowany z podwójnymi pustymi liniami przed tytułami, gwiazdkami wskazującymi elementy listy i innymi standardowymi konwencjami formatowania, dzięki czemu jego strukturę można określić programowo.
+      </dd>
+    </dl>
+  </section>
+  <section id="resources">
+    <h2>Powiązane zasoby</h2>
+    <p>Zasoby służą wyłącznie celom informacyjnym. Nie należy traktować ich jako zaleceń.</p>
+    <ul>
+      <li>
+        <a href="http://webaim.org/techniques/semanticstructure/" hreflang="en" lang="en">WebAIM: Semantic Structure</a> (WebAIM: Struktura semantyczna)
+      </li>
+      <li>
+        <a href="http://accessibility.psu.edu/headingshtml/" hreflang="en" lang="en">Heading Tags</a> (Znaczniki nagłówków)
+      </li>
+    </ul>
+  </section>
+  <section id="techniques">
+    <h2>Techniki</h2>
+    <p>
+      Każdy numerowany element w tej sekcji reprezentuje technikę lub kombinację technik, które Grupa Robocza WCAG uważa za wystarczające do spełnienia tego kryterium sukcesu. Nie jest jednak konieczne stosowanie tych konkretnych technik. Aby uzyskać informacje na temat stosowania innych technik, zobacz <a href="./WCAG-objasnienie-technik.html">Objaśnienie technik dla kryteriów sukcesu WCAG</a>, szczególnie w sekcji „Inne techniki”.
+    </p>
+    <section id="sufficient">
+      <h3>Techniki wystarczające</h3>
       <p>
-         When such relationships are perceivable to one set of users, those relationships can
-         be made to be perceivable to all. One method of determining whether or not information
-         has been properly provided to all users is to access the information serially in different
-         modalities.
-         
+        Wybierz poniżej sytuację, która pasuje do Twojej treści. Każda sytuacja obejmuje techniki lub kombinacje technik, które są znane i udokumentowane jako wystarczające w danej sytuacji.
       </p>
-      
-      <p>If links to glossary items are implemented using anchor elements (or the proper link
-         element for the technology in use) and identified using a different font face, a screen
-         reader user will hear that the item is a link when the glossary term is encountered
-         even though they may not receive information about the change in font face. An on-line
-         catalog may indicate prices using a larger font colored red. A screen reader or person
-         who cannot perceive red, still has the information about the price as long as it is
-         preceded by the currency symbol.
-      </p>
-      
-      <p>Some technologies do not provide a means to programmatically determine some types
-         of information and relationships. In that case then there should be a text description
-         of the information and relationships. For instance, "all required fields are marked
-         with an asterisk (*)". The text description should be near the information it is describing
-         (when the page is linearized), such as in the parent element or in the adjacent element.
-      </p>
-      
-      <p>There may also be cases where it may be a judgment call as to whether the relationships
-         should be programmatically determined or be presented in text. However, when technologies
-         support programmatic relationships, it is strongly encouraged that information and
-         relationships be programmatically determined rather than described in text.
-      </p>
-      
-      <div class="note">
-         
-         <p>It is not required that color values be programmatically determined. The information
-            conveyed by color cannot be adequately presented simply by exposing the value. Therefore,
-            
-            <a href="use-of-color" class="guideline">Success Criterion 1.4.1
-               
-            </a> addresses the specific case of color, rather than Success Criterion 1.3.1.
-            
-         </p>
-         
-      </div>
-      
-      
-   </section>
-   <section id="benefits">
-      <h2>Benefits of Info and Relationships</h2>
-      
-      
-      <ul>
-         
-         <li>This Success Criterion helps people with different disabilities by allowing user agents
-            to adapt content according to the needs of individual users.
-            
-         </li>
-         
-         <li>Users who are blind (using a screen reader) benefit when information conveyed through
-            color is also available in text (including text alternatives for images that use color
-            to convey information).
-         </li>
-         
-         <li>Users who are deaf-blind using braille (text) refreshable displays may be unable to
-            access color-dependent information.
-         </li>
-         
-      </ul>
-      
-   </section>
-   
-   <section id="examples">
-      <h2>Examples of Info and Relationships</h2>
-      
-      <dl>
-         <dt>A form with required fields</dt>
-         <dd>A form contains several required fields. The labels for the required fields are displayed
-               in red. In addition, at the end of each label is an asterisk character, *. The instructions
-               for completing the form indicate that "all required fields are displayed in red and
-               marked with an asterisk *", followed by an example.</dd>
-         <dt>A form that uses color and text to indicate required fields</dt>
-         <dd>A form contains both required and optional fields. Instructions at the top of the
-               form explain that required fields are labeled with red text and also with an icon
-               whose text alternative says, "Required." Both the red text and the icon are programmatically
-               associated with the appropriate form fields so that assistive technology users can
-               determine the required fields.</dd>
-         <dt>A bus schedule table where the headers for each cell can be programmatically determined</dt>
-         <dd>A bus schedule consists of a table with the bus stops listed vertically in the first
-               column and the different buses listed horizontally across the first row. Each cell
-               contains the time when the bus will be at that bus stop. The bus stop and bus cells
-               are identified as headers for their corresponding row or column so that assistive
-               technology can programmatically determine which bus and which bus stop are associated
-               with the time in each cell.</dd>
-         <dt>A form where the labels for the checkboxes can be programmatically determined</dt>
-         <dd>In a form, the labels for each checkbox can be programmatically determined by assistive
-               technology.</dd>
-         <dt>A text document</dt>
-         <dd>A simple text document is formatted with double blank lines before titles, asterisks
-               to indicate list items and other standard formatting conventions so that its structure
-               can be programmatically determined.</dd>
-      </dl>
-      
-   </section>
-   
-   <section id="resources">
-      <h2>Resources for Info and Relationships</h2>
-      
-      
-      <ul>
-         
-         <li>
-            
-            <a href="http://webaim.org/techniques/semanticstructure/">WebAIM: Semantic Structure</a>
-            
-         </li>
-         
-         <li>
-            
-            <a href="http://accessibility.psu.edu/headingshtml/">Heading Tags</a>
-            
-         </li>
-         
-      </ul>
-      
-   </section>
-   
-   <section id="techniques">
-      <h2>Techniques for Info and Relationships</h2>
-      
-      
-      <section id="sufficient">
-         <h3>Sufficient Techniques for Info and Relationships</h3>
-         
-         
-         <section class="situation" id="info-and-relationships-situation-0">
-            
-            <h4>Situation A: The technology provides semantic structure to make information and relationships
-               conveyed through presentation programmatically determinable:
-            </h4>
-            
+      <section class="situation" id="info-and-relationships-situation-0">
+        <h4>
+          Sytuacja A: Technologia zapewnia semantyczną strukturę umożliwiającą programowe określanie informacji i relacji przekazywanych za pośrednictwem prezentacji:
+        </h4>
+        <ul>
+          <li>
+            <a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA11">ARIA11: Używanie punktów orientacyjnych ARIA do identyfikacji regionów strony</a>
+          </li>
+          <li>
+            <a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H101">H101: Użycie punktów orientacyjnych ARIA do określenia kluczowych obszarów strony</a>
+          </li>
+          <li>
+            <a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA12">ARIA12: Używanie role=heading do identyfikowania nagłówków</a>
+          </li>
+          <li>
+            <a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA13">ARIA13: Użycie atrybutu role=heading oraz aria-level="#"do identyfikacji nagłówków</a>
+          </li>
+          <li>
+            <a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA16">ARIA16: Użycie atrybutu aria-labelledby, aby zapewnić nazwę dla elementów sterujących interfejsem użytkownika</a>
+          </li>
+          <li>
+            <a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA17">ARIA17: Używanie ról grupujących do identyfikowania powiązanych kontrolek formularzy</a>
+          </li>
+          <li>
+            <a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA20">ARIA20: Używanie roli regionu do identyfikowania regionu strony</a>
+          </li>
+          <li>
+            <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G115">G115: Użycie znaczników semantycznych do oznaczania struktury </a> <strong>I</strong> <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H49">H49: Użycie znaczników semantycznych do oznaczenia tekstu wyróżnionego lub specjalnego</a>
+          </li>
+          <li>
+            <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G117">G117: Użycie tekstu do przekazywania informacji przekazywanych przez zmiany w sposobie prezentacji tekstu</a>
+          </li>
+          <li>
+            <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G140">G140: Oddzielanie informacji i struktury od prezentacji, aby umożliwić prezentację w różny sposób</a>
+          </li>
+          <li>
+            <a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA24">ARIA24:  Semantyczna identyfikacja ikony czcionki za pomocą atrybutu role="img"</a>
+          </li>
+          <li>
+            <p>
+              Zapewnienie możliwości programowego określenia informacji i relacji przekazywanych w prezentacji za pomocą następujących technik
+            </p>
             <ul>
-               
-               <li>
-                  
-                  <a href="../../techniques/aria/ARIA11" class="aria"></a>
-                  
-               </li>
-
-               <li>
-                  
-                  <a href="../../techniques/html/H101" class="aria"></a>
-                  
-               </li>
-               
-               <li>
-                  
-                  <a href="../../techniques/aria/ARIA12" class="aria"></a>
-                  
-               </li>
-               
-               <li>
-                  
-                  <a href="../../techniques/aria/ARIA13" class="aria"></a>
-                  
-               </li>
-               
-               <li>
-                  
-                  <a href="../../techniques/aria/ARIA16" class="aria"></a>
-                  
-               </li>
-               
-               <li>
-                  
-                  <a href="../../techniques/aria/ARIA17" class="aria"></a>
-                  
-               </li>
-               
-               <li>
-                  
-                  <a href="../../techniques/aria/ARIA20" class="aria"></a>
-                  
-               </li>
-               
-               <li>
-                  										           
-                  <a href="../../techniques/general/G115" class="general">Using semantic elements to mark up structure</a>
-                  										           
-                  <strong>AND</strong>
-                  										           
-                  <a href="../../techniques/html/H49" class="html">H49 Using semantic markup to mark emphasized or special text</a>
-                  									         
-               </li>
-               
-               <li>
-                  										           
-                  <a href="../../techniques/general/G117" class="general">Using text to convey information that is conveyed by variations in presentation of
-                     text
-                  </a>
-                  									         
-               </li>
-               
-               <li>
-                  										           
-                  <a href="../../techniques/general/G140" class="general">Separating information and structure from presentation to enable different presentations</a>
-                  									         
-               </li>
-               <li>
-                  										           
-                     <a href="../../techniques/aria/ARIA24" class="aria">Semantically identifying a font icon with role="img"</a>
-                                                         
-               </li>
-               
-               <li>
-                  
-                  <p>Making information and relationships conveyed through presentation programmatically
-                     determinable using the following techniques:
-                  </p>
-                  
-                  <ul>
-                     
-                     <li>
-                        												               
-                        <a href="../../techniques/general/G138" class="general">Using semantic markup whenever color cues are used</a>
-                        											             
-                     </li>
-                     
-                     <li>
-                        												               
-                        <a href="../../techniques/html/H51" class="html">Using table markup to present tabular information</a>
-                        											             
-                     </li>
-                     
-                     <li>
-                        
-                        <a href="../../techniques/pdf/PDF6" class="pdf"></a>
-                        
-                     </li>
-                     
-                     <li>
-                        
-                        <a href="../../techniques/pdf/PDF20" class="pdf"></a>
-                        
-                     </li>
-                     
-                     <li>
-                        												               
-                        <a href="../../techniques/html/H39" class="html">Using caption elements to associate data table captions with data tables</a>
-                        											             
-                     </li>
-                     
-                     <li>
-                        												               
-                        <a href="../../techniques/html/H63" class="html">Using the scope attribute to associate header cells and data cells in data tables</a>
-                        											             
-                     </li>
-                     
-                     <li>
-                        												               
-                        <a href="../../techniques/html/H43" class="html">Using id and headers attributes to associate data cells with header cells in data
-                           tables
-                        </a>
-                        											             
-                     </li>
-                     
-                     <li>
-                        												               
-                        <a href="../../techniques/html/H44" class="html">Using label elements to associate text labels with form controls</a>
-                        											             
-                     </li>
-                     
-                     <li>
-                        												               
-                        <a href="../../techniques/html/H65" class="html">Using the title attribute to identify form controls when the label element cannot
-                           be used
-                        </a>
-                        											             
-                     </li>
-                     
-                     <li>
-                        
-                        <a href="../../techniques/pdf/PDF10" class="pdf"></a>
-                        
-                     </li>
-                     
-                     <li>
-                        
-                        <a href="../../techniques/pdf/PDF12" class="pdf"></a>
-                        
-                     </li>
-                     
-                     <li>
-                        												               
-                        <a href="../../techniques/html/H71" class="html">Providing a label for groups of radio buttons or checkboxes using the fieldset and
-                           legend elements
-                        </a>
-                        											             
-                     </li>
-                     
-                     <li>
-                        												               
-                        <a href="../../techniques/html/H85" class="html">Using OPTGROUP to group OPTION elements inside a SELECT</a>
-                        											             
-                     </li>
-                     
-                     <li>
-                        												               
-                        <a href="../../techniques/html/H48" class="html">Using ol, ul and dl for lists</a>
-                        											             
-                     </li>
-                     
-                     <li>
-                        												               
-                        <a href="../../techniques/html/H42" class="html">Using h1-h6 to identify headings</a>
-                        											             
-                     </li>
-                     
-                     <li>
-                        
-                        <a href="../../techniques/pdf/PDF9" class="pdf"></a>
-                        
-                     </li>
-                     
-                     <li>
-                        												               
-                        <a href="../../techniques/client-side-script/SCR21" class="script">Using functions of the Document Object Model (DOM) to add content to a page</a>
-                        											             
-                     </li>
-                     
-                     <li>
-                        
-                        <a href="../../techniques/pdf/PDF11" class="pdf"></a>
-                        
-                     </li>
-                     
-                     <li>
-                        
-                        <a href="../../techniques/pdf/PDF17" class="pdf"></a>
-                        
-                     </li>
-                     
-                     <li>
-                        
-                        <a href="../../techniques/pdf/PDF21" class="pdf"></a>
-                        
-                     </li>
-                     
-                     <li>
-                        
-                        <a href="../../techniques/html/H97" class="html"></a>
-                        
-                     </li>
-                     
-                  </ul>
-                  
-               </li>
-               
+              <li>
+                <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G138">G138: Użycie znacznika semantycznego, gdy jako wskaźnik używany jest kolor</a>
+              </li>
+              <li>
+                <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H51">H51: Użycie znaczników tabel do prezentacji danych tabelarycznych</a>
+              </li>
+              <li>
+                <a class="pdf" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF6">PDF6: Użycie elementów tabeli do oznaczania tabel w dokumentach PDF</a>
+              </li>
+              <li>
+                <a class="pdf" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF20">PDF20: Użycie edytora tabel Adobe Acrobat Pro do naprawiania tabel z błędami</a>
+              </li>
+              <li>
+                <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H39">H39: Użycie elementu caption do powiązania podpisu tabeli danych z tabelą danych</a>
+              </li>
+              <li>
+                <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H63">H63: Użycie atrybutu scope do kojarzenia komórek nagłówka i komórek danych w tabelach danych</a>
+              </li>
+              <li>
+                <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H43">H43: Użycie atrybutów id i headers do kojarzenia komórek danych z komórkami nagłówków w tabelach danych</a>
+              </li>
+              <li>
+                <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H44">H44: Użycie elementu label do kojarzenia etykiet tekstowych z formantami formularzy</a>
+              </li>
+              <li>
+                <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H65">H65: Użycie atrybutu title do identyfikacji formantów formularzy, gdy nie można użyć elementu label</a>
+              </li>
+              <li>
+                <a class="pdf" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF10">PDF10: Zapewnianie etykiet dla interaktywnych kontrolek formularzy w dokumentach PDF</a>
+              </li>
+              <li>
+                <a class="pdf" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF12">PDF12: Zapewnianie informacji o nazwach, rolach i wartościach pól formularzy w dokumentach PDF</a>
+              </li>
+              <li>
+                <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H71">H71: Zapewnienie opisu dla grup kontrolek formularzy przy użyciu elementów fieldset i legend</a>
+              </li>
+              <li>
+                <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H85">H85: Użycie optgroup do grupowania elementów option wewnątrz select</a>
+              </li>
+              <li>
+                <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H48">H48: Użycie ol, ul i dl dla list lub grup łączy</a>
+              </li>
+              <li>
+                <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H42">H42: Użycie znaczników h1-h6 do identyfikacji nagłówków</a>
+              </li>
+              <li>
+                <a class="pdf" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF9">PDF9: Zapewnianie nagłówków poprzez oznaczanie treści znacznikami nagłówków w dokumentach PDF</a>
+              </li>
+              <li>
+                <a class="script" href="https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR21">SCR21: Użycie funkcji modelu obiektów dokumentu (DOM) do dodawania treści do strony</a>
+              </li>
+              <li>
+                <a class="pdf" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF11">PDF11: Zapewnianie łączy i tekstu łączy za pomocą przypisu (adnotacji) Link i elementu struktury /Link w dokumentach PDF</a>
+              </li>
+              <li>
+                <a class="pdf" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF17">PDF17: Określanie jednolitej numeracji stron w dokumentach PDF</a>
+              </li>
+              <li>
+                <a class="pdf" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF21">PDF21: Użycie znaczników List do wykazów w dokumentach PDF</a>
+              </li>
+              <li>
+                <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H97">H97: Grupowanie powiązanych łączy za pomocą elementu nav</a>
+              </li>
             </ul>
-            
-         </section>
-         
-         <section class="situation" id="info-and-relationships-situation-1">
-            
-            <h4> Situation B: The technology in use does NOT provide the semantic structure to make
-               the information and relationships conveyed through presentation programmatically determinable:
-            </h4>
-            
+          </li>
+        </ul>
+      </section>
+      <section class="situation" id="info-and-relationships-situation-1">
+        <h4>
+          Sytuacja B: Stosowana technologia NIE zapewnia struktury semantycznej umożliwiającej programowe określenie informacji i relacji przekazywanych poprzez prezentację:
+        </h4>
+        <ul>
+          <li>
+            <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G117">G117: Użycie tekstu do przekazywania informacji przekazywanych przez zmiany w sposobie prezentacji tekstu</a>
+          </li>
+          <li>
+            <p>
+              Uczynienie informacji i relacji przekazywanych przez prezentację możliwą do ustalenia lub dostępną w sposób programowy lub w formie tekstowej za pomocą następujących technik:
+            </p>
             <ul>
-               
-               <li>
-                  										           
-                  <a href="../../techniques/general/G117" class="general">Using text to convey information that is conveyed by variations in presentation of
-                     text
-                  </a>
-                  									         
-               </li>
-               
-               <li>
-                  
-                  <p>Making information and relationships conveyed through presentation programmatically
-                     determinable or available in text using the following techniques:
-                  </p>
-                  
-                  <ul>
-                     
-                     <li>
-                        												               
-                        <a href="../../techniques/text/T1" class="text">Using standard text formatting conventions for paragraphs</a>
-                        											             
-                     </li>
-                     
-                     <li>
-                        												               
-                        <a href="../../techniques/text/T2" class="text">Using standard text formatting conventions for lists</a>
-                        											             
-                     </li>
-                     
-                     <li>
-                        												               
-                        <a href="../../techniques/text/T3" class="text">Using standard text formatting conventions for headings</a>
-                        											             
-                     </li>
-                     
-                  </ul>
-                  
-               </li>
-               
+              <li>
+                <a class="text" href="https://www.w3.org/WAI/WCAG22/Techniques/text/T1">T1: Użycie standardowych konwencji formatowania tekstu dla akapitów</a>
+              </li>
+              <li>
+                <a class="text" href="https://www.w3.org/WAI/WCAG22/Techniques/text/T2">T2: Użycie standardowych konwencji formatowania tekstu dla list</a>
+              </li>
+              <li>
+                <a class="text" href="https://www.w3.org/WAI/WCAG22/Techniques/text/T3">T3: Użycie standardowych konwencji formatowania tekstu dla nagłówków</a>
+              </li>
             </ul>
-            
-         </section>
-         
+          </li>
+        </ul>
       </section>
-      
-      <section id="advisory">
-         <h3>Additional Techniques (Advisory) for Info and Relationships</h3>
-         
-         
-         <ul>
-            
-            <li>
-               									         
-               <a href="../../techniques/css/C22" class="css">Using CSS to control visual presentation of text</a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="../../techniques/general/G162" class="general">Positioning labels to maximize predictability of relationships</a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="../../techniques/aria/ARIA1" class="aria">ARIA1: Using Accessible Rich Internet Application describedby property to provide
-                  a descriptive, programmatically determined label
-               </a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="../../techniques/aria/ARIA2" class="aria">Using Dynamic Web Content Accessibility to programmatically identify form fields as
-                  required
-               </a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="../../techniques/general/G141" class="general">G141</a>
-               								       
-            </li>
-            
-         </ul>
-         
-      </section>
-      
-      <section id="failure">
-         <h3>Failures for Info and Relationships</h3>
-         
-         
-         <ul>
-            
-            <li>
-               									         
-               <a href="../../techniques/failures/F2" class="failure">Failure due to using CSS to create variations in presentation of text that conveys
-                  information without also using the appropriate markup or text
-               </a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="../../techniques/failures/F33" class="failure">Failure due to using white space characters to create multiple columns in plain text
-                  content
-               </a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="../../techniques/failures/F34" class="failure">Failure due to using white space characters to format tables in plain text content</a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="../../techniques/failures/F42" class="failure">Failure due to using scripting events to emulate links</a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="../../techniques/failures/F43" class="failure">Failure due to using structural markup in a way that does not represent relationships
-                  in the content
-               </a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="../../techniques/failures/F46" class="failure">Failure due to using th elements, caption elements, or non-empty summary attributes
-                  in layout tables
-               </a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="../../techniques/failures/F48" class="failure">Failure due to using the pre element to markup tabular information</a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="../../techniques/failures/F87" class="failure"></a>
-               								       
-            </li>
-            
-            <li>
-               
-               <a href="../../techniques/failures/F90" class="failure"></a>
-               
-            </li>
-            
-            <li>
-               
-               <a href="../../techniques/failures/F91" class="failure"></a>
-               
-            </li>
-            
-            <li>
-               
-               <a href="../../techniques/failures/F92" class="failure"></a>
-               
-            </li>
-            
-         </ul>
-         
-      </section>
-      
-   </section>
-   
+    </section>
+    <section id="advisory">
+      <h3>Techniki pomocnicze</h3>
+      <p>
+        Chociaż nie jest to wymagane do uzyskania zgodności, należy rozważyć następujące dodatkowe techniki, aby zwiększyć dostępność treści. Nie wszystkie techniki mogą być stosowane lub byłyby skuteczne we wszystkich sytuacjach.
+      </p>
+      <ul>
+        <li>
+          <a class="css" href="https://www.w3.org/WAI/WCAG22/Techniques/css/C22">C22: Użycie CSS do kontrolowania wizualnej prezentacji tekstu</a>
+        </li>
+        <li>
+          <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G162">G162: Umieszczanie etykiet w bezpośredniej bliskości kontrolek, aby zmaksymalizować postrzeganie relacji</a>
+        </li>
+        <li>
+          <a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA1">ARIA1: Użycie właściwości aria-describedby, aby zapewnić opisową etykietę dla kontrolki interfejsu użytkownika</a>
+        </li>
+        <li>
+          <a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA2">ARIA2: Identyfikacja wymaganych pól za pomocą właściwości aria-required</a>
+        </li>
+        <li>
+          <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G141">G141: Organizowanie strony za pomocą nagłówków</a>
+        </li>
+      </ul>
+    </section>
+    <section id="failure">
+      <h3>Błędy</h3>
+      <p>
+        Poniżej wymieniono typowe błędy, które Grupa Robocza WCAG uważa za niespełnienie tego kryterium sukcesu.
+      </p>
+      <ul>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F2">F2: Niespełnienie kryterium sukcesu 1.3.1 z powodu użycia stylizacji tekstu, aby przekazać informacje bez użycia odpowiedniego znacznika lub tekstu</a>
+        </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F33">F33: Niespełnienie kryterium sukcesu 1.3.1 i 1.3.2 z powodu użycia białych znaków do utworzenia wielu kolumn w treści tekstowej</a>
+        </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F34">F34: Niespełnienie kryterium sukcesu 1.3.1 i 1.3.2 ze względu na użycie znaków spacji w celu uformowania tabel za pomocą zwykłego tekstu</a>
+        </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F42">F42: Niespełnienie kryteriów sukcesu 1.3.1, 2.1.1, 2.1.3 lub 4.1.2 podczas emulacji łączy</a>
+        </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F43">F43: Niespełnienie kryterium sukcesu 1.3.1 z powodu używania znaczników strukturalnych w sposób, który nie odzwierciedla relacji w treści</a>
+        </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F46">F46: Niespełnienie kryterium sukcesu 1.3.1 z powodu użycia elementów th w tabelach formujących układ</a>
+        </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F48">F48: Niespełnienie kryterium sukcesu 1.3.1 ze względu na użycie elementu pre do markowania informacji tabelarycznych</a>
+        </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F87">F87: Niespełnienie kryterium sukcesu 1.3.1 z powodu wstawiania niedekoracyjnej treści za pomocą pseudoelementów :before i :after oraz własności 'content' w CSS</a>
+        </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F90">F90: Niespełnienie kryterium sukcesu 1.3.1 dla niepoprawnego powiązania nagłówków i treści tabeli za pomocą atrybutów nagłówków i identyfikatorów</a>
+        </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F91">F91: Niespełnienie kryterium sukcesu 1.3.1 dla nieprawidłowego oznaczania nagłówków tabeli</a>
+        </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F92">F92: Niespełnienie kryterium sukcesu 1.3.1 ze względu na wykorzystanie roli „presentation” na treściach, które przekazują informacje semantyczne</a>
+        </li>
+      </ul>
+    </section>
+  </section>
 </body>
 </html>
