@@ -1051,8 +1051,8 @@
 	<xsl:template match="html:section[@id = 'techniques']">
 		<xsl:copy>
 			<xsl:apply-templates select="@*"/>
-			<h2>Techniques</h2>
-			<p>Each numbered item in this section represents a technique or combination of techniques that the WCAG Working Group deems sufficient for meeting this Success Criterion. However, it is not necessary to use these particular techniques. For information on using other techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.</p>
+			<h2>Techniki</h2>
+			<p>Każdy numerowany element w tej sekcji reprezentuje technikę lub kombinację technik, które Grupa Robocza WCAG uważa za wystarczające do spełnienia tego kryterium sukcesu. Nie jest jednak konieczne stosowanie tych konkretnych technik. Aby uzyskać informacje na temat stosowania innych technik, zobacz <a href="objasnienie-technik.html">Objaśnienie technik dla kryteriów sukcesu WCAG</a>, szczególnie w sekcji „Inne techniki”.</p>
 			<xsl:apply-templates select="html:*[not(wcag:isheading(.))]"/>
 		</xsl:copy>
 	</xsl:template>
@@ -1061,9 +1061,9 @@
 		<xsl:if test="wcag:section-meaningfully-exists('sufficient', .)">
 			<xsl:copy>
 				<xsl:apply-templates select="@*"/>
-				<h3>Sufficient Techniques</h3>
+				<h3>Techniki wystarczające</h3>
 				<xsl:if test="html:section[@class = 'situation']">
-					<p>Select the situation below that matches your content. Each situation includes techniques or combinations of techniques that are known and documented to be sufficient for that situation. </p>
+					<p>Wybierz poniżej sytuację, która pasuje do Twojej treści. Każda sytuacja obejmuje techniki lub kombinacje technik, które są znane i udokumentowane jako wystarczające w danej sytuacji. </p>
 				</xsl:if>
 				<xsl:apply-templates select="html:*[not(wcag:isheading(.))]"/>
 			</xsl:copy>
@@ -1074,8 +1074,8 @@
 		<xsl:if test="wcag:section-meaningfully-exists('advisory', .)">
 			<xsl:copy>
 				<xsl:apply-templates select="@*"/>
-				<h3>Advisory Techniques</h3>
-				<p>Although not required for conformance, the following additional techniques should be considered in order to make content more accessible. Not all techniques can be used or would be effective in all situations.</p>
+				<h3>Techniki pomocnicze</h3>
+				<p>Chociaż nie jest to wymagane do uzyskania zgodności, należy rozważyć następujące dodatkowe techniki, aby zwiększyć dostępność treści. Nie wszystkie techniki mogą być stosowane lub byłyby skuteczne we wszystkich sytuacjach.</p>
 				<xsl:apply-templates select="html:*[not(wcag:isheading(.))]"/>
 			</xsl:copy>
 		</xsl:if>
@@ -1096,8 +1096,8 @@
 		<xsl:if test="wcag:section-meaningfully-exists('failure', .)">
 			<xsl:copy>
 				<xsl:apply-templates select="@*"/>
-				<h3>Failures</h3>
-				<p>The following are common mistakes that are considered failures of this Success Criterion by the WCAG Working Group.</p>
+				<h3>Błędy</h3>
+				<p>Poniżej wymieniono typowe błędy, które Grupa Robocza WCAG uważa za niespełnienie tego kryterium sukcesu.</p>
 				<xsl:apply-templates select="html:*[not(wcag:isheading(.))]"/>
 			</xsl:copy>
 		</xsl:if>
