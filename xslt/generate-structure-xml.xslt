@@ -49,7 +49,7 @@
 			</understanding>
 			<understanding>
 				<name>Jak odwoływać się do WCAG <xsl:value-of select="$guidelines.version.decimal"/> z innych dokumentów</name>
-				<<file href="refer-to-wcag"/>
+				<file href="refer-to-wcag"/>
 			</understanding>
 			<understanding>
 				<name>Dokumentacja obsługi dostępności dla zastosowań technologii internetowej</name>
