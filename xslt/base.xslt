@@ -134,7 +134,7 @@
 	
 	<xsl:template match="html:p[@class = 'note'] | html:div[@class = 'note']">
 		<div class="note">
-			<div role="heading" class="note-title marker" aria-level="{count(ancestor::html:section) + 2}">Note</div>
+			<div role="heading" class="note-title marker" aria-level="{count(ancestor::html:section) + 2}">Uwaga</div>
 			<xsl:copy><xsl:apply-templates select="@*[not(name() = 'class')]|node()"/></xsl:copy>
 		</div>
 	</xsl:template>
@@ -143,7 +143,7 @@
 		<xsl:copy>
 			<xsl:apply-templates select="@*[not(name() = 'class')]"/>
 			<div class="note">
-				<div role="heading" class="note-title marker" aria-level="{count(ancestor::html:section) + 2}">Note</div>
+				<div role="heading" class="note-title marker" aria-level="{count(ancestor::html:section) + 2}">Uwaga</div>
 				<xsl:apply-templates/>
 			</div>
 		</xsl:copy>
@@ -191,7 +191,7 @@
 	
 	<xsl:template match="html:*[starts-with(@class, 'wcag')]">
 		<xsl:if test="not($guidelines.version)">
-			<xsl:message terminate="yes">Guidelines version not provided</xsl:message>
+			<xsl:message terminate="yes">Nie podano wersji wytycznych</xsl:message>
 		</xsl:if>
 		<xsl:variable name="version" select="substring-after(@class, 'wcag')"/>
 		<xsl:choose>
@@ -237,8 +237,8 @@
           </xsl:choose>
 						<a class="minimal-header-link">
 							<xsl:attribute name="href">
-								<xsl:if test="$documentset = 'Understanding'"><xsl:value-of select="$loc.understanding"/>about</xsl:if>
-								<xsl:if test="$documentset = 'Techniques'"><xsl:value-of select="$loc.techniques"/>about</xsl:if>
+								<xsl:if test="$documentset = 'Understanding'"><xsl:value-of select="$loc.understanding"/>o</xsl:if>
+								<xsl:if test="$documentset = 'Techniques'"><xsl:value-of select="$loc.techniques"/>o</xsl:if>
 							</xsl:attribute>
 							<xsl:text>O WCAG </xsl:text>
 							<xsl:value-of select="$documentset.name"/>

@@ -436,7 +436,7 @@
 		<xsl:call-template name="meta-link">
 			<xsl:with-param name="meta-for-link" select="$meta/ancestor-or-self::guideline | $meta/self::understanding"/>
 			<xsl:with-param name="prevnexttype"></xsl:with-param>
-			<xsl:with-param name="prevnextdir">context</xsl:with-param>
+			<xsl:with-param name="prevnextdir">kontekst</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
 	
@@ -509,24 +509,24 @@
 			<xsl:when test="$meta/self::guideline">
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta/success-criterion[1]"/>
-					<xsl:with-param name="prevnexttype">Previous</xsl:with-param>
-					<xsl:with-param name="prevnextdir">previous</xsl:with-param>
+					<xsl:with-param name="prevnexttype">Poprzednie</xsl:with-param>
+					<xsl:with-param name="prevnextdir">poprzednie</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<!-- if previous SC is first -->
 			<xsl:when test="count($meta/preceding-sibling::success-criterion) = 1">
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta/preceding-sibling::success-criterion"/>
-					<xsl:with-param name="prevnexttype">Previous</xsl:with-param>
-					<xsl:with-param name="prevnextdir">previous</xsl:with-param>
+					<xsl:with-param name="prevnexttype">Poprzednie</xsl:with-param>
+					<xsl:with-param name="prevnextdir">poprzednie</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<!-- Otherwise Level 2 prev link, if any -->
 			<xsl:when test="count($meta/preceding-sibling::success-criterion) &gt; 1">
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta/preceding-sibling::success-criterion[1]"/>
-					<xsl:with-param name="prevnexttype">Previous</xsl:with-param>
-					<xsl:with-param name="prevnextdir">previous</xsl:with-param>
+					<xsl:with-param name="prevnexttype">Poprzednie</xsl:with-param>
+					<xsl:with-param name="prevnextdir">poprzednie</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 		</xsl:choose>
@@ -538,7 +538,7 @@
 		<xsl:call-template name="meta-link">
 			<xsl:with-param name="meta-for-link" select="$meta"/>
 			<xsl:with-param name="prevnexttype"></xsl:with-param>
-			<xsl:with-param name="prevnextdir">context</xsl:with-param>
+			<xsl:with-param name="prevnextdir">kontekst</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
 	
@@ -550,16 +550,16 @@
 			<xsl:when test="count($meta/following-sibling::success-criterion) = 1">
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta/following-sibling::success-criterion[1]"/>
-					<xsl:with-param name="prevnexttype">Next</xsl:with-param>
-					<xsl:with-param name="prevnextdir">next</xsl:with-param>
+					<xsl:with-param name="prevnexttype">Następne</xsl:with-param>
+					<xsl:with-param name="prevnextdir">następne</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<!-- Otherwise Level 2 Next link, if any -->
 			<xsl:when test="count($meta/following-sibling::success-criterion) &gt; 1">
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta/following-sibling::success-criterion[1]"/>
-					<xsl:with-param name="prevnexttype">Next</xsl:with-param>
-					<xsl:with-param name="prevnextdir">next</xsl:with-param>
+					<xsl:with-param name="prevnexttype">Następne</xsl:with-param>
+					<xsl:with-param name="prevnextdir">następne</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 		</xsl:choose>
@@ -873,7 +873,6 @@
 	</xsl:template>
 
 <!-- Define a template to replace URL-unsafe characters with their safe counterparts --> 
-<!-- Define a template to replace URL-unsafe characters with their safe counterparts -->
   <xsl:template name="replaceUnsafeChars">
     <xsl:param name="inputString"/>
     <xsl:choose>
