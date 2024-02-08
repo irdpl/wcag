@@ -669,40 +669,40 @@
 				<xsl:if test="name($meta) = 'success-criterion'">
 					<xsl:if test="wcag:section-meaningfully-exists('brief', //html:section[@id = 'brief'])">
 						<li>
-							<a href="#brief">In Brief</a>
+							<a href="#brief">W skrócie</a>
 						</li>
 					</xsl:if>
 					<li>
-						<a href="#intent">Intent</a>
+						<a href="#intent">Intencja</a>
 					</li>
 					<li>
-						<a href="#benefits">Benefits</a>
+						<a href="#benefits">Korzyści</a>
 					</li>
 					<xsl:if test="wcag:section-meaningfully-exists('examples', //html:section[@id = 'examples'])">
 						<li>
-							<a href="#examples">Examples</a>
+							<a href="#examples">Przykłady</a>
 						</li>
 					</xsl:if>
 					<xsl:if test="wcag:section-meaningfully-exists('resources', //html:section[@id = 'resources'])">
 						<li>
-							<a href="#resources">Related Resources</a>
+							<a href="#resources">Powiązane zasoby</a>
 						</li>
 					</xsl:if>
 					<li>
-						<a href="#techniques">Techniques</a>
+						<a href="#techniques">Techniki</a>
 					</li>
 				</xsl:if>
 				<xsl:if test="name($meta) = 'guideline'">
 					<li>
-						<a href="#intent">Intent</a>
+						<a href="#intent">Intencja</a>
 					</li>
 					<xsl:if test="wcag:section-meaningfully-exists('gladvisory', //html:section[@id = 'gladvisory'])">
 						<li>
-							<a href="#advisory">Advisory Techniques</a>
+							<a href="#advisory">Techniki pomocnicze</a>
 						</li>
 					</xsl:if>
 					<li>
-						<a href="#success-criteria">Success Criteria</a>
+						<a href="#success-criteria">Kryteria sukcesu</a>
 					</li>
 				</xsl:if>
 				<xsl:if test="name($meta) = 'understanding'">
@@ -722,11 +722,11 @@
 				</xsl:if>
 				<xsl:if test="//html:a[not(@href)] | $meta/content/descendant::html:a[not(@href)]">
 					<li>
-						<a href="#key-terms">Key Terms</a>
+						<a href="#key-terms">Kluczowe terminy</a>
 					</li>
 				</xsl:if>
 				<xsl:if test="$act.doc//func:array[@key = 'successCriteria'][func:string = $meta/@id]">
-					<li><a href="#test-rules">Test Rules</a></li>
+					<li><a href="#test-rules">Zasady testowe</a></li>
 				</xsl:if>
 			</ul>
 	</xsl:template>
@@ -747,7 +747,7 @@
 	<xsl:template name="gl-sc">
 		<xsl:param name="meta" tunnel="yes"/>
 		<section id="success-criteria">
-			<h2>Success Criteria for this Guideline</h2>
+			<h2>Kryteria sukcesu dla tej Wytycznej</h2>
 			<ul>
 				<xsl:for-each select="$meta/success-criterion">
 					<li>
@@ -765,21 +765,21 @@
 	<xsl:template name="sc-info">
 		<xsl:param name="meta" tunnel="yes"/>
 		<xsl:choose>
-			<xsl:when test="name($meta) = 'guideline'">Guideline </xsl:when>
-			<xsl:when test="name($meta) = 'success-criterion'">Success Criterion </xsl:when>
+			<xsl:when test="name($meta) = 'guideline'">Wytyczna </xsl:when>
+			<xsl:when test="name($meta) = 'success-criterion'">Kryterium sukcesu </xsl:when>
 		</xsl:choose>
 		<a href="{$loc.guidelines}#{$meta/@id}" style="font-weight: bold;">
 			<xsl:value-of select="$meta/num"/>
 			<xsl:text> </xsl:text>
 			<xsl:value-of select="$meta/name"/>
 		</a>
-		<xsl:if test="name($meta) = 'success-criterion'"> (Level <xsl:value-of select="$meta/level"/>)</xsl:if>
+		<xsl:if test="name($meta) = 'success-criterion'"> (Poziom <xsl:value-of select="$meta/level"/>)</xsl:if>
 		<xsl:text>: </xsl:text>
 	</xsl:template>
 
 	<xsl:template match="html:p[@class = 'note'] | html:div[@class = 'note']">
 		<div class="note">
-			<p class="note-title marker">Note</p>
+			<p class="note-title marker">Uwaga</p>
 			<xsl:copy><xsl:apply-templates select="@*[not(name() = 'class')]|node()"/></xsl:copy>
 		</div>
 	</xsl:template>
@@ -812,7 +812,7 @@
 					<xsl:copy-of select="$meta/ancestor::guidelines/term[name = current()]"/>
 				</xsl:for-each>
 			</xsl:variable>
-			<section id="key-terms"><details><summary><h2>Key Terms</h2></summary>
+			<section id="key-terms"><details><summary><h2>Kluczowe terminy</h2></summary>
 			<xsl:apply-templates select="$termids" mode="key-terms">
 				<xsl:sort select="id"/>
 			</xsl:apply-templates>
@@ -826,8 +826,8 @@
 
 		<xsl:if test="$act.doc//func:array[@key = 'successCriteria'][func:string = $meta/@id]">
 			<section id="test-rules">
-				<h2>Test Rules</h2>
-				<p>The following are Test Rules for certain aspects of this Success Criterion. It is not necessary to use these particular Test Rules to check for conformance with WCAG, but they are defined and approved test methods. For information on using Test Rules, see <a href="understanding-act-rules.html">Understanding Test Rules for WCAG Success Criteria</a>.</p>
+				<h2>Zasady testowe</h2>
+				<p>Poniżej znajdują się zasady testowe dla niektórych aspektów tego kryterium sukcesu. Nie jest konieczne korzystanie z tych konkretnych zasad testowych w celu sprawdzenia zgodności z WCAG, ale są one zdefiniowanymi i zatwierdzonymi metodami testowymi. Aby uzyskać informacje na temat korzystania z zasad testowych, zobacz <a href="objasnienie-zasad-testowych.html">Objaśnienie zasad testowych dla kryteriów sukcesu WCAG</a>.</p>
 				<ul>
 					<xsl:for-each select="$act.doc//func:array[@key = 'successCriteria']/func:string[. = $meta/@id]">
 						<li>
@@ -847,7 +847,7 @@
 		<xsl:variable name="canonical-name" select="$meta/ancestor::guidelines/term[name = lower-case(normalize-space(current()))]/name[1]"/>
 		<xsl:choose>
 			<xsl:when test="empty($canonical-name)">
-				<xsl:message>Unable to find term "<xsl:value-of select="."/>" in "<xsl:value-of select="$meta/name"/> (<xsl:value-of select="$meta/name()"/>)"; key terms list will be incomplete.</xsl:message>
+				<xsl:message>Nie można znaleźć terminu "<xsl:value-of select="."/>" w "<xsl:value-of select="$meta/name"/> (<xsl:value-of select="$meta/name()"/>)"; lista pojęć będzie niekompletna</xsl:message>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:sequence>
@@ -904,15 +904,15 @@
 					<main id="main" class="standalone-resource__main">
 						<h1>
 							<xsl:apply-templates select="//html:h1"/>
-							<xsl:if test="name($meta) = 'success-criterion'"> (Level <xsl:value-of select="$meta/level"/>)</xsl:if>
+							<xsl:if test="name($meta) = 'success-criterion'"> (Poziom <xsl:value-of select="$meta/level"/>)</xsl:if>
 						</h1>
 						<xsl:choose>
 							<xsl:when test="name($meta) = 'guideline' or name($meta) = 'success-criterion'">
 								<aside class="box">
 									<header class="box-h  box-h-icon"> 
 										<xsl:choose>
-											<xsl:when test="name($meta) = 'guideline'">Guideline </xsl:when>
-											<xsl:when test="name($meta) = 'success-criterion'">Success Criterion (SC) </xsl:when>
+											<xsl:when test="name($meta) = 'guideline'">Wytyczna </xsl:when>
+											<xsl:when test="name($meta) = 'success-criterion'">Kryterium sukcesu (KS) </xsl:when>
 										</xsl:choose></header>
 									<div class="box-i">
 										<xsl:apply-templates select="$meta/content/html:*" />
@@ -971,7 +971,7 @@
 			</nav>
 			-->
 			<nav>
-				<header class="box-h ">Page Contents</header>
+				<header class="box-h ">Treść strony</header>
 				<div class="box-i">
 					<xsl:call-template name="navtoc"/>
 				</div>
@@ -986,17 +986,17 @@
 
 	<xsl:template match="html:title">
 		<xsl:param name="meta" tunnel="yes"/>
-		<xsl:if test="name($meta) != 'understanding'">Understanding </xsl:if>
+		<xsl:if test="name($meta) != 'understanding'">Objaśnienie </xsl:if>
 		<xsl:call-template name="name"/>
 	</xsl:template>
 
 	<xsl:template match="html:h1">
 		<xsl:param name="meta" tunnel="yes"/>
 		<xsl:if test="name($meta) != 'understanding'">
-			<span class="standalone-resource__type-of-guidance">Understanding 
+			<span class="standalone-resource__type-of-guidance">Objaśnienie
 				<xsl:choose>
-					<xsl:when test="name($meta) = 'guideline'">Guideline </xsl:when>
-					<xsl:when test="name($meta) = 'success-criterion'">SC </xsl:when>
+					<xsl:when test="name($meta) = 'guideline'">Wytyczna </xsl:when>
+					<xsl:when test="name($meta) = 'success-criterion'">KS </xsl:when>
 				</xsl:choose>
 				<xsl:value-of select="$meta/num"/>:</span>
 		</xsl:if>
@@ -1006,7 +1006,7 @@
 	<xsl:template match="html:section[@id = 'brief']">
 		<xsl:copy>
 			<xsl:apply-templates select="@*"/>
-			<h2>In Brief</h2>
+			<h2>W skrócie</h2>
 			<xsl:apply-templates select="html:*[not(wcag:isheading(.) or @id = 'brief')]"/>
 		</xsl:copy>
 	</xsl:template>
@@ -1014,7 +1014,7 @@
 	<xsl:template match="html:section[@id = 'intent']">
 		<xsl:copy>
 			<xsl:apply-templates select="@*"/>
-			<h2>Intent</h2>
+			<h2>Intencja</h2>
 			<xsl:apply-templates select="html:*[not(wcag:isheading(.) or @id = 'benefits')]"/>
 		</xsl:copy>
 	</xsl:template>
@@ -1022,7 +1022,7 @@
 	<xsl:template match="html:section[@id = 'benefits']">
 		<xsl:copy>
 			<xsl:apply-templates select="@*"/>
-			<h2>Benefits</h2>
+			<h2>Korzyści</h2>
 			<xsl:apply-templates select="html:*[not(wcag:isheading(.))]"/>
 		</xsl:copy>
 	</xsl:template>
@@ -1031,7 +1031,7 @@
 		<xsl:if test="wcag:section-meaningfully-exists('examples', .)">
 			<xsl:copy>
 				<xsl:apply-templates select="@*"/>
-				<h2>Examples</h2>
+				<h2>Przykłady</h2>
 				<xsl:apply-templates select="html:*[not(wcag:isheading(.))]"/>
 			</xsl:copy>
 		</xsl:if>
@@ -1041,8 +1041,8 @@
 		<xsl:if test="wcag:section-meaningfully-exists('resources', .)">
 			<xsl:copy>
 				<xsl:apply-templates select="@*"/>
-				<h2>Related Resources</h2>
-				<p>Resources are for information purposes only, no endorsement implied.</p>
+				<h2>Powiązane zasoby</h2>
+				<p>Zasoby służą wyłącznie celom informacyjnym. Nie należy traktować ich jako zaleceń.</p>
 				<xsl:apply-templates select="html:*[not(wcag:isheading(.))]"/>
 			</xsl:copy>
 		</xsl:if>
@@ -1085,8 +1085,8 @@
 		<xsl:if test="wcag:section-meaningfully-exists('gladvisory', .)">
 			<xsl:copy>
 				<xsl:apply-templates select="@*"/>
-				<h2>Advisory Techniques</h2>
-				<p>Specific techniques for meeting each Success Criterion for this guideline are listed in the understanding sections for each Success Criterion (listed below). If there are techniques, however, for addressing this guideline that do not fall under any of the success criteria, they are listed here. These techniques are not required or sufficient for meeting any success criteria, but can make certain types of Web content more accessible to more people.</p>
+				<h2>Techniki pomocnicze</h2>
+				<p>Konkretne techniki pozwalające spełnić każde kryterium sukcesu dla tej wytycznej są wymienione w sekcjach dotyczących zrozumienia każdego kryterium sukcesu (wymienionych poniżej). Jeśli jednak istnieją techniki dotyczące tej wytycznej, które nie wchodzą w zakres żadnego z kryteriów sukcesu, są one wymienione tutaj. Techniki te nie są wymagane ani wystarczające do spełnienia któregokolwiek z kryteriów sukcesu, ale mogą sprawić, że niektóre rodzaje treści internetowych będą bardziej dostępne dla większej liczby osób.</p>
 				<xsl:apply-templates select="html:*[not(wcag:isheading(.))]"/>
 			</xsl:copy>
 		</xsl:if>
