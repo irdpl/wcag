@@ -884,13 +884,62 @@
           <xsl:with-param name="inputString" select="substring-after($inputString, 'ą')"/>
         </xsl:call-template>
       </xsl:when>
+      <xsl:when test="contains($inputString, 'ć')">
+        <xsl:value-of select="substring-before($inputString, 'ć')"/>
+        <xsl:text>c</xsl:text>
+        <xsl:call-template name="replaceUnsafeChars">
+          <xsl:with-param name="inputString" select="substring-after($inputString, 'ć')"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="contains($inputString, 'ę')">
+        <xsl:value-of select="substring-before($inputString, 'ę')"/>
+        <xsl:text>ę</xsl:text>
+        <xsl:call-template name="replaceUnsafeChars">
+          <xsl:with-param name="inputString" select="substring-after($inputString, 'ę')"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="contains($inputString, 'ł')">
+        <xsl:value-of select="substring-before($inputString, 'ł')"/>
+        <xsl:text>l</xsl:text>
+        <xsl:call-template name="replaceUnsafeChars">
+          <xsl:with-param name="inputString" select="substring-after($inputString, 'ł')"/>
+        </xsl:call-template>
+      </xsl:when> 
+      <xsl:when test="contains($inputString, 'ń')">
+        <xsl:value-of select="substring-before($inputString, 'ń')"/>
+        <xsl:text>n</xsl:text>
+        <xsl:call-template name="replaceUnsafeChars">
+          <xsl:with-param name="inputString" select="substring-after($inputString, 'ń')"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="contains($inputString, 'ó')">
+        <xsl:value-of select="substring-before($inputString, 'ó')"/>
+        <xsl:text>o</xsl:text>
+        <xsl:call-template name="replaceUnsafeChars">
+          <xsl:with-param name="inputString" select="substring-after($inputString, 'ó')"/>
+        </xsl:call-template>
+      </xsl:when>
       <xsl:when test="contains($inputString, 'ś')">
         <xsl:value-of select="substring-before($inputString, 'ś')"/>
         <xsl:text>s</xsl:text>
         <xsl:call-template name="replaceUnsafeChars">
           <xsl:with-param name="inputString" select="substring-after($inputString, 'ś')"/>
         </xsl:call-template>
-      </xsl:when>  
+      </xsl:when>
+      <xsl:when test="contains($inputString, 'ż')">
+        <xsl:value-of select="substring-before($inputString, 'ż')"/>
+        <xsl:text>z</xsl:text>
+        <xsl:call-template name="replaceUnsafeChars">
+          <xsl:with-param name="inputString" select="substring-after($inputString, 'ż')"/>
+        </xsl:call-template>
+      </xsl:when> 
+      <xsl:when test="contains($inputString, 'ź')">
+        <xsl:value-of select="substring-before($inputString, 'ź')"/>
+        <xsl:text>z</xsl:text>
+        <xsl:call-template name="replaceUnsafeChars">
+          <xsl:with-param name="inputString" select="substring-after($inputString, 'ź')"/>
+        </xsl:call-template>
+      </xsl:when>    	  
       <!-- Add more cases for other Polish special characters -->
       <!-- When no special character is found, copy the remaining string -->
       <xsl:otherwise>
