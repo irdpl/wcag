@@ -191,8 +191,49 @@
 			<xsl:apply-templates select="node()|@*"/>
 		</xsl:copy>
 	</xsl:template>
+
+<!-- Define a template to replace URL-unsafe characters with their safe counterparts -->
+  <xsl:template name="replaceUnsafeChars">
+    <xsl:param name="inputString"/>
+    <xsl:choose>
+      <!-- Replace Polish special characters -->
+      <xsl:when test="contains($inputString, 'ą')">
+        <xsl:value-of select="substring-before($inputString, 'ą')"/>
+        <xsl:text>z</xsl:text>
+        <xsl:call-template name="replaceUnsafeChars">
+          <xsl:with-param name="inputString" select="substring-after($inputString, 'ą')"/>
+        </xsl:call-template>
+      </xsl:when>
+      <!-- Add more cases for other Polish special characters -->
+      <!-- When no special character is found, copy the remaining string -->
+      <xsl:otherwise>
+        <xsl:value-of select="$inputString"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+<xsl:template match="understanding | guideline | success-criterion">
+    <xsl:variable name="safeHref">
+        <!-- Replace URL-unsafe characters in the filename -->
+        <xsl:call-template name="replaceUnsafeChars">
+            <xsl:with-param name="inputString" select="file/@href"/>
+        </xsl:call-template>
+    </xsl:variable>
+    <xsl:result-document href="{$output.dir}/{$safeHref}.html" encoding="utf-8" exclude-result-prefixes="#all" include-content-type="no" indent="yes" method="xhtml" omit-xml-declaration="yes">
+        <xsl:apply-templates select="document(resolve-uri(concat(file/@href, '.html'), concat($base.dir, max($versions.doc//id[@id = current()/@id]/parent::version/@name), '/')))">
+            <xsl:with-param name="meta" select="." tunnel="yes"/>
+        </xsl:apply-templates>
+    </xsl:result-document>
+</xsl:template>
+
 	
 	<xsl:template match="technique">
+    <xsl:variable name="technology">
+        <!-- Replace URL-unsafe characters in the filename -->
+        <xsl:call-template name="replaceUnsafeChars">
+            <xsl:with-param name="inputString" select="file/@href"/>
+        </xsl:call-template>
+    </xsl:variable>	
 		<xsl:variable name="technology" select="parent::technology/@name"/>
 		<xsl:result-document href="{$output.dir}/{$technology}/{@id}.html" encoding="utf-8" exclude-result-prefixes="#all" include-content-type="no" indent="yes" method="xhtml" omit-xml-declaration="yes">
 			<xsl:apply-templates select="document(resolve-uri(concat($technology, '/', @id, '.html'), $techniques.dir))">
