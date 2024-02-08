@@ -29,8 +29,8 @@
 	<xsl:param name="documentset"/>
 	<xsl:variable name="documentset.name">
 		<xsl:choose>
-			<xsl:when test="$documentset = 'Techniques'">Techniques</xsl:when>
-			<xsl:when test="$documentset = 'Understanding'">Understanding Docs</xsl:when>
+			<xsl:when test="$documentset = 'Techniques'">Techniki</xsl:when>
+			<xsl:when test="$documentset = 'Understanding'">Objaśnienia</xsl:when>
 			<xsl:otherwise><xsl:value-of select="$documentset"/></xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
@@ -203,7 +203,7 @@
 			<xsl:when test="$version = $guidelines.version">
 				<xsl:copy>
 					<xsl:apply-templates select="@*"/>
-					<xsl:text> </xsl:text><span class="new-version">New in WCAG <xsl:value-of select="$guidelines.version"/>: </span>
+					<xsl:text> </xsl:text><span class="new-version">Nowe w WCAG <xsl:value-of select="$guidelines.version"/>: </span>
 					<xsl:apply-templates/>
 				</xsl:copy>
 			</xsl:when>
@@ -212,7 +212,7 @@
 	</xsl:template>
 
 	<xsl:template name="header">
-    <a href="#main" class="button button--skip-link">Skip to content</a>
+    <a href="#main" class="button button--skip-link">Idź do treści</a>
 		<div class="minimal-header-container default-grid">
 				<div class="minimal-header" id="site-header">
 					<div class="minimal-header-name">
@@ -229,10 +229,10 @@
 					</div>
           <xsl:choose>
             <xsl:when test="$documentset = 'Techniques'">
-    					<div class="minimal-header-subtitle">Examples of ways to meet WCAG; not required</div>
+    					<div class="minimal-header-subtitle">Przykłady sposobów spełnienia WCAG; nie są wymagane</div>
             </xsl:when>
             <xsl:when test="$documentset = 'Understanding'">
-    					<div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div>
+    					<div class="minimal-header-subtitle">Objaśnienia informacyjne, niewymagane do spełnienia WCAG</div>
             </xsl:when>
           </xsl:choose>
 						<a class="minimal-header-link">
@@ -240,7 +240,7 @@
 								<xsl:if test="$documentset = 'Understanding'"><xsl:value-of select="$loc.understanding"/>about</xsl:if>
 								<xsl:if test="$documentset = 'Techniques'"><xsl:value-of select="$loc.techniques"/>about</xsl:if>
 							</xsl:attribute>
-							<xsl:text>About WCAG </xsl:text>
+							<xsl:text>O WCAG </xsl:text>
 							<xsl:value-of select="$documentset.name"/>
 						</a>
 						<div class="minimal-header-logo">
@@ -303,7 +303,7 @@
 									<xsl:attribute name="class">active</xsl:attribute>
 									<xsl:attribute name="aria-current">page</xsl:attribute>
 								</xsl:if>
-								All Understanding Docs
+								Wszystkie objaśnienia
 							</a>
 							</li>
   					</ul>
@@ -325,7 +325,7 @@
 			<span>
 				<svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
 					<path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
-				</svg> Back to Top
+				</svg> Początek strony
 			</span>
 		</a>
 	</xsl:template>

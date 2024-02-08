@@ -31,33 +31,33 @@
 	<xsl:template match="html:html">
 		<guidelines lang="{@lang}">
 			<understanding>
-				<name>Introduction to Understanding WCAG <xsl:value-of select="$guidelines.version.decimal"/></name>
-				<file href="intro"/>
+				<name>Wprowadzenie do objaśnień WCAG <xsl:value-of select="$guidelines.version.decimal"/></name>
+				<file href="objasnienie-technik"/>
 			</understanding>
 			<understanding>
-				<name>Understanding Techniques for WCAG Success Criteria</name>
-				<file href="understanding-techniques"/>
+				<name>Objaśnienie technik dla kryteriów sukcesu WCAG</name>
+				<file href="objasnienie-technik"/>
 			</understanding>
 			<understanding>
-				<name>Understanding Test Rules for WCAG Success Criteria</name>
-				<file href="understanding-act-rules"/>
+				<name>Objaśnienie zasad testowych dla kryteriów sukcesu WCAG</name>
+				<file href="objasnienie-zasad-testowych"/>
 			</understanding>
 			<xsl:apply-templates select="//html:section[@class='principle']"/>
 			<understanding>
-				<name>Understanding Conformance</name>
-				<file href="conformance"/>
+				<name>Objaśnienie zgodności</name>
+				<file href="zgodnosc"/>
 			</understanding>
 			<understanding>
-				<name>How to Refer to WCAG <xsl:value-of select="$guidelines.version.decimal"/> from Other Documents</name>
-				<file href="refer-to-wcag"/>
+				<name>Jak odwoływać się do WCAG <xsl:value-of select="$guidelines.version.decimal"/> z innych dokumentów</name>
+				<file href="odwolania-do-wcag"/>
 			</understanding>
 			<understanding>
-				<name>Documenting Accessibility Support for Uses of a Web Technology</name>
-				<file href="documenting-accessibility-support"/>
+				<name>Dokumentacja obsługi dostępności dla zastosowań technologii internetowej</name>
+				<file href="dokumentowanie-obslugi-dostepnosci"/>
 			</understanding>
 			<understanding>
-				<name>Understanding Metadata</name>
-				<file href="understanding-metadata"/>
+				<name>Objaśnienie metadanych</name>
+				<file href="objasnienie-metadanych"/>
 			</understanding>
 			<xsl:apply-templates select="//html:dfn"/>
 		</guidelines>
