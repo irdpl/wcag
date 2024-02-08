@@ -1,244 +1,268 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<title>Wprowadzenie do objaśnień WCAG 2.2</title>
-	</head>
-	<body>
-	
-               <p> Objaśnienia WCAG 2.2 są podstawowym przewodnikiem do zrozumienia i korzystania z <a href="../guidlines/index.html">Wytycznych dla dostępności treści internetowych 2.2</a>”. Chociaż normatywne definicje i wymagania dla WCAG 2.2 można znaleźć w samym dokumencie WCAG 2.2, pojęcia i przepisy mogą być nowe dla niektórych osób.  Objaśnienia WCAG 2.2 zapewniają nienormatywny rozszerzony komentarz do każdej wytycznej i każdego kryterium sukcesu, aby pomóc czytelnikom lepiej zrozumieć intencje oraz jak wytyczne i kryteria sukcesu działają razem.  Podają również przykłady technik lub kombinacji technik, które Grupa Robocza W3C określiła jako wystarczające do spełnienia każdego Kryterium sukcesu.  Zamieszczono także łącza do opisów każdej z tych technik.
-               </p>
-               		
-               <p>Nie jest to dokument wprowadzający. Jest to szczegółowy opis techniczny wytycznych i ich kryteriów sukcesu. Zobacz <a href="https://lepszyweb.pl/blog2/omowienie-wcag">Omówienie Wytycznych dla dostępności treści internetowych (WCAG)</a> (<a href="https://www.w3.org/WAI/intro/wcag" lang="en" hreflang="en">WCAG 2 Overview</a>), aby zapoznać się z wprowadzeniem do WCAG i pomocniczych dokumentów technicznych oraz materiałów edukacyjnych.
-                  
-               </p>
-               		
-               <p>Objaśnienia WCAG 2.2 są zorganizowane według wytycznych. Istnieje sekcja Objaśnienia Wytycznej X.X dla każdej wytycznej. Intencje i wszelkie techniki pomocnicze, które są związane z wytyczną, ale nie są konkretnie związane z żadnym z jej kryteriów sukcesu, są tam również wymienione. Dla każdej wytycznej istnieje sekcja <em>Objaśnienia Wytycznej X.X</em>.  Wymienione są tam również intencje i wszelkie techniki pomocnicze, które są związane z wytyczną, ale nie są konkretnie związane z żadnym z jej kryteriów sukcesu.
-               </p>
-               		
-               <p>Po części <em>Objaśnienia Wytycznej X.X</em> <em>.</em> X następują sekcje <em>Objaśnienia kryterium sukcesu X.X.X </em> dla każdego kryterium sukcesu danej wytycznej.  Każda z tych sekcji zawiera:
-               </p>		
-		
-               <ul>
-                  			
-                  <li>
-                     				
-                     <p>Kryterium sukcesu w postaci, w jakiej występuje w WCAG 2.2</p>
-                     			
-                  </li>
-                  			
-                  <li>
-                     				
-                     <p>Intencje kryterium sukcesu</p>
-                     			
-                  </li>
-                  			
-                  <li>
-                     				
-                     <p>Korzyści (jak spełnienie kryterium sukcesu pomaga osobom niepełnosprawnym))</p>
-                     			
-                  </li>
-                  			
-                  <li>
-                     				
-                     <p>Przykłady</p>
-                     			
-                  </li>
-                  			
-                  <li>
-                     				
-                     <p> Powiązane zasoby </p>
-                     			
-                  </li>
-                  			
-                  <li>
-                     				
-                     <p>Techniki lub kombinacje technik wystarczających do spełnienia kryterium</p>
-                     			
-                  </li>
-                  			
-                  <li>
-                     				
-                     <p>Typowe błędy tego kryterium sukcesu</p>
-                     			
-                  </li>
-                  			
-                  <li>
-                     				
-                     <p>Dodatkowe techniki pomocnicze, które wykraczają poza to, co jest wymagane do spełnienia kryterium sukcesu, ale mogą być wykorzystane do uczynienia niektórych lub wszystkich rodzajów treści bardziej dostępnymi.  Zastosowanie technik pomocniczych nie ma wpływu na deklarowany poziom zgodności. 
-                     </p>
-                     			
-                  </li>
-                  			
-                  <li>
-                     				
-                     <p>Kluczowe terminy dla tego Kryterium sukcesu (zaczerpnięte ze Słownika WCAG 2.2)</p>
-                     			
-                  </li>
-                  		
-               </ul>
-               <p>Z każdej Wytycznej WCAG 2.2 podano łącza bezpośrednio do każdego <em>Objaśnienia Wytycznej X.X</em> w tym dokumencie. Podobnie, z każdego kryterium sukcesu w WCAG 2.2 istnieje łącze do sekcji <em>Objaśnienie Kryterium sukcesu X.X.X</em> w tym dokumencie. 
-               </p>
-               		
-               <p>Aby uzyskać informacje o poszczególnych technikach, należy kierować się łączami w całym dokumencie do interesujących nas technik w dokumencie <a href="https://www.w3.org/WAI/WCAG22/Techniques/">Techniki dla WCAG 2.2</a>.  
-               </p>
-               		
-               <p>Łącza do informacji na temat różnych niepełnosprawności i technologii wspomagających można znaleźć w Wikipedii na stronie <a href="https://pl.wikipedia.org/wiki/Niepe%C5%82nosprawno%C5%9B%C4%87">Niepełnosprawność></a> lub w języku angielskim <a href="https://en.wikipedia.org/wiki/Disability">Disability</a>. 
-               </p>
-               <section id="objasnienie-czterech-zasad-dostępnosci">
-                  			
-                  <h2>Objaśnienie czterech zasad dostępności</h2>
-                  			
-                  <p>Wytyczne i kryteria sukcesu są zorganizowane wokół następujących czterech zasad, które stanowią fundament niezbędny dla każdego, kto chce uzyskać dostęp i korzystać z treści internetowych.  Każdy, kto chce korzystać z Internetu musi mieć dostęp do treści, które są:
-                  </p>
-                  			
-                  <ol>
-                     				
-                     <li>
-                        					
-                        <p> Postrzegalne - Informacje i elementy interfejsu użytkownika muszą być prezentowane użytkownikom w sposób, w jaki mogą je postrzegać.
-                        </p>
-                        					
-                        <ul>
-                           						
-                           <li>
-                              							
-                              <p>Oznacza to, że użytkownicy muszą być w stanie odebrać prezentowane informacje (nie mogą one być niewidoczne dla wszystkich zmysłów).
-                              </p>
-                              						
-                           </li>
-                           					
-                        </ul>
-                        				
-                     </li>
-                     				
-                     <li>
-                        					
-                        <p>Funkcjonalne - komponenty interfejsu użytkownika i nawigacja muszą być możliwe do obsługi (sprawne i skuteczne).</p>
-                        					
-                        <ul>
-                           						
-                           <li>
-                              							
-                              <p>Oznacza to, że użytkownicy muszą być w stanie obsługiwać interfejs (interfejs nie może wymagać interakcji, której użytkownik nie jest w stanie wykonać) 
-                              </p>
-                              						
-                           </li>
-                           					
-                        </ul>
-                        				
-                     </li>
-                     				
-                     <li>
-                        					
-                        <p>Zrozumiałe - Informacje i działanie interfejsu użytkownika muszą być zrozumiałe.</p>
-                        					
-                        <ul>
-                           						
-                           <li>
-                              							
-                              <p>Oznacza to, że użytkownicy muszą być w stanie zrozumieć informacje, jak również działanie interfejsu użytkownika (treść lub działanie nie może być poza ich zrozumieniem)
-                              </p>
-                              						
-                           </li>
-                           					
-                        </ul>
-                        				
-                     </li>
-                     				
-                     <li>
-                        					
-                        <p>Solidne - Treść musi być na tyle solidna, aby mogła być wiarygodnie interpretowana przez wiele różnych programów użytkownika, w tym technologie wspomagające.
-                        </p>
-                        					
-                        <ul>
-                           						
-                           <li>
-                              							
-                              <p>Oznacza to, że użytkownicy muszą być w stanie uzyskać dostęp do treści w miarę rozwoju technologii (wraz z rozwojem technologii i programów użytkownika treść powinna pozostać dostępna).
-                              </p>
-                              						
-                           </li>
-                           					
-                        </ul>
-                        				
-                     </li>
-                     			
-                  </ol>
-                  			
-                  <p>Jeśli którakolwiek z tych zasad nie jest realizowana, użytkownicy z niepełnosprawnościami nie będą mogli korzystać z treści internetowej. 
-                  </p>
-                  			
-                  <p>Pod każdą z zasad kryją się wytyczne i kryteria sukcesu, które pomagają w realizacji tych zasad w odniesieniu do osób z niepełnosprawnościami. Istnieje wiele ogólnych wytycznych dotyczących użyteczności, które sprawiają, że treści są bardziej użyteczne dla wszystkich ludzi, w tym osób z niepełnosprawnościami. Jednak w WCAG 2.2 uwzględniliśmy tylko te wytyczne, które dotyczą problemów specyficznych dla osób z niepełnosprawnościami.  Obejmuje to kwestie, które blokują dostęp lub zakłócają dostęp do treści internetowych w poważniejszym stopniu dla osób z niepełnosprawnościami.
-                  </p>
-                  		
-               </section>
-               		
-               <section id="layers-of-guidance">
-                  			
-                  <h2>Warstwy wytycznych</h2>
-                  			
-                  <section id="wytyczne">
-                     				
-                     <h3>Wytyczne</h3>
-                     				
-                     <p>Pod każdą zasadą znajduje się lista wytycznych, które odnoszą się do tej zasady. W sumie jest 13 wytycznych. Wygodną listę samych wytycznych można znaleźć w spisie treści WCAG 2.2</a>. Jednym z głównych celów wytycznych jest zapewnienie, że treści są bezpośrednio dostępne dla jak największej liczby osób i może być ponownie prezentowane w różnych formach, aby dopasować je do zdolności sensorycznych, fizycznych i poznawczych różnych osób.
-                     </p>
-                     			
-                  </section>
-                  			
-                  <section id="kryteria-sukcesu">
-                     				
-                     <h3>Kryteria sukcesu</h3>
-                     				
-                     <p>Pod każdą wytyczną znajdują się kryteria sukcesu, które opisują, co należy osiągnąć, aby <a class="gl-ref" href="https://www.w3.org/TR/WCAG21/#dfn-conform">zachować zgodność</a> z tym standardem. Są one podobne do „punktów kontrolnych” w WCAG 1.0.  Każde Kryterium sukcesu jest napisane jako stwierdzenie, które będzie albo prawdziwe albo fałszywe, gdy określona treść internetowa zostanie przetestowana  pod kątem tego kryterium. Kryteria sukcesu zostały napisane tak, aby były neutralne pod względem technologicznym.
-                     </p>
-                     				
-                     <p>Wszystkie kryteria sukcesu WCAG 2.2 są napisane jako testowalne kryteria obiektywnego określenia, czy treść spełnia kryteria sukcesu. Niektóre z testów mogą być zautomatyzowane przy użyciu programów do oceny oprogramowania, inne wymagają udziału człowieka w części lub całości testów.
-                     </p>
-                     				
-                     <p>Chociaż treść może spełniać Kryteria sukcesu, nie zawsze może być użyteczna dla osób z różnymi rodzajami niepełnosprawności. Profesjonalne oceny wykorzystujące uznane heurystyki jakościowe są ważne dla osiągnięcia dostępności dla niektórych odbiorców. Ponadto, zaleca się przeprowadzenie testów użyteczności. Ponadto, zaleca się przeprowadzenie testów użyteczności. Testy użyteczności mają na celu określenie, jak dobrze ludzie mogą korzystać z treści zgodnie z jej przeznaczeniem.
-                     </p>
-                     				
-                     <p>Treści powinny być testowane przez osoby, które rozumieją, w jaki sposób osoby z różnymi rodzajami niepełnosprawności korzystają z Internetu.  Zaleca się, aby użytkownicy z niepełnosprawnościami były włączani do grup testowych podczas przeprowadzania testów na ludziach. 
-                     </p>
-                     				
-                     <p>Każde kryterium sukcesu dla wytycznej ma łącze do sekcji dokumentu „Jak spełnić WCAG”, która zapewnia
-                     </p>
-                     				
-                     <ul>
-                        					
-                        <li>
-                           						
-                           <p>techniki wystarczające do spełniania kryterium sukcesu,</p>
-                           					
-                        </li>
-                        					
-                        <li>
-                           						
-                           <p>opcjonalne techniki pomocnicze oraz</p>
-                           					
-                        </li>
-                        					
-                        <li>
-                           						
-                           <p>opisy intencji kryteriów sukcesu, w tym korzyści i przykłady.</p>
-                           					
-                        </li>
-                        				
-                     </ul>
-                     			
-                  </section>
-                  			
-                  <section id="techniki-wystarczajace-techniki-pomocnicze-i-błędy">
-                     				
-                     <h3>Techniki wystarczające, techniki pomocnicze i błędy</h3>
-                     				
-                     <p>Następna sekcja, <em><a href="./WCAG-objasnienie-technik.html">Objaśnienie technik dla kryteriów sukcesu WCAG</a></em>zawiera ważne informacje na temat technik.
-                     </p>
-                     			
-                  </section>
-                  		
-               </section>
+<head>
+  <title>Wprowadzenie do objaśnień WCAG 2.2</title>
+</head>
+<body>
 
-	</body>
+  <p>
+    Objaśnienia WCAG 2.2 są podstawowym przewodnikiem do zrozumienia i korzystania z <a href="../guidlines/index.html">Wytycznych dla dostępności treści internetowych 2.2</a>”. Chociaż normatywne definicje i wymagania dla WCAG 2.2 można znaleźć w samym dokumencie WCAG 2.2, pojęcia i przepisy mogą być nowe dla niektórych osób.  Objaśnienia WCAG 2.2 zapewniają nienormatywny rozszerzony komentarz do każdej wytycznej i każdego kryterium sukcesu, aby pomóc czytelnikom lepiej zrozumieć intencje oraz jak wytyczne i kryteria sukcesu działają razem.  Podają również przykłady technik lub kombinacji technik, które Grupa Robocza W3C określiła jako wystarczające do spełnienia każdego Kryterium sukcesu.  Zamieszczono także łącza do opisów każdej z tych technik.
+  </p>
+
+  <p>
+    Nie jest to dokument wprowadzający. Jest to szczegółowy opis techniczny wytycznych i ich kryteriów sukcesu. Zobacz <a href="https://lepszyweb.pl/blog2/omowienie-wcag">Omówienie Wytycznych dla dostępności treści internetowych (WCAG)</a> (<a href="https://www.w3.org/WAI/intro/wcag" lang="en" hreflang="en">WCAG 2 Overview</a>), aby zapoznać się z wprowadzeniem do WCAG i pomocniczych dokumentów technicznych oraz materiałów edukacyjnych.
+
+  </p>
+
+  <p>
+    Objaśnienia WCAG 2.2 są zorganizowane według wytycznych. Istnieje sekcja Objaśnienia Wytycznej X.X dla każdej wytycznej. Intencje i wszelkie techniki pomocnicze, które są związane z wytyczną, ale nie są konkretnie związane z żadnym z jej kryteriów sukcesu, są tam również wymienione. Dla każdej wytycznej istnieje sekcja <em>Objaśnienia Wytycznej X.X</em>.  Wymienione są tam również intencje i wszelkie techniki pomocnicze, które są związane z wytyczną, ale nie są konkretnie związane z żadnym z jej kryteriów sukcesu.
+  </p>
+
+  <p>
+    Po części <em>Objaśnienia Wytycznej X.X</em> <em>.</em> X następują sekcje <em>Objaśnienia kryterium sukcesu X.X.X </em> dla każdego kryterium sukcesu danej wytycznej.  Każda z tych sekcji zawiera:
+  </p>
+
+  <ul>
+
+    <li>
+
+      <p>Kryterium sukcesu w postaci, w jakiej występuje w WCAG 2.2</p>
+
+    </li>
+
+    <li>
+
+      <p>Intencje kryterium sukcesu</p>
+
+    </li>
+
+    <li>
+
+      <p>Korzyści (jak spełnienie kryterium sukcesu pomaga osobom niepełnosprawnym))</p>
+
+    </li>
+
+    <li>
+
+      <p>Przykłady</p>
+
+    </li>
+
+    <li>
+
+      <p> Powiązane zasoby </p>
+
+    </li>
+
+    <li>
+
+      <p>Techniki lub kombinacje technik wystarczających do spełnienia kryterium</p>
+
+    </li>
+
+    <li>
+
+      <p>Typowe błędy tego kryterium sukcesu</p>
+
+    </li>
+
+    <li>
+
+      <p>
+        Dodatkowe techniki pomocnicze, które wykraczają poza to, co jest wymagane do spełnienia kryterium sukcesu, ale mogą być wykorzystane do uczynienia niektórych lub wszystkich rodzajów treści bardziej dostępnymi.  Zastosowanie technik pomocniczych nie ma wpływu na deklarowany poziom zgodności.
+      </p>
+
+    </li>
+
+    <li>
+
+      <p>Kluczowe terminy dla tego Kryterium sukcesu (zaczerpnięte ze Słownika WCAG 2.2)</p>
+
+    </li>
+
+  </ul>
+  <p>
+    Z każdej Wytycznej WCAG 2.2 podano łącza bezpośrednio do każdego <em>Objaśnienia Wytycznej X.X</em> w tym dokumencie. Podobnie, z każdego kryterium sukcesu w WCAG 2.2 istnieje łącze do sekcji <em>Objaśnienie Kryterium sukcesu X.X.X</em> w tym dokumencie.
+  </p>
+
+  <p>
+    Aby uzyskać informacje o poszczególnych technikach, należy kierować się łączami w całym dokumencie do interesujących nas technik w dokumencie <a href="https://www.w3.org/WAI/WCAG22/Techniques/">Techniki dla WCAG 2.2</a>.
+  </p>
+
+  <p>
+    Łącza do informacji na temat różnych niepełnosprawności i technologii wspomagających można znaleźć w Wikipedii na stronie <a href="https://pl.wikipedia.org/wiki/Niepe%C5%82nosprawno%C5%9B%C4%87">Niepełnosprawność></a> lub w języku angielskim <a href="https://en.wikipedia.org/wiki/Disability">Disability</a>.
+  </p>
+  <section id="objasnienie-czterech-zasad-dostępnosci">
+
+    <h2>Objaśnienie czterech zasad dostępności</h2>
+
+    <p>
+      Wytyczne i kryteria sukcesu są zorganizowane wokół następujących czterech zasad, które stanowią fundament niezbędny dla każdego, kto chce uzyskać dostęp i korzystać z treści internetowych.  Każdy, kto chce korzystać z Internetu musi mieć dostęp do treści, które są:
+    </p>
+
+    <ol>
+
+      <li>
+
+        <p>
+          Postrzegalne - Informacje i elementy interfejsu użytkownika muszą być prezentowane użytkownikom w sposób, w jaki mogą je postrzegać.
+        </p>
+
+        <ul>
+
+          <li>
+
+            <p>
+              Oznacza to, że użytkownicy muszą być w stanie odebrać prezentowane informacje (nie mogą one być niewidoczne dla wszystkich zmysłów).
+            </p>
+
+          </li>
+
+        </ul>
+
+      </li>
+
+      <li>
+
+        <p>Funkcjonalne - komponenty interfejsu użytkownika i nawigacja muszą być możliwe do obsługi (sprawne i skuteczne).</p>
+
+        <ul>
+
+          <li>
+
+            <p>
+              Oznacza to, że użytkownicy muszą być w stanie obsługiwać interfejs (interfejs nie może wymagać interakcji, której użytkownik nie jest w stanie wykonać)
+            </p>
+
+          </li>
+
+        </ul>
+
+      </li>
+
+      <li>
+
+        <p>Zrozumiałe - Informacje i działanie interfejsu użytkownika muszą być zrozumiałe.</p>
+
+        <ul>
+
+          <li>
+
+            <p>
+              Oznacza to, że użytkownicy muszą być w stanie zrozumieć informacje, jak również działanie interfejsu użytkownika (treść lub działanie nie może być poza ich zrozumieniem)
+            </p>
+
+          </li>
+
+        </ul>
+
+      </li>
+
+      <li>
+
+        <p>
+          Solidne - Treść musi być na tyle solidna, aby mogła być wiarygodnie interpretowana przez wiele różnych programów użytkownika, w tym technologie wspomagające.
+        </p>
+
+        <ul>
+
+          <li>
+
+            <p>
+              Oznacza to, że użytkownicy muszą być w stanie uzyskać dostęp do treści w miarę rozwoju technologii (wraz z rozwojem technologii i programów użytkownika treść powinna pozostać dostępna).
+            </p>
+
+          </li>
+
+        </ul>
+
+      </li>
+
+    </ol>
+
+    <p>
+      Jeśli którakolwiek z tych zasad nie jest realizowana, użytkownicy z niepełnosprawnościami nie będą mogli korzystać z treści internetowej.
+    </p>
+
+    <p>
+      Pod każdą z zasad kryją się wytyczne i kryteria sukcesu, które pomagają w realizacji tych zasad w odniesieniu do osób z niepełnosprawnościami. Istnieje wiele ogólnych wytycznych dotyczących użyteczności, które sprawiają, że treści są bardziej użyteczne dla wszystkich ludzi, w tym osób z niepełnosprawnościami. Jednak w WCAG 2.2 uwzględniliśmy tylko te wytyczne, które dotyczą problemów specyficznych dla osób z niepełnosprawnościami.  Obejmuje to kwestie, które blokują dostęp lub zakłócają dostęp do treści internetowych w poważniejszym stopniu dla osób z niepełnosprawnościami.
+    </p>
+
+  </section>
+
+  <section id="layers-of-guidance">
+
+    <h2>Warstwy wytycznych</h2>
+
+    <section id="wytyczne">
+
+      <h3>Wytyczne</h3>
+
+      <p>
+        Pod każdą zasadą znajduje się lista wytycznych, które odnoszą się do tej zasady. W sumie jest 13 wytycznych. Wygodną listę samych wytycznych można znaleźć w spisie treści WCAG 2.2. Jednym z głównych celów wytycznych jest zapewnienie, że treści są bezpośrednio dostępne dla jak największej liczby osób i może być ponownie prezentowane w różnych formach, aby dopasować je do zdolności sensorycznych, fizycznych i poznawczych różnych osób.
+      </p>
+
+    </section>
+
+    <section id="kryteria-sukcesu">
+
+      <h3>Kryteria sukcesu</h3>
+
+      <p>
+        Pod każdą wytyczną znajdują się kryteria sukcesu, które opisują, co należy osiągnąć, aby <a class="gl-ref" href="https://www.w3.org/TR/WCAG21/#dfn-conform">zachować zgodność</a> z tym standardem. Są one podobne do „punktów kontrolnych” w WCAG 1.0.  Każde Kryterium sukcesu jest napisane jako stwierdzenie, które będzie albo prawdziwe albo fałszywe, gdy określona treść internetowa zostanie przetestowana  pod kątem tego kryterium. Kryteria sukcesu zostały napisane tak, aby były neutralne pod względem technologicznym.
+      </p>
+
+      <p>
+        Wszystkie kryteria sukcesu WCAG 2.2 są napisane jako testowalne kryteria obiektywnego określenia, czy treść spełnia kryteria sukcesu. Niektóre z testów mogą być zautomatyzowane przy użyciu programów do oceny oprogramowania, inne wymagają udziału człowieka w części lub całości testów.
+      </p>
+
+      <p>
+        Chociaż treść może spełniać Kryteria sukcesu, nie zawsze może być użyteczna dla osób z różnymi rodzajami niepełnosprawności. Profesjonalne oceny wykorzystujące uznane heurystyki jakościowe są ważne dla osiągnięcia dostępności dla niektórych odbiorców. Ponadto, zaleca się przeprowadzenie testów użyteczności. Ponadto, zaleca się przeprowadzenie testów użyteczności. Testy użyteczności mają na celu określenie, jak dobrze ludzie mogą korzystać z treści zgodnie z jej przeznaczeniem.
+      </p>
+
+      <p>
+        Treści powinny być testowane przez osoby, które rozumieją, w jaki sposób osoby z różnymi rodzajami niepełnosprawności korzystają z Internetu.  Zaleca się, aby użytkownicy z niepełnosprawnościami były włączani do grup testowych podczas przeprowadzania testów na ludziach.
+      </p>
+
+      <p>
+        Każde kryterium sukcesu dla wytycznej ma łącze do sekcji dokumentu „Jak spełnić WCAG”, która zapewnia
+      </p>
+
+      <ul>
+
+        <li>
+
+          <p>techniki wystarczające do spełniania kryterium sukcesu,</p>
+
+        </li>
+
+        <li>
+
+          <p>opcjonalne techniki pomocnicze oraz</p>
+
+        </li>
+
+        <li>
+
+          <p>opisy intencji kryteriów sukcesu, w tym korzyści i przykłady.</p>
+
+        </li>
+
+      </ul>
+
+    </section>
+
+    <section id="techniki-wystarczajace-techniki-pomocnicze-i-błędy">
+
+      <h3>Techniki wystarczające, techniki pomocnicze i błędy</h3>
+
+      <p>
+        Następna sekcja, <em><a href="./WCAG-objasnienie-technik.html">Objaśnienie technik dla kryteriów sukcesu WCAG</a></em>zawiera ważne informacje na temat technik.
+      </p>
+
+    </section>
+
+  </section>
+
+</body>
 </html>
