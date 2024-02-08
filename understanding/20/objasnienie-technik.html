@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+	<head>
+		<title>Objaśnienie technik dla kryteriów sukcesu WCAG</title>
+	</head>
+	<body>
+		<h1>Objaśnienie technik dla kryteriów sukcesu WCAG</h1>
+              <p>Wytyczne i kryteria sukcesu WCAG 2.2 zostały zaprojektowane tak, aby miały szerokie zastosowanie do obecnych i przyszłych technologii internetowych, w tym w aplikacjach dynamicznych, mobilnych, telewizji cyfrowej itp.  Są stabilne i niezmienne.
+               </p>
+               <p>Konkretne wskazówki dla autorów i oceniających dotyczące spełnienia kryteriów sukcesu WCAG są zawarte w technikach, które obejmują przykłady kodu, zasoby i testy.  Dokument W3C <a href="https://www.w3.org/WAI/WCAG21/Techniques/">Techniki dla WCAG 2.2.</a> jest okresowo aktualizowany, mniej więcej dwa razy w roku, aby uwzględnić bardziej aktualne najlepsze praktyki oraz zmiany w technologiach i narzędziach.
+               </p>
+               <p>Poniżej objaśniono trzy rodzaje wskazówek w <a href="https://www.w3.org/WAI/WCAG21/Techniques/">technikach WCAG 2.2</a>: 
+               </p>
+               <ul>
+                  <li>
+                     <p>Techniki wystarczające</p>
+                  </li>
+                  <li>
+                     <p>Techniki pomocnicze</p>
+                  </li>
+                  <li>
+                     <p>Błędy</p>
+                  </li>
+               </ul>
+               <p>Wyjaśniono również poniżej:</p>
+               <ul>
+                  <li>
+                     <p>Techniki ogólne i specyficzne dla technologii – które mogą być wystarczające lub pomocnicze</p>
+                  </li>
+                  <li>
+                     <p>Inne techniki - poza tym, co jest w opublikowanym dokumencie W3C</p>
+                  </li>
+                  <li>
+                     <p>Testy techniczne</p>
+                  </li>
+                  <li>
+                     <p>Wsparcie programu użytkownika i technologii wspomagających</p>
+                  </li>
+                  <li>
+                     <p>Stosowanie technik - z uwzględnieniem ważnych kwestii</p>
+                  </li>
+               </ul>
+               <p><a href="https://www.w3.org/WAI/WCAG22/Understanding/conformance">Objaśnienie zgodności</a> zawiera powiązane informacje, w tym <a href="https://www.w3.org/WAI/WCAG22/Understanding/conformance#accessibility-support">objaśnienie wsparcia dostępności</a>. 
+               </p>
+               <section id="techniques-are-informative">
+                  <h2>Techniki mają charakter informacyjny</h2>
+                  <p><em>Techniki mają charakter informacyjny, co oznacza, że nie są wymagane.  Podstawą do określenia zgodności z WCAG 2.2 są kryteria sukcesu ze standardu WCAG 2.2 - nie techniki.</em></p>
+                  <p class="prefix"><em>Uwaga 1: </em>W3C ostrzega przed wymaganiem wystarczających technik W3C.  Jedyne, co powinno być wymagane, to spełnienie kryteriów sukcesu WCAG 2.2.  Aby dowiedzieć się więcej, zobacz:
+                  </p>
+                  <ul>
+                     <li>
+                        <p><a href="https://www.w3.org/WAI/WCAG20/wcag2faq.html#techsnot">Jakie byłyby negatywne konsekwencje zezwolenia</a> na <a href="https://www.w3.org/WAI/WCAG20/wcag2faq.html#techsnot">stosowanie <em>wyłącznie</em> technik opublikowanych przez W3C w celu zapewnienia zgodności z WCAG 2.2?</a>  zobacz w FAQ WCAG 2
+                        </p>
+                     </li>
+                  </ul>
+                  <p class="prefix"><em>Uwaga 2: </em><a href="https://www.w3.org/WAI/WCAG21/Techniques/">Techniki dla WCAG 2.2</a> używają słów „musi” i „powinien” tylko w celu wyjaśnienia wskazówek w ramach technik, a nie w celu przekazania wymagań dla WCAG.
+                  </p>
+               </section>
+               <section id="sufficient-techniques">
+                  <h2>Techniki wystarczające</h2>
+                  <p><em>Techniki wystarczające</em> to niezawodne sposoby na spełnienie kryteriów sukcesu.
+                  </p>
+                  <ul>
+                     <li>
+                        <p>Z perspektywy twórcy: Jeśli poprawnie zastosujesz techniki  wystarczające dla danego kryterium i będą one <a href="https://www.w3.org/WAI/WCAG22/Understanding/conformance#accessibility-support">wspierały dostępność treści </a> dla Twoich użytkowników, możesz mieć pewność, że kryterium sukcesu jest spełnione.
+                        </p>
+                     </li>
+                     <li>
+                        <p>Z perspektywy oceniającego: Jeśli treść internetowa poprawnie wdraża techniki wystarczające dla danego kryterium i jest <a href="https://www.w3.org/WAI/WCAG22/Understanding/conformance#accessibility-support">wspierana pod względem dostępności treści </a> dla użytkowników, to spełnia ona to kryterium sukcesu. (Odwrotność nie jest prawdą; jeśli treść nie wykorzystuje tych wystarczających technik, niekoniecznie nie spełnia kryteriów sukcesu, jak wyjaśniono w sekcji <a href="understanding-techniques-tests">Techniki testowania</a> poniżej).
+                        </p>
+                     </li>
+                  </ul>
+                  <p>Poza wystarczającymi technikami opisanymi w dokumencie W3C <a href="https://www.w3.org/WAI/WCAG21/Techniques/">Techniki dla WCAG 2.2</a> mogą istnieć inne sposoby spełnienia kryteriów sukcesu, jak wyjaśniono w sekcji <a href="understanding-techniques-othertechs">Inne techniki</a> poniżej.  <em>(Zobacz także <a href="understanding-techniques-informative">Techniki są informacyjne</a> powyżej).</em></p>
+                  <section id="numbered-lists-&quot;and&quot;">
+                     <h3>Listy numerowane, „ORAZ”</h3>
+                     <p> Udokumentowane przez W3C techniki wystarczające są przedstawione w postaci listy numerowanej, gdzie każda pozycja listy zawiera technikę lub kombinację technik, które mogą być użyte do spełnienia kryterium sukcesu.  Tam, gdzie na liście numerowanej znajduje się wiele technik połączonych spójnikiem „ORAZ”, muszą być użyte wszystkie techniki, aby były wystarczające.  Na przykład, <a href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships#techniques">Techniki wystarczające dla 1.3.1</a>  mają: „G115: Użycie znaczników semantycznych do oznaczania struktury ORAZ H49: Użycie znaczników semantycznych do oznaczenia tekstu wyróżnionego lub specjalnego (HTML)”.
+                     </p>
+                  </section>
+               </section>
+               <section id="advisory-techniques">
+                  <h2>Techniki pomocnicze</h2>
+                  <p><em>Techniki pomocnicze</em> to sugerowane sposoby poprawy dostępności.  Często są one bardzo pomocne dla niektórych użytkowników i mogą być jedynym sposobem, w jaki niektórzy użytkownicy mogą uzyskać dostęp do pewnych rodzajów treści.
+                  </p>
+                  <p>Techniki pomocnicze (dodatkowe) nie są uznawane za techniki wystarczające z różnych powodów, takich jak:
+                  </p>
+                  <ul>
+                     <li>
+                        <p>mogą być niewystarczające do spełnienia wszystkich wymagań kryterium sukcesu;</p>
+                     </li>
+                     <li>
+                        <p>mogą być oparte na technologii, która nie jest jeszcze stabilna;</p>
+                     </li>
+                     <li>
+                        <p>w wielu przypadkach mogą nie być <a href="https://www.w3.org/WAI/WCAG22/Understanding/conformance#accessibility-support">obsługiwane pod względem dostępności</a> (na przykład technologie wspomagające jeszcze z nimi nie współpracują);
+                        </p>
+                     </li>
+                     <li>
+                        <p>mogą nie być możliwe do przetestowania;</p>
+                     </li>
+                     <li>
+                        <p>w niektórych okolicznościach mogą nie mieć zastosowania lub nie być praktyczne, a nawet mogą zmniejszać dostępność dla niektórych użytkowników, jednocześnie zwiększając ją dla innych;
+                        </p>
+                     </li>
+                     <li>
+                        <p>mogą nie odnosić się do samego kryterium sukcesu, a zamiast tego zapewniać korzyści związane z dostępnością.
+                        </p>
+                     </li>
+                  </ul>
+                  <p>Twórców zachęca się do stosowania wszystkich technik tam, gdzie jest to właściwe, aby jak najlepiej zaspokoić najszerszy zakres potrzeb użytkowników.
+                  </p>
+               </section>
+               <section id="failures">
+                  <h2>Błędy</h2>
+                  <p><em>Błędy</em> to rzeczy, które powodują bariery dostępności i nie spełniają określonych kryteriów sukcesu.  Udokumentowane awarie są przydatne dla: Udokumentowane <em>błędy</em> są przydatne dla:
+                  </p>
+                  <ul>
+                     <li>
+                        <p>twórców, aby wiedzieli, czego unikać,</p>
+                     </li>
+                     <li>
+                        <p>oceniających, aby mogli potwierdzić, że treść nie spełnia kryteriów sukcesu WCAG.</p>
+                     </li>
+                  </ul>
+                  <p>Treść z <em>błędem</em> nie spełnia kryteriów sukcesu WCAG, chyba że istnieje wersja alternatywna bez defektu.
+                  </p>
+                  <p>Jeśli ktokolwiek odkryje sytuację, w której udokumentowany defekt nie jest prawidłowy, prosimy o zgłoszenie tej sytuacji jako komentarza WCAG,</a>, aby można ją było odpowiednio poprawić lub usunąć. 
+                  </p>
+               </section>
+               <section id="-general-and-technology-specific-techniques">
+                  <h2> Techniki ogólne i specyficzne dla technologii</h2>
+                  <p><em>Techniki ogólne</em> opisują podstawowe praktyki, które mają zastosowanie do wszystkich technologii. <em>Techniki specyficzne dla danej technologii</em> mają zastosowanie do konkretnej technologii.
+                  </p>
+                  <p>Niektóre kryteria sukcesu nie mają technik specyficznych dla technologii i są objęte jedynie technikami ogólnymi. Dlatego należy wziąć pod uwagę zarówno techniki ogólne, jak i odpowiednie techniki specyficzne dla technologii. 
+                  </p>
+                  <p>Publikacja technik dla określonej technologii nie oznacza, że ​​technologia może być używana we wszystkich sytuacjach do tworzenia treści spełniających kryteria sukcesu WCAG 2.2 i wymagania zgodności.  Programiści muszą być świadomi ograniczeń określonych technologii i zapewniać treści w sposób dostępny dla osób niepełnosprawnych.
+                  </p>
+               </section>
+               <section id="other-techniques">
+                  <h2>Inne techniki</h2>
+                  <p>Oprócz technik opisanych w dokumencie W3C <a href="https://www.w3.org/WAI/WCAG21/Techniques/">Techniki dla WCAG 2.2</a>, <em>istnieją inne sposoby spełnienia kryteriów sukcesu WCAG</em>.  Techniki W3C nie są kompleksowe i mogą nie obejmować nowszych technologii i sytuacji.
+                  </p>
+                  <p><em>Treści internetowe nie muszą korzystać z opublikowanych technik W3C, aby były zgodne z WCAG 2.2</em><em>(Zobacz także <a href="./WCAG-objasnienie-technik.html-informative">Techniki mają charakter informacyjny</a> powyżej).</em></p>
+                  <p>Twórcy treści mogą opracowywać różne techniki. Na przykład twórca może opracować technikę dla HTML5, <a href="https://www.w3.org/WAI/intro/aria">WAI-ARIA</a> lub innej nowej technologii. Inne organizacje również mogą opracować zestawy technik, aby spełnić kryteria sukcesu WCAG 2.2.
+                  </p>
+                  <p>Każda technika może być wystarczająca, jeśli:</p>
+                  <ul>
+                     <li>
+                        <p>spełnia kryterium sukcesu oraz</p>
+                     </li>
+                     <li>
+                        <p> spełnione są wszystkie <a href="https://www.w3.org/WAI/WCAG22/Understanding/conformance">wymagania zgodności WCAG 2.2</a>.
+                        </p>
+                     </li>
+                  </ul>
+                  <section id="submitting-techniques">
+                     <h3>Przesyłanie technik</h3>
+                     <p>Grupa Robocza WCAG zachęca do zgłaszania nowych technik, aby można było rozważyć włączenie ich do aktualizacji dokumentu <a href="https://www.w3.org/WAI/WCAG21/Techniques/">Techniki dla WCAG 2.2</a>. Prosimy o przesyłanie technik do rozpatrzenia za pomocą <a href="https://www.w3.org/WAI/GL/WCAG20/TECHS-SUBMIT/">formularza zgłaszania technik</a>.
+                     </p>
+                  </section>
+               </section>
+               <section id="testing-techniques">
+                  <h2>Techniki testowania</h2>
+                  <p> Każda technika ma testy, które pomagają:</p>
+                  <ul>
+                     <li>
+                        <p> twórcom sprawdzić, czy poprawnie zaimplementowali daną technikę, a</p>
+                     </li>
+                     <li>
+                        <p>oceniającym określić, czy treść internetowa jest zgodna z techniką.</p>
+                     </li>
+                  </ul>
+                  <p>Testy dotyczą tylko techniki, nie są testami zgodności z kryteriami sukcesu WCAG.
+                  </p>
+                  <ul>
+                     <li>
+                        <p>Niezaliczenie testu techniki nie musi oznaczać nieudanego testu WCAG, ponieważ techniki są dyskretne (to znaczy, że odnoszą się do jednego konkretnego punktu) i nie są wymagane.
+                        </p>
+                     </li>
+                     <li>
+                        <p>Treść może spełniać kryteria sukcesu WCAG na różne sposoby inne niż opublikowane przez W3C wystarczające techniki
+                        </p>
+                     </li>
+                     <li>
+                        <p>Treści, które stosują wystarczające techniki dla konkretnej technologii, niekoniecznie spełniają wszystkie kryteria sukcesu WCAG.  Niektóre kryteria sukcesu mają tylko techniki ogólne, a nie techniki specyficzne dla danej technologii.
+                        </p>
+                     </li>
+                     <li>
+                        <p>Treść musi być <a href="https://www.w3.org/WAI/WCAG22/Understanding/conformance#accessibility-support">dostępna</a> dla użytkowników treści. Niektóre wystarczające techniki wymagają przeglądarki, technologii wspomagającej lub innego wsparcia, którego niektórzy użytkownicy mogą nie mieć.
+                        </p>
+                     </li>
+                  </ul>
+                  <p>Tak więc, chociaż techniki są przydatne do oceny treści, oceny muszą wykraczać poza sprawdzanie wystarczających testów technik, aby ocenić, czy treść jest zgodna z kryteriami sukcesu WCAG.
+                  </p>
+                  <p><em>Błędy</em>  są szczególnie przydatne do oceny, ponieważ wskazują na niezgodność (chyba że zapewniona została wersja alternatywna bez defektu).
+                  </p>
+               </section>
+               <section id="user-agent-and-assistive-technology-support-notes">
+                  <h2>Uwagi dotyczące wsparcia programu użytkownika i technologii wspomagających</h2>
+                  <p>Niektóre techniki wymagają, aby użytkownicy treści internetowych mieli określone przeglądarki lub technologie wspomagające, aby technika była <a href="https://www.w3.org/WAI/WCAG22/Understanding/conformance#accessibility-support">obsługiwana pod względem dostępności</a>.  Sekcje <em>Uwagi dotyczące wsparcia programu użytkownika i technologii wspomagających</em> poszczególnych technik zawierają pewne informacje, które pomagają określić wsparcie dostępności.
+                  </p>
+                  <section id="support-notes-change-over-time">
+                     <h3>Uwagi dotyczące wsparcia zmieniają się w czasie</h3>
+                     <p>W miarę upływu czasu, wymienione wersje programów użytkownika (przeglądarek itp.) lub technologii wspomagających mogą przestać być aktualne.  Grupa Robocza może nie aktualizować większości tych uwag w miarę wydawania nowych wersji. Twórcy powinni testować techniki z programami użytkownika i technologiami wspomagającymi, które są aktualnie dostępne dla ich użytkowników.  Zobacz także <a href="https://www.w3.org/WAI/WCAG22/Understanding/conformance#accessibility-support">Objaśnienie wsparcia dostępności</a>.
+                     </p>
+                  </section>
+               </section>
+               <section id="using-the-techniques">
+                  <h2>Stosowanie technik</h2>
+                  <p><a href="https://www.w3.org/WAI/WCAG21/Techniques/">Techniki WCAG 2.2</a> nie są przeznaczone do stosowania jako samodzielny dokument.  Zamiast tego oczekuje się, że twórcy treści będą zazwyczaj korzystać z poradnika <a href="https://www.w3.org/WAI/WCAG21/quickref/">Jak spełnić WCAG 2.2:  Konfigurowalny przewodnik po wymaganiach i technikach</a> , aby zapoznać się z kryteriami sukcesu WCAG i podążać stamtąd za linkami do konkretnych tematów w Objaśnieniach WCAG 2.2 i do konkretnych technik.
+                  </p>
+                  <section id="alternatives-must-meet-success-criteria">
+                     <h3>Alternatywy muszą spełniać kryteria sukcesu</h3>
+                     <p>Niektóre techniki opisują, jak zapewnić użytkownikom alternatywne sposoby uzyskania dostępu treści.  Na przykład <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G73">G73: Zapewnienie długiego opisu w innej lokalizacji z łączem do tej lokalizacji do niego, które sąsiaduje z treścią nietekstową</a> wymienia transkrypcję jako alternatywę dla pliku audio. Niektóre alternatywy muszą być również zgodne z WCAG. Na przykład, sama transkrypcja musi spełniać wszystkie odpowiednie kryteria sukcesu. 
+                     </p>
+                  </section>
+                  <section id="example-code">
+                     <h3>Przykładowy kod</h3>
+                     <p>Przykłady kodu w technikach są przeznaczone do zademonstrowania tylko konkretnego punktu omawianego w technice. Mogą nie pokazywać najlepszych praktyk dla innych aspektów dostępności, użyteczności lub kodowania niezwiązanych z daną techniką.  Nie są one przeznaczone do kopiowania i wykorzystywania jako podstawy do tworzenia treści internetowych.
+                     </p>
+                     <p>Wiele technik wskazuje na „przykłady robocze”, które są  solidniejsze i mogą być odpowiednie do skopiowania i zintegrowania z treścią strony.
+                     </p>
+                  </section>
+               </section>
+	</body>
+</html>

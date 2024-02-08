@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+	<head>
+		<title>Objaśnienie zasad testowania dla kryteriów sukcesu WCAG</title>
+	</head>
+	<body>
+		<h1>Objaśnienie zasad testowania dla kryteriów sukcesu WCAG</h1>
+		
+               <p>Zasady testowania dostarczają wskazówek dla twórców zautomatyzowanych narzędzi testowych i metodologii testowania ręcznego, aby pomóc zapewnić spójną interpretację kryteriów sukcesu WCAG.
+               </p>
+               <p><a href="https://www.w3.org/WAI/standards-guidelines/act/rules/">Lista zasad testowania</a> W3C <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/">dla WCAG 2</a> jest okresowo aktualizowana. Są one opracowywane zgodnie ze standardem <a href="https://www.w3.org/TR/act-rules-format/">Accessibility Conformance Testing (ACT) Rules Format 1.0</a>.
+               </p>
+               <p><a href="https://www.w3.org/WAI/WCAG22/Understanding/conformance">Objaśnienie zgodności</a> dostarcza powiązanych informacji, w tym na temat <a href="https://www.w3.org/WAI/WCAG22/Understanding/conformance#accessibility-support">objaśnienia wsparcia dostępności</a>.
+               </p>
+               <section id="test-rules-rules-are-informative">
+                  <h2>Zasady testowania mają charakter informacyjny</h2>
+                  <p><em>Zasady testowania mają charakter informacyjny - oznacza to, że nie są wymagane do określenia zgodności. Podstawą do określenia zgodności z WCAG są kryteria sukcesu ze standardu WCAG - a nie zasady testowe.</em></p>
+                  <p>Chociaż <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/">lista zasad testowych</a> W3C <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/">dla WCAG 2</a> jest weryfikowana przez grupę roboczą W3C Accessibility Guidelines Working Group (AGWG), nie są one weryfikowane w takim samym stopniu jak standard W3C Wytyczne dla dostępności treści internetowych (WCAG) (zwany <em>rekomendacją W3C</em>). Standard WCAG jest normatywnym odniesieniem do określania zgodności.
+                  </p>
+               </section>
+               <section id="test-rules-are-partial-checks">
+                  <h2>Zasady testowania są kontrolami częściowymi</h2>
+                  <p>Zasady testowania zazwyczaj sprawdzają określone aspekty kryteriów sukcesu WCAG. Na przykład, że komórka tabeli ma nagłówek, a nie całe kryterium sukcesu WCAG 2.2 1.3.1 „Informacje i relacje”, które dotyczy wielu innych struktur informacyjnych na stronie internetowej. W rzeczywistości ta przykładowa zasada nie sprawdzałaby nawet poprawności nagłówka tabeli, a jedynie czy nagłówek dla danej komórki tabeli istnieje.
+                  </p>
+                  <p>Zasady testowania są również specyficzne dla technologii. Na przykład wspomniany wyżej przykład nagłówka tabeli byłby specyficzny dla HTML, ewentualnie wzbogacony o role i właściwości WAI-ARIA, ale nie dla innych formatów z tabelami. Kryteria sukcesu WCAG 2.2 zostały zaprojektowane tak, aby były niezależne od technologii i miały zastosowanie do wszystkich technologii internetowych.
+                  </p>
+               </section>
+               <section id="test-rules-check-for-failures">
+                  <h2>Zasady testowania sprawdzają błędy</h2>
+                  <p>Zasady testowania są przeznaczone do sprawdzania błędów w spełnianiu kryteriów sukcesu WCAG. Oznacza to, że gdy treść nie spełnia zasad testowych, oznacza to, że treść nie spełnia odpowiednich kryteriów sukcesu. Jednak gdy treść spełnia pomyślnie zasady testowania, oznacza to, że nie wykryto żadnych odpowiednich błędów - niekoniecznie oznacza to, że treść spełnia wszystkie aspekty odpowiednich kryteriów sukcesu.
+                  </p>
+                  <p>Powodem tego jest fakt, że kryteria sukcesu WCAG zazwyczaj obejmują kilka aspektów i technologii, podczas gdy zasady testowania sprawdzają tylko określone aspekty. Sprawdzenie, czy treść spełnia wszystkie aspekty kryteriów sukcesu WCAG, zazwyczaj wymaga dalszej weryfikacji przez testerów.
+                  </p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Uwaga</div>
+                     <p><a href="https://www.w3.org/WAI/WCAG22/Understanding/conformance#cc1">Wymóg zgodności 1 WCAG 2</a> dopuszcza „zgodne wersje alternatywne”. Oznacza to, że treść może nadal być zgodna z WCAG 2, nawet jeśli treść nie spełnia zasad testowych, a tym samym nie spełnia odpowiednich kryteriów sukcesu.
+                     </p>
+                  </div>
+               </section>
+               <!-- //
+         <section>
+            <h2>Test Rule Implementations</h2>
+            <p>Implementation of an Test Rule can be any automated testing tool, manual testing methodology, or other procedure that provides the same expected results for the test cases defined by the Test Rule. Specifically, when the expected result for a test case is:</p>
+            <ul>
+               <li><strong>Passed</strong>, the test result generated from the implementation is <strong>passed</strong>, <strong>cantTell</strong>, or <strong>inapplicable</strong></li>
+               <li><strong>Failed</strong>, the test result generated from the implementation is <strong>failed</strong> or <strong>cantTell</strong></li>
+               <li><strong>Inapplicable</strong>, the test result generated from the implementation is <strong>inapplicable</strong>, <strong>cantTell</strong>, or <strong>passed</strong></li>
+            </ul>
+         </section>
+         //-->
+               <section id="structure-of-test-rules">
+                  <h2>Struktura zasad testowych</h2>
+                  <p>Zasady testowania są zgodne ze standardem <a href="https://www.w3.org/TR/act-rules-format/">Accessibility Conformance Testing (ACT) Rules Format 1.0</a>. Obejmują one następujące części:
+                  </p>
+                  <ul>
+                     <li><strong>Opisowy tytuł</strong> - tytuł zasady testowej, który powinien opisywać regułę.
+                     </li>
+                     <li><strong>Identyfikator zasady</strong> - identyfikator reguły testowej; reguły W3C używają ciągów alfanumerycznych.
+                     </li>
+                     <li><strong>Typ zasady</strong> - istnieją dwa podstawowe typy zasad testowych, w zależności od tego, co jest testowane:
+                        <ul>
+                           <li><strong>Zasada atomowa</strong> - testuje jedną konkretną sytuację, która może być częścią reguły złożonej.
+                           </li>
+                           <li><strong>Zasada złożona</strong> - łączy wynik z wielu reguł atomowych w jeden wynik
+                           </li>
+                        </ul>
+                     </li>
+                     <li><strong>Mapowanie wymagań dostępności</strong> - mapuje zasadę testową do określonych wymagań dostępności; w tym zestawie zasad używamy kryteriów sukcesu z Wytycznych dla dostępności treści internetowych (WCAG) 2.
+                     </li>
+                     <li><strong>Dane wejściowe zasady</strong> - opisuje zakres danych wejściowych do zasad testowych, który jest jednym z poniższych:
+                        <ul>
+                           <li><strong>Aspekty wejściowe</strong> - dane wejściowe do zasad atomowych, takich jak drzewo DOM i stylizacja CSS itp.
+                           </li>
+                           <li><strong>Zasady wejściowe</strong> - dane wejściowe do zasad złożonych, które są zasadami atomowymi w zakresie
+                           </li>
+                        </ul>
+                     </li>
+                     <li><strong>Zastosowanie</strong> - opis konkretnych części treści, do których zasada ma zastosowanie.
+                     </li>
+                     <li><strong>Oczekiwania</strong> - opis oczekiwanej charakterystyki treści mającej zastosowanie zasady
+                     </li>
+                     <li><strong>Założenia</strong> - przyjęte założenia, takie jak konkretne interpretacje wymagań
+                     </li>
+                     <li><strong>Obsługa dostępności</strong> - znane ograniczenia dotyczące przeglądarek i technologii pomocniczych
+                     </li>
+                     <li><strong>Przypadki testowe</strong> - przykładowy kod demonstrujący pomyślne, niepomyślne i niemożliwe do zastosowania warunki zasad.
+                     </li>
+                     <li><strong>Dziennik zmian</strong> - historia zmian dla zasad testowych w celu zapewnienia kompatybilności wstecznej.
+                     </li>
+                     <li><strong>Słowniczek</strong> - lista kluczowych terminów zdefiniowanych przez zasadę testową lub używanych przez określoną zasadę testową.
+                     </li>
+                     <li><strong>Lista problemów (opcjonalnie)</strong> - lista znanych problemów lub błędów dla danej zasady testowej, jeśli takie istnieją.
+                     </li>
+                     <li>Informacje ogólne <strong>(opcjonalnie)</strong> - odpowiednie informacje ogólne, takie jak ewentualna dodatkowa dokumentacja
+                     </li>
+                     <li><strong>Podziękowania (opcjonalnie)</strong> - np. dla autorów zasad, recenzentów i innych współpracowników.
+                     </li>
+                  </ul>
+               </section>
+	</body>
+</html>
