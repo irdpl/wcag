@@ -42,12 +42,6 @@
     </p>
 
     <section id="conf-req1">
-
-    <h2>Objaśnienie wymagań zgodności</h2>
-    <p>
-      Istnieje pięć wymagań, które muszą być spełnione, aby treść została sklasyfikowana jako „zgodna” z WCAG 2.2. Ta część zawiera krótkie uwagi na temat tych wymagań. Z czasem ta część będzie rozszerzana o kwestie, które mogą się pojawić lub o nowe przykłady sposobów spełnienia różnych wymagań zgodności.
-    </p>
-    <section id="conf-req1">
       <h3>Objaśnienie wymagania 1</h3>
       <blockquote class="scquote" id="cc1">
         <p><strong>Poziom zgodności</strong>: Jeden z poniższych poziomów zgodności jest spełniony w całości.</p>
@@ -210,200 +204,131 @@
 
   <section id="conformance-claims">
 
-    <h2>Understanding Conformance Claims</h2>
-
+    <h2>Objaśnienie Deklaracji zgodności</h2>
     <p>
-      It is not required to make any conformance claim in order to conform. If one does
-      make a claim, however, all the information required in a conformance claim must be provided. There are a number of ways this information can be provided.
+      Nie jest wymagane składanie jakichkolwiek deklaracji zgodności, aby spełniać wymogi zgodności. Jeśli jednak ktoś składa taką deklarację, należy podać wszystkie informacje wymagane w deklaracji zgodności. Informacje te można przekazać na kilka sposobów.
     </p>
-    <p>Schema.org provides one such option for including discovery metadata within a Web page. A set of descriptive accessibility properties is available under the CreativeWork type which, among other uses, provides the ability to include a summary of the overall accessibility of the page (e.g., the WCAG conformance claim), describe the accessible features of the content (e.g., availability of alternative text, extended descriptions and captions), and alert users to potential hazards (e.g., flashing). This information can be embedded in the page using any of RDFa, JSON and microdata. More information about these properties and their expected values is also available on the Web Schemas wiki.</p>
-
-    <p>Here is a claim which has been enhanced with schema.org metadata:</p>
-
-    <pre>
-&lt;div typeof="WebPage" vocab="http://schema.org/">
-    &lt;p property="accessibilitySummary">On 23 March 2009, all content available on
-       the server at &lt;a 
-         href="http://www.wondercall.example.com">http://www.wondercall.example.com&lt;/a>
-       conforms to Web Content Accessibility Guidelines 2.0 at &lt;a 
-         href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/"
-         >https://www.w3.org/TR/2008/REC-WCAG20-20081211/&lt;/a>.
-       Single-A conformance.&lt;/p>
-    &lt;ul>
-        &lt;li>The technology that this content "&lt;a>relies upon&lt;/a>" is: 
-            HTML 4.01.&lt;/li>
-        &lt;li>The technologies that this content "&lt;strong>uses but does not rely 
-            upon&lt;/strong>" are: CSS2, and gif.&lt;/li>
-        &lt;li>This content was tested using the following user agents and assistive 
-            technologies: Firefox 1.5 on Windows Vista with Screenreader X 4.0, 
-            Firefox 1.5 on Windows XP SP 2 with Screenreader X 3.5, IE 6.0 on Windows 
-            2000 SP4 with Screenreader Y 5.0, IE 6.0 on Windows 2000 SP4 with
-            Screenreader Z 2.0, and Firefox 1.5 on Windows XP SP2 with Screenreader
-            X 4.0, Safari 2.0 with OS X 10.4.&lt;/li>
-    &lt;/ul>
-    &lt;p>This page includes both &lt;span property="accessMode" content="textual">text&lt;/span>
-       and &lt;span property="accessMode" content="visual">images&lt;/span>.
-       &lt;span property="accessibilityFeature" content="alternativeText">Alternative 
-       text&lt;/span> is included for all image content and &lt;span 
-         property="accessibilityFeature" content="longDescription">long 
-         descriptions&lt;/span> are also provided for images that require more 
-       than simple alternate text. All content is available in text, which 
-       can be accessed by assistive technology.&lt;/p>
+    <p>
+      Schema.org zapewnia jedną z takich możliwości włączenia metadanych dotyczących dostępności strony internetowej. Zestaw opisowych właściwości dostępności jest dostępny w ramach typu CreativeWork, który między innymi zapewnia możliwość zawarcia podsumowania ogólnej dostępności strony (np. twierdzenie o zgodności z WCAG), opisania dostępnych cech treści (np. dostępność tekstu alternatywnego, rozszerzone audiodeskrypcje, napisy) oraz ostrzeżenia użytkowników o potencjalnych zagrożeniach (np. miganie). Informacje te mogą być osadzone na stronie za pomocą dowolnego rozwiązania - RDF, JSON i mikrodanych. Więcej informacji na temat tych właściwości i ich oczekiwanych wartości jest również dostępnych na wiki Web Schemas.
+    </p>
+    <p>Oto oświadczenie, które zostało wzbogacone o metadane schema.org:</p>
+<pre>&lt;div typeof="WebPage" vocab="http://schema.org/">
+&lt;p property="accessibilitySummary">W dniu 23 marca 2009 r. cała treść
+umieszczona serwerze pod adresem
+&lt;a href="http://www.wondercall.example.com">http://www.wondercall.example.com&lt;/a>
+jest zgodna z wytycznymi dla dostępności treści internetowych 2.0 opublikowanymi pod adresem &lt;a
+href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/"
+>https://www.w3.org/TR/2008/REC-WCAG20-20081211/&lt;/a>.
+Zgodność na poziomie A.&lt;/p>
+&lt;ul>
+&lt;li>Technologia, na której ta treść "&lt;a>się opiera&lt;/a>" to:
+HTML 4.01.&lt;/li>
+&lt;li>Technologie, których ta treść "&lt;strong>używa, ale nie można na nich
+polegać&lt;/strong>" to: CSS2 i gif.&lt;/li>.
+&lt;li>Ta treść została przetestowana przy użyciu następujących programów użytkownika i technologii
+wspomagających: Firefox 1.5 na Windows Vista ze Screenreaderem X 4.0,
+Firefox 1.5 na Windows XP SP 2 ze Screenreaderem X 3.5,
+IE 6.0 na Windows 2000 SP4 ze Screenreaderem Z 2.0
+oraz Firefox 1.5 na Windows XP SP2 ze Screenreaderem X 4.0,
+Safari 2.0 z OS X 10.4.&lt;/li>
+&lt;/ul>
+&lt;p>Ta strona zawiera &lt;span property="accessMode" content="textual">tekst&lt;/span>
+i &lt;span property="accessMode" content="visual">obrazy&lt;/span>.
+&lt;span property="accessibilityFeature" content="alternativeText">Tekst
+alternatywny&lt;/span> jest dodany do wszystkich treści graficznych oraz &lt;span
+property="accessibilityFeature" content="longDescription">długie
+opisy&lt;/span> są zapewnione dla obrazów, które wymagają więcej
+niż zwykłego tekstu alternatywnego. Wszystkie treści są dostępne w formie tekstowej,
+która może być dostępna za pomocą technologii wspomagających.&lt;/p>
 &lt;/div>
-     </pre>
-
+</pre>
     <p>
-      Sometimes, one may want to make a claim for just the content that was added after
-      a certain date. Or, one may want to claim WCAG 1.0 conformance for content up to a
-      date and WCAG 2.0 for content that was created or modified after that date. There
-      are no prohibitions in WCAG 2.0 to any of these practices as long as it is clear which
-      pages are claiming conformance to which version of WCAG.
+      Czasami ktoś może chcieć złożyć deklarację dotyczącą tylko treści, które zostały dodane po określonej dacie. Można też deklarować zgodność z WCAG 1.0 dla treści opublikowanych do pewnej daty i zgodność z WCAG 2.0 dla treści utworzonych lub zmodyfikowanych po tej dacie. WCAG 2.2 nie zabrania żadnej z tych praktyk, o ile jest jasne, które strony z którą wersją WCAG są zgodne.
     </p>
-
     <div class="note">
-
-      <p>
-        When talking about technologies that are "relied upon," we're talking about Web content
-        technologies (HTML, CSS, JavaScript, etc.), not user agents (browsers, assistive technologies,
-        etc.).
-      </p>
-
-      <p>Conformance claims are not usually located on each Web page within the scope of conformance.</p>
-
+      <div role="heading" class="note-title marker" aria-level="3">Uwaga</div>
+         <p>
+          Kiedy mówimy o technologiach, na których „można <a>polegać</a>”, mówimy o technologiach treści internetowych (HTML, CSS, JavaScript itp.), a nie o programach użytkownika (przeglądarkach, technologiach wspomagających itp.).
+        </p>
+        <p>
+          Deklaracje zgodności zwykle nie są umieszczane na każdej stronie internetowej objętej zakresem zgodności.
+        </p>
     </div>
 
     <section id="partial-third">
 
-      <h3>Partial conformance claims due to third party content</h3>
-
       <p>
-        When an author makes a decision to use a third party implementation, they should choose
-        products that meet WCAG requirements. If all content on a page, including third party
-        content, meets all WCAG success criteria then the page conforms to WCAG. However,
-        if the page does not conform to WCAG only for reasons that are legitimately outside
-        the author's control then the author can make a claim of partial conformance. It is
-        important to recognize that this is a statement of non-conformance and there are users
-        who may not be able to access some of the content this page.
+        Gdy twórca podejmuje decyzję o skorzystaniu z materiałów strony trzeciej, powinien wybrać produkty spełniające wymagania WCAG. Jeśli wszystkie treści na stronie, w tym treści osób trzecich, spełniają wszystkie kryteria sukcesu WCAG, wówczas strona jest zgodna z WCAG. Jeśli jednak strona nie jest zgodna z WCAG tylko z powodów, które są prawnie niezależne od twórcy, wówczas może on złożyć deklarację o częściowej zgodności. Ważne jest, aby uznać, że jest to deklaracja niezgodności i że niektórzy użytkownicy mogą nie mieć dostępu do niektórych treści tej strony.
       </p>
-
       <p>
-        One reason that content may be outside the author's control is because it is being
-        provided by a third party (blogs, portals, news sites). Web pages may also include
-        content via third party libraries, plugins, or widgets.
+        Jednym z powodów, dla których treść może być poza kontrolą twórcy, jest fakt, że jest ona dostarczana przez stronę trzecią (blogi, portale, serwisy informacyjne). Strony internetowe mogą również zawierać treści za pośrednictwem bibliotek, wtyczek lub widżetów stron trzecich.
       </p>
-
       <p>
-        Be sure to monitor any content that can change without approval from the web page
-        author, as a page which once conformed may suddenly fail to conform. If it is not
-        possible to monitor and repair the third party content, it is necessary to identify
-        the non-conforming parts of the page for users. If the rest of the web page conforms
-        to WCAG, such a page qualifies for a statement of partial conformance, third party
-        content.
+        Pamiętaj, aby monitorować wszelkie treści, które mogą ulec zmianie bez zgody twórcy strony internetowej, ponieważ strona, która raz była zgodna, może nagle przestać być zgodna. Jeśli nie jest możliwe monitorowanie i naprawa treści osób trzecich, konieczne jest określenie niezgodnych części strony dla użytkowników. Jeśli reszta strony jest zgodna z WCAG, taka strona kwalifikuje się do deklaracji częściowej zgodności ze względu na treści osób trzecich.
       </p>
 
     </section>
 
     <section>
 
-      <h3>Information about any additional steps taken that go beyond the Success Criteria</h3>
-
+       <h3>Informacje o wszelkich dodatkowych krokach, które wykraczają poza kryteria sukcesu</h3>
       <p>
-        One of the optional components of a conformance claim is "Information about any additional
-        steps taken that go beyond the Success Criteria to enhance accessibility." This can
-        include additional Success Criteria that have been met, advisory techniques that were
-        implemented, information about any additional protocols used to aid access for people
-        with particular disabilities or needs, etc. Any information that would be useful to
-        people in understanding the accessibility of the pages may be included.
+        Jednym z opcjonalnych elementów deklaracji zgodności jest „Informacja o wszelkich dodatkowych krokach wykraczających poza kryteria sukcesu podjętych w celu zwiększenia dostępności”. Może to obejmować dodatkowe spełnione kryteria sukcesu, wdrożone techniki pomocnicze, informacje o wszelkich dodatkowych protokołach zastosowanych w celu ułatwienia dostępu osobom ze szczególnymi niepełnosprawnościami lub potrzebami itp. Można uwzględnić wszelkie informacje przydatne w objaśnieniu dostępności stron.
       </p>
-
     </section>
 
     <section id="meta-claims">
 
-      <h3>Use of metadata to report conformance claims</h3>
-
+      <h3>Informacje o wszelkich dodatkowych krokach, które wykraczają poza kryteria sukcesu</h3>
       <p>
-        The most useful way of attaching conformance claims to content would be to do so in
-        standard machine readable form. When this practice is widespread, search tools or
-        special user agents will be able to make use of this information to find and provide
-        content that is more accessible or so the user agents can adjust to the content. There
-        are a number of metadata based options under development for making claims, and authors
-        and tool developers are encouraged to support them.
+        Jednym z opcjonalnych elementów deklaracji zgodności jest „Informacja o wszelkich dodatkowych krokach wykraczających poza kryteria sukcesu podjętych w celu zwiększenia dostępności”. Może to obejmować dodatkowe spełnione kryteria sukcesu, wdrożone techniki pomocnicze, informacje o wszelkich dodatkowych protokołach zastosowanych w celu ułatwienia dostępu osobom ze szczególnymi niepełnosprawnościami lub potrzebami itp. Można uwzględnić wszelkie informacje przydatne w objaśnieniu dostępności stron.
       </p>
-
+    </section>
+    <section id="meta-claims">
+      <h3>Wykorzystanie metadanych w deklaracjach zgodności</h3>
       <p>
-        In addition, metadata can be used to report conformance to individual Success Criteria
-        once Level A conformance has been achieved.
+        Najbardziej użytecznym sposobem dołączania deklaracji zgodności byłoby robienie tego w standardowej formie do odczytu maszynowego. Gdy ta praktyka stanie się powszechna, narzędzia wyszukiwania lub specjalne programy użytkownika będą mogły wykorzystać te informacje do znalezienia i dostarczenia treści, które są bardziej dostępne lub programy użytkownika będą mogły dostosować się do treści. Istnieje wiele opcji opartych na metadanych, które są opracowywane w celu składania oświadczeń, a autorzy i twórcy narzędzi są zachęcani zachęcani do ich stosowania.
       </p>
-
       <p>
-        There are also programmatic reporting formats such as
-        <a href="https://www.w3.org/WAI/intro/earl.php">Evaluation and Report Language (EARL)</a> that are being developed that could provide machine readable formats for detailed
-        conformance information. As the reporting formats are formalized and support for them
-        develops, they will be documented here.
+        Ponadto metadanych można użyć do deklarowania zgodności z indywidualnymi kryteriami sukcesu po osiągnięciu zgodności na poziomie A.
       </p>
-
+      <p>
+        Istnieją również formaty raportowania programowego, takie jak <a href="https://www.w3.org/WAI/intro/earl.php">Evaluation and Report Language (EARL)</a>, które mogą zapewnić formaty odczytywane maszynowo w celu uzyskania szczegółowych informacji o zgodności. Ponieważ formaty raportowania są sformalizowane i rozwija się ich obsługa, zostaną one tutaj udokumentowane.
+      </p>
     </section>
 
     <section id="examples">
 
-      <h3>Examples of Conformance Claims</h3>
-
+      <h3>Przykłady deklaracji zgodności</h3>
       <section>
-
-        <h4>Examples of Required Components of Conformance Claims </h4>
-
+        <h4>Przykłady wymaganych składników deklaracji zgodności</h4>
         <div class="example">
-
           <p>
-            On 20 September 2009, all Web pages at http://www.example.com conform to Web Content
-            Accessibility Guidelines 2.0 at https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Level
-            A conformance.
+            Na dzień 20 września 2009 r. wszystkie strony internetowe pod adresem http://www.example.com są zgodne z Wytycznymi dla dostępności treści internetowych 2.0 pod adresem https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Zgodność na poziomie A.
           </p>
-
           <ul>
-
             <li>
-              The documented set of accessibility-supported content technologies
-              <strong>relied upon</strong> for this claim is a subset of ISA- AsCTset#1-2008 at http://ISA.example.gov/AsCTsets/AS2-2008.
-
+              Udokumentowany zestaw technologii treści obsługujących dostępność, na którym <strong>opiera się</strong> ta deklaracja, jest podzbiorem ISA- AsCTset#1-2008 pod adresem http://ISA.example.gov/AsCTsets/AS2-2008.
             </li>
-
           </ul>
-
           <p>
-            (using a regular expression) On 12 August 2009, pages matching the pattern http://www.example.com/(marketing|sales|contact)/.*
-            conform to Web Content
-            Accessibility Guidelines 2.0 at https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Level
-            AA conformance.
+            (przy użyciu wyrażenia regularnego) Na dzień 12 sierpnia 2009 r. strony pasujące do wzorca http://www.example.com/(marketing|sales|contact)/.* są zgodne są zgodne z Wytycznymi dla dostępności treści internetowych 2.0 pod adresem https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Zgodność na poziomie AA.
           </p>
-
           <ul>
-
             <li>
-              The technologies that this content "
-              <strong>relies upon</strong>" is: XHTML 1.0 Transitional, CSS 2.0 and JavaScript 1.2.
+              Technologie, na których <q><strong>opiera się</strong></q> ta treść to: XHTML 1.0 Transitional, CSS 2.0 oraz JavaScript 1.2.
             </li>
-
           </ul>
-
           <p>
-            (using boolean logic) On 6 January 2009, http://example.com/ AND NOT
+            (używając logiki boole'owskiej) 6 stycznia 2009, http://example.com/ AND NOT
             (http://example.com/archive/ OR http://example.com/publications/archive/)
-            conforms to Web Content Accessibility Guidelines 2.0 at
-            https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Level AA conformance.
+            są zgodne z Wytycznymi dla dostępności treści internetowych 2.0 pod adresem
+            https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Zgodność na poziomie AA.
           </p>
-
           <ul>
-
             <li>
-              The documented set of accessibility-supported content technologies
-
-              <strong>relied upon</strong> for this claim includes XHTML 1.0 and SMIL from ISA- AsCTset#1-2008 at
-              http://ISA.example.gov/AsCTsets/AS2-2008.
-
+              Udokumentowany zestaw technologii treści obsługujących dostępność, na którym <strong>opiera się</strong> ta deklaracja, obejmuje XHTML 1.0 i SMIL z ISA- AsCTset#1-2008 na stronie http://ISA.example.gov/AsCTsets/AS2-2008.
             </li>
-
           </ul>
 
         </div>
@@ -412,93 +337,55 @@
 
       <section>
 
-        <h4>Examples of Conformance Claims including optional components</h4>
-
+        <h4>Przykłady deklaracji zgodności zawierających opcjonalne komponenty</h4>
         <div class="example">
-
           <p>
-            On 5 May 2009, the page
-            "G7: An Introduction" http://telcor.example.com/nav/G7/intro.html conforms to Web
-            Content Accessibility Guidelines 2.0 at https://www.w3.org/TR/2008/REC-WCAG20-20081211/.
-            Level AA conformance.
+            Na dzień 5 maja 2009 r. strona "G7: An Introduction" http://telcor.example.com/nav/G7/intro.html jest zgodna z Wytycznymi dla dostępności treści internetowych 2.0 pod adresem https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Zgodność na poziomie AA.
           </p>
-
           <ul>
-
             <li>
-              The following additional Success Criteria have also been met: 1.1.2, 1.2.5, and 1.4.3.
-
+              Spełnione zostały również następujące dodatkowe kryteria sukcesu: 1.1.2, 1.2.5 i 1.4.3.
             </li>
-
             <li>
-              The documented set of accessibility-supported content technologies used for this claim
-              is AsCTset#1-2006 at http://UDLabs.org/AsCTset#1-2006.html.
+              Udokumentowany zestaw technologii treści obsługujących dostępność, na którym <strong>opiera się</strong> ta deklaracja, to AsCTset#1-2006 na http://UDLabs.org/AsCTset#1-2006.html.
             </li>
-
             <li>
-              The technologies that this content "
-              <strong>relies upon</strong>" is: XHTML 1.0 (Strict), and Real Video.
+              Technologie, na których <q><strong>opiera się</strong></q> ta treść to: XHTML 1.0 (Strict) i Real Video.
             </li>
-
             <li>
-              The technologies that this content "
-              <strong>uses but does not rely upon</strong>" are: JavaScript 1.2, CSS2.
+              Technologie, których ta treść "<strong>używa, ale na nich nie polega</strong>" to: JavaScript 1.2, CSS2.
             </li>
-
           </ul>
-
           <p>
-            On 21 June 2009, all content beginning with the URI
-            http://example.com/nav and http://example.com/docs conform to Web Content Accessibility
-            Guidelines 2.0 at https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Level AAA conformance.
-
+            Na dzień 21 czerwca 2009 r. cała treść rozpoczynająca się od URI http://example.com/nav i http://example.com/docs jest zgodna z Wytycznymi dla dostępności treści internetowych 2.0 opublikowanymi pod adresem https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Zgodność na poziomie AAA.
           </p>
-
           <ul>
-
             <li>
-              The documented set of accessibility-supported content technologies used for this claim
-              is SMITH- AsCTset#2-2008 at http://smithreports.example.com/AsCTsets/AS2-2008.
+              Udokumentowany zestaw technologii treści obsługujących dostępność, na którym <strong>opiera się</strong> ta deklaracja, to SMITH- AsCTset#2-2008 na stronie http://smithreports.example.com/AsCTsets/AS2-2008.
             </li>
-
             <li>
-              The technologies that this content "
-              <strong>relies upon</strong>" are: XHTML 1.0 (Strict), CSS2, JavaScript 1.2, JPEG, PNG.
+              Technologie, na których <q><strong>opiera się</strong></q> ta treść to: XHTML 1.0 (Strict), CSS2, JavaScript 1.2, JPEG, PNG.
             </li>
-
             <li>
-              The user agents, including assistive technologies, that this content has been tested
-              with can be found at http://example.com/docs/WCAG20/test/technologies.html.
+              Programy użytkownika, w tym technologie wspomagające, z którymi ta treść została przetestowana, można znaleźć na stronie  http://example.com/docs/WCAG20/test/technologies.html.
             </li>
-
           </ul>
-
           <p>
-            On 23 March 2009, all content available on the server at
-            http://www.wondercall.example.com conforms to Web Content Accessibility Guidelines
-            2.0 at https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Single-A conformance.
+            Na dzień 23 marca 2009 r. cała treść dostępna na serwerze pod adresem http://www.wondercall.example.com jest zgodna z Web Content Accessibility Guidelines 2.0 pod adresem https://www.w3.org/TR/2008/REC-WCAG20-20081211/. Zgodność na poziomie A.
           </p>
-
           <ul>
-
             <li>
-              The technology that this content "
-              <strong>relies upon</strong>" is: HTML 4.01.
+              Technologia, na której <q><strong>opiera się</strong></q> ta treść to: HTML 4.01.
             </li>
-
             <li>
-              The technologies that this content "
-              <strong>uses but does not rely upon</strong>" are: CSS2, and gif.
+              Technologie, których ta treść "<strong>używa, ale na nich nie polega</strong>" to: CSS2 i gif.
             </li>
-
             <li>
-              This content was tested using the following user agents and assistive technologies:
-              Firefox 1.5 on Windows Vista with Screenreader X 4.0, Firefox 1.5 on Windows XP SP
-              2 with Screenreader X 3.5, IE 6.0 on Windows 2000 SP4 with Screenreader Y 5.0, IE
-              6.0 on Windows 2000 SP4 with Screenreader Z 2.0, and Firefox 1.5 on Windows XP SP2
-              with Screenreader X 4.0, Safari 2.0 with OS X 10.4.
+              Ta treść została przetestowana za pomocą następujących programów użytkownika i technologii wspomagających: Firefox 1.5 na Windows Vista z Screenreaderem X 4.0, Firefox 1.5 na Windows XP SP
+              2 ze Screenreaderem X 3.5, IE 6.0 na Windows 2000 SP4 ze Screenreaderem Y 5.0, IE
+              6.0 na Windows 2000 SP4 ze Screenreaderem Z 2.0 i Firefox 1.5 i Windows XP SP2
+              ze Screenreaderem X 4.0, Safari 2.0 z OS X 10.4.
             </li>
-
           </ul>
 
         </div>
