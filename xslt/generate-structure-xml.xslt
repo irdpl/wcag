@@ -32,32 +32,32 @@
 		<guidelines lang="{@lang}">
 			<understanding>
 				<name>Wprowadzenie do objaśnień WCAG <xsl:value-of select="$guidelines.version.decimal"/></name>
-				<file href="wprowadzenie"/>
+				<file href="intro"/>
 			</understanding>
 			<understanding>
 				<name>Objaśnienie technik dla kryteriów sukcesu WCAG</name>
-				<file href="objasnienie-technik"/>
+				<file href="understanding-techniques"/>
 			</understanding>
 			<understanding>
 				<name>Objaśnienie zasad testowych dla kryteriów sukcesu WCAG</name>
-				<file href="objasnienie-zasad-testowych"/>
+				<file href="understanding-act-rules"/>
 			</understanding>
 			<xsl:apply-templates select="//html:section[@class='principle']"/>
 			<understanding>
 				<name>Objaśnienie zgodności</name>
-				<file href="zgodnosc"/>
+				<file href="conformance"/>
 			</understanding>
 			<understanding>
 				<name>Jak odwoływać się do WCAG <xsl:value-of select="$guidelines.version.decimal"/> z innych dokumentów</name>
-				<file href="odwolania-do-wcag"/>
+				<<file href="refer-to-wcag"/>
 			</understanding>
 			<understanding>
 				<name>Dokumentacja obsługi dostępności dla zastosowań technologii internetowej</name>
-				<file href="dokumentowanie-obslugi-dostepnosci"/>
+				<file href="documenting-accessibility-support"/>
 			</understanding>
 			<understanding>
 				<name>Objaśnienie metadanych</name>
-				<file href="objasnienie-metadanych"/>
+				<file href="understanding-metadata"/>
 			</understanding>
 			<xsl:apply-templates select="//html:dfn"/>
 		</guidelines>
