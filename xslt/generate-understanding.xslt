@@ -872,82 +872,38 @@
 		<xsl:apply-templates select="//understanding | //guideline | //success-criterion"/>
 	</xsl:template>
 
-<!-- Define a template to replace URL-unsafe characters with their safe counterparts -->
-  <xsl:template name="replaceUnsafeChars">
-    <xsl:param name="inputString"/>
-    <xsl:choose>
-      <!-- Replace Polish special characters -->
-      <xsl:when test="contains($inputString, 'ą')">
-        <xsl:value-of select="substring-before($inputString, 'ą')"/>
-        <xsl:text>a</xsl:text>
-        <xsl:call-template name="replaceUnsafeChars">
-          <xsl:with-param name="inputString" select="substring-after($inputString, 'ą')"/>
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:when test="contains($inputString, 'ć')">
-        <xsl:value-of select="substring-before($inputString, 'ć')"/>
-        <xsl:text>c</xsl:text>
-        <xsl:call-template name="replaceUnsafeChars">
-          <xsl:with-param name="inputString" select="substring-after($inputString, 'ć')"/>
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:when test="contains($inputString, 'ę')">
-        <xsl:value-of select="substring-before($inputString, 'ę')"/>
-        <xsl:text>ę</xsl:text>
-        <xsl:call-template name="replaceUnsafeChars">
-          <xsl:with-param name="inputString" select="substring-after($inputString, 'ę')"/>
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:when test="contains($inputString, 'ł')">
-        <xsl:value-of select="substring-before($inputString, 'ł')"/>
-        <xsl:text>l</xsl:text>
-        <xsl:call-template name="replaceUnsafeChars">
-          <xsl:with-param name="inputString" select="substring-after($inputString, 'ł')"/>
-        </xsl:call-template>
-      </xsl:when> 
-      <xsl:when test="contains($inputString, 'ń')">
-        <xsl:value-of select="substring-before($inputString, 'ń')"/>
-        <xsl:text>n</xsl:text>
-        <xsl:call-template name="replaceUnsafeChars">
-          <xsl:with-param name="inputString" select="substring-after($inputString, 'ń')"/>
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:when test="contains($inputString, 'ó')">
-        <xsl:value-of select="substring-before($inputString, 'ó')"/>
-        <xsl:text>o</xsl:text>
-        <xsl:call-template name="replaceUnsafeChars">
-          <xsl:with-param name="inputString" select="substring-after($inputString, 'ó')"/>
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:when test="contains($inputString, 'ś')">
-        <xsl:value-of select="substring-before($inputString, 'ś')"/>
-        <xsl:text>s</xsl:text>
-        <xsl:call-template name="replaceUnsafeChars">
-          <xsl:with-param name="inputString" select="substring-after($inputString, 'ś')"/>
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:when test="contains($inputString, 'ż')">
-        <xsl:value-of select="substring-before($inputString, 'ż')"/>
-        <xsl:text>z</xsl:text>
-        <xsl:call-template name="replaceUnsafeChars">
-          <xsl:with-param name="inputString" select="substring-after($inputString, 'ż')"/>
-        </xsl:call-template>
-      </xsl:when> 
-      <xsl:when test="contains($inputString, 'ź')">
-        <xsl:value-of select="substring-before($inputString, 'ź')"/>
-        <xsl:text>z</xsl:text>
-        <xsl:call-template name="replaceUnsafeChars">
-          <xsl:with-param name="inputString" select="substring-after($inputString, 'ź')"/>
-        </xsl:call-template>
-      </xsl:when>    	  
-      <!-- Add more cases for other Polish special characters -->
-      <!-- When no special character is found, copy the remaining string -->
-      <xsl:otherwise>
-        <xsl:value-of select="$inputString"/>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
+<!-- Define a template to replace URL-unsafe characters with their safe counterparts --> 
+<xsl:template name="replaceUnsafeChars">
+  <xsl:param name="inputString"/>
+  
+  <!-- Define a set of replacements -->
+  <replacements>
+    <replace from="ą" to="a"/>
+    <replace from="ć" to="c"/>
+    <replace from="ę" to="e"/>
+    <replace from="ł" to="l"/>	
+    <replace from="ń" to="n"/>
+    <replace from="ó" to="o"/>
+    <replace from="ś" to="s"/>
+    <replace from="ż" to="z"/>	
+    <replace from="ź" to="z"/>	
+  </replacements>
+  
+  <!-- Initialize the output string -->
+  <xsl:variable name="outputString" select="$inputString"/>
+  
+  <!-- Iterate over each replacement -->
+  <xsl:for-each select="document('')//replace">
+    <xsl:variable name="fromChar" select="@from"/>
+    <xsl:variable name="toChar" select="@to"/>
+    
+    <!-- Replace each occurrence of the 'from' character with the 'to' character -->
+    <xsl:variable name="outputString" select="translate($outputString, $fromChar, $toChar)"/>
+  </xsl:for-each>
+  
+  <!-- Return the resulting string -->
+  <xsl:value-of select="$outputString"/>
+</xsl:template>
 <xsl:template match="understanding | guideline | success-criterion">
     <xsl:variable name="safeHref">
         <!-- Replace URL-unsafe characters in the filename -->
