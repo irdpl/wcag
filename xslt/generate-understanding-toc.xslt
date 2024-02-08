@@ -11,7 +11,7 @@
 		<xsl:result-document href="toc.html" method="xhtml" omit-xml-declaration="yes">
 				<xsl:apply-templates select="principle | guideline | success-criterion"/>
 			<section id="other">
-				<h2>Other Understanding documents</h2>
+				<h2>Inne dokumenty objaśniające</h2>
 				<ul class="toc-wcag-docs">
 				<xsl:apply-templates select="understanding"/>
 				</ul>
