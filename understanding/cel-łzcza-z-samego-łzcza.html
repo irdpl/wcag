@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Objaśnienie Success Criterion  1.2.1: Tylko audio lub tylko wideo (nagranie) | WAI | W3C</title>
+      <title>Objaśnienie Success Criterion  2.4.9: Cel łącza (z samego łącza) | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="base.css" />
    </head>
@@ -37,12 +37,15 @@
                   <li class="nav__item"><a href=".">
                         								All Understanding Docs
                         							</a></li>
-                  <li class="nav__item"><a href="media-oparte-na-czasie">
+                  <li class="nav__item"><a href="nawigowalne">
                         <svg alt="up" focusable="false" aria-hidden="true" class="icon-arrow-up-thin pager-icon" viewBox="0 0 16 16">
                            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path>
-                        </svg> Guideline: Media oparte na czasie</a></li>
-                  <li class="nav__item"></li>
-                  <li class="nav__item"><a href="napisy-rozszerzone-nagranie">Next SC: Napisy rozszerzone (nagranie)
+                        </svg> Guideline: Nawigowalne</a></li>
+                  <li class="nav__item"><a href="lokalizacja">
+                        <svg focusable="false" aria-hidden="true" class="icon-arrow-left-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path>
+                        </svg>Previous SC: Lokalizacja</a></li>
+                  <li class="nav__item"><a href="nag%C5%82%C3%B3wki-sekcji">Next SC: Nagłówki sekcji
                         <svg focusable="false" aria-hidden="true" class="icon-arrow-right-thin pager-icon" viewBox="0 0 16 16">
                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                         </svg></a></li>
@@ -69,49 +72,15 @@
          </aside>
          <main id="main" class="standalone-resource__main">
             <h1><span class="standalone-resource__type-of-guidance">Objaśnienie
-                  				KS 1.2.1:</span>Tylko audio lub tylko wideo (nagranie) (Poziom A)
+                  				KS 2.4.9:</span>Cel łącza (z samego łącza) (Poziom AAA)
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">Kryterium sukcesu (KS) </header>
                <div class="box-i">
-                  <p>Dla mediów <a href="#dfn-nagranie">nagranych</a> w systemie 
-                     <a href="#dfn-tylko-audio">tylko audio</a> lub <a href="#dfn-tylko-wideo">tylko wideo</a> stosuje się następujące zasady, z wyjątkiem sytuacji, kiedy nagranie audio lub wideo
-                     jest <a href="#dfn-alternatywa-dla-medi%C3%B3w-opartych-na-czasie">alternatywą dla tekstu</a> i w taki sposób jest oznaczone:
+                  <p>Istnieje <a href="#dfn-mechanizm">mechanizm</a> umożliwiający zidentyfikowanie celu każdego łącza z samej jego treści, poza tymi
+                     przypadkami, kiedy cel łącza i tak byłby <a href="#dfn-niejasny-dla-u%C5%BCytkownik%C3%B3w">niejasny dla użytkowników</a>.
                      
                   </p>
-                  <dl>
-                     
-                     
-                     <dt>Alternatywa dla audio</dt>
-                     
-                     
-                     <dd>
-                        
-                        
-                        <p>Zapewniona jest  <a href="#dfn-alternatywa-dla-medi%C3%B3w-opartych-na-czasie">alternatywa</a> dla nagrań dźwiękowych przedstawiająca tę samą treść, co nagranie audio..
-                           
-                        </p>
-                        
-                        
-                     </dd>
-                     
-                     
-                     <dt>Alternatywa dla wideo</dt>
-                     
-                     
-                     <dd>
-                        
-                        
-                        <p>Zapewniona jest alternatywa tekstowa albo audiodeskrypcja dla nagrań zawierających
-                           tylko wideo przedstawiająca tę samą treść, co nagranie wideo.
-                           
-                        </p>
-                        
-                        
-                     </dd>
-                     
-                     
-                  </dl>
                </div>
             </aside>
             <div class="excol-all"></div>
@@ -119,54 +88,76 @@
                <h2>W skrócie</h2>
                <dl>
                   
-                  <dt>Cel</dt>
+                  <dt>Goal</dt>
+                  <dd>Users understand what each link will do.</dd>
                   
-                  <dd>Treści audio i wideo mogą być zrozumiałe dla większej liczby osób.</dd>
+                  <dt>What to do</dt>
+                  <dd>Provide descriptive names for all links.</dd>
                   
-                  <dt>Zadanie autora</dt>
-                  
-                  <dd>Zapewniaj alternatywę, gdy treść jest postrzegana tylko jednym zmysłem.</dd>
+                  <dt>Why it's important</dt>
+                  <dd>Descriptive link text is more understandable for all users, especially when using
+                     assistive technology.
+                  </dd> 
                   
                </dl>
             </section>
             <section id="intent">
                <h2>Intencja</h2>
-               <p>
-                  Intencją tego kryterium sukcesu jest zapewnienie wszystkim użytkownikom informacji
-                  przekazywanych przez wcześniej nagrane treści audio i wideo. Alternatywy dla mediów
-                  opartych na czasie, które są oparte na tekście, sprawiają, że informacje są dostępne,
-                  ponieważ tekst może być renderowany za pomocą dowolnej modalności sensorycznej (na
-                  przykład wizualnej, słuchowej lub dotykowej), aby dopasować się do potrzeb użytkownika.
-                  W przyszłości tekst może być również tłumaczony na symbole, język migowy lub prostsze
-                  formy języka.
+               <p>The intent of this Success Criterion is to help users understand the purpose of each
+                  link in the content, so they can decide whether they want to follow it. Best practice
+                  is that links with the same destination would have the same descriptions, but links
+                  with different purposes and destinations would have different descriptions (see also
+                  
+                  <a href="consistent-identification" class="guideline">Success Criterion 3.2.4</a> which calls for consistency in identifying components that have the same functionality).
+                  Because the purpose of a link can be identified from its link text, links can be understood
+                  when they are out of context, such as when the user agent provides a list of all the
+                  links on a page.
+                  
+               </p>
+               <p>The text in the link is intended to describe the purpose of the link. In cases where
+                  the link takes one to a document or a web application, the name of the document or
+                  web application would be sufficient to describe the purpose of the link (which is
+                  to take you to the document or web application). Note that it is not required to use
+                  the name of the document or web application; other things may also describe the purpose
+                  of the link. 
                   
                </p>
                <p>
-                  Przykładem wstępnie nagranego wideo bez informacji dźwiękowych lub interakcji użytkownika
-                  jest niemy film. Celem transkrypcji jest zapewnienie odpowiednika tego, co jest prezentowane
-                  wizualnie. W przypadku wcześniej nagranych materiałów wideo autorzy mają możliwość
-                  dostarczenia ścieżki dźwiękowej. Celem alternatywy dźwiękowej jest bycie odpowiednikiem
-                  wideo. Umożliwia to jednoczesne przeglądanie treści przez użytkowników z wadami wzroku
-                  i bez nich. Podejście to może również ułatwić zrozumienie treści osobom z problemami
-                  poznawczymi, językowymi i trudnościami w uczeniu się, ponieważ zapewnia równoległą
-                  prezentację.
+                  
+                  <a href="page-titled" class="understanding">Success Criterion 2.4.2</a> deals with the titles of pages. Here also, the name of a document or web application
+                  being presented on the page would be sufficient to describe the purpose of the page.
+                  Having the link and the title agree, or be very similar, is good practice and provides
+                  continuity between the link 'clicked on' and the web page that the user lands on.
+                  
                   
                </p>
-               <div class="note">
-                  <p class="note-title marker">Uwaga</p>
-                  <div>
-                     
-                     <p>
-                        Odpowiednik tekstowy nie jest wymagany dla dźwięku, który jest dostarczany jako odpowiednik
-                        dla wideo bez informacji dźwiękowych. Na przykład nie jest wymagane umieszczanie napisów
-                        w opisie wideo, który jest zapewniany jako alternatywa dla filmu niemego.
-                        
-                     </p>
-                     
-                  </div>
-               </div>
-               <p>
-                  Zobacz także <a href="tylko-audio-na-zywo">1.2.4: Tylko audio (na żywo)</a>
+               <p>The Success Criterion includes an exception for links for which the purpose of the
+                  link cannot be determined from the information on the Web page. In this situation,
+                  the person with the disability is not at a disadvantage; there is no additional context
+                  available to understand the link purpose. However, whatever amount of context is available
+                  on the Web page that can be used to interpret the purpose of the link must be made
+                  available in the link text to satisfy the Success Criterion.
+                  
+               </p>
+               <p>The word "mechanism" is used to allow authors to either make all links fully understandable
+                  out of context by default or to provide a way to make them this way. This is done
+                  because for some pages, making the links all unambiguous by themselves makes the pages
+                  easier for some users and harder for others. Providing the ability to make the links
+                  unambiguous (by them selves) or not provides both users with disabilities with the
+                  ability to use the page in the format that best meets their needs.
+                  
+               </p>
+               <p>For example: A page listing 100 book titles along with links to download the books
+                  in HTML, PDF, DOC, TXT, MP3, or AAC might ordinarily be viewed as the title of the
+                  book as a link with the words "in HTML" after it. then the sentence "Also available
+                  in: " followed by a series of short links with text of "HTML", "PDF", "DOC", "TXT",
+                  "MP3", and "AAC". At Level 3, some users could opt to view the page this way - because
+                  they would find the page harder to understand or slower to use if the full title of
+                  the book were included in each of the links. Others could opt to view the page with
+                  the full title as part of each of the links so that each link was understandable in
+                  itself. Both the former and the latter groups could include people with visual or
+                  cognitive disabilities that used different techniques to browse or that had different
+                  types or severities of disability.
                   
                </p>
             </section>
@@ -174,34 +165,26 @@
                <h2>Korzyści</h2>
                <ul>
                   
-                  <li>
-                     To kryterium sukcesu pomaga osobom, które mają trudności z postrzeganiem treści wizualnych.
-                     Technologia wspomagająca może odczytywać alternatywy tekstowe na głos, prezentować
-                     je wizualnie lub konwertować je na alfabet Braille'a.
+                  
+                  <li>This Success Criterion helps people with motion impairment by letting them skip Web
+                     pages that they are not interested in, avoiding the keystrokes needed to visit the
+                     referenced content and then return to the current content.
                      
                   </li>
                   
-                  <li>
-                     Alternatywy dla mediów opartych na czasie, które są oparte na tekście, mogą pomóc
-                     niektórym osobom, które mają trudności ze zrozumieniem znaczenia wcześniej nagranych
-                     treści wideo.
+                  
+                  <li>People with cognitive limitations will not become disoriented by extra navigation
+                     to and from content they are not interested in.
                      
                   </li>
                   
-                  <li>
-                     Osoby niesłyszące, niedosłyszące lub mające problemy ze zrozumieniem informacji audio
-                     z jakiegokolwiek powodu mogą przeczytać prezentację tekstową. Trwają badania nad automatycznym
-                     tłumaczeniem tekstu na język migowy.
+                  
+                  <li>People with visual disabilities will benefit from not losing their place in the content
+                     when they return to the original page. The screen reader's list of links is more useful
+                     for finding information because the target of the links are described.
                      
                   </li>
                   
-                  <li>Osoby głuchoniewidome mogą czytać tekst w alfabecie Braille'a.</li>
-                  
-                  <li>
-                     Ponadto tekst obsługuje możliwość wyszukiwania treści nietekstowych i zmiany przeznaczenia
-                     treści na różne sposoby.
-                     
-                  </li>
                   
                </ul>
             </section>
@@ -209,38 +192,20 @@
                <h2>Przykłady</h2>
                <dl>
                   
-                  <dt>Nagranie audio przemówienia</dt>
+                  <dt>Both an icon and text are included in the same link</dt>
                   
-                  <dd>
-                     Łącze do klipu audio mówi: <q>Przemówienie przewodniczącego do zgromadzenia</q>. Łącze do transkrypcji tekstowej znajduje się bezpośrednio po łączu do klipu audio.
-                     
+                  <dd>An icon of a voting machine and the text "Government of Ireland's Commission of Electronic
+                     Voting" are combined to make a single link.
                   </dd>
                   
-                  <dt>Nagranie audio konferencji prasowej</dt>
+                  <dt>A list of book titles</dt>
                   
-                  <dd>
-                     Strona internetowa zawiera łącze do nagrania audio konferencji prasowej, które identyfikuje
-                     nagranie audio. Strona zawiera również link do transkrypcji tekstowej konferencji
-                     prasowej. Transkrypcja zawiera dosłowny zapis wszystkich wypowiedzi prelegentów. Określa,
-                     kto mówi, a także odnotowuje inne istotne dźwięki, które są częścią nagrania, takie
-                     jak oklaski, śmiech, pytania od publiczności itp.
-                     
+                  <dd>A list of books is available in three formats: HTML, PDF, and mp3 (a recording of
+                     a person reading the book). The title of the book is followed by links to the different
+                     formats. The rendered text for each link is just the format type, but the text associated
+                     with each link includes the title as well as the format; for instance, "Gulliver's
+                     Travels, MP3."
                   </dd>
-                  
-                  <dt>Animacja ilustrująca działanie silnika samochodowego</dt>
-                  
-                  <dd>
-                     Animacja pokazuje, jak działa silnik samochodowy. Nie ma dźwięku, a animacja jest
-                     częścią samouczka opisującego działanie silnika. Ponieważ tekst samouczka zawiera
-                     już pełne wyjaśnienie, multimedia są alternatywą dla tekstu, a alternatywa tekstowa
-                     zawiera tylko krótki opis animacji i odsyła do tekstu samouczka, aby uzyskać więcej
-                     informacji.
-                     
-                  </dd>
-                  
-                  <dt>Plik tylko wideo ze ścieżką dźwiękową</dt>
-                  
-                  <dd>Niemy film zawiera ścieżkę dźwiękową, która zawiera opis akcji w filmie.</dd>
                   
                </dl>
             </section>
@@ -249,21 +214,30 @@
                <p>Zasoby służą wyłącznie celom informacyjnym. Nie należy traktować ich jako zaleceń.</p>
                <ul>
                   
+                  
                   <li>
-                     <a href="http://www.rnib.org.uk/travel-downloads-podcasts-and-apps?List=be9c76d3-7ad0-4e03-a1a0-e6f6953b8178&amp;ID=16" hreflang="en" lang="en">Overcoming the challenge of podcast transcription</a> (Pokonywanie wyzwań związanych z transkrypcją podcastów)
+                     								       
+                     <a href="https://www.nngroup.com/articles/using-link-titles-to-help-users-predict-where-they-are-going/">Using Link Titles to Help Users Predict Where They Are Going</a>
+                     							     
                      
                   </li>
                   
+                  
                   <li>
-                     <a href="http://www.uiaccess.com/transcripts/transcript_services.html" hreflang="en" lang="en">uiAccess list of transcription services</a>
-                     (Lista usług transkrypcji uiAccess)
+                     								       
+                     <a href="http://webaim.org/techniques/hypertext/">WebAIM Techniques for Hypertext Links</a>
+                     							     
                      
                   </li>
                   
+                  
                   <li>
-                     <a href="http://www.uiaccess.com/transcripts/transcripts_on_the_web.html" hreflang="en" lang="en">Transcripts on the Web: Getting people to your podcasts and videos</a> (Transkrypcje w Internecie: Pozyskiwanie odbiorców podcastów i filmów)
+                     	
+                     <a href="http://www.rnib.org.uk/blogs/expert-series?Name=Hidden%20barriers">Hidden barriers - out of sight</a>
+                     							     
                      
                   </li>
+                  
                   
                </ul>
             </section>
@@ -276,52 +250,141 @@
                </p>
                <section id="sufficient">
                   <h3>Techniki wystarczające</h3>
-                  <p>Wybierz poniżej sytuację, która pasuje do Twojej treści. Każda sytuacja obejmuje techniki
-                     lub kombinacje technik, które są znane i udokumentowane jako wystarczające w danej
-                     sytuacji. 
-                  </p>
-                  <p>
-                     Wybierz poniżej sytuację, która pasuje do Twojej treści. Każda sytuacja obejmuje techniki
-                     lub kombinacje technik, które są znane i udokumentowane jako wystarczające w danej
-                     sytuacji.
+                  <ul>
                      
-                  </p>
-                  <section class="situation" id="audio-only-and-video-only-prerecorded-situation-0">
                      
-                     <h4>Sytuacja A: Jeśli treść jest tylko nagraniem audio:</h4>
-                     
-                     <ul>
+                     <li>
                         
-                        <li>
-                           <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G158">G158: Zapewnienie alternatywy dla treści audio w mediach dynamicznych (opartych na
-                              czasie)</a>
+                        <a class="aria" href="https://w3c.github.io/wcag/techniques/aria/ARIA8">ARIA8: Using aria-label for link purpose</a>
+                        
+                        
+                     </li>
+                     
+                     
+                     <li>
+                        									         
+                        <a class="general" href="https://w3c.github.io/wcag/techniques/general/G91">G91: Providing link text that describes the purpose of a link</a>
+                        								       
+                        
+                     </li>
+                     
+                     
+                     <li>
+                        									         
+                        <a class="html" href="https://w3c.github.io/wcag/techniques/html/H30">H30: Providing link text that describes the purpose of a link for anchor elements</a>
+                        								       
+                        
+                     </li>
+                     
+                     
+                     <li>
+                        									         
+                        <a class="html" href="https://w3c.github.io/wcag/techniques/html/H24">H24: Providing text alternatives for the area elements of image maps</a>
+                        								       
+                        
+                     </li>
+                     
+                     
+                     
+                     <li>
+                        
+                        
+                        <p>Allowing the user to choose short or long link text using one of the techniques below:</p>
+                        
+                        
+                        <ul>
                            
-                        </li>
-                        
-                     </ul>
-                     
-                  </section>
-                  <section class="situation" id="audio-only-and-video-only-prerecorded-situation-1">
-                     
-                     <h4>Sytuacja B: Jeśli treść jest tylko nagraniem wideo:</h4>
-                     
-                     <ul>
-                        
-                        <li>
-                           <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G159">G159: Zapewnienie alternatywy dla treści tylko wideo w mediach dynamicznych (opartych
-                              na czasie)</a>
                            
-                        </li>
-                        
-                        <li>
-                           <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G166">G166: Zapewnienie narracji dźwiękowej opisującej ważną treść wideo i opisującą ją
-                              jako taką</a>
+                           <li>
+                              											             
+                              <a class="general" href="https://w3c.github.io/wcag/techniques/general/G189">G189: Providing a control near the beginning of the Web page that changes the link text</a>
+                              										           
+                              
+                           </li>
                            
-                        </li>
+                           
+                           <li>
+                              											             
+                              <a class="script" href="https://w3c.github.io/wcag/techniques/client-side-script/SCR30">SCR30: Using scripts to change the link text</a>
+                              										           
+                              
+                           </li>
+                           
+                           
+                           <li>
+                              											             
+                              <a class="flash" href="https://w3c.github.io/wcag/techniques//FLASH7">FLASH7: </a>
+                              										           
+                              
+                           </li>
+                           
+                           
+                        </ul>
                         
-                     </ul>
+                        
+                     </li>
                      
-                  </section>
+                     
+                     <li>
+                        
+                        
+                        <p>Providing a supplemental description of the purpose of a link using one of the following
+                           techniques:    
+                           
+                        </p>
+                        
+                        
+                        <ul>
+                           
+                           
+                           <li>
+                              											             
+                              <a class="css" href="https://w3c.github.io/wcag/techniques/css/C7">C7: Using CSS to hide a portion of the link text</a>
+                              										           
+                              
+                           </li>
+                           
+                           
+                        </ul>
+                        
+                        
+                     </li>
+                     
+                     
+                     <li>
+                        
+                        
+                        <p>Semantically indicating links using one of the following techniques:</p>
+                        
+                        
+                        <ul>
+                           
+                           
+                           <li>
+                              
+                              <a class="pdf" href="https://w3c.github.io/wcag/techniques/pdf/PDF11">PDF11: Providing links and link text using the Link annotation and the /Link structure element
+                                 in PDF documents</a>
+                              
+                              
+                           </li>
+                           
+                           
+                           <li>
+                              
+                              <a class="pdf" href="https://w3c.github.io/wcag/techniques/pdf/PDF13">PDF13: Providing replacement text using the /Alt entry for links in PDF documents</a>
+                              
+                              
+                           </li>
+                           
+                           
+                        </ul>
+                        
+                        
+                        
+                     </li>
+                     
+                     
+                  </ul>
                </section>
                <section id="advisory">
                   <h3>Techniki pomocnicze</h3>
@@ -331,10 +394,30 @@
                   </p>
                   <ul>
                      
+                     
                      <li>
-                        <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H96">H96: Użycie elementu track, aby zapewnić audiodeskrypcję</a>
+                        									         
+                        <a class="html" href="https://w3c.github.io/wcag/techniques/html/H2">H2: Combining adjacent image and text links for the same resource</a>
+                        								       
                         
                      </li>
+                     
+                     
+                     <li>
+                        									         
+                        <a class="flash" href="https://w3c.github.io/wcag/techniques//FLASH5">FLASH5: </a>
+                        								       
+                        
+                     </li>
+                     
+                     
+                     <li>
+                        									         
+                        <a class="html" href="https://w3c.github.io/wcag/techniques/html/H33">H33: Supplementing link text with the title attribute</a>
+                        								       
+                        
+                     </li>
+                     
                      
                   </ul>
                </section>
@@ -345,18 +428,24 @@
                   </p>
                   <ul>
                      
+                     
                      <li>
-                        <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F30">F30: Niespełnienie kryterium sukcesu 1.1.1 i 1.2.1 z powodu użycia alternatyw tekstowych,
-                           które nie są alternatywne (np. nazw plików lub tekstu zastępczego)</a>
+                        									         
+                        <a class="failure" href="https://w3c.github.io/wcag/techniques/failures/F84">F84: Failure of Success Criterion 2.4.9 due to using a non-specific link such as "click
+                           here" or "more" without a mechanism to change the link text to specific text.</a>
+                        								       
                         
                      </li>
                      
+                     
                      <li>
-                        <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F67">F67: Niespełnienie kryterium sukcesu 1.1.1 i 1.2.1 z powodu podawania długich opisów
-                           dla treści nietekstowych, które nie służą temu samemu celowi lub nie przedstawiają
-                           tych samych informacji</a>
+                        									         
+                        <a class="failure" href="https://w3c.github.io/wcag/techniques/failures/F89">F89: Failure of Success Criteria 2.4.4, 2.4.9 and 4.1.2 due to not providing an accessible
+                           name for an image which is the only content in a link</a>
+                        								       
                         
                      </li>
+                     
                      
                   </ul>
                </section>
@@ -366,15 +455,13 @@
                   <summary>
                      <h2>Kluczowe terminy</h2>
                   </summary>
-                  <dt id="dfn-alternatywa-dla-mediów-opartych-na-czasie">alternatywa dla mediów opartych na czasie</dt>
+                  <dt id="dfn-mechanizm">mechanizm</dt>
                   <dd>
                      <definition xmlns="">
                         
                         
                         <p xmlns="http://www.w3.org/1999/xhtml">
-                           dokument zawierający prawidłowo uporządkowany tekst przedstawiający informacje przekazywane
-                           w medium opartym na czasie wizualnie i dźwiękowo oraz uwzględniający końcowy stan
-                           interakcji z tym medium
+                           <a href="#dfn-procedura">procedura</a> lub technika prowadząca do osiągnięcia rezultatu
                            
                         </p>
                         
@@ -382,55 +469,135 @@
                         <div xmlns="http://www.w3.org/1999/xhtml" class="note">
                            <p class="note-title marker">Uwaga</p>
                            <p>
-                              Scenariusz użyty do stworzenia zsynchronizowanych multimediów może być objęty taką
-                              definicją tylko wtedy, gdy został poprawiony tak, by odpowiadać dokładnej końcowej
-                              wersji multimediów po zakończeniu edycji.
+                              Mechanizm może być dostarczany bezpośrednio w treści albo może być oparty zarówno
+                              na platformie, jak i na <a href="#dfn-program-u%C5%BCytkownika">oprogramowaniu użytkownika</a>, w tym na <a href="#dfn-technologie-wspomagaj%C4%85ce">technologiach wspomagających</a>.
                               
                            </p>
                         </div>
                         
                         
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>Mechanizm wymaga spełnienia wszystkich kryteriów sukcesu żądanych dla danego poziomu.</p>
+                        </div>
+                        
+                        
                      </definition>
                   </dd>
-                  <dt id="dfn-audio">audio</dt>
+                  <dt id="dfn-niejasny-dla-użytkowników">niejasny dla użytkowników</dt>
                   <dd>
                      <definition xmlns="">
                         
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml">technologia powielania dźwięku</p>
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           cel nie może być określony na podstawie treści łącza lub treści strony wyświetlanej
+                           równocześnie z łączem (tzn. że użytkownicy bez niepełnosprawności wiedzą, co kryje
+                           się pod danym łączem dopiero po kliknięciu na nie)
+                           
+                        </p>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Słowo guawa w tym zdaniu „Najwięksi eksporterzy guawy” jest łączem. Tak umieszczone
+                              łącze może oznaczać przeniesienie do definicji guawy, listy eksporterów guawy lub
+                              zdjęcia przedstawiającego ludzi zbierających guawę. Dopóki łącze nie zostanie kliknięte,
+                              zarówno użytkownicy pełnosprawni, jak i z niepełnosprawnością, nie wiedzą, co się
+                              pod nim kryje.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-procedura">procedura</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">seria czynności użytkownika, gdzie każda czynność jest niezbędna do zakończenia działania</p>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Zakończona sukcesem procedura korzystania ze stron sklepu internetowego wymaga od
+                              użytkownika obejrzenia alternatywnych produktów, cen i ofert, wybrania produktów,
+                              złożenia zamówienia, ustalenia warunków dostawy oraz podania informacji o wysyłce
+                              i płatności.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Strona rejestracji konta wymaga przejścia <a href="https://www.w3.org/TR/turingtest/">testu Turinga</a>, a następnie wypełnienia formularza rejestracyjnego.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-program-użytkownika">program użytkownika</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych</p>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Przeglądarki internetowe, odtwarzacze multimediów, wtyczki oraz inne programy — również
+                              technologie wspomagające — które pomagają w wyszukiwaniu, przetwarzaniu i interakcji
+                              z treściami internetowymi.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-technologie-wspomagające">technologie wspomagające</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           sprzęt i oprogramowanie, które działa jako <a href="#dfn-program-u%C5%BCytkownika">program użytkownika</a> lub współdziała ze standardowymi programami użytkownika, aby zapewnić niezbędne osobom
+                           z niepełnosprawnościami funkcjonalności, przekraczające możliwości standardowych programów
+                           użytkownika;
+                           
+                        </p>
                         
                         
                         <div xmlns="http://www.w3.org/1999/xhtml" class="note">
                            <p class="note-title marker">Uwaga</p>
                            <p>
-                              Dźwięk może być tworzony syntetycznie (w mowa syntetyczna), nagrywany z dźwięków świata
-                              rzeczywistego lub na oba sposoby.
+                              Funkcjonalności zapewniane przez technologie wspomagające obejmują alternatywny sposób
+                              prezentacji treści (np. mowa syntetyczna lub powiększenie obrazu), alternatywne sposoby
+                              wprowadzania danych (np. za pomocą głosu), dodatkowe mechanizmy nawigacji i orientacji
+                              oraz transformacji treści (np. w celu uczynienia tabel bardziej dostępnymi).
                               
                            </p>
                         </div>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-na-żywo">na żywo</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">
-                           informacja przechwytywana z wydarzeń pochodzących z rzeczywistego świata, transmitowana
-                           bezpośrednio do odbiorcy, z opóźnieniem zależnym wyłącznie od nadawcy
-                           
-                        </p>
                         
                         
                         <div xmlns="http://www.w3.org/1999/xhtml" class="note">
                            <p class="note-title marker">Uwaga</p>
                            <p>
-                              Opóźnienie zależne od nadawcy to krótkie (najczęściej automatyczne) opóźnienie, niezbędne
-                              na przykład w celu dania nadawcy czasu na kolejkowanie lub cenzurowanie treści wizualnej
-                              lub dźwiękowej. Opóźnienie to nie jest wystarczające, by nadawaną treść poddawać poważniejszej
-                              edycji.
+                              Technologie wspomagające często komunikują się ze standardowymi aplikacjami za pośrednictwem
+                              specjalnych API.
                               
                            </p>
                         </div>
@@ -438,64 +605,80 @@
                         
                         <div xmlns="http://www.w3.org/1999/xhtml" class="note">
                            <p class="note-title marker">Uwaga</p>
-                           <p>Jeżeli informacja jest całkowicie generowana przez komputer, to nie jest informacją
-                              na żywo.
+                           <p>
+                              Rozróżnienie pomiędzy popularnymi programami użytkownika a technologiami wspomagającymi
+                              nie jest oczywiste. Wiele programów użytkownika głównego nurtu posiada różne rozwiązania
+                              wspomagające osoby z niepełnosprawnościami. Główna różnica pomiędzy nimi polega na
+                              tym, że programy użytkownika głównego nurtu są ukierunkowane na szerokie i zróżnicowane
+                              grupy odbiorców, zarówno z niepełnosprawnościami, jak i bez niepełnosprawności. Natomiast
+                              technologie wspomagające skierowane są do wąsko zdefiniowanej populacji użytkowników
+                              z określonymi rodzajami niepełnosprawności. Wsparcie świadczone za pomocą technologii
+                              wspomagających jest zatem bardziej wyspecjalizowane i nakierowane na odbiorcę z konkretnymi
+                              potrzebami. Standardowe programy użytkownika mogą dostarczać technologiom wspomagającym
+                              niezbędnych funkcjonalności, takich jak pobieranie treści internetowych z obiektów
+                              programowych lub odwzorowanie kodu do postaci przyjaźniejszej dla tych technologii.
+                              
                            </p>
                         </div>
                         
                         
-                     </definition>
-                  </dd>
-                  <dt id="dfn-nagranie">nagranie</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">Informacja, która nie jest transmitowana <a href="#dfn-na-%C5%BCywo">na żywo</a>
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
                            
-                        </p>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-tylko-audio">tylko audio</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">
-                           prezentacja oparta na czasie zawierająca tylko <a href="#dfn-audio">dźwięk</a> (bez <a href="#dfn-wideo">wideo</a> i bez interakcji)
+                           <p>
+                              Technologie wspomagające ważne w kontekście tego dokumentu to między innymi:
+                              
+                           </p>
                            
-                        </p>
+                        </aside>
                         
                         
-                     </definition>
-                  </dd>
-                  <dt id="dfn-tylko-wideo">tylko wideo</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">
-                           prezentacja oparta na czasie zawierająca tylko <a href="#dfn-wideo">wideo</a> (bez <a href="#dfn-audio">audio</a> i bez interakcji)
+                        <ul xmlns="http://www.w3.org/1999/xhtml">
                            
-                        </p>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-wideo">wideo</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">technologia poruszających się lub następujących po sobie obrazów</p>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>Wideo może być stworzone za pomocą animacji lub fotografii, lub obu naraz.</p>
-                        </div>
+                           
+                           <li>
+                              powiększalniki ekranu i inne programy wspomagające czytanie wzrokowe, używane przez
+                              osoby ze wzrokowymi, percepcyjnymi i innymi niepełnosprawnościami związanymi z korzystaniem
+                              z druku, pozwalające na zmianę czcionek, rozmiaru, rozmieszczenia, koloru, synchronizujące
+                              tekst z głosem itp., w celu poprawienia czytelności wyświetlanego tekstu i obrazów;
+                              
+                           </li>
+                           
+                           
+                           <li>
+                              czytniki ekranu, używane przez osoby niewidome do odczytu treści tekstowych za pomocą
+                              mowy syntetycznej lub brajla;
+                              
+                           </li>
+                           
+                           
+                           <li>
+                              programy przetwarzające tekst na mowę syntetyczną, używane przez niektóre osoby z
+                              niepełnosprawnościami poznawczymi, językowymi i trudnościami w nauce w celu przekształcenia
+                              tekstu w mowę syntetyczną;
+                              
+                           </li>
+                           
+                           
+                           <li>programy rozpoznające mowę, używane przez niektóre osoby z niepełnosprawnościami fizycznymi;</li>
+                           
+                           
+                           <li>
+                              specjalne klawiatury, używane przez osoby z niektórymi niepełnosprawnościami fizycznymi,
+                              które symulują standardową klawiaturę (w tym klawiatury specjalne wyposażone we wskaźniki
+                              nagłowne, przełączniki, urządzenia dmuchnij/wciągnij (sip-and-puff) i inne specjalne
+                              urządzenia do wprowadzania danych);
+                              
+                           </li>
+                           
+                           
+                           <li>
+                              specjalne wskaźniki, używane przez osoby z niektórymi rodzajami niepełnosprawności
+                              fizycznych w celu symulowania kursora myszy i naciskania przycisków.
+                              
+                           </li>
+                           
+                           
+                        </ul>
                         
                         
                      </definition>
