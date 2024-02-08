@@ -395,44 +395,40 @@ która może być dostępna za pomocą technologii wspomagających.&lt;/p>
     </section>
 
     <section id="conformance-claims-techniques">
-      <h2>Techniques for Conformance Claims</h2>
+      <h3>Techniki deklarowania zgodności</h3>
       <section id="conformance-claims-sufficient">
         <ul>
           <li>
-            <a href="https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR38" class="script"></a>
+            <a class="script" href="https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR38">SCR38: Tworzenie zgodnej wersji alternatywnej dla strony internetowej zaprojektowanej z użyciem ulepszania progresywnego </a>
           </li>
           <li>
-            <a href="https://www.w3.org/WAI/WCAG21/Techniques/server-side-script/SVR2" class="script"></a>
+            <a class="script" href="https://www.w3.org/WAI/WCAG22/Techniques/server-side-script/SVR2">SVR2: Użycie .htaccess, aby zapewnić, że jedynym sposobem na uzyskanie dostępu do niezgodnej treści jest dostęp z treści zgodnej.</a>
           </li>
           <li>
-            <a href="https://www.w3.org/WAI/WCAG21/Techniques/server-side-script/SVR3" class="script"></a>
+            <a class="script" href="https://www.w3.org/WAI/WCAG22/Techniques/server-side-script/SVR3">SVR3: Użycie HTTP referer, aby zapewnić, że jedynym sposobem na uzyskanie dostępu do niezgodnej treści jest dostęp z treści zgodnej.</a>
           </li>
           <li>
-            <a href="https://www.w3.org/WAI/WCAG21/Techniques/server-side-script/SVR4" class="script"></a>
+            <a class="script" href="https://www.w3.org/WAI/WCAG22/Techniques/server-side-script/SVR4">SVR4: Umożliwienie użytkownikom określenia preferencji dotyczących wyświetlania zgodnych wersji alternatywnych</a>
           </li>
           <li>
-            <a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C29" class="css"></a>
+            <a class="css" href="https://www.w3.org/WAI/WCAG22/Techniques/css/C29">C29: Użycie przełącznika stylu do zapewnienia zgodnej wersji alternatywnej (CSS)</a>
           </li>
           <li>
-            <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F19" class="failure"></a>
+            <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F19">F19: Niespełnienie wymogu zgodności 1 z powodu niezapewnienia użytkownikowi metody znalezienia alternatywnej zgodnej wersji niezgodnej strony internetowej.</a>
           </li>
           <li>
-            <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G136" class="general"></a>
+            <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G136">G136: Zapewnienie łącza na początku niezgodnej strony internetowej, który wskazuje na zgodną wersję alternatywną</a>
           </li>
           <li>
-            <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G190" class="general"></a>
+            <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G190">G190: Zapewnienie łącza przylegającego do niezgodnego obiektu lub powiązanego z nim, które prowadzi do zgodnej wersji alternatywnej.</a>
           </li>
         </ul>
       </section>
 
       <section id="conformance-claims-advisory">
-
-        <h3>Advisory Techniques for Conformance Claims</h3>
-
+        <h4>Techniki pomocnicze deklarowania zgodności</h4>
         <ul>
-
-          <li>Expressing a conformance claim to WCAG 2.0 in Dublin Core elements (future link)</li>
-
+          <li>Wyrażanie deklaracji zgodności z WCAG 2.2 w elementach Dublin Core (przyszły link)</li>
         </ul>
 
       </section>
@@ -443,334 +439,160 @@ która może być dostępna za pomocą technologii wspomagających.&lt;/p>
 
   <section id="levels">
 
-    <h2>Understanding Levels of Conformance</h2>
-
+   <h2>Objaśnienie poziomów zgodności</h2>
     <p>
-      First, there are a number of conditions that must be met for a Success Criterion to
-      be included at all. These include:
+      Po pierwsze, istnieje szereg warunków, które muszą być spełnione, aby kryterium sukcesu w ogóle zostało uwzględnione. Należą do nich:
     </p>
-
     <ol>
-
       <li>
-        All Success Criteria must be
-        <strong>important access issues for people with disabilities</strong> that address problems beyond the usability problems that might be faced by all users.
-        In other words, the access issue must cause a proportionately greater problem for
-        people with disabilities than it causes people without disabilities in order to be
-        considered an accessibility issue (and covered under these accessibility guidelines).
+        Wszystkie kryteria sukcesu muszą być dla osób z niepełnosprawnościami <strong>istotnymi kwestiami dostępu</strong>, które rozwiązują problemy wykraczające poza problemy z użytecznością, z którymi mogą się zetknąć wszyscy użytkownicy. Innymi słowy, kwestia dostępu musi powodować proporcjonalnie większy problem dla osób z niepełnosprawnościami niż dla osób bez niepełnosprawności, aby można ją było uznać za kwestię dostępności (i objętą niniejszymi wytycznymi dotyczącymi dostępności).
       </li>
-
       <li>
-        All Success Criteria must also be testable. This is important since otherwise it would
-        not be possible to determine whether a page met or failed to meet the Success Criteria.
-        The Success Criteria can be tested by a combination of machine and human evaluation
-        as long as it is possible to determine whether a Success Criterion has been satisfied
-        with a high level of confidence.
+        Wszystkie kryteria sukcesu muszą być również testowalne. Jest to ważne, bo w przeciwnym razie nie byłoby możliwe stwierdzenie, czy strona spełnia kryteria sukcesu. Kryteria sukcesu mogą być testowane poprzez połączenie oceny maszynowej i ludzkiej, o ile możliwe jest określenie z dużym stopniem pewności, czy dane kryterium sukcesu zostało spełnione.
       </li>
-
     </ol>
-
     <p>
-      The Success Criteria were assigned to one of the three levels of conformance by the
-      working group after taking into consideration a wide range of interacting issues.
-      Some of the common factors evaluated when setting the level included:
+      Kryteria sukcesu zostały przypisane do jednego z trzech poziomów zgodności przez grupę roboczą po uwzględnieniu szerokiego zakresu interakcji. Niektóre z typowych czynników ocenianych podczas ustalania poziomu obejmowały:
     </p>
-
     <ul>
-
       <li>
-        whether the Success Criterion is
-        <strong>essential</strong> (in other words, if the Success Criterion isn't met, then even assistive technology
-        can't make content accessible)
+        czy kryterium sukcesu jest <strong>niezbędne</strong> (innymi słowy, jeśli kryterium sukcesu nie jest spełnione, to nawet technologia wspomagająca nie może zapewnić dostępności treści),
       </li>
-
       <li>
-        whether it is possible to satisfy the Success Criterion for
-        <strong>all Web sites and types of content</strong> that the Success Criteria would apply to (e.g., different topics, types of content,
-        types of Web technology)
+        czy możliwe jest spełnienie kryterium sukcesu dla <strong>wszystkich stron internetowych i rodzajów treści</strong>, których dotyczy (np. różne tematy, rodzaje treści, rodzaje technologii internetowych),
       </li>
-
       <li>
-        whether the Success Criterion requires skills that could
-        <strong>reasonably be achieved by the content creators</strong> (that is, the knowledge and skill to meet the Success Criteria could be acquired
-        in a week's training or less)
+        czy kryterium sukcesu wymaga umiejętności, które mogą być <strong>racjonalnie osiągnięte przez twórców</strong> (tj. wiedza i umiejętności potrzebne do spełnienia kryterium sukcesu mogą zostać nabyte w czasie tygodniowego lub krótszego szkolenia),
       </li>
-
       <li>
-        whether the Success Criterion would impose limits on the "look &amp; feel" and/or function
-        of the Web page. (limits on function, presentation, freedom of expression, design
-        or aesthetic that the Success Criteria might place on authors)
+        czy kryterium sukcesu nakładałoby ograniczenia na „wygląd i sposób działania” lub funkcjonalność strony internetowej (ograniczenia dotyczące funkcjonalności, prezentacji, swobody wypowiedzi, projektu lub estetyki, jakie kryteria sukcesu mogą nałożyć na twórców),
       </li>
-
-      <li>whether there are no workarounds if the Success Criterion is not met</li>
-
+      <li>czy nie można obejść problemu, jeśli kryterium sukcesu nie jest spełnione.</li>
     </ul>
 
   </section>
 
   <section id="accessibility-support">
 
-    <h2>Understanding Accessibility Support</h2>
-
+   <h2>Objaśnienie obsługi dostępności</h2>
     <p>
-      Many of the Success Criteria deal with providing accessibility through assistive technologies
-      or special accessibility features in mainstream user agents (for example, a 'show
-      captions' option in a media player). That is, the Success Criteria require that something
-      be done in the Web content that would make it possible for assistive technologies
-      to successfully present the content's information to the user. For example, a picture
-      that you were supposed to click on to go to a topic would not be accessible to a person
-      who was blind unless text alternatives for the picture were provided in a way that
-      user agents including assistive technologies can find and display them. The key here
-      is that the text alternative must be included in a way that user agents including
-      assistive technologies can understand and use – in a way that is "Accessibility Supported."
+      Wiele kryteriów sukcesu dotyczy zapewniania dostępności za pomocą technologii wspomagających lub specjalnych funkcji dostępności w popularnych programach użytkownika (na przykład opcja „pokaż napisy” w odtwarzaczu multimedialnym). Oznacza to, że kryteria sukcesu wymagają, aby w treści strony internetowej zostało zrobione coś, co umożliwiłoby technologiom wspomagającym skuteczne przedstawienie użytkownikowi informacji o treści. Na przykład obrazek, który należy kliknąć, aby przejść do tematu, nie będzie dostępny dla osoby niewidomej, jeśli tekst alternatywny dla obrazka nie zostanie podany w taki sposób, aby programy użytkownika, w tym technologie wspomagające, mogły go znaleźć i przedstawić. Kluczem jest to, że tekst alternatywny musi być umieszczony w sposób, który programy użytkownika, w tym technologie wspomagające, mogą zrozumieć i wykorzystać - w sposób, który jest „obsługiwany przez dostępność”.
     </p>
-
     <p>
-      Another example would be a custom control that is included on a Web page. In this
-      case, a standard user agent would not ordinarily be able to present an alternative
-      to the user. If, however, information about the control including its name, role,
-      value, how to set it etc. are provided in a way that assistive technologies can understand
-      and control them, then users with assistive technologies will be able to use these
-      controls.
+      Innym przykładem może być niestandardowa kontrolka umieszczona na stronie internetowej. W takim przypadku standardowy program użytkownika zwykle nie byłby w stanie przedstawić użytkownikowi alternatywy. Jeśli jednak informacje o kontrolce, w tym jej nazwa, rola, wartość, jej ustawienia itp., zostaną podane w taki sposób, że technologie wspomagające mogą je zrozumieć i prezentować, wówczas użytkownicy posługujący się technologiami wspomagającymi będą mogli korzystać z tej kontrolki.
     </p>
-
     <p>
-      When new technologies are introduced, two things must happen in order for people using
-      assistive technologies to be able to access them. First, the technologies must be
-      designed in a way that user agents including assistive technologies could access all
-      the information they need to present the content to the user. Secondly, the user agents
-      and assistive technologies may need to be redesigned or modified to be able to actually
-      work with these new technologies.
+      Gdy wprowadzane są nowe technologie, muszą się wydarzyć dwie rzeczy, aby osoby korzystające z technologii wspomagających miały do nich dostęp. Po pierwsze, technologie muszą być zaprojektowane w taki sposób, aby programy użytkownika, w tym technologie wspomagające, miały dostęp do wszystkich informacji potrzebnych do przedstawienia treści użytkownikowi. Po drugie, programy użytkownika i technologie wspomagające mogą wymagać przeprojektowania lub modyfikacji, aby mogły faktycznie pracować z tymi nowymi technologiami.
     </p>
-
     <p>
-      "<strong>Accessibility Supported</strong>" means that both of these have been done and that the technology will work with user
-      agents and assistive technologies.
+      „<strong>Obsługiwanie dostępności</strong>” oznacza, że obie te czynności zostały wykonane i że technologia będzie działać z programami użytkownika i technologiami wspomagającymi.
     </p>
 
     <section id="support-level">
 
-      <h3>Level of Assistive Technology Support Needed for "Accessibility Support"</h3>
-
+      <h3>Poziom wsparcia technologii wspomagających wymagany do „obsługi dostępności”</h3>
       <p>
-        This topic raises the question of how many or which assistive technologies must support
-        a Web technology in order for that Web technology to be considered "accessibility
-        supported". The WCAG Working group and the W3C do not specify which or how many assistive
-        technologies must support a Web technology in order for it to be classified as accessibility
-        supported. This is a complex topic and one that varies both by environment and by
-        language. There is a need for an external and international dialogue on this topic.
-        Some notes to help in understanding and exploring this topic are:
+        W związku z tym problemem pojawia się pytanie, ile lub jakie technologie wspomagające muszą obsługiwać daną technologię internetową, aby tę technologię internetową można było uznać za „obsługującą dostępność”. Grupa robocza WCAG i W3C nie określają, które lub ile technologii wspomagających musi obsługiwać technologię internetową, aby można je było sklasyfikować jako obsługujące dostępność. Jest to złożony problem, który różni się zarówno w zależności od środowiska, jak i języka. Istnieje potrzeba prowadzenia zewnętrznego i międzynarodowego dialogu na ten temat. Oto kilka uwag, które pomogą w zrozumieniu i zgłębieniu tego problemu:
       </p>
-
       <ol>
-
         <li>
-
-          <p>Accessibility support of Web technologies varies by environment</p>
-
+          <p>Obsługa dostępności przez technologie internetowe różni się w zależności od środowiska</p>
           <ul>
-
             <li>
-              Web technologies may only need to be supported by those specific user agents and assistive
-              technologies deployed at a company. (These may be older versions of user agents and
-              assistive technologies or the very newest versions).
+              Technologie internetowe mogą być obsługiwane tylko przez konkretne programy użytkownika i technologie wspomagające wdrożone w firmie. (Mogą to być starsze wersje programów użytkownika i technologii wspomagających lub najnowsze wersje.)
             </li>
-
             <li>
-              Content posted to the public Web may need to work with a broader range of user agents
-              and assistive technologies, including older versions.
+              Treści umieszczone w publicznej sieci internetowej mogą wymagać współpracy z szerszą gamą programów użytkownika i technologii wspomagających, w tym ze starszymi wersjami.
             </li>
-
           </ul>
-
         </li>
-
         <li>
-
-          <p>Accessibility support of Web technologies varies by language (and dialect)</p>
-
+          <p>Obsługa dostępności przez technologie internetowe różni się w zależności od języka (i dialektu)</p>
           <ul>
-
             <li>
-              There are different levels of older assistive technologies support in different languages
-              and even countries. Some environments or countries may provide free assistive technologies.
+              Istnieją różne poziomy obsługi starszych technologii wspomagających w różnych językach, a nawet krajach. Niektóre środowiska lub kraje mogą zapewniać bezpłatne technologie wspomagające.
             </li>
-
           </ul>
-
         </li>
-
         <li>
-
-          <p>New technologies won't be supported in older assistive technologies</p>
-
+          <p>Nowe technologie nie będą obsługiwane w starszych technologiach wspomagających</p>
           <ul>
-
             <li>
-              Clearly, a new technology cannot be supported by all past assistive technologies,
-              so requiring that a technology be supported by all assistive technologies is not possible.
+              Nie ulega wątpliwości, że nowa technologia nie może być obsługiwana przez wszystkie dotychczasowe technologie wspomagające, dlatego wymaganie, by dana technologia była obsługiwana przez wszystkie technologie wspomagające, nie jest możliwe.
             </li>
-
           </ul>
-
         </li>
-
         <li>
-
-          <p>Support for a single older assistive technology is usually not sufficient</p>
-
+          <p>Obsługa jednej starszej technologii wspomagającej zwykle nie jest wystarczająca</p>
           <ul>
-
             <li>
-              Support by just one assistive technology (for a given disability) would not usually
-              be enough, especially if most users who need it in order to access content do not
-              have and cannot afford that assistive technology. The exception here would be information
-              distributed to company employees only where they all have one assistive technology
-              (of that type).
+              Obsługa tylko jednej technologii wspomagającej (dla danej niepełnosprawności) zwykle nie byłaby wystarczająca, zwłaszcza jeśli większość użytkowników, którzy jej potrzebują, aby uzyskać dostęp do treści, nie posiada takiej technologii wspomagającej i nie może sobie na nią pozwolić. Wyjątkiem byłyby tu informacje przekazywane pracownikom danej firmy tylko wtedy, gdy wszyscy mają jedną technologię wspomagającą (tego typu).
             </li>
-
           </ul>
-
         </li>
-
         <li>
-
           <p>
-            Currently assistive technology that is affordable by the general public is often very
-            poor
+            Obecnie technologie wspomagające, które są dostępne dla ogółu społeczeństwa, są często niskiej jakości
           </p>
-
           <ul>
-
             <li>
-              Creating content that can't be used by the general public with disabilities should
-              be avoided. In many cases, the cost of assistive technologies is too high for users
-              who need it. Also, the capabilities of free or low cost AT is often so poor today
-              that Web content cannot be realistically restricted to this lowest (or even middle)
-              common denominator. This creates a very difficult dilemma that needs to be addressed.
+              Należy unikać tworzenia treści, które nie mogą być używane przez ogół populacji osób z niepełnosprawnościami. W wielu przypadkach koszt technologii wspomagających jest zbyt wysoki dla użytkowników, którzy ich potrzebują. Ponadto możliwości bezpłatnych lub tanich technologii wspomagających są dziś często tak niewielkie, że treści internetowych nie można realistycznie ograniczyć do tego najniższego (lub nawet średniego) wspólnego mianownika. Stwarza to bardzo trudny dylemat, który należy rozwiązać.
             </li>
-
           </ul>
-
         </li>
-
       </ol>
-
       <p>
-        The Working Group, therefore, limited itself to defining what constituted support
-        and defers the judgment of how much, how many, or which AT must support a technology
-        to the community and to entities closer to each situation that set requirements for
-        an organization, purchase, community, etc.
+        Grupa Robocza ograniczyła się więc do zdefiniowania tego, co stanowi obsługę (wsparcie), a osąd tego, ile lub które technologie wspomagające muszą obsługiwać daną technologię, pozostawia społeczności i podmiotom bliższym każdej sytuacji, które ustalają wymagania dla organizacji, zakupu, społeczności itp.
       </p>
-
       <p>
-        The Working Group encourages more discussion of this topic in the general forum of
-        society since this lack of generally available yet robust assistive technologies is
-        a problem that affects users, technology developers and authors negatively.
+        Grupa Robocza zachęca do szerszej dyskusji na ten temat na ogólnym forum społeczności, ponieważ brak ogólnie dostępnych, ale solidnych technologii wspomagających jest problemem, który negatywnie wpływa na użytkowników, twórców technologii i twórców treści.
       </p>
 
     </section>
 
     <section id="accessibility-supported-definition">
 
-      <h3>Technical Definition of "Accessibility Support"</h3>
-
+      <h3>Techniczna definicja „obsługi dostępności”</h3>
       <p>
-        Basically, a Web content technology is "accessibility supported" when users' assistive
-        technologies will work with the Web technologies
-        <strong>AND</strong> when the accessibility features of mainstream technologies will work with the technology.
-        Specifically, to qualify as an accessibility-supported technology, the following must
-        be true for a technology:
+        Zasadniczo, technologia treści internetowych będzie „obsługiwana przez dostępność”, gdy technologie wspomagające użytkowników będą współpracować z technologią internetową <strong>ORAZ</strong> gdy funkcje dostępności popularnych technologii będą współpracować z tą technologią. W szczególności, aby zakwalifikować się jako technologia obsługująca dostępność („wspierana pod względem dostępności”), muszą być spełnione następujące warunki:
       </p>
 
-      <blockquote class="scquote" data-include="../guidelines/terms/20/accessibility-supported.html">accessibility supported</blockquote>
+      <blockquote class="scquote" data-include="../guidelines/terms/20/obslugiwana-dostepnosc.html">obsługa dostępności</blockquote>
 
     </section>
 
     <section id="documented-lists">
-
-      <h3>Understanding Accessibility-Supported Web Technology Uses</h3>
-
+      <h3>Objaśnienie zastosowań technologii internetowych obsługujących dostępność</h3>
       <p>
-        Individual authors will not usually be able to do all of the testing necessary to
-        determine which ways of using which Web technologies are actually supported by which
-        versions of assistive technologies and user agents. Authors may therefore rely on
-        publicly documented compilations that document which assistive technologies support
-        which ways of using which Web technologies. By public, we do not mean that the compilation
-        and its documentation are necessarily generated by a public agency, only that they
-        are available to the public. Anyone can create publicly documented compilations of
-        "Web Technology Uses and their Accessibility Support." People may create compilations
-        and give them names that authors can refer to them by. As long as they are publicly
-        documented, authors or customers etc. can easily select uses that meet their needs.
-        Customers or others can pick technologies that fit their environment or language at
-        any point in time and specify those to be used in creating their content. Authors
-        are strongly encouraged to use sources that have an established reputation for accuracy
-        and usefulness. Technology developers are strongly encouraged to provide information
-        about the accessibility support for their technologies. The Working Group anticipates
-        that only documents that provide accurate information and benefit both authors and
-        users will achieve market recognition in the long term.
+        Poszczególnitwórcy zazwyczaj nie będą w stanie przeprowadzić wszystkich testów niezbędnych do ustalenia, w jaki sposób dane technologie internetowe są faktycznie obsługiwane przez które wersje technologii wspomagających i programów użytkownika. Twórcy mogą zatem polegać na publicznie udokumentowanych zestawieniach, które dokumentują, które technologie wspomagające obsługują określone sposoby korzystania z określonych technologii internetowych. Mówiąc publicznie, nie mamy na myśli tego, że zestawienie i jej dokumentacja są koniecznie tworzone przez agencję publiczną, a jedynie, że są one dostępne publicznie. Każdy może tworzyć publicznie udokumentowane zestawienia „Zastosowań technologii internetowych i ich dostępności”. Ludzie mogą tworzyć zestawienia i nadawać im nazwy, za pomocą których autorzy mogą się do nich odwoływać. Tak długo jak są one publicznie udokumentowane, twórcy lub klienci itp. mogą łatwo wybrać zastosowania, które odpowiadają ich potrzebom. Klienci lub inne osoby mogą wybrać technologie, które pasują do ich środowiska lub języka w dowolnym momencie i określić te, które mają być używane do tworzenia ich treści. Twórcy są zdecydowanie zachęcani do korzystania ze źródeł, które mają ugruntowaną reputację w zakresie dokładności i użyteczności. Zdecydowanie zachęca się twórców technologii do podawania informacji na temat obsługi dostępności przez ich technologie. Grupa robocza przewiduje, że tylko dokumenty, które dostarczają dokładnych informacji i przynoszą korzyści zarówno twórcom, jak i użytkownikom, osiągną w dłuższej perspektywie uznanie na rynku.
       </p>
-
       <p>
-        There is no requirement in WCAG that a publicly documented compilation be used or
-        that only technology uses from such a compilation be used. The publicly documented
-        compilations are described only as a method to make an otherwise critical, but somewhat
-        complicated, aspect of conformance easier for authors who are not themselves experts
-        on assistive technology support (or who just don't have the time to keep up with advances
-        in mainstream and assistive technology support for each other).
+        WCAG nie wymaga, aby korzystano z publicznie udokumentowanego zestawienia lub używano wyłącznie technologii z takiego zestawienia. Publicznie udokumentowane zestawienia są opisywane jedynie jako metoda ułatwiająca skądinąd krytyczny, ale nieco skomplikowany osąd zgodności, twórcom, którzy sami nie są ekspertami w zakresie wsparcia technologii wspomagających (lub po prostu nie mają czasu, aby nadążyć za postępem w zakresie głównego nurtu i wsparcia technologii wspomagających).
       </p>
-
       <p>
-        Authors, companies or others may wish to create and use their own compilations of
-        accessibility-supported technology uses and this is allowed in meeting WCAG. Customers,
-        companies or others may, however, specify that technology uses from a custom or public
-        compilation be used. See
-        <a href="documenting-accessibility-support">Documenting Accessibility Support for Uses of a Web Technology</a>.
-
+        Twórcy, firmy lub inne osoby mogą zechcieć tworzyć i wykorzystywać własne zestawienia zastosowań technologii obsługujących dostępność i jest to dozwolone w przypadku spełnienia wymogów WCAG. Klienci, firmy lub inne osoby mogą jednak określić, że mają być wykorzystywane technologie z zestawienia własnego lub publicznego. Zob. <a href="#accessibility-support-documenting"></a>.
       </p>
-
     </section>
 
     <section id="support-statements">
 
-      <h3>Accessibility Support Statements</h3>
-
+      <h3>Deklarowanie obsługi dostępności</h3>
       <p>
-        Examples of ways in which a conformance claim might document its accessibility support
-        include:
+        Przykłady sposobów, w jakie deklaracja zgodności może dokumentować obsługę dostępności:
       </p>
-
       <ol>
-
         <li>
-          This conformance claim meets the accessibility support requirement based on testing
-          content in language(s) of the content with User Agents A, B, and  C,  and Assistive
-          Technologies X, Y, and Z.    This means that we were able to pass all of the success
-          criteria for level A of WCAG 2.0 using these products.
+          Ta deklaracja zgodności stwierdza spełnianie wymagań obsługi dostępności w oparciu o testowanie treści w języku (językach) treści za pomocą programów użytkownika A, B i C oraz technologii wspomagających X, Y i Z. Oznacza to, że byliśmy w stanie spełnić wszystkie kryteria sukcesu dla poziomu A WCAG 2.0 przy użyciu tych produktów.
         </li>
-
         <li>
-          This conformance claim meets the accessibility support requirement for the language(s)
-          of the content based on the use of techniques and user agent notes documented in Techniques
-          for WCAG 2.0.  It is also based on the accessibility support documentation for the
-          technologies (that we relied upon for conformance), which is available in " XYZ Organization's
-          Documentation of Accessibility Support."
+          Ta deklaracja zgodności stwierdza spełnianie wymagań obsługi dostępności dla języka (języków) treści w oparciu o wykorzystanie technik i uwag programu użytkownika udokumentowanych w Technikach dla WCAG 2.0. Opiera się również na dokumentacji wsparcia dostępności dla technologii (na której oparliśmy się w celu zapewnienia zgodności), która jest dostępna w „Dokumentacji wsparcia dostępności organizacji XYZ”.
         </li>
-
         <li>
-          This conformance claim meets the accessibility support requirement for the language(s)
-          of the content based on the use of technology Z as documented in "Technology Z accessibility
-          supported techniques for WCAG 2.0."
+          Ta deklaracja zgodności stwierdza spełnianie wymagań obsługi dostępności dla języka (języków) treści w oparciu o wykorzystanie technologii Z, jak udokumentowano w „Technologia Z - techniki obsługi dostępności dla WCAG 2.0”.
         </li>
-
         <li>
-          This conformance claim meets the accessibility support requirement for the language
-          of the content based on the use of Accessibility Guidelines for Technology A and Accessibility
-          Guidelines for Technology B. User agent and assistive technology support information
-          can be found in "Product XYZ Accessibility Support Requirements", which are documented
-          in these guidelines.
+          Ta deklaracja zgodności stwierdza spełnianie wymagań obsługi dostępności dla języka treści w oparciu o Wytyczne dotyczące dostępności dla technologii A i Wytyczne dotyczące dostępności dla technologii B. Informacje dotyczące obsługi przez program użytkownika i obsługi przez technologie wspomagające można znaleźć w „Wymaganiach dotyczących obsługi dostępności przez produkt XYZ”, które są udokumentowane w tych wytycznych.
         </li>
-
       </ol>
 
     </section>
@@ -779,65 +601,31 @@ która może być dostępna za pomocą technologii wspomagających.&lt;/p>
 
   <section id="programmatically-determined">
 
-    <h2>Understanding "Programmatically Determined"</h2>
-
+    <h2>Objaśnienie pojęcia „określone programowo”</h2>
     <p>
-      Several Success Criteria require that content (or certain aspects of content) can
-      be "programmatically determined." This means that the content is authored in such
-      a way that user agents, including assistive technologies, can access the information.
+      Kilka kryteriów sukcesu wymaga, aby treść (lub niektóre aspekty treści) mogła być „określona programowo”. Oznacza to, że treść jest napisana w taki sposób, że programy użytkownika, w tym technologie wspomagające, mają dostęp do informacji.
     </p>
-
     <p>
-      In order for content created with Web technologies (such as HTML, CSS, PDF, GIF, MPEG, etc.) to be accessible to people with different types of disabilities, it is
-      essential that the technologies used work with the accessibility features of browsers
-      and other user agents, including assistive technologies. In order for something to
-      meet a Success Criterion that requires it to be "programmatically determined," it
-      would need to be implemented using a technology that has assistive technology support.
+      Aby treści tworzone za pomocą technologii internetowych (takich jak HTML, CSS, PDF, GIF, MPEG itp.) były dostępne dla osób z różnymi rodzajami niepełnosprawności, konieczne jest, aby zastosowane technologie współpracowały z funkcjami dostępności przeglądarek i innych programów użytkownika, w tym technologii wspomagających. Aby coś spełniało kryterium sukcesu, które wymaga, aby było „określone programowo”, musiałoby zostać zaimplementowane przy użyciu technologii, która posiada wsparcie technologii wspomagających.
     </p>
-
     <p>
-      Content that can be "programmatically determined" can be transformed (by user agents
-      including AT) into different sensory formats (e.g., visual, auditory) or styles of
-      presentation need by individual users. If existing assistive technologies cannot do
-      this, then the information cannot be said to be programmatically determined.
+      Treść, którą można „określić programowo”, może być przekształcona (przez oprogramowanie użytkownika, w tym technologie wspomagające) na różne formaty sensoryczne (np. wizualne, słuchowe) lub style prezentacji potrzebne poszczególnym użytkownikom. Jeśli istniejące technologie wspomagające nie są w stanie tego zrobić, to nie można powiedzieć, że informacje są określane programowo.
     </p>
-
     <p>
-      The term was created in order to allow the working group to clearly identify those
-      places where information had to be accessible to assistive technologies (and other
-      user agents acting as accessibility aids) without specifying exactly how this needed
-      to be done. This is important because of the continually changing nature of the technologies.
-      The term allows the guidelines to identify what needs to be "programmatically determined"
-      in order to meet the guidelines, and then have separate documents (the How to Meet,
-      Understanding, and Technique documents), which can be updated over time, list the
-      specific techniques that will work and be sufficient at any point in time based on
-      user agent and assistive technology support.
+      Termin ten został stworzony, aby umożliwić grupie roboczej jasne określenie miejsc, w których informacje muszą być dostępne dla technologii wspomagających (i innych programów użytkownika działających jako pomoce w zakresie dostępności), bez określania dokładnie, jak należy to zrobić. Jest to ważne ze względu na stale zmieniający się charakter tych technologii. Termin ten pozwala na określenie w wytycznych tego, co należy „programowo określić”, aby spełnić wytyczne, a następnie w osobnych dokumentach (dokumenty Jak spełnić, Objaśnienia i Techniki), które mogą być aktualizowane w czasie, wymieniać konkretne techniki, które będą działać i będą wystarczające w dowolnym momencie w oparciu o program użytkownika i wsparcie technologii wspomagającej.
     </p>
 
     <section id="ASvsPD">
 
-      <h3>"Accessibility Supported" vs. "Programmatically Determined"</h3>
-
+      <h3>„Obsługiwana dostępność” a „określone programowo”</h3>
       <p>
-        "Accessibility supported" relates to support by user agents (including assistive technologies)
-        of particular ways of using Web technologies. Uses of Web technologies that are accessibility
-        supported will work with assistive technologies and access features in mainstream
-        user agents (browsers and players etc.).
+        „Obsługiwana dostępność” odnosi się do obsługi przez programy użytkownika (w tym technologie wspomagające) określonych sposobów korzystania z technologii internetowych. Korzystanie technologii internetowych, które obsługują dostępność, będzie współpracować z technologiami wspomagającymi i funkcjami dostępu w popularnych narzędziach użytkownika (przeglądarkach, odtwarzaczach itp.).
       </p>
-
       <p>
-        "Programmatically determined" relates to the information in Web Content. If technologies
-        that are accessibility supported are used properly, then assistive technologies and
-        user agents can access the information in the content (i.e., programmatically determine
-        the information in the content) and present it to the user.
+        „Określone programowo” odnosi się do informacji zawartych w treściach internetowych. Jeśli technologie obsługujące dostępność są używane właściwie, wówczas technologie wspomagające i programy użytkownika mogą uzyskiwać dostęp do informacji w treści (tj. programowo określać informacje w treści) i przedstawić je użytkownikowi.
       </p>
-
       <p>
-        The two concepts work together to ensure that information can be presented to the
-        user by user agents including assistive technologies. Authors must rely only on uses
-        of technologies that are accessibility-supported — and must use them properly in order
-        for the information to be programmatically determinable — and hence presentable, by
-        assistive technologies and user agents to users with disabilities.
+        Te dwie koncepcje współpracują ze sobą, aby zapewnić, że informacje mogą być przedstawiane użytkownikowi przez oprogramowanie użytkownika, w tym technologie wspomagające. Twórcy muszą polegać wyłącznie na technologiach, które obsługują dostępność i muszą używać ich we właściwy sposób, aby informacje można było określić programowo - a tym samym prezentować użytkownikom z niepełnosprawnościami za pomocą technologii wspomagających i programów użytkownika.
       </p>
 
     </section>
@@ -845,16 +633,12 @@ która może być dostępna za pomocą technologii wspomagających.&lt;/p>
   </section>
 
   <section id="conforming-alt-versions">
-
-    <h2>Understanding Conforming Alternate Versions</h2>
-
+    <h2>Objaśnienie pojęcia zgodne wersje alternatywne</h2>
     <p>
-      Conformance requirement #1 allows non-conforming pages to be included within the scope
-      of conformance as long as they have a "conforming alternate version". The conforming
-      alternative version is defined as:
+      Wymóg zgodności nr 1 umożliwia uwzględnienie stron niezgodnych w zakresie zgodności, o ile mają one „zgodną wersję alternatywną". Zgodna wersja alternatywna jest zdefiniowana jako:
     </p>
 
-    <blockquote class="scquote" data-include="../guidelines/terms/20/conforming-alternate-version.html">conforming alternate version</blockquote>
+    <blockquote class="scquote" data-include="../guidelines/terms/20/zgodna-wersja-alternatywna.html">zgodna wersja alternatywna</blockquote>
 
     <p>
       This ensures that all of the information and all of the functionality that is on the
@@ -1172,7 +956,7 @@ która może być dostępna za pomocą technologii wspomagających.&lt;/p>
 
     <p>The definition of a Web Page is:</p>
 
-    <blockquote class="scquote" data-include="../guidelines/terms/20/web-page.html">web page</blockquote>
+    <blockquote class="scquote" data-include="../guidelines/terms/20/strona-internetowa.html">web page</blockquote>
 
     <p>
       It is important to note that, in this standard, the term "Web page" includes much
