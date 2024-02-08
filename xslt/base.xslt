@@ -237,8 +237,8 @@
           </xsl:choose>
 						<a class="minimal-header-link">
 							<xsl:attribute name="href">
-								<xsl:if test="$documentset = 'Understanding'"><xsl:value-of select="$loc.understanding"/>o</xsl:if>
-								<xsl:if test="$documentset = 'Techniques'"><xsl:value-of select="$loc.techniques"/>o</xsl:if>
+								<xsl:if test="$documentset = 'Understanding'"><xsl:value-of select="$loc.understanding"/>about</xsl:if>
+								<xsl:if test="$documentset = 'Techniques'"><xsl:value-of select="$loc.techniques"/>about</xsl:if>
 							</xsl:attribute>
 							<xsl:text>O WCAG </xsl:text>
 							<xsl:value-of select="$documentset.name"/>
