@@ -879,11 +879,18 @@
       <!-- Replace Polish special characters -->
       <xsl:when test="contains($inputString, 'ą')">
         <xsl:value-of select="substring-before($inputString, 'ą')"/>
-        <xsl:text>z</xsl:text>
+        <xsl:text>a</xsl:text>
         <xsl:call-template name="replaceUnsafeChars">
           <xsl:with-param name="inputString" select="substring-after($inputString, 'ą')"/>
         </xsl:call-template>
       </xsl:when>
+      <xsl:when test="contains($inputString, 'ś')">
+        <xsl:value-of select="substring-before($inputString, 'ś')"/>
+        <xsl:text>s</xsl:text>
+        <xsl:call-template name="replaceUnsafeChars">
+          <xsl:with-param name="inputString" select="substring-after($inputString, 'ś')"/>
+        </xsl:call-template>
+      </xsl:when>  
       <!-- Add more cases for other Polish special characters -->
       <!-- When no special character is found, copy the remaining string -->
       <xsl:otherwise>
