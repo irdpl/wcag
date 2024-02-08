@@ -10,8 +10,8 @@
 		<xsl:param name="meta" tunnel="yes"/>
 		<xsl:variable name="type">
 			<xsl:choose>
-				<xsl:when test="name($meta) = 'guideline'">Guideline </xsl:when>
-				<xsl:when test="name($meta) = 'success-criterion'">Success Criterion </xsl:when>
+				<xsl:when test="name($meta) = 'guideline'">Wytyczna </xsl:when>
+				<xsl:when test="name($meta) = 'success-criterion'">Kryterium sukcesu </xsl:when>
 			</xsl:choose>
 		</xsl:variable>
 		<xsl:if test="$type != ''">
@@ -33,8 +33,8 @@
 							<a href="{$meta/preceding-sibling::guideline[1]/file/@href}">
 								<xsl:call-template name="prevnext-previous"/>
 								<span class="pager--item-text">
-									<span class="pager--item-text-direction">Previous:</span>
-									<span class="pager--item-text-target">Guideline: <xsl:value-of select="$meta/preceding-sibling::guideline[1]/name"/></span>
+									<span class="pager--item-text-direction">Poprzednie:</span>
+									<span class="pager--item-text-target">Wytyczna: <xsl:value-of select="$meta/preceding-sibling::guideline[1]/name"/></span>
 								</span>
 							</a>
 						</li>
@@ -44,7 +44,7 @@
 							<a href="{$meta/parent::principle/preceding-sibling::principle[1]/guideline[last()]/file/@href}">
 								<xsl:call-template name="prevnext-previous"/>
 								<span class="pager--item-text">
-									<span class="pager--item-text-direction">Previous Guideline</span>: <span class="pager--item-text-target"><xsl:value-of select="$meta/parent::principle/preceding-sibling::principle[1]/guideline[last()]/name"/></span>
+									<span class="pager--item-text-direction">Poprzenia wytyczna</span>: <span class="pager--item-text-target"><xsl:value-of select="$meta/parent::principle/preceding-sibling::principle[1]/guideline[last()]/name"/></span>
 								</span>
 							</a>
 						</li>
@@ -68,7 +68,7 @@
 							<a href="{$meta/following-sibling::guideline[1]/file/@href}">
 								<xsl:call-template name="prevnext-next"/>
 								<span class="pager--item-text">
-									<span class="pager--item-text-direction">Next Guideline:</span>
+									<span class="pager--item-text-direction">Następna wytyczna:</span>
 									<span class="pager--item-text-target">
 										<xsl:value-of select="$meta/following-sibling::guideline[1]/name"/>
 									</span>
@@ -81,7 +81,7 @@
 							<a href="{$meta/parent::principle/following-sibling::principle[1]/guideline[1]/file/@href}">
 								<xsl:call-template name="prevnext-next"/>
 								<span class="pager--item-text">
-									<span class="pager--item-text-direction">Next Guideline:</span>
+									<span class="pager--item-text-direction">Następna wytyczna:</span>
 									<span class="pager--item-text-target">
 										<xsl:value-of select="$meta/parent::principle/following-sibling::principle[1]/guideline[1]/name"/>
 									</span>
@@ -107,7 +107,7 @@
 				<li class="pager--item context">
 					<a href="{$meta/parent::guideline[1]/file/@href}">
 						<span class="pager--item-text">
-							<span class="pager--item-text-direction"><abbr title="Guideline">Part of Guideline</abbr>:</span>
+							<span class="pager--item-text-direction"><abbr title="Wytyczna">Część wytycznej</abbr>:</span>
 							<span class="pager--item-text-target">
 								<xsl:value-of select="$meta/parent::guideline[1]/name"/>
 							</span>
@@ -120,7 +120,7 @@
 							<a href="{$meta/preceding-sibling::success-criterion[1]/file/@href}">
 								<xsl:call-template name="prevnext-previous"/>
 								<span class="pager--item-text">
-									<span class="pager--item-text-direction">Previous <abbr title="Success Criterion">SC</abbr>:</span>
+									<span class="pager--item-text-direction">Poprzednie <abbr title="kryterium sukcesu">KS</abbr>:</span>
 									<span class="pager--item-text-target">
 										<xsl:value-of select="$meta/preceding-sibling::success-criterion[1]/name"/>
 									</span>
@@ -133,7 +133,7 @@
 							<a href="{$meta/parent::guideline/preceding-sibling::guideline[1]/success-criterion[last()]/file/@href}">
 								<xsl:call-template name="prevnext-previous"/>
 								<span class="pager--item-text">
-									<span class="pager--item-text-direction">Previous <abbr title="Success Criterion">SC</abbr>:</span>
+									<span class="pager--item-text-direction">Poprzednie <abbr title="kryterium sukcesu">KS</abbr>:</span>
 									<span class="pager--item-text-target">
 										<xsl:value-of select="$meta/parent::guideline/preceding-sibling::guideline[1]/success-criterion[last()]/name"/>
 									</span>
@@ -144,7 +144,7 @@
 							<a href="{$meta/parent::guideline/preceding-sibling::guideline[1]/success-criterion[last()]/file/@href}">
 								<xsl:call-template name="prevnext-previous"/>
 								<span class="pager--item-text">
-									<span class="pager--item-text-direction">Previous <abbr title="Success Criterion">SC</abbr>:</span>
+									<span class="pager--item-text-direction">Poprzednie <abbr title="kryterium sukcesu">KS</abbr>:</span>
 									<span class="pager--item-text-target">
 										<xsl:value-of select="$meta/parent::guideline/preceding-sibling::guideline[1]/success-criterion[last()]/name"/>
 									</span>
@@ -157,7 +157,7 @@
 							<a href="{$meta/ancestor::principle/preceding-sibling::principle[1]/guideline[last()]/success-criterion[last()]/file/@href}">
 								<xsl:call-template name="prevnext-previous"/>
 								<span class="pager--item-text">
-									<span class="pager--item-text-direction">Previous <abbr title="Success Criterion">SC</abbr>:</span>
+									<span class="pager--item-text-direction">Poprzednie <abbr title="kryterium sukcesu">KS</abbr>:</span>
 									<span class="pager--item-text-target">
 										<xsl:value-of select="$meta/ancestor::principle/preceding-sibling::principle[1]/guideline[last()]/success-criterion[last()]/name"/>
 									</span>
@@ -170,7 +170,7 @@
 							<a href="{$meta/ancestor::principle/preceding-sibling::understanding[1]/file/@href}">
 								<xsl:call-template name="prevnext-previous"/>
 								<span class="pager--item-text">
-									<span class="pager--item-text-direction">Previous: </span>
+									<span class="pager--item-text-direction">Poprzednie: </span>
 									<span class="pager--item-text-target">
 										<xsl:value-of select="$meta/ancestor::principle/preceding-sibling::understanding[1]/name"/>
 									</span>
@@ -185,7 +185,7 @@
 							<a href="{$meta/following-sibling::success-criterion[1]/file/@href}">
 								<xsl:call-template name="prevnext-next"/>
 								<span class="pager--item-text">
-									<span class="pager--item-text-direction">Next <abbr title="Success Criterion">SC</abbr>:</span>
+									<span class="pager--item-text-direction">Następne <abbr title="kryterium sukcesu">KS</abbr>:</span>
 									<span class="pager--item-text-target">
 										<xsl:value-of select="$meta/following-sibling::success-criterion[1]/name"/>
 									</span>
@@ -198,7 +198,7 @@
 							<a href="{$meta/parent::guideline/following-sibling::guideline[1]/success-criterion[1]/file/@href}">
 								<xsl:call-template name="prevnext-next"/>
 								<span class="pager--item-text">
-									<span class="pager--item-text-direction">Next <abbr title="Success Criterion">SC</abbr>:</span>
+									<span class="pager--item-text-direction">Następne <abbr title="kryterium sukcesu">KS</abbr>:</span>
 									<span class="pager--item-text-target">
 										<xsl:value-of select="$meta/parent::guideline/following-sibling::guideline[1]/success-criterion[1]/name"/>
 									</span>
@@ -211,7 +211,7 @@
 							<a href="{$meta/ancestor::principle/following-sibling::principle[1]/guideline[1]/success-criterion[1]/file/@href}">
 								<xsl:call-template name="prevnext-next"/>
 								<span class="pager--item-text">
-									<span class="pager--item-text-direction">Next <abbr title="Success Criterion">SC</abbr>: </span>
+									<span class="pager--item-text-direction">Następne <abbr title="kryterium sukcesu">KS</abbr>: </span>
 									<span class="pager--item-text-target">
 										<xsl:value-of select="$meta/ancestor::principle/following-sibling::principle[1]/guideline[1]/success-criterion[1]/name"/>
 									</span>
@@ -224,7 +224,7 @@
 							<a href="{$meta/ancestor::principle/following-sibling::understanding[1]/file/@href}">
 								<xsl:call-template name="prevnext-next"/>
 								<span class="pager--item-text">
-									<span class="pager--item-text-direction">Next: </span>
+									<span class="pager--item-text-direction">Następne: </span>
 									<span class="pager--item-text-target">
 										<xsl:value-of select="$meta/ancestor::principle/following-sibling::understanding[1]/name"/>
 									</span>
@@ -240,7 +240,7 @@
 						<a href="{$meta/preceding-sibling::understanding[1]/file/@href}">
 							<xsl:call-template name="prevnext-previous"/>
 							<span class="pager--item-text">
-								<span class="pager--item-text-direction">Previous: </span>
+								<span class="pager--item-text-direction">Poprzednie: </span>
 								<span class="pager--item-text-target">
 									<xsl:value-of select="$meta/preceding-sibling::understanding[1]/name"/>
 								</span>
@@ -253,7 +253,7 @@
 						<a href="{$meta/preceding-sibling::principle[1]/guideline[last()]/file/@href}">
 							<xsl:call-template name="prevnext-previous"/>
 							<span class="pager--item-text-direction">
-								<span class="pager--item-text">Previous Guideline:</span>
+								<span class="pager--item-text">Poprzednia wytyczna:</span>
 								<span class="pager--item-text-target">
 									<xsl:value-of select="$meta/preceding-sibling::principle[1]/guideline[last()]/name"/>
 								</span>
@@ -264,7 +264,7 @@
 						<a href="{$meta/preceding-sibling::principle[1]/guideline[last()]/success-criterion[last()]/file/@href}">
 							<xsl:call-template name="prevnext-previous"/>
 							<span class="pager--item-text">
-								<span class="pager--item-text-direction">Previous <abbr title="Success Criterion">SC</abbr>:</span>
+								<span class="pager--item-text-direction">Poprzednie <abbr title="Success Criterion">SC</abbr>:</span>
 								<span class="pager--item-text-target">
 									<xsl:value-of select="$meta/preceding-sibling::principle[1]/guideline[last()]/success-criterion[last()]/name"/>
 								</span>
@@ -277,7 +277,7 @@
 						<a href="{$meta/following-sibling::principle[1]/guideline[1]/file/@href}">
 							<xsl:call-template name="prevnext-previous"/>
 							<span class="pager--item-text">
-								<span class="pager--item-text-direction">First Guideline: </span>
+								<span class="pager--item-text-direction">Pierwsza wytyczna: </span>
 								<span class="pager--item-text-target">
 									<xsl:value-of select="$meta/following-sibling::principle[1]/guideline[1]/name"/>
 								</span>
@@ -288,7 +288,7 @@
 						<a href="{$meta/following-sibling::principle[1]/guideline[1]/success-criterion[1]/file/@href}">
 							<xsl:call-template name="prevnext-previous"/>
 							<span class="pager--item-text">
-								<span class="pager--item-text-direction">First <abbr title="Success Criterion">SC</abbr>: </span>
+								<span class="pager--item-text-direction">Pierwsze <abbr title="Success Criterion">SC</abbr>: </span>
 								<span class="pager--item-text-target">
 									<xsl:value-of select="$meta/following-sibling::principle[1]/guideline[1]/success-criterion[1]/name"/>
 								</span>
@@ -301,7 +301,7 @@
 						<a href="{$meta/following-sibling::understanding[1]/file/@href}">
 							<xsl:call-template name="prevnext-next"/>
 							<span class="pager--item-text">
-								<span class="pager--item-text-direction">Next: </span>
+								<span class="pager--item-text-direction">Następne: </span>
 								<span class="pager--item-text-target">
 									<xsl:value-of select="$meta/following-sibling::understanding[1]/name"/>
 								</span>
@@ -368,56 +368,56 @@
 					<xsl:when test="count($meta1/preceding-sibling::guideline) = 0 and not($meta1/parent::principle/preceding-sibling::principle)">
 						<xsl:call-template name="meta-link">
 							<xsl:with-param name="meta-for-link" select="$meta1/parent::principle/preceding-sibling::understanding[1]"/>
-							<xsl:with-param name="prevnexttype">Previous</xsl:with-param>
-							<xsl:with-param name="prevnextdir">previous</xsl:with-param>
+							<xsl:with-param name="prevnexttype">Poprzednie</xsl:with-param>
+							<xsl:with-param name="prevnextdir">poprzednie</xsl:with-param>
 						</xsl:call-template>
 					</xsl:when>
 					<!-- is second guideline of first principle -->
 					<xsl:when test="count($meta1/preceding-sibling::guideline) = 1 and not($meta1/parent::principle/preceding-sibling::principle)">
 						<xsl:call-template name="meta-link">
 							<xsl:with-param name="meta-for-link" select="$meta1/preceding-sibling::guideline[1]"/>
-							<xsl:with-param name="prevnexttype">Previous</xsl:with-param>
-							<xsl:with-param name="prevnextdir">previous</xsl:with-param>
+							<xsl:with-param name="prevnexttype">Poprzednie</xsl:with-param>
+							<xsl:with-param name="prevnextdir">poprzednie</xsl:with-param>
 						</xsl:call-template>
 					</xsl:when>
 					<!-- is second guideline of another principle -->
 					<xsl:when test="count($meta1/preceding-sibling::guideline) = 1 and $meta1/parent::principle/preceding-sibling::principle">
 						<xsl:call-template name="meta-link">
 							<xsl:with-param name="meta-for-link" select="$meta1/preceding-sibling::guideline[1]"/>
-							<xsl:with-param name="prevnexttype">Previous</xsl:with-param>
-							<xsl:with-param name="prevnextdir">previous</xsl:with-param>
+							<xsl:with-param name="prevnexttype">Poprzednie</xsl:with-param>
+							<xsl:with-param name="prevnextdir">poprzednie</xsl:with-param>
 						</xsl:call-template>
 					</xsl:when>
 					<!-- guidelines after the second -->
 					<xsl:when test="$meta1/self::guideline and count($meta1/preceding-sibling::guideline) &gt; 1">
 						<xsl:call-template name="meta-link">
 							<xsl:with-param name="meta-for-link" select="$meta1/preceding-sibling::guideline[1]"/>
-							<xsl:with-param name="prevnexttype">Previous</xsl:with-param>
-							<xsl:with-param name="prevnextdir">previous</xsl:with-param>
+							<xsl:with-param name="prevnexttype">Poprzednie</xsl:with-param>
+							<xsl:with-param name="prevnextdir">poprzednie</xsl:with-param>
 						</xsl:call-template>
 					</xsl:when>
 					<!-- go to last guideline of previous principle if needed-->
 					<xsl:when test="$meta1/self::guideline and count($meta1/preceding-sibling::guideline) = 0 and $meta1/parent::principle/preceding-sibling::principle">
 						<xsl:call-template name="meta-link">
 							<xsl:with-param name="meta-for-link" select="$meta1/parent::principle/preceding-sibling::principle[1]/guideline[last()]"/>
-							<xsl:with-param name="prevnexttype">Previous</xsl:with-param>
-							<xsl:with-param name="prevnextdir">previous</xsl:with-param>
+							<xsl:with-param name="prevnexttype">Poprzednie</xsl:with-param>
+							<xsl:with-param name="prevnextdir">poprzednie</xsl:with-param>
 						</xsl:call-template>
 					</xsl:when>
 					<!-- is first understanding after guidelines -->
 					<xsl:when test="$meta1/self::understanding and $meta1/preceding-sibling::*[1]/self::principle">
 						<xsl:call-template name="meta-link">
 							<xsl:with-param name="meta-for-link" select="$meta1/preceding-sibling::principle[1]/guideline[last()]"/>
-							<xsl:with-param name="prevnexttype">Previous</xsl:with-param>
-							<xsl:with-param name="prevnextdir">previous</xsl:with-param>
+							<xsl:with-param name="prevnexttype">Poprzednie</xsl:with-param>
+							<xsl:with-param name="prevnextdir">poprzednie</xsl:with-param>
 						</xsl:call-template>
 					</xsl:when>
 					<!-- any understanding page but first -->
 					<xsl:when test="$meta1/self::understanding and count($meta1/preceding-sibling::understanding) &gt; 0">
 						<xsl:call-template name="meta-link">
 							<xsl:with-param name="meta-for-link" select="$meta1/preceding-sibling::understanding[1]"/>
-							<xsl:with-param name="prevnexttype">Previous</xsl:with-param>
-							<xsl:with-param name="prevnextdir">previous</xsl:with-param>
+							<xsl:with-param name="prevnexttype">Poprzednie</xsl:with-param>
+							<xsl:with-param name="prevnextdir">poprzednie</xsl:with-param>
 						</xsl:call-template>
 					</xsl:when>
 				</xsl:choose>
@@ -449,48 +449,48 @@
 			<xsl:when test="$meta/self::guideline and count($meta1/following-sibling::guideline) = 1 and not($meta1/parent::principle/following-sibling::principle)">
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta1/following-sibling::guideline[1]"/>
-					<xsl:with-param name="prevnexttype">Next</xsl:with-param>
-					<xsl:with-param name="prevnextdir">next</xsl:with-param>
+					<xsl:with-param name="prevnexttype">Następne</xsl:with-param>
+					<xsl:with-param name="prevnextdir">następne</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<!-- is last guideline -->
 			<xsl:when test="$meta1/self::guideline and not($meta1/following-sibling::guideline) and not($meta1/parent::principle/following-sibling::principle)">
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta1/parent::principle/following-sibling::understanding[1]"/>
-					<xsl:with-param name="prevnexttype">Next</xsl:with-param>
-					<xsl:with-param name="prevnextdir">next</xsl:with-param>
+					<xsl:with-param name="prevnexttype">Następne</xsl:with-param>
+					<xsl:with-param name="prevnextdir">następne</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<!-- Go to first guideline of next principle if needed -->
 			<xsl:when test="$meta/self::guideline and count($meta1/following-sibling::guideline) = 0 and $meta1/parent::principle/following-sibling::principle">
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta1/parent::principle/following-sibling::principle[1]/guideline[1]"/>
-					<xsl:with-param name="prevnexttype">Next</xsl:with-param>
-					<xsl:with-param name="prevnextdir">next</xsl:with-param>
+					<xsl:with-param name="prevnexttype">Następne</xsl:with-param>
+					<xsl:with-param name="prevnextdir">następne</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<!-- is last understanding before guidelines -->
 			<xsl:when test="$meta1/self::understanding and $meta1/following-sibling::*[1]/self::principle">
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta1/following-sibling::principle[1]/guideline[1]"/>
-					<xsl:with-param name="prevnexttype">Next</xsl:with-param>
-					<xsl:with-param name="prevnextdir">next</xsl:with-param>
+					<xsl:with-param name="prevnexttype">Następne</xsl:with-param>
+					<xsl:with-param name="prevnextdir">następne</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<!-- has a following guideline -->
 			<xsl:when test="$meta1/following-sibling::*[1]/self::guideline">
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta1/following-sibling::guideline[1]"/>
-					<xsl:with-param name="prevnexttype">Next</xsl:with-param>
-					<xsl:with-param name="prevnextdir">next</xsl:with-param>
+					<xsl:with-param name="prevnexttype">Następne</xsl:with-param>
+					<xsl:with-param name="prevnextdir">następne</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<!-- has a following understanding -->
 			<xsl:when test="$meta1/following-sibling::*[1]/self::understanding">
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta1/following-sibling::understanding[1]"/>
-					<xsl:with-param name="prevnexttype">Next</xsl:with-param>
-					<xsl:with-param name="prevnextdir">next</xsl:with-param>
+					<xsl:with-param name="prevnexttype">Następne</xsl:with-param>
+					<xsl:with-param name="prevnextdir">następne</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<xsl:otherwise>
@@ -574,8 +574,8 @@
 		
 		<xsl:variable name="prefix-text">
 			<xsl:choose>
-				<xsl:when test="$meta-for-link/self::guideline">Guideline</xsl:when>
-				<xsl:when test="$meta-for-link/self::success-criterion">SC</xsl:when>
+				<xsl:when test="$meta-for-link/self::guideline">Wytyczna</xsl:when>
+				<xsl:when test="$meta-for-link/self::success-criterion">KS</xsl:when>
 				<xsl:when test="$meta-for-link/self::understanding"/>
 			</xsl:choose>
 		</xsl:variable>
@@ -624,7 +624,7 @@
 									<xsl:attribute name="class">active</xsl:attribute>
 									<xsl:attribute name="aria-current">page</xsl:attribute>
 								</xsl:if>
-								All Understanding Docs
+								Wszystkie objaśnienia
 							</a>
 						</li>
 						<xsl:if test="$meta/self::guideline or $meta/self::understanding">
@@ -722,7 +722,7 @@
 				</xsl:if>
 				<xsl:if test="//html:a[not(@href)] | $meta/content/descendant::html:a[not(@href)]">
 					<li>
-						<a href="#key-terms">Kluczowe terminy</a>
+						<a href="#key-terms">Kluczowe pojęcia</a>
 					</li>
 				</xsl:if>
 				<xsl:if test="$act.doc//func:array[@key = 'successCriteria'][func:string = $meta/@id]">
@@ -812,7 +812,7 @@
 					<xsl:copy-of select="$meta/ancestor::guidelines/term[name = current()]"/>
 				</xsl:for-each>
 			</xsl:variable>
-			<section id="key-terms"><details><summary><h2>Kluczowe terminy</h2></summary>
+			<section id="key-terms"><details><summary><h2>Kluczowe pojęcia</h2></summary>
 			<xsl:apply-templates select="$termids" mode="key-terms">
 				<xsl:sort select="id"/>
 			</xsl:apply-templates>
