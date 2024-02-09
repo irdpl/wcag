@@ -48,13 +48,10 @@
       <p>
         Jednak najprostszym sposobem spełnienia wymagań dotyczących rozmiaru jest użycie wskaźnika fokusu, który <em>ma</em> ciągły kontur o grubości 2 pikseli CSS.
       </p>
-      <div class="note">
-        <div role="heading" class="note-title marker" aria-level="4">Uwaga</div>
-        <p>
-          <a>Piksel CSS</a> jest tym, czego programiści używają w deklaracjach CSS, takich jak „width”: 200px”. Jest niezależny od urządzenia i nie należy go mylić z pikselami urządzenia, które różnią się w zależności od fizycznej gęstości pikseli. <br>
+      <p class="note">
+          <a>Piksel CSS</a> jest tym, czego programiści używają w deklaracjach CSS, takich jak „width”: 200px”. Jest niezależny od urządzenia i nie należy go mylić z pikselami urządzenia, które różnią się w zależności od fizycznej gęstości pikseli. <br />
           W pozostałej części tego dokumentu piksele CSS są oznaczone jako „px”.
         </p>
-      </div>
       <section id="area-solid-outline">
         <h4>Używanie ciągłego konturu</h4>
         <p>
@@ -124,12 +121,9 @@
           <dt>Zaokrąglony prostokąt o szerokości <em>w</em>, wysokości <em>h</em> i promieniu obramowania <em>r</em></dt>
           <dd>4<em>h</em> + 4<em>w</em> – (16 – 4𝜋)<em>r</em></dd>
         </dl>
-        <div class="note">
-          <div role="heading" class="note-title marker" aria-level="5">Uwaga</div>
-          <p>
+          <p class="note">
             Jeśli musisz zastosować skomplikowaną matematykę, aby ustalić, czy wskaźnik fokusu jest wystarczająco duży, prawdopodobnie jest to znak, że powinieneś zamiast tego użyć większego wskaźnika. Im bardziej widoczna zmiana po ustawieniu fokusu na elemencie, tym łatwiej jest ją zobaczyć.
           </p>
-        </div>
         <p>
           W poniższych 2 przykładach zastosowano przycisk o wymiarach 90 pikseli szerokości i 30 pikseli wysokości, a minimalny wymagany obszar wynosi 480 pikseli<sup>2</sup>:
         </p>
@@ -145,12 +139,9 @@
             Rysunek 6 Kryterium spełnione: prostokąty wskaźników po obu stronach przycisku z fokusem mają szerokość 9 pikseli i wysokość 28 pikseli. W sumie mają one rozmiar 504px<sup>2</sup>, co ledwo spełnia minimum 480px<sup>2</sup> .
           </figcaption>
         </figure>
-        <div class="note">
-          <div role="heading" class="note-title marker" aria-level="5">Uwaga</div>
-          <p>
+          <p class="note">
             Preferuj stosowanie technik wskaźników fokusu, które skalują się zarówno z szerokością, jak i wysokością kontrolki z fokusem. W przeciwnym razie, jeśli elementy sterujące zmieniają rozmiar w różnych odmianach strony (na przykład w przypadku projektu responsywnego), wskaźnik może  w niektórych odmianach spełniać wymagania dotyczące obszaru, ale w innych nie. Na przykład na powyższym rysunku, jeśli szerokość dwóch wyróżnionych prostokątów nie skalowałaby się wraz ze wzrostem szerokości przycisku, przestałaby spełniać minimalne wymagania dotyczące obszaru, gdyby przycisk musiał się powiększyć, aby pomieścić dłuższą etykietę.
           </p>
-        </div>
         <p>
           Innym sposobem osiągnięcia wymaganej powierzchni jest zmiana wyglądu całego elementu, na przykład poprzez zmianę jego koloru. Może to być skuteczne w przypadku zestawu blisko rozmieszczonych przycisków. Poniższy przykład ilustruje to z 5 gwiazdkami; środkowa gwiazdka jest wypełniona ciemniejszym kolorem, aby wskazać fokus. Jednak znacznie trudniej jest wykryć taki wskaźnik fokusu, gdy komponenty nie znajdują się blisko siebie i dlatego nie można ich łatwo porównać. Dla użytkowników korzystających z powiększenia porównanie komponentów znajdujących się nawet stosunkowo blisko siebie może być trudne, dlatego nie jest to uważane za dobrą praktykę.
         </p>
@@ -271,12 +262,9 @@
             Rysunek 17 Kryterium spełnione: ten sam przycisk z fokusem z usuniętymi niekontrastującymi obszarami. Kontrastujący obszar ma grubość 6 pikseli wzdłuż większości dolnej krawędzi i 3–4 pikseli grubości po lewej i prawej krawędzi, co jest wystarczające, aby spełnić wymagania dotyczące minimalnego obszaru.
           </figcaption>
         </figure>
-        <div class="note">
-          <div role="heading" class="note-title marker" aria-level="5">Uwaga</div>
-          <p>
+          <p class="note">
             Niektóre przykłady w tym dokumencie to zrzuty ekranowe elementów. Ze względu na utratę rozdzielczości tych obrazów rzeczywisty kolor pikseli może różnić się od oryginału. W związku z tym służą one celom ilustracyjnym i nie należy ich sprawdzać piksel po pikselu pod kątem wystarczającego kontrastu.
           </p>
-        </div>
         <p>
           Niektóre projekty mają strony z niejednolitym obrazem tła pokrywającym całość (lub część) strony lub wykorzystują efekty przewijania paralaksy, które dają niemal nieskończoną liczbę kombinacji kolorów, jeśli strona jest przewijana i/lub wprowadzane są zmiany do rozmiaru widocznego obszaru strony (rzutni).
         </p>
@@ -361,7 +349,7 @@
       <h3>Wskaźniki fokusu wokół komponentu i podrzędnego komponentu</h3>
       <figure id="component-complex-both">
         <img src="img/component-complex-both.png" alt="Trzy przyciski zakładek pokazane w ciemnoniebieskim prostokącie wokół wszystkich trzech przycisków zakładek. Pierwszy przycisk zakładki również ma ciemny kontur i niebieski pasek wskazujący, że jest zaznaczony.">
-        <br>
+        <br />
         <img src="img/component-complex-both-unselected.png" alt="Wybrano tę samą listę zakładek, z wyjątkiem pierwszej zakładek, ale druga ma obrys fokusu.">
         <figcaption>
           Rysunek 21 Ten sam panel kart w dwóch stanach. W pierwszym przypadku fokus skupiony jest zarówno na liście zakładek, jak i na aktualnie wybranej karcie; w drugim przypadku fokus jest skupiony zarówno wokół listy zakładek, jak i niewybranej karty.
@@ -446,12 +434,9 @@
         <p>
           Domyślne wskaźniki fokusu przeglądarki mogą być <em>trudniejsze</em> do zauważenia, jeśli autor zmodyfikuje piksele bezpośrednio przylegające do wskaźnika (powszechnie określane jako jego tło), poprzez umieszczenie komponentu na górze obrazu lub tła gradientowego lub zmianę domyślnego białego koloru tła strony, na przykład przy użyciu niebieskiego tła w połączeniu z niebieskim domyślnym wskaźnikiem przeglądarki. Z tego powodu, jeśli autor zmienia piksele bezpośrednio przylegające do domyślnego wskaźnika fokusu, wyjątek dotyczący programu użytkownika nie ma zastosowania, a autor będzie musiał sprawdzić, czy spełniają one wymagania dotyczące rozmiaru i kontrastu określone w tym kryterium sukcesu.
         </p>
-        <div class="note">
-          <div role="heading" class="note-title marker" aria-level="5">Uwaga</div>
-          <p>
+          <p class="note">
             Zmiana atrybutu <code>koloru tła</code> elementu <code>body</code> <em>jest</em> w większości implementacji jednym ze sposobów zmiany pikseli bezpośrednio sąsiadujących ze wskaźnikiem. Jednakże określenie wartości bieli (<code>#FFFFFF</code>) nie unieważnia tego wyjątku, ponieważ, jak ustalono w trzeciej uwadze definicji <a>współczynnika kontrastu</a>, przyjmuje się, że domyślnym („nieokreślonym”) kolorem jest biały.
           </p>
-        </div>
         <p>
           Ponadto, jeśli przeglądarka domyślnie udostępnia wskaźnik <em>wewnątrz</em> komponentu, autorzy mogą potencjalnie zmniejszyć widoczność, zmieniając kolor komponentu (który w takim scenariuszu jest kolorem tła wskaźnika fokusu). Na przykład, jeśli domyślny wskaźnik przycisku ma kolorową wewnętrzną ramkę, autorzy mogą negatywnie wpłynąć na wygląd fokusu, nadając kolorowi przycisku lub jego obramowaniu bez fokusu kolor o podobnej jasności. Z tego powodu ten wyjątek dotyczący programu użytkownika może zostać spełniony tylko wtedy, gdy autor nie zmodyfikuje domyślnego wskaźnika fokusu <em>oraz</em> nie zmodyfikuje jego tła.
         </p>
