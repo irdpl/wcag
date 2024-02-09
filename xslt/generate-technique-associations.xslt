@@ -17,16 +17,103 @@
 			<xsl:apply-templates select="//guideline"/>
 		</associations>
 	</xsl:template>
+
+
+<!-- Define a template to replace URL-unsafe characters with their safe counterparts -->
+  <xsl:template name="replaceUnsafeChars">
+    <xsl:param name="inputString"/>
+    <xsl:choose>
+      <!-- Replace Polish special characters -->
+      <xsl:when test="contains($inputString, 'ą')">
+        <xsl:value-of select="substring-before($inputString, 'ą')"/>
+        <xsl:text>a</xsl:text>
+        <xsl:call-template name="replaceUnsafeChars">
+          <xsl:with-param name="inputString" select="substring-after($inputString, 'ą')"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="contains($inputString, 'ć')">
+        <xsl:value-of select="substring-before($inputString, 'ć')"/>
+        <xsl:text>c</xsl:text>
+        <xsl:call-template name="replaceUnsafeChars">
+          <xsl:with-param name="inputString" select="substring-after($inputString, 'ć')"/>
+        </xsl:call-template>
+      </xsl:when>	  
+      <xsl:when test="contains($inputString, 'ę')">
+        <xsl:value-of select="substring-before($inputString, 'ę')"/>
+        <xsl:text>e</xsl:text>
+        <xsl:call-template name="replaceUnsafeChars">
+          <xsl:with-param name="inputString" select="substring-after($inputString, 'ę')"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="contains($inputString, 'ł')">
+        <xsl:value-of select="substring-before($inputString, 'ł')"/>
+        <xsl:text>l</xsl:text>
+        <xsl:call-template name="replaceUnsafeChars">
+          <xsl:with-param name="inputString" select="substring-after($inputString, 'ł')"/>
+        </xsl:call-template>
+      </xsl:when>	  	  
+      <xsl:when test="contains($inputString, 'ń')">
+        <xsl:value-of select="substring-before($inputString, 'ń')"/>
+        <xsl:text>n</xsl:text>
+        <xsl:call-template name="replaceUnsafeChars">
+          <xsl:with-param name="inputString" select="substring-after($inputString, 'ń')"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="contains($inputString, 'ó')">
+        <xsl:value-of select="substring-before($inputString, 'ó')"/>
+        <xsl:text>o</xsl:text>
+        <xsl:call-template name="replaceUnsafeChars">
+          <xsl:with-param name="inputString" select="substring-after($inputString, 'ó')"/>
+        </xsl:call-template>
+      </xsl:when>	  
+      <xsl:when test="contains($inputString, 'ś')">
+        <xsl:value-of select="substring-before($inputString, 'ś')"/>
+        <xsl:text>s</xsl:text>
+        <xsl:call-template name="replaceUnsafeChars">
+          <xsl:with-param name="inputString" select="substring-after($inputString, 'ś')"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="contains($inputString, 'ż')">
+        <xsl:value-of select="substring-before($inputString, 'ż')"/>
+        <xsl:text>z</xsl:text>
+        <xsl:call-template name="replaceUnsafeChars">
+          <xsl:with-param name="inputString" select="substring-after($inputString, 'ż')"/>
+        </xsl:call-template>
+      </xsl:when>	  
+      <xsl:when test="contains($inputString, 'ź')">
+        <xsl:value-of select="substring-before($inputString, 'ź')"/>
+        <xsl:text>z</xsl:text>
+        <xsl:call-template name="replaceUnsafeChars">
+          <xsl:with-param name="inputString" select="substring-after($inputString, 'ź')"/>
+        </xsl:call-template>
+      </xsl:when>	 
+      <!-- Dodaj więcej przypadków dla innych polskich znaków specjalnych -->
+      <!-- Jeśli nie zostanie znaleziony żaden znak specjalny, skopiowany zostanie pozostały ciąg znaków -->
+      <xsl:otherwise>
+        <xsl:value-of select="$inputString"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+
+
 	
 	<xsl:template match="guideline | success-criterion">
+        <xsl:variable name="safeHref">
+            <!-- Replace URL-unsafe characters in the filename -->
+            <xsl:call-template name="replaceUnsafeChars">
+                <xsl:with-param name="inputString" select="file/@href"/>
+            </xsl:call-template>
+        </xsl:variable>		
 		<xsl:copy>
 			<xsl:attribute name="id" select="@id"/>
-			<xsl:apply-templates select="document(resolve-uri(concat(file/@href, '.html'), concat($understanding.dir, max($versions.doc//id[@id = current()/@id]/parent::version/@name), '/')))">
+			<xsl:apply-templates select="document(resolve-uri(concat($safeHref, '.html'), concat($understanding.dir, max($versions.doc//id[@id = current()/@id]/parent::version/@name), '/')))">
 				<xsl:with-param name="meta" select="." tunnel="yes"/>
 			</xsl:apply-templates>
 			<xsl:apply-templates select="guideline | success-criterion"/>
 		</xsl:copy>
 	</xsl:template>
+
 	
 	<xsl:template match="html:html">
 		<xsl:apply-templates select="descendant::html:section[@id = 'techniques']"/>
