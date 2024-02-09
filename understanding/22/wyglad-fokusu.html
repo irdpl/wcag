@@ -58,7 +58,7 @@
           Najłatwiejszym i najczęstszym sposobem spełnienia tego wymagania jest użycie ciągłego konturu wokół komponentu. Kontur musi mieć grubość co najmniej 2px. Poniższa ilustracja przedstawia <strong>minimalnie</strong> gruby wskaźnik fokusu, w którym pas białych pikseli o grubości 2 pikseli tworzących tło strony wokół przykładowego przycisku został zmieniony na czarny.
         </p>
         <figure id="focus-indicator-basic">
-          <img src="img/focus-indicator-basic.png" alt="2 niebieskie przyciski z ciemnym prostokątem fokusu o grubości 2 pikseli wokół drugiego">
+          <img src="img/focus-indicator-basic.png" alt="2 niebieskie przyciski z ciemnym prostokątem fokusu o grubości 2 pikseli wokół drugiego" />
           <figcaption>Rysunek 1 Kryterium spełnione: Wskaźnik fokusu to kontur z linii ciągłej o grubości 2 pikseli.</figcaption>
         </figure>
         <p>
@@ -74,11 +74,11 @@
           Na przykład przycisk w kształcie gwiazdy może wykorzystywać wskaźnik fokusu zgodny z kształtem gwiazdy lub wskaźnik fokusu zgodny z obwiednią gwiazdy. W poniższych przykładach zostały już wybrane te same trzy gwiazdki, a fokus jest na trzeciej gwiazdce. W pierwszym przykładzie zastosowano wskaźnik fokusu, który odpowiada kształtowi skupionej gwiazdy. W pierwszym przykładzie zastosowano wskaźnik fokusu, który odpowiada kształtowi gwiazdki, która  ma fokus. Drugi wykorzystuje prostokątny wskaźnik.
         </p>
         <figure id="focus-outline-solid">
-          <img src="img/focus-indicator-solid-outline.svg" alt="Trzy z pięciu gwiazdek są wybierane za pomocą wskaźnika fokusu w kształcie linii ciągłej w kształcie gwiazdy wyznaczającej trzecią">
+          <img src="img/focus-indicator-solid-outline.svg" alt="Trzy z pięciu gwiazdek są wybierane za pomocą wskaźnika fokusu w kształcie linii ciągłej w kształcie gwiazdy wyznaczającej trzecią" />
           <figcaption>Rysunek 2 Kryterium spełnione: wskaźnik konturu otacza trzecią z pięciu gwiazd.</figcaption>
         </figure>
         <figure id="focus-border-solid">
-          <img src="img/focus-indicator-solid-border.svg" alt="Wybrano 3 z 5 gwiazdek za pomocą prostokątnego wskaźnika fokusu w postaci ciągłej linii wokół trzeciej gwiazdy">
+          <img src="img/focus-indicator-solid-border.svg" alt="Wybrano 3 z 5 gwiazdek za pomocą prostokątnego wskaźnika fokusu w postaci ciągłej linii wokół trzeciej gwiazdy" />
           <figcaption>Rysunek 3 Kryterium spełnione: prostokąt fokusu otacza trzecią z pięciu gwiazd.</figcaption>
         </figure>
         <p>
@@ -88,7 +88,7 @@
           Najmniejszy możliwy wskaźnik grubości 2 pikseli CSS, który nadal stanowi „obwód”, to linia ciągła, która pojawia się wewnątrz komponentu naprzeciw jego zewnętrznej krawędzi, na przykład poprzez użycie właściwości CSS <code>border</code>. Wskaźniki umieszczone głębiej w komponencie (nie bezpośrednio przy zewnętrznej krawędzi komponentu) muszą być grubsze niż 2 piksele CSS, aby spełnić wymagania dotyczące minimalnego rozmiaru.
         </p>
         <figure id="focus-offsets">
-          <img src="img/focus-indicator-offset-types.png" alt="przycisk wraz z 4 przykładami różnych wskaźników ciągłego konturu o rozdzielczości 2 pikseli: przesunięcie na zewnątrz komponentu, kontur wokół granicy komponentu, obramowanie wewnątrz granicy komponentu i wstawka wewnątrz komponentu">
+          <img src="img/focus-indicator-offset-types.png" alt="przycisk wraz z 4 przykładami różnych wskaźników ciągłego konturu o rozdzielczości 2 pikseli: przesunięcie na zewnątrz komponentu, kontur wokół granicy komponentu, obramowanie wewnątrz granicy komponentu i wstawka wewnątrz komponentu" />
           <figcaption>
             Rysunek 4 Wszystkie cztery przykładowe wskaźniki fokusu to linie ciągłe o szerokości 2 pikseli. Wskaźniki „obrys”, „kontur” i „ramka” są poprawne. Wskaźnik „wstawka” nie spełnia wymagań dotyczących minimalnej powierzchni, a więc nie spełnia kryterium; aby spełnić kryterium, musiałby mieć co najmniej 3 piksele grubości.
           </figcaption>
@@ -128,13 +128,13 @@
           W poniższych 2 przykładach zastosowano przycisk o wymiarach 90 pikseli szerokości i 30 pikseli wysokości, a minimalny wymagany obszar wynosi 480 pikseli<sup>2</sup>:
         </p>
         <figure id="focus-indicator-custom-shapes-inset">
-          <img src="img/focus-indicator-custom-shapes-inset.png" alt="Trzy przyciski o wymiarach 90 na 30 pikseli. Środkowy przycisk ma wskaźnik fokusu, który jest konturem o grubości 3 pikseli umieszczonym wewnątrz przycisku o grubości 3 pikseli">
+          <img src="img/focus-indicator-custom-shapes-inset.png" alt="Trzy przyciski o wymiarach 90 na 30 pikseli. Środkowy przycisk ma wskaźnik fokusu, który jest konturem o grubości 3 pikseli umieszczonym wewnątrz przycisku o grubości 3 pikseli" />
           <figcaption>
             Rysunek 5 Kryterium spełnione: wewnętrzny kontur jest nieco odsunięty od zewnętrznej krawędzi komponentu, ale kompensuje to grubością 3 pikseli. Ma powierzchnię 612px<sup>2</sup>, co przekracza minimum 480px<sup>2</sup> .
           </figcaption>
         </figure>
         <figure id="focus-indicator-custom-shapes-side-highlights">
-          <img src="img/focus-indicator-custom-shapes-side-highlights.png" alt="Trzy przyciski o wymiarach 90 na 30 pikseli. Środkowy przycisk ma wskaźnik fokusu, czyli dwa prostokąty wewnątrz przycisku, po jednym po obu stronach">
+          <img src="img/focus-indicator-custom-shapes-side-highlights.png" alt="Trzy przyciski o wymiarach 90 na 30 pikseli. Środkowy przycisk ma wskaźnik fokusu, czyli dwa prostokąty wewnątrz przycisku, po jednym po obu stronach" />
           <figcaption>
             Rysunek 6 Kryterium spełnione: prostokąty wskaźników po obu stronach przycisku z fokusem mają szerokość 9 pikseli i wysokość 28 pikseli. W sumie mają one rozmiar 504px<sup>2</sup>, co ledwo spełnia minimum 480px<sup>2</sup> .
           </figcaption>
@@ -146,7 +146,7 @@
           Innym sposobem osiągnięcia wymaganej powierzchni jest zmiana wyglądu całego elementu, na przykład poprzez zmianę jego koloru. Może to być skuteczne w przypadku zestawu blisko rozmieszczonych przycisków. Poniższy przykład ilustruje to z 5 gwiazdkami; środkowa gwiazdka jest wypełniona ciemniejszym kolorem, aby wskazać fokus. Jednak znacznie trudniej jest wykryć taki wskaźnik fokusu, gdy komponenty nie znajdują się blisko siebie i dlatego nie można ich łatwo porównać. Dla użytkowników korzystających z powiększenia porównanie komponentów znajdujących się nawet stosunkowo blisko siebie może być trudne, dlatego nie jest to uważane za dobrą praktykę.
         </p>
         <figure id="focus-indicator-whole-star">
-          <img src="img/focus-indicator-whole-star.svg" alt="Wybrano 3 z 5 gwiazdek, przy czym cała trzecia gwiazdka została zmieniona w kolorze, aby wskazać fokus">
+          <img src="img/focus-indicator-whole-star.svg" alt="Wybrano 3 z 5 gwiazdek, przy czym cała trzecia gwiazdka została zmieniona w kolorze, aby wskazać fokus" />
           <figcaption>Rysunek 7 Kryterium spełnione: zmiana koloru dotyczy całej trzeciej gwiazdki, aby wskazać fokus.</figcaption>
         </figure>
       </section>
@@ -156,13 +156,13 @@
           Jeśli łącze śródliniowe jest podzielone na wiele linii, niektóre metody tworzenia wskaźnika fokusu powodują różne wyniki w przeglądarkach. <code>Kontur</code> CSS oddzielnie otacza każdą część łącza, która dzieli się na wiele linii. Jest to zdecydowanie najpopularniejsza technika CSS do wskazywania fokusu i daje wynik spełniający definicję minimalnej obwiedni, ponieważ każda część jest solidnie otoczona fokusem. <code>Obramowanie</code> CSS podzieli obwódkę na części łącza, co spowoduje niezamkniętą ramkę dla każdej linii łącza. Definicja minimalnej obwiedni stwierdza, że fokus łącza można ocenić tak, jakby całe łącze znajdowało się w jednej linii, dlatego też uważa się, że ramka o grubości 2 pikseli spełnia wymagania dotyczące minimalnego obszaru. Dlatego też, jeśli spełnione są wymagania dotyczące kontrastu, każda z tych metod może zapewnić wystarczający wskaźnik fokusu.
         </p>
         <figure id="focus-indicator-inline-link-outline">
-          <img src="img/focus-inline-link-outline.png" alt="Akapit tekstu zawierający łącze podzielone na dwie linie. Czerwony wskaźnik fokusu to pełny prostokąt otaczający każdą część łącza.">
+          <img src="img/focus-inline-link-outline.png" alt="Akapit tekstu zawierający łącze podzielone na dwie linie. Czerwony wskaźnik fokusu to pełny prostokąt otaczający każdą część łącza." />
           <figcaption>
             Rysunek 8 Kryterium spełnione: właściwość CSS <code>outline</code> solidnie i całkowicie ogranicza każdą część łącza, dzięki czemu spełnia definicję obwodu.
           </figcaption>
         </figure>
         <figure id="focus-indicator-inline-link">
-          <img src="img/focus-inline-link.png" alt="Akapit tekstu zawierający łącze podzielone na dwie linie. Czerwony wskaźnik fokusu ma przerwę po prawej stronie jednej części łącza i po lewej stronie drugiej części łącza.">
+          <img src="img/focus-inline-link.png" alt="Akapit tekstu zawierający łącze podzielone na dwie linie. Czerwony wskaźnik fokusu ma przerwę po prawej stronie jednej części łącza i po lewej stronie drugiej części łącza." />
           <figcaption>
             Rysunek 9 Kryterium spełnione: Chociaż właściwość CSS <code>border</code> CSS na łączu wieloliniowym nie obejmuje oddzielnych części łącza, definicja minimalnej obwiedni pozwala ocenić ją tak, jakby znajdowała się w pojedynczej linii, więc kwalifikuje się również jako obwód.
           </figcaption>
@@ -191,7 +191,7 @@
         Na poniższej ilustracji przedstawiono <strong>minimalnie</strong> kontrastujący wskaźnik fokusu, na którym niektóre białe piksele tworzące tło strony zostały zmienione na kolor średnio szary o współczynniku kontrastu 3:1 w stosunku do oryginalnej bieli. Zachęcamy autorów do przekraczania minimalnych wymagań dotyczących wyglądu fokusu. Na przykład ciemnoniebieskie linie na rysunkach 2 i 3 są znacznie bardziej widoczne.
       </p>
       <figure id="focus-indicator-star-with-light-focus">
-        <img src="img/focus-indicator-star-with-light-focus.svg" alt="Dwie pomarańczowo-żółte pięcioramienne gwiazdy, jedna ze średnio szarym prostokątem wskaźnika fokusu">
+        <img src="img/focus-indicator-star-with-light-focus.svg" alt="Dwie pomarańczowo-żółte pięcioramienne gwiazdy, jedna ze średnio szarym prostokątem wskaźnika fokusu" />
         <figcaption>
           Rysunek 10 Kryterium spełnione: Dwa przyciski w kształcie gwiazdek, drugi otoczony wskaźnikiem fokusu, którego piksele kontrastują w stosunku 3:1 między stanami z fokusem (jasnoszary) i bez fokusu (biały).
         </figcaption>
@@ -200,7 +200,7 @@
         Kiedy komponent zmienia się i zawiera wskaźnik fokusu, zmianę tę można zmierzyć jako zmianę kontrastu koloru. Na przykład, jeśli do przycisku na niebieskim tle zostanie dodany żółty kontur, zmiana koloru nastąpi z niebieskiego na żółty. Zmianę tę można zmierzyć niezależnie od tego, czy wskaźnik fokusu znajduje się na tle wokół komponentu, czy na tle wewnątrz komponentu.
       </p>
       <figure id="focus-indicator-innerline-2">
-        <img src="img/focus-indicator-innerline.png" alt="Trzy ciemnoniebieskie przyciski na białym tle. Środkowy przycisk ma żółtą wewnętrzną obwódkę." width="284">
+        <img src="img/focus-indicator-innerline.png" alt="Trzy ciemnoniebieskie przyciski na białym tle. Środkowy przycisk ma żółtą wewnętrzną obwódkę." width="284" />
         <figcaption>
           Rysunek 11 Kryterium spełnione: dodanie żółtego obrysu do łącza oznacza zmianę koloru z niebieskiego na żółty. Ta zmiana ma współczynnik kontrastu 12:1.
         </figcaption>
@@ -209,14 +209,14 @@
         Jeśli kontrolka otrzymująca fokus zmieni swoje tło (kolor wypełnienia) na kolor, który kontrastuje w stosunku mniejszym niż 3:1 z oryginalnym tłem, kryterium zmiany kontrastu nie będzie spełnione.
       </p>
       <figure id="focus-indicator-background">
-        <img src="img/focus-indicator-background.png" alt="Trzy czarne przyciski z ciemnym tłem. Środkowy przycisk ma ciemnoszare tło." width="250">
+        <img src="img/focus-indicator-background.png" alt="Trzy czarne przyciski z ciemnym tłem. Środkowy przycisk ma ciemnoszare tło." width="250" />
         <figcaption>
           Rysunek 12 kryterium niespełnione: drugie łącze ma kolor ciemnoszary (#555), co <strong>nie spełnia</strong> kryterium sukcesu, ponieważ zmiana tła z czarnego na ciemnoszare nie spełnia współczynnika 3:1.
         </figcaption>
       </figure>
       <p>Jeśli zmiana tła jest wystarczająca, jest to metoda spełnienia kryterium.</p>
       <figure id="focus-indicator-background-passing">
-        <img src="img/focus-indicator-background-passing.png" alt="Trzy czarne przyciski z ciemną obwódką i dwa z ciemnym tłem. Środkowy przycisk ma białe tło." width="250">
+        <img src="img/focus-indicator-background-passing.png" alt="Trzy czarne przyciski z ciemną obwódką i dwa z ciemnym tłem. Środkowy przycisk ma białe tło." width="250" />
         <figcaption>
           Rysunek 13 Kryterium spełnione: drugie łącze ma białe tło (#fff), co <strong>spełnia</strong> kryterium sukcesu, ponieważ zmiana tła z czarnego na białe spełnia stosunek 3:1.
         </figcaption>
@@ -227,13 +227,13 @@
           Nie jest konieczne, aby <em>cały</em> wskaźnik fokusu miał zmianę kontrastu 3:1. Wystarczy, że tylko część wskaźnika spełni wymóg zmiany kontrastu, o ile kontrastująca część wskaźnika spełnia wymóg minimalnej powierzchni.
         </p>
         <figure id="focus-indicator-two-color-thick">
-          <img src="img/focus-indicator-two-color-thick.png" alt="Przycisk, którego wskaźnikiem fokusu są dwa zagnieżdżone kontury: wewnętrzny jasnoszary kontur o grubości 2 pikseli z niskim kontrastem w stosunku do tła i zewnętrzny czarny kontur o grubości 2 pikseli o wysokim kontraście">
+          <img src="img/focus-indicator-two-color-thick.png" alt="Przycisk, którego wskaźnikiem fokusu są dwa zagnieżdżone kontury: wewnętrzny jasnoszary kontur o grubości 2 pikseli z niskim kontrastem w stosunku do tła i zewnętrzny czarny kontur o grubości 2 pikseli o wysokim kontraście" />
           <figcaption>
             Rysunek 14 Kryterium spełnione: Czarna część wskaźnika kontrastuje 3:1 z białym tłem, natomiast szara część nie. Czarna część ma grubość 2 pikseli, więc sama spełnia wymagania dotyczące minimalnej powierzchni, a szarą część można zignorować.
           </figcaption>
         </figure>
         <figure id="focus-indicator-two-color-thick">
-          <img src="img/focus-indicator-two-color-thin.png" alt="Przycisk, którego wskaźnikiem fokusu są dwa zagnieżdżone kontury: wewnętrzny jasnoszary kontur o grubości 1 piksela z niskim kontrastem w stosunku do tła i zewnętrzny czarny kontur o grubości 1 piksela o wysokim kontraście">
+          <img src="img/focus-indicator-two-color-thin.png" alt="Przycisk, którego wskaźnikiem fokusu są dwa zagnieżdżone kontury: wewnętrzny jasnoszary kontur o grubości 1 piksela z niskim kontrastem w stosunku do tła i zewnętrzny czarny kontur o grubości 1 piksela o wysokim kontraście" />
           <figcaption>
             Rysunek 15 Kryterium niespełnione: Wskaźnik jako całość ma grubość 2px, ale jego część, która ma wystarczającą zmianę kontrastu, ma tylko 1px grubość. Część wskaźnika charakteryzująca się wystarczającą zmianą kontrastu nie spełnia wymogu dotyczącego minimalnej powierzchni.
           </figcaption>
@@ -248,7 +248,7 @@
           Jeśli wskaźnik fokusu ma gradient, zasadą jest zmierzenie kontrastu zmienionego obszaru i zignorowanie jakiejkolwiek części gradientu, która ma współczynnik zmiany kontrastu mniejszy niż 3:1.
         </p>
         <figure id="focus-indicator-box-shadow">
-          <img src="img/focus-indicator-box-shadow.png" alt="Trzy przyciski, środkowy z mocnym cieniem wskazującym fokus.">
+          <img src="img/focus-indicator-box-shadow.png" alt="Trzy przyciski, środkowy z mocnym cieniem wskazującym fokus." />
           <figcaption>
             Rysunek 16 Gdy na wskaźniku fokusu używany jest gradient, miara pola powierzchni powinna uwzględniać tylko obszar, który zmienił się na tyle, aby osiągnąć współczynnik kontrastu 3:1.
           </figcaption>
@@ -257,7 +257,7 @@
           Jeśli wyeliminujesz obszar, w którym zmiana kontrastu jest mniejsza niż 3:1, możesz obliczyć powierzchnię pozostałych części wskaźnika, aby określić, czy wskaźnik spełnia wymagania dotyczące minimalnej powierzchni.
         </p>
         <figure id="focus-indicator-box-shadow-only">
-          <img src="img/focus-indicator-box-shadow-only.png" alt="Środkowy przycisk z cieniem jest uwzględniony, ale usunięto subtelne szare obszary, aby pokazać tylko kontrastujący obszar.">
+          <img src="img/focus-indicator-box-shadow-only.png" alt="Środkowy przycisk z cieniem jest uwzględniony, ale usunięto subtelne szare obszary, aby pokazać tylko kontrastujący obszar." />
           <figcaption>
             Rysunek 17 Kryterium spełnione: ten sam przycisk z fokusem z usuniętymi niekontrastującymi obszarami. Kontrastujący obszar ma grubość 6 pikseli wzdłuż większości dolnej krawędzi i 3–4 pikseli grubości po lewej i prawej krawędzi, co jest wystarczające, aby spełnić wymagania dotyczące minimalnego obszaru.
           </figcaption>
@@ -296,13 +296,13 @@
         </li>
       </ul>
       <figure id="non-text-contrast-fail-focus-appearance-pass">
-        <img src="img/focus-indicator-good-change-bad-adjacent.png" alt="Jasnoniebieski przycisk z obramowaniem o grubości 3 pikseli. Ramka jest czarna w stanie „nie ma fokusu” i jasnoszara w stanie „ma fokus”.">
+        <img src="img/focus-indicator-good-change-bad-adjacent.png" alt="Jasnoniebieski przycisk z obramowaniem o grubości 3 pikseli. Ramka jest czarna w stanie „nie ma fokusu” i jasnoszara w stanie „ma fokus”." />
         <figcaption>
           Rysunek 18 Ten przykład spełnia kryterium Wyglądu fokusu, ale nie spełnia kryterium Kontrast elementów nietekstowych; <em>kontrast</em> między wskaźnikiem fokusu a sąsiednimi kolorami jest niewystarczający.
         </figcaption>
       </figure>
       <figure id="non-text-contrast-pass-focus-appearance-fail">
-        <img src="img/focus-indicator-good-adjacent-bad-change.png" alt="Jasnoniebieski przycisk z obramowaniem o grubości 3 pikseli. Ramka jest czarna w stanie „nie ma fokusu” i ciemnoszara w stanie „ma fokus”.">
+        <img src="img/focus-indicator-good-adjacent-bad-change.png" alt="Jasnoniebieski przycisk z obramowaniem o grubości 3 pikseli. Ramka jest czarna w stanie „nie ma fokusu” i ciemnoszara w stanie „ma fokus”." />
         <figcaption>
           Rysunek 19 Ten przykład spełnia kryterium  Kontrast elementów nietekstowych, ale nie spełnia kryterium Wygląd fokusu; nie ma wystarczającej <em>zmiany kontrastu</em> pomiędzy stanami „ma fokus” i „nie ma fokusu”.
         </figcaption>
@@ -333,7 +333,7 @@
       <p>Każdy z nich zostanie omówiony przy użyciu listy z zakładkami jako znanego złożonego komponentu.</p>
       <h3>Wskaźnik fokusu tylko wokół całego komponentu</h3>
       <figure id="component-complex-whole">
-        <img src="img/component-complex-whole.png" alt="Trzy przyciski zakładek pokazane w ciemnoniebieskim prostokącie wokół wszystkich trzech przycisków zakładek.">
+        <img src="img/component-complex-whole.png" alt="Trzy przyciski zakładek pokazane w ciemnoniebieskim prostokącie wokół wszystkich trzech przycisków zakładek." />
         <figcaption>Rysunek 20 Lista zakładek ze wskaźnikiem fokusu tylko wokół całości.</figcaption>
       </figure>
       <p>
@@ -348,9 +348,9 @@
       </p>
       <h3>Wskaźniki fokusu wokół komponentu i podrzędnego komponentu</h3>
       <figure id="component-complex-both">
-        <img src="img/component-complex-both.png" alt="Trzy przyciski zakładek pokazane w ciemnoniebieskim prostokącie wokół wszystkich trzech przycisków zakładek. Pierwszy przycisk zakładki również ma ciemny kontur i niebieski pasek wskazujący, że jest zaznaczony.">
+        <img src="img/component-complex-both.png" alt="Trzy przyciski zakładek pokazane w ciemnoniebieskim prostokącie wokół wszystkich trzech przycisków zakładek. Pierwszy przycisk zakładki również ma ciemny kontur i niebieski pasek wskazujący, że jest zaznaczony." />
         <br />
-        <img src="img/component-complex-both-unselected.png" alt="Wybrano tę samą listę zakładek, z wyjątkiem pierwszej zakładek, ale druga ma obrys fokusu.">
+        <img src="img/component-complex-both-unselected.png" alt="Wybrano tę samą listę zakładek, z wyjątkiem pierwszej zakładek, ale druga ma obrys fokusu." />
         <figcaption>
           Rysunek 21 Ten sam panel kart w dwóch stanach. W pierwszym przypadku fokus skupiony jest zarówno na liście zakładek, jak i na aktualnie wybranej karcie; w drugim przypadku fokus jest skupiony zarówno wokół listy zakładek, jak i niewybranej karty.
         </figcaption>
@@ -372,7 +372,7 @@
       </p>
       <h3>Wskaźnik fokusu tylko wokół podrzędnego komponentu</h3>
       <figure id="component-complex-sub">
-        <img src="img/component-complex-sub.png" alt="Pokazano trzy przyciski zakładek, a pierwszy przycisk ma ciemny kontur.">
+        <img src="img/component-complex-sub.png" alt="Pokazano trzy przyciski zakładek, a pierwszy przycisk ma ciemny kontur." />
         <figcaption>Rysunek 22 Te same zakładki co w poprzednim zestawie, ale wskaźnik fokusu wokół całości został usunięty.</figcaption>
       </figure>
       <p>
@@ -410,7 +410,7 @@
           Niektóre komponenty lub technologie mogą nie pozwalać autorowi na dostosowanie wskaźnika fokusu. Dzieje się tak w przypadku elementów HTML <code>select</code>  (zarówno pojedynczego, jak i wielokrotnego wyboru), w których autor nie może dostosować wizualnych ustawień wyboru i fokusu.  W tym przypadku kryterium sukcesu nie ma zastosowania.
         </p>
         <figure id="country-select">
-          <img src="img/focus-indicator-select.png" alt="Element wyboru kraju z wybranym Afganistanem i fokusem skupionym na Albani">
+          <img src="img/focus-indicator-select.png" alt="Element wyboru kraju z wybranym Afganistanem i fokusem skupionym na Albani" />
           <figcaption>
             Rysunek 23 Kryterium spełnione: Domyślna prezentacja elementu <code>select</code> w programie użytkownika nie może być modyfikowana przez autora, więc przechodzi test niezależnie od jakości wskaźnika fokusu
           </figcaption>
@@ -441,7 +441,7 @@
           Ponadto, jeśli przeglądarka domyślnie udostępnia wskaźnik <em>wewnątrz</em> komponentu, autorzy mogą potencjalnie zmniejszyć widoczność, zmieniając kolor komponentu (który w takim scenariuszu jest kolorem tła wskaźnika fokusu). Na przykład, jeśli domyślny wskaźnik przycisku ma kolorową wewnętrzną ramkę, autorzy mogą negatywnie wpłynąć na wygląd fokusu, nadając kolorowi przycisku lub jego obramowaniu bez fokusu kolor o podobnej jasności. Z tego powodu ten wyjątek dotyczący programu użytkownika może zostać spełniony tylko wtedy, gdy autor nie zmodyfikuje domyślnego wskaźnika fokusu <em>oraz</em> nie zmodyfikuje jego tła.
         </p>
         <figure id="focus-indicator-browser-defaults-modified-background">
-          <img src="img/focus-indicator-browser-defaults-modified-background.png" alt="Przycisk z niebieską ramką dostosowaną przez autora, która wygląda bardzo podobnie do niebieskiej ramki używanej przez domyślny wskaźnik fokusu programu użytkownika">
+          <img src="img/focus-indicator-browser-defaults-modified-background.png" alt="Przycisk z niebieską ramką dostosowaną przez autora, która wygląda bardzo podobnie do niebieskiej ramki używanej przez domyślny wskaźnik fokusu programu użytkownika" />
           <figcaption>
             Rysunek 24 Kryterium niespełnione Środkowy przycisk ma fokus i domyślny wskaźnik fokusu przeglądarki, ale bardzo trudno jest stwierdzić, który przycisk ma fokus, ponieważ niestandardowe niebieskie obramowanie przycisku bez fokusu ma podobny kolor.
           </figcaption>
