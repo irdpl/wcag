@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Objaśnienie Kryterium sukcesu  2.4.13: Wygląd fokusu | WAI | W3C</title>
+      <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
+      <link rel="stylesheet" href="base.css" />
+   </head>
+   <body dir="ltr"><a href="#main" class="button button--skip-link">Idź do treści</a><div class="minimal-header-container default-grid">
+         <div class="minimal-header" id="site-header">
+            <div class="minimal-header-name"><a href="https://w3c.github.io/wcag/understanding/">WCAG 2.2 Objaśnienia</a></div>
+            <div class="minimal-header-subtitle">Objaśnienia informacyjne, niewymagane do spełnienia WCAG</div><a class="minimal-header-link" href="https://w3c.github.io/wcag/understanding/about">O WCAG Objaśnienia</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
+                     <g fill-rule="evenodd" fill="none">
+                        <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
+                        <g fill-rule="nonzero" fill="#fff">
+                           <path d="M21.752 0l7.789 26.78L37.329 0H58.444v2.662l-7.95 13.852c2.792.907 4.905 2.555 6.337 4.944 1.432 2.391 2.149 5.196 2.149 8.419 0 3.985-1.048 7.335-3.143 10.05C53.742 42.642 51.029 44 47.7 44c-2.507 0-4.691-.806-6.552-2.417-1.862-1.611-3.24-3.793-4.136-6.546l4.403-1.846c.646 1.666 1.496 2.979 2.552 3.938 1.056.96 2.3 1.438 3.733 1.438 1.504 0 2.775-.85 3.813-2.552 1.039-1.703 1.558-3.747 1.558-6.14 0-2.643-.556-4.69-1.664-6.138-1.29-1.701-3.314-2.554-6.071-2.554h-2.148v-2.606l7.52-13.147H41.63l-.516.889-11.04 37.678h-.536L21.48 16.73l-8.056 27.268h-.537L0 0h5.64l7.787 26.78 5.264-18.033L16.113 0zM87.958 0c-1.077 0-2.044.388-2.777 1.133-.777.79-1.21 1.81-1.21 2.866s.412 2.034 1.167 2.8C85.905 7.579 86.892 8 87.959 8c1.043 0 2.055-.422 2.843-1.188.755-.733 1.166-1.711 1.166-2.811a3.997 3.997 0 00-1.155-2.811A3.946 3.946 0 0087.958 0zm3.476 4.034a3.32 3.32 0 01-1.01 2.41c-.69.668-1.544 1.023-2.489 1.023a3.405 3.405 0 01-2.42-1.033c-.655-.667-1.022-1.523-1.022-2.433 0-.911.378-1.8 1.055-2.489.633-.645 1.488-.988 2.42-.988.955 0 1.81.356 2.477 1.033.645.643.99 1.51.99 2.477zm-3.366-2.378h-1.71v4.533h.855V4.256h.845l.922 1.933h.955l-1.012-2.066c.655-.134 1.033-.578 1.033-1.223 0-.822-.621-1.244-1.888-1.244zm-.155.555c.8 0 1.165.222 1.165.778 0 .533-.365.722-1.144.722h-.722v-1.5zM82.109 0l.862 5.914-3.05 6.588s-1.172-2.795-3.118-4.342c-1.64-1.303-2.708-1.586-4.378-1.198-2.145.5-4.577 3.394-5.638 6.963-1.27 4.27-1.283 6.336-1.328 8.234-.071 3.042.354 4.841.354 4.841s-1.853-3.868-1.835-9.533c.012-4.043.576-7.71 2.233-11.328 1.459-3.181 3.626-5.09 5.55-5.315 1.99-.232 3.562.85 4.777 2.02 1.276 1.23 2.565 3.918 2.565 3.918zM82.202 31.824s-1.338 2.567-2.171 3.556c-.834.99-2.326 2.732-4.167 3.603-1.842.872-2.808 1.036-4.628.849-1.82-.188-3.51-1.319-4.102-1.79-.592-.472-2.106-1.861-2.962-3.156C63.317 33.59 61.98 31 61.98 31s.745 2.596 1.212 3.698c.269.635 1.094 2.574 2.265 4.262 1.092 1.576 3.214 4.287 6.438 4.899 3.224.613 5.44-.942 5.987-1.319.549-.376 1.704-1.416 2.436-2.256.763-.877 1.486-1.995 1.886-2.666.292-.49.768-1.485.768-1.485z"></path>
+                        </g>
+                     </g>
+                  </svg></a><a href="http://w3.org/WAI/" aria-label="Web Accessibility Initiative">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 162.5 45.9" style="margin: 0.75em 0 0.75em 0.5em">
+                     <g fill="none" fill-rule="evenodd">
+                        <path d="M0 0h162.5v45.9H0z" fill="#015a9c"></path>
+                        <path d="M1.2 24.5h160" stroke="#eed009" stroke-linecap="square" stroke-width="2"></path>
+                        <g fill="#fff" fill-rule="nonzero">
+                           <path d="M15.741 15.5h-1.816L11.14 6.145c-.41-1.394-.65-2.334-.722-2.823-.104.749-.332 1.71-.684 2.881L7.04 15.5H5.223L1.444 1.223H3.32l2.217 8.72c.3 1.14.527 2.272.684 3.399.143-1.068.397-2.237.761-3.506l2.52-8.613h1.855l2.627 8.681c.339 1.127.6 2.272.781 3.438.105-.899.336-2.038.694-3.418l2.207-8.701h1.875zm10.127.195c-1.608 0-2.87-.486-3.784-1.46-.915-.973-1.372-2.312-1.372-4.018 0-1.719.426-3.088 1.279-4.107.853-1.019 2.005-1.528 3.457-1.528 1.348 0 2.422.435 3.223 1.304.8.869 1.2 2.046 1.2 3.53v1.064h-7.343c.033 1.218.342 2.142.928 2.774.586.631 1.416.947 2.49.947a8.46 8.46 0 001.631-.151c.514-.101 1.116-.298 1.807-.591v1.543a8.506 8.506 0 01-1.67.537c-.521.104-1.136.156-1.846.156zm-.44-9.677c-.84 0-1.503.27-1.992.81-.488.54-.778 1.292-.869 2.256h5.46c-.014-1.003-.245-1.764-.694-2.285-.45-.521-1.084-.781-1.904-.781zm12.237-1.416c1.413 0 2.503.486 3.271 1.46.769.973 1.153 2.332 1.153 4.077 0 1.77-.39 3.14-1.172 4.106-.781.967-1.865 1.45-3.252 1.45-.723 0-1.367-.13-1.934-.39a3.384 3.384 0 01-1.386-1.162h-.137a48.165 48.165 0 01-.362 1.357h-1.26V.305h1.759v3.691c0 .736-.033 1.471-.098 2.207h.098c.722-1.068 1.829-1.601 3.32-1.601zm-.293 1.455c-1.08 0-1.856.306-2.324.918-.47.612-.703 1.647-.703 3.105v.078c0 1.465.239 2.512.717 3.14.479.628 1.262.942 2.349.942.963 0 1.681-.353 2.153-1.06.472-.706.708-1.726.708-3.06 0-1.355-.237-2.37-.713-3.048-.475-.677-1.204-1.015-2.187-1.015zM59.286 15.5l-1.719-4.424h-5.664l-1.7 4.424h-1.816l5.577-14.336h1.62L61.152 15.5zM57.03 9.484L55.43 5.158l-.684-2.138c-.195.78-.4 1.494-.615 2.138l-1.621 4.326zm10.137 6.211c-1.543 0-2.744-.473-3.604-1.42-.86-.948-1.289-2.307-1.289-4.078 0-1.797.435-3.182 1.304-4.155.87-.973 2.108-1.46 3.716-1.46.52 0 1.037.054 1.548.161.51.108.932.246 1.264.415l-.537 1.465c-.905-.338-1.676-.508-2.314-.508-1.081 0-1.879.34-2.393 1.02-.514.681-.771 1.695-.771 3.043 0 1.295.257 2.287.771 2.973.514.687 1.276 1.03 2.285 1.03.944 0 1.872-.208 2.783-.624v1.562c-.742.384-1.663.576-2.763.576zm9.6 0c-1.544 0-2.745-.473-3.604-1.42-.86-.948-1.29-2.307-1.29-4.078 0-1.797.435-3.182 1.305-4.155.869-.973 2.107-1.46 3.715-1.46.521 0 1.037.054 1.548.161.511.108.933.246 1.265.415l-.537 1.465c-.905-.338-1.677-.508-2.315-.508-1.08 0-1.878.34-2.392 1.02-.515.681-.772 1.695-.772 3.043 0 1.295.257 2.287.772 2.973.514.687 1.276 1.03 2.285 1.03.944 0 1.872-.208 2.783-.624v1.562c-.742.384-1.663.576-2.764.576zm9.863 0c-1.608 0-2.87-.486-3.784-1.46-.915-.973-1.373-2.312-1.373-4.018 0-1.719.427-3.088 1.28-4.107.853-1.019 2.005-1.528 3.457-1.528 1.347 0 2.422.435 3.222 1.304.801.869 1.202 2.046 1.202 3.53v1.064H83.29c.032 1.218.342 2.142.928 2.774.586.631 1.416.947 2.49.947a8.46 8.46 0 001.63-.151c.515-.101 1.117-.298 1.807-.591v1.543a8.506 8.506 0 01-1.67.537c-.52.104-1.136.156-1.845.156zm-.44-9.677c-.84 0-1.504.27-1.992.81s-.778 1.292-.87 2.256h5.46c-.013-1.003-.244-1.764-.693-2.285-.45-.521-1.084-.781-1.905-.781zm14.14 6.523c0 1.003-.373 1.779-1.122 2.33-.749.55-1.8.824-3.154.824-1.413 0-2.536-.224-3.37-.674V13.42c1.179.573 2.315.86 3.409.86.885 0 1.53-.144 1.933-.43.404-.287.606-.671.606-1.153 0-.423-.194-.781-.581-1.074-.388-.293-1.076-.628-2.066-1.006-1.009-.39-1.719-.724-2.129-1-.41-.277-.711-.588-.903-.933-.192-.345-.288-.765-.288-1.26 0-.88.358-1.572 1.074-2.08.716-.508 1.7-.762 2.95-.762a8.17 8.17 0 013.417.723L99.511 6.7c-1.088-.456-2.068-.683-2.94-.683-.73 0-1.282.115-1.66.346-.378.231-.566.549-.566.952 0 .391.162.715.488.972.325.257 1.084.614 2.275 1.07.892.331 1.551.64 1.978.927.426.287.74.609.942.967.202.358.303.788.303 1.289zm9.58 0c0 1.003-.373 1.779-1.122 2.33-.749.55-1.8.824-3.154.824-1.413 0-2.536-.224-3.37-.674V13.42c1.179.573 2.315.86 3.409.86.885 0 1.53-.144 1.933-.43.404-.287.606-.671.606-1.153 0-.423-.194-.781-.581-1.074-.388-.293-1.076-.628-2.066-1.006-1.009-.39-1.719-.724-2.129-1-.41-.277-.71-.588-.903-.933-.192-.345-.288-.765-.288-1.26 0-.88.358-1.572 1.074-2.08.716-.508 1.7-.762 2.95-.762a8.17 8.17 0 013.417.723l-.595 1.396c-1.088-.456-2.067-.683-2.94-.683-.729 0-1.282.115-1.66.346-.378.231-.566.549-.566.952 0 .391.162.715.488.972.325.257 1.084.614 2.275 1.07.892.331 1.551.64 1.978.927.426.287.74.609.942.967.202.358.303.788.303 1.289zm4.356 2.959h-1.757V4.777h1.757zm-1.894-13.623c0-.39.1-.674.298-.85.198-.175.444-.263.737-.263.273 0 .513.088.718.263.205.176.307.46.307.85 0 .384-.102.667-.307.85a1.047 1.047 0 01-.718.273 1.05 1.05 0 01-.737-.273c-.199-.183-.298-.466-.298-.85zm10.371 2.725c1.413 0 2.503.486 3.271 1.46.769.973 1.153 2.332 1.153 4.077 0 1.77-.39 3.14-1.172 4.106-.781.967-1.865 1.45-3.252 1.45-.723 0-1.367-.13-1.934-.39a3.384 3.384 0 01-1.386-1.162h-.137a48.244 48.244 0 01-.361 1.357h-1.26V.305h1.758v3.691c0 .736-.033 1.471-.098 2.207h.098c.722-1.068 1.83-1.601 3.32-1.601zm-.293 1.455c-1.08 0-1.855.306-2.324.918-.469.612-.703 1.647-.703 3.105v.078c0 1.465.239 2.512.717 3.14.479.628 1.262.942 2.35.942.963 0 1.68-.353 2.152-1.06.472-.706.708-1.726.708-3.06 0-1.355-.237-2.37-.713-3.048-.475-.677-1.204-1.015-2.187-1.015zm9.277 9.443h-1.757V4.777h1.757zm-1.894-13.623c0-.39.1-.674.298-.85.198-.175.444-.263.737-.263.273 0 .513.088.718.263.205.176.307.46.307.85 0 .384-.102.667-.307.85a1.047 1.047 0 01-.718.273 1.05 1.05 0 01-.737-.273c-.199-.183-.298-.466-.298-.85zm7.05 13.623h-1.757V.305h1.758zm5.157 0h-1.758V4.777h1.758zm-1.895-13.623c0-.39.1-.674.298-.85.199-.175.444-.263.737-.263.274 0 .513.088.718.263.205.176.308.46.308.85 0 .384-.103.667-.308.85a1.047 1.047 0 01-.718.273 1.05 1.05 0 01-.737-.273c-.198-.183-.298-.466-.298-.85zm8.877 12.383c.228 0 .495-.023.801-.069.306-.045.537-.097.693-.156v1.348c-.162.071-.415.141-.756.21a5.29 5.29 0 01-1.04.102c-2.097 0-3.145-1.103-3.145-3.31v-6.24h-1.514v-.84l1.534-.703.703-2.286h1.045v2.461h3.095v1.368h-3.095v6.19c0 .62.148 1.095.444 1.427.296.332.708.498 1.235.498zm1.953-9.483h1.885l2.315 6.104c.488 1.328.787 2.301.898 2.92h.078c.059-.241.192-.692.4-1.353.209-.66.385-1.19.528-1.587l2.178-6.084h1.894l-4.619 12.207c-.45 1.185-.983 2.035-1.602 2.55-.618.514-1.383.77-2.294.77-.489 0-.974-.055-1.456-.165v-1.397c.326.078.717.117 1.172.117.56 0 1.035-.154 1.426-.463.39-.31.71-.787.957-1.431l.557-1.426zM7.157 45.5H2.001v-1.035l1.68-.381V32.658l-1.68-.4v-1.035h5.156v1.035l-1.68.4v11.426l1.68.38zm9.824 0v-6.855c0-.873-.193-1.522-.58-1.949-.388-.426-.995-.64-1.822-.64-1.1 0-1.9.305-2.398.914-.498.608-.747 1.6-.747 2.973V45.5H9.677V34.777h1.416l.263 1.465h.098a3.31 3.31 0 011.396-1.225 4.492 4.492 0 011.983-.435c1.315 0 2.292.319 2.93.957.638.638.957 1.63.957 2.979V45.5zm6.817 0H22.04V34.777h1.758zm-1.895-13.623c0-.39.1-.674.298-.85.199-.175.444-.263.737-.263.274 0 .513.088.718.263.205.176.308.46.308.85 0 .384-.103.667-.308.85a1.047 1.047 0 01-.718.273 1.05 1.05 0 01-.737-.273c-.199-.183-.298-.466-.298-.85zM30.78 44.26c.228 0 .495-.023.8-.069.307-.045.538-.097.694-.156v1.348c-.163.071-.415.141-.757.21a5.29 5.29 0 01-1.04.102c-2.096 0-3.144-1.103-3.144-3.31v-6.24h-1.514v-.84l1.533-.703.703-2.286H29.1v2.461h3.096v1.368H29.1v6.19c0 .62.149 1.095.445 1.427.296.332.708.498 1.235.498zm5.39 1.24h-1.757V34.777h1.758zm-1.894-13.623c0-.39.1-.674.298-.85.199-.175.444-.263.737-.263.274 0 .513.088.718.263.205.176.308.46.308.85 0 .384-.103.667-.308.85a1.047 1.047 0 01-.718.273 1.05 1.05 0 01-.737-.273c-.199-.183-.298-.466-.298-.85zM46.19 45.5l-.342-1.523h-.078c-.534.67-1.066 1.124-1.596 1.362-.53.237-1.2.356-2.007.356-1.055 0-1.882-.276-2.48-.83-.6-.553-.9-1.334-.9-2.344 0-2.174 1.716-3.313 5.147-3.417l1.817-.069V38.4c0-.813-.176-1.414-.528-1.801-.351-.388-.914-.581-1.689-.581-.566 0-1.102.084-1.606.253-.505.17-.979.359-1.421.567l-.537-1.318a7.958 7.958 0 011.767-.674 7.642 7.642 0 011.895-.244c1.295 0 2.259.286 2.89.859.632.573.948 1.484.948 2.734V45.5zm-3.623-1.22c.983 0 1.756-.266 2.32-.797.563-.53.844-1.284.844-2.26v-.967l-1.582.068c-1.23.046-2.127.241-2.69.586-.563.345-.845.889-.845 1.631 0 .56.171.99.513 1.29.342.299.822.448 1.44.448zm11.807-.02c.228 0 .495-.023.8-.069.307-.045.538-.097.694-.156v1.348c-.163.071-.415.141-.757.21a5.29 5.29 0 01-1.04.102c-2.096 0-3.144-1.103-3.144-3.31v-6.24h-1.514v-.84l1.533-.703.703-2.286h1.045v2.461h3.096v1.368h-3.096v6.19c0 .62.148 1.095.444 1.427.297.332.708.498 1.236.498zm5.39 1.24h-1.757V34.777h1.757zM57.87 31.877c0-.39.1-.674.298-.85.198-.175.444-.263.737-.263.274 0 .513.088.718.263.205.176.307.46.307.85 0 .384-.102.667-.307.85a1.047 1.047 0 01-.718.273 1.05 1.05 0 01-.737-.273c-.199-.183-.298-.466-.298-.85zM65.526 45.5l-4.062-10.723h1.884l2.276 6.319c.45 1.27.736 2.216.86 2.842h.077a11.495 11.495 0 01.176-.64c.04-.127.28-.861.723-2.202l2.285-6.319h1.875L67.548 45.5zm12.354.195c-1.608 0-2.87-.486-3.784-1.46-.915-.973-1.373-2.312-1.373-4.018 0-1.719.427-3.088 1.28-4.107.853-1.019 2.005-1.528 3.457-1.528 1.347 0 2.422.435 3.222 1.304.801.869 1.202 2.046 1.202 3.53v1.064H74.54c.032 1.218.342 2.142.928 2.774.586.631 1.416.947 2.49.947a8.46 8.46 0 001.63-.151c.515-.101 1.117-.298 1.807-.591v1.543a8.506 8.506 0 01-1.67.537c-.52.104-1.136.156-1.845.156zm-.44-9.677c-.84 0-1.504.27-1.992.81s-.778 1.292-.87 2.256h5.46c-.013-1.003-.244-1.764-.693-2.285-.45-.521-1.084-.781-1.905-.781zM137.741 45.5h-1.816l-2.784-9.355c-.41-1.394-.65-2.334-.722-2.823-.104.749-.332 1.71-.684 2.881L129.04 45.5h-1.817l-3.779-14.277h1.875l2.217 8.72c.3 1.14.527 2.272.684 3.399.143-1.068.397-2.237.761-3.506l2.52-8.613h1.855l2.627 8.681c.339 1.127.6 2.272.781 3.438.105-.899.336-2.038.694-3.418l2.207-8.701h1.875zm14.57 0l-1.718-4.424h-5.664l-1.7 4.424h-1.816l5.576-14.336h1.621l5.567 14.336zm-2.256-6.016l-1.601-4.326-.684-2.138c-.195.78-.4 1.494-.615 2.138l-1.621 4.326zm10.098 6.016h-5.156v-1.035l1.68-.381V32.658l-1.68-.4v-1.035h5.156v1.035l-1.68.4v11.426l1.68.38z"></path>
+                        </g>
+                     </g>
+                  </svg></a></div>
+         </div>
+      </div>
+      <div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Objaśnienia">
+               <ul>
+                  <li class="nav__item"><a href=".">
+                        								Wszystkie objaśnienia
+                        							</a></li>
+                  <li class="nav__item"><a href="nawigowalne">
+                        <svg alt="up" focusable="false" aria-hidden="true" class="icon-arrow-up-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path>
+                        </svg> Wytyczna: Nawigowalne</a></li>
+                  <li class="nav__item"><a href="fokus-niezakryty-ulepszony">Poprzednie KS: Fokus niezakryty (ulepszony)</a></li>
+                  <li class="nav__item"></li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+      <div class="default-grid with-gap leftcol">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar ">
+            <nav>
+               <header class="box-h ">Treść strony</header>
+               <div class="box-i">
+                  <ul>
+                     <li><a href="#brief">W skrócie</a></li>
+                     <li><a href="#intent">Intencja</a></li>
+                     <li><a href="#benefits">Korzyści</a></li>
+                     <li><a href="#examples">Przykłady</a></li>
+                     <li><a href="#resources">Powiązane zasoby</a></li>
+                     <li><a href="#techniques">Techniki</a></li>
+                     <li><a href="#key-terms">Kluczowe pojęcia</a></li>
+                  </ul>
+               </div>
+            </nav>
+         </aside>
+         <main id="main" class="standalone-resource__main">
+            <h1><span class="standalone-resource__type-of-guidance">Objaśnienie
+                  				KS 2.4.13:</span>Wygląd fokusu (Poziom AAA)
+            </h1>
+            <aside class="box">
+               <header class="box-h  box-h-icon">Kryterium sukcesu (KS) </header>
+               <div class="box-i">
+                  <p>Gdy <a href="#dfn-wska%C5%BAnik-fokusu">wskaźnik fokusu</a> klawiatury jest widoczny, obszar wskaźnika fokusu spełnia wszystkie poniższe kryteria:
+                  </p>
+                  <ul>
+                     
+                     <li>jest co najmniej tak duży, jak obszar <a href="#dfn-obw%C3%B3d">obwodu</a> o grubości 2 <a href="#dfn-piksel-css">pikseli CSS</a> komponentu lub podkomponentu bez fokusu oraz
+                     </li>
+                     
+                     <li>ma współczynnik kontrastu co najmniej 3:1 między tymi samymi pikselami w stanie  „ma
+                        fokus” i „nie ma fokusu”.
+                     </li>
+                     
+                  </ul>
+                  <p>Wyjątki:</p>
+                  <ul>
+                     
+                     <li>Wskaźnik fokusu jest określany przez <a href="#dfn-program-u%C5%BCytkownika">oprogramowanie użytkownika</a> i autor nie może go regulować lub
+                     </li>
+                     
+                     <li>Wskaźnik fokusu i kolor tła wskaźnika nie zostały zmienione przez twórcę.</li>
+                     
+                  </ul>
+                  <div class="note">
+                     <p class="note-title marker">Uwaga</p>
+                     <p>To, co jest postrzegane jako komponent lub podkomponent interfejsu użytkownika (w
+                        celu określenia obwiedni lub rozmiaru), zależy od jego <a href="#dfn-prezentacja">prezentacji</a> wizualnej. Prezentacja wizualna obejmuje widoczną <a href="#dfn-tre%C5%9B%C4%87">treść</a> komponentu, obramowanie i tło specyficzne dla komponentu. Nie obejmuje efektów cienia
+                        i blasku poza treścią, tłem lub obramowaniem komponentu.
+                     </p>
+                  </div>
+                  <div class="note">
+                     <p class="note-title marker">Uwaga</p>
+                     <p>Przykładami podkomponentów, które mogą otrzymać fokus, są elementy menu w otwartym
+                        menu rozwijanym lub komórki siatki, na których można ustawić fokus.
+                     </p>
+                  </div>
+                  <div class="note">
+                     <p class="note-title marker">Uwaga</p>
+                     <p>Obliczenia kontrastu można wykonać w oparciu o kolory zdefiniowane w ramach <a href="#dfn-technologia">technologii</a> (np. HTML, CSS i SVG). Piksele zmodyfikowane przez ulepszenia rozdzielczości oprogramowania
+                        użytkownika i wygładzanie można zignorować.
+                     </p>
+                  </div>
+               </div>
+            </aside>
+            <div class="excol-all"></div>
+            <section id="brief">
+               <h2>W skrócie</h2>
+               <dl>
+                  
+                  <dt>Cel</dt>
+                  
+                  <dd>Ułatw dostrzeżenie fokusu klawiatury.</dd>
+                  
+                  <dt>Co robić</dt>
+                  
+                  <dd>Użyj wskaźnika fokusu o odpowiedniej wielkości i kontraście.</dd>
+                  
+                  <dt>Dlaczego to jest ważne</dt>
+                  
+                  <dd>Wiele osób, w tym osoby starsze, nie widzi drobnych zmian w wyglądzie.</dd>
+                  
+               </dl>
+            </section>
+            <section id="intent">
+               <h2>Intencja</h2>
+               <p>
+                  Celem tego kryterium sukcesu jest zapewnienie, że wskaźnik fokusu klawiatury będzie
+                  wyraźnie widoczny i dostrzegalny. Wygląd fokusu jest ściśle powiązany z KS <a href="../guidelines/widoczny-fokus.html">2.4.7 Widoczny fokus</a> i KS <a href="../guidelines/kontrast-elementow-nietekstowych.html">1.4.11 Kontrast elementów nietekstowych</a>. Widoczny fokus wymaga istnienia widocznego wskaźnika fokusu, gdy komponent ma fokus
+                  klawiatury; kryterium Widoczny fokus określa minimalny poziom widoczności. Tam, gdzie
+                  kryterium Kontrast elementów nietekstowych wymaga, aby komponent miał odpowiedni kontrast
+                  z tłem w każdym ze swoich stanów, kryterium wymaga wystarczającego kontrastu samego
+                  wskaźnika fokusu.
+                  
+               </p>
+               <p>
+                  Dla osób widzących z niepełnosprawnością manualną, które używają klawiatury lub urządzenia
+                  korzystającego z <a href="#dfn-interfejs-klawiaturowy">interfejsu klawiatury</a> (takiego jak przełącznik lub wprowadzanie głosowe), informacja o aktualnym miejscu
+                  fokusu ma kluczowe znaczenie. Widoczny fokus musi odpowiadać także potrzebom użytkowników
+                  słabowidzących, którzy również mogą polegać na klawiaturze.
+                  
+               </p>
+               <p>
+                  Wskaźnik fokusu klawiatury może przybierać różne formy. To kryterium sukcesu zachęca
+                  do stosowania ciągłego konturu wokół komponentu interfejsu użytkownika, który ma fokus,
+                  ale dopuszcza inne typy wskaźników, które są co najmniej tak samo duże.
+                  
+               </p>
+               <p>
+                  W tym dokumencie objaśniającym omówione zostaną  wymagania dotyczące minimalnej powierzchni,
+                  wymagania dotyczące kontrastu kolorów, a na koniec wymienione zostaną niektóre wyjątki
+                  dotyczące dotyczące oprogramowania użytkownika.
+                  
+               </p>
+               <section id="minimum-area">
+                  
+                  <h3>Minimalna powierzchnia</h3>
+                  
+                  <p>Pierwsza część kryterium sukcesu określa minimalną powierzchnię wskaźnika fokusu:</p>
+                  
+                  <blockquote>
+                     
+                     <ul>
+                        
+                        <li>
+                           jest co najmniej tak duży, jak obszar <a href="#dfn-obw%C3%B3d">obwodu</a> o grubości 2 <a href="#dfn-piksel-css">pikseli CSS</a> komponentu lub podkomponentu bez fokusu.
+                           
+                        </li>
+                        
+                     </ul>
+                     
+                  </blockquote>
+                  
+                  <p>
+                     Określa jedynie minimalną powierzchnię wskaźnika fokusu. Nie wymaga, aby wskaźnik
+                     fokusu był dosłownie konturem o grubości 2 pikseli CSS, a jedynie, aby wskaźnik był
+                     co najmniej tak duży.
+                     
+                  </p>
+                  
+                  <p>
+                     Jednak najprostszym sposobem spełnienia wymagań dotyczących rozmiaru jest użycie wskaźnika
+                     fokusu, który <em>ma</em> ciągły kontur o grubości 2 pikseli CSS.
+                     
+                  </p>
+                  
+                  <div class="note">
+                     <p class="note-title marker">Uwaga</p>
+                     <p>
+                        <a href="#dfn-piksel-css">Piksel CSS</a> jest tym, czego programiści używają w deklaracjach CSS, takich jak „width”: 200px”.
+                        Jest niezależny od urządzenia i nie należy go mylić z pikselami urządzenia, które
+                        różnią się w zależności od fizycznej gęstości pikseli. <br />
+                        W pozostałej części tego dokumentu piksele CSS są oznaczone jako „px”.
+                        
+                     </p>
+                  </div>
+                  
+                  <section id="area-solid-outline">
+                     
+                     <h4>Używanie ciągłego konturu</h4>
+                     
+                     <p>
+                        Najłatwiejszym i najczęstszym sposobem spełnienia tego wymagania jest użycie ciągłego
+                        konturu wokół komponentu. Kontur musi mieć grubość co najmniej 2px. Poniższa ilustracja
+                        przedstawia <strong>minimalnie</strong> gruby wskaźnik fokusu, w którym pas białych pikseli o grubości 2 pikseli tworzących
+                        tło strony wokół przykładowego przycisku został zmieniony na czarny.
+                        
+                     </p>
+                     
+                     <figure id="focus-indicator-basic">
+                        <img src="img/focus-indicator-basic.png" alt="2 niebieskie przyciski z ciemnym prostokątem fokusu o grubości 2 pikseli wokół drugiego" />
+                        
+                        <figcaption>Figure 1 Rysunek 1 Kryterium spełnione: Wskaźnik fokusu to kontur z linii ciągłej o grubości
+                           2 pikseli.
+                        </figcaption>
+                        
+                     </figure>
+                     
+                     <p>
+                        W przypadku komponentów nieprostokątnych definicja „konturu” umożliwia autorom użycie
+                        jednego z następujących typów obrysu:
+                        
+                     </p>
+                     
+                     <ul>
+                        
+                        <li>ciągła linia <a href="#">otaczająca</a> kształt, lub
+                        </li>
+                        
+                        <li>
+                           ciągła linia otaczająca <a href="#">minimalną obwiednię</a> kształtu
+                           
+                        </li>
+                        
+                     </ul>
+                     
+                     <p>
+                        Na przykład przycisk w kształcie gwiazdy może wykorzystywać wskaźnik fokusu zgodny
+                        z kształtem gwiazdy lub wskaźnik fokusu zgodny z obwiednią gwiazdy. W poniższych przykładach
+                        zostały już wybrane te same trzy gwiazdki, a fokus jest na trzeciej gwiazdce. W pierwszym
+                        przykładzie zastosowano wskaźnik fokusu, który odpowiada kształtowi skupionej gwiazdy.
+                        W pierwszym przykładzie zastosowano wskaźnik fokusu, który odpowiada kształtowi gwiazdki,
+                        która  ma fokus. Drugi wykorzystuje prostokątny wskaźnik.
+                        
+                     </p>
+                     
+                     <figure id="focus-outline-solid">
+                        <img src="img/focus-indicator-solid-outline.svg" alt="Trzy z pięciu gwiazdek są wybierane za pomocą wskaźnika fokusu w kształcie linii ciągłej w kształcie gwiazdy wyznaczającej trzecią" />
+                        
+                        <figcaption>Figure 2 Rysunek 2 Kryterium spełnione: wskaźnik konturu otacza trzecią z pięciu gwiazd.</figcaption>
+                        
+                     </figure>
+                     
+                     <figure id="focus-border-solid">
+                        <img src="img/focus-indicator-solid-border.svg" alt="Wybrano 3 z 5 gwiazdek za pomocą prostokątnego wskaźnika fokusu w postaci ciągłej linii wokół trzeciej gwiazdy" />
+                        
+                        <figcaption>Figure 3 Rysunek 3 Kryterium spełnione: prostokąt fokusu otacza trzecią z pięciu gwiazd.</figcaption>
+                        
+                     </figure>
+                     
+                     <p>
+                        Nieznaczne odsunięcie wskaźników od komponentu, który ma fokus, jak w powyższych przykładach,
+                        nie jest wymagane, aby spełnić wymagania dotyczące minimalnej powierzchni w ramach
+                        kryterium sukcesu, ale może pomóc w zwiększeniu widoczności wskaźników. W CSS powszechnie
+                        stosuje się do tego właściwości <code>outline</code> i <code>outline-offset</code>.
+                        
+                     </p>
+                     
+                     <p>
+                        Najmniejszy możliwy wskaźnik grubości 2 pikseli CSS, który nadal stanowi „obwód”,
+                        to linia ciągła, która pojawia się wewnątrz komponentu naprzeciw jego zewnętrznej
+                        krawędzi, na przykład poprzez użycie właściwości CSS <code>border</code>. Wskaźniki umieszczone głębiej w komponencie (nie bezpośrednio przy zewnętrznej krawędzi
+                        komponentu) muszą być grubsze niż 2 piksele CSS, aby spełnić wymagania dotyczące minimalnego
+                        rozmiaru.
+                        
+                     </p>
+                     
+                     <figure id="focus-offsets">
+                        <img src="img/focus-indicator-offset-types.png" alt="przycisk wraz z 4 przykładami różnych wskaźników ciągłego konturu o rozdzielczości 2 pikseli: przesunięcie na zewnątrz komponentu, kontur wokół granicy komponentu, obramowanie wewnątrz granicy komponentu i wstawka wewnątrz komponentu" />
+                        
+                        <figcaption>Figure 4 
+                           Rysunek 4 Wszystkie cztery przykładowe wskaźniki fokusu to linie ciągłe o szerokości
+                           2 pikseli. Wskaźniki „obrys”, „kontur” i „ramka” są poprawne. Wskaźnik „wstawka” nie
+                           spełnia wymagań dotyczących minimalnej powierzchni, a więc nie spełnia kryterium;
+                           aby spełnić kryterium, musiałby mieć co najmniej 3 piksele grubości.
+                           
+                        </figcaption>
+                        
+                     </figure>
+                     
+                     <p>
+                        Należy pamiętać, że mogą obowiązywać różne wymagania dotyczące kontrastu elementów
+                        nietekstowych w zależności od tego, czy wskaźnik fokusu jest odsunięty od krawędzi
+                        komponentu, wstawiony w nią lub przy niej. Zobacz poniżej sekcję <a href="#relationship-with-non-text-contrast">Związek z kontrastem elementów nietekstowych</a>.
+                        
+                     </p>
+                     
+                  </section>
+                  
+                  <section id="area-other-indicator-shapes">
+                     
+                     <h4>Inne kształty wskaźników</h4>
+                     
+                     <p>
+                        To kryterium sukcesu nie wymaga, aby wskaźniki fokusu miały ciągły kontur. Można zastosować
+                        inne kształty, o ile spełniają wymagania dotyczące minimalnej powierzchni.
+                        
+                     </p>
+                     
+                     <p>
+                        Minimalny obszar wskaźnika fokusu dla kontrolki to obszar obwodu kontrolki o grubości
+                        2 pikseli CSS (lub jej minimalnej obwiedni) w stanie kontrolki bez fokusu. Na przykład,
+                        jeśli kontrolka jest prostokątem o szerokości 90 pikseli i wysokości 30 pikseli, obszar
+                        obwodu o grubości 2 pikseli CSS jest różnicą pomiędzy obszarami:
+                        
+                     </p>
+                     
+                     <ul>
+                        
+                        <li>prostokątem o wymiarach 92 na 32 piksele (o 1 piksel większy ze wszystkich stron)
+                           oraz
+                        </li>
+                        
+                        <li>prostokątem o wymiarach 88 na 28 pikseli (o 1 piksel mniejszy ze wszystkich stron).</li>
+                        
+                     </ul>
+                     
+                     <p>
+                        Daje to minimalny obszar (92px * 32px) – (88px * 28px) = 480px<sup>2</sup>.
+                        
+                     </p>
+                     
+                     <p>Niektóre ogólne wzory na obwody typowych kształtów o grubości 2 pikseli CSS to:</p>
+                     
+                     <dl>
+                        
+                        <dt>Prostokąt o szerokości <em>w</em> i wysokości <em>h</em></dt>
+                        
+                        <dd>4<em>h</em> + 4<em>w</em></dd>
+                        
+                        <dt>Okrąg o promieniu <em>r</em></dt>
+                        
+                        <dd>4𝜋<em>r</em></dd>
+                        
+                        <dt>Zaokrąglony prostokąt o szerokości <em>w</em>, wysokości <em>h</em> i promieniu obramowania <em>r</em></dt>
+                        
+                        <dd>4<em>h</em> + 4<em>w</em> – (16 – 4𝜋)<em>r</em></dd>
+                        
+                     </dl>
+                     
+                     <div class="note">
+                        <p class="note-title marker">Uwaga</p>
+                        <p>
+                           Jeśli musisz zastosować skomplikowaną matematykę, aby ustalić, czy wskaźnik fokusu
+                           jest wystarczająco duży, prawdopodobnie jest to znak, że powinieneś zamiast tego użyć
+                           większego wskaźnika. Im bardziej widoczna zmiana po ustawieniu fokusu na elemencie,
+                           tym łatwiej jest ją zobaczyć.
+                           
+                        </p>
+                     </div>
+                     
+                     <p>
+                        W poniższych 2 przykładach zastosowano przycisk o wymiarach 90 pikseli szerokości
+                        i 30 pikseli wysokości, a minimalny wymagany obszar wynosi 480 pikseli<sup>2</sup>:
+                        
+                     </p>
+                     
+                     <figure id="focus-indicator-custom-shapes-inset">
+                        <img src="img/focus-indicator-custom-shapes-inset.png" alt="Trzy przyciski o wymiarach 90 na 30 pikseli. Środkowy przycisk ma wskaźnik fokusu, który jest konturem o grubości 3 pikseli umieszczonym wewnątrz przycisku o grubości 3 pikseli" />
+                        
+                        <figcaption>Figure 5 
+                           Rysunek 5 Kryterium spełnione: wewnętrzny kontur jest nieco odsunięty od zewnętrznej
+                           krawędzi komponentu, ale kompensuje to grubością 3 pikseli. Ma powierzchnię 612px<sup>2</sup>, co przekracza minimum 480px<sup>2</sup> .
+                           
+                        </figcaption>
+                        
+                     </figure>
+                     
+                     <figure id="focus-indicator-custom-shapes-side-highlights">
+                        <img src="img/focus-indicator-custom-shapes-side-highlights.png" alt="Trzy przyciski o wymiarach 90 na 30 pikseli. Środkowy przycisk ma wskaźnik fokusu, czyli dwa prostokąty wewnątrz przycisku, po jednym po obu stronach" />
+                        
+                        <figcaption>Figure 6 
+                           Rysunek 6 Kryterium spełnione: prostokąty wskaźników po obu stronach przycisku z fokusem
+                           mają szerokość 9 pikseli i wysokość 28 pikseli. W sumie mają one rozmiar 504px<sup>2</sup>, co ledwo spełnia minimum 480px<sup>2</sup> .
+                           
+                        </figcaption>
+                        
+                     </figure>
+                     
+                     <div class="note">
+                        <p class="note-title marker">Uwaga</p>
+                        <p>
+                           Preferuj stosowanie technik wskaźników fokusu, które skalują się zarówno z szerokością,
+                           jak i wysokością kontrolki z fokusem. W przeciwnym razie, jeśli elementy sterujące
+                           zmieniają rozmiar w różnych odmianach strony (na przykład w przypadku projektu responsywnego),
+                           wskaźnik może  w niektórych odmianach spełniać wymagania dotyczące obszaru, ale w
+                           innych nie. Na przykład na powyższym rysunku, jeśli szerokość dwóch wyróżnionych prostokątów
+                           nie skalowałaby się wraz ze wzrostem szerokości przycisku, przestałaby spełniać minimalne
+                           wymagania dotyczące obszaru, gdyby przycisk musiał się powiększyć, aby pomieścić dłuższą
+                           etykietę.
+                           
+                        </p>
+                     </div>
+                     
+                     <p>
+                        Innym sposobem osiągnięcia wymaganej powierzchni jest zmiana wyglądu całego elementu,
+                        na przykład poprzez zmianę jego koloru. Może to być skuteczne w przypadku zestawu
+                        blisko rozmieszczonych przycisków. Poniższy przykład ilustruje to z 5 gwiazdkami;
+                        środkowa gwiazdka jest wypełniona ciemniejszym kolorem, aby wskazać fokus. Jednak
+                        znacznie trudniej jest wykryć taki wskaźnik fokusu, gdy komponenty nie znajdują się
+                        blisko siebie i dlatego nie można ich łatwo porównać. Dla użytkowników korzystających
+                        z powiększenia porównanie komponentów znajdujących się nawet stosunkowo blisko siebie
+                        może być trudne, dlatego nie jest to uważane za dobrą praktykę.
+                        
+                     </p>
+                     
+                     <figure id="focus-indicator-whole-star">
+                        <img src="img/focus-indicator-whole-star.svg" alt="Wybrano 3 z 5 gwiazdek, przy czym cała trzecia gwiazdka została zmieniona w kolorze, aby wskazać fokus" />
+                        
+                        <figcaption>Figure 7 Rysunek 7 Kryterium spełnione: zmiana koloru dotyczy całej trzeciej gwiazdki, aby
+                           wskazać fokus.
+                        </figcaption>
+                        
+                     </figure>
+                     
+                  </section>
+                  
+                  <section id="area-inline-links">
+                     
+                     <h4>Łącza śródliniowe</h4>
+                     
+                     <p>
+                        Jeśli łącze śródliniowe jest podzielone na wiele linii, niektóre metody tworzenia
+                        wskaźnika fokusu powodują różne wyniki w przeglądarkach. <code>Kontur</code> CSS oddzielnie otacza każdą część łącza, która dzieli się na wiele linii. Jest to
+                        zdecydowanie najpopularniejsza technika CSS do wskazywania fokusu i daje wynik spełniający
+                        definicję minimalnej obwiedni, ponieważ każda część jest solidnie otoczona fokusem.
+                        <code>Obramowanie</code> CSS podzieli obwódkę na części łącza, co spowoduje niezamkniętą ramkę dla każdej
+                        linii łącza. Definicja minimalnej obwiedni stwierdza, że fokus łącza można ocenić
+                        tak, jakby całe łącze znajdowało się w jednej linii, dlatego też uważa się, że ramka
+                        o grubości 2 pikseli spełnia wymagania dotyczące minimalnego obszaru. Dlatego też,
+                        jeśli spełnione są wymagania dotyczące kontrastu, każda z tych metod może zapewnić
+                        wystarczający wskaźnik fokusu.
+                        
+                     </p>
+                     
+                     <figure id="focus-indicator-inline-link-outline">
+                        <img src="img/focus-inline-link-outline.png" alt="Akapit tekstu zawierający łącze podzielone na dwie linie. Czerwony wskaźnik fokusu to pełny prostokąt otaczający każdą część łącza." />
+                        
+                        <figcaption>Figure 8 
+                           Rysunek 8 Kryterium spełnione: właściwość CSS <code>outline</code> solidnie i całkowicie ogranicza każdą część łącza, dzięki czemu spełnia definicję
+                           obwodu.
+                           
+                        </figcaption>
+                        
+                     </figure>
+                     
+                     <figure id="focus-indicator-inline-link">
+                        <img src="img/focus-inline-link.png" alt="Akapit tekstu zawierający łącze podzielone na dwie linie. Czerwony wskaźnik fokusu ma przerwę po prawej stronie jednej części łącza i po lewej stronie drugiej części łącza." />
+                        
+                        <figcaption>Figure 9 
+                           Rysunek 9 Kryterium spełnione: Chociaż właściwość CSS <code>border</code> CSS na łączu wieloliniowym nie obejmuje oddzielnych części łącza, definicja minimalnej
+                           obwiedni pozwala ocenić ją tak, jakby znajdowała się w pojedynczej linii, więc kwalifikuje
+                           się również jako obwód.
+                           
+                        </figcaption>
+                        
+                     </figure>
+                     
+                  </section>
+                  
+               </section>
+               <section id="change-of-contrast">
+                  
+                  <h3>Zmiana kontrastu</h3>
+                  
+                  <p>
+                     Druga część wymagań dotyczących wskaźnika Kryterium sukcesu stwierdza, że ​​obszar
+                     wskaźnika:
+                     
+                  </p>
+                  
+                  <blockquote>
+                     
+                     <ul>
+                        
+                        <li>
+                           ma współczynnik kontrastu co najmniej 3:1 między tymi samymi pikselami w stanie „ma
+                           fokus” i „nie ma fokusu”
+                           
+                        </li>
+                        
+                     </ul>
+                     
+                  </blockquote>
+                  
+                  <p>
+                     Wymaganie to mierzy zmianę kontrastu między tymi samymi pikselami w różnych stanach.
+                     Różni się to od kryteriów sukcesu kontrastu tekstu i kontrastu elementów nietekstowych,
+                     które mierzą kontrast pomiędzy różnymi sąsiadującymi pikselami w jednym stanie na
+                     raz.
+                     
+                  </p>
+                  
+                  <p>
+                     3:1 to <strong>minimalny</strong> dopuszczalny współczynnik zmiany kontrastu, ale im większa jest zmiana kontrastu
+                     między stanami, tym łatwiej użytkownikom zobaczyć wskaźnik fokusu. Autorów zachęca
+                     się do stosowania jak największego współczynnika zmiany kontrastu.
+                     
+                  </p>
+                  
+                  <p>
+                     Na poniższej ilustracji przedstawiono <strong>minimalnie</strong> kontrastujący wskaźnik fokusu, na którym niektóre białe piksele tworzące tło strony
+                     zostały zmienione na kolor średnio szary o współczynniku kontrastu 3:1 w stosunku
+                     do oryginalnej bieli. Zachęcamy autorów do przekraczania minimalnych wymagań dotyczących
+                     wyglądu fokusu. Na przykład ciemnoniebieskie linie na rysunkach 2 i 3 są znacznie
+                     bardziej widoczne.
+                     
+                  </p>
+                  
+                  <figure id="focus-indicator-star-with-light-focus">
+                     <img src="img/focus-indicator-star-with-light-focus.svg" alt="Dwie pomarańczowo-żółte pięcioramienne gwiazdy, jedna ze średnio szarym prostokątem wskaźnika fokusu" />
+                     
+                     <figcaption>Figure 10 
+                        Rysunek 10 Kryterium spełnione: Dwa przyciski w kształcie gwiazdek, drugi otoczony
+                        wskaźnikiem fokusu, którego piksele kontrastują w stosunku 3:1 między stanami z fokusem
+                        (jasnoszary) i bez fokusu (biały).
+                        
+                     </figcaption>
+                     
+                  </figure>
+                  
+                  <p>
+                     Kiedy komponent zmienia się i zawiera wskaźnik fokusu, zmianę tę można zmierzyć jako
+                     zmianę kontrastu koloru. Na przykład, jeśli do przycisku na niebieskim tle zostanie
+                     dodany żółty kontur, zmiana koloru nastąpi z niebieskiego na żółty. Zmianę tę można
+                     zmierzyć niezależnie od tego, czy wskaźnik fokusu znajduje się na tle wokół komponentu,
+                     czy na tle wewnątrz komponentu.
+                     
+                  </p>
+                  
+                  <figure id="focus-indicator-innerline-2">
+                     <img src="img/focus-indicator-innerline.png" alt="Trzy ciemnoniebieskie przyciski na białym tle. Środkowy przycisk ma żółtą wewnętrzną obwódkę." width="284" />
+                     
+                     <figcaption>Figure 11 
+                        Rysunek 11 Kryterium spełnione: dodanie żółtego obrysu do łącza oznacza zmianę koloru
+                        z niebieskiego na żółty. Ta zmiana ma współczynnik kontrastu 12:1.
+                        
+                     </figcaption>
+                     
+                  </figure>
+                  
+                  <p>
+                     Jeśli kontrolka otrzymująca fokus zmieni swoje tło (kolor wypełnienia) na kolor, który
+                     kontrastuje w stosunku mniejszym niż 3:1 z oryginalnym tłem, kryterium zmiany kontrastu
+                     nie będzie spełnione.
+                     
+                  </p>
+                  
+                  <figure id="focus-indicator-background">
+                     <img src="img/focus-indicator-background.png" alt="Trzy czarne przyciski z ciemnym tłem. Środkowy przycisk ma ciemnoszare tło." width="250" />
+                     
+                     <figcaption>Figure 12 
+                        Rysunek 12 kryterium niespełnione: drugie łącze ma kolor ciemnoszary (#555), co <strong>nie spełnia</strong> kryterium sukcesu, ponieważ zmiana tła z czarnego na ciemnoszare nie spełnia współczynnika
+                        3:1.
+                        
+                     </figcaption>
+                     
+                  </figure>
+                  
+                  <p>Jeśli zmiana tła jest wystarczająca, jest to metoda spełnienia kryterium.</p>
+                  
+                  <figure id="focus-indicator-background-passing">
+                     <img src="img/focus-indicator-background-passing.png" alt="Trzy czarne przyciski z ciemną obwódką i dwa z ciemnym tłem. Środkowy przycisk ma białe tło." width="250" />
+                     
+                     <figcaption>Figure 13 
+                        Rysunek 13 Kryterium spełnione: drugie łącze ma białe tło (#fff), co <strong>spełnia</strong> kryterium sukcesu, ponieważ zmiana tła z czarnego na białe spełnia stosunek 3:1.
+                        
+                     </figcaption>
+                     
+                  </figure>
+                  
+                  <section id="change-of-contrast-partial">
+                     
+                     <h4>Częściowo kontrastujące wskaźniki</h4>
+                     
+                     <p>
+                        Nie jest konieczne, aby <em>cały</em> wskaźnik fokusu miał zmianę kontrastu 3:1. Wystarczy, że tylko część wskaźnika spełni
+                        wymóg zmiany kontrastu, o ile kontrastująca część wskaźnika spełnia wymóg minimalnej
+                        powierzchni.
+                        
+                     </p>
+                     
+                     <figure id="focus-indicator-two-color-thick">
+                        <img src="img/focus-indicator-two-color-thick.png" alt="Przycisk, którego wskaźnikiem fokusu są dwa zagnieżdżone kontury: wewnętrzny jasnoszary kontur o grubości 2 pikseli z niskim kontrastem w stosunku do tła i zewnętrzny czarny kontur o grubości 2 pikseli o wysokim kontraście" />
+                        
+                        <figcaption>Figure 14 
+                           Rysunek 14 Kryterium spełnione: Czarna część wskaźnika kontrastuje 3:1 z białym tłem,
+                           natomiast szara część nie. Czarna część ma grubość 2 pikseli, więc sama spełnia wymagania
+                           dotyczące minimalnej powierzchni, a szarą część można zignorować.
+                           
+                        </figcaption>
+                        
+                     </figure>
+                     
+                     <figure id="focus-indicator-two-color-thick">
+                        <img src="img/focus-indicator-two-color-thin.png" alt="Przycisk, którego wskaźnikiem fokusu są dwa zagnieżdżone kontury: wewnętrzny jasnoszary kontur o grubości 1 piksela z niskim kontrastem w stosunku do tła i zewnętrzny czarny kontur o grubości 1 piksela o wysokim kontraście" />
+                        
+                        <figcaption>Figure 15 
+                           Rysunek 15 Kryterium niespełnione: Wskaźnik jako całość ma grubość 2px, ale jego część,
+                           która ma wystarczającą zmianę kontrastu, ma tylko 1px grubość. Część wskaźnika charakteryzująca
+                           się wystarczającą zmianą kontrastu nie spełnia wymogu dotyczącego minimalnej powierzchni.
+                           
+                        </figcaption>
+                        
+                     </figure>
+                     
+                     <p>
+                        Przy obliczaniu, czy wskaźnik fokusu spełnia wymóg dotyczący minimalnej powierzchni,
+                        należy uwzględnić jedynie część wskaźnika spełniającą wymóg zmiany kontrastu.
+                        
+                     </p>
+                     
+                  </section>
+                  
+                  <section id="change-of-contrast-gradients">
+                     
+                     <h4>Gradienty</h4>
+                     
+                     <p>
+                        Jeśli wskaźnik fokusu ma gradient, zasadą jest zmierzenie kontrastu zmienionego obszaru
+                        i zignorowanie jakiejkolwiek części gradientu, która ma współczynnik zmiany kontrastu
+                        mniejszy niż 3:1.
+                        
+                     </p>
+                     
+                     <figure id="focus-indicator-box-shadow">
+                        <img src="img/focus-indicator-box-shadow.png" alt="Trzy przyciski, środkowy z mocnym cieniem wskazującym fokus." />
+                        
+                        <figcaption>Figure 16 
+                           Rysunek 16 Gdy na wskaźniku fokusu używany jest gradient, miara pola powierzchni powinna
+                           uwzględniać tylko obszar, który zmienił się na tyle, aby osiągnąć współczynnik kontrastu
+                           3:1.
+                           
+                        </figcaption>
+                        
+                     </figure>
+                     
+                     <p>
+                        Jeśli wyeliminujesz obszar, w którym zmiana kontrastu jest mniejsza niż 3:1, możesz
+                        obliczyć powierzchnię pozostałych części wskaźnika, aby określić, czy wskaźnik spełnia
+                        wymagania dotyczące minimalnej powierzchni.
+                        
+                     </p>
+                     
+                     <figure id="focus-indicator-box-shadow-only">
+                        <img src="img/focus-indicator-box-shadow-only.png" alt="Środkowy przycisk z cieniem jest uwzględniony, ale usunięto subtelne szare obszary, aby pokazać tylko kontrastujący obszar." />
+                        
+                        <figcaption>Figure 17 
+                           Rysunek 17 Kryterium spełnione: ten sam przycisk z fokusem z usuniętymi niekontrastującymi
+                           obszarami. Kontrastujący obszar ma grubość 6 pikseli wzdłuż większości dolnej krawędzi
+                           i 3–4 pikseli grubości po lewej i prawej krawędzi, co jest wystarczające, aby spełnić
+                           wymagania dotyczące minimalnego obszaru.
+                           
+                        </figcaption>
+                        
+                     </figure>
+                     
+                     <div class="note">
+                        <p class="note-title marker">Uwaga</p>
+                        <p>
+                           Niektóre przykłady w tym dokumencie to zrzuty ekranowe elementów. Ze względu na utratę
+                           rozdzielczości tych obrazów rzeczywisty kolor pikseli może różnić się od oryginału.
+                           W związku z tym służą one celom ilustracyjnym i nie należy ich sprawdzać piksel po
+                           pikselu pod kątem wystarczającego kontrastu.
+                           
+                        </p>
+                     </div>
+                     
+                     <p>
+                        Niektóre projekty mają strony z niejednolitym obrazem tła pokrywającym całość (lub
+                        część) strony lub wykorzystują efekty przewijania paralaksy, które dają niemal nieskończoną
+                        liczbę kombinacji kolorów, jeśli strona jest przewijana i/lub wprowadzane są zmiany
+                        do rozmiaru widocznego obszaru strony (rzutni).
+                        
+                     </p>
+                     
+                     <p>
+                        Jeśli kontrast zmieniających się kolorów tła jest na tyle bliski, że należy je przetestować
+                        dla każdej kombinacji, wówczas prawdopodobnie nie spełnią one potrzeb osób słabowidzących
+                        w przypadku niektórych kombinacji przewijania i prawdopodobnie również nie przyniosą
+                        oczekiwanych rezultatów w niektórych kombinacjach. W takich przypadkach łatwym rozwiązaniem
+                        byłoby użycie <a href="https://www.w3.org/WAI/WCAG22/Techniques/css/C40">dwukolorowego wskaźnika fokusu</a> lub innego mechanizmu wskazującego fokus, takiego jak pełne pole z obramowaniem,
+                        aby zagwarantować wystarczający kontrast pomiędzy różnymi obrazami tła lub tłem gradientowym.
+                        
+                     </p>
+                     
+                     <p>
+                        Możliwe jest wykorzystanie wzorów wizualnych, takich jak paski zmieniające miejsca,
+                        w celu zamaskowania wskaźnika zmiany fokusu. Nie uważa się tego jednak za widoczny
+                        wskaźnik.
+                        
+                     </p>
+                     
+                  </section>
+                  
+               </section>
+               <section id="relationship-with-non-text-contrast">
+                  
+                  <h3>Związek z kontrastem elementów nietekstowych</h3>
+                  
+                  <p>
+                     Wskaźniki fokusu to informacje wizualne wymagane do zidentyfikowania stanu komponentu
+                     interfejsu użytkownika. Oznacza to, że podlegają one KS <a href="../guidlines/kontrast-elementow-nietekstowych.html">1.4.11 Kontrast elementów nietekstowych</a> oraz KS <a href="../guidlines/wyglad-fokusu.html">2.4.13 Wygląd fokusu</a>.
+                     
+                  </p>
+                  
+                  <p>
+                     W połączeniu z KS <a href="widoczny-fokus.html">2.4.7 Widoczny fokus</a>, KS <a href="kontrast-elementow-nietekstowych.html" class="sc">1.4.11 Kontrast elementów nietekstowych</a> wymaga, aby wizualny wskaźnik fokusu komponentu miał wystarczający kontrast w stosunku
+                     do sąsiednich kolorów, gdy komponent ma fokus, z wyjątkiem sytuacji, gdy wygląd komponentu
+                     jest określony przez program użytkownika i nie jest modyfikowany przez autora.
+                     
+                  </p>
+                  
+                  <p>
+                     Różnica między wymaganiami kontrastu w kryterium Wygląd fokusu a kryterium Kontrast
+                     elementów nietekstowych jest następująca:
+                     
+                  </p>
+                  
+                  <ul>
+                     
+                     <li>
+                        Kryterium Wygląd fokusu wymaga, aby wskaźniki fokusu <em>zmieniały kontrast</em> pomiędzy stanami „ma fokus” i „nie ma fokusu”.
+                        
+                     </li>
+                     
+                     <li>
+                        Kryterium Kontrast elementów  nietekstowych wymaga, aby wskaźniki fokusu miały <em>sąsiadujący kontrast</em> między wskaźnikiem (w stanie „ma fokus”) a sąsiadującymi kolorami niebędącymi wskaźnikami.
+                        
+                     </li>
+                     
+                  </ul>
+                  
+                  <figure id="non-text-contrast-fail-focus-appearance-pass">
+                     <img src="img/focus-indicator-good-change-bad-adjacent.png" alt="Jasnoniebieski przycisk z obramowaniem o grubości 3 pikseli. Ramka jest czarna w stanie „nie ma fokusu” i jasnoszara w stanie „ma fokus”." />
+                     
+                     <figcaption>Figure 18 
+                        Rysunek 18 Ten przykład spełnia kryterium Wyglądu fokusu, ale nie spełnia kryterium
+                        Kontrast elementów nietekstowych; <em>kontrast</em> między wskaźnikiem fokusu a sąsiednimi kolorami jest niewystarczający.
+                        
+                     </figcaption>
+                     
+                  </figure>
+                  
+                  <figure id="non-text-contrast-pass-focus-appearance-fail">
+                     <img src="img/focus-indicator-good-adjacent-bad-change.png" alt="Jasnoniebieski przycisk z obramowaniem o grubości 3 pikseli. Ramka jest czarna w stanie „nie ma fokusu” i ciemnoszara w stanie „ma fokus”." />
+                     
+                     <figcaption>Figure 19 
+                        Rysunek 19 Ten przykład spełnia kryterium  Kontrast elementów nietekstowych, ale nie
+                        spełnia kryterium Wygląd fokusu; nie ma wystarczającej <em>zmiany kontrastu</em> pomiędzy stanami „ma fokus” i „nie ma fokusu”.
+                        
+                     </figcaption>
+                     
+                  </figure>
+                  
+                  <p>
+                     Ponadto kryterium Kontrast elementów nietekstowych nie określa żadnych wymagań dotyczących
+                     rozmiaru i ma nieco inne zasady określające, kiedy dozwolone są wyjątki.
+                     
+                  </p>
+                  
+                  <p>
+                     Więcej szczegółów i przykładów można znaleźć w sekcji Związek z widocznością fokusu
+                     w <a href="kontrast-elementow-nietekstowych.html">Objaśnienie KS 1.4.11 Kontrast elementów nietekstowych</a>.
+                     
+                  </p>
+                  
+               </section>
+               <section id="keyboard-focus">
+                  
+                  <h3>Komponent z fokusem klawiatury</h3>
+                  
+                  <p>
+                     Preambuła tego kryterium sukcesu brzmi: „Gdy komponent interfejsu użytkownika ma fokus
+                     klawiatury…” <em>Fokus klawiatury</em> to punkt interakcji dla osoby korzystającej z klawiatury. W środowiskach z interfejsem
+                     obsługiwanym za pomocą klawiatury, fokus klawiatury można przesuwać po interfejsie,
+                     aby wchodzić w interakcję z różnymi komponentami. Komponent, z którym wchodzi się
+                     w interakcję, jest ma fokus.
+                     
+                  </p>
+                  
+                  <p>
+                     WCAG definiuje <em>komponent interfejsu użytkownika</em> jako „część treści postrzeganą przez użytkowników jako pojedynczy element sterujący
+                     dla odrębnej funkcji”. Ponieważ różni użytkownicy mogą odmiennie postrzegać elementy
+                     sterujące, mogą istnieć pewne różnice w interpretacji tego, co stanowi zarówno <em>pojedynczy element sterujący</em>, jak i <em>odrębną funkcję</em>. Dzieje się tak szczególnie wtedy, gdy coś wizualnie prezentuje się w sposób, który
+                     może różnić się od tego, jak zostało to stworzone od strony programistycznej. Tam,
+                     gdzie nie ma rdzennego komponentu HTML, na którym można oprzeć projekty, mogą występować
+                     duże różnice w sposobie przedstawiania komponentów i ich wskaźników fokusu. Co więcej,
+                     niektóre komponenty mają komponenty podrzędne, które mogą przyjąć fokus, np. elementy
+                     menu.
+                     
+                  </p>
+                  
+                  <p>
+                     Niemniej jednak, dla tego kryterium sukcesu uzyskano spójne wyniki od różnych testerów,
+                     wykorzystując sam wskaźnik fokusu jako miernik tego, co stanowi komponent, z którym
+                     wchodzi się w interakcję. W przypadku złożonych komponentów trzy typowe wskaźniki
+                     fokusu są następujące:
+                     
+                  </p>
+                  
+                  <ul>
+                     
+                     <li>Wskaźnik fokusu tylko wokół całego komponentu</li>
+                     
+                     <li>Wskaźniki fokusu wokół komponentu i podrzędnego komponentu</li>
+                     
+                     <li>Wskaźnik fokusu tylko wokół podrzędnego komponentu</li>
+                     
+                  </ul>
+                  
+                  <p>Każdy z nich zostanie omówiony przy użyciu listy z zakładkami jako znanego złożonego
+                     komponentu.
+                  </p>
+                  
+                  <h3>Wskaźnik fokusu tylko wokół całego komponentu</h3>
+                  
+                  <figure id="component-complex-whole">
+                     <img src="img/component-complex-whole.png" alt="Trzy przyciski zakładek pokazane w ciemnoniebieskim prostokącie wokół wszystkich trzech przycisków zakładek." />
+                     
+                     <figcaption>Figure 20 Rysunek 20 Lista zakładek ze wskaźnikiem fokusu tylko wokół całości.</figcaption>
+                     
+                  </figure>
+                  
+                  <p>
+                     Gdy wskaźnik fokusu jest wyświetlany tylko wokół całej listy zakładek, użytkownik
+                     otrzymuje wskazówki, by traktować tę listę jako pojedynczy komponent użytkownika.
+                     Znajdujące się w nim elementy zakładek są wizualnie rozróżniane pomiędzy stanami wybranym
+                     i niewybranymi (a wizualne wskaźniki stanu zaznaczenia muszą spełniać kryteria podane
+                     w KS <a href="kontrast-elementow-nietekstowych.html">1.4.11 Kontrast elementów nietekstowych</a>).
+                     
+                  </p>
+                  
+                  <p>
+                     Posiadanie wskaźnika  fokusu <em>tylko</em> wokół całości jest możliwe, gdy nie ma potrzeby posiadania wybranego podrzędnego
+                     komponentu, podczas gdy inny podrzędny komponent ma fokus. W przypadku listy zakładek,
+                     która synchronizuje zawartość panelu kart z dowolną aktywną kartą, w danym momencie
+                     można wybrać tylko jeden element karty, a ponieważ wybrana karta jest uważana za aktywną,
+                     oddzielny wskaźnik fokusu jest zbędny.
+                     
+                  </p>
+                  
+                  <p>Wynik: wskaźnik fokusu na grupie musi spełniać wymagania tego kryterium sukcesu.</p>
+                  
+                  <p>
+                     <a href="https://codesandbox.io/s/practical-cori-nl4pld?file=/index.html">Grupa przycisków opcji</a> i <a href="https://www.w3.org/WAI/ARIA/apg/example-index/slider/slider-rating.html">widżet z oceną gwiazdkową</a>, z których każdy wykorzystuje wyłącznie wskaźnik fokusu całego komponentu, dostarczają
+                     działających przykładów różnych złożonych komponentów, które spełniają podstawowe
+                     wymagania tego kryterium sukcesu. W przykładzie z ocenami w postaci gwiazdek użytkownicy
+                     mogą zwiększyć ocenę o 1/2 gwiazdki. Wskaźnik fokusu dla każdej 1/2 gwiazdki jest
+                     nie tylko niepotrzebny, ale w rzeczywistości byłby trudny do osiągnięcia bez zagmatwania
+                     interakcji.
+                     
+                  </p>
+                  
+                  <h3>Wskaźniki fokusu wokół komponentu i podrzędnego komponentu</h3>
+                  
+                  <figure id="component-complex-both">
+                     <img src="img/component-complex-both.png" alt="Trzy przyciski zakładek pokazane w ciemnoniebieskim prostokącie wokół wszystkich trzech przycisków zakładek. Pierwszy przycisk zakładki również ma ciemny kontur i niebieski pasek wskazujący, że jest zaznaczony." />
+                     <br />
+                     <img src="img/component-complex-both-unselected.png" alt="Wybrano tę samą listę zakładek, z wyjątkiem pierwszej zakładek, ale druga ma obrys fokusu." />
+                     
+                     <figcaption>Figure 21 
+                        Rysunek 21 Ten sam panel kart w dwóch stanach. W pierwszym przypadku fokus skupiony
+                        jest zarówno na liście zakładek, jak i na aktualnie wybranej karcie; w drugim przypadku
+                        fokus jest skupiony zarówno wokół listy zakładek, jak i niewybranej karty.
+                        
+                     </figcaption>
+                     
+                  </figure>
+                  
+                  <p>
+                     W przypadku listy zakładek, która nie synchronizuje treści panelu zakładek z wybraną
+                     zakładką, musi istnieć wskaźnik fokusu dla podrzędnego komponentu elementu panelu
+                     kart.  Wynika to z faktu, że element zakładki z fokusem może być inny niż wybrany
+                     element.
+                     
+                  </p>
+                  
+                  <p>
+                     Użytkownik może przejść do listy zakładek, która w tej implementacji ma prostokąt
+                     fokusu wokół całej listy zakładek, a także prostokąt wokół elementu karty (konwencjonalnie
+                     aktualnie wybranego elementu). Wskaźnik fokusu obejmujący całość pomaga we wskazaniu
+                     użytkownikowi klawiatury, że jest to złożony komponent, który ma własną interakcję.
+                     Użytkownik może następnie przenosić fokus pomiędzy niewybranymi i wybranymi elementami
+                     zakładek – z których każda z kolei ma swój własny wskaźnik fokusu – przed aktywacją
+                     jednej z nich, co następnie powoduje jej wybranie i skupienie oraz aktualizację panelu
+                     kart w celu dopasowania.
+                     
+                  </p>
+                  
+                  <p>
+                     W tym scenariuszu albo wskaźnik fokusu na grupie, albo wskaźnik podrzędnego komponentu
+                     muszą spełniać wymagania tego kryterium sukcesu. Aby uniknąć nadmiernego nakazu, kryterium
+                     sukcesu pozwala autorom wybrać to, co ma największy sens. Ogólnie rzecz biorąc, jeśli
+                     konieczne jest skupienie fokusu na podrzędnych komponentach, należy je uwzględnić
+                     zamiast wskaźnika grupowego.
+                     
+                  </p>
+                  
+                  <p>
+                     Wynik: wskaźnik fokusu dla elementu zakładki spełnia wymagania tego kryterium sukcesu.
+                     Wskaźnik fokusu na liście zakładek nie musi spełniać wymagań.
+                     
+                  </p>
+                  
+                  <p>
+                     <a href="https://www.w3.org/WAI/ARIA/apg/example-index/slider/slider-color-viewer.html">Suwak do wybierania kolorów</a>  stanowi działający przykład innego złożonego komponentu, który pokazuje fokus  głównie
+                     na podkomponencie. W tym przypadku podkomponent kciuka w suwaku ma wskaźnik fokusu
+                     o wystarczającym rozmiarze i kontraście, aby spełnić wymagania wystarczającego obszaru.
+                     Wokół całego suwaka jest również delikatny fokus, ale nie trzeba go oceniać, aby spełnić
+                     to kryterium sukcesu.
+                     
+                  </p>
+                  
+                  <h3>Wskaźnik fokusu tylko wokół podrzędnego komponentu</h3>
+                  
+                  <figure id="component-complex-sub">
+                     <img src="img/component-complex-sub.png" alt="Pokazano trzy przyciski zakładek, a pierwszy przycisk ma ciemny kontur." />
+                     
+                     <figcaption>Figure 22 Rysunek 22 Te same zakładki co w poprzednim zestawie, ale wskaźnik fokusu wokół całości
+                        został usunięty.
+                     </figcaption>
+                     
+                  </figure>
+                  
+                  <p>
+                     Tę samą niezsynchronizowaną listę zakładek można również zaimplementować jako coś,
+                     co pokazuje fokus tylko na elementach karty, a nie na całości. Zachowanie jest takie
+                     samo jak w poprzednim przykładzie, ale wokół listy zakładek nigdy nie jest umieszczony
+                     wskaźnik fokusu. Taka interakcja jest akceptowalna, ale nie jest najlepszą praktyką,
+                     ponieważ wymaga większego zrozumienia od użytkownika dysponującego mniejszą ilością
+                     informacji. Na przykład niektóre wskazówki wizualne dotyczące listy zakładek i elementów
+                     kart (oraz panelu kart) mogą być niejasne. Ponadto użytkownicy klawiatury mogą początkowo
+                     nie rozumieć oczekiwanej interakcji z klawiaturą.
+                     
+                  </p>
+                  
+                  <p>
+                     Wynik: wskaźnik fokusu elementu karty musi spełniać wymagania tego kryterium sukcesu
+                     w ocenie fokusu zarówno w przypadku wybranych, jak i niewybranych elementów karty.
+                     
+                  </p>
+                  
+                  <p>
+                     <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role#example"> Funkcjonalny przykład fokusu skupionego na zakładce opartej wyłącznie na podkomponentach</a> ma wskaźnik, który jest wystarczająco duży (co najmniej czterokrotność krótszego
+                     boku) z wystarczającym kontrastem, aby spełnić kryterium sukcesu obszaru fokusu.
+                     
+                  </p>
+                  
+                  <h3>Gdzie coś, na czym skupiony jest fokus, nie jest komponentem interfejsu użytkownika</h3>
+                  
+                  <p>
+                     Niektóre strony zawierają bardzo duże obszary edycji, takie jak internetowe implementacje
+                     edytorów tekstu i edytorów kodu. W przeciwieństwie do elementu <code>textarea</code>, który jest komponentem interfejsu użytkownika, te duże obszary edycji zazwyczaj
+                     nie spełniają definicji <a href="#dfn-komponent-interfejsu-u%C5%BCytkownika">komponentu interfejsu użytkownika</a>; nie są „postrzegane przez użytkowników jako pojedyncza kontrolka dla odrębnej funkcji”.
+                     Zapewnienie wskaźników fokusu wokół takich obszarów edycji może nadal być dla niektórych
+                     korzystne; jeżeli jednak obszar nie jest postrzegany jako pojedyncza kontrolka, nie
+                     jest on objęty tym kryterium sukcesu. Strona internetowa nadal będzie musiała zapewniać
+                     punkt wstawiania (wskaźnik daszka) w takich obszarach edycji, aby spełnić wymagania
+                     punktu <a href="widoczny-fokus.html"> KS 2.4.7 Widoczny fokus</a>.
+                     
+                  </p>
+                  
+                  <p>
+                     Niektóre nieobsługiwane elementy mogą przyjmować fokus (np. element nagłówka będący
+                     celem łącza pomijającego). Jednakże preambuła tego kryterium sukcesu odnosi się do
+                     komponentów interfejsu użytkownika; kryterium sukcesu ma zastosowanie tylko wtedy,
+                     gdy element z fokusem można obsługiwać za pomocą klawiatury.
+                     
+                  </p>
+                  
+               </section>
+               <section id="exceptions">
+                  
+                  <h3>Wyjątki</h3>
+                  
+                  <p>Istnieją dwie sytuacje, w których nie trzeba oceniać wyglądu fokusu:</p>
+                  
+                  <ul>
+                     
+                     <li>wskaźnik fokusu nie może być regulowany przez autora</li>
+                     
+                     <li>autor nie zmienił efektów domyślnych ustawień programu użytkownika</li>
+                     
+                  </ul>
+                  
+                  <section id="exception-cannot-adjust">
+                     
+                     <h4>Pierwszy wyjątek: wskaźnik fokusu nie może być regulowany przez autora</h4>
+                     
+                     <blockquote>
+                        
+                        <p>
+                           Wskaźnik fokusu jest określany przez oprogramowanie użytkownika i autor nie może go
+                           regulować
+                           
+                        </p>
+                        
+                     </blockquote>
+                     
+                     <p>
+                        Niektóre komponenty lub technologie mogą nie pozwalać autorowi na dostosowanie wskaźnika
+                        fokusu. Dzieje się tak w przypadku elementów HTML <code>select</code>  (zarówno pojedynczego, jak i wielokrotnego wyboru), w których autor nie może dostosować
+                        wizualnych ustawień wyboru i fokusu.  W tym przypadku kryterium sukcesu nie ma zastosowania.
+                        
+                     </p>
+                     
+                     <figure id="country-select">
+                        <img src="img/focus-indicator-select.png" alt="Element wyboru kraju z wybranym Afganistanem i fokusem skupionym na Albani" />
+                        
+                        <figcaption>Figure 23 
+                           Rysunek 23 Kryterium spełnione: Domyślna prezentacja elementu <code>select</code> w programie użytkownika nie może być modyfikowana przez autora, więc przechodzi test
+                           niezależnie od jakości wskaźnika fokusu
+                           
+                        </figcaption>
+                        
+                     </figure>
+                     
+                  </section>
+                  
+                  <section id="exception-default">
+                     
+                     <h4>Drugi wyjątek: domyślny wskaźnik i tło nie są modyfikowane</h4>
+                     
+                     <blockquote>
+                        
+                        <p>Wskaźnik fokusu i kolor tła wskaźnika nie zostały zmodyfikowane przez autora</p>
+                        
+                     </blockquote>
+                     
+                     <p>
+                        Jeżeli wskaźnik fokusu i tło za wskaźnikiem skupienia nie zostaną zmodyfikowane przez
+                        autora, kryterium sukcesu nie ma zastosowania.
+                        
+                     </p>
+                     
+                     <p>
+                        Celem tego wyjątku jest zmniejszenie obciążenia autorów poprzez umożliwienie im polegania
+                        na domyślnych wskaźnikach dostarczanych przez programy użytkownika (przeglądarki).
+                        Gdyby wszystkie programy użytkownika zapewniały dobre wskaźniki fokusu, autorzy mogliby
+                        skoncentrować wysiłki na innych kwestiach związanych z dostępnością. Niestety, domyślne
+                        wskaźniki fokusu przeglądarek różnią się w zależności od komponentu, przeglądarki
+                        oraz urządzeń i systemów operacyjnych, a domyślne wskaźniki fokusu w niektórych przeglądarkach
+                        mogą być trudne do zauważenia (np. kropkowany kontur o wielkości 1 piksela). Z tego
+                        powodu większość autorów zastępuje domyślne ustawienia przeglądarki, aby przezwyciężyć
+                        te braki i stworzyć bardziej jednolite doświadczenie użytkownika, niezależnie od przeglądarki.
+                        
+                     </p>
+                     
+                     <p>
+                        Niektórzy twórcy przeglądarek ulepszają swoje domyślne wskaźniki fokusu, aby były
+                        bardziej widoczne. W miarę jak coraz więcej przeglądarek będzie przyjmować ustawienia
+                        domyślne spełniające główne kryteria tego kryterium sukcesu, autorzy będą mogli uzyskać
+                        lepsze wskaźniki fokusu bez konieczności dostosowywania.
+                        
+                     </p>
+                     
+                     <h4>Modyfikowanie tła wskaźnika fokusu</h4>
+                     
+                     <p>
+                        Domyślne wskaźniki fokusu przeglądarki mogą być <em>trudniejsze</em> do zauważenia, jeśli autor zmodyfikuje piksele bezpośrednio przylegające do wskaźnika
+                        (powszechnie określane jako jego tło), poprzez umieszczenie komponentu na górze obrazu
+                        lub tła gradientowego lub zmianę domyślnego białego koloru tła strony, na przykład
+                        przy użyciu niebieskiego tła w połączeniu z niebieskim domyślnym wskaźnikiem przeglądarki.
+                        Z tego powodu, jeśli autor zmienia piksele bezpośrednio przylegające do domyślnego
+                        wskaźnika fokusu, wyjątek dotyczący programu użytkownika nie ma zastosowania, a autor
+                        będzie musiał sprawdzić, czy spełniają one wymagania dotyczące rozmiaru i kontrastu
+                        określone w tym kryterium sukcesu.
+                        
+                     </p>
+                     
+                     <div class="note">
+                        <p class="note-title marker">Uwaga</p>
+                        <p>
+                           Zmiana atrybutu <code>koloru tła</code> elementu <code>body</code> <em>jest</em> w większości implementacji jednym ze sposobów zmiany pikseli bezpośrednio sąsiadujących
+                           ze wskaźnikiem. Jednakże określenie wartości bieli (<code>#FFFFFF</code>) nie unieważnia tego wyjątku, ponieważ, jak ustalono w trzeciej uwadze definicji
+                           <a href="#">współczynnika kontrastu</a>, przyjmuje się, że domyślnym („nieokreślonym”) kolorem jest biały.
+                           
+                        </p>
+                     </div>
+                     
+                     <p>
+                        Ponadto, jeśli przeglądarka domyślnie udostępnia wskaźnik <em>wewnątrz</em> komponentu, autorzy mogą potencjalnie zmniejszyć widoczność, zmieniając kolor komponentu
+                        (który w takim scenariuszu jest kolorem tła wskaźnika fokusu). Na przykład, jeśli
+                        domyślny wskaźnik przycisku ma kolorową wewnętrzną ramkę, autorzy mogą negatywnie
+                        wpłynąć na wygląd fokusu, nadając kolorowi przycisku lub jego obramowaniu bez fokusu
+                        kolor o podobnej jasności. Z tego powodu ten wyjątek dotyczący programu użytkownika
+                        może zostać spełniony tylko wtedy, gdy autor nie zmodyfikuje domyślnego wskaźnika
+                        fokusu <em>oraz</em> nie zmodyfikuje jego tła.
+                        
+                     </p>
+                     
+                     <figure id="focus-indicator-browser-defaults-modified-background">
+                        <img src="img/focus-indicator-browser-defaults-modified-background.png" alt="Przycisk z niebieską ramką dostosowaną przez autora, która wygląda bardzo podobnie do niebieskiej ramki używanej przez domyślny wskaźnik fokusu programu użytkownika" />
+                        
+                        <figcaption>Figure 24 
+                           Rysunek 24 Kryterium niespełnione Środkowy przycisk ma fokus i domyślny wskaźnik fokusu
+                           przeglądarki, ale bardzo trudno jest stwierdzić, który przycisk ma fokus, ponieważ
+                           niestandardowe niebieskie obramowanie przycisku bez fokusu ma podobny kolor.
+                           
+                        </figcaption>
+                        
+                     </figure>
+                     
+                  </section>
+                  
+               </section>
+            </section>
+            <section id="benefits">
+               <h2>Korzyści</h2>
+               <ul>
+                  
+                  <li>
+                     To kryterium sukcesu pomaga każdemu, kto korzysta ze strony przy użyciu klawiatury,
+                     umożliwiając wizualne określenie komponentu, na którym w dowolnym momencie będą wykonywane
+                     operacje na klawiaturze.
+                     
+                  </li>
+                  
+                  <li>
+                     Osoby z ograniczeniami uwagi, ograniczeniami pamięci krótkotrwałej lub ograniczeniami
+                     w procesach wykonawczych odnoszą korzyść dzięki możliwości odkrycia, gdzie znajduje
+                     się fokus.
+                     
+                  </li>
+                  
+               </ul>
+            </section>
+            <section id="examples">
+               <h2>Przykłady</h2>
+               <ul>
+                  
+                  <li>
+                     Gdy łącza otrzymają fokus, wokół łącza zostanie wyświetlony kontur kontrastujący z
+                     tłem sąsiadującym z łączem.
+                     
+                  </li>
+                  
+                  <li>
+                     Kiedy przyciski otrzymają fokus, wewnątrz przycisku (wokół tekstu) zostanie wyświetlony
+                     kontur kontrastujący z tłem przycisku.
+                     
+                  </li>
+                  
+                  <li>
+                     Gdy pola tekstowe otrzymają fokus, wokół pola zostanie wyświetlony kontur wskazujący,
+                     że pole danych ma fokus.
+                     
+                  </li>
+                  
+                  <li>
+                     Gdy przyciski opcji otrzymają fokus, wokół kontrolki zostanie wyświetlony kontur wskazujący,
+                     że że pole danych ma fokus.
+                     
+                  </li>
+                  
+               </ul>
+            </section>
+            <section id="resources">
+               <h2>Powiązane zasoby</h2>
+               <p>Zasoby służą wyłącznie celom informacyjnym. Nie należy traktować ich jako zaleceń.</p>
+               <p>Powiązane treści służą wyłącznie celom informacyjnym i nie sugerują żadnego poparcia.</p>
+               <ul>
+                  
+                  <li><a href="https://www.sarasoueidan.com/blog/focus-indicators/" lang="en" hreflang="en">A guide to designing accessible focus indicators</a> autorstwa Sary Soueidan (Przewodnik po projektowaniu dostępnych wskaźników fokusu)
+                  </li>
+                  
+                  <li><a href="https://alastairc.uk/tests/wcag22-examples/focus-more-visible-3.html" lang="en" hreflang="en">Focus appearance - testing version 3</a> (Wygląd fokusu - wersja testowa 3)
+                  </li>
+                  
+                  <li><a href="https://alastairc.uk/tests/wcag22-examples/focus-more-visible-6.html" lang="en" hreflang="en">Focus visible testing (Feb 2022)</a> (Testowanie widocznego fokusu (luty 2022 r.))
+                  </li>
+                  
+                  <li><a href="https://adrianroselli.com/2017/02/avoid-default-browser-focus-styles.html" lang="en" hreflang="en">Avoid Default Browser Focus Styles</a> autorstwa Adriana Roselli (Unikaj domyślnych stylów fokusu przeglądarki)
+                  </li>
+                  
+               </ul>
+            </section>
+            <section id="techniques">
+               <h2>Techniki</h2>
+               <p>Każdy numerowany element w tej sekcji reprezentuje technikę lub kombinację technik,
+                  które Grupa Robocza WCAG uważa za wystarczające do spełnienia tego kryterium sukcesu.
+                  Nie jest jednak konieczne stosowanie tych konkretnych technik. Aby uzyskać informacje
+                  na temat stosowania innych technik, zobacz <a href="understanding-techniques.html">Objaśnienie technik dla kryteriów sukcesu WCAG</a>, szczególnie w sekcji „Inne techniki”.
+               </p>
+               <section id="sufficient">
+                  <h3>Techniki wystarczające</h3>
+                  <ol>
+                     
+                     <li>
+                        <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G195">G195: Użycie dobrze widocznego wskaźnika fokusu zapewnionego przez autora</a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.w3.org/WAI/WCAG22/Techniques/css/C40">C40: Stworzenie dwukolorowego wskaźnika fokusu, aby zapewnić wystarczający kontrast
+                           ze wszystkimi komponentami</a>
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.w3.org/WAI/WCAG22/Techniques/css/C41">C41: Tworzenie wyraźnego wskaźnika fokusu w ramach komponentu</a>
+                        
+                     </li>
+                     
+                  </ol>
+               </section>
+            </section>
+            <section id="key-terms">
+               <details>
+                  <summary>
+                     <h2>Kluczowe pojęcia</h2>
+                  </summary>
+                  <dt id="dfn-interfejs-klawiaturowy">interfejs klawiaturowy</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">interfejs używany przez oprogramowanie do obsługi wciśnięć klawiszy</p>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <div>
+                              
+                              <p>Interfejs klawiaturowy pozwala użytkownikowi na obsługę programów za pomocą klawiatury
+                                 nawet wówczas, gdy dane urządzenie nie posiada klawiatury.
+                              </p>
+                              
+                              
+                              <aside class="example">
+                                 
+                                 <p>Urządzenia z dotykowymi ekranami posiadają wbudowane w system interfejsy klawiatury,
+                                    jak również możliwość podłączenia zewnętrznych klawiatur. Aplikacje uruchamiane na
+                                    takim urządzeniu obsługują zarówno zewnętrzną klawiaturę, jak i inne aplikacje symulujące
+                                    klawiatury, w tym interpretery pisma ręcznego i systemy do przetwarzania mowy na tekst
+                                    z wbudowaną symulacją klawiatury.
+                                 </p>
+                                 
+                              </aside>
+                              
+                           </div>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Operacje wykonywane w aplikacjach lub fragmentach aplikacji wykonywane za pomocą klawiszy
+                              symulujących mysz, np. klawisze myszy, nie są kwalifikowane jako wykonywane przez
+                              interfejs klawiaturowy, ponieważ operacje wykonywane są poprzez interfejs wskaźnika
+                              myszy, a nie klawiatury.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-komponent-interfejsu-użytkownika">komponent interfejsu użytkownika</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           fragment treści internetowej odbierany przez użytkownika jako pojedyncza kontrolka
+                           dla określonej funkcji
+                           
+                        </p>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Wiele komponentów interfejsu użytkownika może być implementowanych w postaci pojedynczego
+                              elementu. Tutaj komponenty nie są związane z konkretną techniką programistyczną, a
+                              raczej z tym, co użytkownik odbiera jako pojedynczą kontrolkę.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Do komponentów interfejsu użytkownika należą elementy formularzy i linków, jak również
+                              komponenty generowane przez skrypty.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              To, co jest tutaj rozumiane jako „komponent” lub „komponent interfejsu użytkownika”
+                              jest również czasami nazywane „elementem interfejsu użytkownika”.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Aplet posiada „kontrolkę” pozwalającą na przesuwanie treści po linii lub stronie albo
+                              na swobodny dostęp. Każdy aplet ma własną nazwę i może być używany niezależnie, jak
+                              również może być traktowany jak „komponent interfejsu użytkownika”.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-mechanizm">mechanizm</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           <a href="#dfn-procedura">procedura</a> lub technika prowadząca do osiągnięcia rezultatu
+                           
+                        </p>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Mechanizm może być dostarczany bezpośrednio w treści albo może być oparty zarówno
+                              na platformie, jak i na <a href="#dfn-program-u%C5%BCytkownika">oprogramowaniu użytkownika</a>, w tym na <a href="#dfn-technologie-wspomagaj%C4%85ce">technologiach wspomagających</a>.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>Mechanizm wymaga spełnienia wszystkich kryteriów sukcesu żądanych dla danego poziomu.</p>
+                        </div>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-minimalna-obwiednia">minimalna obwiednia</dt>
+                  <dd>
+                     <definition xmlns="">
+                        	        	
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">najmniejszy <a href="#dfn-otacza">otaczający</a> prosokąt wyrównany do osi poziomej, w którym znajdują się wszystkie punkty kształtu.
+                           W przypadku elementów, które zawijają się do wielu wierszy jako część zdania lub bloku
+                           tekstu (takich jak łącza hipertekstowe), obwiednia jest oparta na tym, jak komponent
+                           wyglądałby w pojedynczym wierszu.
+                        </p>
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-obwód">obwód</dt>
+                  <dd>
+                     <definition xmlns="">
+                        	        	
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">ciągła linia tworząca granicę kształtu bez wspólnych pikseli lub <a href="#dfn-minimalna-obwiednia">minimalna obwiednia</a>, w zależności od tego, która z nich jest najkrótsza.
+                        </p>
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>Obliczenie obwodu dla obwodu prostokąta o wielkości 2 pikseli CSS wynosi 4<em>h</em>+4<em>w</em>, gdzie <em>h</em> to wysokość, a <em>w</em> to szerokość. Dla obwodu okręgu o wielkości 2 pikseli CSS wynosi on 4𝜋<em>r</em>.
+                           </p>
+                           
+                        </aside>
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-otacza">otacza</dt>
+                  <dd>
+                     <definition xmlns="">
+                        	        
+                        					
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">otacza, okala, ogranicza, obejmuje</p>
+                        				
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-piksel-css">piksel css</dt>
+                  <dd>
+                     <definition xmlns="">
+                        					
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">kąt widzenia wynoszący około 0,0213 stopnia</p>
+                        					
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">Piksel CSS jest kanoniczną jednostką miary dla wszystkich długości i pomiarów w CSS.
+                           Jednostka ta jest niezależna od gęstości i różni się od rzeczywistych pikseli sprzętowych
+                           obecnych na wyświetlaczu. Programy użytkownika i systemy operacyjne powinny zapewnić,
+                           że piksel CSS jest ustawiony jak najbliżej wartości i jednostek piksela referencyjnego
+                           zdefiniowanego w <a href="https://www.w3.org/TR/css3-values/#reference-pixel">CSS Values and Units Module Level 3 reference pixel</a> [[css3-values]], który uwzględnia fizyczne wymiary wyświetlacza oraz zakładaną odległość
+                           oglądania (czynniki, których autorzy treści nie mogą określić).
+                           
+                        </p>
+                        				
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-prezentacja">prezentacja</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           renderowanie <a href="#dfn-tre%C5%9B%C4%87">treści</a> w sposób, który jest postrzegalny dla użytkownika
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-procedura">procedura</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">seria czynności użytkownika, gdzie każda czynność jest niezbędna do zakończenia działania</p>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Zakończona sukcesem procedura korzystania ze stron sklepu internetowego wymaga od
+                              użytkownika obejrzenia alternatywnych produktów, cen i ofert, wybrania produktów,
+                              złożenia zamówienia, ustalenia warunków dostawy oraz podania informacji o wysyłce
+                              i płatności.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Strona rejestracji konta wymaga przejścia <a href="https://www.w3.org/TR/turingtest/">testu Turinga</a>, a następnie wypełnienia formularza rejestracyjnego.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-program-użytkownika">program użytkownika</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych</p>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Przeglądarki internetowe, odtwarzacze multimediów, wtyczki oraz inne programy — również
+                              technologie wspomagające — które pomagają w wyszukiwaniu, przetwarzaniu i interakcji
+                              z treściami internetowymi.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-stan">stan</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">cecha dynamiczna wyrażająca właściwości <a href="#dfn-komponent-interfejsu-u%C5%BCytkownika">komponentu interfejsu użytkownika</a>, która może ulec zmianie w odpowiedzi na działanie użytkownika lub zautomatyzowane
+                           procesy
+                        </p>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">Stany nie mają wpływu na charakter elementu, ale reprezentują dane powiązane z tym
+                           komponentem lub możliwościami interakcji z użytkownikiem. Przykłady obejmują fokus
+                           (skupienie), najechanie wskaźnikiem myszki, wybrany (zaznaczony), wciśnięty, sprawdzony,
+                           odwiedzony/nieodwiedzony oraz rozwinięty/zwinięty.
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-strona-internetowa">strona internetowa</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">nieosadzony zasób uzyskany z pojedynczego identyfikatora URI za pomocą protokołu HTTP
+                           wraz z wszelkimi innymi zasobami użytymi do renderowania strony w <a href="#dfn-program-u%C5%BCytkownika">programie użytkownika</a> lub takimi, które potencjalnie mogą być użyte do renderowania
+                        </p>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Mimo że każdy z „pozostałych zasobów” mógłby być renderowany razem z podstawowym zasobem,
+                              to niekoniecznie muszą być renderowane równocześnie.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              W celu zgodności z niniejszymi wytycznymi, zasób nie może być „osadzony” w innym zasobie
+                              wchodzącym w zakres oceny zgodności, aby można go było uznać za stronę internetową.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>Zasób sieciowy wraz ze wszystkimi osadzonymi obrazami i multimediami.</p>
+                           
+                        </aside>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Internetowy program pocztowy zbudowany w technologii AJAX (asynchroniczny Java Script
+                              i XML). Program znajduje się pod adresem http://przyklad.com/mail, ale posiada skrzynkę
+                              odbiorczą, kontakty i kalendarz. Wszystkie łącza lub przyciski są zaprojektowane w
+                              sposób pozwalający na wyświetlanie skrzynki, kontaktów i kalendarza bez zmiany adresu
+                              URI.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Konfigurowalny portal internetowy, w którym użytkownik może wybrać wyświetlaną treść
+                              spośród różnych modułów.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Kiedy wprowadzasz np. adres <q>http://zakupy.przyklad.com/</q> w przeglądarce, wchodzisz do wyglądającego jak film sklepu, po którym możesz się
+                              poruszać, zabierać produkty z półek i umieszczać je w wózku przed sobą. Kliknięcie
+                              na produkt powoduje wyświetlenie go wraz ze specyfikacją. Może to być jednostronicowy
+                              serwis lub jedna ze stron internetowych w serwisie internetowym.
+                              
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-struktura">struktura</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <ol xmlns="http://www.w3.org/1999/xhtml">
+                           
+                           
+                           <li>
+                              Sposób, w jaki poszczególne części <a href="#dfn-strona-internetowa">strony internetowej</a> są ułożone i połączone ze sobą; oraz
+                              
+                           </li>
+                           
+                           
+                           <li>
+                              Sposób ułożenia zbioru <a href="#dfn-strona-internetowa">stron internetowych</a>.
+                              
+                           </li>
+                           
+                           
+                        </ol>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-technologia">technologia</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           <a href="#dfn-mechanizm">mechanizm</a> kodowania danych, które mają być renderowane, odtwarzane lub wykonywane przez <a href="#dfn-program-u%C5%BCytkownika">programy użytkownika</a>
+                           
+                        </p>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Użyte w tych wytycznych wyrażenia „technologia internetowa” oraz słowo „technologia”
+                              (używane samodzielnie) odnoszą się do „technologii treści internetowych”.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Technologie treści internetowych mogą obejmować języki znaczników, formaty danych
+                              lub języki programowania, który może być używany samodzielnie, których autorzy mogą
+                              używać samodzielnie lub w połączeniu z innymi technologiami, żeby stworzyć ostatecznie
+                              wersje dla użytkownika, począwszy od statycznych stron internetowych, przez zsynchronizowane
+                              prezentacje multimedialne aż po dynamiczne aplikacje internetowe.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Do typowych przykładów technologii treści internetowych zaliczamy między innymi HTML,
+                              CSS, SVG, PNG, PDF i JavaScript.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-technologie-wspomagające">technologie wspomagające</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           sprzęt i oprogramowanie, które działa jako <a href="#dfn-program-u%C5%BCytkownika">program użytkownika</a> lub współdziała ze standardowymi programami użytkownika, aby zapewnić niezbędne osobom
+                           z niepełnosprawnościami funkcjonalności, przekraczające możliwości standardowych programów
+                           użytkownika;
+                           
+                        </p>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Funkcjonalności zapewniane przez technologie wspomagające obejmują alternatywny sposób
+                              prezentacji treści (np. mowa syntetyczna lub powiększenie obrazu), alternatywne sposoby
+                              wprowadzania danych (np. za pomocą głosu), dodatkowe mechanizmy nawigacji i orientacji
+                              oraz transformacji treści (np. w celu uczynienia tabel bardziej dostępnymi).
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Technologie wspomagające często komunikują się ze standardowymi aplikacjami za pośrednictwem
+                              specjalnych API.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Rozróżnienie pomiędzy popularnymi programami użytkownika a technologiami wspomagającymi
+                              nie jest oczywiste. Wiele programów użytkownika głównego nurtu posiada różne rozwiązania
+                              wspomagające osoby z niepełnosprawnościami. Główna różnica pomiędzy nimi polega na
+                              tym, że programy użytkownika głównego nurtu są ukierunkowane na szerokie i zróżnicowane
+                              grupy odbiorców, zarówno z niepełnosprawnościami, jak i bez niepełnosprawności. Natomiast
+                              technologie wspomagające skierowane są do wąsko zdefiniowanej populacji użytkowników
+                              z określonymi rodzajami niepełnosprawności. Wsparcie świadczone za pomocą technologii
+                              wspomagających jest zatem bardziej wyspecjalizowane i nakierowane na odbiorcę z konkretnymi
+                              potrzebami. Standardowe programy użytkownika mogą dostarczać technologiom wspomagającym
+                              niezbędnych funkcjonalności, takich jak pobieranie treści internetowych z obiektów
+                              programowych lub odwzorowanie kodu do postaci przyjaźniejszej dla tych technologii.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Technologie wspomagające ważne w kontekście tego dokumentu to między innymi:
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                        <ul xmlns="http://www.w3.org/1999/xhtml">
+                           
+                           
+                           <li>
+                              powiększalniki ekranu i inne programy wspomagające czytanie wzrokowe, używane przez
+                              osoby ze wzrokowymi, percepcyjnymi i innymi niepełnosprawnościami związanymi z korzystaniem
+                              z druku, pozwalające na zmianę czcionek, rozmiaru, rozmieszczenia, koloru, synchronizujące
+                              tekst z głosem itp., w celu poprawienia czytelności wyświetlanego tekstu i obrazów;
+                              
+                           </li>
+                           
+                           
+                           <li>
+                              czytniki ekranu, używane przez osoby niewidome do odczytu treści tekstowych za pomocą
+                              mowy syntetycznej lub brajla;
+                              
+                           </li>
+                           
+                           
+                           <li>
+                              programy przetwarzające tekst na mowę syntetyczną, używane przez niektóre osoby z
+                              niepełnosprawnościami poznawczymi, językowymi i trudnościami w nauce w celu przekształcenia
+                              tekstu w mowę syntetyczną;
+                              
+                           </li>
+                           
+                           
+                           <li>programy rozpoznające mowę, używane przez niektóre osoby z niepełnosprawnościami fizycznymi;</li>
+                           
+                           
+                           <li>
+                              specjalne klawiatury, używane przez osoby z niektórymi niepełnosprawnościami fizycznymi,
+                              które symulują standardową klawiaturę (w tym klawiatury specjalne wyposażone we wskaźniki
+                              nagłowne, przełączniki, urządzenia dmuchnij/wciągnij (sip-and-puff) i inne specjalne
+                              urządzenia do wprowadzania danych);
+                              
+                           </li>
+                           
+                           
+                           <li>
+                              specjalne wskaźniki, używane przez osoby z niektórymi rodzajami niepełnosprawności
+                              fizycznych w celu symulowania kursora myszy i naciskania przycisków.
+                              
+                           </li>
+                           
+                           
+                        </ul>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-treść">treść</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           informacje i wrażenia sensoryczne, które mają być przekazywane użytkownikowi za pośrednictwem
+                           <a href="#dfn-program-u%C5%BCytkownika">programu użytkownika</a>, w tym kod lub znaczniki definiujące <a href="#dfn-struktura">strukturę</a>, <a href="#dfn-prezentacja">prezentację</a> i interakcje
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-wskaźnik-fokusu">wskaźnik fokusu</dt>
+                  <dd>
+                     <definition xmlns="">
+                        	        	
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">piksele, które są zmieniane, aby wizualnie wskazywać, kiedy <a href="#dfn-komponent-interfejsu-u%C5%BCytkownika">komponent interfejsu użytkownika</a> jest w <a href="#dfn-stan">stanie</a> „ma fokus”
+                           
+                           
+                        </p>
+                        				
+                        
+                     </definition>
+                  </dd>
+               </details>
+            </section><a class="button button-backtotop" href="#top"><span>
+                  <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
+                  </svg> Początek strony
+                  			</span></a></main>
+         <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
+            <header class="box-h  box-h-icon box-h-space-above box-h-icon">
+               <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
+                  <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path>
+               </svg>
+               <h2> Help improve this page </h2>
+            </header>
+            <div class="box-i">
+               <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
+                  list <a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D">public-agwg-comments@w3.org@w3.org</a> or via GitHub
+               </p>
+               <div class="button-group"><a href="mailto:public-agwg-comments@w3.org?subject=%5BUnderstanding%20and%20Techniques%20Feedback%5D" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+            </div>
+         </aside>
+      </div>
+      <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
+         <div class="inner" style="grid-column: 2 / 8">
+            <p><strong>Date:</strong> Updated 9 February 2024.
+            </p>
+            <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
+               Contact: Michael Cooper).
+            </p>
+            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
+               Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) with contributions from Shadi Abou-Zahra, Steve Lee, and Shawn Lawton Henry as part
+               of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission.
+            </p>
+         </div>
+      </footer>
+      <footer class="site-footer grid-4q" aria-label="Site">
+         <div class="q1-start q3-end about">
+            <div>
+               <p><a class="largelink" href="https://www.w3.org/WAI/" dir="auto" translate="no" lang="en">W3C Web Accessibility Initiative (WAI)</a></p>
+               <p>Strategies, standards, and supporting resources to make the Web accessible to people
+                  with disabilities.
+               </p>
+            </div>
+            <div class="social" dir="auto" translate="no" lang="en">
+               <ul>
+                  <li><a href="https://twitter.com/w3c_wai">
+                        <svg focusable="false" aria-hidden="true" class="icon-twitter " viewBox="0 0 32 32">
+                           <path d="M31.939 6.092c-1.18 0.519-2.44 0.872-3.767 1.033 1.352-0.815 2.392-2.099 2.884-3.631-1.268 0.74-2.673 1.279-4.169 1.579-1.195-1.279-2.897-2.079-4.788-2.079-3.623 0-6.56 2.937-6.56 6.556 0 0.52 0.060 1.020 0.169 1.499-5.453-0.257-10.287-2.876-13.521-6.835-0.569 0.963-0.888 2.081-0.888 3.3 0 2.28 1.16 4.284 2.917 5.461-1.076-0.035-2.088-0.331-2.971-0.821v0.081c0 3.18 2.257 5.832 5.261 6.436-0.551 0.148-1.132 0.228-1.728 0.228-0.419 0-0.82-0.040-1.221-0.115 0.841 2.604 3.26 4.503 6.139 4.556-2.24 1.759-5.079 2.807-8.136 2.807-0.52 0-1.039-0.031-1.56-0.089 2.919 1.859 6.357 2.945 10.076 2.945 12.072 0 18.665-9.995 18.665-18.648 0-0.279 0-0.56-0.020-0.84 1.281-0.919 2.4-2.080 3.28-3.397l-0.063-0.027z"></path>
+                        </svg> Twitter</a></li>
+                  <li><a href="https://www.w3.org/WAI/feed.xml">
+                        <svg focusable="false" aria-hidden="true" class="icon-rss " viewBox="0 0 32 32">
+                           <path d="M25.599 32c0-14.044-11.555-25.6-25.599-25.6v-6.4c17.553 0 32 14.447 32 32h-6.401zM4.388 23.22c2.419 0 4.391 1.972 4.391 4.393 0 2.417-1.98 4.387-4.401 4.387-2.417 0-4.377-1.965-4.377-4.387s1.967-4.392 4.388-4.393zM21.212 32h-6.22c0-8.225-6.767-14.993-14.992-14.993v-6.22c11.636 0 21.212 9.579 21.212 21.213z"></path>
+                        </svg> Feed</a></li>
+                  <li><a href="https://www.youtube.com/channel/UCU6ljj3m1fglIPjSjs2DpRA/playlistsv">
+                        <svg focusable="false" aria-hidden="true" class="icon-youtube " viewBox="0 0 32 32">
+                           <path d="M31.327 8.273c-0.386-1.353-1.431-2.398-2.756-2.777l-0.028-0.007c-2.493-0.668-12.528-0.668-12.528-0.668s-10.009-0.013-12.528 0.668c-1.353 0.386-2.398 1.431-2.777 2.756l-0.007 0.028c-0.443 2.281-0.696 4.903-0.696 7.585 0 0.054 0 0.109 0 0.163l-0-0.008c-0 0.037-0 0.082-0 0.126 0 2.682 0.253 5.304 0.737 7.845l-0.041-0.26c0.386 1.353 1.431 2.398 2.756 2.777l0.028 0.007c2.491 0.669 12.528 0.669 12.528 0.669s10.008 0 12.528-0.669c1.353-0.386 2.398-1.431 2.777-2.756l0.007-0.028c0.425-2.233 0.668-4.803 0.668-7.429 0-0.099-0-0.198-0.001-0.297l0 0.015c0.001-0.092 0.001-0.201 0.001-0.31 0-2.626-0.243-5.196-0.708-7.687l0.040 0.258zM12.812 20.801v-9.591l8.352 4.803z"></path>
+                        </svg> YouTube</a></li>
+                  <li><a href="https://www.w3.org/WAI/news/subscribe/" class="button">Get News in Email</a></li>
+               </ul>
+            </div>
+            <div dir="auto" translate="no" lang="en">
+               <p>Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
+               </p>
+            </div>
+         </div>
+         <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
+            <ul style="margin-bottom:0">
+               <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
+               <li><a href="/WAI/sitemap/">Site Map</a></li>
+               <li><a href="/WAI/news/">News</a></li>
+               <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
+               <li><a href="/WAI/translations/"> Translations</a></li>
+               <li><a href="/WAI/roles/">Resources for Roles</a></li>
+            </ul>
+         </div>
+      </footer>
+      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><script>
+      var _paq = _paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(["setDoNotTrack", true]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//www.w3.org/analytics/piwik/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '328']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script><noscript>
+         <p><img src="//www.w3.org/analytics/piwik/piwik.php?idsite=328&amp;rec=1" style="border:0;" alt="" /></p>
+      </noscript>
+   </body>
+</html>
