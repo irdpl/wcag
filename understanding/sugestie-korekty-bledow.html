@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
    <head>
+      <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>G139: Creating a mechanism that allows users to jump to errors | WAI | W3C</title>
+      <title>Objaśnienie Kryterium sukcesu  3.3.3: Sugestie korekty błędów | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
-      <link rel="stylesheet" href="../base.css" />
+      <link rel="stylesheet" href="base.css" />
    </head>
-   <body class="wcag-docs" dir="ltr"><a href="#main" class="button button--skip-link">Idź do treści</a><div class="minimal-header-container default-grid">
+   <body dir="ltr"><a href="#main" class="button button--skip-link">Idź do treści</a><div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
-            <div class="minimal-header-name"><a href="https://w3c.github.io/wcag/techniques/">WCAG 2.2 Techniki</a></div>
-            <div class="minimal-header-subtitle">Przykłady sposobów spełnienia WCAG; nie są wymagane</div><a class="minimal-header-link" href="https://w3c.github.io/wcag/techniques/about">O WCAG Techniki</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
+            <div class="minimal-header-name"><a href="https://w3c.github.io/wcag/understanding/">WCAG 2.2 Objaśnienia</a></div>
+            <div class="minimal-header-subtitle">Objaśnienia informacyjne, niewymagane do spełnienia WCAG</div><a class="minimal-header-link" href="https://w3c.github.io/wcag/understanding/about">O WCAG Objaśnienia</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -29,153 +30,475 @@
                   </svg></a></div>
          </div>
       </div>
+      <div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Objaśnienia">
+               <ul>
+                  <li class="nav__item"><a href=".">
+                        								Wszystkie objaśnienia
+                        							</a></li>
+                  <li class="nav__item"><a href="pomoc-przy-wprowadzaniu-danych">
+                        <svg alt="up" focusable="false" aria-hidden="true" class="icon-arrow-up-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path>
+                        </svg> Wytyczna: Pomoc przy wprowadzaniu danych</a></li>
+                  <li class="nav__item"><a href="etykiety-lub-instrukcje">Poprzednie KS: Etykiety lub instrukcje</a></li>
+                  <li class="nav__item"><a href="zapobieganie-b%C5%82%C4%99dom-prawnym-finansowym-w-danych">Następne KS: Zapobieganie błędom (prawnym, finansowym, w danych)</a></li>
+               </ul>
+            </nav>
+         </div>
+      </div>
       <div class="default-grid with-gap leftcol">
-         <aside class="box nav-hack sidebar standalone-resource__sidebar" aria-labelledby="page-contents">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar ">
             <nav>
-               <header class="box-h" id="page-contents">Page Contents</header>
+               <header class="box-h ">Treść strony</header>
                <div class="box-i">
-                  <nav class="navtoc">
-                     <ul id="navbar">
-                        <li><a href="#applicability">Applicability</a></li>
-                        <li><a href="#description">Description</a></li>
-                        <li><a href="#examples">Examples</a></li>
-                        <li><a href="#related">Related Techniques</a></li>
-                        <li><a href="#tests">Tests</a></li>
-                     </ul>
-                  </nav>
+                  <ul>
+                     <li><a href="#brief">W skrócie</a></li>
+                     <li><a href="#intent">Intencja</a></li>
+                     <li><a href="#benefits">Korzyści</a></li>
+                     <li><a href="#examples">Przykłady</a></li>
+                     <li><a href="#techniques">Techniki</a></li>
+                     <li><a href="#key-terms">Kluczowe pojęcia</a></li>
+                  </ul>
                </div>
             </nav>
          </aside>
          <main id="main" class="standalone-resource__main">
-            <h1><span>Technique G139:</span>Creating a mechanism that allows users to jump to errors
+            <h1><span class="standalone-resource__type-of-guidance">Objaśnienie
+                  				KS 3.3.3:</span>Sugestie korekty błędów (Poziom AA)
             </h1>
             <aside class="box">
-               <header class="box-h  box-h-icon">
-                  					About this Technique
-                  				
-               </header>
+               <header class="box-h  box-h-icon">Kryterium sukcesu (KS) </header>
                <div class="box-i">
-                  <p>This technique is
+                  <p>Jeśli automatycznie zostanie wykryty <a href="#dfn-b%C5%82%C4%85d-wprowadzania-danych">błąd wprowadzania danych</a> i znane są sugestie korekty, wtedy użytkownik otrzymuje takie sugestie, chyba, że
+                     zagrażałoby to bezpieczeństwu treści lub zmieniło jej cel.
                      
-                     						<strong>Advisory</strong> for <a href="https://w3c.github.io/wcag/understanding/identyfikacja-bledu">3.3.1: Identyfikacja błędu</a> and <strong>Advisory</strong> for <a href="https://w3c.github.io/wcag/understanding/sugestie-korekty-bledow">3.3.3: Sugestie korekty błędów</a>
-                     					.
                   </p>
                </div>
             </aside>
             <div class="excol-all"></div>
-            <section id="applicability">
-               <h2>Applicability</h2>
-               <p>Content that accepts user data input, with restrictions on the format, value, and/or
-                  type of the input.
-               </p>
-               <p>This technique relates to:</p>
-               <ul>
-                  <li><a href="https://w3c.github.io/wcag/understanding/identyfikacja-bledu">3.3.1: Identyfikacja błędu</a> (Advisory)
-                  </li>
-                  <li><a href="https://w3c.github.io/wcag/understanding/sugestie-korekty-bledow">3.3.3: Sugestie korekty błędów</a> (Advisory)
-                  </li>
-               </ul>
+            <section id="brief">
+               <h2>W skrócie</h2>
+               <dl>
+                  
+                  <dt>Goal</dt>
+                  <dd>Users get suggestions on how to resolve errors.</dd>
+                  
+                  <dt>What to do</dt>
+                  <dd>Where errors are detected, suggest known ways to correct them.</dd>
+                  
+                  <dt>Why it's important</dt>
+                  <dd>People can address errors faster and with reduced effort.</dd> 
+                  
+               </dl>
             </section>
-            <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to help users find input errors where the information
-                  supplied by the user is not accepted. This includes fields with missing required information
-                  and fields with incorrect information. When users enter data input that is checked,
-                  and input errors are detected, a link to that error is provided so that the user does
-                  not have to search for it. One approach is to use server-side validation, and to re-display
-                  the form (including any previously entered data), and a text description at the top
-                  of the page that indicates the fact that there was an input error, describes the nature
-                  of the problem, and provides a link the field(s) with a problem.
+            <section id="intent">
+               <h2>Intencja</h2>
+               <p>The intent of this Success Criterion is to ensure that users receive appropriate suggestions
+                  for correction of an input error if it is possible. The definition of "input error"
+                  says that it is "information provided by the user that is not accepted" by
+                  the system. Some examples of information that is not accepted include information
+                  that is required but omitted by the user and information that is provided by the user
+                  but that falls outside the required data format or allowed values.
+                  
                </p>
+               <p>Success Criterion 3.3.1 provides for notification of errors. However, persons with
+                  cognitive limitations may find it difficult to understand how to correct the errors.
+                  People with visual disabilities may not be able to figure out exactly how to correct
+                  the error. In the case of an unsuccessful form submission, users may abandon the form
+                  because they may be unsure of how to correct the error even though they are aware
+                  that it has occurred. 
+                  
+               </p>
+               <p>The content author may provide the description of the error, or the user agent may
+                  provide the description of the error based on technology-specific, programmatically
+                  determined information.
+                  
+                  
+               </p>
+            </section>
+            <section id="benefits">
+               <h2>Korzyści</h2>
+               <ul>
+                  
+                  <li>Providing information about how to correct input errors allows users who have learning
+                     disabilities to fill in a form successfully.
+                  </li>
+                  
+                  <li>Users who are blind or have impaired vision understand more easily the nature of the
+                     input error and how to correct it.
+                  </li>
+                  
+                  <li>People with motion impairment can reduce the number of times they need to change an
+                     input value.
+                  </li>
+                  
+               </ul>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-server-side-error-checking">
-                  <h3>Example 1: Server-side error checking</h3>
-                  <p>The user inputs invalid data on a form field and submits the form. The server returns
-                     the form, with the user's data still present, and indicates clearly in text at the
-                     top of the page that there were not accepted. The text describes the nature of the
-                     error(s) and provides a link to the field that had the problem so the user can easily
-                     navigate to it to fix the problem.
-                  </p>
-               </section>
-               <section class="example" id="example-2-client-side-error-checking-with-a-popup">
-                  <h3>Example 2: Client-side error checking with a popup</h3>
-                  <p>The user inputs invalid data on a form field and attempts to submit the form. Client-side
-                     scripting detects the error, cancels the submit, and modifies the document to provide
-                     a text message describing the error, with links to the field(s) with the error. The
-                     script also modifies the labels of the fields with the problems to highlight them.
-                  </p>
-               </section>
-               <section class="example" id="example-3-client-side-error-checking-with-no-popup">
-                  <h3>Example 3: Client-side error checking with no popup</h3>
-                  <p>When the user submits a form, instead of taking them to a new page, a script automatically
-                     sets focus to a text link that says "Errors have occurred." The link goes to the first
-                     item in an ordered list of descriptive error messages. Each list item is a link to
-                     the control where the error had occurred. And there is a link from the error back
-                     to the ordered list of descriptive error messages. The process is repeated as needed.
-                  </p>
-               </section>
-            </section>
-            <section id="related">
-               <h2>Related Techniques</h2>
-               <ul>
+               <h2>Przykłady</h2>
+               <dl>
                   
-                  <li><a href="../general/G83">G83</a></li>
+                  <dt>Additional Help for Correcting An Input Error</dt>
                   
-                  <li><a href="../general/G85">G85</a></li>
+                  <dd>The result of a form that was not successfully submitted describes an
+                     input error in place in the page along with the correct input and offers additional
+                     help for the form field that caused the input error.
+                  </dd>
                   
-                  <li><a href="../client-side-script/SCR18">SCR18</a></li>
+                  <dt>Suggestions from a Limited Set of Values</dt>
                   
-               </ul>
-            </section>
-            <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+                  <dd>
                      
-                     <li>Fill out a form, deliberately leaving a required (mandatory) field blank, and make
-                        an input error on another field and submit the form.
-                     </li>
-                     
-                     <li>Check that a text message is provided that identifies the field that is missing required
-                        data.
-                     </li>
-                     
-                     <li>Check that a text message is provided that identifies the field with the input error.</li>
-                     
-                     <li>Check that there is a link to each field that is missing required data from the missing
-                        data message
-                     </li>
-                     
-                     <li>Check that there is a link to the list of errors from the error message.</li>
-                     
-                  </ol>
-                  
-                  <div class="note">
-                     
-                     <p>Success Criterion 3.3.2 requires that if an input error is detected and suggestions
-                        for correction are known and can be provided without jeopardizing the security or
-                        purpose of the content, the suggestions are provided to the user.
+                     <p>An input field requires that a month name be entered. If the user enters "12," suggestions
+                        for correction may include:
                      </p>
                      
+                     
+                     <ul>
+                        
+                        <li>A list of the acceptable values, e.g., "Choose one of: January, February, March, April,
+                           May, June, July, August, September, October, November, December."
+                           
+                        </li>
+                        
+                        <li>The conversion of the input data interpreted as a different month format, e.g., "Do
+                           you mean 'December'?"
+                           
+                        </li>
+                        
+                     </ul>
+                     
+                  </dd>
+                  
+               </dl>
+            </section>
+            <section id="techniques">
+               <h2>Techniki</h2>
+               <p>Każdy numerowany element w tej sekcji reprezentuje technikę lub kombinację technik,
+                  które Grupa Robocza WCAG uważa za wystarczające do spełnienia tego kryterium sukcesu.
+                  Nie jest jednak konieczne stosowanie tych konkretnych technik. Aby uzyskać informacje
+                  na temat stosowania innych technik, zobacz <a href="understanding-techniques.html">Objaśnienie technik dla kryteriów sukcesu WCAG</a>, szczególnie w sekcji „Inne techniki”.
+               </p>
+               <div class="note">
+                  <p class="note-title marker">Uwaga</p>
+                  <div>
+                     
+                     
+                     <p>
+                        In some cases, more than one of these situations may apply. For example, when a mandatory
+                        field also requires the data to be in a specific format.
+                        
+                        
+                        
+                     </p>
+                     
+                     
                   </div>
-                  
+               </div>
+               <section id="sufficient">
+                  <h3>Techniki wystarczające</h3>
+                  <p>Wybierz poniżej sytuację, która pasuje do Twojej treści. Każda sytuacja obejmuje techniki
+                     lub kombinacje technik, które są znane i udokumentowane jako wystarczające w danej
+                     sytuacji. 
+                  </p>
+                  <section class="situation" id="error-suggestion-situation-1">
+                     
+                     
+                     <h4>Situation A: If information for a field is required to be in a specific data format:</h4>
+                     
+                     
+                     <ul>
+                        
+                        
+                        <li>
+                           
+                           <a class="aria" href="https://w3c.github.io/wcag/techniques/aria/ARIA18">ARIA18: Using aria-alertdialog to Identify Errors</a>
+                           
+                           
+                        </li>
+                        
+                        
+                        <li>
+                           
+                           <a class="general" href="https://w3c.github.io/wcag/techniques/general/G85">G85: Providing a text description when user input falls outside the required format or
+                              values</a>
+                           
+                           
+                        </li>
+                        
+                        
+                        <li>
+                           
+                           <a class="general" href="https://w3c.github.io/wcag/techniques/general/G177">G177: Providing suggested correction text</a>
+                           
+                           
+                        </li>
+                        
+                        
+                        <li>
+                           
+                           <a class="pdf" href="https://w3c.github.io/wcag/techniques/pdf/PDF22">PDF22: Indicating when user input falls outside the required format or values in PDF forms</a>
+                           
+                           
+                        </li>
+                        
+                        
+                     </ul>
+                     
+                     
+                  </section>
+                  <section class="situation" id="error-suggestion-situation-2">
+                     
+                     
+                     <h4>Situation B: Information provided by the user is required to be one of a limited set
+                        of values:
+                        
+                     </h4>
+                     
+                     
+                     <ul>
+                        
+                        
+                        <li>
+                           
+                           <a class="aria" href="https://w3c.github.io/wcag/techniques/aria/ARIA18">ARIA18: Using aria-alertdialog to Identify Errors</a>
+                           
+                           
+                        </li>
+                        
+                        
+                        <li>
+                           
+                           <a class="general" href="https://w3c.github.io/wcag/techniques/general/G84">G84: Providing a text description when the user provides information that is not in the
+                              list of allowed values</a>
+                           
+                           
+                        </li>
+                        
+                        
+                        <li>
+                           
+                           <a class="general" href="https://w3c.github.io/wcag/techniques/general/G177">G177: Providing suggested correction text</a>
+                           
+                           
+                        </li>
+                        
+                        
+                        <li>
+                           
+                           <a class="pdf" href="https://w3c.github.io/wcag/techniques/pdf/PDF22">PDF22: Indicating when user input falls outside the required format or values in PDF forms</a>
+                           
+                           
+                        </li>
+                        
+                        
+                     </ul>
+                     
+                     
+                  </section>
                </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
+               <section id="advisory">
+                  <h3>Techniki pomocnicze</h3>
+                  <p>Chociaż nie jest to wymagane do uzyskania zgodności, należy rozważyć następujące dodatkowe
+                     techniki, aby zwiększyć dostępność treści. Nie wszystkie techniki mogą być stosowane
+                     lub byłyby skuteczne we wszystkich sytuacjach.
+                  </p>
                   <ul>
                      
-                     <li>If #2 is true, then #4 is true.</li>
                      
-                     <li>If #3 is true, then #5 is true.</li>
+                     <li>
+                        
+                        <a class="general" href="https://w3c.github.io/wcag/techniques/general/G139">G139: Creating a mechanism that allows users to jump to errors</a>
+                        
+                        
+                     </li>
+                     
+                     
+                     <li>
+                        
+                        <a class="general" href="https://w3c.github.io/wcag/techniques/general/G199">G199: Providing success feedback when data is submitted successfully</a>
+                        
+                        
+                     </li>
+                     
                      
                   </ul>
-                  
+                  <section id="client-side-scripting-techniques-advisory">
+                     
+                     
+                     <h4>Client-Side Scripting Techniques (Advisory)</h4>
+                     
+                     
+                     <ul>
+                        
+                        
+                        <li>
+                           
+                           <a class="script" href="https://w3c.github.io/wcag/techniques/client-side-script/SCR18">SCR18: Providing client-side validation and alert</a>
+                           
+                           
+                        </li>
+                        
+                        
+                        <li>
+                           
+                           <a class="script" href="https://w3c.github.io/wcag/techniques/client-side-script/SCR32">SCR32: Providing client-side validation and adding error text via the DOM</a>
+                           
+                           
+                        </li>
+                        
+                        
+                     </ul>
+                     
+                     
+                  </section>
                </section>
+            </section>
+            <section id="key-terms">
+               <details>
+                  <summary>
+                     <h2>Kluczowe pojęcia</h2>
+                  </summary>
+                  <dt id="dfn-błąd-wprowadzania-danych">błąd wprowadzania danych</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">informacja wprowadzona przez użytkownika, która nie jest akceptowana przez system</p>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <div>
+                              
+                              <p>Dotyczy:</p>
+                              
+                              
+                              <ol>
+                                 
+                                 
+                                 <li>
+                                    Informacji, które są wymagane przez <a href="#dfn-strona-internetowa">stronę internetową</a>, a pominięte przez użytkownika.
+                                    
+                                 </li>
+                                 
+                                 
+                                 <li>
+                                    Informacji wprowadzonych przez użytkownika, ale w niewłaściwym formacie lub o niedopuszczalnej
+                                    wartości.
+                                    
+                                 </li>
+                                 
+                                 
+                              </ol>
+                              
+                           </div>
+                        </div>
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-program-użytkownika">program użytkownika</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych</p>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Przeglądarki internetowe, odtwarzacze multimediów, wtyczki oraz inne programy — również
+                              technologie wspomagające — które pomagają w wyszukiwaniu, przetwarzaniu i interakcji
+                              z treściami internetowymi.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-strona-internetowa">strona internetowa</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">nieosadzony zasób uzyskany z pojedynczego identyfikatora URI za pomocą protokołu HTTP
+                           wraz z wszelkimi innymi zasobami użytymi do renderowania strony w <a href="#dfn-program-u%C5%BCytkownika">programie użytkownika</a> lub takimi, które potencjalnie mogą być użyte do renderowania
+                        </p>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Mimo że każdy z „pozostałych zasobów” mógłby być renderowany razem z podstawowym zasobem,
+                              to niekoniecznie muszą być renderowane równocześnie.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              W celu zgodności z niniejszymi wytycznymi, zasób nie może być „osadzony” w innym zasobie
+                              wchodzącym w zakres oceny zgodności, aby można go było uznać za stronę internetową.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>Zasób sieciowy wraz ze wszystkimi osadzonymi obrazami i multimediami.</p>
+                           
+                        </aside>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Internetowy program pocztowy zbudowany w technologii AJAX (asynchroniczny Java Script
+                              i XML). Program znajduje się pod adresem http://przyklad.com/mail, ale posiada skrzynkę
+                              odbiorczą, kontakty i kalendarz. Wszystkie łącza lub przyciski są zaprojektowane w
+                              sposób pozwalający na wyświetlanie skrzynki, kontaktów i kalendarza bez zmiany adresu
+                              URI.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Konfigurowalny portal internetowy, w którym użytkownik może wybrać wyświetlaną treść
+                              spośród różnych modułów.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Kiedy wprowadzasz np. adres <q>http://zakupy.przyklad.com/</q> w przeglądarce, wchodzisz do wyglądającego jak film sklepu, po którym możesz się
+                              poruszać, zabierać produkty z półek i umieszczać je w wózku przed sobą. Kliknięcie
+                              na produkt powoduje wyświetlenie go wraz ze specyfikacją. Może to być jednostronicowy
+                              serwis lub jedna ze stron internetowych w serwisie internetowym.
+                              
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                     </definition>
+                  </dd>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>

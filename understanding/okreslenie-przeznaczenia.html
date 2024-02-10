@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Objaśnienie Kryterium sukcesu  1.2.4: Napisy rozszerzone (na żywo) | WAI | W3C</title>
+      <title>Objaśnienie Kryterium sukcesu  1.3.6: Określenie przeznaczenia | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="base.css" />
    </head>
@@ -37,12 +37,12 @@
                   <li class="nav__item"><a href=".">
                         								Wszystkie objaśnienia
                         							</a></li>
-                  <li class="nav__item"><a href="media-oparte-na-czasie">
+                  <li class="nav__item"><a href="mo%C5%BCliwo%C5%9B%C4%87-dostosowania">
                         <svg alt="up" focusable="false" aria-hidden="true" class="icon-arrow-up-thin pager-icon" viewBox="0 0 16 16">
                            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path>
-                        </svg> Wytyczna: Media oparte na czasie</a></li>
-                  <li class="nav__item"><a href="audiodeskrypcja-lub-alternatywa-dla-medi%C3%B3w-nagranie">Poprzednie KS: Audiodeskrypcja lub alternatywa dla mediów (nagranie)</a></li>
-                  <li class="nav__item"><a href="audiodeskrypcja-nagranie">Następne KS: Audiodeskrypcja (nagranie)</a></li>
+                        </svg> Wytyczna: Możliwość dostosowania</a></li>
+                  <li class="nav__item"><a href="okre%C5%9Blenie-po%C5%BC%C4%85danej-warto%C5%9Bci">Poprzednie KS: Określenie pożądanej wartości</a></li>
+                  <li class="nav__item"></li>
                </ul>
             </nav>
          </div>
@@ -66,13 +66,12 @@
          </aside>
          <main id="main" class="standalone-resource__main">
             <h1><span class="standalone-resource__type-of-guidance">Objaśnienie
-                  				KS 1.2.4:</span>Napisy rozszerzone (na żywo) (Poziom AA)
+                  				KS 1.3.6:</span>Określenie przeznaczenia (Poziom AAA)
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">Kryterium sukcesu (KS) </header>
                <div class="box-i">
-                  <p>Do wszystkich treści <a href="#dfn-audio">audio</a> w <a href="#dfn-zsynchronizowane-media">multimediach zsynchronizowanych</a> (dźwięk i obraz) przekazywanych <a href="#dfn-na-%C5%BCywo">na żywo</a> zapewnione są <a href="#dfn-napisy-rozszerzone">napisy rozszerzone</a>.
-                     
+                  <p>W treściach zaimplementowanych przy użyciu języków znaczników przeznaczenie <a href="#dfn-komponent-interfejsu-u%C5%BCytkownika">komponentów interfejsu użytkownika</a>, ikon oraz <a href="#dfn-obszar-kluczowy">obszarów kluczowych</a> może zostać <a href="#dfn-okre%C5%9Blony-programowo">określone programowo</a>.
                   </p>
                </div>
             </aside>
@@ -80,78 +79,116 @@
             <section id="brief">
                <h2>W skrócie</h2>
                <dl>
-                  
-                  <dt>Cel</dt>
-                  
-                  <dd>Filmy na żywo mają napisy</dd>
-                  
-                  <dt>Zadanie twórcy</dt>
-                  
-                  <dd>Zapewnij zsynchronizowany tekst treści audio w filmach w czasie rzeczywistym</dd>
-                  
+                  				
+                  <dt>Goal</dt>
+                  <dd>It is easier to operate and navigate content.</dd>
+                  				
+                  <dt>What to do</dt>
+                  <dd>Use code to indicate the meaning of all controls and other key information, where
+                     available.
+                  </dd>
+                  				
+                  <dt>Why it's important</dt>
+                  <dd>Some people with cognitive disabilities may not understand a control's purpose from
+                     the name alone.
+                  </dd>
+                  			
                </dl>
             </section>
             <section id="intent">
                <h2>Intencja</h2>
-               <p>
-                  Intencją tego kryterium sukcesu jest umożliwienie osobom niesłyszącym lub słabosłyszącym
-                  oglądania prezentacji <em>w czasie rzeczywistym</em>. Napisy rozszerzone zapewniają część treści dostępną za pośrednictwem ścieżki audio.
-                  Napisy obejmują nie tylko dialogi, ale także identyfikują, kto mówi, oraz zapisują
-                  efekty dźwiękowe i inne istotne dźwięki.
-                  
+               <p>The intent of this Success Criterion is to ensure that the purpose of many elements
+                  on a page can be programmatically determined, so that user agents can extract and
+                  present that purpose to users using different modalities.
                </p>
-               <p>
-                  To kryterium sukcesu miało zastosowanie do transmisji zsynchronizowanych mediów i
-                  nie wymagało, aby dwukierunkowe rozmowy multimedialne między dwiema lub większą liczbą
-                  osób za pośrednictwem aplikacji internetowych musiały być opatrzone napisami, niezależnie
-                  od potrzeb użytkowników. Odpowiedzialność za zapewnienie napisów spadałaby na dostawców
-                  treści (osoby wywołujące) lub  „gospodarza”,  połączenia, a nie na aplikacji.
-                  
+               <p>Many users with limited vocabularies rely on familiar terms or symbols in order to
+                  use the web. However, what is familiar to one user may not be familiar to another.
+                  When authors indicate the purpose, users can take advantage of personalization and
+                  user preferences to load a set of symbols or vocabulary familiar to them.
+               </p>
+               <p>This Success Criterion requires the author to programmatically associate the purpose
+                  of icons, regions and components (such as buttons, links, and fields) so that user
+                  agents can determine the purpose of each and adapt indicators or terminology to make
+                  them understandable for the user. It is achieved by adding semantics or metadata that
+                  provide this context. It is similar to adding role information (as required by 4.1.2)
+                  but instead of providing information about what the UI component is (such as an image)
+                  it provides information about what the component represents (such as a link to the
+                  home page).
+               </p>
+               <p>Identifying regions of the page allows people to remove or highlight regions with
+                  their user agent.
+               </p>
+               <p>Products for people who are non-vocal often use symbols to help users communicate.
+                  These symbols are in fact people's language. Unfortunately, many of these symbols
+                  are both subject to copyright and not interoperable. That means end users can only
+                  use one device, and cannot use content, apps, or assistive technologies that have
+                  not been made by a single company.
+               </p>
+               <p>This Success Criterion enables symbols to be interoperable so that symbol users can
+                  understand different content that was not just made by one company.  When users' symbols
+                  are mapped to the same nodes, then user agents can load the user-understandable symbol.
+                  People can then buy the symbols and use them across different devices or applications.
+                  (Note that the symbols would still be proprietary, but they could then be interoperable.)
                </p>
             </section>
             <section id="benefits">
                <h2>Korzyści</h2>
+               <p>People who benefit have many different cognitive disabilities including:</p>
                <ul>
-                  
-                  <li>
-                     Osoby niesłyszące lub niedosłyszące mogą uzyskać dostęp do informacji dźwiękowych
-                     w zsynchronizowanych treściach multimedialnych za pomocą napisów rozszerzonych.
-                     
-                  </li>
-                  
+                  				
+                  <li>Memory</li>
+                  				
+                  <li>Focus and attention</li>
+                  				
+                  <li>Language-related</li>
+                  				
+                  <li>Executive function and decision making.</li>
+                  			
+               </ul>
+               <p>Meeting this Success Criterion helps users who need extra support or a familiar interface,
+                  including the need for:
+               </p>
+               <ul>
+                  				
+                  <li>Symbols and graphics with which users are familiar</li>
+                  				
+                  <li>Fewer features and less cognitive overload</li>
+                  				
+                  <li>Keyboard shortcuts</li>
+                  			
                </ul>
             </section>
             <section id="examples">
                <h2>Przykłady</h2>
-               <dl>
-                  
-                  <dt>Transmisja internetowa</dt>
-                  
-                  <dd>Agencja informacyjna zapewnia transmisję internetową na żywo z napisami rozszerzonymi.</dd>
-                  
-                  <dt>Muzyczna transmisja internetowa</dt>
-                  
-                  <dd>
-                     Orkiestra zapewnia napisy Communication Access Realtime Translation (CART) dla każdego
-                     występu internetowego w czasie rzeczywistym. Usługa CART przechwytuje teksty i dialogi,
-                     a także identyfikuje muzykę niewokalną według tytułu, ruchu, kompozytora i wszelkich
-                     informacji, które pomogą użytkownikowi zrozumieć naturę dźwięku.
-                     
-                  </dd>
-                  
-               </dl>
+               <ul>
+                  					
+                  <li>A website uses <a href="https://www.w3.org/WAI/ARIA/apg/practices/landmark-regions/">ARIA landmarks</a> to identify the regions of the page, and users can hide areas that do not have a
+                     role of <code>main</code>.
+                  </li>
+                  					
+                  <li>The links in the navigation of a website are marked up so that users can add their
+                     own icons.
+                  </li>
+                  					
+                  <li>Icons on a website are marked up so that users can substitute their own icon sets
+                     into the page.
+                  </li>
+                  				
+               </ul>
             </section>
             <section id="resources">
                <h2>Powiązane zasoby</h2>
                <p>Zasoby służą wyłącznie celom informacyjnym. Nie należy traktować ich jako zaleceń.</p>
                <ul>
-                  
-                  <li>
-                     Zobacz
-                     <a href="napisy-rozszerzone-nagranie">1.2.2: Napisy rozszerzone (nagranie)</a>.
-                     
-                  </li>
-                  
+                  				
+                  <li><a href="https://rawgit.com/w3c/coga/master/issue-papers/personalization-preferences.html">Issue-papers on personalization and preferences</a></li>
+                  				
+                  <li>An <a href="https://github.com/ayelet-seeman/coga.personalisation/tree/ExampleWebPage/">example of adaptive page</a></li>
+                  				
+                  <li><a href="https://w3c.github.io/wcag/coga/user-research.html">Background research document</a></li>
+                  				
+                  <li><a href="https://w3c.github.io/personalization-semantics/">Semantics for adaptive interfaces</a></li>
+                  			
                </ul>
             </section>
             <section id="techniques">
@@ -164,53 +201,32 @@
                <section id="sufficient">
                   <h3>Techniki wystarczające</h3>
                   <ul>
-                     
-                     <li>
-                        <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G9">G9: Tworzenie na żywo napisów dla niesłyszących w mediach zsynchronizowanych</a> <strong>ORAZ </strong> <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G93">G93:  Zapewnienie otwartych (zawsze widocznych) napisów rozszerzonych</a>
-                        
+                     					
+                     <li>Programmatically indicating the purpose of icons, regions and user interface components</li>
+                     					
+                     <li><a class="aria" href="https://w3c.github.io/wcag/techniques/aria/ARIA11">ARIA11: Using ARIA landmarks to identify regions of a page</a> AND
                      </li>
-                     
-                     <li>
-                        <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G9">G9: Tworzenie na żywo napisów dla niesłyszących w mediach zsynchronizowanych</a> <strong>ORAZ </strong> <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G87">G87: Zapewnienie napisów zamkniętych </a> z wykorzystaniem dowolnego łatwo dostępnego formatu multimedialnego, który ma odtwarzacz
-                        wideo obsługujący podpisy zamknięte
-                        
-                     </li>
-                     
-                     <li>
-                        
-                        <p>
-                           <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G9">G9: Tworzenie na żywo napisów dla niesłyszących w mediach zsynchronizowanych</a> <strong>ORAZ </strong> <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G87">G87: Zapewnienie napisów zamkniętych</a> za pomocą jednej z następujących technik:
-                           
-                        </p>
-                        
-                        <ul>
-                           
-                           <li>
-                              <a class="smil" href="https://www.w3.org/WAI/WCAG22/Techniques/smil/SM11">SM11: Zapewnienie napisów przez zsynchronizowane strumienie tekstu w SMIL 1.0</a>
-                              
-                           </li>
-                           
-                           <li>
-                              <a class="smil" href="https://www.w3.org/WAI/WCAG22/Techniques/smil/SM12">SM12: Zapewnienie napisów przez zsynchronizowane strumienie tekstu w SMIL 2.0</a>
-                              
-                           </li>
-                           
-                        </ul>
-                        
-                     </li>
-                     
+                     					
+                     <li>Using microdata to markup user interface components (future link)</li>
+                     				
                   </ul>
-                  <div class="note">
-                     <p class="note-title marker">Uwaga</p>
-                     <div>
-                        
-                        <p>
-                           Napisy mogą być generowane przy użyciu usługi tłumaczenia tekstu w czasie rzeczywistym.
-                           
-                        </p>
-                        
-                     </div>
-                  </div>
+               </section>
+               <section id="advisory">
+                  <h3>Techniki pomocnicze</h3>
+                  <p>Chociaż nie jest to wymagane do uzyskania zgodności, należy rozważyć następujące dodatkowe
+                     techniki, aby zwiększyć dostępność treści. Nie wszystkie techniki mogą być stosowane
+                     lub byłyby skuteczne we wszystkich sytuacjach.
+                  </p>
+                  <ul>
+                     					
+                     <li>Enabling user agents to find the version of the content that best fits their needs</li>
+                     					
+                     <li>Using semantics to identify important features (e.g., <code>coga-simplification="simplest"</code>)
+                     </li>
+                     					
+                     <li>Using <code>aria-invalid</code> and <code>aria-required</code></li>
+                     				
+                  </ul>
                </section>
             </section>
             <section id="key-terms">
@@ -218,34 +234,14 @@
                   <summary>
                      <h2>Kluczowe pojęcia</h2>
                   </summary>
-                  <dt id="dfn-audio">audio</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">technologia powielania dźwięku</p>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>
-                              Dźwięk może być tworzony syntetycznie (w mowa syntetyczna), nagrywany z dźwięków świata
-                              rzeczywistego lub na oba sposoby.
-                              
-                           </p>
-                        </div>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-audiodeskrypcja">audiodeskrypcja</dt>
+                  <dt id="dfn-komponent-interfejsu-użytkownika">komponent interfejsu użytkownika</dt>
                   <dd>
                      <definition xmlns="">
                         
                         
                         <p xmlns="http://www.w3.org/1999/xhtml">
-                           narracja dodana do ścieżki dźwiękowej w celu opisania istotnych szczegółów obrazu,
-                           które nie mogą być zrozumiane z samej głównej ścieżki dźwiękowej
+                           fragment treści internetowej odbierany przez użytkownika jako pojedyncza kontrolka
+                           dla określonej funkcji
                            
                         </p>
                         
@@ -253,8 +249,9 @@
                         <div xmlns="http://www.w3.org/1999/xhtml" class="note">
                            <p class="note-title marker">Uwaga</p>
                            <p>
-                              Dźwiękowy opis materiału <a href="#dfn-wideo">wideo</a> zapewnia informacje o akcji, postaciach, zmianie scenerii, tekstach wyświetlanych
-                              na ekranie i innych treściach wizualnych.
+                              Wiele komponentów interfejsu użytkownika może być implementowanych w postaci pojedynczego
+                              elementu. Tutaj komponenty nie są związane z konkretną techniką programistyczną, a
+                              raczej z tym, co użytkownik odbiera jako pojedynczą kontrolkę.
                               
                            </p>
                         </div>
@@ -263,8 +260,8 @@
                         <div xmlns="http://www.w3.org/1999/xhtml" class="note">
                            <p class="note-title marker">Uwaga</p>
                            <p>
-                              W standardowym opisie audio narracja jest dodawana w przerwach między dialogami (zobacz
-                              także <a href="#dfn-rozszerzona-audiodeskrypcja">rozszerzona audiodeskrypcja</a>).
+                              Do komponentów interfejsu użytkownika należą elementy formularzy i linków, jak również
+                              komponenty generowane przez skrypty.
                               
                            </p>
                         </div>
@@ -273,208 +270,8 @@
                         <div xmlns="http://www.w3.org/1999/xhtml" class="note">
                            <p class="note-title marker">Uwaga</p>
                            <p>
-                              Jeśli wszystkie informacje o <a href="#dfn-wideo">wideo</a> są już zapewnione przez podstawową <a href="#dfn-audio">ścieżkę dźwiękową</a> 
-                              
-                              <!-- audio -->, dodatkowa audiodeskrypcja jest zbędna.
-                              
-                           </p>
-                        </div>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>Nazywana również „opisem wideo”, „narracją opisową” i „narracją dźwiękową”.</p>
-                        </div>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-język-ludzki">język ludzki</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">
-                           język mówiony, pisany lub język migowy (znaków zarówno wizualnych, jak dotykowych)
-                           służący do komunikowania się między ludźmi.
-                           
-                        </p>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>
-                              Zobacz także <a href="#dfn-j%C4%99zyk-migowy">język migowy</a>.
-                              
-                           </p>
-                        </div>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-język-migowy">język migowy</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">
-                           język stosujący kombinację gestów dłoni i ramion, mimiki twarzy i pozycji ciała, w
-                           celu przekazania informacji.
-                           
-                        </p>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-multimedia-alternatywne-dla-tekstu">multimedia alternatywne dla tekstu</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">
-                           multimedia, które przekazują nie więcej informacji, niż bezpośrednio prezentowany
-                           tekst lub tekst alternatywny
-                           
-                        </p>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>
-                              Multimedia alternatywne dla tekstu są zapewniane tym, dla których przydatne jest korzystanie
-                              z alternatywy dla tekstu. Multimedia alternatywne dla tekstu to: nagrania dźwiękowe,
-                              nagrania wideo (w tym język migowy) lub nagrania audiowizualne.
-                              
-                           </p>
-                        </div>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-na-żywo">na żywo</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">
-                           informacja przechwytywana z wydarzeń pochodzących z rzeczywistego świata, transmitowana
-                           bezpośrednio do odbiorcy, z opóźnieniem zależnym wyłącznie od nadawcy
-                           
-                        </p>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>
-                              Opóźnienie zależne od nadawcy to krótkie (najczęściej automatyczne) opóźnienie, niezbędne
-                              na przykład w celu dania nadawcy czasu na kolejkowanie lub cenzurowanie treści wizualnej
-                              lub dźwiękowej. Opóźnienie to nie jest wystarczające, by nadawaną treść poddawać poważniejszej
-                              edycji.
-                              
-                           </p>
-                        </div>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>Jeżeli informacja jest całkowicie generowana przez komputer, to nie jest informacją
-                              na żywo.
-                           </p>
-                        </div>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-napisy-rozszerzone">napisy rozszerzone</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">
-                           zsynchronizowana z obrazem <a href="#dfn-tekst-alternatywny">alternatywa tekstowa</a> dla treści dźwiękowych, zarówno mowy, jak i innych odgłosów, niezbędnych do zrozumienia
-                           przekazu multimedialnego
-                           
-                        </p>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>
-                              Napisy rozszerzone mają formę podobną do napisów dialogowych, z tą różnicą, że oprócz
-                              treści wypowiedzi osób przekazują opis sytuacji pozadialogowej - dodatkowe informacje,
-                              potrzebne do zrozumienia treści programu, takie jak identyfikacja mówiących, informacje
-                              o istotnych sygnałach dźwiękowych, np. śmiechu, trzaskaniu drzwi, muzyce, oddaleniu,
-                              miejscu akcji. Stąd określenie „rozszerzone”.
-                              
-                           </p>
-                        </div>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>Ze względu na zastosowane rozwiązania techniczne napisy dzielimy na zamknięte i otwarte.</p>
-                        </div>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>Napisy zamknięte (ang. closed caption, CC) to napisy w odrębnym strumieniu tekstowym,
-                              które mogą być w niektórych odtwarzaczach włączane i wyłączane.
-                           </p>
-                        </div>
-                        
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>
-                              Napisy otwarte (open caption OC) to wszelkie napisy, których nie można wyłączyć. Na
-                              przykład, jeżeli są ekwiwalentem <a href="#dfn-obraz-tekstu">obrazów tekstu</a> osadzonego w <a href="#dfn-wideo">wideo</a>.
-                              
-                           </p>
-                        </div>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>Napisy nie powinny zasłaniać istotnych informacji w filmie.</p>
-                        </div>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>W niektórych krajach napisy rozszerzone nazywa się podpisami (subtitles).</p>
-                        </div>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>
-                              <a href="#dfn-audiodeskrypcja">Audiodeskrypcja</a> może, ale nie musi posiadać napisów rozszerzonych, ponieważ sama w sobie zawiera
-                              opis zawartości tego, co przedstawione jest w sposób wizualny.
-                              
-                           </p>
-                        </div>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-obraz-tekstu">obraz tekstu</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">
-                           tekst, który jest renderowany w postaci nietekstowej (np. jako grafika) w celu uzyskania
-                           określonych efektów wizualnych
-                           
-                        </p>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>
-                              Nie dotyczy to <a href="#dfn-tekst">tekstu</a> znajdującego się na obrazie, w którym ważna jest inna treść wizualna.
+                              To, co jest tutaj rozumiane jako „komponent” lub „komponent interfejsu użytkownika”
+                              jest również czasami nazywane „elementem interfejsu użytkownika”.
                               
                            </p>
                         </div>
@@ -482,9 +279,29 @@
                         
                         <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
                            
-                           <p>Osoba znajdująca się na zdjęciu ma przyczepioną plakietkę ze swoim imieniem i nazwiskiem.</p>
+                           <p>
+                              Aplet posiada „kontrolkę” pozwalającą na przesuwanie treści po linii lub stronie albo
+                              na swobodny dostęp. Każdy aplet ma własną nazwę i może być używany niezależnie, jak
+                              również może być traktowany jak „komponent interfejsu użytkownika”.
+                              
+                           </p>
                            
                         </aside>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-obszar-kluczowy">obszar kluczowy</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">postrzegalna, programowo określona część treści</p>
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>W HTML każdy obszar oznaczony jako punkt orientacyjny jest obszarem kluczowym.</p>
+                        </div>
                         
                         
                      </definition>
@@ -525,19 +342,6 @@
                         
                      </definition>
                   </dd>
-                  <dt id="dfn-prezentacja">prezentacja</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">
-                           renderowanie <a href="#dfn-tre%C5%9B%C4%87">treści</a> w sposób, który jest postrzegalny dla użytkownika
-                           
-                        </p>
-                        
-                        
-                     </definition>
-                  </dd>
                   <dt id="dfn-program-użytkownika">program użytkownika</dt>
                   <dd>
                      <definition xmlns="">
@@ -556,149 +360,6 @@
                            </p>
                            
                         </aside>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-rozszerzona-audiodeskrypcja">rozszerzona audiodeskrypcja</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">
-                           audiodeskrypcja, dodawana do materiału <a href="#dfn-wideo">wideo</a> poprzez zatrzymanie odtwarzacza (pauza), dzięki czemu jest czas na wstawienie dodatkowego
-                           opisu.
-                           
-                        </p>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>
-                              Ta technika jest stosowana tylko wówczas, gdy sensu materiału <a href="#dfn-wideo">wideo</a> nie da się zachować bez dodatkowej <a href="#dfn-audiodeskrypcja">audiodeskrypcji</a>, a przerwy pomiędzy dialogami i narracją są zbyt krótkie.
-                              
-                           </p>
-                        </div>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-strona-internetowa">strona internetowa</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">nieosadzony zasób uzyskany z pojedynczego identyfikatora URI za pomocą protokołu HTTP
-                           wraz z wszelkimi innymi zasobami użytymi do renderowania strony w <a href="#dfn-program-u%C5%BCytkownika">programie użytkownika</a> lub takimi, które potencjalnie mogą być użyte do renderowania
-                        </p>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>
-                              Mimo że każdy z „pozostałych zasobów” mógłby być renderowany razem z podstawowym zasobem,
-                              to niekoniecznie muszą być renderowane równocześnie.
-                              
-                           </p>
-                        </div>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>
-                              W celu zgodności z niniejszymi wytycznymi, zasób nie może być „osadzony” w innym zasobie
-                              wchodzącym w zakres oceny zgodności, aby można go było uznać za stronę internetową.
-                              
-                           </p>
-                        </div>
-                        
-                        
-                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
-                           
-                           <p>Zasób sieciowy wraz ze wszystkimi osadzonymi obrazami i multimediami.</p>
-                           
-                        </aside>
-                        
-                        
-                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
-                           
-                           <p>
-                              Internetowy program pocztowy zbudowany w technologii AJAX (asynchroniczny Java Script
-                              i XML). Program znajduje się pod adresem http://przyklad.com/mail, ale posiada skrzynkę
-                              odbiorczą, kontakty i kalendarz. Wszystkie łącza lub przyciski są zaprojektowane w
-                              sposób pozwalający na wyświetlanie skrzynki, kontaktów i kalendarza bez zmiany adresu
-                              URI.
-                              
-                           </p>
-                           
-                        </aside>
-                        
-                        
-                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
-                           
-                           <p>
-                              Konfigurowalny portal internetowy, w którym użytkownik może wybrać wyświetlaną treść
-                              spośród różnych modułów.
-                              
-                           </p>
-                           
-                        </aside>
-                        
-                        
-                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
-                           
-                           <p>
-                              Kiedy wprowadzasz np. adres <q>http://zakupy.przyklad.com/</q> w przeglądarce, wchodzisz do wyglądającego jak film sklepu, po którym możesz się
-                              poruszać, zabierać produkty z półek i umieszczać je w wózku przed sobą. Kliknięcie
-                              na produkt powoduje wyświetlenie go wraz ze specyfikacją. Może to być jednostronicowy
-                              serwis lub jedna ze stron internetowych w serwisie internetowym.
-                              
-                              
-                           </p>
-                           
-                        </aside>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-struktura">struktura</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <ol xmlns="http://www.w3.org/1999/xhtml">
-                           
-                           
-                           <li>
-                              Sposób, w jaki poszczególne części <a href="#dfn-strona-internetowa">strony internetowej</a> są ułożone i połączone ze sobą; oraz
-                              
-                           </li>
-                           
-                           
-                           <li>
-                              Sposób ułożenia zbioru <a href="#dfn-strona-internetowa">stron internetowych</a>.
-                              
-                           </li>
-                           
-                           
-                        </ol>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-sztuka-tekstowa">sztuka tekstowa</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">
-                           albo <em>ASCII art</em> - proste rysunki tworzone za pomocą znaków lub glifów układanych na obszarze o stałej
-                           szerokości kolumn oraz o stałej wysokości znaków (zazwyczaj z 95 możliwych do wydrukowania
-                           znaków zdefiniowanych przez ASCII). Ten sposób tworzenia grafiki, a raczej jej symbolizowania,
-                           nazywa się semigrafiką lub pseudografiką. ASCII art były początkowo tworzone z myślą
-                           o wydrukowaniu ich na drukarkach znakowych.
-                           
-                        </p>
                         
                         
                      </definition>
@@ -814,120 +475,6 @@
                            
                            
                         </ul>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-tekst">tekst</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">ciąg znaków, który można <a href="#dfn-okre%C5%9Blony-programowo">programowo określić</a>, gdzie ciąg ten wyraża coś w <a href="#dfn-j%C4%99zyk-ludzki">języku naturalnym</a>
-                           
-                        </p>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-tekst-alternatywny">tekst alternatywny</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">
-                           <a href="#dfn-tekst">tekst</a> skojarzony programowo z <a href="#dfn-tre%C5%9B%C4%87-nietekstowa">treścią nietekstową</a> lub odnoszący się do tekstu programowo skojarzonego z treścią nietekstową. Tekst
-                           programowo skojarzony to taki tekst, którego położenie może być programowo określone
-                           w stosunku do treści nietekstowej.
-                           
-                        </p>
-                        
-                        
-                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
-                           
-                           <p>
-                              Obraz wykresu jest opisany w następującym po nim akapicie. Krótki tekst alternatywny
-                              dla wykresu informuje, że takie objaśnienie znajduje się zaraz za nim (w kolejności
-                              treści).
-                              
-                           </p>
-                           
-                        </aside>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>
-                              Więcej na ten temat: <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#text-alternatives">Understanding Text Alternatives</a> (Zrozumieć tekst alternatywny).
-                              
-                           </p>
-                        </div>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-treść">treść</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">
-                           informacje i wrażenia sensoryczne, które mają być przekazywane użytkownikowi za pośrednictwem
-                           <a href="#dfn-program-u%C5%BCytkownika">programu użytkownika</a>, w tym kod lub znaczniki definiujące <a href="#dfn-struktura">strukturę</a>, <a href="#dfn-prezentacja">prezentację</a> i interakcje
-                           
-                        </p>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-treść-nietekstowa">treść nietekstowa</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">każda <a href="#dfn-tre%C5%9B%C4%87">treść</a>, która nie jest sekwencją znaków, które mogą być <a href="#dfn-okre%C5%9Blony-programowo">programowo określone</a> lub nie wyraża niczego w jakimkolwiek <a href="#dfn-j%C4%99zyk-ludzki">języku naturalnym</a>
-                           
-                        </p>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>
-                              Obejmuje to <a href="#dfn-sztuka-tekstowa">sztukę tekstową</a> (ASCII art, będącą układanką złożoną ze znaków), emotikony, slang na forach (korzystający
-                              z zastępowania znaków) i obrazy przedstawiające tekst.
-                              
-                           </p>
-                        </div>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-wideo">wideo</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">technologia poruszających się lub następujących po sobie obrazów</p>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>Wideo może być stworzone za pomocą animacji lub fotografii, lub obu naraz.</p>
-                        </div>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-zsynchronizowane-media">zsynchronizowane media</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">
-                           <a href="#dfn-audio">audio</a> lub <a href="#dfn-wideo">wideo</a> zsynchronizowane z innym formatem w celu prezentacji informacji lub interakcji z
-                           komponentami opartymi na czasie, o ile nie jest to wyraźnie oznaczona <a href="#dfn-multimedia-alternatywne-dla-tekstu">alternatywa dla tekstu</a>
-                           
-                        </p>
                         
                         
                      </definition>
