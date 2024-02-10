@@ -1,88 +1,102 @@
 <!DOCTYPE html>
 <html lang="pl" xml:lang="pl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta charset="UTF-8" />
-<title>Objaśnienie KS Fokus niezakryty (ulepszony)</title>
-<link rel="stylesheet" type="text/css" href="../../css/editors.css" class="remove" />
+  <meta charset="UTF-8" />
+  <title>Objaśnienie KS Fokus niezakryty (ulepszony)</title>
+  <link rel="stylesheet" type="text/css" href="../../css/editors.css" class="remove" />
 </head>
 <body>
-<h1>Objaśnienie KS Fokus niezakryty (ulepszony)</h1>
+  <h1>Objaśnienie KS Fokus niezakryty (ulepszony)</h1>
 
-<section id="brief">
-  <h2>W skrócie</h2>
-               <dl>
-                  <dt>Cel</dt>
-                  <dd>Nie zasłaniaj żadnej części elementu z fokusem.</dd>
-                  <dt>Co zrobić</dt>
-                  <dd>Zapewnij, że element, który otrzymuje fokus klawiatury, jest w pełni widoczny.</dd>
-                  <dt>Dlaczego to jest ważne</dt>
-                  <dd>Osoby, które nie mogą korzystać z myszy, muszą widzieć element, który ma fokus klawiatury.</dd>
-               </dl>
-</section>
-
-<section id="intent">
-  <h2>Intencja</h2>
-               <p>Intencją tego kryterium sukcesu jest zapewnienie, że element, który otrzymuje fokus klawiatury, jest zawsze widoczny w rzutni użytkownika. Dla osób widzących, które używają klawiatury lub urządzenia korzystającego z interfejsu klawiatury (takiego jak przełącznik lub wprowadzanie głosowe), informacja o aktualnym miejscu fokusu ma kluczowe znaczenie. Komponent z fokusem sygnalizuje punkt interakcji na stronie. Gdy użytkownicy nie widzą elementu z fokusem, mogą nie wiedzieć, jak postępować, lub mogą nawet pomyśleć, że system przestał reagować.
-               </p>
-               <p>Typowe rodzaje treści, które mogą nakładać się na elementy z fokusem, to przyklejane stopki, przyklejane nagłówki i niemodalne okna dialogowe. Gdy użytkownik nawiguje tabulatorem po stronie, to te warstwy treści mogą ukryć element, który otrzymuje fokus wraz ze wskaźnikiem fokusu.
-               </p>
-               <p>Powiadomienie zaimplementowane jako przyklejona treść, np. okienko ciasteczek, nie spełni tego kryterium sukcesu, jeśli częściowo zakryje element, który ma fokus klawiatury. Sposoby spełnienia tego wymogu uwzględniają np. uczynienie okienka modalnym, aby użytkownik musiał je zamknąć przed nawigacją po stronie, lub użycie <a href="https://www.w3.org/TR/css-scroll-snap/#propdef-scroll-padding">dopełnienia przewijania</a>, aby okienko nie nachodziło na inną treść. Powiadomienia, które nie wymagają działania użytkownika, mogą również spełniać to kryterium, zamykając się po utracie fokusu.
-               </p>
-               <p>Inna forma zasłaniania może wystąpić, gdy Lightbox lub inne półprzezroczyste efekty nakładają się na element z fokusem. Ta forma zasłaniania <em>nie</em> wchodzi w zakres tego kryterium sukcesu. Chociaż zakrycie mniejsze niż 100 procent nie powoduje <q>zakrycia</q> komponentu, takie półprzezroczyste nakładanie się może spowodować niespełnienie KS <a href="../understanding/wyglad-fokusu.html">2.4.11 Wygląd fokusu</a>. Jeżeli wskaźnik fokusu może być przykryty przez półprzezroczysty element, wskaźnik fokusu należy ocenić w oparciu o KS 2.4.11. Intencją w obu przypadkach jest, aby komponent otrzymujący fokus nigdy nie był zasłonięty do tego stopnia, że ​​użytkownik nie będzie w stanie określić, który element ma  fokus.
-               </p>
-
-</section>
-<section id="benefits">
-   <h2>Korzyści</h2>
-  <ul>
-                  <li>Widzący użytkownicy, którzy w obsłudze strony polegają na interfejsie klawiatury, będą mogli zobaczyć komponent, który uzyskuje fokus klawiatury. Do takich użytkowników należą ci, którzy polegają na klawiaturze lub urządzeniach korzystających z interfejsu klawiatury, w tym na poleceniach głosowych, oprogramowaniu typu <q>dmuchnij-wciągnij</q> (sip-and-puff), klawiaturach ekranowych, oprogramowaniu do skanowania oraz różnych technologiach wspomagających i alternatywnych klawiaturach.
-                  </li>
-                  <li>Osoby z ograniczonym lub słabym wzrokiem, które mogą przede wszystkim używać wskaźnika do orientacji na ekranie i zmiany położenia, korzystają z wyraźnie widocznego wskazania bieżącego punktu interakcji z klawiaturą, szczególnie tam, gdzie powiększenie zmniejsza ogólną wyświetlaną część treści.
-                  </li>
-                  <li>Osoby z ograniczeniami uwagi, pamięci krótkotrwałej lub ograniczeniami w wykonywaniu czynności odnoszą korzyści, ponieważ mogą łatwiej odkryć, gdzie znajduje się fokus. 
-                  </li>
-  </ul>
-</section>
-<section id="examples">
-  <h2>Przykłady</h2>
-  
-  <ul>
-                  <li>Strona ma przyklejoną stopkę (przymocowaną u dołu rzutni). Podczas przewijania strony w dół element z fokusem nie jest całkowicie ukrywany przez stopkę, ponieważ treść w rzutni przewija się w górę, aby zawsze wyświetlać element z fokusem klawiatury za pomocą <a href="https://www.w3.org/TR/css-scroll-snap/#propdef-scroll-padding" rel="nofollow">dopełnienia przewijania</a>.
-                  </li>
-                  <li>Na stronie znajduje się duże (o szerokości 30%) okno dialogowe do akceptacji plików cookie. Okno dialogowe jest modalne, co zapobiega dostępowi do innych elementów sterujących na stronie, dopóki nie zostanie zamknięte. Fokus nie jest zasłonięty, ponieważ okno dialogowe zatwierdzania plików cookie (w tym wskaźnik fokusu) pozostaje na ekranie do czasu dokonania wyboru i wysłania.
-                  </li>
-                  <li>Powiadomienie jest wyświetlane w postaci przyklejonego nagłówka, a fokus klawiatury jest przenoszony na powiadomienie. Powiadomienie znika, gdy traci fokus, więc nie zasłania żadnych innych elementów sterujących (w tym wskaźnika fokusu widocznego przed powiadomieniem).
-                  </li>
-  </ul>
-</section>
-<section id="resources">
-  <h2>Zasoby</h2>
-</section>
-<section id="techniques">
-  <h2>Techniki</h2>
-               <p>Każdy numerowany element w tej sekcji reprezentuje technikę lub kombinację technik, które grupa robocza WCAG uważa za wystarczające do spełnienia tego kryterium sukcesu. Nie jest jednak konieczne stosowanie tych konkretnych technik. Aby uzyskać informacje na temat korzystania z innych technik, zobacz <a href="./WCAG-objasnienie-technik.html">Objaśnienie technik dla kryteriów sukcesu WCAG</a>, w szczególności sekcję „Inne techniki”.
-               </p>  
-  <section id="sufficient">
-
-                  <h3>Wystarczające techniki</h3>
-                  <ol>
-                     <li> <a href="https://www.w3.org/WAI/WCAG22/Techniques/css/C43">C43: Używanie właściwości CSS scroll-padding do odsłaniania ukrytej treści</a></li>
-                  </ol>
-               </section>
-  <section id="advisory">
-    <h3>Pomocnicze techniki</h3>
+  <section id="brief">
+    <h2>W skrócie</h2>
+    <dl>
+      <dt>Cel</dt>
+      <dd>Nie zasłaniaj żadnej części elementu z fokusem.</dd>
+      <dt>Co zrobić</dt>
+      <dd>Zapewnij, że element, który otrzymuje fokus klawiatury, jest w pełni widoczny.</dd>
+      <dt>Dlaczego to jest ważne</dt>
+      <dd>Osoby, które nie mogą korzystać z myszy, muszą widzieć element, który ma fokus klawiatury.</dd>
+    </dl>
   </section>
-  <section id="failure">
-                  <h3>Błędy</h3>
-                  <p>Poniżej przedstawiono typowe błędy, które Grupa Robocza WCAG uważa za naruszenia tego kryterium sukcesu.
-                  </p>
-                  <ul>
-                     <li>Interakcja, która powoduje wyświetlenie treści nad komponentem z fokusem klawiatury, wizualnie zakrywając część wskaźnika fokusu. Takie zachowanie można spotkać w przypadku materiałów reklamowych lub promocyjnych, których celem jest dostarczenie większej ilości informacji o produkcie, gdy użytkownik porusza się po katalogu.
-                     </li>
-                     <li>Strona ma przyklejoną stopkę (przymocowaną u dołu rzutni). Podczas przewijania strony w dół zaznaczony element jest częściowo ukryty w stopce, ponieważ treść w widocznym obszarze przewija się bez wystarczającego <a href="https://www.w3.org/TR/css-scroll-snap/#propdef-scroll-padding" rel="nofollow">dopełnienia przewijania</a>.
-                     </li>
-                  </ul>
-               </section>
-</section>
+
+  <section id="intent">
+    <h2>Intencja</h2>
+    <p>
+      Intencją tego kryterium sukcesu jest zapewnienie, że element, który otrzymuje fokus klawiatury, jest zawsze widoczny w rzutni użytkownika. Dla osób widzących, które używają klawiatury lub urządzenia korzystającego z interfejsu klawiatury (takiego jak przełącznik lub wprowadzanie głosowe), informacja o aktualnym miejscu fokusu ma kluczowe znaczenie. Komponent z fokusem sygnalizuje punkt interakcji na stronie. Gdy użytkownicy nie widzą elementu z fokusem, mogą nie wiedzieć, jak postępować, lub mogą nawet pomyśleć, że system przestał reagować.
+    </p>
+    <p>
+      Typowe rodzaje treści, które mogą nakładać się na elementy z fokusem, to przyklejane stopki, przyklejane nagłówki i niemodalne okna dialogowe. Gdy użytkownik nawiguje tabulatorem po stronie, to te warstwy treści mogą ukryć element, który otrzymuje fokus wraz ze wskaźnikiem fokusu.
+    </p>
+    <p>
+      Powiadomienie zaimplementowane jako przyklejona treść, np. okienko ciasteczek, nie spełni tego kryterium sukcesu, jeśli częściowo zakryje element, który ma fokus klawiatury. Sposoby spełnienia tego wymogu uwzględniają np. uczynienie okienka modalnym, aby użytkownik musiał je zamknąć przed nawigacją po stronie, lub użycie <a href="https://www.w3.org/TR/css-scroll-snap/#propdef-scroll-padding">dopełnienia przewijania</a>, aby okienko nie nachodziło na inną treść. Powiadomienia, które nie wymagają działania użytkownika, mogą również spełniać to kryterium, zamykając się po utracie fokusu.
+    </p>
+    <p>
+      Inna forma zasłaniania może wystąpić, gdy Lightbox lub inne półprzezroczyste efekty nakładają się na element z fokusem. Ta forma zasłaniania <em>nie</em> wchodzi w zakres tego kryterium sukcesu. Chociaż zakrycie mniejsze niż 100 procent nie powoduje <q>zakrycia</q> komponentu, takie półprzezroczyste nakładanie się może spowodować niespełnienie KS <a href="../understanding/wyglad-fokusu.html">2.4.11 Wygląd fokusu</a>. Jeżeli wskaźnik fokusu może być przykryty przez półprzezroczysty element, wskaźnik fokusu należy ocenić w oparciu o KS 2.4.11. Intencją w obu przypadkach jest, aby komponent otrzymujący fokus nigdy nie był zasłonięty do tego stopnia, że ​​użytkownik nie będzie w stanie określić, który element ma  fokus.
+    </p>
+
+  </section>
+  <section id="benefits">
+    <h2>Korzyści</h2>
+    <ul>
+      <li>
+        Widzący użytkownicy, którzy w obsłudze strony polegają na interfejsie klawiatury, będą mogli zobaczyć komponent, który uzyskuje fokus klawiatury. Do takich użytkowników należą ci, którzy polegają na klawiaturze lub urządzeniach korzystających z interfejsu klawiatury, w tym na poleceniach głosowych, oprogramowaniu typu <q>dmuchnij-wciągnij</q> (sip-and-puff), klawiaturach ekranowych, oprogramowaniu do skanowania oraz różnych technologiach wspomagających i alternatywnych klawiaturach.
+      </li>
+      <li>
+        Osoby z ograniczonym lub słabym wzrokiem, które mogą przede wszystkim używać wskaźnika do orientacji na ekranie i zmiany położenia, korzystają z wyraźnie widocznego wskazania bieżącego punktu interakcji z klawiaturą, szczególnie tam, gdzie powiększenie zmniejsza ogólną wyświetlaną część treści.
+      </li>
+      <li>
+        Osoby z ograniczeniami uwagi, pamięci krótkotrwałej lub ograniczeniami w wykonywaniu czynności odnoszą korzyści, ponieważ mogą łatwiej odkryć, gdzie znajduje się fokus.
+      </li>
+    </ul>
+  </section>
+  <section id="examples">
+    <h2>Przykłady</h2>
+
+    <ul>
+      <li>
+        Strona ma przyklejoną stopkę (przymocowaną u dołu rzutni). Podczas przewijania strony w dół element z fokusem nie jest całkowicie ukrywany przez stopkę, ponieważ treść w rzutni przewija się w górę, aby zawsze wyświetlać element z fokusem klawiatury za pomocą <a href="https://www.w3.org/TR/css-scroll-snap/#propdef-scroll-padding" rel="nofollow">dopełnienia przewijania</a>.
+      </li>
+      <li>
+        Na stronie znajduje się duże (o szerokości 30%) okno dialogowe do akceptacji plików cookie. Okno dialogowe jest modalne, co zapobiega dostępowi do innych elementów sterujących na stronie, dopóki nie zostanie zamknięte. Fokus nie jest zasłonięty, ponieważ okno dialogowe zatwierdzania plików cookie (w tym wskaźnik fokusu) pozostaje na ekranie do czasu dokonania wyboru i wysłania.
+      </li>
+      <li>
+        Powiadomienie jest wyświetlane w postaci przyklejonego nagłówka, a fokus klawiatury jest przenoszony na powiadomienie. Powiadomienie znika, gdy traci fokus, więc nie zasłania żadnych innych elementów sterujących (w tym wskaźnika fokusu widocznego przed powiadomieniem).
+      </li>
+    </ul>
+  </section>
+  <section id="resources">
+    <h2>Zasoby</h2>
+  </section>
+  <section id="techniques">
+    <h2>Techniki</h2>
+    <p>
+      Każdy numerowany element w tej sekcji reprezentuje technikę lub kombinację technik, które grupa robocza WCAG uważa za wystarczające do spełnienia tego kryterium sukcesu. Nie jest jednak konieczne stosowanie tych konkretnych technik. Aby uzyskać informacje na temat korzystania z innych technik, zobacz <a href="./WCAG-objasnienie-technik.html">Objaśnienie technik dla kryteriów sukcesu WCAG</a>, w szczególności sekcję „Inne techniki”.
+    </p>
+    <section id="sufficient">
+
+      <h3>Wystarczające techniki</h3>
+      <ol>
+        <li> <a href="https://www.w3.org/WAI/WCAG22/Techniques/css/C43">C43: Używanie właściwości CSS scroll-padding do odsłaniania ukrytej treści</a></li>
+      </ol>
+    </section>
+    <section id="advisory">
+      <h3>Pomocnicze techniki</h3>
+    </section>
+    <section id="failure">
+      <h3>Błędy</h3>
+      <p>
+        Poniżej przedstawiono typowe błędy, które Grupa Robocza WCAG uważa za naruszenia tego kryterium sukcesu.
+      </p>
+      <ul>
+        <li>
+          Interakcja, która powoduje wyświetlenie treści nad komponentem z fokusem klawiatury, wizualnie zakrywając część wskaźnika fokusu. Takie zachowanie można spotkać w przypadku materiałów reklamowych lub promocyjnych, których celem jest dostarczenie większej ilości informacji o produkcie, gdy użytkownik porusza się po katalogu.
+        </li>
+        <li>
+          Strona ma przyklejoną stopkę (przymocowaną u dołu rzutni). Podczas przewijania strony w dół zaznaczony element jest częściowo ukryty w stopce, ponieważ treść w widocznym obszarze przewija się bez wystarczającego <a href="https://www.w3.org/TR/css-scroll-snap/#propdef-scroll-padding" rel="nofollow">dopełnienia przewijania</a>.
+        </li>
+      </ul>
+    </section>
+  </section>
 </body>
 </html>

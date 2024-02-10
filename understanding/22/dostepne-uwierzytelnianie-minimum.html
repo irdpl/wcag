@@ -1,180 +1,201 @@
 <!DOCTYPE html>
 <html lang="pl" xml:lang="pl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8"></meta>
-    <title>Understanding Accessible Authentication (Minimum)</title>
-    <link rel="stylesheet" type="text/css" href="../../css/editors.css" class="remove"></link>
+  <meta charset="UTF-8" />
+  <title>Objaśnienie kryterium sukcesu Dostępne uwierzytelnianie (minimum)</title>
+  <link rel="stylesheet" type="text/css" href="../../css/editors.css" class="remove" />
 </head>
 <body>
-    <h1>Understanding Accessible Authentication (Minimum)</h1>
-
-    <section id="brief">
-        <h2>In brief</h2>
-        <dl>
-            <dt>Goal</dt><dd>Make logins possible with less mental effort.</dd>
-            <dt>What to do</dt><dd>Don't make people solve, recall, or transcribe something to log in.</dd>
-            <dt>Why it's important</dt><dd>Some people with cognitive disabilities cannot solve puzzles, memorize a username and password, or retype one-time passcodes.</dd>
-        </dl>
-    </section>
-
-    <section id="intent">
-        <h2>Intent of Accessible Authentication (Minimum)</h2>
-
-        <p>The purpose of this Success Criterion is to ensure there is an accessible, easy-to-use, and secure method to log in. Most Web sites rely on usernames and passwords for logging in. Memorizing or transcribing a username, password, or one-time verification code places a very high or impossible burden upon people with certain cognitive disabilities.</p>
-
-        <p>While Web sites can use the recognition of objects or of non-text content provided by the user to meet this Success Criterion, such techniques do not fully support the cognitive accessibility community and should be avoided if possible. Refer to <a href="accessible-authentication-enhanced">Accessible Authentication (Enhanced)</a> for guidance to be more inclusive and accessible.</p>
-
-        <section id="cog-fun-tests">
-            <h3>Cognitive Function Tests</h3>
-            
-            <p>Remembering a site-specific password is a <a>cognitive function test</a>. Such tests are known to be problematic for many people with cognitive disabilities. Whether it is remembering random strings of characters, or a pattern gesture to perform on a touch screen, cognitive function tests will exclude some people. When a cognitive function test is used, at least one other authentication method must be available which is not a cognitive function test.</p>
-
-            <p>Some <abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHA</abbr> systems have an audio alternative of the visible text. If the user needs to transcribe this audio, it cannot be used to meet the Alternative exception.</p>            
-
-            <p>If there is more than one step in the authentication process, such as with multi-factor authentication, all steps need to comply with this Success Criterion to pass. There needs to be a path through authentication that does not rely on cognitive function tests.</p>
-
-            <p>Being able to recover or change the email and password is an important part of authentication. If the user is authenticating with alternative information in order to recover their account, there needs to be a method that is not a cognitive function test.</p>
-
-            <p>Many organizations are required to use 2-factor authentication that combines independent sources to confirm a user's identity. These sources can consist of combining authentication through:</p>
-
-            <ul>
-                <li>knowledge (e.g., password, letters in a passphrase or memorized swipe path);</li>
-                <li>possession (e.g., a verification code generated or received on a device, or scanning of a QR code on an external device);</li>
-                <li>biometrics (e.g., fingerprint scanning, facial recognition or keystroke dynamics).</li>
-            </ul>
-
-            <p>Most knowledge-based authentication methods rely on a cognitive function test, so mechanisms to assist users must be available. When authentication relies on performing an action on a separate device, it should be possible to complete the action without the need to transcribe information. It may not be possible to know what device-based authentication methods are available to a user; offering a choice of methods can allow them to choose the path that most suits them.</p>
-        </section>
-
-        <section id="auth-approaches">
-            <h3>Authentication Approaches</h3>
-            <p>Web sites can employ username (or email) and password inputs as an authentication method if the author enables the user agent (browsers and third-party password managers) to fill in the fields automatically. Generally, if the login form meets <a href="identify-input-purpose">Success Criterion 1.3.5 Input Purpose</a>, and the form controls have an appropriate accessible name in accordance with <a href="name-role-value">Success Criterion 4.1.2 Name, Role, Value</a>, the user agent should be able to reliably recognize the fields and automatically fill them in. However, if the user agent is actively blocked from filling in the fields (for instance, by a script), then the page would not pass this criterion because it prevents the mechanism from working.</p>
-        </section>
-
-        <section id="copy-paste">
-            <h3>Copy and paste</h3>
-            <p>Copy and paste can be relied on to avoid transcription. Users can copy their login credentials from a local source (such as a standalone third-party password manager) and paste it into the username and password fields on a login form, or into a web-based command line interfaces asking for a password. Blocking people from pasting into authentication fields, or using a different format between the copied text and the input field (for example, "Enter the 3rd, 4th, and 6th character of your password"), would force the user to transcribe information and therefore fail this criterion, unless another method is available.</p>
-        </section>
-
-        <section id="two-factor-authentication">
-            <h3>Two-factor authentication systems (verification codes)</h3>
-            <p>Beyond usernames and passwords, some sites may use two-factor authentication, asking the user to enter a verification code (also called a passcode or one-time password). A service that requires <em>manual</em> transcription of a verification code is not compliant. As with usernames and passwords, it must be possible for a user to at least paste the code (such as from a standalone third-party password manager, text message application, or software-based security key), or to allow user agents to fill in the fields automatically.</p>
-            <p>There are scenarios where a verification code must be received or generated on a secondary device. For example, authenticating in a web browser on a laptop requires a verification code that is sent as an SMS text message to a mobile phone. However, in most cases, it is possible for the code to then be sent directly to the primary device, where it can then be copied and pasted (for example, by copying the code on the secondary device and emailing it to the primary device, or through the use of a shared cross-device clipboard where copying content on the secondary device makes it available to paste on the primary device). Evaluating whether or not the code can be seamlessly transferred from the secondary device to the primary device is <em>outside of the scope</em> for this Success Criterion. For the purpose of evaluating Web content that relies on authentication using these types of secondary device systems, it is assumed that provisions are in place that make the code available in the user's clipboard. Evaluating this criterion therefore only requires verification that the web content does allow pasting the clipboard content in the related authentication challenge field.</p>
-            <p>Note that two-factor systems that do not rely on codes &#8212; including hardware authentication devices (such as YubiKey), secondary applications (either on the same primary device, or on a secondary device) that expect the user to confirm that it is indeed them trying to log in, and authentication methods provided by the user's operating system (such as Windows Hello, or Touch ID/Face ID on macOS and iOS) &#8212; are <em>not</em><a> a cognitive function test</a>.</p>
-        </section>
-
-        <section id="object-recognition">
-            <h3>Object Recognition</h3>
-            <p>If a <a href="https://www.w3.org/TR/turingtest/">CAPTCHA</a> is used as part of an authentication process, there must be a method that does not include a cognitive function test, unless it meets the exception. If the test is based on something the website has set such as remembering or transcribing a word, or recognizing a picture the website provided, that would be a cognitive functional test. Recognizing objects, or a picture the user has provided is a cognitive function test; however, it is excepted at the AA level.</p>
-
-            <p>An object in this context means the general English definition ("a material thing that can be seen and touched") and can include vehicles and animals. If the test goes beyond recognition (e.g. multiply the number cats by the number of dogs), that does not meet the exception.</p>
-
-            <p>Some forms of object recognition may require an understanding of a particular culture. For example, taxis can appear differently in different locales. This is an issue for many people, including people with disabilities, but it is not considered an accessibility-specific issue.</p>
-
-        <p>Some CAPTCHAs and cognitive function tests used for authentication may only appear in certain situations, such as when ad blockers are present, or after repeated incorrect password entry. This criterion applies when these tests are used regardless of whether they are used every time or only triggered by specific scenarios.</p>
-
-        <p>There are a number of technologies that can be employed to prevent scripted abuse of the authentication process.</p>
-
-            <ul>
-                <li><a href="https://www.ietf.org/archive/id/draft-private-access-tokens-01.html#name-rate-limited-access">1.1.1. Rate-limited Access</a></li>
-                <li><a href="https://www.ietf.org/archive/id/draft-private-access-tokens-01.html#name-client-geo-location">1.1.2. Client Geo-Location</a></li>
-                <li><a href="https://www.ietf.org/archive/id/draft-private-access-tokens-01.html#name-private-client-authenticati">1.1.3. Private Client Authentication</a></li>
-            </ul>
-
-            <p>None of these systems are 100% effective. However, they may reduce the likelihood of a CAPTCHA being displayed.</p>
-        </section>
-        
-        <section id="personal-content">
-            <h3>Personal Content</h3>
-            <p>Personal content is sometimes used as a second factor for authentication. For example, as part of account creation the user would upload a picture, and when logging in they would be asked to select that picture from several possible alternatives. Care must be taken to provide adequate security in this case, since non-legitimate users might be able to guess the correct personal content when presented with a choice.</p>
-
-            <p>Text-based personal content does not qualify for this exception as it relies on recall (rather than recognition), and transcription (rather than selecting an item). Whilst picture-based personal content will still be a barrier for some people, text based versions tend to be a much larger barrier.</p>
-        </section>
-
-        <section id="hiding-content">
-            <h3>Hiding characters</h3>
-            <p>Another factor that can contribute to cognitive load is hiding characters when typing. Although this criterion requires that users do not have to type in (transcribe) a password, there are scenarios where that is necessary such as creating a password to be saved by a password manager. Providing a feature to optionally show a password can improve the chance of success for some people with cognitive disabilities or those who have difficulties with accurately typing.</p>
-        </section>
-
-
-    </section>
-    <section id="benefits">
-      <h2>Benefits of Accessible Authentication (Minimum)</h2>
-      
-      <p>People with cognitive issues relating to memory, reading (for example, dyslexia), numbers (for example, dyscalculia), or perception-processing limitations will be able to authenticate irrespective of the level of their cognitive abilities.</p>
-      
-   </section>
-   
-   <section id="examples">
-      <h2>Examples of Accessible Authentication (Minimum)</h2>
-      <p>The examples of this Success Criterion are the same as the <a href="accessible-authentication-enhanced.html#examples">Accessible Authentication (Enhanced)</a> examples.</p>
-
+  <h1>Objaśnienie kryterium sukcesu Dostępne uwierzytelnianie (minimum)</h1>
+  <section id="brief">
+    <h2>W skrócie</h2>
+    <dl>
+      <dt>Cel</dt>
+      <dd>Umożliwiaj logowanie przy mniejszym wysiłku umysłowym.</dd>
+      <dt>Co robić</dt>
+      <dd>Nie zmuszaj ludzi do rozwiązywania, przypominania sobie lub przepisywania czegoś, aby się zalogować.</dd>
+      <dt>Dlaczego to jest ważne</dt>
+      <dd>
+        Niektóre osoby z problemami poznawczymi nie mogą rozwiązywać zagadek, zapamiętywać nazwy użytkownika i hasła lub przepisywać jednorazowych kodów dostępu.
+      </dd>
+    </dl>
+  </section>
+  <section id="intent">
+    <h2>Intencja</h2>
+    <p>
+      Celem tego kryterium sukcesu jest zapewnienie dostępnej, łatwej w użyciu i bezpiecznej metody logowania. Większość witryn internetowych korzysta z nazw użytkowników i haseł do logowania. Zapamiętanie lub przepisanie nazwy użytkownika, hasła lub jednorazowego kodu weryfikacyjnego stanowi bardzo duże lub niemożliwe obciążenie dla osób z pewnymi problemami poznawczymi.
+    </p>
+    <p>
+      Chociaż strony internetowe mogą wykorzystywać rozpoznawanie obiektów lub treści nietekstowych dostarczonych przez użytkownika w celu spełnienia tego kryterium sukcesu, takie techniki nie wspierają w pełni osób z niepełnosprawnościami poznawczymi i należy ich unikać, jeśli to możliwe. Zapoznaj się z <a href="dostepne-uwierzytelnianie-ulepszone">Dostępne uwierzytelnianie (wzmocnione)</a>, aby uzyskać wskazówki dotyczące większej integracji i dostępności.
+      <section id="cog-fun-tests">
+        <h3>Testy funkcji poznawczych</h3>
+        <p>
+          Zapamiętanie hasła specyficznego dla witryny jest <a href="#dfn-cognitive-function-test">testem funkcji poznawczych</a>. Wiadomo, że takie testy są problematyczne dla wielu osób z niepełnosprawnością poznawczą. Niezależnie od tego, czy chodzi o zapamiętywanie losowych ciągów znaków, czy o odwzorowanie gestu na ekranie dotykowym, testy funkcji poznawczych wykluczą niektóre osoby. W przypadku stosowania testu funkcji poznawczych musi być dostępna co najmniej jedna inna metoda uwierzytelniania, która nie jest testem funkcji poznawczych.
+        </p>
+        <p>
+          Jeśli w procesie uwierzytelniania jest więcej niż jeden krok, na przykład w przypadku uwierzytelniania wieloskładnikowego, wszystkie kroki muszą być zgodne z tym kryterium sukcesu. Musi istnieć ścieżka uwierzytelniania, która nie opiera się na testach funkcji poznawczych.
+        </p>
+        <p>
+          Możliwość odzyskania lub zmiany adresu e-mail i hasła jest ważną częścią uwierzytelniania. Jeśli użytkownik uwierzytelnia się za pomocą alternatywnych informacji w celu odzyskania konta, musi istnieć metoda, która nie jest testem funkcji poznawczych.
+        </p>
+        <p>
+          Wiele organizacji jest zobowiązanych do stosowania uwierzytelniania dwuskładnikowego, które łączy niezależne źródła w celu potwierdzenia tożsamości użytkownika. Źródła te mogą polegać na łączeniu uwierzytelniania poprzez:
+        </p>
+        <ul>
+          <li>wiedzę (np. hasło, litery w haśle lub zapamiętana ścieżka przeciągnięcia);</li>
+          <li>
+            (np. posiadanie kodu weryfikacyjnego wygenerowanego lub odebranego na urządzeniu lub zeskanowanie kodu QR na urządzeniu zewnętrznym);
+          </li>
+          <li>dane biometryczne (np. skanowanie odcisków palców, rozpoznawanie twarzy lub dynamika naciśnięć klawiszy).</li>
+        </ul>
+        <p>Większość metod uwierzytelniania opartych na wiedzy opiera się na teście funkcji poznawczych, więc muszą być dostępne mechanizmy pomagające użytkownikom. Gdy uwierzytelnianie polega na wykonaniu czynności na oddzielnym urządzeniu, powinno być możliwe wykonanie tej czynności bez konieczności przepisywania informacji. Może nie być możliwe poznanie metod uwierzytelniania opartych na urządzeniach dostępnych dla użytkownika; oferowanie wyboru metod może pozwolić im wybrać ścieżkę, która najbardziej im odpowiada.
+      </section>
+      <section id="auth-approaches">
+        <h3>Metody uwierzytelniania</h3>
+        <p>Strony internetowe mogą wykorzystywać wprowadzanie nazwy użytkownika (lub adresu e-mail) i hasła jako metodę uwierzytelniania, jeśli autor zezwoli programowi użytkownika (przeglądarkom i aplikacjom do zarządzania hasłami innych firm) na automatyczne wypełnianie pól. Ogólnie rzecz biorąc, jeśli formularz logowania spełnia <a href="okreslenie-pozadanej-wartosci">kryterium sukcesu 1.3.5 Określenie pożądanej wartości</a>, a kontrolki formularza mają odpowiednią dostępną nazwę zgodnie z kryterium sukcesu <a href="nazwa-rola-wartosc">4.1.2 Nazwa, rola, wartość</a>, program użytkownika powinien być w stanie niezawodnie rozpoznać pola i automatycznie je wypełnić. Jeśli jednak program użytkownika jest aktywnie blokowany przed wypełnieniem pól (na przykład przez skrypt), wówczas strona nie spełni tego kryterium, ponieważ uniemożliwia działanie mechanizmu.
+      </section>
+      <section id="copy-paste">
+        <h3>Kopiuj i wklej</h3>
+        <p>
+          Kopiowanie i wklejanie pozwala uniknąć przepisywania. Użytkownicy mogą skopiować swoje dane logowania z lokalnego źródła (takiego jak samodzielna aplikacja do zarządzania hasłami innej firmy) i wkleić je w polach nazwy użytkownika i polach hasła w formularzu logowania lub w internetowych interfejsach wiersza poleceń z prośbą o podanie hasła. Zablokowanie możliwości wklejania danych do pól uwierzytelniania lub użycie innego formatu między skopiowanym tekstem a polem wprowadzania (na przykład „Wprowadź trzeci, czwarty i szósty znak swojego hasła”) zmusiłoby użytkownika do przepisania informacji, a tym samym nie spełniłoby tego kryterium, chyba że dostępna jest inna metoda.
+        </p>
+      </section>
+      <section id="two-factor-authentication">
+        <h3>Systemy uwierzytelniania dwuskładnikowego (kody weryfikacyjne)</h3>
+        <p>
+          Oprócz nazw użytkowników i haseł, niektóre witryny mogą korzystać z uwierzytelniania dwuskładnikowego, prosząc użytkownika o wprowadzenie kodu weryfikacyjnego (zwanego również kodem dostępu lub hasłem jednorazowym). Usługa wymagająca <em>ręcznego</em> przepisania kodu weryfikacyjnego nie zapewnia zgodności. Podobnie jak w przypadku nazw użytkowników i haseł, użytkownik musi mieć możliwość przynajmniej wklejenia kodu (np. z samodzielnej zewnętrznej aplikacji do zarządzania hasłamił, aplikacji do obsługi wiadomości tekstowych lub klucza bezpieczeństwa opartego na oprogramowaniu) lub umożliwienia programom użytkownika automatycznego wypełniania pól.
+        </p>
+        <p>
+          Istnieją scenariusze, w których kod weryfikacyjny musi zostać odebrany lub wygenerowany na urządzeniu dodatkowym. Na przykład uwierzytelnianie w przeglądarce internetowej na laptopie wymaga kodu weryfikacyjnego, który jest wysyłany jako wiadomość tekstowa SMS na telefon komórkowy. Jednak w większości przypadków możliwe jest wysłanie kodu bezpośrednio na urządzenie główne, gdzie można go skopiować i wkleić (na przykład kopiując kod na urządzeniu dodatkowym i wysyłając go e-mailem na urządzenie główne lub korzystając ze współdzielonego schowka między urządzeniami, w którym kopiowanie treści na urządzeniu dodatkowym udostępnia ją do wklejenia na urządzeniu głównym). Ocena, czy kod można płynnie przenieść z urządzenia dodatkowego na urządzenie podstawowe, wykracza <em>poza zakres</em> tego kryterium sukcesu. Do celów oceny treści internetowych, które opierają się na uwierzytelnianiu przy użyciu tego typu systemów urządzeń dodatkowych, zakłada się, że zapewniona jest możliwość udostępniają kodu w schowku użytkownika. Ocena tego kryterium wymaga zatem jedynie sprawdzenia, czy zawartość strony internetowej umożliwia wklejenie zawartości schowka w powiązanym polu wyzwania uwierzytelniania.
+        </p>
+        <p>
+          Należy pamiętać, że systemy dwuskładnikowe, które nie opierają się na kodach - w tym sprzętowe urządzenia uwierzytelniające (takie jak YubiKey), aplikacje pomocnicze (na tym samym urządzeniu głównym lub na urządzeniu dodatkowym), które oczekują od użytkownika potwierdzenia, że to rzeczywiście on próbuje się zalogować, oraz metody uwierzytelniania zapewniane przez system operacyjny użytkownika (takie jak Windows Hello lub Touch ID/Face ID w macOS i iOS) - <em>nie</em> są <a href="glossary">testem funkcji poznawczych</a>.
+        </p>
+      </section>
+      <section id="object-recognition">
+        <h3>Rozpoznawanie obiektów</h3>
+        <p>
+          Jeśli <a href="https://www.w3.org/TR/turingtest/">CAPTCHA</a> jest używane jako część procesu uwierzytelniania, musi istnieć metoda, która nie obejmuje testu funkcji poznawczych, chyba że spełnia wyjątek. Jeśli test opiera się na czymś ustawionym przez stronę internetową, takim jak zapamiętywanie lub przepisywanie słowa lub rozpoznawanie obrazu dostarczonego przez stronę internetową, byłby to test funkcji poznawczych. Rozpoznawanie obiektów lub obrazków dostarczonych przez użytkownika jest testem funkcji poznawczych, jednak jest on wyłączony na poziomie AA.
+        </p>
+        <p>
+          Obiekt w tym kontekście oznacza ogólną angielską definicję („materialna rzecz, którą można zobaczyć i dotknąć”) i może obejmować pojazdy i zwierzęta. Jeśli test wykracza poza rozpoznawanie (np. pomnożenie liczby kotów przez liczbę psów), nie spełnia to wyjątku.
+        </p>
+        <p>
+          Niektóre formy rozpoznawania obiektów mogą wymagać zrozumienia konkretnej kultury. Na przykład taksówki mogą wyglądać inaczej w różnych miejscach. Jest to problem dla wielu osób, w tym osób z niepełnosprawnościami, ale nie jest on uważany za kwestię związaną z dostępnością.
+        </p>
+        <p>
+          Niektóre CAPTCHA i testy funkcji poznawczych używane do uwierzytelniania mogą pojawiać się tylko w określonych sytuacjach, takich jak obecność blokerów reklam lub po wielokrotnym wprowadzeniu nieprawidłowego hasła. Kryterium to ma zastosowanie w przypadku korzystania z tych testów, niezależnie od tego, czy są one używane za każdym razem, czy tylko uruchamiane przez określone scenariusze.
+        </p>
+        <p>
+          Istnieje szereg technologii, które można zastosować, aby zapobiec nadużyciom procesu uwierzytelniania przez skrypty.
+        </p>
+        <ul>
+          <li><a href="https://www.ietf.org/archive/id/draft-private-access-tokens-01.html#name-rate-limited-access">1.1.1. Rate-limited Access</a> (Dostęp ograniczony w czasie)</li>
+          <li><a href="https://www.ietf.org/archive/id/draft-private-access-tokens-01.html#name-client-geo-location">1.1.2. Client Geo-Location</a> (Geolokalizacja użytkownika)</li>
+          <li><a href="https://www.ietf.org/archive/id/draft-private-access-tokens-01.html#name-private-client-authenticati">1.1.3. Private Client Authentication</a> (Uwierzytelnianie kluczem prywatnym)</li>
+        </ul>
+        <p>Żaden z tych systemów nie jest w 100% skuteczny. Mogą one jednak zmniejszyć prawdopodobieństwo wyświetlenia CAPTCHA.</p>
+      </section>
+      <section id="personal-content">
+        <h3>Treść osobista</h3>
+        <p>
+          Treści osobiste są czasami wykorzystywane jako drugi czynnik uwierzytelniania. Na przykład, w ramach tworzenia konta użytkownik mógłby przesłać zdjęcie, a podczas logowania zostałby poproszony o wybranie tego zdjęcia spośród kilku możliwych alternatyw. W tym przypadku należy zadbać o zapewnienie odpowiedniego bezpieczeństwa, ponieważ nieuprawnieni użytkownicy mogą być w stanie odgadnąć prawidłową treść osobistą, gdy zostanie im przedstawiony wybór.
+        </p>
+        <p>
+          Treści osobiste oparte na tekście nie kwalifikują się do tego wyjątku, ponieważ opierają się na przypominniu sobie (a nie rozpoznawaniu) i wpisaniu (a nie wybieraniu elementu). Podczas gdy treści osobiste oparte na obrazach nadal będą stanowić barierę dla niektórych osób, wersje tekstowe stanowią znacznie większą barierę.
+        </p>
+      </section>
+      <section id="hiding-content">
+        <h3>Ukrywanie znaków</h3>
+        <p>
+          Innym czynnikiem, który może przyczyniać się do obciążenia poznawczego, jest ukrywanie znaków podczas pisania. Chociaż to kryterium wymaga, aby użytkownicy nie musieli wpisywać (transkrybować) hasła, istnieją scenariusze, w których jest to konieczne, takie jak tworzenie hasła do zapisania przez aplikację do zarządzania hasłami. Zapewnienie funkcji opcjonalnego wyświetlania hasła może zwiększyć szansę powodzenia dla niektórych osób z problemami poznawczymi lub osób, które mają trudności z dokładnym wpisywaniem.
+        </p>
+      </section>
+  </section>
+  <section id="benefits">
+    <h2>Korzyści</h2>
+    <p>
+      Osoby z problemami poznawczymi związanymi z pamięcią, czytaniem (np. dysleksja), liczbami (np. dyskalkulia) lub ograniczeniami w przetwarzaniu postrzegania będą w stanie uwierzytelnić się niezależnie od poziomu ich zdolności poznawczych.
+    </p>
+  </section>
+  <section id="examples">
+    <h2>Przykłady</h2>
+    <p>
+      Przykłady tego kryterium sukcesu są takie same jak przykłady <a href="dostepne-uwierzytelnianie-ulepszone#examples">Dostępnego uwierzytelniania (ulepszonego)</a>.
+    </p>
+    <ul>
+      <li>
+        Strona internetowa wykorzystuje odpowiednio oznaczone pola nazwy użytkownika (lub adresu e-mail) i hasła jako uwierzytelnienie logowania (spełnienie kryterium sukcesu <a href="okreslenie-pozadanej-wartosci">1.3.5 Określenie pożądanej wartości</a> i kryterium sukcesu <a href="nazwa-rola-wartosc">4.1.2: Nazwa, rola, wartość</a>). Przeglądarka użytkownika lub zintegrowane rozszerzenie aplikacji do zarządzania hasłami innej firmy może określić cel wprowadzania danych i automatycznie wypełnić nazwę użytkownika i hasło.
+      </li>
+      <li>
+        Strona internetowa nie blokuje funkcji wklejania. Użytkownik może korzystać z zewnętrznej aplikacji do zarządzania hasłami do przechowywania poświadczeń, kopiowania ich i wklejania bezpośrednio do formularza logowania.
+      </li>
+      <li>
+        Strona internetowa używa WebAuthn, aby użytkownik mógł uwierzytelnić się za pomocą swojego urządzenia zamiast nazwy użytkownika/hasła. Urządzenie użytkownika może korzystać z dowolnej dostępnej modalności. Typowe metody stosowane w laptopach i telefonach to skanowanie twarzy, odcisk palca i PIN (osobisty numer identyfikacyjny). Witryna nie wymusza żadnego konkretnego sposobu, zakłada się, że użytkownik skonfiguruje metodę, która mu odpowiada.
+      </li>
+      <li>
+        Strona internetowa oferuje możliwość logowania się za pomocą zewnętrznego dostawcy przy użyciu metody OAuth.
+      </li>
+      <li>
+        Strona internetowa, która wymaga uwierzytelniania dwuskładnikowego, umożliwia wiele opcji dla drugiego czynnika, w tym metodę opartą na USB, w której użytkownik po prostu naciska przycisk, aby wprowadzić token czasowy.
+      </li>
+      <li>
+        Strona internetowa wymagająca uwierzytelniania dwuskładnikowego wyświetla kod QR, który może zostać zeskanowany przez aplikację na urządzeniu użytkownika w celu potwierdzenia tożsamości.
+      </li>
+      <li>
+        Strona internetowa wymagająca uwierzytelniania dwuskładnikowego wysyła powiadomienie na urządzenie użytkownika. Użytkownik musi użyć mechanizmu uwierzytelniania swojego urządzenia (na przykład zdefiniowanego przez użytkownika kodu PIN, odcisku palca, rozpoznawania twarzy), aby potwierdzić tożsamość.
+      </li>
+    </ul>
+  </section>
+  <section id="techniques">
+    <h2>Techniques for Accessible Authentication (Minimum)</h2>
+    <section id="sufficient">
+      <h3>Techniki wystarczające</h3>
       <ul>
-         <li>A web site uses a properly marked up username (or email) and password fields as the login authentication (meeting <a href="identify-input-purpose">Success Criterion 1.3.5 Input Purpose</a> and <a href="name-role-value">Success Criterion 4.1.2: Name, Role, Value</a>). The user's browser or integrated third-party password manager extension can identify the purpose of the inputs and automatically fill in the username and password.</li>
-         <li>A web site does not block paste functionality. The user is able to use a third-party password manager to store credentials, copy them, and paste them directly into a login form.</li>
-         <li>A web site uses WebAuthn so the user can authenticate with their device instead of username/password. The user's device could use any available modality. Common methods on laptops and phones are facial-scan, fingerprint, and PIN (Personal Identification Number). The web site is not enforcing any particular use; it is assumed a user will set up a method that suits them.</li>
-         <li>A web site offers the ability to login with a third-party provider using the OAuth method.</li>
-         <li>A web site that requires two-factor authentication allows for multiple options for the 2nd factor, including a USB-based method where the user simply presses a button to enter a time-based token.</li>
-         <li>A web site that requires two-factor authentication displays a QR code which can be scanned by an app on a user's device to confirm identity.</li>
-         <li>A web site that requires two-factor authentication sends a notification to a user's device. The user must use their device's authentication mechanism (for example, user-defined PIN, fingerprint, facial recognition) to confirm identity.</li>
+        <li>
+          <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G218">G218: Uwierzytelnianie linków e-mail</a>
+        </li>
+        <li>
+          <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H100">H100: Zapewnienie odpowiednio oznaczonych danych wejściowych e-mail i hasła</a>
+        </li>
+        <li>
+          Udostępnianie WebAuthn jako alternatywy dla nazwy użytkownika/hasła (potencjalna przyszła technika)
+        </li>
+        <li>
+          Zapewnienie logowania strony trzeciej przy użyciu OAuth (potencjalna przyszła technika)
+        </li>
+        <li>
+          Korzystanie z dwóch technik w celu zapewnienia uwierzytelniania dwuskładnikowego (potencjalna przyszła technika)
+        </li>
       </ul>
-      
-   </section>
-   
-   <section id="techniques">
-      <h2>Techniques for Accessible Authentication (Minimum)</h2>
-      
-      <section id="sufficient">
-        <h3>Sufficient Techniques for Accessible Authentication (Minimum)</h3>
-        <ul>
-            <li>
-                <a href="../../techniques/general/G218" class="general">Email link authentication</a>
-            </li>
-            <li>
-                <a href="../../techniques/html/H100" class="html">Providing properly marked up email and password inputs</a>
-            </li>
-            <li>
-                Providing WebAuthn as an alternative to username/password (Potential future technique)
-            </li>
-            <li>
-                Providing a 3rd party login using OAuth (Potential future technique)
-            </li>
-            <li>
-                Using two techniques to provide 2 factor authentication (Potential future technique)
-            </li>
-        </ul>
-      </section>
-      
-      <section id="advisory">
-        <h3>Additional Techniques (Advisory) for Accessible Authentication (Minimum)</h3>
-      </section>
-      
-      <section id="failure">
-        <h3>Failures for Accessible Authentication (Minimum)</h3>
-        <ul>
-            <li>
-                <a href="../../techniques/failures/F109.html">Failure of Success Criterion 3.3.8 and 3.3.9 due to forcing transcription of individual password characters</a>
-            </li>
-        </ul>
-      </section>
-      
-   </section>
-   <section id="resources">
-        <h2>Resources</h2>
-
-        <ul>
-            <li><a href="https://www.w3.org/TR/coga-gap-analysis/#table1">Cognitive Accessibility Gap Analysis Topic 1: Authentication and Safety</a></li>
-            <li><a href="https://w3c.github.io/coga/issue-papers/#web-security-and-privacy-technologies">Cognitive Accessibility Issue Papers 4. Web Security and Privacy Technologies</a> and <a href="https://w3c.github.io/coga/issue-papers/privacy-security.html">Web Security and Privacy Technologies</a></li>
-            <li><a href="https://www.w3.org/TR/coga-usable/#provide-a-login-that-does-not-rely-on-memory-or-other-
-            cognitive-skills-pattern">Making Content Usable for People with Cognitive and Learning Disabilities 4.7.1 Provide a Login that Does Not Rely on Memory or Other Cognitive Skills</a></li>
-            <li><a href="https://www.w3.org/TR/webauthn/">WebAuthN specification</a></li>
-            <li><a href="https://webauthn.io/">WebAuthN Demo site</a></li>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API on MDN</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/OAuth">OAuth on Wikipedia</a></li>
-            <li><a href="https://www.ncsc.gov.uk/blog-post/let-them-paste-passwords">"Let them paste passwords", from the UK's National Cyber Security Centre</a></li>
-        </ul>
-
     </section>
-
+    <section id="advisory">
+      <h3>Additional Techniques (Advisory) for Accessible Authentication (Minimum)</h3>
+    </section>
+    <section id="failure">
+      <h3>Failures for Accessible Authentication (Minimum)</h3>
+      <ul>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F109">F109: Niespełnienie kryterium sukcesu 3.3.8 i 3.3.9 z powodu uniemożliwienia ponownego wprowadzenia hasła lub kodu w tym samym formacie.</a>
+        </li>
+      </ul>
+    </section>
+  </section>
+  <section id="resources">
+    <h2>Powiązane zasoby</h2>
+    <ul>
+      <li><a href="https://www.w3.org/TR/coga-gap-analysis/#table1" lang="en" hreflang="en">Cognitive Accessibility Gap Analysis Topic 1: Authentication and Safety</a> (Analiza luk w dostępności poznawczej Temat 1: Uwierzytelnianie i bezpieczeństwo)</li>
+      <li><a href="https://w3c.github.io/coga/issue-papers/#web-security-and-privacy-technologies" lang="en" hreflang="en">Cognitive Accessibility Issue Papers 4. Web Security and Privacy Technologies</a> (Dokumenty dotyczące dostępności poznawczej 4. Technologie bezpieczeństwa i prywatności w Internecie) oraz <a href="https://w3c.github.io/coga/issue-papers/privacy-security.html" lang="en" hreflang="en">Web Security and Privacy Technologies</a> (Technologie bezpieczeństwa i prywatności w Internecie)</li>
+      <li>
+        <a href="https://www.w3.org/TR/coga-usable/#provide-a-login-that-does-not-rely-on-memory-or-other-
+            cognitive-skills-pattern" lang="en" hreflang="en">Tworzenie użytecznych treści dla osób z zaburzeniami poznawczymi i trudnościami w uczeniu się 4.7.1 Zapewnienie logowania, które nie opiera się na pamięci lub innych umiejętnościach poznawczych</a>
+      </li>
+      <li><a href="https://www.w3.org/TR/webauthn/" lang="en" hreflang="en">WebAuthN specification</a> (Specyfikacja WebAuthN)</li>
+      <li><a href="https://webauthn.io/" lang="en" hreflang="en">WebAuthN Demo site</a> (Strona demonstracyjna WebAuthN)</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API" lang="en" hreflang="en">Web Authentication API on MDN</a> (API uwierzytelniania internetowego na MDN)</li>
+      <li><a href="https://en.wikipedia.org/wiki/OAuth" lang="en" hreflang="en">OAuth on Wikipedia</a> (OAuth w Wikipedii)</li>
+      <li><a href="https://www.ncsc.gov.uk/blog-post/let-them-paste-passwords" lang="en" hreflang="en">"Let them paste passwords", from the UK's National Cyber Security Centre</a> („Niech wklejają hasła”, z Bbrytyjskiego Narodowego Centrum Cyberbezpieczeństwa)</li>
+    </ul>
+  </section>
 </body>
 </html>
