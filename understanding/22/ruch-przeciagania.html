@@ -2,125 +2,106 @@
 <html lang="pl" xml:lang="pl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
    <meta charset="UTF-8"></meta>
-   <title>Understanding Dragging</title>
+   <title>Objaśnienie kryterium sukcesu Ruch przeciągania</title>
    <link rel="stylesheet" type="text/css" href="../../css/editors.css" class="remove"></link>
 </head>
 <body>
-   <h1>Understanding Dragging Movements</h1>
-
+   <h1>Objaśnienie kryterium sukcesu Ruch przeciągania</h1>
    <section id="brief">
-      <h2>In brief</h2>
-      <dl>
-         <dt>Goal</dt><dd>Don’t rely on dragging for user actions.</dd>
-         <dt>What to do</dt><dd>For any action that involves dragging, provide a simple pointer alternative.</dd>
-         <dt>Why it's important</dt><dd>Some people cannot use a mouse to drag items.</dd>
-      </dl>
+               <h2>W skrócie</h2>
+               <dl>
+                  <dt>Cel</dt>
+                  <dd>Nie polegaj w działaniach użytkownika na przeciąganiu.</dd>
+                  <dt>Co zrobić</dt>
+                  <dd>W przypadku każdej akcji wymagającej przeciągania zapewnij alternatywę wykorzystującą proste wskazanie.</dd>
+                  <dt>Dlaczego to jest ważne</dt>
+                  <dd>Niektóre osoby nie mogą używać myszy do przeciągania elementów.</dd>
+               </dl>
     </section>
-
     <section id="intent">
-        
-      <h2>Intent of Dragging Movements</h2>
-
-      <p>The intent of this Success Criterion is to ensure functionality that uses a dragging movement has another <a>single pointer</a> mode of operation without the need for the dexterity required to drag elements.</p>
-
-      <p>Some people cannot perform dragging movements in a precise manner. Others use a specialized or adapted input device, such as a trackball, head pointer, eye-gaze system, or speech-controlled mouse emulator, which may make dragging cumbersome and error-prone.</p>
-
-      <p>When an interface implements functionality that uses dragging movements, users perform four discrete actions:</p>
-        
-           <ol>
-              <li>tap or click to establish a starting point, then</li>
-              <li>press and hold that contact while...</li>
-              <li>performing a repositioning of the pointer, before...</li>
-               <li>releasing the pointer at the end point.</li>
-            </ol>
-       
-      <p>Not all users can accurately press and hold that contact while also repositioning the pointer. An alternative method must be provided so that users with mobility impairments who use a pointer (mouse, pen, or touch contact) can use the functionality.</p>
-
-      <p>This requirement is separate from keyboard accessibility because people using a touch screen device may not use a physical keyboard. Keyboard specific interactions such as tabbing or arrow keys may not be possible when encountering a drag and drop control. Note, however, that providing a text input can be an acceptable single-pointer alternative to dragging. For example, an input beside a slider could allow any user to enter a precise value for the slider. In such a situation, the on-screen keyboard that appears for touch users offers a single-pointer means of entering an alphanumeric value.</p>
-
-      <p>This criterion does not apply to scrolling enabled by the user-agent. Scrolling a page is not in scope, nor is using a technique such as <abbr title="Cascading Style Sheets">CSS</abbr> <code>overflow</code> to make a section of content scrollable.</p>
-      
-		<section>
-        
-         <h3>Relationship to other requirements</h3>
-        
-         <p>Success Criteria 2.1.1 Keyboard and 2.1.3 Keyboard (No Exception) require dragging features to be keyboard accessible. However, achieving keyboard equivalence for a dragging operation does not automatically meet this Success Criterion. It is possible to create an interface that works with dragging and keyboard controls that does not work using only clicks or taps. While many designs can be created for a dragging alternative which address both keyboard accessibility and operability by single pointer operation, the two requirements should be assessed independently.</p>
-
-         <p>This Success Criterion applies to dragging movements as opposed to pointer gestures, which are covered in <a href="pointer-gestures">Success Criterion 2.5.1 Pointer Gestures</a>. Pointer gestures include directional path-based as well as multi-point gestures. In contrast, for dragging movements, only the start and end point of the movement matters, not the actual path.</p>
-
-         <p>Additional examples are selection rectangles that set the first x/y rectangle coordinate at the pointer position via a pointer down-event, and the second x/y coordinate, after a dragging movement, at the next up-event. A similar example is a connecting line drawn between two different items on the screen, as in an allocation test where users are required to draw a line between questions and corresponding answers. In these cases, the dragging movement requires an alternative way to accomplish the same action that does not rely on the dragging movement. For example, two separate single tap or click actions may define the rectangle coordinates or the start and end points of a connecting line.</p>
-
+               <p>Celem tego kryterium sukcesu jest zapewnienie, że funkcjonalność, która wykorzystuje ruch przeciągania ma inny <a class="glossary">jednowskaźnikowy</a> tryb działania, który nie wymaga zręczności w przeciąganiu elementów.
+               </p>
+               <p>Niektóre osoby nie są w stanie wykonywać precyzyjnych ruchów przeciągania. Inne używają wyspecjalizowanego lub przystosowanego urządzenia wejściowego, takiego jak trackball (kot), mysz nagłowna głowy, system wzroku lub emulator myszy sterowany głosem, co może sprawić, że przeciąganie będzie uciążliwe i podatne na błędy.
+               </p>
+               <p>Gdy interfejs implementuje funkcję wykorzystującą ruchy przeciągania, użytkownicy wykonują cztery odrębne działania:
+               </p>
+               <ol>
+                  <li>dotknij lub kliknij, aby ustalić punkt początkowy, potem</li>
+                  <li>naciśnij i przytrzymaj ten punkt początkowy podczas...</li>
+                  <li>wykonywania zmiany położenia wskaźnika przed...</li>
+                  <li>zwolnieniem wskaźnika w punkcie końcowym.</li>
+               </ol>
+               <p>Nie wszyscy użytkownicy potrafią dokładnie nacisnąć i przytrzymać ten punkt kontaktu, jednocześnie zmieniając położenie wskaźnika. Należy zapewnić alternatywną metodę, aby użytkownicy z niepełnosprawnością manualną korzystający ze wskaźnika (myszy, pióra lub kontaktu dotykowego) mogli korzystać z tej funkcjonalności.
+               </p>
+               <p>Wymaganie to jest odrębne od dostępności klawiatury, ponieważ osoby korzystające z urządzenia z ekranem dotykowym nie mogą korzystać z klawiatury fizycznej. Interakcje specyficzne dla klawiatury, takie jak klawisze tabulacji lub klawisze strzałek, mogą nie być możliwe w przypadku napotkania kontrolki „przeciągnij i upuść”. Należy jednak pamiętać, że wprowadzanie tekstu może być akceptowalną alternatywą dla przeciągania z jednym wskaźnikiem. Na przykład wprowadzenie danych obok suwaka może pozwolić każdemu użytkownikowi na wprowadzenie dokładnej wartości suwaka. W takiej sytuacji klawiatura ekranowa na ekranie dotykowym umożliwia wprowadzenie wartości alfanumerycznej za pomocą jednego wskaźnika.
+               </p>
+               <p>Kryterium to nie dotyczy przewijania włączonego przez program użytkownika. Przewijanie strony nie wchodzi w zakres tego zakresu, podobnie jak użycie techniki takiej jak <code>overflow</code> w <abbr title="kaskadowych arkuszach stylów,">CSS</abbr> aby umożliwić przewijanie sekcji treści.
+               </p>
       </section>
-      
+               <section id="relationship-to-other-requirements">
+                  <h3>Związek z innymi wymaganiami</h3>
+                  <p>Kryteria sukcesu <a href="klawiatura.html">2.1.1 Klawiatura</a> i <a href="klawiatura-bez-wyjatku.html">2.1.3 Klawiatura (bez wyjątku)</a> wymagają, aby funkcje przeciągania były dostępne za pomocą klawiatury. Jednakże osiągnięcie równoważności klawiatury dla operacji przeciągania nie spełnia automatycznie tego kryterium sukcesu. Możliwe jest utworzenie interfejsu obsługującego przeciąganie i sterowanie za pomocą klawiatury, który nie działa przy użyciu samych kliknięć lub dotknięć. Chociaż można stworzyć wiele projektów alternatywnych rozwiązań przeciągania, które uwzględniają zarówno dostępność klawiatury, jak i obsługę za pomocą pojedynczego wskaźnika, te dwa wymagania należy oceniać niezależnie.
+                  </p>
+                  <p>To kryterium sukcesu dotyczy ruchów przeciągania, a nie gestów wskaźnika, które są omówione w <a href="gesty-dotykowe.html">Kryterium sukcesu 2.5.1 Gesty dotykowe</a>. Gesty dotykowe (wskaźnika???) obejmują gesty kierunkowe oparte na ścieżce oraz gesty wielopunktowe. Natomiast w przypadku ruchów przeciągania liczy się tylko punkt początkowy i końcowy ruchu, a nie rzeczywista ścieżka.
+                  </p>
+                  <p>Dodatkowymi przykładami są prostokąty zaznaczenia, które ustawiają pierwszą współrzędną prostokąta x/y w pozycji wskaźnika poprzez zdarzenie przesunięcia wskaźnika w dół, a drugą współrzędną x/y po ruchu przeciągania w następnym zdarzeniu w górę. Podobnym przykładem jest linia łącząca dwa różne elementy na ekranie, jak w teście alokacyjnym, w którym użytkownicy muszą narysować linię między pytaniami i odpowiadającymi im odpowiedziami. W takich przypadkach ruch przeciągania wymaga alternatywnego sposobu wykonania tego samego działania, który nie opiera się na ruchu przeciągania. Na przykład dwie oddzielne akcje pojedynczego dotknięcia lub kliknięcia mogą zdefiniować współrzędne prostokąta lub punkty początkowy i końcowy linii łączącej.
+                  </p>
+               </section>	  
       <section>
-         <h3>Alternatives for dragging movements on the same page</h3>
-   
-         <p>Where functionality can be executed via dragging movements and an equivalent option exists that allows for single-pointer access without dragging, this Success Criterion is passed. It does not have to be the same component, so long as the functionality is equivalent. An example is a color wheel where a color can be changed by dragging an indicator. In addition, text fields for the numerical input of color values allow the definition of a color without requiring dragging movements. (Note that a text input is considered device agnostic; although the purpose is to enter characters, text entry can take place through voice, pointer or keyboard.)</p> 
-
+                  <h3>Alternatywy dla przeciągania ruchów na tej samej stronie</h3>
+                  <p>Gdy funkcjonalność może być wykonana poprzez przeciąganie i istnieje równoważna opcja umożliwiająca dostęp za pomocą jednego wskaźnika bez przeciągania, to kryterium sukcesu zostaje spełnione. Nie musi to być ten sam komponent, o ile funkcjonalność jest równoważna. Przykładem jest koło kolorów, w którym kolor można zmienić, przeciągając wskaźnik. Ponadto pola tekstowe do numerycznego określenie koloru umożliwiają definicję koloru bez konieczności przeciągania. (Należy pamiętać, że wprowadzanie tekstu jest uważane za niezależne od urządzenia; chociaż celem jest wprowadzanie znaków, wprowadzanie tekstu może odbywać się za pomocą głosu, wskaźnika lub klawiatury).
+                  </p> 
       </section>
-      
       <section>
-         <h3>Distinguishing dragging movements from path-based pointer gestures</h3>
-      
-         <p>Dragging movements covered in this Success Criterion are pointer interactions where only the start- and endpoints matter. Once the pointer engages with a target, the direction of the dragging movement does not factor into the interaction until the pointer disengages the target. Since the dragging movement does not have an intermediate point, the dragging movement can go in any direction. Path-based gestures are covered in Success Criterion 2.5.1 Pointer Gestures. For more details, refer to <a href="https://www.w3.org/WAI/WCAG21/Understanding/pointer-gestures.html">Understanding Success Criterion 2.5.1 Pointer Gestures</a></p> 
-
+                  <h3>Rozróżnianie ruchów przeciągania od gestów wskaźnika opartych na ścieżce</h3>
+                  <p>Ruchy przeciągania objęte tym kryterium sukcesu to interakcje wskaźników, w przypadku których liczy się tylko punkt początkowy i końcowy. Gdy wskaźnik nawiąże kontakt z celem, kierunek ruchu przeciągania nie jest uwzględniany w interakcji, dopóki wskaźnik nie odłączy się od celu. Ponieważ ruch przeciągania nie ma punktu pośredniego, ruch przeciągania może przebiegać w dowolnym kierunku. Gesty oparte na ścieżce są omówione w Kryterium sukcesu 2.5.1 Gesty dotykowe. Aby uzyskać więcej informacji, zobacz <a href="gesty-dotykowe.html">Objaśnienie kryterium sukcesu 2.5.1 Gesty dotykowe</a></p> 
       </section>
-
       </section>
-  
       <section id="benefits">
-         <h2>Benefits of Dragging Movements</h2>
-         
-         <ul>
-            <li>Users who struggle with performing dragging movements can still operate an interface with a pointer interface.</li>
-         </ul>
-      
+               <h2>Korzyści</h2>
+               <ul>
+                  <li>Użytkownicy, którzy mają trudności z wykonywaniem ruchów przeciągania, mogą nadal obsługiwać interfejs z interfejsem wskaźnika.
+                  </li>
+               </ul>
       </section>
-   
    <section id="examples">
-      <h2>Examples of Dragging Movements with alternatives</h2>
-
-      <ul>
-         <li>A map allows users to drag the view of the map around, and the map has up/down/left/right buttons to move the view as well.</li>
-         <li>A sortable list of elements may, after tapping or clicking on a list element, provide adjacent controls for moving the element up or down in the list by simply tapping or clicking on those controls.</li>
-         <li>A taskboard that allows users to drag and drop items between columns also provides an additional pop-up menu after tapping or clicking on items for moving the selected element to another column by tapping or clicking on pop-up menu entries.</li>
-         <li>A radial control widget (color wheel) where the value can be set by dragging the marker for the currently selected color to another position, also allows picking another color value by tapping or clicking on another place in the color wheel.</li>
-         <li>A linear slider control widget, where the value can be set by dragging the visual indicator (thumb) showing the current value, allows tapping or clicking on any point of the slider track to change the value and set the thumb to that position. </li>  
-         <li>A widget where you can drag a gift to one person in a photo of a group of people also has a menu alternative where users can select the person that should receive the gift from the menu.</li>
-      </ul>
-      
+               <h2>Przykłady</h2>
+               <ul>
+                  <li>Mapa umożliwia użytkownikom przeciąganie widoku mapy, a mapa posiada przyciski w górę/w dół/w lewo/w prawo do przesuwania widoku.
+                  </li>
+                  <li>Sortowalna lista elementów może, po dotknięciu lub kliknięciu elementu listy, udostępnić sąsiadujące kontrolki umożliwiające przesuwanie elementu w górę lub w dół na liście poprzez proste dotknięcie lub kliknięcie tych kontrolek.
+                  </li>
+                  <li>Tablica zadań, która umożliwia użytkownikom przeciąganie i upuszczanie elementów pomiędzy kolumnami, udostępnia również dodatkowe wyskakujące menu po dotknięciu lub kliknięciu elementów w celu przeniesienia wybranego elementu do innej kolumny poprzez dotknięcie lub kliknięcie pozycji menu wyskakującego.
+                  </li>
+                  <li>Widżet sterowania promieniowego (koło kolorów), w którym wartość można ustawić poprzez przeciągnięcie znacznika aktualnie wybranego koloru w inne miejsce, umożliwia także wybranie innej wartości koloru poprzez dotknięcie lub kliknięcie innego miejsca na kole kolorów.
+                  </li>
+                  <li>Widżet liniowego sterowania suwakiem, w którym wartość można ustawić poprzez przeciągnięcie wskaźnika wizualnego (kciuka) pokazującego aktualną wartość, umożliwia dotknięcie lub kliknięcie dowolnego punktu na ścieżce suwaka w celu zmiany wartości i ustawienia kciuka w tej pozycji. 
+                  </li>  
+                  <li>Widżet, za pomocą którego możesz przeciągnąć prezent dla jednej osoby na zdjęciu grupy osób, posiada również alternatywne menu, w którym użytkownicy mogą wybrać z menu osobę, która powinna otrzymać prezent.
+                  </li>
+               </ul>
    </section>
-
    <section id="techniques">
-      <h2>Techniques for Dragging</h2>
-      
+      <h2>Techniki</h2>
       <section id="sufficient">
-         <h3>Sufficient Techniques for Dragging Movements</h3>
-         
-         <ol>
-            <li>
-                <a href="../../techniques/general/G219" class="general">Ensuring that an alternative is available for dragging movements that operate on content</a>
-            </li>
+                  <h3>Wystarczające techniki</h3>
+                  <ol>
+                     <li>
+                        <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G219">G219: Zapewnienie istnienia alternatywy dla ruchów przeciągania, które działają na treści</a>
+                     </li>
          </ol>
-         
       </section>
-      
       <section id="advisory">
          <h3>Additional Techniques (Advisory) for Dragging Movements</h3>
-         
       </section>
-      
       <section id="failure">
-         <h3>Failures for Dragging Movements</h3>
+                  <h3>Błędy</h3>
 
-         <ul>
-            <li>								         
-                <a href="../../techniques/failures/F108" class="failure">Failure of Success Criterion 2.5.7 Dragging Movements due to not providing a single pointer method for the user to operate a function that does not require a dragging movement</a>						       
-            </li>
-         </ul>
+                  <ul>
+                     <li>								         
+                        <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F108">F108: Niespełnienie kryterium sukcesu 2.5.7 Ruchy przeciągania z powodu braku metody pojedynczego wskaźnika umożliwiającej użytkownikowi obsługę funkcjonalności, która nie wymaga ruchu przeciągania</a>						       
+                     </li>
       </section>
-      
    </section>
-   
 </body>
 </html>
