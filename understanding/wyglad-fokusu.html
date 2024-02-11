@@ -234,11 +234,11 @@
                      
                      <ul>
                         
-                        <li>ciągła linia <a href="#">otaczająca</a> kształt, lub
+                        <li>ciągła linia <a href="#dfn-otacza">otaczająca</a> kształt, lub
                         </li>
                         
                         <li>
-                           ciągła linia otaczająca <a href="#">minimalną obwiednię</a> kształtu
+                           ciągła linia otaczająca <a href="#dfn-minimalna-obwiednia">minimalną obwiednię</a> kształtu
                            
                         </li>
                         
@@ -1094,7 +1094,7 @@
                         <p>
                            Zmiana atrybutu <code>koloru tła</code> elementu <code>body</code> <em>jest</em> w większości implementacji jednym ze sposobów zmiany pikseli bezpośrednio sąsiadujących
                            ze wskaźnikiem. Jednakże określenie wartości bieli (<code>#FFFFFF</code>) nie unieważnia tego wyjątku, ponieważ, jak ustalono w trzeciej uwadze definicji
-                           <a href="#">współczynnika kontrastu</a>, przyjmuje się, że domyślnym („nieokreślonym”) kolorem jest biały.
+                           <a href="#dfn-wsp%C3%B3%C5%82czynnik-kontrastu">współczynnika kontrastu</a>, przyjmuje się, że domyślnym („nieokreślonym”) kolorem jest biały.
                            
                         </p>
                      </div>
@@ -1800,6 +1800,231 @@
                            
                         </p>
                         				
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-współczynnik-kontrastu">współczynnik kontrastu</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">(L1 + 0.05) / (L2 + 0.05), gdzie</p>
+                        
+                        
+                        <ul xmlns="http://www.w3.org/1999/xhtml">
+                           
+                           
+                           <li>
+                              L1 to <a href="#dfn-wzgl%C4%99dna-luminancja">relatywna luminancja</a> oto relatywna luminancja jaśniejszego z kolorów, a
+                              
+                           </li>
+                           
+                           
+                           <li>
+                              L2 to <a href="#dfn-wzgl%C4%99dna-luminancja">relatywna luminancja</a> ciemniejszego z kolorów.
+                              
+                           </li>
+                           
+                           
+                        </ul>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>Współczynnik kontrastu zawiera się pomiędzy 1 i 21 (powszechnie zapisywanych 1:1 do
+                              21:1).
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Ponieważ autor strony nie ma wpływu na sposób renderowania ustawiony przez użytkownika
+                              (np. wygładzanie czcionek lub antyaliasing), współczynnik kontrastu oblicza się jak
+                              dla wyłączonego antyaliasingu.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              W celu spełnienia kryterium sukcesu 1.4.3 i 1.4.6, kontrast jest mierzony z uwzględnieniem
+                              standardowego koloru tła, na którym wyświetlany jest tekst przy standardowym użyciu.
+                              Jeżeli kolor tła nie został zdefiniowany, przyjmuje się, że jest to kolor biały.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Kolor tła to określony kolor, na którym renderowany jest tekst przy normalnym użyciu.
+                              Błędem jest nie określenie koloru tła przy jednoczesnym określeniu koloru tekstu,
+                              ponieważ wówczas kolor tła jest nieznany i nie można sprawdzić, czy zachowany jest
+                              odpowiedni kontrast. Z tego samego powodu błędem jest nie określenie koloru tekstu
+                              przy jednoczesnym określeniu koloru tła.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Gdy litery wyświetlane są z obwódkami, obwódki takie mogą dodawać kontrastu i mogą
+                              być uwzględniane w obliczaniu kontrastu pomiędzy literami a ich tłem. Cienka obwódka
+                              jest traktowana jak litera. Szeroka obwódka wokół litery, jeżeli wypełnia wewnętrzne
+                              elementy liter, działa jak efekt halo i może być traktowana jak tło.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Wymagania WCAG mogą być zweryfikowane przez zestawienie par kolorów określonych przez
+                              autora dla typowego sposobu wyświetlenia strony. Autor nie musi brać pod uwagę nietypowych
+                              sposobów wyświetlania, na przykład przez zmianę kolorów zrealizowaną przez narzędzia
+                              użytkownika, chyba, że wynikają z kodu strony.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-względna-luminancja">względna luminancja</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           względna jasność punktu w przestrzeni kolorów, znormalizowana do 0 dla najciemniejszego
+                           czarnego i 1 dla najjaśniejszego białego
+                           
+                        </p>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <div>
+                              
+                              <p>
+                                 Dla przestrzeni kolorów w standardzie sRGB względna luminancja koloru jest definiowana
+                                 jako L = 0.2126
+                                 * <strong>R</strong> + 0.7152 * <strong>G</strong> + 0.0722 * <strong>B</strong> gdzie <strong>R</strong>, <strong>G</strong> i <strong>B</strong> zostały zdefiniowane jako:
+                                 
+                              </p>
+                              
+                              <ul>
+                                 
+                                 
+                                 <li>
+                                    jeżeli RsRGB &lt;= 0.04045 wówczas <strong>R</strong> = RsRGB/12.92 lub <strong>R</strong> = ((RsRGB+0.055)/1.055) ^ 2.4
+                                    
+                                 </li>
+                                 
+                                 
+                                 <li>
+                                    jeżeli GsRGB &lt;= 0.04045 wówczas <strong>G</strong> = GsRGB/12.92 lub <strong>G</strong> = ((GsRGB+0.055)/1.055) ^ 2.4
+                                    
+                                 </li>
+                                 
+                                 
+                                 <li>
+                                    jeżeli BsRGB &lt;= 0.04045 wówczas <strong>B</strong> = BsRGB/12.92 lub <strong>B</strong> = ((BsRGB+0.055)/1.055) ^ 2.4
+                                    
+                                 </li>
+                                 
+                                 
+                              </ul>
+                              
+                              
+                              <p>oraz RsRGB, GsRGB i BsRGB są zdefiniowane jako:</p>
+                              
+                              
+                              <ul>
+                                 
+                                 
+                                 <li>RsRGB = R8bit/255</li>
+                                 
+                                 
+                                 <li>GsRGB = G8bit/255</li>
+                                 
+                                 
+                                 <li>BsRGB = B8bit/255</li>
+                                 
+                                 
+                              </ul>
+                              
+                              
+                              <p>
+                                 Znak „^” oznacza potęgowanie. (Równanie pochodzi z  [[SRGB]]).
+                                 
+                                 <!-- Znak „^” oznacza potęgowanie. (Równanie pochodzi z [sRGB] i [IEC-4WD]). -->
+                                 
+                              </p>
+                              
+                              
+                           </div>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>Przed majem 2021 roku wartość 0,04045 w definicji była inna (0,03928). Została ona
+                              zaczerpnięta ze starszej wersji specyfikacji i została zaktualizowana. Nie ma ona
+                              praktycznego wpływu na obliczenia w kontekście niniejszych wytycznych.
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Niemal wszystkie obecnie używane systemy kodują kolory w standardzie sRGB. O ile używany
+                              będzie inny standard kodowania kolorów do przetwarzania i wyświetlania, autor musi
+                              obliczać kolor na podstawie standardu sRGB. Jeżeli używa innego, zobacz <a href="contrast-minimum">Understanding Success Criterion 1.4.3</a> (Zrozumieć kryterium sukcesu 1.4.3).
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Jeżeli dithering odbywa się po dostarczeniu kolorów, bierze się pod uwagę kolory źródłowe.
+                              W wypadku kolorów wymieszanych na poziomie źródłowym, pod uwagę bierze się uśrednione
+                              wartości kolorów źródłowych (uśredniony R, uśredniony G i uśredniony B).
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Istnieją narzędzia, które automatycznie obliczają kontrast i błyski.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Istnieje <a href="relative-luminance.html">osobna strona podająca definicję luminancji względnej z wykorzystaniem MathML</a> do wyświetlania wzorów.
+                              
+                           </p>
+                        </div>
+                        
+                        <!-- Istnieje wersja MathML dla wzorów względnej luminancji. -->
+                        
                         
                      </definition>
                   </dd>
