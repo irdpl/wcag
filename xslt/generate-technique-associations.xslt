@@ -43,8 +43,8 @@
         <xsl:text>le</xsl:text>
         <xsl:call-template name="replaceUnsafeChars">
           <xsl:with-param name="inputString" select="substring-after($inputString, 'łę')"/>
-        </xsl:call-template> -->
-      </xsl:when>		  
+        </xsl:call-template> 
+      </xsl:when>-->		  
       <xsl:when test="contains($inputString, 'ą')">
         <xsl:value-of select="substring-before($inputString, 'ą')"/>
         <xsl:text>a</xsl:text>
