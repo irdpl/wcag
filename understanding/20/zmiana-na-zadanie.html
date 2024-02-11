@@ -1,160 +1,167 @@
 <!DOCTYPE html>
 <html lang="pl" xml:lang="pl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-   <meta charset="UTF-8"></meta>
-   <title>Objaśnienie kryterium sukcesu Zmiana na żądanie</title>
-   <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove"></link>
+  <meta charset="UTF-8" />
+  <title>Objaśnienie kryterium sukcesu Zmiana na żądanie</title>
+  <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove" />
 </head>
 <body>
-   <h1>Objaśnienie kryterium sukcesu Zmiana na żądanie</h1>
-		<section id="brief">
-			<h2>W skrócie</h2>
-         <dl>
-		         <dt>Cel</dt>
-				 <dd>Użytkownicy mają pełną kontrolę nad najważniejszymi zmianami treści.</dd>
-		         <dt>Co robić</dt>
-				 <dd>Zapewnij użytkownikom sposoby wyzwalania lub wyłączania zmian kontekstu.</dd>
-			      <dt>Dlaczego to jest ważne</dt>
-				  <dd>Treści, które zachowują się przewidywalnie, są szczególnie ważne dla osób niepełnosprawnych.</dd> 
-         </dl>
+  <h1>Objaśnienie kryterium sukcesu Zmiana na żądanie</h1>
+  <section id="brief">
+    <h2>W skrócie</h2>
+    <dl>
+      <dt>Cel</dt>
+      <dd>Użytkownicy mają pełną kontrolę nad najważniejszymi zmianami treści.</dd>
+      <dt>Co robić</dt>
+      <dd>Zapewnij użytkownikom sposoby wyzwalania lub wyłączania zmian kontekstu.</dd>
+      <dt>Dlaczego to jest ważne</dt>
+      <dd>Treści, które zachowują się przewidywalnie, są szczególnie ważne dla osób niepełnosprawnych.</dd>
+    </dl>
+  </section>
+  <section id="intent">
+    <h2>Intencja</h2>
+    <p>
+      Intencją tego kryterium sukcesu jest zachęcenie do projektowania treści internetowych dających użytkownikom pełną kontrolę nad zmianami kontekstu. To kryterium sukcesu ma na celu wyeliminowanie potencjalnego zamieszania, które może być spowodowane nieoczekiwanymi zmianami kontekstu, takimi jak automatyczne uruchamianie nowych okien, automatyczne przesyłanie formularzy po wybraniu pozycji z listy itp. Takie nieoczekiwane zmiany kontekstu mogą powodować trudności u osób z niepełnosprawnością ruchową, osób słabowidzących, osób niewidomych i osób z pewnymi ograniczeniami poznawczymi.
+    </p>
+    <p>
+      Niektóre rodzaje zmian kontekstu nie zakłócają pracy niektórych użytkowników lub nie przynoszą dla nich aktywnych korzyści. Na przykład użytkownicy korzystający z jednego przełącznika polegają na zmianach kontekstu animowanych przez system, a preferencje użytkowników słabowidzących mogą się różnić w zależności od tego, jaką część treści mogą zobaczyć na raz i jaką część struktury sesji mogą zachować w pamięci roboczej. Niektóre typy treści, takie jak pokazy slajdów, wymagają możliwości zmiany kontekstu, aby zapewnić użytkownikowi zamierzone wrażenia. Treść, która automatycznie inicjuje zmiany kontekstu tylko wtedy, gdy pozwalają na to preferencje użytkownika, może spełniać to kryterium sukcesu.
+    </p>
+
+    <p class="note">
+      Możliwe jest jednoczesne wystąpienie więcej niż jednej zmiany kontekstu. Przykładowo kliknięcie łącza automatycznie otwierającego nowe okno jest przykładem dwóch odrębnych zmian kontekstu, związanych ze zmianą treści i zmianą widocznego obszaru (okna). Zmiana treści w tym przypadku jest inicjowana na żądanie użytkownika po kliknięciu łącza, ale jeśli użytkownik nie jest świadomy, że łącze otworzy się w nowym oknie, wówczas tej zmiany kontekstu nie można uznać za zainicjowaną przez użytkownika.
+    </p>
+
+  </section>
+  <section id="benefits">
+    <h2>Korzyści</h2>
+    <ul>
+      <li>
+        <p>
+          Osoby, które nie są w stanie wykryć zmian kontekstu lub mogą nie zdawać sobie sprawy, że kontekst się zmienił, są mniej narażone na dezorientację podczas nawigacji w witrynie. Na przykład:
+        </p>
+        <ul>
+          <li>
+            osoby niewidome lub słabowidzące mogą mieć trudności z rozpoznaniem, kiedy nastąpiła zmiana kontekstu wizualnego, na przykład wyświetlenie nowego okna. W takim przypadku wcześniejsze ostrzeżenie użytkowników o zmianach kontekstu minimalizuje zamieszanie, gdy użytkownik odkryje, że przycisk Wstecz nie działa już zgodnie z oczekiwaniami.
+          </li>
+        </ul>
+      </li>
+      <li>
+        Niektóre osoby słabowidzące, z trudnościami w czytaniu i intelektualnymi, które mają trudności z interpretacją wskazówek wizualnych, mogą odnieść korzyść z dodatkowych wskazówek w celu wykrycia zmian kontekstu.
+      </li>
+      <li>
+        Osoby z pewnymi <strong>ograniczeniami poznawczymi</strong> nie będą zdezorientowane, jeśli automatyczne przekierowania zostaną wykonane przez serwer WWW, a nie przez przeglądarkę.
+      </li>
+    </ul>
+  </section>
+  <section id="examples">
+    <h2>Przykłady</h2>
+    <dl>
+      <dt>przycisk „Aktualizuj teraz”.</dt>
+      <dd> Zamiast automatycznego aktualizowania treści, autor udostępnia przycisk „Aktualizuj teraz”, który żąda odświeżenia treści.</dd>
+      <dt>Automatyczne przekierowanie</dt>
+      <dd>Użytkownik zostaje automatycznie przekierowany ze starej strony na nową w taki sposób, że nawet nie zorientuje się, że nastąpiło przekierowanie.</dd>
+    </dl>
+  </section>
+  <section id="resources">
+    <h2>Powiązane zasoby</h2>
+    <ul>
+      <li>
+        <a href="https://www.w3.org/QA/Tips/reback" lang="en" hreflang="en">Use standard redirects: don't break the back button!</a> (Wskazówka W3C) (Użyj standardowych przekierowań: nie psuj przycisku Wstecz!)
+      </li>
+      <li>
+        <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3" lang="en" hreflang="en">HTTP/1.1 Status Code Definitions: Redirection 3xx</a> (Definicje kodów stanu HTTP/1.1: Przekierowanie 3xx)
+      </li>
+    </ul>
+  </section>
+  <section id="techniques">
+    <h2>Techniki</h2>
+    <section id="sufficient">
+      <h3>Wystarczające techniki</h3>
+      <section class="situation" id="change-on-request-situation-0">
+        <h4>Sytuacja A:  Jeśli strona internetowa pozwala na automatyczne aktualizacje:</h4>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G76" class="general">Zapewnienie mechanizmu żądania aktualizacji treści zamiast automatycznej aktualizacji</a>
+          </li>
+        </ul>
       </section>
-   <section id="intent">
-      <h2>Intencja</h2>
-      <p>Intencją tego kryterium sukcesu jest zachęcenie do projektowania treści internetowych dających użytkownikom pełną kontrolę nad zmianami kontekstu. To kryterium sukcesu ma na celu wyeliminowanie potencjalnego zamieszania, które może być spowodowane nieoczekiwanymi zmianami kontekstu, takimi jak automatyczne uruchamianie nowych okien, automatyczne przesyłanie formularzy po wybraniu pozycji z listy itp. Takie nieoczekiwane zmiany kontekstu mogą powodować trudności u osób z niepełnosprawnością ruchową, osób słabowidzących, osób niewidomych i osób z pewnymi ograniczeniami poznawczymi.
-      </p>
-      <p>Niektóre rodzaje zmian kontekstu nie zakłócają pracy niektórych użytkowników lub nie przynoszą dla nich aktywnych korzyści. Na przykład użytkownicy korzystający z jednego przełącznika polegają na zmianach kontekstu animowanych przez system, a preferencje użytkowników słabowidzących mogą się różnić w zależności od tego, jaką część treści mogą zobaczyć na raz i jaką część struktury sesji mogą zachować w pamięci roboczej. Niektóre typy treści, takie jak pokazy slajdów, wymagają możliwości zmiany kontekstu, aby zapewnić użytkownikowi zamierzone wrażenia. Treść, która automatycznie inicjuje zmiany kontekstu tylko wtedy, gdy pozwalają na to preferencje użytkownika, może spełniać to kryterium sukcesu.
-      </p>
-
-         <p class="note">Możliwe jest jednoczesne wystąpienie więcej niż jednej zmiany kontekstu. Przykładowo kliknięcie łącza automatycznie otwierającego nowe okno jest przykładem dwóch odrębnych zmian kontekstu, związanych ze zmianą treści i zmianą widocznego obszaru (okna). Zmiana treści w tym przypadku jest inicjowana na żądanie użytkownika po kliknięciu łącza, ale jeśli użytkownik nie jest świadomy, że łącze otworzy się w nowym oknie, wówczas tej zmiany kontekstu nie można uznać za zainicjowaną przez użytkownika.
-         </p>
-
-   </section>
-   <section id="benefits">
-      <h2>Korzyści</h2>
-      <ul>
-         <li>
-            <p>Osoby, które nie są w stanie wykryć zmian kontekstu lub mogą nie zdawać sobie sprawy, że kontekst się zmienił, są mniej narażone na dezorientację podczas nawigacji w witrynie. Na przykład:
+      <section class="situation" id="change-on-request-situation-1">
+        <h4>Sytuacja B: Jeśli możliwe jest automatyczne przekierowanie:</h4>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG21/Techniques/server-side-script/SVR1" class="server">Implementowanie automatycznych przekierowań po stronie serwera zamiast po stronie klienta</a>
+          </li>
+          <li>
+            <p>
+              <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G110" class="general">Korzystanie z natychmiastowego przekierowania po stronie klienta</a> przy użyciu jednej z następujących technik:
             </p>
             <ul>
-               <li>osoby niewidome lub słabowidzące mogą mieć trudności z rozpoznaniem, kiedy nastąpiła zmiana kontekstu wizualnego, na przykład wyświetlenie nowego okna. W takim przypadku wcześniejsze ostrzeżenie użytkowników o zmianach kontekstu minimalizuje zamieszanie, gdy użytkownik odkryje, że przycisk Wstecz nie działa już zgodnie z oczekiwaniami. 
-               </li>
+              <li>
+                <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H76" class="html">Korzystanie ze znacznika meta refresh w celu utworzenia natychmiastowego przekierowania po stronie klienta</a>
+              </li>
             </ul>
-         </li>
-         <li>Niektóre osoby słabowidzące, z trudnościami w czytaniu i intelektualnymi, które mają trudności z interpretacją wskazówek wizualnych, mogą odnieść korzyść z dodatkowych wskazówek w celu wykrycia zmian kontekstu.
-         </li>
-         <li>Osoby z pewnymi <strong>ograniczeniami poznawczymi</strong> nie będą zdezorientowane, jeśli automatyczne przekierowania zostaną wykonane przez serwer WWW, a nie przez przeglądarkę.
-         </li>
-      </ul>
-   </section>
-   <section id="examples">
-      <h2>Przykłady</h2>
-      <dl>
-         <dt>przycisk „Aktualizuj teraz”.</dt>
-         <dd> Zamiast automatycznego aktualizowania treści, autor udostępnia przycisk „Aktualizuj teraz”, który żąda odświeżenia treści.</dd>
-         <dt>Automatyczne przekierowanie</dt>
-         <dd>Użytkownik zostaje automatycznie przekierowany ze starej strony na nową w taki sposób, że nawet nie zorientuje się, że nastąpiło przekierowanie.</dd>
-      </dl>
-   </section>
-   <section id="resources">
-      <h2>Powiązane zasoby</h2>
+          </li>
+        </ul>
+      </section>
+      <section class="situation" id="change-on-request-situation-2">
+        <h4>Sytuacja C: Jeśli strona internetowa korzysta z okien wyskakujących:</h4>
+        <ul>
+          <li>
+            <p>Uwzględnianie wyskakujących okienek przy użyciu jednej z następujących technik:    </p>
+            <ul>
+              <li>
+                <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H83" class="html">Użycie atrybutu target do otwarcia nowego okna </a>
+              </li>
+              <li>
+                <a href="https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR24" class="script">Użycie skryptu do otwarcia nowego okna</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="situation" id="change-on-request-situation-3">
+        <h4>Sytuacja D: Jeśli używasz zdarzenia onchange na wybranym elemencie:</h4>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR19" class="script">Użycie zdarzenia onchange na wybranym elemencie bez powodowania zmiany kontekstu</a>
+          </li>
+        </ul>
+      </section>
+    </section>
+    <section id="advisory">
+      <h3>Techniki pomocnicze</h3>
       <ul>
-         <li> 
-            <a href="https://www.w3.org/QA/Tips/reback" lang="en" hreflang="en">Use standard redirects: don't break the back button!</a> (Wskazówka W3C) (Użyj standardowych przekierowań: nie psuj przycisku Wstecz!)
-         </li>
-         <li> 
-            <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3" lang="en" hreflang="en">HTTP/1.1 Status Code Definitions: Redirection 3xx</a> (Definicje kodów stanu HTTP/1.1: Przekierowanie 3xx)
-         </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G200" class="general">Otwieranie nowych okien i kart tylko wtedy, gdy jest to konieczne</a>
+        </li>
       </ul>
-   </section>
-   <section id="techniques">
-      <h2>Techniki</h2>
-      <section id="sufficient">
-         <h3>Wystarczające techniki zmiany na żądanie</h3>
-         <section class="situation" id="change-on-request-situation-0">
-            <h4>Sytuacja A:  Jeśli strona internetowa pozwala na automatyczne aktualizacje:</h4>
-            <ul>
-               <li>
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G76" class="general">Zapewnienie mechanizmu żądania aktualizacji treści zamiast automatycznej aktualizacji</a>
-               </li>
-            </ul>
-         </section>
-         <section class="situation" id="change-on-request-situation-1">
-            <h4>Sytuacja B: Jeśli możliwe jest automatyczne przekierowanie:</h4>
-            <ul>
-               <li>
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/server-side-script/SVR1" class="server">Implementowanie automatycznych przekierowań po stronie serwera zamiast po stronie klienta</a>
-               </li>
-               <li>
-                  <p> 
-                     <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G110" class="general">Korzystanie z natychmiastowego przekierowania po stronie klienta</a> przy użyciu jednej z następujących technik:    
-                  </p>
-                  <ul>
-                     <li>
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H76" class="html">Korzystanie ze znacznika meta refresh w celu utworzenia natychmiastowego przekierowania po stronie klienta</a>
-                     </li>
-                  </ul>
-               </li>
-            </ul>
-         </section>
-         <section class="situation" id="change-on-request-situation-2">
-            <h4>Sytuacja C: Jeśli strona internetowa korzysta z okien wyskakujących:</h4>
-            <ul>
-               <li>
-                  <p>Uwzględnianie wyskakujących okienek przy użyciu jednej z następujących technik:    </p>
-                  <ul>
-                     <li>
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H83" class="html">Użycie atrybutu target do otwarcia nowego okna </a>
-                     </li>
-                     <li>
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR24" class="script">Użycie skryptu do otwarcia nowego okna</a>
-                     </li>
-                  </ul>
-               </li>
-            </ul>
-         </section>
-         <section class="situation" id="change-on-request-situation-3">
-            <h4>Sytuacja D: Jeśli używasz zdarzenia onchange na wybranym elemencie:</h4>
-            <ul>
-               <li>
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR19" class="script">Użycie zdarzenia onchange na wybranym elemencie bez powodowania zmiany kontekstu</a>
-               </li>
-            </ul>
-         </section>
-      </section>
-      <section id="advisory">
-         <h3>Techniki pomocnicze</h3>
-         <ul>
-            <li>
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G200" class="general">Otwieranie nowych okien i kart tylko wtedy, gdy jest to konieczne</a>
-            </li>
-         </ul>
-      </section>
-      <section id="failure">
-         <h3>Błędy</h3>
-         <ul>
-            <li>
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F60" class="failure">Niespełnienie kryterium sukcesu 3.2.5 z powodu uruchomienia nowego okna, gdy użytkownik wprowadza tekst do pola formularza</a>
-            </li>
-            <li>
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F61" class="failure">Niespełnienie kryterium sukcesu 3.2.5 z powodu całkowitej zmiany głównej treści poprzez automatyczną aktualizację, której użytkownik nie może wyłączyć z treści</a>
-            </li>
-            <li>
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F9" class="failure">Niespełnienie kryterium sukcesu 3.2.5 z powodu zmiany kontekstu, gdy użytkownik usuwa fokus z elementu formularza</a>
-            </li>
-            <li>
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F22" class="failure">Niespełnienie kryterium sukcesu 3.2.5 z powodu otwierania okien, które nie są wywoływane przez użytkownika</a>
-            </li>
-            <li>
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F52" class="failure">Niespełnienie kryterium sukcesu 3.2.1 i 3.2.5 z powodu otwarcia nowego okna zaraz po załadowaniu nowej strony</a>
-            </li>
-            <li>
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F40" class="failure">Niespełnienie kryterium sukcesu z powodu zastosowania meta redirect w celu przeładowania strony</a>
-            </li>
-            <li>
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F41" class="failure">Niespełnienie kryterium sukcesu z powodu zastosowania meta refresh z ograniczeniem czasowym </a>
-            </li>
-         </ul>
-      </section>
-   </section>
+    </section>
+    <section id="failure">
+      <h3>Błędy</h3>
+      <ul>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F60" class="failure">Niespełnienie kryterium sukcesu 3.2.5 z powodu uruchomienia nowego okna, gdy użytkownik wprowadza tekst do pola formularza</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F61" class="failure">Niespełnienie kryterium sukcesu 3.2.5 z powodu całkowitej zmiany głównej treści poprzez automatyczną aktualizację, której użytkownik nie może wyłączyć z treści</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F9" class="failure">Niespełnienie kryterium sukcesu 3.2.5 z powodu zmiany kontekstu, gdy użytkownik usuwa fokus z elementu formularza</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F22" class="failure">Niespełnienie kryterium sukcesu 3.2.5 z powodu otwierania okien, które nie są wywoływane przez użytkownika</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F52" class="failure">Niespełnienie kryterium sukcesu 3.2.1 i 3.2.5 z powodu otwarcia nowego okna zaraz po załadowaniu nowej strony</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F40" class="failure">Niespełnienie kryterium sukcesu z powodu zastosowania meta redirect w celu przeładowania strony</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F41" class="failure">Niespełnienie kryterium sukcesu z powodu zastosowania meta refresh z ograniczeniem czasowym </a>
+        </li>
+      </ul>
+    </section>
+  </section>
 </body>
 </html>
