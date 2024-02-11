@@ -2,245 +2,133 @@
 <html lang="pl" xml:lang="pl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
    <meta charset="UTF-8"></meta>
-   <title>Understanding Images of Text (No Exception)</title>
+   <title>Objaśnienie kryterium sukcesu Obrazy tekstu (bez wyjątku)</title>
    <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove"></link>
 </head>
 <body>
-   <h1>Understanding Images of Text (No Exception)</h1>
-   
-   
+   <h1>Objaśnienie kryterium sukcesu Obrazy tekstu (bez wyjątku)</h1>
    <section id="brief">
-      <h2>In brief</h2>
-      <dl>
-         <dt>Goal</dt><dd>Users can always adjust how text is presented.</dd>
-         <dt>What to do</dt><dd>Do not use pictures of text unless there is no other way to present information.</dd>
-         <dt>Why it's important</dt><dd>People cannot alter how text looks in images.</dd> 
-      </dl>
-
+               <h2>W skrócie</h2>
+               <dl>
+                  <dt>Cel</dt>
+                  <dd>Użytkownicy zawsze mogą dostosować sposób prezentacji tekstu</dd>
+                  <dt>Co zrobić</dt>
+                  <dd>Nie używaj obrazów tekstu, chyba że nie ma innego sposobu przedstawienia informacji</dd>
+                  <dt>Dlaczego to jest ważne</dt>
+                  <dd>Użytkownicy nie mogą zmieniać wyglądu tekstu na obrazach</dd>				  
+               </dl>	  
    </section>
-   
    <section id="intent">
-      <h2>Intent of Images of Text (No Exception)</h2>
-      
-      
-      <p>The intent of this Success Criterion is to enable people who require a particular
-         visual presentation of text to be able to adjust the text presentation as required.
-         This includes people who require the text in a particular font size, foreground and
-         background color, font family, line spacing or alignment.
-      </p>
-      
-      <p>This means implementing the text in a manner that allows its presentation to be changed
-         or providing a mechanism by which users can select an alternate presentation. Using
-         images of text is an example of an implementation that does not allow users to alter
-         the presentation of the text within it.
-      </p>
-      
-      <p>In some situations, a particular visual presentation of the text is essential to the
-         information being conveyed. This means that information would be lost without that
-         particular visual presentation. In this case implementing the text in a manner that
-         allows its presentation to be changed is not required. This includes text that demonstrates
-         a particular visual aspect of the text, such as a particular font family, or text
-         that conveys an identity, such as text within a company logo.
-      </p>
-      
-      <p>Text that is decorative does not require implementing the text in a manner that allows
-         its presentation to be changed.
-      </p>
-      
-      <p>The definition of image of text contains the note: Note: This does not include text that is part of a picture that contains significant
-         other visual content. Examples of such pictures include graphs, screenshots, and diagrams which visually
-         convey important information through more than just text.
-      </p>
-      
-      
+               <h2>Intencja</h2>
+               <p>
+			   Intencją tego kryterium sukcesu jest umożliwienie osobom, które wymagają określonej wizualnej prezentacji tekstu, dostosowania prezentacji tekstu zgodnie z ich potrzebami. Dotyczy to osób, które wymagają tekstu w określonym rozmiarze czcionki, kolorze pierwszego planu i tła, rodzinie czcionek, odstępach między wierszami lub wyrównaniu.
+               </p>
+               <p>
+			   Oznacza to wdrażanie tekstu w sposób umożliwiający zmianę jego prezentacji lub zapewnienie mechanizmu, za pomocą którego użytkownicy mogą wybrać alternatywną prezentację. Używanie obrazów tekstu jest przykładem wdrażania, które nie pozwala użytkownikom na zmianę prezentacji zawartego w nim tekstu.
+               </p>
+               <p>
+			   W niektórych sytuacjach określona wizualna prezentacja tekstu jest niezbędna do przekazania informacji. Oznacza to, że bez tej konkretnej prezentacji wizualnej informacje zostałyby utracone. W takim przypadku nie jest wymagane implementowanie tekstu w sposób umożliwiający zmianę jego prezentacji. Dotyczy to tekstu, który demonstruje określony aspekt wizualny tekstu, taki jak określona rodzina czcionek, lub tekst, który przekazuje tożsamość, taki jak tekst w logo firmy.
+               </p>
+               <p>
+			   Tekst, który jest dekoracją, nie wymaga implementacji tekstu w sposób umożliwiający zmianę jego prezentacji.
+               </p>
+               <p>
+			   Definicja obrazu tekstu zawiera uwagę: Uwaga: Nie dotyczy to tekstu, który jest częścią obrazu zawierającego znaczące inne treści wizualne. Przykłady takich obrazów obejmują wykresy, zrzuty ekranu i diagramy, które wizualnie przekazują ważne informacje za pomocą czegoś więcej niż tylko tekstu.
+               </p>
    </section>
    <section id="benefits">
-      <h2>Benefits of Images of Text (No Exception)</h2>
-      
-      
-      <ul>
-         
-         <li>People with low vision (who may have trouble reading the text with the authored font
-            family, size and/or color).
-         </li>
-         
-         <li>People with visual tracking problems (who may have trouble reading the text with the
-            authored line spacing and/or alignment).
-         </li>
-         
-         <li>People with cognitive disabilities that affect reading.</li>
-         
-      </ul>
-      
+               <h2>Korzyści</h2>
+               <ul>
+                  <li>Osoby słabowidzące (które mogą mieć problemy z odczytaniem tekstu pisanego konkretnym krojem rozmiarem i/lub kolorem czcionek).
+                  </li>
+                  <li>Osoby z problemami ze śledzeniem wzrokowym (które mogą mieć problemy z odczytaniem tekstu z zachowaniem autorskich odstępów między wierszami i/lub wyrównaniem).
+                  </li>
+                  <li>Osoby z problemami poznawczymi, które wpływają na czytanie.</li>
+               </ul>
    </section>
-   
    <section id="examples">
-      <h2>Examples of Images of Text (No Exception)</h2>
-      
-      <dl>
-         <dt>A quote</dt>
-         <dd>A Web page contains a quote. The quote itself is presented as italicized text, indented
-               from the left margin. The name of the person to whom the quote is attributed is below
-               the quote with 1.5x the line space and further indented from the left margin. CSS
-               is used to position the text; set the spacing between lines; as well as display the
-               text's font family, size, color and decoration.</dd>
-         <dt>Navigation items</dt>
-         <dd>A Web page contains a menu of navigation links that have both an icon and text to
-               describe their target. CSS is used to display the text's font family, size and foreground
-               and background colors; as well as the spacing between the navigation links.</dd>
-         <dt>A logo containing text</dt>
-         <dd>A Web site contains the organization's logo in the top left corner of each Web page.
-               The logo contains logotype (text as part, or all, of the logo). The visual presentation
-               of the text is essential to the identity of the logo and is included as a gif image
-               which does not allow the text characteristics to be changed. The image has a text
-               alternative.</dd>
-         <dt>Representation of a font family</dt>
-         <dd>A Web page contains information about a particular font family. Substituting the font
-               family with another font would defeat the purpose of the representation. The representation
-               is included as a jpeg image which does not allow the text characteristics to be changed.
-               The image has a text alternative.</dd>
-         <dt>A representation of a letter</dt>
-         <dd>A Web page contains a representation of an original letter. The depiction of the letter
-               in its original format is essential to information being conveyed about the time period
-               in which it was written. The letter is included as a gif image which does not allow
-               the text characteristics to be changed. The image has a text alternative.</dd>
-         <dt>Symbolic text characters</dt>
-         <dd>A form allows users to enter blocks of text. The form provides a number of buttons,
-               including functions to style the text and check spelling. Some of the buttons use
-               text characters that do not form a sequence that expresses something in human language.
-               For example "B" to increase font weight, "I" to italicize the text and "ABC" to check
-               the spelling. The symbolic text characters are included as gif images which do not
-               allow the text characteristics to be changed. The buttons have text alternatives.</dd>
-      </dl>
-      
+               <h2>Przykłady</h2>
+               <dl>
+                  <dt>Cytat</dt>
+                  <dd>Strona internetowa zawiera cytat. Sam cytat jest przedstawiony jako tekst pisany kursywą, wcięty od lewego marginesu. Imię osoby, której przypisany jest cytat, znajduje się poniżej cytatu z 1,5-krotnym odstępem wiersza i jest głębiej wcięte od lewego marginesu. CSS służy do pozycjonowania tekstu; ustawiania odstępów między wierszami; a także wyświetlania rodziny czcionek, rozmiaru, koloru i dekoracji tekstu.
+                  </dd>
+                  <dt>Elementy nawigacyjne</dt>
+                  <dd>Strona internetowa zawiera menu łączy nawigacyjnych, które zawierają zarówno ikonę, jak i tekst opisujący ich cel. CSS służy do wyświetlania rodziny czcionek tekstu, rozmiaru i kolorów pierwszego planu i tła, a także odstępów między łączami nawigacyjnymi.
+                  </dd>
+                  <dt>Logo zawierające tekst</dt>
+                  <dd>Witryna internetowa zawiera logo organizacji w lewym górnym rogu każdej strony internetowej. Logo zawiera logotyp (tekst jako część lub całość logo). Wizualna prezentacja tekstu ma zasadnicze znaczenie dla tożsamości logo i jest dołączona jako obraz gif, który nie pozwala na zmianę cech tekstu. Obraz ma alternatywę tekstową.
+                  </dd>
+                  <dt>Reprezentacja rodziny czcionek</dt>
+                  <dd>Strona internetowa zawiera informacje o konkretnej rodzinie czcionek. Zastąpienie rodziny czcionek inną czcionką zniweczyłoby cel prezentacji. Prezentacja jest dołączona jako obraz jpeg, który nie pozwala na zmianę charakterystyki tekstu. Obraz ma alternatywę tekstową.
+                  </dd>
+                  <dt>Przedstawienie listu</dt>
+                  <dd>Strona internetowa zawiera przedstawienie oryginalnego listu. Przedstawienie listu w oryginalnym formacie jest niezbędne do przekazywania informacji o okresie, w którym został napisany. List jest dołączony jako obraz gif, który nie pozwala na zmianę cech tekstu. Obraz ma alternatywę tekstową.
+                  </dd>
+                  <dt>Symboliczne znaki tekstowe</dt>
+                  <dd>Formularz umożliwia użytkownikom wprowadzanie bloków tekstu. Formularz zawiera wiele przycisków, w tym funkcje do stylizacji tekstu i sprawdzania pisowni. Niektóre przyciski używają znaków tekstowych, które nie tworzą sekwencji wyrażającej coś w języku ludzkim. Na przykład „B”, aby zwiększyć wagę czcionki, „I”, aby pisać tekst kursywą i „ABC”, aby sprawdzić pisownię. Symboliczne znaki tekstowe są dołączane jako obrazy gif, które nie pozwalają na zmianę cech tekstu. Przyciski mają alternatywy tekstowe.
+                  </dd>
+               </dl>
    </section>
-   
    <section id="resources">
-      <h2>Resources for Images of Text (No Exception)</h2>
-      
-      
+      <h2>Treści powiązane</h2>
       <ul>
-         
          <li>
-            								       
-            <a href="http://alistapart.com/article/cssatten">CSS Web fonts</a>
-            							     
+            <a href="http://alistapart.com/article/cssatten" lang="en" hreflang="en">CSS Web fonts</a> (Czcionki internetowe CSS)
          </li>
-         
          <li>
-            								       
-            <a href="http://clagnut.com/blog/2042/">Weblog comments: WebKit now supports CSS @font-face rules</a>
-            							     
+            <a href="http://clagnut.com/blog/2042/" lang="en" hreflang="en">Weblog comments: WebKit now supports CSS @font-face rules </a> (Komentarze na blogu: WebKit obsługuje teraz reguły CSS @font-face)
          </li>
-         
          <li>
-            								       
-            <a href="http://www.workingwith.me.uk/articles/css/cross-browser-drop-shadows">Creating Cross Browser Compatible CSS Text Shadows</a>
-            							     
+            <a href="http://www.workingwith.me.uk/articles/css/cross-browser-drop-shadows" lang="en" hreflang="en">Creating Cross Browser Compatible CSS Text Shadows</a> (Tworzenie cieni tekstowych CSS zgodnych z różnymi przeglądarkami)
          </li>
-         
          <li>
-            								       
-            <a href="http://www.yourhtmlsource.com/stylesheets/csstext.html">CSS and text</a>
-            							     
+            <a href="http://www.yourhtmlsource.com/stylesheets/csstext.html" lang="en" hreflang="en">CSS and text</a> (CSS i tekst)
          </li>
-         
       </ul>
-      
    </section>
-   
    <section id="techniques">
-      <h2>Techniques for Images of Text (No Exception)</h2>
-      
-      
+      <h2>Techniki</h2>
       <section id="sufficient">
-         <h3>Sufficient Techniques for Images of Text (No Exception)</h3>
-         
-         
-         <ul>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C22" class="css">Using CSS to control visual presentation of text</a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C30" class="css">Using CSS to replace text with images of text and providing user interface controls
-                  to switch
-               </a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G140" class="general">Separating information and structure from presentation so that Web pages can be presented
-                  different ways without losing information
-               </a>
-               								       
-            </li>
-            
-            <li>
-               
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" class="pdf"></a>
-               
-            </li>
-            
-         </ul>
-         
+                  <h3>Wystarczające techniki</h3>
+                  <ul>
+                     <li>
+                        <a class="css" href="https://www.w3.org/WAI/WCAG22/Techniques/css/C22">C22: Użycie CSS do kontrolowania wizualnej prezentacji tekstu</a>
+                     </li>
+                     <li>
+                        <a class="css" href="https://www.w3.org/WAI/WCAG22/Techniques/css/C30">C30: Użycie CSS do zastępowania tekstu obrazami tekstu i zapewniania przełączników interfejsu użytkownika</a>
+                     </li>
+                     <li>
+                        <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G140">G140: Oddzielanie informacji i struktury od prezentacji, aby umożliwić prezentację w różny sposób</a>
+                     </li>
+                     <li>
+                        <a class="pdf" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF7">PDF7: Wykonywanie rozpoznawania OCR zeskanowanego dokumentu PDF w celu uzyskania rzeczywistego tekstu</a>
+                     </li>
+                  </ul>
       </section>
-      
       <section id="advisory">
-         <h3>Additional Techniques (Advisory) for Images of Text (No Exception)</h3>
-         
-         
-            <h4>CSS Techniques</h4>
-            
-            <ul>
-               
-               <li>
-                  										           
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C12" class="css">Using percent for font sizes</a>
-                  									         
-               </li>
-               
-               <li>
-                  										           
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C13" class="css">Using named font sizes</a>
-                  									         
-               </li>
-               
-               <li>
-                  										           
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C14" class="css">Using em units for font sizes </a>
-                  									         
-               </li>
-               
-               <li>
-                  										           
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C8" class="css">Using CSS letter-spacing to control spacing within a word</a>
-                  									         
-               </li>
-               
-               <li>
-                  										           
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C6" class="css">Positioning content based on structural markup</a>
-                  									         
-               </li>
-               
-            </ul>
-            
-         
+         <h3>Techniki pomocnicze</h3>
+            <h4>Techniki CSS</h4>
+                  <ul>
+                     <li>
+                        <a class="css" href="https://www.w3.org/WAI/WCAG22/Techniques/css/C12">C12: Określanie rozmiarów czcionek za pomocą procentów</a>
+                     </li>
+                     <li>
+                        <a class="css" href="https://www.w3.org/WAI/WCAG22/Techniques/css/C13">C13:  Określanie rozmiarów czcionek za pomocą nazw rozmiarów</a>
+                     </li>
+                     <li>
+                        <a class="css" href="https://www.w3.org/WAI/WCAG22/Techniques/css/C14">C14: Określanie rozmiarów czcionek za pomocą jednostek em</a>
+                     </li>
+                     <li>
+                        <a class="css" href="https://www.w3.org/WAI/WCAG22/Techniques/css/C8">C8: Użycie właściwości letter-spacing CSS do kontrolowania odstępów w słowach</a>
+                     </li>
+                     <li>
+                        <a class="css" href="https://www.w3.org/WAI/WCAG22/Techniques/css/C6">C6: Pozycjonowanie treści za pomocą znaczników strukturalnych</a>
+                     </li>
+                  </ul>
       </section>
-      
       <section id="failure">
          <h3>Failures for Images of Text (No Exception)</h3>
-         
-         
       </section>
-      
    </section>
-   
 </body>
 </html>
