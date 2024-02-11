@@ -24,7 +24,7 @@
     <xsl:param name="inputString"/>
     <xsl:choose>
       <!-- Replace Polish special characters -->
-      <xsl:when test="contains($inputString, 'ść')">
+<!--      <xsl:when test="contains($inputString, 'ść')">
         <xsl:value-of select="substring-before($inputString, 'ść')"/>
         <xsl:text>sc</xsl:text>
         <xsl:call-template name="replaceUnsafeChars">
@@ -43,7 +43,7 @@
         <xsl:text>le</xsl:text>
         <xsl:call-template name="replaceUnsafeChars">
           <xsl:with-param name="inputString" select="substring-after($inputString, 'łę')"/>
-        </xsl:call-template>
+        </xsl:call-template> -->
       </xsl:when>		  
       <xsl:when test="contains($inputString, 'ą')">
         <xsl:value-of select="substring-before($inputString, 'ą')"/>

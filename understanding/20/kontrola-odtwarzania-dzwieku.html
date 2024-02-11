@@ -1,157 +1,94 @@
 <!DOCTYPE html>
 <html lang="pl" xml:lang="pl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-   <meta charset="UTF-8"></meta>
-   <title>Understanding Audio Control</title>
-   <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove"></link>
+  <meta charset="UTF-8" />
+  <title>Objaśnienie kryterium sukcesu Kontrola odtwarzania dźwięku</title>
+  <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove" />
 </head>
 <body>
-   <h1>Understanding Audio Control</h1>
-   
-   <section id="brief">
-		<h2>In brief</h2>
-		<dl>
-         <dt>Goal</dt><dd>A page that plays music or sounds doesn't disrupt people.</dd>
-         <dt>What to do</dt><dd>If you play audio content automatically, let people turn it down or off.</dd>
-         <dt>Why it's important</dt><dd>Sound distracts some people, and also interferes with screen readers.</dd> 
-      </dl>
+  <h1>Objaśnienie kryterium sukcesu Kontrola odtwarzania dźwięku</h1>
+  <section id="brief">
+    <h2>W skrócie</h2>
+    <dl>
+      <dt>Cel</dt>
+      <dd>Muzyka lub dźwięki odtwarzane na stronie nie przeszkadzają ludziom.</dd>
+      <dt>Co zrobić</dt>
+      <dd>Jeśli automatycznie odtwarzasz treści audio, pozwól użytkownikom je wyłączyć.</dd>
+      <dt>Dlaczego to jest ważne</dt>
+      <dd>Dźwięk rozprasza niektóre osoby, a także zakłóca działanie czytników ekranu.</dd>
+    </dl>
 
-   </section>
-   
-   <section id="intent">
-      <h2>Intent of Audio Control</h2>
-      
-      
-      <p>Individuals who use screen reading software can find it hard to hear the speech output
-         if there is other audio playing at the same time. This difficulty is exacerbated when
-         the screen reader's speech output is software based (as most are today) and is controlled
-         via the same volume control as the sound. Therefore, it is important that the user
-         be able to turn off the background sound. 
+  </section>
+  <section id="intent">
+    <h2>Intencja</h2>
+    <p>
+      Osoby korzystające z oprogramowania do odczytu ekranu mogą mieć trudności z usłyszeniem mowy, jeśli w tym samym czasie odtwarzany jest inny dźwięk. Trudność ta nasila się, gdy wyjście mowy czytnika ekranu jest oparte na oprogramowaniu (jak większość obecnie) i jest kontrolowane za pomocą tego samego regulatora głośności, co dźwięk. Dlatego ważne jest, aby użytkownik mógł wyłączyć dźwięk w tle.
+    </p>
+    <p>
+      Kontrola nad głośnością obejmuje możliwość zmniejszenia jej do zera. Wyciszenie głośności systemu nie oznacza „wstrzymania lub zatrzymania” automatycznego odtwarzania dźwięku. Zarówno „pauza lub stop”, jak i kontrola głośności dźwięku muszą być niezależne od ogólnej głośności systemu.
+    </p>
+    <div class="note">
+      <p>
+        Automatyczne odtwarzanie dźwięku po wylądowaniu na stronie może wpłynąć na zdolność użytkownika czytnika ekranu do znalezienia mechanizmu zatrzymania go, ponieważ nawiguje on poprzez słuchanie, a automatycznie uruchamiane dźwięki mogą zakłócać tę nawigację. Dlatego odradzamy praktykę automatycznego uruchamiania dźwięków (zwłaszcza jeśli trwają one dłużej niż 3 sekundy) i zachęcamy, aby dźwięk był <em>uruchamiany</em> przez działanie zainicjowane przez użytkownika po wejściu na stronę, zamiast wymagać, aby dźwięk był <em>zatrzymywany</em> po wylądowaniu na stronie przez działanie użytkownika.
       </p>
-      <p>Having control of the volume includes
-         being able to reduce its volume to zero. Muting the system volume is not "pausing or stopping" the autoplay audio. Both the "pause or stop" and control of audio volume need to be independent of the overall system volume. 
-      </p>
-      
-      <div class="note">
-         
-         <p>Playing audio automatically when landing on a page may affect a screen reader user's
-            ability to find the mechanism to stop it because they navigate by listening and automatically
-            started sounds might interfere with that navigation. Therefore, we discourage the
-            practice of automatically starting sounds (especially if they last more than 3 seconds),
-            and encourage that the sound be 
-            <em>started</em> by an action initiated by the user after they reach the page, rather than requiring
-            that the sound be 
-            <em>stopped</em> by an action of the user after they land on the page.
-         </p>
-         
-      </div>
-      
-      <p>See also 
-         <a href="low-or-no-background-audio">1.4.7: Low or No Background Audio</a>.
-      </p>
-      
-      
-   </section>
-   <section id="benefits">
-      <h2>Benefits of Audio Control</h2>
-      
-      
+    </div>
+    <p>
+      Zobacz także
+      <a href="niska-głosnosc-lub-bez-dzwiekow-w-tle">1.4.7: Niska głośność lub bez dźwięków w tle</a>.
+    </p>
+  </section>
+  <section id="benefits">
+    <h2>Korzyści</h2>
+    <ul>
+      <li>
+        Osoby korzystające z technologii odczytu ekranu mogą słyszeć czytnik ekranu bez odtwarzania innych dźwięków. Jest to szczególnie ważne dla osób słabosłyszących i tych, których czytniki ekranu używają dźwięku systemowego (więc nie mogą ściszać dźwięku i zwiększać głośności czytnika ekranu).
+      </li>
+      <li>
+        To kryterium sukcesu jest również korzystne dla osób, które mają trudności ze skupieniem się podczas odtwarzania dźwięku na treściach wizualnych (w tym na tekście).
+      </li>
+    </ul>
+  </section>
+  <section id="examples">
+    <h2>Przykłady</h2>
+    <ul>
+      <li>
+        Odtwarzanie pliku audio rozpoczyna się automatycznie po otwarciu strony. Użytkownik może jednak zatrzymać dźwięk, wybierając łącze „wycisz” w górnej części strony.
+      </li>
+    </ul>
+  </section>
+  <section id="resources">
+    <h2>Resources for Audio Control</h2>
+  </section>
+  <section id="techniques">
+    <h2>Techniki</h2>
+    <section id="sufficient">
+      <h3>Techniki wystarczające</h3>
       <ul>
-         
-         <li>Individuals who use screen reading technologies can hear the screen reader without
-            other sounds playing. This is especially important for those who are hard of hearing
-            and for those whose screen readers use the system volume (so they cannot turn sound
-            down and screen reader up).
-         </li>
-         
-         <li>This Success Criterion also benefits people who have difficulty focusing on visual
-            content (including text) when audio is playing.
-         </li>
-         
+        <li>
+          <a class="general" href="https://www.w3.org/WAI/WCAG21/Techniques/general/G60">G60: Odtwarzanie dźwięku, który wyłącza się automatycznie w ciągu trzech sekund</a>
+        </li>
+        <li>
+          <a class="general" href="https://www.w3.org/WAI/WCAG21/Techniques/general/G170">G170: Zapewnienie na początku strony internetowej kontrolki, która wyłącza dźwięki odtwarzane automatycznie.</a>
+        </li>
+        <li>
+          <a class="general" href="https://www.w3.org/WAI/WCAG21/Techniques/general/G171">G171: Odtwarzanie dźwięków tylko na żądanie użytkownika</a>
+        </li>
       </ul>
-      
-   </section>
-   
-   <section id="examples">
-      <h2>Examples of Audio Control</h2>
-      
+    </section>
+    <section id="advisory">
+      <h3>Additional Techniques (Advisory) for Audio Control</h3>
+    </section>
+    <section id="failure">
+      <h3>Błędy</h3>
       <ul>
-         <li>An audio file begins playing automatically when a page is opened. However, the audio
-            can be stopped by the user by selecting a "silent" link at the top of the page.
-         </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F23">F23: Niespełnienie kryterium sukcesu 1.4.2 z powodu odtwarzania dźwięku dłuższego niż 3 sekundy, bez mechanizmu wyłączania dźwięku.</a>
+        </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F93">F93: Niespełnienie kryterium sukcesu 1.4.2 z powodu braku możliwości wstrzymania lub zatrzymania elementu HTML5, który automatycznie odtwarza dźwięk.</a>
+        </li>
       </ul>
-      
-   </section>
-   
-   <section id="resources">
-      <h2>Resources for Audio Control</h2>
-      
-      
-   </section>
-   
-   <section id="techniques">
-      <h2>Techniques for Audio Control</h2>
-      
-      
-      <section id="sufficient">
-         <h3>Sufficient Techniques for Audio Control</h3>
-         
-         
-         <ul>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G60" class="general">Playing a sound that turns off automatically within three seconds</a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G170" class="general">Providing a control near the top of the Web page that turns off sounds that play automatically</a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G171" class="general">Playing sounds only on user request</a>
-               								       
-            </li>
-            
-         </ul>
-         
-      </section>
-      
-      <section id="advisory">
-         <h3>Additional Techniques (Advisory) for Audio Control</h3>
-         
-         
-      </section>
-      
-      <section id="failure">
-         <h3>Failures for Audio Control</h3>
-         
-         
-         <ul>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F23" class="failure">Failure due to playing a sound longer than 3 seconds where there is no mechanism to
-                  turn it off
-               </a>
-               								       
-            </li>
-            
-            <li>
-               				    
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F93" class="failure"></a>
-               
-            </li>
-            
-         </ul>
-         
-      </section>
-      
-   </section>
-   
+    </section>
+  </section>
 </body>
 </html>

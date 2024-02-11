@@ -1,442 +1,259 @@
 <!DOCTYPE html>
 <html lang="pl" xml:lang="pl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-   <meta charset="UTF-8"></meta>
-   <title>Understanding Contrast (Minimum)</title>
-   <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove"></link>
+  <meta charset="UTF-8" />
+  <title>Objaśnienie kryterium sukcesu Kontrast (minimalny)</title>
+  <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove" />
 </head>
 <body>
-   <h1>Understanding Contrast (Minimum)</h1>
-   
-   <section id="brief">
-		<h2>In brief</h2>
-		<dl>
-         <dt>Goal</dt><dd>Text can be seen by more people.</dd>
-         <dt>What to do</dt><dd>Provide sufficient contrast between text and its background.</dd>
-         <dt>Why it's important</dt><dd>Some people cannot read faint text. </dd> 
-      </dl>
+  <h1>Objaśnienie kryterium sukcesu Kontrast (minimalny)</h1>
+  <section id="brief">
+    <h2>W skrócie</h2>
+    <dl>
+      <dt>Cel</dt>
+      <dd>Tekst może zobaczyć więcej osób</dd>
+      <dt>Co zrobić</dt>
+      <dd>Zapewnij wystarczający kontrast między tekstem a jego tłem</dd>
+      <dt>Dlaczego to jest ważne</dt>
+      <dd>Niektóre osoby nie potrafią czytać niewyraźnego tekstu.</dd>
+    </dl>
+  </section>
 
-   </section>
-
-   <section id="intent">
-      <h2>Intent of Contrast (Minimum)</h2>
-      
-      <p>The intent of this Success Criterion is to provide enough contrast between text and its background, so that it can be read by people with moderately low vision or impaired contrast perception, without the use of contrast-enhancing assistive technology.
+  <section id="intent">
+    <h2>Intencja</h2>
+    <p>
+      Intencją tego kryterium sukcesu jest zapewnienie wystarczającego kontrastu między tekstem a jego tłem, tak, aby mógł on być czytany przez osoby o umiarkowanie słabym wzroku lub upośledzonej percepcji kontrastu, bez użycia technologii wspomagającej kontrast.
+    </p>
+    <p>
+      Wszyscy konsumenci treści wizualnych potrzebują odpowiedniego kontrastu między jasnością a tłem, aby uzyskać dobrą czytelność. Wiele różnych wad wzroku może znacząco wpływać na czułość kontrastu, wymagając większego kontrastu między jasnymi i ciemnymi obszarami, niezależnie od koloru (odcienia). W przypadku osób, które nie są w stanie rozróżnić pewnych odcieni kolorów (wada często określana jako <q>ślepota barw</q>), barwa i nasycenie mają minimalny lub żaden wpływ na czytelność ocenianą na podstawie wydajności czytania. Co więcej, niemożność rozróżnienia niektórych odcieni kolorów nie wpływa negatywnie na postrzeganie kontrastu światło-ciemność. Dlatego w zaleceniu kontrast jest liczony w taki sposób, że kolor (odcień) nie jest czynnikiem kluczowym.
+    </p>
+    <p>
+      Tekst, który ma charakter dekoracyjny i nie przekazuje żadnych informacji, nie podlega ocenie. Na przykład, jeśli do stworzenia tła użyto przypadkowych słów, a można by je zmienić lub zastąpić bez zmiany znaczenia, byłoby to dekoracyjne i nie musiałoby spełniać tego kryterium.
+    </p>
+    <p>
+      Tekst większy i mający szersze linie znaków jest łatwiejszy do odczytania przy niższym kontraście. Dlatego też wymagania dotyczące kontrastu w przypadku większego tekstu są mniejsze. Pozwala to autorom na korzystanie z szerszej gamy kolorów w przypadku dużego tekstu, co jest pomocne przy projektowaniu stron, zwłaszcza tytułów. Tekst o wielkości 18 punktów lub tekst pogrubiony o wielkości 14 punktów uznaje się za wystarczająco duży, aby wymagać niższego współczynnika kontrastu. (Zobacz Wytyczne amerykańskiej drukarni dla niewidomych dotyczące dużego druku i Wytyczne Biblioteki Kongresu dotyczące dużego druku w sekcji <a href=" #resources">Zasoby</a>). „18 punktów” i „pogrubienie” mogą mieć różne znaczenia w różnych czcionkach, ale z wyjątkiem bardzo cienkich lub nietypowych czcionek powinny wystarczyć. Ponieważ istnieje tak wiele różnych czcionek, stosuje się środki ogólne, a uwaga dotycząca cienkich lub nietypowych czcionek jest zawarta w definicji tekstu <a href=" #dfn-large-scale">dużego tekstu</a>.
+    </p>
+    <div class="note">
+      <p>
+        Oceniając to kryterium sukcesu, rozmiar czcionki w punktach należy uzyskać z programu użytkownika lub obliczyć na podstawie wskaźników czcionki w taki sam sposób, w jaki robią to programy użytkownika. Rozmiary punktów są oparte na rozmiarze <code>pt</code> CSS zdefiniowanym w <a href="https://www.w3.org/TR/css-values-3/#reference-pixel">Wartościach CSS3</a>. Stosunek rozmiarów w punktach do pikseli CSS wynosi <code>1 pkt = 1,333 piksela</code>, dlatego <code>14 pkt</code> i <code>18 pkt</code> odpowiadają w przybliżeniu <code>18,5</code> i <code>24 pikselom</code>.
       </p>
-      <p>For all consumers of visual content, adequate light-dark contrast is needed between the relative luminance of text and its background for good readability.
-         Many different visual impairments can substantially impact contrast sensitivity, requiring more light-dark contrast, regardless of color (hue).
-         For people who are not able to distinguish certain shades of color (often referred to as <q>color blindness</q>) hue and saturation have minimal or no effect on legibility as assessed by reading performance.
-         Further, the inability to distinguish certain shades of color does not negatively affect light-dark contrast perception.
-         Therefore, in the recommendation, contrast is calculated in such a way that color (hue) is not a key factor.
+      <p>
+        Ponieważ różne aplikacje do edycji obrazów mają domyślnie różną gęstość pikseli (np. <code>72 ppi</code> lub <code>96 ppi</code>), określanie rozmiaru czcionek w aplikacji do edycji obrazów może być zawodne, jeśli chodzi o prezentację tekstu w określonym rozmiarze. Tworząc obrazy zawierające tekst o dużej skali, autorzy powinni upewnić się, że tekst na powstałym obrazie ma w przybliżeniu odpowiednik 1,2 i 1,5 em lub 120% lub 150% domyślnego rozmiaru tekstu podstawowego. Na przykład w przypadku obrazu o rozdzielczości <code>72 ppi</code> autor musiałby użyć czcionek o rozmiarach około 19 i 24 punktów, aby skutecznie zaprezentować użytkownikowi obrazy zawierające duży tekst.
       </p>
-      
-      <p>Text that is decorative and conveys no information is excluded. For example, if random
-         words are used to create a background and the words could be rearranged or substituted
-         without changing meaning, then it would be decorative and would not need to meet this
-         criterion. 
+      <p>
+        Współczynniki kontrastu 3:1 i 4,5:1, o których mowa w tym kryterium sukcesu, należy traktować jako wartości progowe. Porównując obliczony współczynnik kontrastu ze współczynnikiem kryterium sukcesu, obliczonych wartości nie należy zaokrąglać (np. 4,499:1 nie osiągnęłoby progu 4,5:1).
       </p>
-      
-      <p>Text that is larger and has wider character strokes is easier to read at lower contrast.
-         The contrast requirement for larger text is therefore lower. This allows authors to
-         use a wider range of color choices for large text, which is helpful for design of
-         pages, particularly titles. 18 point text or 14 point bold text is judged to be large
-         enough to require a lower contrast ratio. (See The American Printing House for the
-         Blind Guidelines for Large Printing and The Library of Congress Guidelines for Large
-         Print under 
-         <a href="#resources">Resources</a>). "18 point" and "bold" can both have different meanings in
-         different fonts but, except for very thin or unusual fonts, they should be sufficient. Since there
-         are so many different fonts, the general measures are used and a note regarding thin or unusual
-         fonts is included in the definition for <a>large-scale</a> text.
+    </div>
+    <div class="note">
+      <p>
+        Ponieważ autorzy nie mają kontroli nad ustawieniami użytkownika dotyczącymi wygładzania/wygładzania czcionek, oceniając to kryterium sukcesu, należy odnosić się do kolorów pierwszego planu i tła uzyskanych z oprogramowania użytkownika lub podstawowych znaczników i arkuszy stylów, a nie do tekstu prezentowanego na ekranie.
       </p>
-      
+      <p>
+        Ze względu na wygładzanie, szczególnie cienkie lub nietypowe czcionki mogą być renderowane przez programy użytkownika przy znacznie słabszym kolorze niż rzeczywisty kolor tekstu zdefiniowany w bazowym CSS. Może to prowadzić do sytuacji, w których współczynnik kontrastu tekstu nominalnie spełnia kryterium sukcesu, ale w praktyce ma znacznie niższy kontrast. W takich przypadkach najlepszą praktyką byłoby, gdyby autorzy wybrali czcionkę o mocniejszych/grubszych liniach lub starali się uzyskać kombinację kolorów pierwszego planu/tła, która przekracza wymagania normatywne tego kryterium sukcesu.
+      </p>
+    </div>
+    <p>
+      Wymogi dotyczące kontrastu tekstu dotyczą również obrazów tekstu (tekstu przekształconego w piksele i następnie zapisanego w formacie obrazu) – zob. <a href="obrazy-tekstu">Kryterium sukcesu 1.4.5: Obrazy tekstu</a>.
+    </p>
+    <p>
+      Wymóg ten dotyczy sytuacji, w których obrazy tekstu miały być rozumiane jako tekst. Przypadkowy tekst, np. na zdjęciach zawierających znak drogowy, nie jest brany pod uwagę. Podobnie jak tekst, który z jakiegoś powodu ma być niewidoczny dla wszystkich odbiorców. Stylizowany tekst, np. w logo firmy, należy traktować pod kątem jego funkcji na stronie, co może, ale nie musi, uzasadniać uwzględnienie treści w alternatywie tekstowej. Korporacyjne wytyczne wizualne wykraczające poza logo i logotyp nie są objęte wyjątkiem.
+    </p>
+    <p>
+      Przepis ten zawiera wyjątek, który brzmi: „stanowią część obrazu zawierającego inne istotne treści wizualne”. Ten wyjątek ma na celu oddzielenie obrazów zawierających tekst od obrazów tekstu, które zostały wykonane w celu zastąpienia tekstu, aby uzyskać określony wygląd.
+    </p>
+    <div class="note">
+      <p>
+        Obrazy tekstu nie skalują się tak dobrze jak tekst, ponieważ mają tendencję do pikselowania. Trudniej jest także zmienić kombinacje kontrastu i kolorów pierwszego planu i tła w przypadku obrazów tekstu, co jest konieczne w przypadku niektórych użytkowników. Dlatego sugerujemy, aby tam, gdzie to możliwe, używać tekstu, a jeśli nie, rozważyć dodanie obrazu w wyższej rozdzielczości.
+      </p>
+    </div>
+    <p>
+      To kryterium sukcesu dotyczy tekstu na stronie, łącznie z tekstem zastępczym i tekstem wyświetlanym, gdy wskaźnik znajduje się nad obiektem lub gdy obiekt ma fokus klawiatury. Jeśli którykolwiek z nich jest używany na stronie, tekst musi zapewniać wystarczający kontrast.
+    </p>
+    <p>
+      Chociaż to kryterium sukcesu dotyczy tylko tekstu, podobne problemy występują w przypadku treści prezentowanych na wykresach, schematach, diagramach i innych informacjach nietekstowych, które są objęte <a href="kontrast-elementow-nietekstowych">kryterium sukcesu 1.4.11 Kontrast elementów nietekstowych</a>.
+    </p>
+    <p>
+      Zobacz też
+      <a href="kontrast-wzmocniony">1.4.6: Kontrast (wzmocniony)</a>.
+    </p>
+    <section>
+      <h3>Uzasadnienie wybranych współczynników</h3>
+      <p>
+        Współczynnik kontrastu 3:1 to minimalny poziom zalecany przez [[ISO-9241-3]] i [[ANSI-HFES-100-1988]] dla standardowego tekstu i obrazu. W tym kryterium sukcesu zastosowano współczynnik 4,5:1, aby uwzględnić utratę kontrastu wynikającą z umiarkowanie niskiej ostrości wzroku, wrodzonych lub nabytych zaburzeń widzenia barw lub utraty wrażliwości na kontrast, która zwykle towarzyszy starzeniu się.
+      </p>
+      <p>
+        Uzasadnienie opiera się na a) przyjęciu współczynnika kontrastu 3:1 dla minimalnego akceptowalnego kontrastu dla normalnych obserwatorów w standardzie ANSI oraz b) empirycznym odkryciu, że w populacji ostrość wzroku 20/40 jest związana z utratą czułości kontrastu o około 1,5 [[ARDITI-FAYE]]. Użytkownik o ostrości wzroku 20/40 potrzebowałby zatem współczynnika kontrastu <code>3 * 1,5 = 4,5 do 1</code>. Kierując się analogicznymi wynikami empirycznymi i tą samą logiką, użytkownik z ostrością wzroku 20/80 potrzebowałby kontrastu około 7:1. Ten współczynnik jest stosowany w kryterium sukcesu 1.4.6.
+      </p>
+      <p>
+        Odcienie są inaczej postrzegane przez użytkowników z wadami widzenia barw (zarówno wrodzonymi, jak i nabytymi), co skutkuje innymi kolorami i względnymi kontrastami luminancji niż w przypadku normalnie widzących użytkowników. Z tego powodu efektywny kontrast i czytelność są różne dla tej populacji. Jednakże wady widzenia barw są tak zróżnicowane, że zalecanie skutecznych par kolorów do ogólnego użytku (dla kontrastu) w oparciu o dane ilościowe nie jest możliwe. Wymóg dobrego kontrastu luminancji uwzględnia ten problem, wymagając kontrastu niezależnego od postrzegania kolorów. Na szczęście większość luminancji pochodzi z receptorów fal średnich i długich, których odpowiedzi widmowe w dużym stopniu pokrywają się. W rezultacie efektywny kontrast luminancji można ogólnie obliczyć bez uwzględnienia konkretnego niedoboru koloru, z wyjątkiem użycia kolorów o dużej długości fali w porównaniu z kolorami ciemniejszymi (zazwyczaj wyglądającymi na czarne) w przypadku osób cierpiących na protanopię. (Z tego powodu zapewniamy technikę pomocniczą dotyczącą unikania koloru czerwonego na czarnym). Więcej informacji można znaleźć w [[ARDITI-KNOBLAUCH-1994]] [[ARDITI-KNOBLAUCH-1996]] [[ARDITI]].
+      </p>
       <div class="note">
-         <p>When evaluating this Success Criterion, the font size in points should be obtained
-            from the user agent or calculated on font metrics in the way that user agents do.
-            Point sizes are based on the CSS <code>pt</code> size as defined in 
-            <a href="https://www.w3.org/TR/css-values-3/#reference-pixel">CSS3 Values</a>. The ratio between
-            sizes in points and CSS pixels is <code>1pt = 1.333px</code>, therefore <code>14pt</code>
-            and <code>18pt</code> are equivalent to approximately <code>18.5px</code> and <code>24px</code>.
-         </p>
-         <p>Because different image editing applications default to different pixel densities
-            (e.g., <code>72ppi</code> or <code>96ppi</code>), specifying point sizes for fonts from within an
-            image editing application can be unreliable when it comes to presenting text at a specific size.
-            When creating images of large-scale text, authors should ensure that the text in the
-            resulting image is roughly equivalent to 1.2 and 1.5 em or to 120% or 150% of the
-            default size for body text. For example, for a <code>72ppi</code> image, an author would need
-            to use approximately 19pt and 24pt font sizes in order to successfully present images
-            of large-scale text to a user. 
-         </p>
-         <p>The 3:1 and 4.5:1 contrast ratios referenced in this Success Criterion are intended to be
-            treated as threshold values. When comparing the computed contrast ratio to the Success Criterion
-            ratio, the computed values should not be rounded (e.g., 4.499:1 would not meet the 4.5:1 threshold).</p>
+        <p>
+          Niektóre osoby z niepełnosprawnością poznawczą wymagają kombinacji kolorów lub odcieni o niskim kontraście, dlatego pozwalamy i zachęcamy autorów do zapewniania mechanizmów umożliwiających dostosowanie kolorów pierwszego planu i tła treści. Niektóre z kombinacji, które można wybrać, mogą mieć poziomy kontrastu niższe niż te określone tutaj. Nie stanowi to naruszenia tego kryterium sukcesu, pod warunkiem, że istnieje mechanizm, który powróci do wymaganych wartości określonych tutaj.
+        </p>
       </div>
-      
+      <p>
+        Dla poziomu AA wybrano współczynnik kontrastu 4,5:1, ponieważ kompensował on utratę wrażliwości na kontrast zwykle doświadczaną przez użytkowników z utratą wzroku równą w przybliżeniu 20/40. (20/40 oblicza się na około 4,5:1.) 20/40 jest powszechnie określane jako typowa ostrość wzroku osób starszych w wieku mniej więcej 80 lat. [[GITTINGS-FOZARD]]
+      </p>
+      <p>
+        Dla poziomu AAA wybrano współczynnik kontrastu 7:1, ponieważ kompensował on utratę wrażliwości na kontrast doświadczaną  zwykle przez użytkowników z utratą wzroku równą w przybliżeniu 20/80. Osoby z większym stopniem utraty wzroku zwykle korzystają z technologii wspomagających, aby uzyskać dostęp do swoich treści (a technologie wspomagające zwykle mają wbudowaną funkcję zwiększania kontrastu i powiększenia). Dlatego poziom 7:1 zazwyczaj kompensuje utratę wrażliwości na kontrast doświadczaną przez użytkowników słabowidzących, którzy nie korzystają z technologii wspomagających, a także zapewnia wzmocnienie kontrastu również w przypadku problemów w widzeniu barw.
+      </p>
       <div class="note">
-         <p>Because authors do not have control over user settings for font smoothing/anti-aliasing, when evaluating this
-            Success Criterion, refer to the foreground and background colors obtained from the user agent, or the underlying
-            markup and stylesheets, rather than the text as presented on screen.</p>
-         <p>Due to anti-aliasing, particularly thin or unusual fonts may be rendered by user agents with a much fainter
-            color than the actual text color defined in the underlying CSS. This can lead to situations where text has
-            a contrast ratio that nominally passes the Success Criterion, but has a much lower contrast in practice.
-            In these cases, best practice would be for authors to choose a font with stronger/thicker lines,
-            or to aim for a foreground/background color combination that exceeds the normative requirements
-            of this Success Criterion.
-         </p>
+        <p>
+          Obliczenia w [[ISO-9241-3]] i [[ANSI-HFES-100-1988]] dotyczą tekstu podstawowego. W przypadku znacznie większego tekstu zapewniony jest mniejszy współczynnik kontrastu.
+        </p>
       </div>
-
-      <p>The contrast requirements for text also apply to images of text
-         (text that has been rendered into pixels and then stored in an image format) - see
-         <a href="images-of-text">Success Criterion 1.4.5: Images of Text</a>.
+    </section>
+    <section>
+      <h3>Uwagi dotyczące formuły</h3>
+      <p>Konwersja z nieliniowych na liniowe wartości RGB opiera się na normie IEC/4WD 61966-2-1 [[IEC-4WD]].</p>
+      <p>
+        Wzór (<code>L1/L2</code>) na kontrast opiera się na normach [[ISO-9241-3]] i [[ANSI-HFES-100-1988]].
       </p>
-      
-      <p>This requirement applies to situations in which images of text were intended to be
-         understood as text. Incidental text, such as in photographs that happen to include
-         a street sign, are not included. Nor is text that for some reason is designed to be
-         invisible to all viewers. Stylized text, such as in corporate logos, should be treated
-         in terms of its function on the page, which may or may not warrant including the content
-         in the text alternative. Corporate visual guidelines beyond logo and logotype are
-         not included in the exception.
-         
+      <p>
+        Norma ANSI/HFS 100-1988 wymaga uwzględnienia udziału światła otoczenia w obliczeniach L1 i L2. Zastosowana wartość <code>0,05</code> opiera się na Typical Viewing Flare z [[IEC-4WD]].
       </p>
-      
-      <p>In this provision there is an exception that reads "that are part of a picture that
-         contains significant other visual content,". This exception is intended to separate
-         pictures that have text in them from images of text that are done to replace text
-         in order to get a particular look. 
+      <p>
+        W tym kryterium sukcesu i jego definicjach używane są raczej terminy „współczynnik kontrastu” i „względna luminancja”, a nie „luminancja”, aby odzwierciedlić fakt, że treści internetowe same w sobie nie emitują światła. Współczynnik kontrastu jest miarą względnej luminancji, która wystąpi podczas wyświetlania. (Ponieważ jest to stosunek, jest bezwymiarowy.)
       </p>
-      
       <div class="note">
-         
-         <p>Images of text do not scale as well as text because they tend to pixelate. It is also
-            harder to change foreground and background contrast and color combinations for images
-            of text, which is necessary for some users. Therefore, we suggest using text wherever
-            possible, and when not, consider supplying an image of higher resolution.
-            
-         </p>
-         
+        <p>
+          Zapoznaj się z
+          listą narzędzi wykorzystujących współczynnik kontrastu do analizy kontrastu treści internetowych przedstawioną w podrozdziale <a href=" #resources">Powiązane zasoby</a>.
+        </p>
+        <p>
+          Zobacz też
+          <a href="focus-visible">2.4.7: Widoczny fokus </a>, aby zapoznać się z technikami wskazywania fokusu klawiatury.
+        </p>
       </div>
-      
-      <p>This Success Criterion applies to text in the page, including
-         placeholder text and text that is shown when a pointer is hovering over an object
-         or when an object has keyboard focus. If any of these are used in a page, the text
-         needs to provide sufficient contrast.
+    </section>
+    <section id="inactive-controls">
+      <h3>Nieaktywne składniki interfejsu użytkownika</h3>
+      <p>
+        Składniki interfejsu użytkownika, które nie są dostępne do interakcji z użytkownikiem (np. wyłączona kontrolka w HTML), nie muszą spełniać wymagań dotyczących kontrastu. Nieaktywny komponent interfejsu użytkownika jest widoczny, ale obecnie nie można z niego korzystać. Przykładem może być przycisk przesyłania u dołu formularza, który jest widoczny, ale nie można go aktywować, dopóki nie zostaną wypełnione wszystkie wymagane pola w formularzu.
       </p>
-      
-      <p>Although this Success Criterion only applies to text, similar issues occur for content presented
-         in charts, graphs, diagrams, and other non-text-based information, which is covered by
-         <a href="non-text-contrast">Success Criterion 1.4.11 Non-Text Contrast</a>.         
+      <figure id="figure-grey-button-and-text">
+        <img src="img/inactive-button.png" alt="Szary przycisk z niekontrastowym szarym tekstem." width="120" />
+        <figcaption>Rysunek 1 Nieaktywny przycisk korzystający z domyślnych stylów przeglądarki</figcaption>
+      </figure>
+    </section>
+  </section>
+  <section id="benefits">
+    <h2>Korzyści</h2>
+    <ul>
+      <li>
+        Osoby słabowidzące często mają trudności z odczytaniem tekstu, który nie kontrastuje z tłem. Może to się pogorszyć, jeśli dana osoba ma wadę widzenia kolorów, która jeszcze bardziej obniża kontrast. Zapewnienie minimalnego współczynnika kontrastu luminancji między tekstem a jego tłem może sprawić, że tekst będzie bardziej czytelny, nawet jeśli dana osoba nie widzi pełnej gamy kolorów. Działa również w przypadku nielicznych osób, które nie widzą kolorów.
+      </li>
+    </ul>
+  </section>
+  <section id="examples">
+    <h2>Examples of Contrast (Minimum)</h2>
+  </section>
+  <section id="resources">
+    <h2>Powiązane zasoby</h2>
+    <ul>
+      <li>
+        <a href="https://www.tpgi.com/color-contrast-checker/" lang="en" hreflang="en">Colour Contrast Analyser application</a> (Aplikacja do analizowania kontrastu kolorów)
+      </li>
+      <li>
+        <a href="https://juicystudio.com/services/luminositycontrastratio.php" lang="en" hreflang="en">Luminosity Colour Contrast Ratio Analyser</a> (Analizator współczynnika kontrastu jasności i koloru)
+      </li>
+      <li>
+        <a href="https://snook.ca/technical/colour_contrast/colour.html" lang="en" hreflang="en">Colour Contrast Check</a> (Sprawdź kontrast kolorów)
+      </li>
+      <li>
+        <a href="https://www.msfw.com/Services/ContrastRatioCalculator" lang="en" hreflang="en">Contrast Ratio Calculator</a> (Kalkulator współczynnika kontrastu)
+      </li>
+      <li>
+        <a href="https://color.adobe.com/create/color-contrast-analyzer" lang="en" hreflang="en">Adobe Color - Color Contrast Analyzer Tool</a> (Adobe Color — narzędzie do analizowania kontrastu kolorów)
+      </li>
+      <li>
+        <a href="https://www.w3.org/Graphics/atypical-color-response" lang="en" hreflang="en">Atypical colour response</a> (Nietypowa reakcja kolorystyczna)
+      </li>
+      <li>
+        <a href="http://www.colorsontheweb.com/colorcontrast.asp" lang="en" hreflang="en">Colors On the Web Color Contrast Analyzer</a> (Kolory w Internecie - Analizator kontrastu kolorów)
+      </li>
+      <li>
+        <a href="https://www.vischeck.com/daltonize/runDaltonize.php" lang="en" hreflang="en">Tool to convert images based on color loss</a> so that contrast is restored as luminance contrast when there was only color contrast (that was lost due to color deficiency) (<em>Narzędzie do konwersji obrazów w oparciu o utratę kolorów, dzięki czemu kontrast jest przywracany jako kontrast luminancji, gdy istniał tylko kontrast kolorów (który został utracony z powodu niedoboru kolorów)</em>).
+      </li>
+      <li>
+        <a href="https://www.456bereastreet.com/archive/200709/10_colour_contrast_checking_tools_to_improve_the_accessibility_of_your_design/" lang="en" hreflang="en">List of color contrast tools</a> (Lista narzędzi do oceny kontrastu kolorów)
+      </li>
+      <li>
+        <a href="https://www.aph.org/resources/large-print-guidelines/" lang="en" hreflang="en">The American Printing House for the Blind Guidelines for Large Printing</a> (Wytyczne American Printing House for the Blind  dotyczące druku wielkoformatowego)
+      </li>
+      <li>
+        <a href="https://www.loc.gov/nls/resources/general-resources-on-disabilities/large-print-materials/" lang="en" hreflang="en">National Library Service for the Blind and Physically Handicapped (NLS), The Library of Congress reference guide on large print materials</a> (Biblioteka Narodowa dla osób niewidomych i niepełnosprawnych fizycznie (NLS), podręcznik Biblioteki Kongresu dotyczący materiałów drukowanych dużym drukiem)
+      </li>
+      <li>
+        <a href="https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/color-blindness/types-color-blindness" lang="en" hreflang="en">Types of Color Blindness, National Eye Institute (NEI), National Institutes of Health (NIH), U.S. Department of Health and Human Services (HHS)</a> (Rodzaje ślepoty barw, Narodowy Instytut Oka (NEI), Narodowe Instytuty Zdrowia (NIH), USA Departament Zdrowia i Opieki Społecznej (HHS))
+      </li>
+      <li>
+        <a href="https://doi.org/10.1364/JOSAA.8.000428" lang="en" hreflang="en">Effects of chromatic and luminance contrast on reading, Knoblauch et al., 1991</a> (Wpływ kontrastu chromatycznego i luminancji na czytanie, Knoblauch i in., 1991)
+      </li>
+      <li>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24103453/" lang="en" hreflang="en">Achromatic luminance contrast sensitivity in X-linked color-deficient observers: an addition to the debate, Márta Janáky et al., 2013</a> (Czułość kontrastu achromatycznej luminancji u obserwatorów z niedoborem koloru w połączeniu z chromosomem X: dodatek do debaty, Márta Janáky i in., 2013)
+      </li>
+      <li>
+        <a href="https://link.springer.com/article/10.1007/s10792-018-0881-7" lang="en" hreflang="en">Contrast sensitivity of patients with congenital color vision deficiency, Cagri Ilhan et al., 2018</a> (Wrażliwość na kontrast pacjentów z wrodzonym zaburzeniem widzenia barw, Cagri Ilhan i wsp., 2018)
+      </li>
+    </ul>
+  </section>
+  <section id="techniques">
+    <h2>Techniki</h2>
+    <section id="sufficient">
+      <h3>Wystarczające techniki</h3>
+      <p>
+        Wybierz poniżej sytuację pasującą do twojej treści. Każda sytuacja obejmuje techniki lub kombinacje technik, które są znane i udokumentowane jako wystarczające w tej sytuacji.
       </p>
-      
-      <p>See also 
-         <a href="contrast-enhanced">1.4.6: Contrast (Enhanced)</a>.
-      </p>
-      
-      <section>
-         
-         <h3>Rationale for the Ratios Chosen</h3>
-         
-         <p>A contrast ratio of 3:1 is the minimum level recommended by [[ISO-9241-3]] and [[ANSI-HFES-100-1988]]
-            for standard text and vision. The 4.5:1 ratio is used in this Success Criterion to account
-            for the loss in contrast that results from moderately low visual acuity, congenital
-            or acquired color deficiencies, or the loss of contrast sensitivity that typically
-            accompanies aging.
-         </p>
-         
-         <p>The rationale is based on a) adoption of the 3:1 contrast ratio for minimum acceptable
-            contrast for normal observers, in the ANSI standard, and b) the empirical finding
-            that in the population, visual acuity of 20/40 is associated with a contrast sensitivity
-            loss of roughly 1.5 [[ARDITI-FAYE]]. A user with 20/40 would thus require a contrast ratio of
-            <code>3 * 1.5 = 4.5 to 1</code>. Following analogous empirical findings and the same logic,
-            the user with 20/80 visual acuity would require contrast of about 7:1. This ratio is used in
-            Success Criterion 1.4.6.
-         </p>
-
-         <p>Hues are perceived differently by users with color vision deficiencies (both congenital
-            and acquired) resulting in different colors and relative luminance contrasts than
-            for normally sighted users. Because of this, effective contrast and readability are
-            different for this population. However, color deficiencies are so diverse that prescribing
-            effective general use color pairs (for contrast) based on quantitative data is not
-            feasible. Requiring good luminance contrast accommodates this by requiring contrast
-            that is independent of color perception. Fortunately, most of the luminance contribution
-            is from the mid and long wave receptors which largely overlap in their spectral responses.
-            The result is that effective luminance contrast can generally be computed without
-            regard to specific color deficiency, except for the use of predominantly long wavelength
-            colors against darker colors (generally appearing black) for those who have protanopia.
-            (We provide an advisory technique on avoiding red on black for that reason). For more
-            information see [[ARDITI-KNOBLAUCH-1994]] 
-            [[ARDITI-KNOBLAUCH-1996]] 
-            [[ARDITI]].
-         </p>
-         
-         <div class="note">
-            
-            <p>Some people with cognitive disabilities require color combinations or hues that have
-               low contrast, and therefore we allow and encourage authors to provide mechanisms to
-               adjust the foreground and background colors of the content. Some of the combinations
-               that could be chosen may have contrast levels that will be lower than those those
-               specified here. This is not a violation of this Success Criterion, provided
-               there is a mechanism that will return to the required values set out here.
-            </p>          
-            
-         </div>
-         
-         <p>The contrast ratio of 4.5:1 was chosen for level AA because it compensated for the
-            loss in contrast sensitivity usually experienced by users with vision loss equivalent
-            to approximately 20/40 vision. (20/40 calculates to approximately 4.5:1.) 20/40 is
-            commonly reported as typical visual acuity of elders at roughly age 80. [[GITTINGS-FOZARD]] 
-         </p>
-         
-         <p>The contrast ratio of 7:1 was chosen for level AAA because it compensated for the
-            loss in contrast sensitivity usually experienced by users with vision loss equivalent
-            to approximately 20/80 vision. People with more than this degree of vision loss usually
-            use assistive technologies to access their content (and the assistive technologies
-            usually have contrast enhancing, as well as magnification capability built into them).
-            The 7:1 level therefore generally provides compensation for the loss in contrast sensitivity
-            experienced by users with low vision who do not use assistive technology and provides
-            contrast enhancement for color deficiency as well.
-         </p>
-         
-         <div class="note">
-            <p>Calculations in [[ISO-9241-3]] and [[ANSI-HFES-100-1988]] are for body text. A relaxed contrast
-               ratio is provided for text that is much larger.</p>
-         </div>
-         
+      <section class="situation" id="contrast-minimum-situation-0">
+        <h4>Sytuacja A: Tekst ma mniej niż 18 punktów, jeśli nie jest pogrubiony, i mniej niż 14 punktów, jeśli jest pogrubiony</h4>
+        <ul>
+          <li>
+            <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G18">G18: Zapewnienie, że istnieje kontrast wynoszący co najmniej 4,5:1 między tekstem (i obrazami tekstu) a tłem za tekstem</a>
+          </li>
+          <li>
+            <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G148">G148: Nieokreślanie koloru tła, nieokreślanie koloru tekstu i nieużywanie funkcji technologii, które zmieniają wartości domyślne</a>
+          </li>
+          <li>
+            <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G174">G174: Zapewnienie użytkownikom przełączników kontrastu</a>
+          </li>
+        </ul>
       </section>
-      
-      <section>
-         
-         <h3>Notes on formula</h3>
-         
-         <p>Conversion from nonlinear to linear RGB values is based on IEC/4WD 61966-2-1 [[IEC-4WD]].</p>
-         
-         <p>The formula (<code>L1/L2</code>) for contrast is based on [[ISO-9241-3]] and [[ANSI-HFES-100-1988]] standards.</p>
-         
-         <p>The ANSI/HFS 100-1988 standard calls for the contribution from ambient light to be
-            included in the calculation of L1 and L2. The <code>.05</code> value used is based on Typical Viewing
-            Flare from [[IEC-4WD]].
-         </p>
-         
-         <p>This Success Criterion and its definitions use the terms "contrast ratio" and "relative
-            luminance" rather than "luminance" to reflect the fact that Web content does not emit
-            light itself. The contrast ratio gives a measure of the relative luminance that would
-            result when displayed. (Because it is a ratio, it is dimensionless.)
-         </p>
-         
-         <div class="note">
-            <p>
-               Refer to 
-               <a href="#resources">related resources</a> for a list of tools that utilize the contrast ratio
-               to analyze the contrast of Web content.
-            </p>
-            <p>See also 
-               <a href="focus-visible">2.4.7: Focus Visible</a> for techniques for indicating keyboard focus.
-            </p>
-         </div>
-         
+      <section class="situation" id="contrast-minimum-situation-1">
+        <h4>Sytuacja B: Tekst ma co najmniej 18 punktów, jeśli nie jest pogrubiony i co najmniej 14 punktów, jeśli jest pogrubiony</h4>
+        <ul>
+          <li>
+            <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G145">G145: Zapewnienie, że kontrast między tekstem (i obrazami tekstu) a tłem pod tekstem wynosi co najmniej 3:1</a>
+          </li>
+          <li>
+            <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G148">G148: Nieokreślanie koloru tła, nieokreślanie koloru tekstu i nieużywanie funkcji technologii, które zmieniają wartości domyślne</a>
+          </li>
+          <li>
+            <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G174">G174: Zapewnienie użytkownikom przełączników kontrastu</a>
+          </li>
+        </ul>
       </section>
-      
-      <section id="inactive-controls">
-         <h3>Inactive User Interface Components</h3>
-
-         <p>User Interface Components that are not available for user interaction (e.g., a disabled control in HTML) are not required to meet contrast requirements. An inactive user interface component is visible but not currently operable. An example would be a submit button at the bottom of a form that is visible but cannot be activated until all the required fields in the form are completed.</p>
-         <figure id="figure-grey-button-and-text">
-            <img src="img/inactive-button.png" alt="Grey button with non-contrasting grey text." width="120" />
-            <figcaption> An inactive button using default browser styles</figcaption>
-         </figure>
-      </section>
-      
-   </section>
-   <section id="benefits">
-      <h2>Benefits of Contrast (Minimum)</h2>
-      
+    </section>
+    <section id="advisory">
+      <h3>Techniki pomocnicze</h3>
       <ul>
-         
-         <li>People with low vision often have difficulty reading text that does not contrast with
-            its background. This can be exacerbated if the person has a color vision deficiency
-            that lowers the contrast even further. Providing a minimum luminance contrast ratio
-            between the text and its background can make the text more readable even if the person
-            does not see the full range of colors. It also works for the rare individuals who
-            see no color. 
-         </li>
-         
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G156" class="general">G156: Korzystanie z technologii powszechnie dostępnych programów klienckich, które mogą zmieniać pierwszy plan i tło bloków tekstu</a>
+        </li>
       </ul>
-      
-   </section>
-   
-   <section id="examples">
-      <h2>Examples of Contrast (Minimum)</h2>
-      
-      
-   </section>
-   
-   <section id="resources">
-      <h2>Resources for Contrast (Minimum)</h2>
-      
-      
+    </section>
+    <section id="failure">
+      <h3>Błędy</h3>
       <ul>
-         
-         <li>
-            <a href="https://www.tpgi.com/color-contrast-checker/">Colour Contrast Analyser application</a>
-         </li>
-         
-         <li>
-            <a href="https://juicystudio.com/services/luminositycontrastratio.php">Luminosity Colour Contrast Ratio Analyser</a>
-         </li>
-         
-         <li>
-            <a href="https://snook.ca/technical/colour_contrast/colour.html">Colour Contrast Check</a>
-         </li>
-         
-         <li>
-            <a href="https://www.msfw.com/Services/ContrastRatioCalculator">Contrast Ratio Calculator</a>
-         </li>
-         
-         <li>
-            <a href="https://color.adobe.com/create/color-contrast-analyzer">Adobe Color - Color Contrast Analyzer Tool</a>
-         </li>
-         
-         <li>
-            <a href="https://www.w3.org/Graphics/atypical-color-response">Atypical colour response</a>
-         </li>
-         
-         <li>
-            <a href="http://www.colorsontheweb.com/colorcontrast.asp">Colors On the Web Color Contrast Analyzer</a>
-         </li>
-         
-         <li>
-            <a href="https://www.vischeck.com/daltonize/runDaltonize.php">Tool to convert images based on color loss</a> so that contrast is restored as luminance contrast when there was only color contrast (that was lost due to color deficiency)
-         </li>
-         
-         <li>
-            <a href="https://www.456bereastreet.com/archive/200709/10_colour_contrast_checking_tools_to_improve_the_accessibility_of_your_design/">List of color contrast tools</a>
-         </li>
-
-         <li>
-            <a href="https://www.aph.org/resources/large-print-guidelines/">The American Printing House for the Blind Guidelines for Large Printing</a>
-         </li>
-
-         <li>
-            <a href="https://www.loc.gov/nls/resources/general-resources-on-disabilities/large-print-materials/">National Library Service for the Blind and Physically Handicapped (NLS), The Library of Congress reference guide on large print materials</a>
-         </li>
-         <li>         	
-         	<a href="https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/color-blindness/types-color-blindness">Types of Color Blindness, National Eye Institute (NEI), National Institutes of Health (NIH), U.S. Department of Health and Human Services (HHS)</a>
-         </li>
-         <li>
-            <a href="https://doi.org/10.1364/JOSAA.8.000428">Effects of chromatic and luminance contrast on reading, Knoblauch et al., 1991</a>
-         </li>
-         <li>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/24103453/">Achromatic luminance contrast sensitivity in X-linked color-deficient observers: an addition to the debate, Márta Janáky et al., 2013</a>
-         </li>
-         <li>
-            <a href="https://link.springer.com/article/10.1007/s10792-018-0881-7">Contrast sensitivity of patients with congenital color vision deficiency, Cagri Ilhan et al., 2018</a>
-         </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F24">F24: Niespełnienie kryterium sukcesu 1.4.3, 1.4.6 i 1.4.8 z powodu określenia kolorów pierwszego planu bez określania kolorów tła i odwrotnie</a>
+        </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F83">F83: Niespełnienie kryteriów sukcesu 1.4.3 i 1.4.6 z powodu użycia obrazów tła, które nie zapewniają wystarczającego kontrastu z tekstem pierwszego planu (lub obrazami tekstu)</a>
+        </li>
       </ul>
-      
-   </section>
-   
-   <section id="techniques">
-      <h2>Techniques for Contrast (Minimum)</h2>
-      
-      
-      <section id="sufficient">
-         <h3>Sufficient Techniques for Contrast (Minimum)</h3>
-         
-         
-         <section class="situation" id="contrast-minimum-situation-0">
-            
-            <h4>Situation A: text is less than 18 point if not bold and less than 14 point if bold</h4>
-            
-            <ul>
-               
-               <li>
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G18" class="general">Ensuring that  contrast of at least 4.5:1 exists between text (and images of text)
-                     and background behind the text
-                  </a>
-               </li>
-               
-               <li>
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G148" class="general">Not specifying background color, not specifying text color, and not using technology
-                     features that change those defaults
-                  </a>
-               </li>
-               
-               <li>
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G174" class="general">Providing a control with a sufficient contrast ratio that allows users to switch to
-                     a presentation that uses sufficient contrast
-                  </a>
-               </li>
-               
-            </ul>
-            
-         </section>
-         
-         <section class="situation" id="contrast-minimum-situation-1">
-            
-            <h4>Situation B: text is at least 18 point if not bold and at least 14 point if bold</h4>
-            
-            <ul>
-               
-               <li>
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G145" class="general">Ensuring that a contrast ratio of at least 3:1 exists between text (and images of
-                     text) and background behind the text
-                  </a>
-               </li>
-               
-               <li>
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G148" class="general">Not specifying background color, not specifying text color, and not using technology
-                     features that change those defaults
-                  </a>
-               </li>
-               
-               <li>
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G174" class="general">Providing a control with a sufficient contrast ratio that allows users to switch to
-                     a presentation that uses sufficient contrast
-                  </a>
-               </li>
-               
-            </ul>
-            
-         </section>
-         
-      </section>
-      
-      <section id="advisory">
-         <h3>Additional Techniques (Advisory) for Contrast (Minimum)</h3>
-         
-         
-         <ul>
-            
-            <li>
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G156" class="general">G156</a>
-            </li>
-            
-         </ul>
-         
-      </section>
-      
-      <section id="failure">
-         <h3>Failures for Contrast (Minimum)</h3>
-         
-         
-         <ul>
-            
-            <li>
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F24" class="failure">Failure due to specifying foreground colors without specifying background colors or
-                  vice versa
-               </a>
-            </li>
-            
-            <li>
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F83" class="failure">Failure of 1.4.3 and 1.4.6 due to using background images that do not provide sufficient
-                  contrast with foreground text (or images of text)
-               </a>
-            </li>
-            
-         </ul>
-         
-      </section>
-      
-   </section>
-   
+    </section>
+  </section>
 </body>
 </html>
