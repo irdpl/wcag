@@ -1,366 +1,201 @@
 <!DOCTYPE html>
 <html lang="pl" xml:lang="pl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-   <meta charset="UTF-8"></meta>
-   <title>Understanding Name, Role, Value</title>
-   <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove"></link>
+  <meta charset="UTF-8" />
+  <title>Objaśnienie kryterium sukcesu Nazwa, rola, wartość</title>
+  <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove" />
 </head>
 <body>
-   <h1>Understanding Name, Role, Value</h1>
-   
-   <section id="brief">
-		<h2>In brief</h2>
-		<dl>
-         <dt>Goal</dt><dd>People using assistive technology understand all components.</dd>
-         <dt>What to do</dt><dd>Give components correct names, roles, states, and values.</dd>
-         <dt>Why it's important</dt><dd>Assistive technology only works well when code is done properly.</dd> 
-      </dl>
-
-   </section>
-   
-   <section id="intent">
-      <h2>Intent of Name, Role, Value</h2>
-      
-      
-      <p>The intent of this Success Criterion is to ensure that Assistive Technologies (AT)
-         can gather information about, activate (or set) and keep up to date on the status of
-         user interface controls in the content.
-      </p>
-      
-      <p>When standard controls from accessible technologies are used, this process is straightforward.
-         If the user interface elements are used according to specification the conditions
-         of this provision will be met. (See examples  of Success Criterion 4.1.2 below)
-      </p>
-      
-      <p>If custom controls are created, however, or interface elements are programmed (in
-         code or script) to have a different role and/or function than usual, then additional
-         measures need to be taken to ensure that the controls provide important information
-         to assistive technologies and allow themselves to be controlled by assistive technologies.
-      </p>
-      
-      <p>A particularly important state of a user interface control is whether or not it has
-         focus. The focus state of a control can be programmatically determined, and notifications
-         about change of focus are sent to user agents and assistive technology. Other examples
-         of user interface control state are whether or not a checkbox or radio button has
-         been selected, or whether or not a collapsible tree or list node is expanded or collapsed.
-      </p>
-      
-      <div class="note">
-         
-         <p>Success Criterion 4.1.2 requires a programmatically determinable name for all user
-            interface components. Names may be visible or invisible. Occasionally, the name must
-            be visible, in which case it is identified as a label. Refer to the definition of
-            name and label in the glossary for more information.
-         </p>
-         
-      </div>
-      
-      
-   </section>
-   <section id="benefits">
-      <h2>Benefits of Name, Role, Value</h2>
-      
-      
+  <h1>Objaśnienie kryterium sukcesu Nazwa, rola, wartość</h1>
+  <section id="brief">
+    <h2>W skrócie</h2>
+    <dl>
+      <dt>Cel</dt>
+      <dd>Osoby korzystające z technologii wspomagających rozumieją wszystkie komponenty</dd>
+      <dt>Co zrobić</dt>
+      <dd>Nadaj komponentom prawidłowe nazwy, role, stany i wartości.</dd>
+      <dt>Dlaczego to jest ważne</dt>
+      <dd>Technologia wspomagająca działa dobrze tylko wtedy, gdy kod jest wykonany prawidłowo.</dd>
+    </dl>
+  </section>
+  <section id="intent">
+    <h2>Intencja</h2>
+    <p>
+      Celem tego kryterium sukcesu jest zapewnienie, że technologie wspomagające (AT) mogą gromadzić informacje, aktywować (lub ustawiać) i aktualizować stan elementów sterujących interfejsu użytkownika w treści.
+    </p>
+    <p>
+      Gdy używane są standardowe elementy sterujące z dostępnych technologii, proces ten jest prosty. Jeśli elementy interfejsu użytkownika są używane zgodnie ze specyfikacją, warunki tego przepisu zostaną spełnione. (Zobacz przykłady kryterium sukcesu 4.1.2 poniżej)
+    </p>
+    <p>
+      Jeśli jednak tworzone są niestandardowe elementy sterujące lub elementy interfejsu są zaprogramowane (w kodzie lub skrypcie) tak, aby miały inną rolę lub funkcję niż zwykle, należy podjąć dodatkowe środki w celu zapewnienia, że elementy sterujące dostarczają istotnych informacji technologiom wspomagającym i umożliwiają sterowanie nimi przez technologie wspomagające.
+    </p>
+    <p>
+      Szczególnie ważnym stanem kontrolki interfejsu użytkownika jest to, czy ma ona fokus. Stan fokusu kontrolki można określić programowo, a powiadomienia o zmianie fokusu są wysyłane do programów użytkownika i technologii wspomagających. Innymi przykładami stanu kontrolki interfejsu użytkownika jest to, czy pole wyboru lub przycisk radiowy został zaznaczony, lub czy zwijany węzeł drzewa lub listy jest rozwinięty lub zwinięty.
+    </p>
+    <p class="note">
+      Kryterium sukcesu 4.1.2 wymaga programowo definiowalnej nazwy dla wszystkich komponentów interfejsu użytkownika. Nazwy mogą być widoczne lub niewidoczne. Czasami nazwa musi być widoczna, w takim przypadku jest identyfikowana jako etykieta. Więcej informacji można znaleźć w definicji nazwy i etykiety w słowniczku.
+    </p>
+  </section>
+  <section id="benefits">
+    <h2>Korzyści</h2>
+    <ul>
+      <li>
+        Zapewnienie informacji o roli, stanie i wartości dla wszystkich komponentów interfejsu użytkownika umożliwia zgodność z technologiami wspomagającymi, takimi jak czytniki ekranu, lupy ekranowe i oprogramowanie do rozpoznawania mowy, używane przez osoby z niepełnosprawnościami.
+      </li>
+    </ul>
+  </section>
+  <section id="examples">
+    <h2>Przykłady</h2>
+    <dl>
+      <dt>API dostępności</dt>
+      <dd>Aplet Java korzysta z interfejsu API dostępności zdefiniowanego przez język.</dd>
+    </dl>
+  </section>
+  <section id="resources">
+    <h2>Treści powiązane</h2>
+    <ul>
+      <li>
+        <a href="https://www.w3.org/WAI/PF/roadmap/">Dynamic Accessible Web Content Roadmap</a> (Mapa drogowa dynamicznej dostępnej zawartości internetowej)
+      </li>
+      <li>
+        <a href="https://www.w3.org/WAI/PF/GUI/">Role Taxonomy for Accessible Adaptable Applications</a> (Taksonomia ról dla dostępnych adaptowalnych aplikacji)
+      </li>
+      <li>
+        <a href="https://www.w3.org/TR/wai-aria/">Web Accessibility Initiative - Accessible Rich Internet Applications (ARIA)</a>
+      </li>
+      <li>
+        <a href="https://www.w3.org/WAI/PF/adaptable/">Moduł stanów i właściwości adaptacyjnych</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/en-us/library/ms697707.aspx">Microsoft Active Accessibility, wersja 2.0</a>
+      </li>
+    </ul>
+  </section>
+  <section id="techniques">
+    <h2>Techniki</h2>
+    <section id="sufficient">
+      <h3>Techniki wystarczające</h3>
+      <section class="situation" id="name-role-value-situation-0">
+        <h4>
+          Sytuacja A: W przypadku korzystania ze standardowego komponentu interfejsu użytkownika w języku znaczników (np. HTML):
+        </h4>
+        <ul>
+          <li>
+            <a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA14">ARIA14: Użycie atrybutu aria-label, aby zapewnić niewidoczną etykietę, gdy nie można użyć widocznej etykiety</a>
+          </li>
+          <li>
+            <a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA16">ARIA16: Użycie atrybutu aria-labelledby, aby zapewnić nazwę dla elementów sterujących interfejsem użytkownika</a>
+          </li>
+          <li>
+            <p>
+              <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G108">G108: Wykorzystanie funkcji znaczników do ujawnienia nazwy i roli, aby bezpośrednio ustawiać właściwości użytkownika i powiadamiać o zmianach</a> za pomocą poniższych technik specyficznych dla technologii:
+            </p>
+            <ul>
+              <li>
+                <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H91">H91: Korzystanie z kontrolek formularzy HTML i łączy</a>
+              </li>
+              <li>
+                <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H44">H44: Użycie elementu label do kojarzenia etykiet tekstowych z formantami formularzy</a>
+              </li>
+              <li>
+                <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H64">H64: Użycie atrybutu title do nazywania elementów frame i iframe</a>
+              </li>
+              <li>
+                <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H65">H65: Użycie atrybutu title do nazywania formantów formularzy, gdy nie można użyć elementu label</a>
+              </li>
+              <li>
+                <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H88">H88: Używanie HTML zgodnie ze specyfikacją</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="situation" id="name-role-value-situation-1">
+        <h4>
+          Sytuacja B: W przypadku korzystania ze skryptu lub kodu w celu ponownego zastosowania standardowego komponentu interfejsu użytkownika w języku znaczników:
+        </h4>
+        <ul>
+          <li>
+            <p>
+              Wyeksponowanie nazw i ról, umożliwienie bezpośredniego ustawiania właściwości ustawianych przez użytkownika oraz powiadamianie o zmianach za pomocą jednej z następujących technik
+            </p>
+            <ul>
+              <li>
+                <a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA16">ARIA16: Użycie atrybutu aria-labelledby, aby zapewnić nazwę dla elementów sterujących interfejsem użytkownika</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="situation" id="name-role-value-situation-2">
+        <h4>Sytuacja C: W przypadku stosowania standardowego komponentu interfejsu użytkownika w technologii programowania:</h4>
+        <ul>
+          <li>
+            <p>
+              <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G135">G135: Użycie funkcji API dostępności technologii do ujawniania nazw i powiadamiania o zmianach</a> za pomocą jednej z następujących technik
+            </p>
+            <ul>
+              <li>
+                <a class="pdf" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF10">PDF10: Zapewnianie etykiet dla interaktywnych kontrolek formularzy w dokumentach PDF</a>
+              </li>
+              <li>
+                <a class="pdf" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF12">PDF12: Zapewnianie informacji o nazwach, rolach i wartościach pól formularzy w dokumentach PDF</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="situation" id="name-role-value-situation-3">
+        <h4>Sytuacja D: W przypadku tworzenia własnego komponentu interfejsu użytkownika w języku programowa:</h4>
+        <ul>
+          <li>
+            <p>
+              <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G10">G10: Tworzenie komponentów przy użyciu technologii obsługującej powiadamianie o zmianach dotyczących dostępności</a> za pomocą poniższych technik specyficznych dla technologii:
+            </p>
+            <ul>
+              <li>
+                <a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA4">ARIA4: Użycie atrybutu role, aby wyeksponować rolę komponentu interfejsu użytkownika</a>
+              </li>
+              <li>
+                <a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA5">ARIA5: Użycie atrybutów stanu i właściwości WAI-ARIA do ujawnienia stanu komponentu interfejsu użytkownika</a>
+              </li>
+              <li>
+                <a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA16">ARIA16: Użycie atrybutu aria-labelledby, aby zapewnić nazwę dla elementów sterujących interfejsem użytkownika</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </section>
+    <section id="advisory">
+      <h3>Additional Techniques (Advisory) for Name, Role, Value</h3>
+    </section>
+    <section id="failure">
+      <h3>Błędy</h3>
       <ul>
-         
-         <li>Providing role, state, and value information on all user interface components enables
-            compatibility with assistive technology, such as screen readers, screen magnifiers,
-            and speech recognition software, used by people with disabilities.
-         </li>
-         
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F59">F59: Niespełnienie kryterium sukcesu 4.1.2 z powodu użycia skryptu do utworzenia kontrolki interfejsu użytkownika za pomocą elementu div lub span w HTML bez podawania roli tej kontrolki</a>
+        </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F15">F15: Niespełnienie kryterium sukcesu 4.1.2 z powodu implementacji niestandardowych elementów sterujących, które w ogóle nie korzystają albo korzystają nie w pełni z interfejsu API dostępności dla tej technologii</a>
+        </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F20">F20: Niespełnienie kryterium sukcesu 1.1.1 i 4.1.2 ze względu na brak aktualizacji tekstów alternatywnych w przypadku wystąpienia zmian w treści nietekstowej</a>
+        </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F68">F68: Niespełnienie kryterium 4.1.2 z powodu kontrolki interfejsu użytkownika, która nie ma programowo określonej nazwy</a>
+        </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F79">F79: Niespełnienie kryterium sukcesu 4.1.2 ze względu na stan fokusu na składniku interfejsu użytkownika, który nie jest programowo określony lub brak powiadomienia o zmianie stanu fokusu</a>
+        </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F86">F86: Niespełnienie kryterium sukcesu 4.1.2 ze względu na brak podawania nazw dla każdej części wieloczęściowego pola formularza, takiego jak amerykański numer telefonu</a>
+        </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F89">F89: Niespełnienie kryterium sukcesu 2.4.4, 2.4.9 i 4.1.2 ze względu na brak podania dostępnej nazwy obrazu, który jest jedyną treścią w łączu</a>
+        </li>
       </ul>
-      
-   </section>
-   
-   <section id="examples">
-      <h2>Examples of Name, Role, Value</h2>
-      
-      <dl>
-         <dt>Accessible APIs</dt>
-         <dd>A Java applet uses the accessibility API defined by the language.</dd>
-      </dl>
-      
-   </section>
-   
-   <section id="resources">
-      <h2>Resources for Name, Role, Value</h2>
-      
-      
-      <ul>
-         <li>
-            <a href="https://www.w3.org/WAI/PF/roadmap/">Dynamic Accessible Web Content Roadmap</a>
-         </li>
-         <li>
-            <a href="https://www.w3.org/WAI/PF/GUI/">Role Taxonomy for Accessible Adaptable Applications</a>
-         </li>
-         <li>
-            <a href="https://www.w3.org/TR/wai-aria/">Web Accessibility Initiative - Accessible Rich Internet Applications (ARIA)</a>
-         </li>
-      </ul>
-      
-   </section>
-   
-   <section id="techniques">
-      <h2>Techniques for Name, Role, Value</h2>
-      
-      
-      <section id="sufficient">
-         <h3>Sufficient Techniques for Name, Role, Value</h3>
-         
-         
-         <section class="situation" id="name-role-value-situation-0">
-            
-            <h4>Situation A: If using a standard user interface component in a markup language (e.g.,
-               HTML):
-            </h4>
-            
-            <ul>
-               
-               <li>
-                  
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA14" class="aria"></a>
-                  
-               </li>
-               
-               <li>
-                  
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA16" class="aria"></a>
-                  
-               </li>
-               
-               <li>
-                  
-                  <p> 
-                     
-                     <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G108" class="general">Using markup features to expose the name and role, allow user-settable properties
-                        to be directly set, and provide notification of changes
-                     </a> using technology-specific techniques below:
-                  </p>
-                  
-                  <ul>
-                     
-                     <li>
-                        												               
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H91" class="html">Using HTML form controls and links</a>
-                        											             
-                     </li>
-                     
-                     <li>
-                        												               
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H44" class="html">Using label elements to associate text labels with form controls</a>
-                        											             
-                     </li>
-                     
-                     <li>
-                        												               
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H64" class="html">Using the title attribute of the frame element</a>
-                        											             
-                     </li>
-                     
-                     <li>
-                        												               
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H65" class="html">Using the title attribute to identify form controls when the label element cannot
-                           be used
-                        </a>
-                        											             
-                     </li>
-                     
-                     <li>
-                        												               
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H88" class="html">Using (X)HTML according to spec</a>
-                        											             
-                     </li>
-                     
-                  </ul>
-                  
-               </li>
-               
-            </ul>
-            
-         </section>
-         
-         <section class="situation" id="name-role-value-situation-1">
-            
-            <h4>Situation B: If using script or code to re-purpose a standard user interface component
-               in a markup language:
-            </h4>
-            
-            <ul>
-               
-               <li>
-                  
-                  <p>Exposing the names and roles, allowing user-settable properties to be directly set,
-                     and providing notification of changes using one of the following techniques:
-                  </p>
-                  
-                  <ul>
-                     
-                     <li>
-                        
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA16" class="aria"></a>
-                        
-                     </li>
-                     
-                  </ul>
-                  
-               </li>
-               
-            </ul>
-            
-         </section>
-         
-         <section class="situation" id="name-role-value-situation-2">
-            
-            <h4>Situation C: If using a standard user interface component in a programming technology:</h4>
-            
-            <ul>
-               
-               <li>
-                  
-                  <p>
-                     										           
-                     <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G135" class="general">Using the accessibility API features of a technology to expose the names and roles,
-                        allow user-settable properties to be directly set, and provide notification of changes
-                     </a> using technology-specific techniques below:
-                     									
-                  </p>
-                  
-                  <ul>
-                                        
-                     <li>
-                        
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF10" class="pdf"></a>
-                        
-                     </li>
-                     
-                     <li>
-                        
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF12" class="pdf"></a>
-                        
-                     </li>
-                     
-                  </ul>
-                  
-               </li>
-               
-            </ul>
-            
-         </section>
-         
-         <section class="situation" id="name-role-value-situation-3">
-            
-            <h4>Situation D: If creating your own user interface component in a programming language:</h4>
-            
-            <ul>
-               
-               <li>
-                  
-                  <p>
-                     										           
-                     <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G10" class="general">Creating components using a technology that supports the accessibility API features
-                        of the platforms on which the user agents will be run to expose the names and roles,
-                        allow user-settable properties to be directly set, and provide notification of changes
-                     </a> using technology-specific techniques below:
-                     									
-                  </p>
-                  
-                  <ul>
-                     
-                     <li>
-                        
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA4" class="aria"></a>
-                        
-                     </li>
-                     
-                     <li>
-                        
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA5" class="aria"></a>
-                        
-                     </li>
-                     
-                     <li>
-                        
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA16" class="aria"></a>
-                        
-                     </li>
-                     
-                  </ul>
-                  
-               </li>
-               
-            </ul>
-            
-         </section>
-         
-      </section>
-      
-      <section id="advisory">
-         <h3>Additional Techniques (Advisory) for Name, Role, Value</h3>
-         
-      </section>
-      
-      <section id="failure">
-         <h3>Failures for Name, Role, Value</h3>
-         
-         
-         <ul>
-            
-            <li>
-								         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F59" class="failure">Failure due to using script to make div or span a user interface control in HTML</a>
-               
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F15" class="failure">Failure due to implementing custom controls that do not use an accessibility API</a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F20" class="failure">Failure due to not updating text alternatives when changes to non-text content occur</a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F68" class="failure">Failure of 1.3.1 and 4.1.2 due to the association of label and user interface controls
-                  not being programmatically determinable
-               </a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F79" class="failure">Failure of Success Criterion 4.1.2 due to the focus state of a user interface component
-                  not being programmatically determinable or no notification of change of focus state
-                  available
-               </a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F86" class="failure">Failure of Success Criterion 4.1.2 due to not providing names for each part of a multi-part
-                  form field, such as a US telephone number
-               </a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F89" class="failure">Failure of 2.4.4 due to using null alt on an image where the image is the only content
-                  in a link
-               </a>
-               								       
-            </li>
-            
-         </ul>
-         
-      </section>
-      
-   </section>
-   
+    </section>
+  </section>
 </body>
 </html>
