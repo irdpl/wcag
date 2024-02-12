@@ -30,7 +30,7 @@
       Typowe rodzaje treści, które mogą nakładać się na elementy z fokusem, to przyklejane stopki, przyklejane nagłówki i niemodalne okna dialogowe. Gdy użytkownik nawiguje tabulatorem po stronie, to te warstwy treści mogą ukryć element, który otrzymuje fokus wraz ze wskaźnikiem fokusu.
     </p>
     <p>
-      Powiadomienie zaimplementowane jako przyklejona treść, takie jak okienko ciasteczek, nie spełni tego kryterium sukcesu, jeśli całkowicie zakryje element, który ma fokus klawiatury. Sposoby spełnienia tego wymogu uwzględniają np. uczynienie okienka modalnym, aby użytkownik musiał je zamknąć przed nawigacją po stronie, lub użycie <a href="https://www.w3.org/TR/css-scroll-snap/#propdef-scroll-padding">dopełnienia przewijania</a>, aby okienko nie nachodziło na inną treść. Powiadomienia, które nie wymagają działania użytkownika, mogą również spełniać to kryterium, zamykając się po utracie fokusu.
+      Powiadomienie zaimplementowane jako przyklejona treść, takie jak okienko ciasteczek, nie spełni tego kryterium sukcesu, jeśli całkowicie zakryje element, który ma fokus klawiatury. Sposoby spełnienia tego wymogu uwzględniają np. uczynienie okienka modalnym, aby użytkownik musiał je zamknąć przed nawigacją po stronie, lub użycie <a href="https://www.w3.org/TR/css-scroll-snap/#propdef-scroll-padding" lang="en" hreflang="en">dopełnienia przewijania</a>, aby okienko nie nachodziło na inną treść. Powiadomienia, które nie wymagają działania użytkownika, mogą również spełniać to kryterium, zamykając się po utracie fokusu.
     </p>
     <p>
       Inna forma zasłaniania może wystąpić, gdy Lightbox lub inne półprzezroczyste efekty nakładają się na element z fokusem. Chociaż zakrycie mniejsze niż 100 procent nie powoduje<q>całkowitego zakrycia</q> komponentu, takie półprzezroczyste nakładanie się może spowodować niespełnienie KS <a href="kontrast-elementow-nietekstowych">1.4.11 Kontrast elementów nietekstowych</a>. Gdy wskaźnik fokusu może być zakryty przez półprzezroczysty element, zdolność wskaźnika fokusu do spełnienia KS 1.4.11 powinna zostać oceniona (i zaliczona), dopóki wskaźnik fokusu znajduje się pod półprzezroczystym elementem. Intencją w obu przypadkach jest, aby komponent otrzymujący fokus nigdy nie był zasłonięty do tego stopnia, ​​że użytkownik nie będzie w stanie określić, który element ma fokus.
@@ -104,7 +104,7 @@
 
         </li>
         <li>
-          <strong>Po otwarciu dodatkowej treści przejmuje ona fokus, a pierścień kart jest ograniczony do nowej treści, dopóki nie zostanie zamknięty.</strong> Ta modalność przypomina nieco okno dialogowe, ponieważ użytkownik nie może nawigować poza otwartą treść za pomocą klawiatury bez uprzedniego jej zamknięcia (zwykle przez naciśnięcie Esc). Jednak w przeciwieństwie do modalnego okna dialogowego, w niektórych sytuacjach użytkownik wskaźnika może być w stanie wchodzić w interakcję z treścią poza otwartą sekcją bez jej zamykania. Ponieważ ten wzorzec potencjalnie stwarza nierównoważne doświadczenia użytkowników klawiatury i wskaźnika, należy go używać ostrożnie. To jednak zapobiega zasłanianiu przez otwartą treść fokusu klawiatury w głównej treści, a zatem powinno spełnić wymaganie KS. Zostało to opisane i pokazane w krótkim filmie w artykule Knowbility w sekcji referencyjnej, pod nagłówkiem <a href="https://knowbility.org/blog/2020/accessible-slide-menus#keep-keyboard-focus-in-the-slide-out-navigation-until-its-closed">Utrzymuj fokus klawiatury w wysuwanej nawigacji, aż zostanie zamknięta</a> (Utrzymuj fokus klawiatury w wysuwanej nawigacji, aż zostanie zamknięta).
+          <strong>Po otwarciu dodatkowej treści przejmuje ona fokus, a pierścień kart jest ograniczony do nowej treści, dopóki nie zostanie zamknięty.</strong> Ta modalność przypomina nieco okno dialogowe, ponieważ użytkownik nie może nawigować poza otwartą treść za pomocą klawiatury bez uprzedniego jej zamknięcia (zwykle przez naciśnięcie Esc). Jednak w przeciwieństwie do modalnego okna dialogowego, w niektórych sytuacjach użytkownik wskaźnika może być w stanie wchodzić w interakcję z treścią poza otwartą sekcją bez jej zamykania. Ponieważ ten wzorzec potencjalnie stwarza nierównoważne doświadczenia użytkowników klawiatury i wskaźnika, należy go używać ostrożnie. To jednak zapobiega zasłanianiu przez otwartą treść fokusu klawiatury w głównej treści, a zatem powinno spełnić wymaganie KS. Zostało to opisane i pokazane w krótkim filmie w artykule Knowbility w sekcji referencyjnej, pod nagłówkiem <a href="https://knowbility.org/blog/2020/accessible-slide-menus#keep-keyboard-focus-in-the-slide-out-navigation-until-its-closed" lang="en" hreflang="en">Utrzymuj fokus klawiatury w wysuwanej nawigacji, aż zostanie zamknięta</a> (Utrzymuj fokus klawiatury w wysuwanej nawigacji, aż zostanie zamknięta).
           <!--
           <figure id="">
           <img src="" alt="" />
@@ -131,7 +131,7 @@
         </li>
       </ul>
       <p>
-        W przypadku gdy treść pozostaje nadal otwarta, a istniejąca treść zostanie zasłonięta, istnieje ryzyko niespełnienia tego kryterium, jeśli użytkownik nie będzie mógł zobaczyć elementu, który otrzymuje fokus. Przykład tego problemu jest opisany i pokazany w krótkim filmie <a href="https://knowbility.org/blog/2020/accessible-slide-menus#slide-out-navigation-stays-open-while-focus-is-on-content-behind-it">Wysuwana nawigacja pozostaje otwarta, gdy fokus jest ustawiony na treści znajdującej się za nią</a>.
+        W przypadku gdy treść pozostaje nadal otwarta, a istniejąca treść zostanie zasłonięta, istnieje ryzyko niespełnienia tego kryterium, jeśli użytkownik nie będzie mógł zobaczyć elementu, który otrzymuje fokus. Przykład tego problemu jest opisany i pokazany w krótkim filmie <a href="https://knowbility.org/blog/2020/accessible-slide-menus#slide-out-navigation-stays-open-while-focus-is-on-content-behind-it" lang="en" hreflang="en">Wysuwana nawigacja pozostaje otwarta, gdy fokus jest ustawiony na treści znajdującej się za nią</a>.
       </p>
 
 
@@ -181,7 +181,7 @@
     <h2>Przykłady</h2>
     <ul>
       <li>
-        Strona ma przyklejoną stopkę (przymocowaną u dołu rzutni). Podczas przewijania strony w dół element z fokusem nie jest całkowicie ukrywany przez stopkę, ponieważ treść w rzutni przewija się w górę, aby zawsze wyświetlać element z fokusem klawiatury za pomocą <a href="https://www.w3.org/TR/css-scroll-snap/#propdef-scroll-padding" rel="nofollow">dopełnienia przewijania</a>.
+        Strona ma przyklejoną stopkę (przymocowaną u dołu rzutni). Podczas przewijania strony w dół element z fokusem nie jest całkowicie ukrywany przez stopkę, ponieważ treść w rzutni przewija się w górę, aby zawsze wyświetlać element z fokusem klawiatury za pomocą <a href="https://www.w3.org/TR/css-scroll-snap/#propdef-scroll-padding" rel="nofollow" lang="en" hreflang="en">dopełnienia przewijania</a>.
       </li>
       <li>
         Na stronie znajduje się pełnowymiarowe okno dialogowe do akceptacji plików cookie. Okno dialogowe jest modalne, co zapobiega dostępowi do innych elementów sterujących na stronie, dopóki nie zostanie zamknięte. Fokus nie jest zasłaniany, ponieważ większa część okna dialogowego do akceptacji plików cookie pozostaje na ekranie (przesłania je do momentu dokonania wyboru), zatem większa część wskaźnika fokusu klawiatury pozostaje widoczna.
@@ -194,7 +194,7 @@
   <section id="resources">
     <h2>Powiązane zasoby</h2>
     <ul>
-      <li><a href="https://knowbility.org/blog/2020/accessible-slide-menus">Let's Focus on Slide-Out Navigation </a> (Umieść fokus na nawigacji wysuwanej)</li>
+      <li><a href="https://knowbility.org/blog/2020/accessible-slide-menus" lang="en" hreflang="en">Let's Focus on Slide-Out Navigation </a> (Umieść fokus na nawigacji wysuwanej)</li>
     </ul>
   </section>
   <section id="techniques">
