@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet xmlns:pl="http://wcag.irdpl.p/2023/pl-functions"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:html="http://www.w3.org/1999/xhtml"
 	xmlns:wcag="https://www.w3.org/WAI/GL/"
@@ -420,4 +421,27 @@
     <noscript><p><img src="//www.w3.org/analytics/piwik/piwik.php?idsite=328&amp;rec=1" style="border:0;" alt="" /></p></noscript>
     <!-- End Matomo Code -->
 	</xsl:template>
+	
+	<xsl:function name="pl:replaceUnsafeChars" as="xs:string">
+		<xsl:param name="inputString" as="xs:string"/>
+		<xsl:sequence select="
+			replace(
+			replace(
+			replace(
+			replace(
+			replace(
+			replace(
+			replace(
+			replace(
+			replace($inputString, 'ą', 'a'), 
+			'ć', 'c'), 
+			'ę', 'e'), 
+			'ł', 'l'), 
+			'ń', 'n'), 
+			'ó', 'o'), 
+			'ś', 's'), 
+			'ż', 'z'), 
+			'ź', 'z')
+		"/>
+	</xsl:function>
 </xsl:stylesheet>

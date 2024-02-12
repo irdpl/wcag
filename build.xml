@@ -105,7 +105,7 @@
 		<mkdir dir="output/guidelines/${guidelines.version}"/>
 		<copy file="css/base.css" todir="output/guidelines/${guidelines.version}"/>
 		<copy file="guidelines/guidelines.css" todir="output/guidelines/${guidelines.version}"/>
-		<copy file="guidelines/relative-luminance.html" todir="output/guidelines/${guidelines.version}"/>
+		<copy file="guidelines/wzgledna-luminancja.html" todir="output/guidelines/${guidelines.version}"/>
 		<exec executable="curl">
 			<arg value="&quot;https://labs.w3.org/spec-generator/?type=respec&amp;url=https://raw.githack.com/w3c/wcag/master/guidelines/index.html&quot;"/>
 			<arg value="-o"/>
@@ -281,7 +281,7 @@
 			<param name="documentset" expression="Understanding"/>
 		</xslt>
 		<copy file="understanding/understanding.css" todir="output/understanding/"/>
-		<copy file="guidelines/relative-luminance.html" todir="output/understanding/"/>
+		<copy file="guidelines/wzgledna-luminancja.html" todir="output/understanding/"/>
 		<copy todir="output/understanding/img/" flatten="true">
 			<fileset dir="understanding">
 				<patternset includes="*/img/*"/>
