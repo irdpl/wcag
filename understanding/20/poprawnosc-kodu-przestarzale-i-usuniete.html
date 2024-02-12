@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl" xml:lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <title>Objaśnienie kryterium sukcesu Poprawność kodu (przestarzałe i usunięte)</title>
+  <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove">
+</head>
+<body>
+  <h1>Objaśnienie kryterium sukcesu Poprawność kodu (przestarzałe i usunięte</h1>
+  <section id="brief">
+    <h2>In brief</h2>
+    <dl>
+      <dt>Goal</dt>
+      <dd>Assistive technology can properly present page content.</dd>
+      <dt>What to do</dt>
+      <dd>Create web pages according to specifications.</dd>
+      <dt>Why it's important</dt>
+      <dd>People can browse web content more easily with their assistive technology.</dd>
+    </dl>
+    <h2>W skrócie</h2>
+    <dl>
+      <dt>Cel</dt>
+      <dd>Technologia wspomagająca może prawidłowo prezentować treść strony</dd>
+      <dt>Zadanie autora</dt>
+      <dd>Twórz strony internetowe zgodnie ze specyfikacjami</dd>
+    </dl>
+
+
+
+  </section>
+  <section id="intent">
+    <h2>Intent of Parsing</h2>
+    <div class="wcag22">
+      <p>Kryterium to zostało usunięte z WCAG 2.2.</p>
+      <p>
+        Celem tego kryterium sukcesu było zapewnienie, że programy użytkownika, w tym technologie wspomagające, będą w stanie dokładnie interpretować i analizować treść. Od czasu opublikowania WCAG 2.0 specyfikacje (takie jak HTML) i przeglądarki poprawiły zdolność wychwytywania błędów w kodzie. Dzieje się tak również w przypadku technologii wspomagających, które kiedyś samodzielnie analizowały znaczniki, ale obecnie polegają na przeglądarce. Z tego powodu to kryterium sukcesu zostało usunięte. Wiele problemów, które nie spełniałyby tego kryterium, nie spełni również <a href="informacje-i-relacje">kryteriów Informacje i relacje</a> lub <a href="nazwa-rola-wartosc">Nazwa, rola, wartość</a>. Inne kwestie są wyłączone w części kryterium „z wyjątkiem sytuacji, gdy specyfikacja dopuszcza takie cechy”.
+      </p>
+      <p>Poniższą treść pozostawiono do celów historycznych, aby pokazać pierwotny zamiar.</p>
+      <hr>
+      <blockquote class="scquote">
+        <p>
+          Kryterium sukcesu <a href="https://www.w3.org/Translations/WCAG21-pl/#poprawnosc-kodu" style="font-weight: bold;">4.1.1 Poprawny kod</a> (poziom A): W treści wprowadzonej przy użyciu języka znaczników, elementy posiadają kompletne znaczniki początkowe i końcowe, elementy są zagnieżdżane według swoich specyfikacji, nie posiadają zduplikowanych atrybutów, a wszystkie ID są unikalne, z wyjątkiem przypadków, kiedy specyfikacja zezwala na wyżej wymienione cechy.
+        </p>
+        <p class="note">
+          Znaczniki początkowe i końcowe, w których brakuje znaku krytycznego, takiego jak zamykający nawias ostry lub cudzysłów o niedopasowanej wartości atrybutu, są niekompletne.
+        </p>
+
+      </blockquote>
+    </div>
+    <p>
+      Celem tego kryterium sukcesu jest zapewnienie, że oprogramowanie użytkownika, w tym technologie wspomagające, będzie w stanie dokładnie interpretować i analizować treść. Jeśli treści nie można przeanalizować w strukturę danych, różne programy użytkownika mogą prezentować ją inaczej lub całkowicie nie być w stanie jej przeanalizować. Niektóre programy użytkownika używają „technik naprawy”, aby renderować źle zakodowaną treść.
+    </p>
+    <p>
+      Ponieważ techniki naprawy różnią się w zależności od oprogramowania użytkownika, autorzy nie mogą zakładać, że treść zostanie dokładnie przeanalizowana w strukturę danych lub że zostanie poprawnie wyrenderowana przez wyspecjalizowane programy użytkownika, w tym technologie wspomagające, chyba że treść zostanie utworzona zgodnie z zasadami określonymi w formalnej gramatyce dla tej technologii. W językach znaczników błędy w składni elementów i atrybutów oraz niepodanie prawidłowo zagnieżdżonych znaczników początkowych/końcowych prowadzą do błędów, które uniemożliwiają aplikacjom użytkownika niezawodne analizowanie treści. Dlatego kryterium sukcesu wymaga, aby treść mogła być analizowana wyłącznie przy użyciu reguł gramatyki formalnej.
+    </p>
+    <div class="note">
+      <p>
+        Pojęcie „dobrze uformowanego” jest bliskie temu, co jest tutaj wymagane. Jednakże dokładne wymagania dotyczące analizy różnią się w zależności od języka znaczników, a większość języków innych niż XML nie definiuje wyraźnie wymagań dotyczących prawidłowej formy. Dlatego też konieczne było bardziej precyzyjne określenie kryterium sukcesu, aby można je było zastosować ogólnie do języków znaczników. Ponieważ termin „dobrze uformowany” jest zdefiniowany tylko w formacie XML i (ponieważ znaczniki końcowe są czasami opcjonalne), prawidłowy kod HTML nie wymaga dobrze dobrze uformowanego kodu, termin ten nie jest używany w tym kryterium sukcesu.
+      </p>
+      <p>
+        Z wyjątkiem jednego kryterium sukcesu ( <a href="zmiana-rozmiaru-tekstu">1.4.4: Zmiana rozmiaru tekstu</a>, które wyraźnie stwierdza, że ​​efekt określony przez kryterium sukcesu musi zostać osiągnięty bez polegania na technologii wspomagającej) autorzy mogą spełnić kryteria sukcesu za pomocą treści zakładających użycie technologii wspomagającej (lub funkcji dostępu w programach klienckich) przez użytkownika, gdzie takie technologie wspomagające (lub funkcje dostępu w programach użytkownika) istnieją i są dostępne dla użytkownika.
+      </p>
+
+    </div>
+  </section>
+  <section id="benefits">
+    <h2>Korzyści</h2>
+    <ul>
+      <li>
+        Zapewnienie, że strony internetowe mają kompletne znaczniki początkowe i końcowe oraz są zagnieżdżone zgodnie ze specyfikacją, pomaga zapewnić dokładne i bezawaryjne działanie technologii wspomagających.
+      </li>
+    </ul>
+  </section>
+  <section id="examples">
+    <h2>Examples of Parsing</h2>
+  </section>
+  <section id="resources">
+    <h2>Resources for Parsing</h2>
+  </section>
+  <section id="techniques">
+    <h2>Techniki</h2>
+    <section id="sufficient">
+      <h3>Wystarczające techniki</h3>
+      <ul>
+        <li>
+          <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G134">G134:  Sprawdzanie poprawności kodu stron internetowych (walidacja)</a>
+        </li>
+        <li>
+          <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G192">G192: Pełna zgodność ze specyfikacjami</a>
+        </li>
+        <li>
+          <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H88">H88: Użycie HTML zgodnie ze specyfikacją</a>
+        </li>
+        <li>
+          <p>Zapewnienie możliwości analizowania stron internetowych przy użyciu jednej z następujących technik:</p>
+          <ul>
+            <li>
+              <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H74">H74: Zapewnienie możliwości parsowania stron internetowych przy użyciu jednej z następujących technik </a> <strong>I</strong> <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H93">H93: Zapewnienie, że znaczniki otwierające i zamykające są używane zgodnie ze specyfikacją </a> <strong>ORAZ </strong> <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H94">H94: Zapewnienie, że elementy nie zawierają zduplikowanych atrybutów</a>
+            </li>
+            <li>
+              <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H75">H75: Zapewnienie, że strony internetowe są dobrze uformowane</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section id="advisory">
+      <h3>Additional Techniques (Advisory) for Parsing</h3>
+    </section>
+    <section id="failure">
+      <h3>Błędy</h3>
+      <ul>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F70">F70: Niespełnienie kryterium sukcesu 4.1.1 z powodu nieprawidłowego użycia znaczników początkowych i końcowych lub atrybutów</a>
+        </li>
+        <li>
+          <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F77">F77: Niespełnienie kryterium sukcesu 4.1.1 z powodu zduplikowanych wartości ID</a>
+        </li>
+      </ul>
+    </section>
+  </section>
+</body>
+</html>
