@@ -1,268 +1,151 @@
 <!DOCTYPE html>
 <html lang="pl" xml:lang="pl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-   <meta charset="UTF-8"></meta>
-   <title>Understanding Bypass Blocks</title>
-   <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove"></link>
+  <meta charset="UTF-8" />
+  <title>Objaśnienie kryterium sukcesu Możliwość pomijania bloków</title>
+  <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove" />
 </head>
 <body>
-   <h1>Understanding Bypass Blocks</h1>
-   
-   <section id="brief">
-		<h2>In brief</h2>
-		<dl>
-         <dt>Goal</dt><dd>Users can more easily navigate by keyboard.</dd>
-         <dt>What to do</dt><dd>Provide a means of skipping repeating content.</dd>
-         <dt>Why it's important</dt><dd>Users reliant on the keyboard interface can move around pages efficiently.</dd> 
-      </dl>
+  <h1>Objaśnienie kryterium sukcesu Możliwość pomijania bloków</h1>
+  <section id="brief">
 
-   </section>
-   
-   <section id="intent">
-      <h2>Intent of Bypass Blocks</h2>
-      
-      
-      <p>The intent of this Success Criterion is to allow people who navigate sequentially
-         through content more direct access to the primary content of the Web page. Web pages
-         and applications often have content that appears on other pages or screens. Examples
-         of repeated blocks of content include but are not limited to navigation links, heading
-         graphics, and advertising frames. Small repeated sections such as individual words,
-         phrases or single links are not considered blocks for the purposes of this provision.
-         
-         
-      </p>
-      
-      <p>This is in contrast to a sighted user's ability to ignore the repeated material either
-         by focusing on the center of the screen (where main content usually appears) or a
-         mouse user's ability to select a link with a single mouse click rather than encountering
-         every link or form control that comes before the item they want.
-      </p>
-      
-      <p>It is not the intent of this Success Criterion to require authors to provide methods
-         that are redundant to functionality provided by the user agent. Most web browsers
-         provide keyboard shortcuts to move the user focus to the top of the page, so if a
-         set of navigation links is provided at the bottom of a web page providing a "skip"
-         link may be unnecessary.
-      </p>
-      
-      <div class="note">
-         
-         <p>Although this Success Criterion deals with blocks of content that are repeated on
-            multiple pages, we also strongly promote structural markup on individual pages as
-            per Success Criteria 1.3.1.
-            
-         </p>
-         
-      </div>
-      
-      <p>Although the success criterion does not specifically use the term “within a set of
-         web pages”, the concept of the pages belonging to a set is implied.  An author would
-         not be expected to avoid any possible duplication of content in any two pages that
-         are not in some way related to each other;  that are not "Web pages that share a common
-         purpose and that are created by the same author, group or organization” (the definition
-         of set of web pages).
-      </p>
-      
-      <div class="note">
-         
-         <p>Even for web pages that are not in a set, if a web page has blocks of text that are
-            repeated within the page it may be helpful (but not required) to provide a means to
-            skip over them.
-         </p>
-         
-      </div>
-      
-      
-   </section>
-   <section id="benefits">
-      <h2>Benefits of Bypass Blocks</h2>
-      
-      <p>When this Success Criterion is not satisfied, it may be difficult for people with
-         some disabilities to reach the main content of a Web page quickly and easily:</p>
-      <ul>
+    <h2>W skrócie</h2>
+    <dl>
+      <dt>Cel</dt>
+      <dd>Użytkownicy mogą łatwiej nawigować za pomocą klawiatury</dd>
+      <dt>Zadanie autora</dt>
+      <dd>Zapewnij sposób pomijania powtarzających się treści</dd>
+      <dt>Dlaczego to jest ważne</dt>
+      <dd>Użytkownicy polegający na interfejsie klawiatury mogą sprawnie poruszać się po stronach.</dd>
+    </dl>
 
-         
-         <li>Screen reader users who visit several pages on the same site can avoid having to hear
-            all heading graphics and dozens of navigation links on every page before the main
-            content is spoken.
-         </li>
-         
-         <li>People who use only the keyboard or a keyboard interface can reach content with fewer
-            keystrokes. Otherwise, they might have to make dozens of keystrokes before reaching
-            a link in the main content area. This can take a long time and may cause severe physical
-            pain for some users.
-            
-         </li>
-         
-         <li>People who use screen magnifiers do not have to search through the same headings or
-            other blocks of information to find where the content begins each time they enter
-            a new page.
-         </li>
-         
-         <li>People with cognitive limitations as well as people who use screen readers may benefit
-            when links are grouped into lists
-         </li>
-         
-      </ul>
-      
-   </section>
-   
-   <section id="examples">
-      <h2>Examples of Bypass Blocks</h2>
-      
+
+  </section>
+  <section id="intent">
+    <h2>Intencja</h2>
+    <p>
+      Intencją tego kryterium sukcesu jest umożliwienie bezpośredniego dostępu do głównej treści strony internetowej osobom, które poruszają się po treści sekwencyjnie.
+    </p>
+    <p>
+      Strony internetowe i aplikacje często zawierają treść, która powtarza się na innych stronach lub ekranach. Przykładami powtarzających się bloków treści są między innymi łącza nawigacyjne, grafiki nagłówków strony i ramki reklamowe. Małe, powtarzające się sekcje, takie jak pojedyncze słowa, frazy lub pojedyncze łącza, w rozumieniu tego przepisu nie są uznawane za bloki treści.
+    </p>
+    <p>
+      Kontrastuje to ze zdolnością widzącego użytkownika do ignorowania powtarzającego się materiału poprzez skupienie się na środku ekranu (gdzie zwykle pojawia się główna treść) lub zdolnością użytkownika myszy do wybrania łącza jednym kliknięciem myszy, zamiast odwiedzania każdego łącza lub kontrolki formularza, które pojawią się przed żądanym elementem.
+    </p>
+    <p>
+      Nie jest intencją tego kryterium sukcesu wymaganie, aby autorzy dostarczali metod, które są nadmiarowe w stosunku do funkcji zapewnianych przez program użytkownika. Większość przeglądarek internetowych udostępnia skróty klawiaturowe umożliwiające przeniesienie fokusu użytkownika na górę strony, więc jeśli zestaw łączy nawigacyjnych znajduje się u dołu strony internetowej, podanie łącza <q>pomiń</q> może być niepotrzebne.
+    </p>
+
+    <p class="note">
+      Chociaż to kryterium sukcesu dotyczy bloków treści, które powtarzają się na wielu stronach, zdecydowanie promujemy również znaczniki strukturalne na poszczególnych stronach zgodnie z kryterium sukcesu 1.3.1.
+    </p>
+
+    <p>
+      Chociaż kryterium sukcesu nie używa konkretnie terminu <q>zbioru stron internetowych</q>, pojęcie stron należących do zbioru jest dorozumiane. Nie oczekuje się, że autor uniknie ewentualnego powielania treści na dowolnych dwóch stronach, które nie są ze sobą w jakiś sposób powiązane; które nie są <q>zbiorem stron internetowych, które mają wspólny cel i które są tworzone przez tego samego autora, grupę lub organizację</q> (definicja <a class="glossary">zestawu stron internetowych)</a>.
+    </p>
+    <div class="note">
+      <p>
+        Nawet w przypadku stron internetowych, które nie znajdują się w zestawie, jeśli strona internetowa zawiera bloki tekstu, które powtarzają się na stronie, pomocne (ale nie wymagane) może być zapewnienie sposobu na ich pominięcie.
+      </p>
+    </div>
+  </section>
+  <section id="benefits">
+    <h2>Korzyści</h2>
+    <p>
+      Gdy to kryterium sukcesu nie jest spełnione, osobom  niepełnosprawnościami może być trudno szybko i łatwo dotrzeć do głównej treści strony internetowej. Mechanizm pomijania przynosi korzyści wielu użytkownikom:
+    </p>
+    <ul>
+      <li>
+        Użytkownicy czytników ekranu, którzy odwiedzają kilka stron w tej samej witrynie, mogą uniknąć konieczności odsłuchiwania wszystkich grafik nagłówków i dziesiątek łączy nawigacyjnych na każdej stronie, zanim zostanie im odczytana treść główna.
+      </li>
+      <li>
+        Osoby, które używają tylko klawiatury lub interfejsów klawiaturowych, mogą dotrzeć do treści po mniejszej liczbie naciśnięć klawiszy. W przeciwnym razie mogą być zmuszone wykonać dziesiątki naciśnięć klawiszy, zanim dotrą do głównego obszaru treści. Może im to zająć dużo czasu, a u niektórych użytkowników może powodować silny ból fizyczny.
+      </li>
+      <li>
+        Osoby korzystające z lup ekranowych nie muszą przeszukiwać za każdym razem, gdy wchodzą na nową stronę tych samych nagłówków, ani innych bloków informacji, aby znaleźć miejsce, w którym zaczyna się główna treść strony.
+      </li>
+      <li>
+        Osoby z ograniczeniami poznawczymi, a także osoby korzystające z czytników ekranu mogą odnieść korzyści z grupowania łączy w listy.
+      </li>
+    </ul>
+  </section>
+  <section id="examples">
+    <h2>Przykłady</h2>
+    <ul>
+      <li>
+        Strona główna organizacji informacyjnej zawiera główny artykuł na środku strony, otoczony wieloma blokami i paskami bocznymi służącymi do reklamowania, wyszukiwania i innych usług. U góry strony znajduje się łącze, który przenosi do głównego artykułu. Bez korzystania z tego łącza użytkownik klawiatury musi przejść przez około 40 łączy, aby dojść do głównego wątku; użytkownik czytnika ekranu musi odsłuchać 200 słów; a użytkownik lupy ekranowej musi rozejrzeć się za lokalizacją obszaru z treścią główną
+      </li>
+      <li>
+        Witryna e-commerce zawiera długą listę filtrów przed wyświetleniem wyników wyszukiwania. Łącze nad listą umożliwia użytkownikom pominięcie filtrów i szybkie dotarcie do prezentacji produktu.
+      </li>
+    </ul>
+  </section>
+  <section id="resources">
+    <h2>Powiązane zasoby</h2>
+    <ul>
+      <li>
+        <a href="http://webaim.org/techniques/semanticstructure/">WebAIM: Semantic Structure</a> (WebAIM: Struktura semantyczna)
+      </li>
+      <li>
+        <a href="http://accessibility.psu.edu/headingshtml/">Heading Tags</a> (Znaczniki nagłówków)
+      </li>
+    </ul>
+  </section>
+  <section id="techniques">
+    <h2>Techniki</h2>
+    <section id="sufficient">
+      <h3>Wystarczające techniki</h3>
       <ul>
-         
-         <li>A news organization's home page contains a main story in the middle of the page, surrounded
-            by many blocks and sidebars for advertising, searching, and other services. There
-            is a link at the top of the page that jumps to the main story. Without using this
-            link, a keyboard user needs to tab through approximately 40 links to reach the main
-            story; the screen reader user has to listen to 200 words; and the screen magnifier
-            user must search around for the location of the main body.
-         </li>
-         <li>An e-commerce website includes a long list of filters prior to the search results listing. 
-            A link above the list enables users to skip the filters and get to the product results quickly.</li>
-         
+        <li>
+          <p>Tworzenie łączy w celu pominięcia bloków powtarzanego materiału za pomocą jednej z poniższych technik:</p>
+          <ul>
+            <li>
+              <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G1">G1: Dodanie łącza u góry każdej strony, który prowadzi bezpośrednio do głównego obszaru treści</a>
+            </li>
+            <li>
+              <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G123">G123: Dodanie na początku bloku powtarzanej treści łącza, aby przejść na koniec bloku</a>
+            </li>
+            <li>
+              <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G124">G124: Dodawanie na początku strony łączy do każdego obszaru treści</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>
+            Grupowanie bloków powtarzanego materiału, które można pomijać, za pomocą jednej z następujących technik:
+          </p>
+          <ul>
+            <li>
+              <a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA11">ARIA11: Użycie punktów orientacyjnych ARIA do określenia kluczowych obszarów strony</a>
+            </li>
+            <li>
+              <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H69">H69: Zapewnienie nagłówków na początku każdej sekcji treści </a>
+            </li>
+            <li>
+              <a class="pdf" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF9">PDF9: Zapewnianie nagłówków poprzez oznaczanie treści znacznikami nagłówków w dokumentach PDF</a>
+            </li>
+            <li>
+              <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H70">H70: Użycie elementów ramek do grupowania bloków powtarzanego materiału </a> <strong>ORAZ</strong> <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H64">H64: Użycie atrybutu title do tytułowania elementu iframe</a>
+            </li>
+            <li>
+              <a class="script" href="https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR28">SCR28: Korzystanie z rozwijanego i zwijanego menu w celu ominięcia bloku treści</a>
+            </li>
+          </ul>
+        </li>
       </ul>
-      
-   </section>
-   
-   <section id="resources">
-      <h2>Resources for Bypass Blocks</h2>
-      
-      
+    </section>
+    <section id="advisory">
+      <h3>Techniki pomocnicze</h3>
       <ul>
-         
-         <li>
-            
-            <a href="http://webaim.org/techniques/semanticstructure/">WebAIM: Semantic Structure</a>
-            
-         </li>
-         
-         <li>
-            
-            <a href="http://accessibility.psu.edu/headingshtml/">Heading Tags</a>
-            
-         </li>
-         
+        <li>
+          <a class="css" href="https://www.w3.org/WAI/WCAG22/Techniques/css/C6">C6: Pozycjonowanie treści za pomocą znaczników strukturalnych</a>
+        </li>
+        <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/html/H97">H97: Grupowanie powiązanych łączy za pomocą elementu nav</a></li>
       </ul>
-      
-   </section>
-   
-   <section id="techniques">
-      <h2>Techniques for Bypass Blocks</h2>
-      
-      
-      <section id="sufficient">
-         <h3>Sufficient Techniques for Bypass Blocks</h3>
-         
-         
-         <ul>
-            
-            <li>
-               
-               <p>Creating links to skip blocks of repeated material using one of the following techniques:</p>
-               
-               <ul>
-                  
-                  <li>
-                     											             
-                     <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G1" class="general">Adding a link at the top of each page that goes directly to the main content area</a>
-                     										           
-                  </li>
-                  
-                  <li>
-                     											             
-                     <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G123" class="general">Adding a link at the beginning of a block of repeated content to go to the end of
-                        the block
-                     </a>
-                     										           
-                  </li>
-                  
-                  <li>
-                     											             
-                     <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G124" class="general">Adding links at the top of the page to each area of the content</a>
-                     										           
-                  </li>
-                  
-               </ul>
-               
-            </li>
-            
-            <li>
-               
-               <p>Grouping blocks of repeated material in a way that can be skipped, using one of the
-                  following techniques:
-               </p>
-               
-               <ul>
-                  
-                  <li>
-                     
-                     <a href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11" class="aria"></a>
-                     
-                  </li>
-                  
-                  <li>
-                     											             
-                     <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H69" class="html">Providing Heading elements at the beginning of each section of content</a>
-                     										           
-                  </li>
-                  
-                  <li>
-                     
-                     <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF9" class="pdf"></a>
-                     
-                  </li>
-                  
-                  <li>
-                     											             
-                     <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H70" class="html">Using frame elements to group blocks of repeated material</a>
-                     											             
-                     <strong>AND</strong>
-                     											             
-                     <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H64" class="html">Using the title attribute of the frame and iframe elements</a>
-                     										           
-                  </li>
-                  
-                  <li>
-                     											             
-                     <a href="https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR28" class="script">Using an expandable and collapsible menu</a>
-                     										           
-                  </li>
-                  
-               </ul>
-               
-            </li>
-            
-         </ul>
-         
-      </section>
-      
-      <section id="advisory">
-         <h3>Additional Techniques (Advisory) for Bypass Blocks</h3>
-         
-         
-         <ul>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C6" class="css">Positioning content based on structural markup</a>
-               								       
-            </li>
-         	
-         	<li><a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H97">H97</a></li>
-            
-         </ul>
-         
-      </section>
-      
-      <section id="failure">
-         <h3>Failures for Bypass Blocks</h3>
-         
-         
-      </section>
-      
-   </section>
-   
+    </section>
+    <section id="failure">
+      <h3>Failures for Bypass Blocks</h3>
+    </section>
+  </section>
 </body>
 </html>

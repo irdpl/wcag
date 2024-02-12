@@ -1,162 +1,102 @@
 <!DOCTYPE html>
 <html lang="pl" xml:lang="pl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-   <meta charset="UTF-8"></meta>
-   <title>Understanding Location</title>
-   <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove"></link>
+  <meta charset="UTF-8" />
+  <title>Objaśnienie kryterium sukcesu Lokalizacja</title>
+  <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove" />
 </head>
 <body>
-   <h1>Understanding Location</h1>
-   
-   <section id="brief">
-      <h2>In brief</h2>
-      <dl>
-         <dt>Goal</dt><dd>Users know where they are in a set of pages.</dd>
-         <dt>What to do</dt><dd>Use breadcrumbs, site maps, or other indicators to give context.</dd>
-         <dt>Why it's important</dt><dd>Location indicators reduce confusion for people with cognitive disabilities.</dd> 
-      </dl>
+  <h1>Objaśnienie kryterium sukcesu Lokalizacja</h1>
+  <section id="brief">
 
-   </section>
-   
-   
-   <section id="intent">
-      <h2>Intent of Location</h2>
-      
-      
-      <p>The intent of this Success Criterion is to provide a way for the user to orient herself
-         within a set of Web pages, a Web site, or a Web application and find related information.
-      </p>
-      
-      
-   </section>
-   <section id="benefits">
-      <h2>Benefits of Location</h2>
-      
-      
+
+    <h2>W skrócie</h2>
+    <dl>
+      <dt>Cel</dt>
+      <dd>Użytkownicy wiedzą, gdzie znajdują się w zestawie stron</dd>
+      <dt>Co zrobić</dt>
+      <dd>Użyj ścieżki powrotu, mapy witryny lub innych wskaźników, aby zapewnić kontekst.</dd>
+      <dt>Dlaczego to jest ważne</dt>
+      <dd>Wskaźniki lokalizacji zmniejszają dezorientację osób z problemami poznawczymi.</dd>
+    </dl>
+
+
+  </section>
+  <section id="intent">
+    <h2>Intencja</h2>
+    <p>
+      Intencją tego kryterium sukcesu jest zapewnienie użytkownikowi sposobu na zorientowanie się w zestawie stron internetowych, witrynie internetowej lub aplikacji internetowej i znalezienie powiązanych informacji.
+    </p>
+  </section>
+  <section id="benefits">
+    <h2>Korzyści</h2>
+    <ul>
+      <li>
+        To kryterium sukcesu jest pomocne, które mają trudności w utrzymaniu uwagi, które mogą być zakłopotane, wykonując długą serię kroków nawigacyjnych na stronie internetowej. Jest to również pomocne, gdy użytkownik podąża za łączem bezpośrednio do strony znajdującej się głęboko w zestawie stron internetowych i musi poruszać się po witrynie, aby zrozumieć treść tej strony lub znaleźć więcej powiązanych informacji.
+      </li>
+    </ul>
+  </section>
+  <section id="examples">
+    <h2>Przykłady</h2>
+    <dl>
+      <dt>Łącza pomagające użytkownikowi określić swoją lokalizację w witrynie</dt>
+      <dd>
+        Grupa badawcza jest częścią wydziału edukacyjnego na uniwersytecie. Strona główna zawiera łącza do strony głównej wydziału i strony głównej uniwersytetu.
+      </dd>
+      <dt>Ścieżka powrotu</dt>
+      <dd>
+        Portal internetowy organizuje tematy w kategorie. Gdy użytkownik porusza się po kategoriach i podkategoriach, ścieżka powrotu pokazuje aktualną lokalizację w hierarchii kategorii. Każda strona zawiera również łącze do strony głównej portalu.
+      </dd>
+    </dl>
+  </section>
+  <section id="resources">
+    <h2>Powiązane zasoby</h2>
+    <ul>
+      <li>
+        <a href="http://www.standards-schmandards.com/2004/title-text-separators/" lang="en" hreflang="en">The Sound of the Accessible Title Tag Separator</a> (Dźwięk dostępnego separatora znaczników tytułu)
+      </li>
+    </ul>
+  </section>
+  <section id="techniques">
+    <h2>Techniki</h2>
+    <section id="sufficient">
+      <h3>Sufficient Techniques for Location</h3>
       <ul>
-         
-         <li>This Success Criterion is helpful for people with a short attention span who may become
-            confused when following a long series of navigation steps to a Web page. It is also
-            helpful when a user follows a link directly to a page deep within a set of Web pages
-            and needs to navigate that Web site to understand the content of that page or to find
-            more related information.
-         </li>
-         
+        <li>
+          <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G65">G65: Zapewnienie ścieżki powrotu</a>
+        </li>
+        <li>
+          <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G63">G63: Zapewnienie mapy witryny</a>
+        </li>
+        <li>
+          <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G128">G128: Wskazanie bieżącej lokalizacji w paskach nawigacyjnych</a>
+        </li>
+        <li>
+          <p>
+            <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G127">G127: Określenie relacji strony internetowej z większym zbiorem stron internetowych</a> za pomocą jednej z następujących technik:
+          </p>
+          <ul>
+            <li>
+              <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H59">H59: Użycie elementu link i narzędzi nawigacyjnych</a>
+            </li>
+          </ul>
+        </li>
       </ul>
-      
-   </section>
-   
-   <section id="examples">
-      <h2>Examples of Location</h2>
-      
-      <dl>
-         <dt>Links to help user determine their location in a site</dt>
-         <dd>A research group is part of an educational department at a university. The group's
-               home page links to the department home page and the university's home page.</dd>
-         <dt>A breadcrumb trail</dt>
-         <dd>A portal Web site organizes topics into categories. As the user navigates through
-               categories and subcategories, a breadcrumb trail shows the current location in the
-               hierarchy of categories. Each page also contains a link to the portal home page.</dd>
-      </dl>
-      
-   </section>
-   
-   <section id="resources">
-      <h2>Resources for Location</h2>
-      
-      
+    </section>
+    <section id="advisory">
+      <h3>Techniki pomocnicze</h3>
       <ul>
-         
-         <li>
-            								       
-            <a href="http://www.standards-schmandards.com/2004/title-text-separators/">The Sound of the Accessible Title Tag Separator</a>
-            							     
-         </li>
-         
+        <li>
+          <a class="pdf" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF14">PDF14: Zapewnianie nagłówków i stopek w dokumentach PDF</a>
+        </li>
+        <li>
+          <a class="pdf" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF17">PDF17: Określanie spójnej numeracji stron w dokumentach PDF</a>
+        </li>
       </ul>
-      
-   </section>
-   
-   <section id="techniques">
-      <h2>Techniques for Location</h2>
-      
-      
-      <section id="sufficient">
-         <h3>Sufficient Techniques for Location</h3>
-         
-         
-         <ul>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G65" class="general">Providing a breadcrumb trail</a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G63" class="general">Providing a Site Map</a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G128" class="general">Indicating current location within navigation bars</a>
-               								       
-            </li>
-            
-            <li>
-               
-               <p> 
-                  
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G127" class="general">Identifying a Web page's relationship to a larger collection of Web pages</a> using one of the following techniques:
-               </p>
-               
-               <ul>
-                  
-                  <li>
-                     											             
-                     <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H59" class="html">Using the link element and navigation tools</a>
-                     										           
-                  </li>
-                  
-               </ul>
-               
-            </li>
-            
-         </ul>
-         
-      </section>
-      
-      <section id="advisory">
-         <h3>Additional Techniques (Advisory) for Location</h3>
-         
-         
-         <ul>
-            
-            <li>
-               
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF14" class="pdf"></a>
-               
-            </li>
-            
-            <li>
-               
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF17" class="pdf"></a>
-               
-            </li>
-            
-         </ul>
-         
-      </section>
-      
-      <section id="failure">
-         <h3>Failures for Location</h3>
-         
-         
-      </section>
-      
-   </section>
-   
+    </section>
+    <section id="failure">
+      <h3>Failures for Location</h3>
+    </section>
+  </section>
 </body>
 </html>
