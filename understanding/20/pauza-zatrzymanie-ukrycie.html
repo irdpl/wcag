@@ -1,329 +1,177 @@
 <!DOCTYPE html>
 <html lang="pl" xml:lang="pl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-   <meta charset="UTF-8"></meta>
-   <title>Understanding Pause, Stop, Hide</title>
-   <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove"></link>
+  <meta charset="UTF-8" />
+  <title>Objaśnienie kryterium sukcesu Pauza, zatrzymanie, ukrycie</title>
+  <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove" />
 </head>
 <body>
-   <h1>Understanding Pause, Stop, Hide</h1>
-   
-   <section id="brief">
-		<h2>In brief</h2>
-		<dl>
-         <dt>Goal</dt><dd>Fewer users are distracted by content that updates or moves.</dd>
-         <dt>What to do</dt><dd>Let users control content changes that occur in parallel with other content.</dd>
-         <dt>Why it's important</dt><dd>Some people with cognitive disabilities and attention deficits cannot concentrate with continual movement.</dd> 
-      </dl>
-
-   </section>
-   
-   <section id="intent">
-      <h2>Intent of Pause, Stop, Hide</h2>
-      
-      
-      <p>The intent of this Success Criterion is to avoid distracting users during their interaction
-         with a Web page.
-      </p>
-      
-      <p>"Moving, blinking and scrolling" refers to content in which the visible content conveys
-         a sense of motion. Common examples include motion pictures, synchronized media presentations,
-         animations, real-time games, and scrolling stock tickers. "Auto-updating" refers to
-         content that updates or disappears based on a preset time interval. Common time-based
-         content includes audio, automatically updated weather information, news, stock price
-         updates, and auto-advancing presentations and messages. The requirements for moving,
-         blinking and scrolling content and for auto-updating content are the same except that:
-      </p>
-      
+  <h1>Objaśnienie kryterium sukcesu Pauza, zatrzymanie, ukrycie</h1>
+  <section id="brief">
+    <h2>W skrócie</h2>
+    <dl>
+      <dt>Cel</dt>
+      <dd>Mniej użytkowników jest rozpraszanych przez treści, które się aktualizują lub przesuwają.</dd>
+      <dt>Co zrobić</dt>
+      <dd>Pozwól użytkownikom kontrolować zmiany treści zachodzące równolegle z innymi treściami.</dd>
+      <dt>Dlaczego to jest ważne</dt>
+      <dd>Niektóre osoby z zaburzeniami poznawczymi i deficytami uwagi nie mogą skoncentrować się na ciągłym ruchu.</dd>
+    </dl>
+  </section>
+  <section id="intent">
+    <h2>Intencja</h2>
+    <p>
+      Intencją tego kryterium sukcesu jest uniknięcie rozpraszania użytkowników podczas interakcji ze stroną internetową.
+    </p>
+    <p>
+      „Poruszanie się, przesuwanie, migotanie” odnosi się do treści, w których widoczna treść daje poczucie ruchu. Typowe przykłady obejmują filmy, zsynchronizowane prezentacje multimedialne, animacje, gry w czasie rzeczywistym i przewijane znaczniki akcji. „Automatyczna aktualizacja” odnosi się do treści, która aktualizuje się lub znika w oparciu o wstępnie ustawiony przedział czasu. Typowe treści oparte na czasie obejmują dźwięk, automatycznie aktualizowane informacje o pogodzie, wiadomości, aktualizacje cen akcji oraz automatyczne postępujące prezentacje i wiadomości. Wymagania dotyczące przenoszenia, migania i przewijania treści oraz automatycznej aktualizacji treści są takie same, z wyjątkiem:
+    </p>
+    <ul>
+      <li>
+        twórcy mają możliwość zapewnienia użytkownikowi środków do kontrolowania częstotliwości aktualizacji, gdy treść jest automatycznie aktualizowana i
+      </li>
+      <li>
+        nie ma pięciosekundowego wyjątku dla automatycznej aktualizacji, ponieważ automatyczna aktualizacja przez kilka sekund, a następnie zatrzymanie, nie ma sensu
+      </li>
+    </ul>
+    <p>
+      Przesuwanie lub automatyczne aktualizacje treści mogą stanowić barierę dla każdego, kto ma problemy z szybkim odczytem tekstu statycznego, a także dla każdego, kto ma problemy ze śledzeniem poruszających się obiektów. Może również powodować problemy dla czytników ekranu.
+    </p>
+    <p>
+      Poruszanie treści może być również poważnym rozproszeniem dla niektórych osób. Niektóre grupy, szczególnie te z zaburzeniami deficytu uwagi, uważają, że migające treści rozpraszają, co utrudnia im koncentrację na innych częściach strony internetowej. Wybrano pięć sekund, ponieważ jest to wystarczająco długi czas, aby przyciągnąć uwagę użytkownika, ale nie tak długi, aby użytkownik nie mógł przeczekać rozproszenia, jeśli jest to konieczne do korzystania ze strony.
+    </p>
+    <p>
+      Wstrzymane treści można wznowić w czasie rzeczywistym lub kontynuować odtwarzanie od momentu, w którym użytkownik zakończył pracę.
+    </p>
+    <ul>
+      <li>
+        <p>
+          Wstrzymywanie i wznawianie w miejscu, w którym użytkownik przerwał, jest najlepsze dla użytkowników, którzy chcą wstrzymać czytanie treści i działa najlepiej, gdy treść nie jest powiązana ze zdarzeniem lub stanem w czasie rzeczywistym.
+        </p>
+        <div class="note">
+          <p>
+            Zobacz<a href="timing-adjustable">KS 2.2.1: Dostosowanie czasu </a>, aby poznać dodatkowe wymagania związane z ograniczeniami czasowymi odczytu.
+          </p>
+        </div>
+      </li>
+      <li>
+        <p>
+          Wstrzymanie i przeskakiwanie do bieżącego wyświetlacza (po zwolnieniu pauzy) jest lepsze dla informacji o charakterze rzeczywistym lub „statusu”. Na przykład radar pogodowy, znacznik akcji, kamera drogowa lub licznik czasu aukcji przedstawiałyby wprowadzające w błąd informacje, gdyby przerwa spowodowała wyświetlanie starych informacji po ponownym uruchomieniu treści.
+        </p>
+        <div class="note">
+          <p>
+            Ukrywanie treści miałoby taki sam efekt jak wstrzymanie i przeskoczenie do bieżącego wyświetlania (po zwolnieniu pauzy).
+          </p>
+        </div>
+      </li>
+    </ul>
+    <p>
+      Aby mechanizm został uznany za „mechanizm wstrzymania przez użytkownika”, musi on zapewnić użytkownikowi środki do wstrzymania, które nie wiążą użytkownika ani fokusu, aby strona nie mogła być używana. Słowo „pauza” jest tutaj rozumiane w znaczeniu „przycisku pauzy”, chociaż można użyć innych mechanizmów niż przycisk. Zatrzymanie animacji tylko tak długo, jak użytkownik skupia się na niej (gdy uruchamia się ponownie, gdy tylko użytkownik odsunie fokus) nie jest uważane za „mechanizm wstrzymania przez użytkownika”, ponieważ sprawia, że strona jest bezużyteczna w tym procesie i nie spełnia tego kryterium sukcesu.
+    </p>
+    <p>
+      Ważne jest, aby pamiętać, że terminy „migotanie” i „błyskanie” mogą czasami odnosić się do tej samej treści.
+    </p>
+    <ul>
+      <li>
+        „Migotanie” odnosi się do treści, które powodują problem z rozproszeniem uwagi. Migotanie może być dozwolone przez krótki czas, o ile się zatrzymuje (lub może zostać zatrzymane)
+      </li>
+      <li>
+        „Błyskanie” odnosi się do treści, które mogą wywołać napad (jeśli jest większy niż 3 na sekundę i wystarczająco duży i jasny). Nie można na to pozwolić nawet na sekundę, ponieważ może to spowodować atak. Wyłączenie błyskania również nie jest opcją, ponieważ napad może nastąpić szybciej, niż większość użytkowników mogłaby go wyłączyć.
+      </li>
+      <li>
+        Migotanie zwykle nie występuje z prędkością 3 na sekundę lub więcej, ale może. Jeśli migotanie następuje szybciej niż 3 na sekundę, byłoby to również uważane za błysk.
+      </li>
+    </ul>
+  </section>
+  <section id="benefits">
+    <h2>Korzyści</h2>
+    <ul>
+      <li>
+        Udostępnianie treści, które przestają migać po pięciu sekundach lub udostępnienie mechanizmu umożliwiającego użytkownikom zatrzymanie migania treści umożliwia osobom z określonymi niepełnosprawnościami interakcję ze stroną internetową.
+      </li>
+      <li>
+        Jednym z zastosowań treści, które migają, jest zwrócenie uwagi odwiedzającego na tę treść. Chociaż jest to skuteczna technika dla wszystkich widzących użytkowników, może stanowić problem dla niektórych użytkowników, jeśli będzie się utrzymywać. W przypadku niektórych grup, w tym osób o niskim poziomie umiejętności czytania i pisania, osób z niepełnosprawnością intelektualną i osób z zaburzeniami koncentracji uwagi, migające treści mogą utrudniać lub nawet uniemożliwiać interakcję z resztą strony internetowej.
+      </li>
+    </ul>
+  </section>
+  <section id="examples">
+    <h2>Przykłady</h2>
+    <dl>
+      <dt>Niezbędną animację można wstrzymać bez wpływu na aktywność</dt>
+      <dd>Witryna internetowa pomaga użytkownikom zrozumieć „jak wszystko działa” poprzez animacje demonstrujące procesy. Animacje mają przyciski „pauza” i „uruchom ponownie”.</dd>
+      <dt>Znacznik akcji</dt>
+      <dd>Znacznik akcji ma przyciski „pauza” i „uruchom ponownie”. Wstrzymanie znacznika powoduje zatrzymanie go na aktualnie wyświetlonej akcji. Ponowne uruchomienie powoduje wznowienie znacznika z punktu zatrzymania, ale z powiadomieniem, że wyświetlanie jest opóźnione. Ponieważ celem paska notowań jest zwykle dostarczanie informacji w czasie rzeczywistym, może istnieć również przycisk, który przesunie pasek do ostatnio notowanych akcji.</dd>
+      <dt>Gra jest zaprojektowana w taki sposób, że użytkownicy zmieniają się, zamiast rywalizować w czasie rzeczywistym.</dt>
+      <dd>Jeden z graczy może przerwać grę bez unieważniania jej aspektu rywalizacji.</dd>
+      <dt>Reklama internetowa</dt>
+      <dd>Reklama miga, aby przyciągnąć uwagę widzów, ale zatrzymuje się po 5 sekundach</dd>
+      <dt>Monit formularza</dt>
+      <dd>Formularz miga strzałką w pobliżu przycisku przesyłania, jeśli użytkownik zakończy wypełnianie formularza, ale nie aktywuje przycisku przesyłania. Mruganie zatrzymuje się po 5 sekundach.</dd>
+      <dt>Animacja</dt>
+      <dd>Animacja działa w górnej części strony, ale w dolnej części animacji znajduje się przycisk „zamroź animację”.</dd>
+      <dt>Animacja „ładowania”</dt>
+      <dd>Animacja preloadera jest wyświetlana na stronie, która wymaga pobrania określonego procentu dużego pliku przed rozpoczęciem odtwarzania. Animacja jest jedyną treścią na stronie i instruuje użytkownika, aby poczekał, aż wideo się załaduje. Ponieważ ruchoma treść nie jest prezentowana równolegle z innymi treściami, nie ma potrzeby wprowadzania mechanizmu jej wstrzymania, zatrzymania lub ukrywania, mimo że animacja może działać dłużej niż 5 sekund dla użytkowników z wolniejszymi połączeniami.</dd>
+      <dt>Pełnostronicowa reklama</dt>
+      <dd>Witryna wymaga, aby wszyscy użytkownicy obejrzeli 15-sekundową reklamę, zanim będą mogli uzyskać dostęp do bezpłatnych treści dostępnych na ich stronie. Ponieważ oglądanie reklamy jest wymogiem dla wszystkich użytkowników i ponieważ nie jest prezentowana równolegle z innymi treściami, nie trzeba zapewnić mechanizmu jej wstrzymania, zatrzymywania lub ukrywania.</dd>
+    </dl>
+  </section>
+  <section id="resources">
+    <h2>Resources for Pause, Stop, Hide</h2>
+  </section>
+  <section id="techniques">
+    <h2>Techniki</h2>
+    <section id="sufficient">
+      <h3>Wystarczające techniki</h3>
       <ul>
-         
-         <li>authors have the option of providing the user with a means to control the frequency
-            of updates when content is auto-updating and
-         </li>
-         
-         <li>there is no five second exception for auto-updating since it makes little sense to
-            auto-update for a few seconds and then stop
-         </li>
-         
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G4" class="general">Umożliwienie zatrzymania treści i wznowienie jej od miejsca, w którym została wstrzymana</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR33" class="script">Użycie skryptu do przewijania treści i zapewniania mechanizmu do jej wstrzymywania</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G11" class="general">Tworzenie treści, która miga krócej niż 5 sekund</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G187" class="general">Użycie technologii włączającej migające treści, które można wyłączyć za pomocą programu użytkownika</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G152" class="general">Ustawianie animowanych obrazów GIF, aby przestały migać po n cyklach (w ciągu 5 sekund)</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR22" class="script">Użycie skryptów do kontroli migotania i zatrzymywania go w czasie pięciu sekund lub mniejszym</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G186" class="general">Zapewnienie na stronie internetowej kontrolki, która umożliwia zatrzymanie przesuwania, migania lub automatycznej aktualizacji treści</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G191" class="general">Zapewnienie łącza, przycisku lub innego mechanizmu, który odświeża stronę bez migania treści</a>
+        </li>
       </ul>
-      
-      <p>Content that moves or auto-updates can be a barrier to anyone who has trouble reading
-         stationary text quickly as well as anyone who has trouble tracking moving objects.
-         It can also cause problems for screen readers.
-      </p>
-      
-      <p>Moving content can also be a severe distraction for some people. Certain groups, particularly
-         those with attention deficit disorders, find blinking content distracting, making
-         it difficult for them to concentrate on other parts of the Web page. Five seconds
-         was chosen because it is long enough to get a user's attention, but not so long that
-         a user cannot wait out the distraction if necessary to use the page.
-      </p>
-      
-      <p>Content that is paused can either resume in real-time or continue playing from the
-         point in the presentation where the user left off.
-      </p>
-      
+    </section>
+    <section id="advisory">
+      <h3>Additional Techniques (Advisory) for Pause, Stop, Hide</h3>
+    </section>
+    <section id="failure">
+      <h3>Błędy</h3>
       <ul>
-         
-         <li>
-            
-            <p>Pausing and resuming where the user left off is best for users who want to pause to
-               read content and works best when the content is not associated with a real-time event
-               or status.
-            </p>
-            
-            <div class="note">
-               
-               <p>See 
-                  <a href="timing-adjustable">2.2.1: Timing Adjustable</a> for additional requirements related to time-limits for reading.
-               </p>
-               
-            </div>
-            
-         </li>
-         
-         <li>
-            
-            <p>Pausing and jumping to current display (when pause is released) is better for information
-               that is real-time or "status" in nature. For example, weather radar, a stock ticker,
-               a traffic camera, or an auction timer, would present misleading information if a pause
-               caused it to display old information when the content was restarted.
-            </p>
-            
-            <div class="note">
-               
-               <p>Hiding content would have the same result as pausing and jumping to current display
-                  (when pause is released).
-               </p>
-               
-            </div>
-            
-         </li>
-         
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F16" class="failure">Niespełnienie kryterium sukcesu 2.2.2 ze względu na przewijanie treści, w których ruch nie jest niezbędny do działania bez włączania mechanizmu wstrzymywania i ponownego uruchamiania treści</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F47" class="failure">Niespełnienie kryterium sukcesu 2.2.2 z powodu użycia elementu migającego</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F4" class="failure">Niespełnienie kryterium sukcesu 2.2.2 z powodu używania właściwości text-decoration:blink bez mechanizmu zatrzymującego miganie, gdy trwa dłużej niż pięć sekund</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F50" class="failure">Niespełnienie kryterium sukcesu 2.2.2 ze względu na skrypt, który powoduje efekt migania bez mechanizmu zatrzymującego miganie, gdy trwa dłużej niż pięć sekund</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F7" class="failure">Niespełnienie kryterium sukcesu 2.2.2 z powodu obiektu lub apletu, takiego jak Java lub Flash, który miga, bez mechanizmu zatrzymującego miganie, gdy trwa dłużej niż pięć sekund</a>
+        </li>
       </ul>
-      
-      <p>For a mechanism to be considered "a mechanism for the user to pause," it must provide
-         the user with a means to pause that does not tie up the user or the focus so that
-         the page cannot be used.  The word "pause" here is meant in the sense of a "pause
-         button" although other mechanisms than a button can be used.   Having an animation
-         stop only so long as a user has focus on it (where it restarts as soon as the user
-         moves the focus away) would not be considered a "mechanism for the user to pause"
-         because it makes the page unusable in the process and would not meet this SC.
-      </p>
-      
-      <p>It is important to note that the terms "blinking" and "flashing" can sometimes refer
-         to the same content.
-      </p>
-      
-      <ul>
-         
-         <li>"Blinking" refers to content that causes a distraction problem. Blinking can be allowed
-            for a short time as long as it stops (or can be stopped)
-         </li>
-         
-         <li>"Flashing" refers to content that can trigger a seizure (if it is more than 3 per
-            second and large and bright enough). This cannot be allowed even for a second or it
-            could cause a seizure. And turning the flash off is also not an option since the seizure
-            could occur faster than most users could turn it off.
-         </li>
-         
-         <li>Blinking usually does not occur at speeds of 3 per second or more, but it can. If
-            blinking occurs faster than 3 per second, it would also be considered a flash.
-         </li>
-         
-      </ul>
-      
-      
-   </section>
-   <section id="benefits">
-      <h2>Benefits of Pause, Stop, Hide</h2>
-      
-      
-      <ul>
-         
-         <li>Providing content that stops blinking after five seconds or providing a mechanism
-            for users to stop blinking content allows people with certain disabilities to interact
-            with the Web page.
-         </li>
-         
-         <li>One use of content that blinks is to draw the visitor's attention to that content.
-            Although this is an effective technique for all users with vision, it can be a problem
-            for some users if it persists. For certain groups, including people with low literacy,
-            reading and intellectual disabilities, and people with attention deficit disorders,
-            content that blinks may make it difficult or even impossible to interact with the
-            rest of the Web page. 
-            
-         </li>
-         
-      </ul>
-      
-   </section>
-   
-   <section id="examples">
-      <h2>Examples of Pause, Stop, Hide</h2>
-      
-      <dl>
-         <dt>An essential animation can be paused without affecting the activity</dt>
-         <dd>A Web site helps users understand 'how things work' through animations that demonstrate
-               processes. Animations have "pause" and "restart" buttons.</dd>
-         <dt>A stock ticker</dt>
-         <dd>A stock ticker has "pause" and "restart" buttons. Pausing the ticker causes it to
-               pause on the currently displayed stock. Restarting causes the ticker to resume from
-               the stopped point but with a notice that the display is delayed. Since the intent
-               of the stock ticker is usually to provide realtime information, there might also be
-               a button that would advance the ticker to the most recently traded stock.</dd>
-         <dt>A game is designed so that users take turns rather than competing in real-time</dt>
-         <dd>One party can pause the game without invalidating the competitive aspect of it.</dd>
-         <dt>A Web advertisement</dt>
-         <dd>An advertisement blinks to get viewers attention but stops after 5 seconds</dd>
-         <dt>A form prompt</dt>
-         <dd>A form blinks an arrow near the submit button if a user finishes filling out the form
-               but does not activate the submit button. The blinking stops after 5 seconds.</dd>
-         <dt>An animation</dt>
-         <dd>An animation runs in the upper portion of the page but has a "freeze animation" button
-               near the bottom of the animation.</dd>
-         <dt>A "loading" animation</dt>
-         <dd>A preloader animation is shown on a page which requires a certain percentage of a
-               large file to be downloaded before playback can begin. The animation is the only content
-               on the page and instructs the user to please wait while the video loads. Because the
-               moving content is not presented in parallel with other content, no mechanism to pause,
-               stop or hide it needs to be provided, even though the animation may run for more than
-               5 seconds for users with slower connections.</dd>
-         <dt>A full-page advertisement</dt>
-         <dd>A site requires that all users view a 15 second advertisement before they can access
-               free content available from their site. Because viewing the advertisement is a requirement
-               for all users and because it is not presented in parallel with other content, no mechanism
-               to pause, stop or hide it needs to be provided.</dd>
-      </dl>
-      
-   </section>
-   
-   <section id="resources">
-      <h2>Resources for Pause, Stop, Hide</h2>
-      
-      
-   </section>
-   
-   <section id="techniques">
-      <h2>Techniques for Pause, Stop, Hide</h2>
-      
-      
-      <section id="sufficient">
-         <h3>Sufficient Techniques for Pause, Stop, Hide</h3>
-         
-         
-         <ul>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G4" class="general">Allowing the content to be paused and restarted from where it was stopped</a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR33" class="script">Using script to scroll content, and providing a mechanism to pause it</a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G11" class="general">Creating content that blinks for less than 5 seconds</a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G187" class="general">Using a technology to include blinking content that can be turned off via the user
-                  agent
-               </a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G152" class="general">Setting animated gif images to stop blinking after n cycles (within 5 seconds) </a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR22" class="script">Using scripts to control blinking and stop it in five seconds or less</a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G186" class="general">Using a control in the Web page that stops moving, blinking, or auto-updating content</a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G191" class="general">Providing a link, button, or other mechanism that reloads the page without the blinking
-                  content
-               </a>
-               								       
-            </li>
-            
-         </ul>
-         
-      </section>
-      
-      <section id="advisory">
-         <h3>Additional Techniques (Advisory) for Pause, Stop, Hide</h3>
-         
-      </section>
-      
-      <section id="failure">
-         <h3>Failures for Pause, Stop, Hide</h3>
-         
-         
-         <ul>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F16" class="failure">Failure due to including scrolling content where there is not a mechanism to pause
-                  and restart the content
-               </a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F47" class="failure">Failure due to using the blink element</a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F4" class="failure">Failure due to using text-decoration:blink without a mechanism to stop it in less
-                  than five seconds
-               </a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F50" class="failure">Failure due to a script that causes a blink effect without a mechanism to stop the
-                  blinking at 3 seconds or less
-               </a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F7" class="failure">Failure due to an object or applet that has blinking content
-                  without a mechanism to pause the content that blinks for more than five seconds
-               </a>
-               								       
-            </li>
-            
-         </ul>
-         
-      </section>
-      
-   </section>
-   
+    </section>
+  </section>
 </body>
 </html>

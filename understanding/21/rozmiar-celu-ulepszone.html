@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Objaśnienie kryterium sukcesu Rozmiar celu (ulepszone)</title>
+  <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove" />
+</head>
+<body>
+  <h1>Objaśnienie kryterium sukcesu Rozmiar celu (ulepszone)</h1>
+  <section id="brief">
+    <h2>W skrócie</h2>
+    <dl>
+      <dt>Cel</dt>
+      <dd>Sterowanie jest łatwiejsze, zwłaszcza na ekranach dotykowych.</dd>
+      <dt>Co zrobić</dt>
+      <dd>Ustaw niestandardowe cele o wymiarach co najmniej 44 na 44 piksele.</dd>
+      <dt>Dlaczego to jest ważne</dt>
+      <dd>Niektórzy ludzie nie mogą dotykać małych obiektów.</dd>
+    </dl>
+  </section>
+  <section id="intent">
+    <h2>Intencja</h2>
+    <p>
+      Intencją tego kryterium sukcesu jest pomoc użytkownikom, którzy mogą mieć problemy z aktywacją małego celu z powodu drżenia rąk, ograniczonej zręczności lub z innych powodów. Jeśli cel jest zbyt mały, trafienie w cel może być trudne. Myszy i podobne urządzenia wskazujące mogą być trudne w użyciu dla tych użytkowników, a większy cel bardzo pomoże im w uzyskaniu pozytywnych wyników na stronie internetowej.
+    </p>
+    <p>
+      Dotyk jest szczególnie problematyczny, ponieważ jest to mechanizm wprowadzania danych o małej precyzji. Użytkownikom brakuje takiego samego poziomu precyzyjnej kontroli, jak w przypadku wejść, takich jak mysz lub rysik. Palec jest większy niż wskaźnik myszy i zazwyczaj zasłania użytkownikowi widok dokładnej lokalizacji na ekranie, która jest dotykana/aktywowana.
+    </p>
+    <p>
+      Problem może być jeszcze bardziej skomplikowany w przypadku witryn responsywnych/mobilnych, które muszą obsługiwać różne rodzaje precyzyjnych i zgrubnych danych wejściowych (np. witryna, do której można uzyskać dostęp zarówno na tradycyjnym komputerze stacjonarnym/laptopie za pomocą myszy, jak i na tablecie lub telefonie komórkowym z ekranem dotykowym).
+    </p>
+    <p>
+      Chociaż to kryterium określa minimalny rozmiar docelowy, zaleca się stosowanie większych rozmiarów, aby zmniejszyć możliwość niezamierzonych działań. Jest to szczególnie istotne, jeśli spełniony jest którykolwiek z poniższych warunków:
+    </p>
+    <ul>
+      <li>kontrolka jest często używana;</li>
+      <li>wyniku interakcji nie można łatwo cofnąć;</li>
+      <li>kontrolka jest umieszczona w miejscu, w którym trudno będzie ją dosięgnąć, lub w pobliżu krawędzi ekranu;</li>
+      <li>kontrolka jest częścią zadania sekwencyjnego.</li>
+    </ul>
+    <section id="benefits">
+      <h3>Korzyści</h3>
+      <ul>
+        <li>Użytkownicy korzystający z urządzenia mobilnego, w którym ekran dotykowy jest podstawowym sposobem interakcji</li>
+        <li>Użytkownicy z niepełnosprawnością ruchową, taką jak drżenie rąk</li>
+        <li>Użytkownicy, którzy mają trudności z ruchami motorycznymi</li>
+        <li>Użytkownicy, którzy uzyskują dostęp do urządzenia jedną ręką</li>
+        <li>Użytkownicy z dużymi palcami lub obsługujący urządzenie tylko częścią palca lub kostki</li>
+        <li>Użytkownicy, którzy mają słaby wzrok, mogą lepiej widzieć cel</li>
+      </ul>
+    </section>
+  </section>
+  <section id="examples">
+    <h2>Przykłady</h2>
+    <ul>
+      <li>
+        <strong>Przykład 1: Przyciski</strong><br />
+        Na ekranie znajdują się trzy przyciski, a obszar docelowy każdego przycisku to 44 na 44 piksele CSS.
+      </li>
+    </ul>
+  </section>
+  <section id="resources">
+    <h2>Powiązane zasoby</h2>
+    <p class="instructions"></p>
+    <ul>
+      <li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/adaptivity-and-layout/">Apple touch target size recommendations</a> (Zalecenia dotyczące rozmiaru celu dotyku Apple)</li>
+      <li><a href="https://docs.microsoft.com/en-us/windows/apps/design/input/guidelines-for-targeting">Windows UWP Guidelines for touch targets</a> (Wskazówki dotyczące platformy UWP systemu Windows dotyczące docelowych obiektów dotyku)</li>
+      <li><a href="https://material.io/design/layout/spacing-methods.html#touch-targets">Google Material Design Touch targets</a> (Cele dotykowe w Google Material Design)</li>
+      <li><a href="https://web.dev/accessible-tap-targets/">web.dev Accessible tap targets</a> (web.dev Dostępne cele stuknięcia)</li>
+      <li><a href="http://touchlab.mit.edu/publications/2003_009.pdf">Human Fingertips to Investigate the Mechanics of Tactile Sense (PDF) (Opuszki ludzkich palców do badania mechaniki zmysłu dotyku (PDF))</a></li>
+      <li><a href="https://www.cs.umd.edu/hcil/trs/2006-11/2006-11.htm">One-Handed Thumb Use on Small Touchscreen Devices</a> (Obsługa kciukiem jedną ręką na małych urządzeniach z ekranem dotykowym)</li>
+    </ul>
+  </section>
+  <section id="techniques">
+    <h2>Techniki</h2>
+    <section id="sufficient">
+      <h3>Wystarczające techniki</h3>
+      <p class="instructions">Techniki, które są wystarczające do spełnienia Wytycznych lub Kryterium Sukcesu.</p>
+      <section class="situation">
+        <ul>
+          <li>Zapewnienie, że cele dotykowe mają co najmniej 44 na 44 piksele CSS.</li>
+          <li>Zapewnienie mechanizmu zmiany wielkości celów dotykowych niezależnie od powiększenia</li>
+        </ul>
+      </section>
+    </section>
+    <section id="advisory">
+      <h2>Techniki pomocnicze</h2>
+      <ul>
+        <li>Zapewnienie, że łącza śródliniowe posiadają wystarczająco duży rozmiar pola aktywacji</li>
+      </ul>
+    </section>
+    <section id="failure">
+      <h2>Błędy</h2>
+      <p class="instructions">Poniżej przedstawiono typowe błędy, które są uważane za niepowodzenia Kryterium Sukcesu 2.5.5 przez <abbr title="Grupę Roboczą WCAG ds. Wytycznych">Dostępności Treści Internetowych.</abbr> </p>
+      <ul>
+        <li>Niespełnienie kryterium sukcesu 2.5.5 z powodu rozmiaru celu mniejszego niż 44 na 44 piksele CSS</li>
+      </ul>
+    </section>
+  </section>
+</body>
+</html>
