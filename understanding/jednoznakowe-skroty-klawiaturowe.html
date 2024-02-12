@@ -103,130 +103,153 @@
             <section id="brief">
                <h2>W skrócie</h2>
                <dl>
-                  				
-                  <dt>Goal</dt>
-                  <dd>Reduce accidental activation of keyboard shortcuts.</dd>
-                  				
-                  <dt>What to do</dt>
-                  <dd>Ensure character-only shortcut keys can be turned off or modified.</dd>
-                  				
-                  <dt>Why it's important</dt>
-                  <dd>Character-key shortcuts are easy to accidentally trigger, especially with speech input.</dd>
-                  			
+                  
+                  <dt>Cel</dt>
+                  
+                  <dd>Ogranicz przypadkową aktywację jednoznakowych skrótów klawiaturowych.</dd>
+                  
+                  <dt>Co zrobić</dt>
+                  
+                  <dd>Zapewnij możliwość wyłączenia lub modyfikacji jednoznakowych skrótów klawiaturowych.</dd>
+                  
+                  <dt>Dlaczego to jest ważne</dt>
+                  
+                  <dd>Jednoznakowe skróty klawiaturowe można łatwo przypadkowo uruchomić, szczególnie podczas
+                     wprowadzania mowy.
+                  </dd>
+                  
                </dl>
             </section>
             <section id="intent">
                <h2>Intencja</h2>
-               <p>The intent of this Success Criterion is to reduce accidental activation of keyboard
-                  shortcuts. Character key shortcuts work well for many keyboard users, but are inappropriate
-                  and frustrating for speech input users — whose means of input is strings of letters
-                  — and for keyboard users who are prone to accidentally hit keys.
-                  To rectify this issue, authors need to allow users to turn off or reconfigure shortcuts
-                  that are made up of only character keys.
+               <p>
+                  Intencją tego kryterium sukcesu jest ograniczenie przypadkowej aktywacji skrótów klawiaturowych.
+                  Skróty klawiaturowe znakowe sprawdzają się dobrze w przypadku wielu użytkowników klawiatury,
+                  są jednak niewłaściwe i frustrujące dla użytkowników wprowadzania mowy, którzy wprowadzają
+                  tekst za pomocą ciągów liter, oraz dla użytkowników klawiatury, którzy mają skłonność
+                  do przypadkowego naciskania klawiszy. Aby rozwiązać ten problem, twórcy muszą umożliwić
+                  użytkownikom wyłączanie lub zmianę konfiguracji skrótów składających się wyłącznie
+                  z klawiszy znakowych.
                   
                </p>
-               <p>Note that this success criterion doesn't affect components such as listboxes and drop-down
-                  menus. Although these components contain values (words) that may be selected by one
-                  or more character keys, the shortcuts are only active when the components have focus.
-                  Other components such as menus may be accessed or opened with a single non-character
-                  shortcut (e.g., Alt or Alt+F) before pressing a single character key to select an
-                  item. This makes the full path to invoking a menu a two-step shortcut that includes
-                  a non-printable key. <a href="https://www.w3.org/TR/html5/single-page.html#the-accesskey-attribute">Accesskeys</a> are also not affected because they include modifier keys.
+               <p>
+                  Należy pamiętać, że to kryterium sukcesu nie ma wpływu na komponenty, takie jak pola
+                  list i menu rozwijane. Chociaż te komponenty zawierają wartości (słowa), które można
+                  wybrać za pomocą jednego lub większej liczby klawiszy znakowych, skróty są aktywne
+                  tylko wtedy, gdy komponenty są aktywne. Dostęp do innych komponentów, takich jak menu,
+                  można uzyskać lub otworzyć za pomocą pojedynczego skrótu innego niż znakowy (np. Alt
+                  lub Alt+F) przed naciśnięciem klawisza pojedynczego znaku w celu wybrania elementu.
+                  To sprawia, że ​​pełna ścieżka wywoływania menu jest dwuetapowym skrótem zawierającym
+                  klawisz znaku, którego nie można wydrukować. Nie ma to wpływu na <a href="https://www.w3.org/TR/html5/single-page.html#the-accesskey-attribute" lang="en" hreflang="en">Accesskeys</a> (<em>klawisze dostępu</em>), ponieważ zawierają klawisze modyfikujące.
+                  
                </p>
-               <p>Speech Input users generally work in a single mode where they can use a mix of dictation
-                  and speech commands. This works well because the user knows to pause before and after
-                  commands, and commands are usually at least two words long. So, for instance, a user
-                  might say a bit of dictation, such as "the small boat", then pause, and say a command
-                  to delete that dictation, such as "Delete Line". In contrast, if the user were to
-                  say the two phrases together without a pause, the whole phrase would come out as dictation
-                  (i.e., "the small boat delete line"). Although speech input programs often include
-                  modes that listen only for dictation or only for commands, most speech users use the
-                  all-encompassing mode all the time because it is a much more efficient workflow. It
-                  could decrease command efficiency significantly if users were to change to command
-                  mode and back before and after issuing each command.
+               <p>
+                  Użytkownicy funkcji wprowadzania mowy zazwyczaj pracują w jednym trybie, w którym
+                  mogą korzystać z kombinacji dyktowania i poleceń głosowych. Działa to dobrze, ponieważ
+                  użytkownik wie, jak zrobić pauzę przed i po poleceniu, a polecenia mają zwykle długość
+                  co najmniej dwóch słów. Na przykład użytkownik może powiedzieć fragment dyktanda,
+                  na przykład „mała łódka”, a następnie zrobić pauzę i wydać polecenie usunięcia tego
+                  dyktowania, na przykład „Usuń linię”. W przypadku, gdyby użytkownik wypowiedział te
+                  dwie frazy razem bez pauzy, cała fraza zostałaby podyktowana (np. „mała łódka usuń
+                  linię”). Chociaż programy do wprowadzania mowy często zawierają tryby, które nasłuchują
+                  tylko dyktowania lub tylko poleceń, większość użytkowników mowy korzysta z trybu wszechstronnego
+                  przez cały czas, ponieważ jest to znacznie bardziej wydajny przepływ pracy. Mogłoby
+                  to znacznie zmniejszyć wydajność poleceń, gdyby użytkownicy przełączali się do trybu
+                  poleceń i z powrotem przed i po wydaniu każdego polecenia.
+                  
                </p>
-               <p>Speech users can also speak most keyboard commands (e.g., "press Control Foxtrot")
-                  without any problems. If the website or app is keyboard enabled, the speech user can
-                  also write a native speech macro that calls the keyboard command, such as "This Print"
-                  to carry out Ctrl+P.
+               <p>
+                  Użytkownicy mowy mogą także bez problemu wypowiadać większość poleceń klawiaturowych
+                  (np. „naciśnij Control Foxtrot”). Jeśli witryna internetowa lub aplikacja obsługuje
+                  klawiaturę, użytkownik mowy może również napisać makro mowy natywnej, które wywołuje
+                  polecenie klawiaturowe, takie jak „Wydrukuj to”, aby wykonać Ctrl+P.
+                  
                </p>
-               <p>Single-key shortcuts are the exception. While using single letter keys as controls
-                  might be appropriate and efficient for many keyboard users, single-key shortcuts are
-                  disastrous for speech users. The reason for this is that when only a single key is
-                  used to trip a command, a spoken word can become a barrage of single-key commands
-                  if the cursor focus happens to be in the wrong place.
+               <p>
+                  Wyjątkiem są skróty jednoklawiszowe. Chociaż używanie  skrótów jednoznakowych jako
+                  elementów sterujących może być odpowiednie i skuteczne dla wielu użytkowników klawiatury,
+                  skróty jednoznakowe są katastrofalne dla użytkowników mowy. Dzieje się tak dlatego,
+                  że gdy do uruchomienia polecenia używany jest tylko jeden klawisz, wypowiadane słowo
+                  może stać się lawiną poleceń wykonywanych za pomocą jednego klawisza, jeśli kursor
+                  znajdzie się w niewłaściwym miejscu.
+                  
                </p>
-               <p>For example, a speech-input user named Kim has her cursor focus in the main window
-                  of a web mail application that uses common keyboard shortcuts to navigate ("k"), archive
-                  ("y") and mute messages ("m"). A coworker named Mike enters her office and says "Hey
-                  Kim" and her microphone picks that up. The Y of "hey" archives the current message.
-                  K in "Kim" moves down one conversation and M mutes a message or thread. And, if Kim
-                  looks up and says "Hey Mike" without remembering to turn off the microphone, the same
-                  three things happen in a different sequence.
+               <p>
+                  Na przykład użytkownik wprowadzający mowę o imieniu Kim ustawia kursor w głównym oknie
+                  aplikacji poczty internetowej, która używa popularnych skrótów klawiaturowych do nawigacji
+                  („k”), archiwizowania („y”) i wyciszania wiadomości („m”) . Współpracownik imieniem
+                  Mike wchodzi do jej biura i mówi „Hi Kim”, a jej mikrofon odbiera to. Y w „hej” archiwizuje
+                  bieżącą wiadomość. K w „Kim” przenosi jedną rozmowę w dół, a M wycisza wiadomość lub
+                  wątek. A jeśli Kim podnosi wzrok i mówi „Hi, Mike”, nie pamiętając o wyłączeniu mikrofonu,
+                  te same trzy rzeczy dzieją się w innej kolejności.
+                  
                </p>
-               <p>A user interacting with a webpage or web app that doesn't use single-character shortcuts
-                  doesn't have this problem. Inadvertent strings of characters from the speech application
-                  are not interpreted as shortcuts if a modifier key is required. A speech user filling
-                  in a text input form may find that a phrase that is accidentally picked up by the
-                  speech microphone results in stray text being entered into the field, but that is
-                  easily seen and undone. The Resources section of this page contains links to videos
-                  demonstrating these types of issues.
+               <p>
+                  Użytkownik wchodzący w interakcję ze stroną internetową lub aplikacją internetową,
+                  która nie korzysta ze skrótów jednoznakowych, nie ma tego problemu. Niezamierzone
+                  ciągi znaków z aplikacji mowy nie są interpretowane jako skróty, jeśli wymagany jest
+                  klawisz modyfikujący. Użytkownik mowy wypełniający formularz wprowadzania tekstu może
+                  odkryć, że fraza przypadkowo przechwycona przez mikrofon mowy powoduje wprowadzenie
+                  w polu przypadkowego tekstu, ale można to łatwo zobaczyć i cofnąć. Sekcja Powiązane
+                  zasoby na tej stronie zawiera łącza do filmów przedstawiających tego typu problemy.
+                  
                </p>
             </section>
             <section id="benefits">
                <h2>Korzyści</h2>
                <ul>
                   
-                  <li>Speech users will be able to turn off single-key shortcuts so they can avoid accidentally
-                     firing batches of them at once. This will allow speech users to make full use of programs
-                     that offer single-key shortcuts to keyboard users.
+                  <li>Użytkownicy mowy będą mogli wyłączyć skróty jednoznakowe, aby uniknąć przypadkowego
+                     uruchomienia ich partii na raz. Umożliwi to użytkownikom mowy pełne wykorzystanie
+                     programów oferujących skróty klawiaturowe dla użytkowników klawiatury.
                   </li>
                   
-                  <li>Keyboard-only users who have dexterity challenges can also be prone to accidentally
-                     hitting keys. Those users would be able to avoid problematic single character shortcuts
-                     by turning them off or modifying them to include at least one non-character key.
+                  <li>Użytkownicy korzystający wyłącznie z klawiatury, którzy mają problemy ze zręcznością,
+                     również mogą być podatni na przypadkowe naciśnięcie klawiszy. Użytkownicy ci mogliby
+                     uniknąć problematycznych skrótów jednoznakowych, wyłączając je lub modyfikując tak,
+                     aby zawierały co najmniej jeden klawisz inny niż znakowy.
                   </li>
                   
-                  <li>Allowing <em>all</em> shortcut keys to be remapped can help users with some cognitive disabilities, since
-                     the same shortcuts can be assigned to perform the same actions across different applications.
+                  <li>Zezwolenie na ponowne mapowanie <em>wszystkich</em> klawiszy skrótów może pomóc użytkownikom z pewnymi zaburzeniami poznawczymi, ponieważ
+                     te same skróty można przypisać do wykonywania tych samych czynności w różnych aplikacjach.
                   </li>
                   
                </ul>
             </section>
             <section id="examples">
                <h2>Przykłady</h2>
-               <section class="example" id="disable-shortcuts">
-                  			       
+               <section class="example" id="wyłącz-skróty">
                   
-                  <h3>Disable Shortcuts</h3>
                   
-                  <p>A mechanism is provided to allow users to disable character-key shortcuts. The character
-                     key shortcuts are not the only way to carry out these commands. A speech user disables
-                     the shortcuts and can prevent words that are picked up by the microphone from triggering
-                     single-key shortcuts.
+                  <h3>Wyłącz skróty</h3>
+                  
+                  <p>Dostępny jest mechanizm umożliwiający użytkownikom wyłączanie skrótów klawiszowych.
+                     Skróty klawiszowe znakowe nie są jedynym sposobem wykonywania tych poleceń. Użytkownik
+                     mowy wyłącza skróty i może zapobiec uruchamianiu skrótów jednoznakowych przez słowa
+                     odbierane przez mikrofon.
                   </p>
-                  			
+                  
                </section>
-               <section class="example" id="alternate-control">
+               <section class="example" id="sterowanie-alternatywne">
                   
                   
-                  <h3>Alternate Control</h3>
+                  <h3>Sterowanie alternatywne</h3>
                   
                   
-                  <p>A keyboard-only user is in a long issues thread. While reading the thread she accidentally
-                     hits the S key, which moves focus to the search bar at the top of the document. This
-                     causes her to lose her place and her train of thought. However, a mechanism is provided
-                     to allow users to change character-key shortcuts. She changes the shortcut to include
-                     another key so she can avoid future interruptions.
+                  <p>Użytkownik korzystający tylko z klawiatury uczestniczy w długim wątku. Czytając wątek
+                     przypadkowo naciska klawisz <kbd>S</kbd>, który przenosi fokus na pasek wyszukiwania u góry dokumentu. To powoduje, że traci
+                     swoje miejsce i tok myślenia. Istnieje jednak mechanizm umożliwiający użytkownikom
+                     zmianę skrótów klawiszowych znakowych. Zmienia skrót, dodając inny klawisz, aby uniknąć
+                     zakłóceń w przyszłości.
                   </p>
-                  			
+                  
                </section>
             </section>
             <section id="resources">
                <h2>Powiązane zasoby</h2>
                <p>Zasoby służą wyłącznie celom informacyjnym. Nie należy traktować ich jako zaleceń.</p>
-               <p>Web apps that use character-key shortcuts and allow users to disable and/or change
-                  these shortcuts:
+               <p>Aplikacje internetowe korzystające ze skrótów klawiszowych i umożliwiające użytkownikom
+                  wyłączanie i/lub zmianę tych skrótów:
                </p>
                <ul>
                   
@@ -235,12 +258,14 @@
                   <li>WordPress</li>
                   
                </ul>
-               <p>Videos of speech user trouble with single character key shortcuts:</p>
+               <p>Filmy przedstawiające problemy użytkowników mowy ze skrótami klawiaturowymi jednoznakowymi:</p>
                <ul>
                   
-                  <li><a rel="nofollow" href="https://www.youtube.com/watch?v=xzSyIA4OWYE">Single character key shortcuts affecting speech input – example 1</a></li>
+                  <li><a rel="nofollow" href="https://www.youtube.com/watch?v=xzSyIA4OWYE" lang="en" hreflang="en">Single character key shortcuts affecting speech input – example 1</a> (Jednoznakowe skróty klawiszowe wpływające na wprowadzanie mowy – przykład 1)
+                  </li>
                   
-                  <li><a rel="nofollow" href="https://www.youtube.com/watch?v=OPjfpDU9S08">Single character key shortcuts affecting speech input – example 2</a></li>
+                  <li><a rel="nofollow" href="https://www.youtube.com/watch?v=OPjfpDU9S08" lang="en" hreflang="en">Single character key shortcuts affecting speech input – example 2</a> (Jednoznakowe skróty klawiszowe wpływające na wprowadzanie mowy – przykład 2)
+                  </li>
                   
                </ul>
             </section>
@@ -254,9 +279,10 @@
                <section id="sufficient">
                   <h3>Techniki wystarczające</h3>
                   <ul>
-                     						
-                     <li><a href="https://w3c.github.io/wcag/techniques/general/G217">G217: Providing a mechanism to allow users to remap or turn off character key shortcuts</a></li>
-                     					
+                     
+                     <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G217.html">G217: Zapewnienie mechanizmu umożliwiającego użytkownikom na ponowne mapowanie lub
+                           wyłączanie skrótów klawiszowych.</a></li>
+                     
                   </ul>
                </section>
                <section id="failure">
@@ -265,10 +291,10 @@
                      kryterium sukcesu.
                   </p>
                   <ul>
-                     					
-                     <li><a href="https://w3c.github.io/wcag/techniques/failures/F99">F99: Failure of Success Criterion 2.1.4 due to implementing character key shortcuts that
-                           cannot be turned off or remapped</a></li>
-                     				
+                     
+                     <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F99.html">F99: Niespełnienie kryterium sukcesu 2.1.4 z powodu zaimplementowania jednoznakowych
+                           skrótów klawiaturowych, których nie można wyłączyć ani przemapować</a></li>
+                     
                   </ul>
                </section>
             </section>
