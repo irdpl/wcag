@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet xmlns:pl="http://wcag.irdpl.p/2023/pl-functions" 
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns="http://www.w3.org/1999/xhtml"
 	exclude-result-prefixes="#all"
 	version="2.0">
+	
+	<xsl:import href="base.xslt"/>
 	
 	<xsl:output method="xhtml" indent="yes" omit-xml-declaration="yes" encoding="UTF-8"/>
 	
@@ -27,9 +30,11 @@
 	</xsl:template>
 	
 	<xsl:template match="guideline">
+		<xsl:variable name="href" select="file/@href"/>
+		<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
 		<section id="{@id}">
 			<h3>
-				<a href="{file/@href}">
+				<a href="{$safeHref}">
 					<span class="secno"><xsl:value-of select="num"/><xsl:text> </xsl:text></span>
 					<xsl:value-of select="name"/>
 				</a>
@@ -41,8 +46,10 @@
 	</xsl:template>
 	
 	<xsl:template match="success-criterion">
+		<xsl:variable name="href" select="file/@href"/>
+		<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
 		<li>
-			<a href="{file/@href}">
+			<a href="{$safeHref}">
 				<span class="secno"><xsl:value-of select="num"/><xsl:text> </xsl:text></span>
 				<xsl:value-of select="name"/>
 			</a>
@@ -50,7 +57,9 @@
 	</xsl:template>
 	
 	<xsl:template match="understanding">
-		<li><a href="{file/@href}"><xsl:value-of select="name"/></a></li>
+		<xsl:variable name="href" select="file/@href"/>
+		<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+		<li><a href="{$safeHref}"><xsl:value-of select="name"/></a></li>
 	</xsl:template>
 	
 </xsl:stylesheet>
