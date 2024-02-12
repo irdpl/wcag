@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
    <head>
+      <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>H75: Ensuring that Web pages are well-formed | WAI | W3C</title>
+      <title>Objaśnienie Kryterium sukcesu  4.1.1: Poprawność kodu (Przestarzałe i usunięte) | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
-      <link rel="stylesheet" href="../base.css" />
+      <link rel="stylesheet" href="base.css" />
    </head>
-   <body class="wcag-docs" dir="ltr"><a href="#main" class="button button--skip-link">Idź do treści</a><div class="minimal-header-container default-grid">
+   <body dir="ltr"><a href="#main" class="button button--skip-link">Idź do treści</a><div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
-            <div class="minimal-header-name"><a href="https://w3c.github.io/wcag/techniques/">WCAG 2.2 Techniki</a></div>
-            <div class="minimal-header-subtitle">Przykłady sposobów spełnienia WCAG; nie są wymagane</div><a class="minimal-header-link" href="https://w3c.github.io/wcag/techniques/about">O WCAG Techniki</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
+            <div class="minimal-header-name"><a href="https://w3c.github.io/wcag/understanding/">WCAG 2.2 Objaśnienia</a></div>
+            <div class="minimal-header-subtitle">Objaśnienia informacyjne, niewymagane do spełnienia WCAG</div><a class="minimal-header-link" href="https://w3c.github.io/wcag/understanding/about">O WCAG Objaśnienia</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -29,137 +30,283 @@
                   </svg></a></div>
          </div>
       </div>
+      <div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Objaśnienia">
+               <ul>
+                  <li class="nav__item"><a href=".">
+                        								Wszystkie objaśnienia
+                        							</a></li>
+                  <li class="nav__item"><a href="kompatybilne">
+                        <svg alt="up" focusable="false" aria-hidden="true" class="icon-arrow-up-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path>
+                        </svg> Wytyczna: Kompatybilne</a></li>
+                  <li class="nav__item"></li>
+                  <li class="nav__item"><a href="nazwa-rola-warto%C5%9B%C4%87">Następne KS: Nazwa, rola, wartość</a></li>
+               </ul>
+            </nav>
+         </div>
+      </div>
       <div class="default-grid with-gap leftcol">
-         <aside class="box nav-hack sidebar standalone-resource__sidebar" aria-labelledby="page-contents">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar ">
             <nav>
-               <header class="box-h" id="page-contents">Page Contents</header>
+               <header class="box-h ">Treść strony</header>
                <div class="box-i">
-                  <nav class="navtoc">
-                     <ul id="navbar">
-                        <li><a href="#applicability">Applicability</a></li>
-                        <li><a href="#description">Description</a></li>
-                        <li><a href="#examples">Examples</a></li>
-                        <li><a href="#resources">Related Resources</a></li>
-                        <li><a href="#tests">Tests</a></li>
-                     </ul>
-                  </nav>
+                  <ul>
+                     <li><a href="#brief">W skrócie</a></li>
+                     <li><a href="#intent">Intencja</a></li>
+                     <li><a href="#benefits">Korzyści</a></li>
+                     <li><a href="#techniques">Techniki</a></li>
+                  </ul>
                </div>
             </nav>
          </aside>
          <main id="main" class="standalone-resource__main">
-            <h1><span>Technique H75:</span>Ensuring that Web pages are well-formed
+            <h1><span class="standalone-resource__type-of-guidance">Objaśnienie
+                  				KS 4.1.1:</span>Poprawność kodu (Przestarzałe i usunięte) (Poziom )
             </h1>
             <aside class="box">
-               <header class="box-h  box-h-icon">
-                  					About this Technique
-                  				
-               </header>
+               <header class="box-h  box-h-icon">Kryterium sukcesu (KS) </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="https://w3c.github.io/wcag/understanding/poprawnosc-kodu">4.1.1: Poprawność kodu (Przestarzałe i usunięte)</a></span>.
-                  </p>
+                  <div class="note">
+                     <p class="note-title marker">Uwaga</p>
+                     <p>Kryterium to zostało pierwotnie przyjęte w celu rozwiązania problemów, jakie technologia
+                        wspomagająca miała z bezpośrednim przetwarzaniem HTML. Technologia wspomagająca nie
+                        ma już potrzeby bezpośredniego przetwarzania HTML, a co za tym idzie, problemy te
+                        już nie istnieją. Błędy dostępności, które nie spełniają tego kryterium, nie spełniają
+                        również innych kryteriów. To kryterium nie jest już użyteczne i zostaje usunięte.
+                     </p>
+                  </div>
                </div>
             </aside>
             <div class="excol-all"></div>
-            <section id="applicability">
-               <h2>Applicability</h2>
-               <p> Any XML-based markup languages. </p>
-               <p>This technique relates to <span><a href="https://w3c.github.io/wcag/understanding/poprawnosc-kodu">4.1.1: Poprawność kodu (Przestarzałe i usunięte)</a> (Sufficient when used with Ensuring that Web pages can be parsed  by using one of
-                     the following techniques:)</span>.
+            <section id="brief">
+               <h2>W skrócie</h2>
+               <dl>
+                  
+                  <dt>Goal</dt>
+                  <dd>Assistive technology can properly present page content.</dd>
+                  
+                  <dt>What to do</dt>
+                  <dd>Create web pages according to specifications.</dd>
+                  
+                  <dt>Why it's important</dt>
+                  <dd>People can browse web content more easily with their assistive technology.</dd> 
+                  
+               </dl>
+            </section>
+            <section id="intent">
+               <h2>Intencja</h2>
+               <div class="wcag22"> <span class="new-version">Nowe w WCAG 22: </span>
+                  
+                  <p>This criterion has been removed from WCAG 2.2.</p>
+                  
+                  
+                  <p>The intent of this Success Criterion was to ensure that user-agents, including assistive
+                     technologies, can accurately interpret and parse content. Since WCAG 2.0 was published,
+                     the specifications (such as HTML) and browsers have improved their handling of parsing
+                     errors. It is also the case that assistive technology used to do their own parsing
+                     of markup, but now rely on the browser. For that reason this success criterion has
+                     been removed. Many issues that would have failed this criterion will fail <a href="info-and-relationships">Info and Relationships</a> or <a href="name-role-value">Name, Role, Value</a>. Other issues are excepted by the "except where the specification allow these features"
+                     part of the criterion.
+                  </p>
+                  
+                  
+                  <p>The following content is left for historical purposes to show the original intent.</p>  
+                  
+                  
+                  <hr />
+                  
+                  
+                  <blockquote class="scquote">
+                     
+                     <p>Success Criterion <a href="https://www.w3.org/TR/WCAG21/#parsing" style="font-weight: bold;">4.1.1 Parsing</a> (Level A): In content implemented using markup languages, elements have complete
+                        start and end
+                        tags, elements are nested according to their specifications, elements do not contain
+                        duplicate attributes, and any IDs are unique, except where the specifications allow
+                        these features.
+                        
+                     </p>
+                     
+                     <div class="note">
+                        <p class="note-title marker">Uwaga</p>
+                        <p>Start and end tags that are missing a critical character in their formation, such
+                           as a closing angle bracket or a mismatched attribute value quotation mark are not
+                           complete.
+                           
+                        </p>
+                     </div>
+                     
+                  </blockquote>
+                  
+               </div>
+               <p>
+                  The intent of this Success Criterion is to ensure that user agents, including assistive
+                  technologies, can accurately interpret and parse content.  If the content cannot be
+                  parsed into a data structure, then different user agents may present it differently
+                  or be completely unable to parse it. Some user agents use "repair techniques" to render
+                  poorly coded content.
+                  
                </p>
-            </section>
-            <section id="description">
-               <h2>Description</h2>
-               <p> The objective of this technique is to avoid key errors that are known to cause
-                  problems for assistive technologies when they are trying to parse contents.
-                  Well-formedness is checked by parsing the document with a conforming XML parser and
-                  checking if the validation report mentions well-formedness errors. Every conforming
-                  XML
-                  parser is required to check well-formedness and stop normal processing when a
-                  well-formedness error is found (a conforming XML parser does not need to support
-                  validation).
+               <p>Since repair techniques vary among user agents, authors cannot assume that content
+                  will be accurately parsed into a data structure or that it will be rendered correctly
+                  by specialized user agents, including assistive technologies, unless the content is
+                  created according to the rules defined in the formal grammar for that technology.
+                  In markup languages, errors in element and attribute syntax and
+                  failure to provide properly nested start/end tags lead to errors that
+                  prevent user agents from parsing the content reliably.
+                  Therefore, the Success Criterion requires that the content can be parsed using only
+                  the rules of the formal grammar.
+                  
+                  
                </p>
+               <div class="note">
+                  <p class="note-title marker">Uwaga</p>
+                  <div>
+                     
+                     
+                     <p>The concept of "well formed" is close to what is required here. However, exact parsing
+                        requirements vary amongst markup languages, and most non XML-based languages do not
+                        explicitly define requirements for well formedness. Therefore, it was necessary to
+                        be more explicit in the Success Criterion in order to be generally applicable to markup
+                        languages. Because the term "well formed" is only defined in XML, and (because end
+                        tags are sometimes optional) valid HTML does not require well formed code, the term
+                        is not used in this Success Criterion.
+                        
+                     </p>
+                     
+                     
+                     <p>With the exception of one Success Criterion (
+                        <a href="resize-text">1.4.4: Resize Text</a>, which specifically mentions that the effect specified by the Success Criterion must
+                        be achieved without relying on an assistive technology) authors can meet the Success
+                        Criteria with content that assumes use of an assistive technology (or access features
+                        in use agents) by the user, where such assistive technologies (or access features
+                        in user agents) exist and are available to the user.
+                        
+                     </p>
+                     
+                     
+                  </div>
+               </div>
             </section>
-            <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>XML files include a document type declaration, a xsi:schemaLocation attribute or
-                     other type of reference to a schema. The developer can use off-line or online
-                     validators, an XML editor or an IDE with XML support (see Resources below) to check
-                     well-formedness. 
-                  </p>
-               </section>
-               <section class="example" id="example-2">
-                  <h3>Example 2</h3>
-                  <p> When XML files do not include a document type declaration, a xsi:schemaLocation
-                     attribute or a processing instruction referencing a schema even though there is a
-                     schema for them, the relevant schema is specified by a command line instruction, a
-                     user dialog or a configuration file, and the XML files are checked against the
-                     schema.
-                  </p>
-               </section>
-               <section class="example" id="example-3">
-                  <h3>Example 3</h3>
-                  <p>When XML files do not include a document type declaration, a xsi:schemaLocation
-                     attribute or a processing instruction referencing a schema even though there is a
-                     schema for them, the namespace is dereferenced to retrieve a schema document or
-                     resource directory (Resource Directory Description Language: <a href="http://www.rddl.org/">RDDL</a>), and the XML files are checked against the
-                     schema.
-                  </p>
-               </section>
-               <section class="example" id="example-4">
-                  <h3>Example 4</h3>
-                  <p>When a Website generates XML dynamically instead of serving only static documents,
-                     a developer can use <a href="http://xmlunit.sourceforge.net/">XMLUnit</a>, <a href="http://xmltestsuite.sourceforge.net/">XML Test Suite</a> or a similar
-                     framework to test the generated XML code. 
-                  </p>
-               </section>
-            </section>
-            <section id="resources">
-               <h3 style="margin-bottom: 0;">Other sources</h3>
-               <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
+            <section id="benefits">
+               <h2>Korzyści</h2>
                <ul>
                   
-                  <li>
-                     									         <a href="https://www.w3.org/TR/2004/REC-xml-20040204/Overview.html#sec-well-formed">Well-Formed XML Documents</a> in Extensible Markup Language (XML) 1.0 (Third
-                     Edition), W3C Recommendation 04 February 2004. 
+                  
+                  <li>Ensuring that Web pages have complete start and end tags and are nested according
+                     to specification
+                     helps ensure that assistive technologies can parse the content accurately and without
+                     crashing.
+                     
                   </li>
                   
-                  <li>
-                     									         <a href="https://www.w3.org/TR/2004/REC-xml11-20040204/#sec-well-formed">Well-Formed XML Documents</a> in Extensible Markup Language (XML) 1.1, W3C
-                     Recommendation 04 February 2004. 
-                  </li>
-                  
-                  <li>
-                     									         <a href="https://www.w3.org/TR/REC-xml/#wf-entities">4.3.2 Well-Formed Parsed
-                        Entities</a> in Extensible Markup Language (XML) 1.1, W3C Recommendation 04
-                     February 2004.
-                  </li>
                   
                </ul>
-               <p> For other resources, see <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G134">Validating Web
-                     pages</a>. 
-               </p>
             </section>
-            <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+            <section id="techniques">
+               <h2>Techniki</h2>
+               <p>Każdy numerowany element w tej sekcji reprezentuje technikę lub kombinację technik,
+                  które Grupa Robocza WCAG uważa za wystarczające do spełnienia tego kryterium sukcesu.
+                  Nie jest jednak konieczne stosowanie tych konkretnych technik. Aby uzyskać informacje
+                  na temat stosowania innych technik, zobacz <a href="understanding-techniques.html">Objaśnienie technik dla kryteriów sukcesu WCAG</a>, szczególnie w sekcji „Inne techniki”.
+               </p>
+               <section id="sufficient">
+                  <h3>Techniki wystarczające</h3>
+                  <ul>
                      
-                     <li> Load each file into a validating XML parser. </li>
                      
-                     <li> Check that there are no well-formedness errors. </li>
+                     <li>
+                        									         
+                        <a class="general" href="https://w3c.github.io/wcag/techniques/general/G134">G134: Validating Web pages</a>
+                        								       
+                        
+                     </li>
                      
-                  </ol>
-                  
+                     
+                     <li>
+                        									         
+                        <a class="general" href="https://w3c.github.io/wcag/techniques/general/G192">G192: Fully conforming to specifications</a>
+                        								       
+                        
+                     </li>
+                     
+                     
+                     <li>
+                        									         
+                        <a class="html" href="https://w3c.github.io/wcag/techniques/html/H88">H88: Using HTML according to spec</a>
+                        								       
+                        
+                     </li>
+                     
+                     
+                     <li>
+                        
+                        
+                        <p>Ensuring that Web pages can be parsed  by using one of the following techniques:</p>
+                        
+                        
+                        <ul>
+                           
+                           
+                           <li>
+                              											             
+                              <a class="html" href="https://w3c.github.io/wcag/techniques/html/H74">H74: Ensuring that opening and closing tags are used according to specification</a>
+                              											             
+                              <strong>AND</strong>
+                              											             
+                              <a class="html" href="https://w3c.github.io/wcag/techniques/html/H93">H93: Ensuring that id attributes are unique on a Web page</a>
+                              											             
+                              <strong>AND</strong>
+                              											             
+                              <a class="html" href="https://w3c.github.io/wcag/techniques/html/H94">H94: Ensuring that elements do not contain duplicate attributes</a>
+                              										           
+                              
+                           </li>
+                           
+                           
+                           <li>
+                              											             
+                              <a class="html" href="https://w3c.github.io/wcag/techniques/html/H75">H75: Ensuring that Web pages are well-formed</a>
+                              										           
+                              
+                           </li>
+                           
+                           
+                        </ul>
+                        
+                        
+                     </li>
+                     
+                     
+                  </ul>
                </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <p>Step 2 is true.</p>
-                  
+               <section id="failure">
+                  <h3>Błędy</h3>
+                  <p>Poniżej wymieniono typowe błędy, które Grupa Robocza WCAG uważa za niespełnienie tego
+                     kryterium sukcesu.
+                  </p>
+                  <ul>
+                     
+                     
+                     <li>
+                        									         
+                        <a class="failure" href="https://w3c.github.io/wcag/techniques/failures/F70">F70: Failure of Success Criterion 4.1.1 due to incorrect use of start and end tags or attribute
+                           markup</a>
+                        								       
+                        
+                     </li>
+                     
+                     
+                     <li>
+                        									         
+                        <a class="failure" href="https://w3c.github.io/wcag/techniques/failures/F77">F77: Failure of Success Criterion 4.1.1 due to duplicate values of type ID</a>
+                        								       
+                        
+                     </li>
+                     
+                     
+                  </ul>
                </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
