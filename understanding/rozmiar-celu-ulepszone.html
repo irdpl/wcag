@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Objaśnienie Kryterium sukcesu  2.5.6: Równoległy mechanizm wprowadzania danych | WAI | W3C</title>
+      <title>Objaśnienie Kryterium sukcesu  2.5.5: Rozmiar celu (ulepszone) | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="base.css" />
    </head>
@@ -41,8 +41,8 @@
                         <svg alt="up" focusable="false" aria-hidden="true" class="icon-arrow-up-thin pager-icon" viewBox="0 0 16 16">
                            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path>
                         </svg> Wytyczna: Metody obsługi</a></li>
-                  <li class="nav__item"><a href="rozmiar-celu-ulepszone">Poprzednie KS: Rozmiar celu (ulepszone)</a></li>
-                  <li class="nav__item"><a href="ruch-przeci%C4%85gania">Następne KS: Ruch przeciągania</a></li>
+                  <li class="nav__item"><a href="aktywowanie-ruchem">Poprzednie KS: Aktywowanie ruchem</a></li>
+                  <li class="nav__item"><a href="r%C3%B3wnoleg%C5%82y-mechanizm-wprowadzania-danych">Następne KS: Równoległy mechanizm wprowadzania danych</a></li>
                </ul>
             </nav>
          </div>
@@ -66,103 +66,133 @@
          </aside>
          <main id="main" class="standalone-resource__main">
             <h1><span class="standalone-resource__type-of-guidance">Objaśnienie
-                  				KS 2.5.6:</span>Równoległy mechanizm wprowadzania danych (Poziom AAA)
+                  				KS 2.5.5:</span>Rozmiar celu (ulepszone) (Poziom AAA)
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">Kryterium sukcesu (KS) </header>
                <div class="box-i">
-                  <p>Treści internetowe nie ograniczają możliwości korzystania z trybów wprowadzania danych
-                     dostępnych na platformie, z wyjątkiem sytuacji, w których ograniczenie jest <a href="#dfn-istotny">istotne</a>, wymagane do zapewnienia bezpieczeństwa treści lub wymagane do przestrzegania ustawień
-                     użytkownika.
+                  <p>Rozmiar <a href="#dfn-cel">celu</a> 
+                     <a href="#dfn-punkt-dotyku">punktu dotykowego</a> wynosi co najmniej 44 na 44 <a href="#dfn-piksel-css">piksele CSS</a>, chyba że:
                   </p>
+                  <dl>
+                     	                 
+                     <dt>Odpowiednik</dt> 
+                     
+                     <dd>Cel jest dostępny za pośrednictwem równoważnego łącza lub kontrolki na tej samej stronie,
+                        która ma co najmniej 44 na 44 piksele CSS,
+                     </dd>
+                     	                 
+                     <dt>Śródliniowe</dt> 
+                     
+                     <dd>Cel znajduje się w zdaniu lub w bloku tekstu,</dd>
+                     	                 
+                     <dt>Kontrola programu użytkownika</dt> 
+                     
+                     <dd>Rozmiar obiektu docelowego jest określony przez program użytkownika (przeglądarkę)
+                        i nie jest modyfikowany przez autora,
+                     </dd>
+                     	                 
+                     <dt>Istotny</dt> 
+                     
+                     <dd>Szczególna prezentacja celu ma <a href="#dfn-istotny">istotne</a> znaczenie dla przekazywanych informacji.
+                     </dd>
+                     
+                  </dl>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="brief">
                <h2>W skrócie</h2>
                <dl>
-                  			
-                  <dt>Goal</dt>
-                  <dd>Users can choose different ways of inputting content.</dd>
-                  			
-                  <dt>What to do</dt>
-                  <dd>Do not prevent users from switching their mode of input.</dd>
-                  			
-                  <dt>Why it's important</dt>
-                  <dd>People may not be able to work using just one input method.</dd>
-                  		
+                  
+                  <dt>Cel</dt>
+                  
+                  <dd>Sterowanie jest łatwiejsze, zwłaszcza na ekranach dotykowych.</dd>
+                  
+                  <dt>Co zrobić</dt>
+                  
+                  <dd>Ustaw niestandardowe cele o wymiarach co najmniej 44 na 44 piksele.</dd>
+                  
+                  <dt>Dlaczego to jest ważne</dt>
+                  
+                  <dd>Niektórzy ludzie nie mogą dotykać małych obiektów.</dd>
+                  
                </dl>
             </section>
             <section id="intent">
                <h2>Intencja</h2>
-               <p>The intent of this Success Criterion is to ensure that people can use and switch between
-                  different modes of input when interacting with web content. Users may employ a variety
-                  of input mechanisms when interacting with web content. These may be a combination
-                  of mechanisms such as a keyboard or keyboard-like interfaces and pointer devices like
-                  a mouse, stylus or touchscreen.
+               <p>
+                  Intencją tego kryterium sukcesu jest pomoc użytkownikom, którzy mogą mieć problemy
+                  z aktywacją małego celu z powodu drżenia rąk, ograniczonej zręczności lub z innych
+                  powodów. Jeśli cel jest zbyt mały, trafienie w cel może być trudne. Myszy i podobne
+                  urządzenia wskazujące mogą być trudne w użyciu dla tych użytkowników, a większy cel
+                  bardzo pomoże im w uzyskaniu pozytywnych wyników na stronie internetowej.
+                  
                </p>
-               <p>Even though a device may have a primary input mechanism, the user may choose to employ
-                  alternative input mechanisms when interacting with the device. For example, the primary
-                  mechanism for mobile phones and tablets is the touchscreen.  The user of these devices
-                  may choose to use a paired mouse or external keyboard as an alternative to using the
-                  touchscreen.
+               <p>
+                  Dotyk jest szczególnie problematyczny, ponieważ jest to mechanizm wprowadzania danych
+                  o małej precyzji. Użytkownikom brakuje takiego samego poziomu precyzyjnej kontroli,
+                  jak w przypadku wejść, takich jak mysz lub rysik. Palec jest większy niż wskaźnik
+                  myszy i zazwyczaj zasłania użytkownikowi widok dokładnej lokalizacji na ekranie, która
+                  jest dotykana/aktywowana.
+                  
                </p>
-               <p>Users should be able to switch input mechanisms at any point should the user determine
-                  that certain tasks and interactions are more easily accomplished by using an alternative
-                  input mechanism. Content must not limit the user's interaction to any particular input
-                  mechanism unless the restriction is essential, or is required to ensure the security
-                  of the content or to respect user settings.
+               <p>
+                  Problem może być jeszcze bardziej skomplikowany w przypadku witryn responsywnych/mobilnych,
+                  które muszą obsługiwać różne rodzaje precyzyjnych i zgrubnych danych wejściowych (np.
+                  witryna, do której można uzyskać dostęp zarówno na tradycyjnym komputerze stacjonarnym/laptopie
+                  za pomocą myszy, jak i na tablecie lub telefonie komórkowym z ekranem dotykowym).
+                  
                </p>
-               <p>Note: A touch-typing web application, which teaches users how to touch-type on a keyboard
-                  and/or measures their proficiency and speed, would be an example of an essential limitation
-                  to a particular input mechanism. 
+               <p>
+                  Chociaż to kryterium określa minimalny rozmiar docelowy, zaleca się stosowanie większych
+                  rozmiarów, aby zmniejszyć możliwość niezamierzonych działań. Jest to szczególnie istotne,
+                  jeśli spełniony jest którykolwiek z poniższych warunków:
+                  
                </p>
+               <ul>
+                  
+                  <li>kontrolka jest często używana;</li>
+                  
+                  <li>wyniku interakcji nie można łatwo cofnąć;</li>
+                  
+                  <li>kontrolka jest umieszczona w miejscu, w którym trudno będzie ją dosięgnąć, lub w pobliżu
+                     krawędzi ekranu;
+                  </li>
+                  
+                  <li>kontrolka jest częścią zadania sekwencyjnego.</li>
+                  
+               </ul>
             </section>
             <section id="benefits">
                <h2>Korzyści</h2>
                <ul>
-                  					
-                  <li>Users can interact with web content with whichever input mechanism is preferred and
-                     available to them.
+                  
+                  <li>Użytkownicy korzystający z urządzenia mobilnego, w którym ekran dotykowy jest podstawowym
+                     sposobem interakcji
                   </li>
                   
-                  <li>Users may switch between input mechanisms when they desire or the circumstances require
-                     it.
-                  </li>
+                  <li>Użytkownicy z niepełnosprawnością ruchową, taką jak drżenie rąk</li>
                   
-                  <li>Users are allowed to add and remove input mechanisms at any point, where supported
-                     by the operating system.
-                  </li>
-                  				
+                  <li>Użytkownicy, którzy mają trudności z ruchami motorycznymi</li>
+                  
+                  <li>Użytkownicy, którzy uzyskują dostęp do urządzenia jedną ręką</li>
+                  
+                  <li>Użytkownicy z dużymi palcami lub obsługujący urządzenie tylko częścią palca lub kostki</li>
+                  
+                  <li>Użytkownicy, którzy mają słaby wzrok, mogą lepiej widzieć cel</li>
+                  
                </ul>
             </section>
             <section id="examples">
                <h2>Przykłady</h2>
                <ul>
                   
-                  <li>A user with mobility impairment pairs a mouse and keyboard to her mobile phone with
-                     a touchscreen. The phone can thereafter be operated by those input devices and the
-                     content does not accept the touchscreen as the only input mechanism.
-                  </li>
-                  
-                  <li>On a touch-enabled laptop with coarse precision, people who have difficulty activating
-                     a small target because of hand tremors, limited dexterity or other reasons are still
-                     able to interact with content using their keyboard and trackpad.
-                  </li>
-                  
-                  <li>A user starts interacting with a page using a desktop keyboard, and then attaches
-                     a secondary touch-enabled monitor. Content can be operated using this newly added
-                     input mechanism and does not assume that the keyboard, the first input mechanism it
-                     detected, is the only one in use.
-                  </li>
-                  
-                  <li>A speech input user navigates content using voice commands which translate to simulate
-                     mouse (and keyboard) commands. When talking with a colleague, however, the user turns
-                     speech recognition off and uses the mouse instead.
-                  </li>
-                  
-                  <li>A user opens a menu with a mouse, and then navigates between the menu items with arrow
-                     keys.
+                  <li>
+                     <strong>Przykład 1: Przyciski</strong><br />
+                     Na ekranie znajdują się trzy przyciski, a obszar docelowy każdego przycisku to 44
+                     na 44 piksele CSS.
+                     
                   </li>
                   
                </ul>
@@ -172,16 +202,25 @@
                <p>Zasoby służą wyłącznie celom informacyjnym. Nie należy traktować ich jako zaleceń.</p>
                <ul>
                   
-                  <li><a href="https://w3c.github.io/pointerevents/">W3C Pointer Events - Level 2</a></li>
+                  <li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/adaptivity-and-layout/">Apple touch target size recommendations</a> (Zalecenia dotyczące rozmiaru celu dotyku Apple)
+                  </li>
                   
-                  <li><a href="https://hacks.mozilla.org/2013/04/detecting-touch-its-the-why-not-the-how/">Patrick H. Lauke - Detecting touch: it's the 'why', not the 'how'</a></li>
-                  				
-                  <li><a href="https://www.html5rocks.com/en/mobile/touchandmouse/">Chris Wilson / Paul Kinlan: Touch And Mouse - Together Again For The First Time
-                        </a></li>
-                  <li><a href="https://w3c.github.io/touch-events/#mouse-events">W3C Touch Events - Level 2: Interaction with Mouse Events and click</a></li>
+                  <li><a href="https://docs.microsoft.com/en-us/windows/apps/design/input/guidelines-for-targeting">Windows UWP Guidelines for touch targets</a> (Wskazówki dotyczące platformy UWP systemu Windows dotyczące docelowych obiektów
+                     dotyku)
+                  </li>
                   
-                  <li><a href="https://www.w3.org/TR/mediaqueries-4/#mf-interaction">W3C CSS Media Queries Level 4: Interaction Media Features</a></li>
-                  			
+                  <li><a href="https://material.io/design/layout/spacing-methods.html#touch-targets">Google Material Design Touch targets</a> (Cele dotykowe w Google Material Design)
+                  </li>
+                  
+                  <li><a href="https://web.dev/accessible-tap-targets/">web.dev Accessible tap targets</a> (web.dev Dostępne cele stuknięcia)
+                  </li>
+                  
+                  <li><a href="http://touchlab.mit.edu/publications/2003_009.pdf">Human Fingertips to Investigate the Mechanics of Tactile Sense (PDF) (Opuszki ludzkich
+                        palców do badania mechaniki zmysłu dotyku (PDF))</a></li>
+                  
+                  <li><a href="https://www.cs.umd.edu/hcil/trs/2006-11/2006-11.htm">One-Handed Thumb Use on Small Touchscreen Devices</a> (Obsługa kciukiem jedną ręką na małych urządzeniach z ekranem dotykowym)
+                  </li>
+                  
                </ul>
             </section>
             <section id="techniques">
@@ -193,14 +232,31 @@
                </p>
                <section id="sufficient">
                   <h3>Techniki wystarczające</h3>
+                  <p>Wybierz poniżej sytuację, która pasuje do Twojej treści. Każda sytuacja obejmuje techniki
+                     lub kombinacje technik, które są znane i udokumentowane jako wystarczające w danej
+                     sytuacji. 
+                  </p>
+                  <section class="situation" id="">
+                     
+                     <ul>
+                        
+                        <li>Zapewnienie, że cele dotykowe mają co najmniej 44 na 44 piksele CSS.</li>
+                        
+                        <li>Zapewnienie mechanizmu zmiany wielkości celów dotykowych niezależnie od powiększenia</li>
+                        
+                     </ul>
+                     
+                  </section>
+               </section>
+               <section id="advisory">
+                  <h3>Techniki pomocnicze</h3>
+                  <p>Chociaż nie jest to wymagane do uzyskania zgodności, należy rozważyć następujące dodatkowe
+                     techniki, aby zwiększyć dostępność treści. Nie wszystkie techniki mogą być stosowane
+                     lub byłyby skuteczne we wszystkich sytuacjach.
+                  </p>
                   <ul>
                      
-                     <li>Only using high-level, input-agnostic event handlers, such as <code>focus</code>, <code>blur</code>, <code>click</code>, in Javascript (Potential future technique).
-                     </li>
-                     
-                     <li> Registering event handlers for keyboard/keyboard-like and pointer inputs simultaneously
-                        in Javascript; see <a href="https://w3c.github.io/pointerevents/#examples">Example 1 in Pointer Events Level 2</a> (Potential future technique)
-                     </li>
+                     <li>Zapewnienie, że łącza śródliniowe posiadają wystarczająco duży rozmiar pola aktywacji</li>
                      
                   </ul>
                </section>
@@ -211,7 +267,9 @@
                   </p>
                   <ul>
                      
-                     <li><a href="https://w3c.github.io/wcag/techniques/failures/F98">F98: Failure due to interactions being limited to touch-only on touchscreen devices</a></li>
+                     <li>Niespełnienie kryterium sukcesu 2.5.5 z powodu rozmiaru celu mniejszego niż 44 na
+                        44 piksele CSS
+                     </li>
                      
                   </ul>
                </section>
@@ -221,6 +279,27 @@
                   <summary>
                      <h2>Kluczowe pojęcia</h2>
                   </summary>
+                  <dt id="dfn-cel">cel</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">obszar wyświetlacza, który zaakceptuje akcję wskaźnika, taki jak obszar interaktywny
+                           <a href="#dfn-komponent-interfejsu-u%C5%BCytkownika">komponentu interfejsu użytkownika</a>
+                           
+                        </p>
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>Jeżeli dwa lub więcej celów dotykowych nakładają się na siebie, pokrywający się obszar
+                              nie powinien być uwzględniany przy pomiarze wielkości celu, chyba że nakładające się
+                              cele wykonują tę samą czynność lub otwierają tę samą stronę.
+                           </p>
+                        </div>
+                        
+                        
+                     </definition>
+                  </dd>
                   <dt id="dfn-istotny">istotny</dt>
                   <dd>
                      <definition xmlns="">
@@ -232,6 +311,106 @@
                            zgodność
                            
                         </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-komponent-interfejsu-użytkownika">komponent interfejsu użytkownika</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           fragment treści internetowej odbierany przez użytkownika jako pojedyncza kontrolka
+                           dla określonej funkcji
+                           
+                        </p>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Wiele komponentów interfejsu użytkownika może być implementowanych w postaci pojedynczego
+                              elementu. Tutaj komponenty nie są związane z konkretną techniką programistyczną, a
+                              raczej z tym, co użytkownik odbiera jako pojedynczą kontrolkę.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Do komponentów interfejsu użytkownika należą elementy formularzy i linków, jak również
+                              komponenty generowane przez skrypty.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              To, co jest tutaj rozumiane jako „komponent” lub „komponent interfejsu użytkownika”
+                              jest również czasami nazywane „elementem interfejsu użytkownika”.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Aplet posiada „kontrolkę” pozwalającą na przesuwanie treści po linii lub stronie albo
+                              na swobodny dostęp. Każdy aplet ma własną nazwę i może być używany niezależnie, jak
+                              również może być traktowany jak „komponent interfejsu użytkownika”.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-piksel-css">piksel css</dt>
+                  <dd>
+                     <definition xmlns="">
+                        					
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">kąt widzenia wynoszący około 0,0213 stopnia</p>
+                        					
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">Piksel CSS jest kanoniczną jednostką miary dla wszystkich długości i pomiarów w CSS.
+                           Jednostka ta jest niezależna od gęstości i różni się od rzeczywistych pikseli sprzętowych
+                           obecnych na wyświetlaczu. Programy użytkownika i systemy operacyjne powinny zapewnić,
+                           że piksel CSS jest ustawiony jak najbliżej wartości i jednostek piksela referencyjnego
+                           zdefiniowanego w <a href="https://www.w3.org/TR/css3-values/#reference-pixel">CSS Values and Units Module Level 3 reference pixel</a> [[css3-values]], który uwzględnia fizyczne wymiary wyświetlacza oraz zakładaną odległość
+                           oglądania (czynniki, których autorzy treści nie mogą określić).
+                           
+                        </p>
+                        				
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-punkt-dotyku">punkt dotyku</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           niezależna od sprzętu reprezentacja urządzeń wejściowych, które mogą wskazywać określone
+                           współrzędne (lub zestaw współrzędnych) na ekranie, takie jak mysz, pióro lub kontakt
+                           dotykowy
+                           
+                        </p>
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Zobacz także <a href="https://www.w3.org/TR/pointerevents/#dfn-pointer">Pointer Events definition for "pointer"</a> [[pointerevents]].
+                              
+                           </p>
+                        </div>
                         
                         
                      </definition>
