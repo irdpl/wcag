@@ -81,119 +81,132 @@
                <h2>W skrócie</h2>
                <dl>
                   
-                  <dt>Goal</dt>
-                  <dd>Keyboard users navigate content in a correct order.</dd>
+                  <dt>Cel</dt>
                   
-                  <dt>What to do</dt>
-                  <dd>Elements receive focus in an order that preserves meaning.</dd>
+                  <dd>Użytkownicy klawiatury poruszają się po treściach w prawidłowej kolejności</dd>
                   
-                  <dt>Why it's important</dt>
-                  <dd>Navigating a site or application with only the keyboard will make sense.</dd> 
+                  <dt>Zadanie autora</dt>
+                  
+                  <dd>Elementy otrzymują fokus w kolejności, która zachowuje znaczenie</dd>
+                  
+                  <dt>Dlaczego to jest ważne</dt>
+                  
+                  <dd>Poruszanie się po witrynie lub aplikacji za pomocą samej klawiatury będzie miało sens.</dd>
                   
                </dl>
             </section>
             <section id="intent">
                <h2>Intencja</h2>
-               <p>The intent of this Success Criterion is to ensure that when users navigate sequentially
-                  through content, they encounter information in an order that is consistent with the
-                  meaning of the content and can be operated from the keyboard. This reduces confusion
-                  by letting users form a consistent mental model of the content. There may be different
-                  orders that reflect logical relationships in the content. For example, moving through
-                  components in a table one row at a time or one column at a time both reflect the logical
-                  relationships in the content. Either order may satisfy this Success Criterion.
+               <p>
+                  Intencją tego kryterium sukcesu jest zapewnienie, że użytkownicy poruszający się po
+                  treści sekwencyjnie napotkają informacje w kolejności zgodnej ze znaczeniem treści
+                  i umożliwiającej obsługę za pomocą klawiatury. Zmniejsza to zamieszanie, umożliwiając
+                  użytkownikom utworzenie spójnego mentalnego modelu treści. Mogą istnieć różne porządki,
+                  które odzwierciedlają logiczne relacje w treści. Na przykład poruszanie się po komponentach
+                  tabeli po wierszu lub po kolumnie odzwierciedla logiczne relacje w treści. Każdy z
+                  tych porządków może spełnić to kryterium sukcesu.
                   
                </p>
-               <p>The way that sequential navigation order is determined in Web content is defined by
-                  the technology of the content. For example, simple HTML defines sequential navigation
-                  via the notion of tabbing order. Dynamic HTML may modify the navigation sequence using
-                  scripting along with the addition of a tabindex attribute to allow focus to additional
-                  elements. If no scripting or tabindex attributes are used, the navigation order is
-                  the order that components appear in the content stream. (See HTML 4.01 Specification,
-                  section 17.11, "Giving focus to an element").
+               <p>
+                  Sposób, w jaki ustalana jest kolejność nawigacji sekwencyjnej w treściach internetowych,
+                  jest definiowany przez technologię treści. Na przykład prosty HTML definiuje nawigację
+                  sekwencyjną poprzez pojęcie kolejności tabulacji. Dynamiczny HTML może modyfikować
+                  sekwencję nawigacji za pomocą skryptów wraz z dodatkiem atrybutu tabindex, aby umożliwić
+                  ustawienie fokusu na dodatkowych elementach. Jeśli nie są używane żadne atrybuty skryptowe
+                  ani <code>tabindex</code>, kolejność nawigacji to kolejność, w jakiej komponenty pojawiają się w strumieniu
+                  treści. (Zobacz specyfikację HTML 4.01, sekcja 17.11, „Przydzielanie elementowi fokusu”).
                   
                </p>
-               <p>An example of keyboard navigation that is not the sequential navigation addressed
-                  by this Success Criterion is using arrow key navigation to traverse a tree component.
-                  The user can use the up and down arrow keys to move from tree node to tree node. Pressing
-                  the right arrow key may expand a node, then using the down arrow key, will move into
-                  the newly expanded nodes. This navigation sequence follows the expected sequence for
-                  a tree control - as additional items get expanded or collapsed, they are added or
-                  removed from the navigation sequence.
+               <p>
+                  Przykładem nawigacji za pomocą klawiatury, która nie jest nawigacją sekwencyjną, o
+                  której mowa w tym kryterium sukcesu, jest używanie nawigacji za pomocą klawiszy strzałek
+                  do poruszania się po komponencie drzewa. Użytkownik może używać klawiszy strzałek
+                  w górę i w dół, aby przechodzić od węzła drzewa do węzła drzewa. Naciśnięcie klawisza
+                  strzałki w prawo może rozwinąć węzeł, a następnie użycie klawisza strzałki w dół spowoduje
+                  przejście do nowo rozwiniętych węzłów. Ta sekwencja nawigacji jest zgodna z oczekiwaną
+                  sekwencją kontrolki drzewa — w miarę rozwijania lub zwijania dodatkowych elementów
+                  są one dodawane lub usuwane z sekwencji nawigacji.
                   
                </p>
-               <p>The focus order may not be identical to the programmatically determined reading order
-                  (see Success Criterion 1.3.2) as long as the user can still understand and operate
-                  the Web page. Since there may be several possible logical reading orders for the content,
-                  the focus order may match any of them. However, when the order of a particular presentation
-                  differs from the programmatically determined reading order, users of one of these
-                  presentations may find it difficult to understand or operate the Web page. Authors
-                  should carefully consider all these users as they design their Web pages.
+               <p>
+                  Kolejność fokusu może nie być identyczna z ustaloną programowo kolejnością czytania
+                  (zobacz <a href="zrozumiala-kolejnosc">Kryterium sukcesu 1.3.2</a>), o ile użytkownik nadal może zrozumieć i obsługiwać stronę internetową. Ponieważ
+                  może istnieć kilka możliwych logicznych kolejności czytania treści, kolejność fokusu
+                  może odpowiadać dowolnej z nich. Jeśli jednak kolejność konkretnej prezentacji różni
+                  się od ustalonej programowo kolejności czytania, użytkownicy jednej z tych prezentacji
+                  mogą mieć trudności ze zrozumieniem lub obsługą strony internetowej. Autorzy powinni
+                  podczas projektowania swoich stron internetowych dokładnie rozważyć potrzeby wszystkich
+                  tych użytkowników.
                   
                </p>
-               <p>For example, a screen reader user interacts with the programmatically determined reading
-                  order, while a sighted keyboard user interacts with the visual presentation of the
-                  Web page. Care should be taken so that the focus order makes sense to both of these
-                  sets of users and does not appear to either of them to jump around randomly. 
+               <p>
+                  Na przykład użytkownik czytnika ekranu wchodzi w interakcję z programowo określoną
+                  kolejnością czytania, podczas gdy widzący użytkownik klawiatury wchodzą w interakcję
+                  z wizualną prezentacją strony internetowej. Należy zadbać o to, aby kolejność działań
+                  była zrozumiała dla obu grup użytkowników i nie sprawiała wrażenia, że ​​którakolwiek
+                  z nich zmienia się losowo.
                   
                </p>
-               <p>For clarity:</p>
+               <p>Dla jasności:</p>
                <ul>
                   
-                  
-                  <li>Focusable components need to receive focus in an order that preserves meaning and
-                     operability only when navigation sequences affect meaning and operability.
+                  <li>
+                     Komponenty, na których można ustawić fokus, muszą otrzymywać fokus w kolejności, która
+                     zachowuje znaczenie i funkcjonalność tylko wtedy, gdy sekwencje nawigacji wpływają
+                     na znaczenie i funkcjonalność.
                      
                   </li>
                   
-                  
-                  <li>In those cases where it is required, there may be more than one order that will preserve
-                     meaning and operability.
+                  <li>
+                     W przypadkach, gdy jest to wymagane, może istnieć więcej niż jedna kolejność, która
+                     zachowa znaczenie i funkcjonalność.
                      
                   </li>
                   
-                  
-                  <li>If there is more than one order that preserves meaning and operability, only one of
-                     them needs to be provided.
+                  <li>
+                     Jeśli istnieje więcej niż jedna kolejność, która zachowuje znaczenie i funkcjonalność,
+                     należy podać tylko jedno z nich.
                      
                   </li>
-                  
                   
                </ul>
             </section>
             <section id="benefits">
                <h2>Korzyści</h2>
-               <p>These techniques benefit keyboard users who navigate documents sequentially and expect
-                  the focus order to be consistent with the sequential reading order.
+               <p>
+                  Techniki te są korzystne dla użytkowników klawiatury, którzy nawigują po dokumentach
+                  sekwencyjnie i oczekują, że kolejność zaznaczania będzie zgodna z kolejnością czytania
+                  sekwencyjnego.
                   
                </p>
                <ul>
                   
-                  
-                  <li>People with mobility impairments who must rely on keyboard access for operating a
-                     page benefit from a logical, usable focus order.
+                  <li>
+                     Osoby z niepełnosprawnością manualną, które do obsługi strony muszą korzystać z klawiatury,
+                     korzystają z logicznej i użytecznej kolejności fokusu.
                      
                   </li>
                   
-                  
-                  <li>People with disabilities that make reading difficult can become disoriented when tabbing
-                     takes focus someplace unexpected. They benefit from a logical focus order.
+                  <li>
+                     Osoby z niepełnosprawnościami utrudniającymi czytanie mogą być zdezorientowane, gdy
+                     naciśnięcie tabulatora ustawi fokus w  nieoczekiwanym miejscu. Korzystają oni z logicznej
+                     kolejności fokusu.
                      
                   </li>
                   
-                  
-                  <li>People with visual impairments can become disoriented when tabbing takes focus someplace
-                     unexpected or when they cannot easily find the content surrounding an interactive
-                     element.
+                  <li>
+                     Osoby z wadą wzroku mogą stracić orientację, gdy naciśnięcie klawisza Tab przeniesie
+                     fokus w nieoczekiwane miejsce lub gdy nie będą mogły łatwo znaleźć treści otaczających
+                     element interaktywny.
                      
                   </li>
                   
-                  
-                  <li>Only a small portion of the page may be visible to an individual using a screen magnifier
-                     at a high level of magnification. Such a user may interpret a field in the wrong context
-                     if the focus order is not logical.
+                  <li>
+                     Tylko niewielka część strony może być widoczna dla osoby korzystającej z lupy ekranowej
+                     przy dużym powiększeniu. Taki użytkownik może zinterpretować pole w niewłaściwym kontekście,
+                     jeśli kolejność fokusu nie jest logiczna.
                      
                   </li>
-                  
                   
                </ul>
             </section>
@@ -201,81 +214,75 @@
                <h2>Przykłady</h2>
                <ul>
                   
-                  
-                  <li>On a web page that contains a tree of interactive controls, the user can use the up
-                     and down arrow keys to move from tree node to tree node. Pressing the right arrow
-                     key expands a node, then using the down arrow key moves into the newly expanded nodes.
+                  <li>
+                     Na stronie internetowej zawierającej drzewo interaktywnych elementów sterujących użytkownik
+                     może używać klawiszy strzałek w górę i w dół, aby przechodzić od węzła drzewa do węzła
+                     drzewa. Naciśnięcie klawisza strzałki w prawo rozwija węzeł, a następnie klawiszem
+                     strzałki w dół przechodzi do nowo rozwiniętych węzłów.
                      
                   </li>
                   
-                  
-                  <li>A Web page implements modeless dialogs via scripting. When the trigger button is activated,
-                     a dialog opens. The interactive elements in the dialog are inserted in the focus order
-                     immediately after the button. When the dialog is open, the focus order goes from the
-                     button to the elements of the dialog, then to the interactive element following the
-                     button. When the dialog is closed, the focus order goes from the button to the following
-                     element.
+                  <li>
+                     Strona internetowa implementuje niemodalne okna dialogowe za pomocą skryptów. Po aktywowaniu
+                     przycisku wyzwalacza otwiera się okno dialogowe. Elementy interaktywne w oknie dialogowym
+                     wstawiane są w kolejności fokusu bezpośrednio po przycisku. Gdy okno dialogowe jest
+                     otwarte, fokus przechodzi od przycisku do elementów okna dialogowego, a następnie
+                     do elementu interaktywnego znajdującego się za przyciskiem. Kiedy okno dialogowe jest
+                     zamknięte, fokus przechodzi od przycisku do następnego elementu interaktywnego.
                      
                   </li>
                   
-                  
-                  <li>A Web page implements modal dialogs via scripting. When the trigger button is activated,
-                     a dialog opens and focus is set within the dialog. As
-                     long as the dialog is open, focus is limited to the elements of the dialog. When the
-                     dialog is dismissed, focus returns to the button or the element following the button.
+                  <li>
+                     Strona internetowa implementuje modalne okna dialogowe za pomocą skryptów. Po aktywowaniu
+                     przycisku wyzwalacza otwiera się okno dialogowe, w którym ustawiany jest fokus. Dopóki
+                     okno dialogowe jest otwarte, fokus jest ustawiany na elementach okna dialogowego.
+                     Po zamknięciu okna dialogowego fokus powraca do przycisku lub elementu następującego
+                     po przycisku.
                      
                   </li>
-                  
                   
                   <li>
                      
-                     
-                     <p>An HTML Web page is created with the left hand navigation occurring in the HTML after
-                        the main body content, and styled with CSS to appear on the left hand side of the
-                        page. This is done to allow focus to move to the main body content first without requiring
-                        tabIndex attributes or JavaScript.
+                     <p>
+                        Strona internetowa HTML jest tworzona z nawigacją po lewej stronie występującą w kodzie
+                        HTML po głównej treści i stylizowana za pomocą CSS tak, aby pojawiała się po lewej
+                        stronie strony. Ma to na celu umożliwienie ustawienia fokusu najpierw na głównej treści
+                        bez konieczności stosowania atrybutów tabIndex lub JavaScript.
                         
                      </p>
                      
-                     
                      <div class="note">
                         <p class="note-title marker">Uwaga</p>
-                        <div>
+                        <p>
+                           Choć ten przykład spełnia kryterium sukcesu, niekoniecznie jest prawdą, że każde pozycjonowanie
+                           CSS spełniałoby takie kryteria. Bardziej złożone przykłady pozycjonowania mogą, ale
+                           nie muszą, zachować znaczenie i funkcjonalność
                            
-                           
-                           <p>While this example passes the Success Criterion, it is not necessarily true that all
-                              CSS positioning would. More complex positioning examples may or may not preserve meaning
-                              and operability
-                              
-                           </p>
-                           
-                           
-                        </div>
+                        </p>
                      </div>
                      
-                     
                   </li>
-                  
                   
                   <li>
                      
-                     
-                     <p>The following example <strong>fails to meet the Success Criterion</strong>:
+                     <p>
+                        Poniższy przykład <strong>nie spełnia kryterium sukcesu</strong>:
+                        
                      </p>
                      
-                     
-                     <p>A company's Web site includes a form that collects marketing data and allows users
-                        to subscribe to several newsletters published by the company. The section of the form
-                        for collecting marketing data includes fields such as name, street address, city,
-                        state or province, and postal code. Another section of the form includes several checkboxes
-                        so that users can indicate newsletters they want to receive. However, the tab order
-                        for the form skips between fields in different sections of the form, so that focus
-                        moves from the name field to a checkbox, then to the street address, then to another
-                        checkbox.
+                     <p>
+                        Na stronie internetowej firmy znajduje się formularz, który zbiera dane marketingowe
+                        i umożliwia użytkownikom subskrypcję kilku biuletynów publikowanych przez firmę. Sekcja
+                        formularza służąca do zbierania danych marketingowych zawiera pola takie jak imię
+                        i nazwisko, adres, miasto, stan lub województwo oraz kod pocztowy. Kolejna część formularza
+                        zawiera kilka pól wyboru, dzięki którym użytkownicy mogą wskazać biuletyny, które
+                        chcą otrzymywać. Jednak kolejność fokusu  formularza jest przeskakiwana pomiędzy polami
+                        w różnych sekcjach formularza, w związku z czym fokus przenosi się z pola nazwy do
+                        pola wyboru, następnie do adresu ulicy, a następnie do innego pola wyboru.
+                        
                      </p>
                      
                   </li>
-                  
                   
                </ul>
             </section>
@@ -290,89 +297,61 @@
                   <h3>Techniki wystarczające</h3>
                   <ul>
                      
-                     
                      <li>
-                        									         
-                        <a class="general" href="https://w3c.github.io/wcag/techniques/general/G59">G59: Placing the interactive elements in an order that follows sequences and relationships
-                           within the content</a>
-                        								       
+                        <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G59">G59: Umieszczanie elementów interaktywnych w kolejności podążającej za sekwencjami
+                           i relacjami w obrębie treści</a>
                         
                      </li>
                      
-                     
                      <li>
                         
-                        
-                        <p>Giving focus to elements in an order that follows sequences and relationships within
-                           the content using one of the following techniques:
+                        <p>
+                           Ustawianie fokusu na elementach w kolejności sekwencyjnej i zgodnej z relacjami w
+                           obrębie treści za pomocą jednej z następujących technik
                            
                         </p>
                         
-                        
                         <ul>
                            
-                           
                            <li>
-                              											             
-                              <a class="css" href="https://w3c.github.io/wcag/techniques/css/C27">C27: Making the DOM order match the visual order</a>
-                              										           
+                              <a class="css" href="https://www.w3.org/WAI/WCAG22/Techniques/css/C27">C27: Tworzenie kolejności elementów DOM zgodnie z porządkiem wizualnym</a>
                               
                            </li>
                            
-                           
                            <li>
-                              
-                              <a class="pdf" href="https://w3c.github.io/wcag/techniques/pdf/PDF3">PDF3: Ensuring correct tab and reading order in PDF documents</a>
-                              
+                              <a class="pdf" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF3">PDF3: Zapewnienie prawidłowej kolejności tabulacji i czytania w dokumentach PDF</a>
                               
                            </li>
-                           
                            
                         </ul>
                         
-                        
                      </li>
-                     
                      
                      <li>
                         
-                        
-                        <p>Changing a Web page dynamically using one of the following techniques:</p>
-                        
+                        <p>Dynamiczne zmiany treści strony za pomocą jednej z następujących technik:</p>
                         
                         <ul>
                            
-                           
                            <li>
-                              											             
-                              <a class="script" href="https://w3c.github.io/wcag/techniques/client-side-script/SCR26">SCR26: Inserting dynamic content into the Document Object Model immediately following its
-                                 trigger element</a>
-                              										           
+                              <a class="script" href="https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR26">SCR26: Wstawianie dynamicznej treści do modelu obiektów dokumentu bezpośrednio po
+                                 elemencie wyzwalającym</a>
                               
                            </li>
                            
-                           
                            <li>
-                              											             
-                              <a class="script" href="https://w3c.github.io/wcag/techniques//SCR37">SCR37: </a>
-                              										           
+                              <a class="script" href="https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR37">SCR37: Tworzenie niestandardowych okien dialogowych</a>
                               
                            </li>
                            
-                           
                            <li>
-                              											             
-                              <a class="script" href="https://w3c.github.io/wcag/techniques/client-side-script/SCR27">SCR27: Reordering page sections using the Document Object Model</a>
-                              										           
+                              <a class="script" href="https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR27">SCR27: Zmiana kolejności sekcji strony za pomocą Obiektowego Modelu Dokumentów (DOM)</a>
                               
                            </li>
-                           
                            
                         </ul>
                         
-                        
                      </li>
-                     
                      
                   </ul>
                </section>
@@ -383,24 +362,17 @@
                   </p>
                   <ul>
                      
-                     
                      <li>
-                        									         
-                        <a class="failure" href="https://w3c.github.io/wcag/techniques/failures/F44">F44: Failure of Success Criterion 2.4.3 due to using tabindex to create a tab order that
-                           does not preserve meaning and operability</a>
-                        								       
+                        <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F44">F44: Niespełnienie kryterium sukcesu 2.4.3 z powodu użycia tabindex do utworzenia
+                           kolejności tabulacji, która nie zachowuje znaczenia i funkcjonalności</a>
                         
                      </li>
                      
-                     
                      <li>
-                        									         
-                        <a class="failure" href="https://w3c.github.io/wcag/techniques/failures/F85">F85: Failure of Success Criterion 2.4.3 due to using dialogs or menus that are not adjacent
-                           to their trigger control in the sequential navigation order</a>
-                        								       
+                        <a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F85">F85: Niespełnienie kryterium sukcesu 2.4.3 z powodu używania okien dialogowych lub
+                           menu, które nie sąsiadują z ich kontrolą wyzwalania w kolejności sekwencyjnej nawigacji</a>
                         
                      </li>
-                     
                      
                   </ul>
                </section>
