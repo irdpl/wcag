@@ -79,78 +79,102 @@
             <section id="brief">
                <h2>W skrócie</h2>
                <dl>
-                  			
-                  <dt>Goal</dt>
-                  <dd>Make users aware of important changes in content.</dd>
-                  			
-                  <dt>What to do</dt>
-                  <dd>Let assistive technology notify users about status changes that don't take focus.</dd>
-                  			
-                  <dt>Why it's important</dt>
-                  <dd>People who do not see messages need to be informed about them.</dd>
-                  		
+                  
+                  <dt>Cel</dt>
+                  
+                  <dd>Informowanie użytkowników o ważnych zmianach w treści</dd>
+                  
+                  <dt>Co zrobić</dt>
+                  
+                  <dd>Umożliwiaj technologii wspomagającej powiadamianie użytkowników o zmianach stanu,
+                     które nie wymagają fokusu.
+                  </dd>
+                  
+                  <dt>Dlaczego to jest ważne</dt>
+                  
+                  <dd>Osoby, które nie widzą powiadomień, muszą być o nich informowane.</dd>
+                  
                </dl>
             </section>
             <section id="intent">
                <h2>Intencja</h2>
-               <p>The intent of this Success Criterion is to make users aware of important changes in
-                  content that are not given focus, and to do so in a way that doesn't unnecessarily
-                  interrupt their work.
+               <p>
+                  Intencją tego kryterium sukcesu jest informowanie użytkowników o ważnych zmianach
+                  w treści, które nie są w centrum uwagi, i zrobienie tego w sposób, który nie przerywa
+                  niepotrzebnie ich pracy.
+                  
                </p>
-               <p>The intended beneficiaries are blind and low vision users of assistive technologies
-                  with screen reader capabilities. An additional benefit is that assistive technologies
-                  for users with cognitive disabilities may achieve an alternative means of indicating
-                  (or even delaying or supressing) status messages, as preferred by the user.
+               <p>
+                  Beneficjentami są niewidomi i słabowidzący użytkownicy technologii wspomagających
+                  z funkcją czytnika ekranu. Dodatkową korzyścią jest to, że technologie wspomagające
+                  dla użytkowników z zaburzeniami poznawczymi mogą osiągnąć alternatywny sposób wskazywania
+                  (lub nawet opóźniania lub tłumienia) komunikatów o stanie, zgodnie z preferencjami
+                  użytkownika.
+                  
                </p>
-               <p>The scope of this Success Criterion is specific to changes in content that involve
-                  status messages. A <a href="#dfn-komunikat-o-stanie">komunikat o stanie</a> is a defined term in WCAG. There are two main criteria that determine whether something
-                  meets the definition of a status message:
+               <p>
+                  Zakres tego kryterium sukcesu jest specyficzny dla zmian w treści, które obejmują
+                  komunikaty o stanie. <a href="#dfn-komunikat-o-stanie">Komunikat o stanie</a> jest pojęciem zdefiniowanym w WCAG. Istnieją dwa główne kryteria, które określają,
+                  czy coś spełnia definicję komunikatu o stanie:
+                  
                </p>
                <ul>
-                  		
-                  <li> the message <q>provides information to the user on the success or results of an action, on the waiting
-                        state of an application, on the progress of a process, or on the existence of errors;</q></li>
-                  		
-                  <li> the message is not delivered via a change in context.</li>
-                  	
+                  
+                  <li> Komunikat <q>dostarcza użytkownikowi informacji o powodzeniu lub wynikach działania, o stanie oczekiwania
+                        aplikacji, o postępie procesu lub o istnieniu błędów</q>;
+                  </li>
+                  
+                  <li> wiadomość nie jest dostarczana poprzez zmianę kontekstu.</li>
+                  
                </ul>
-               <p>Information can be added to pages which does not meet the definition of a status message.
-                  For example, the list of results obtained from a search are not considered a status
-                  update and thus are not covered by this Success Criterion. However, brief text messages
-                  displayed <em>about</em> the completion or status of the search, such as "Searching...", "18 results returned"
-                  or "No results returned" would be status updates if they do not take focus. Examples
-                  of status messages are given in the section titled <a href="#status-examples">Status Message Examples</a> below.
+               <p>
+                  Do stron można dodawać informacje, które nie spełniają definicji komunikatu o stanie.
+                  Na przykład lista wyników uzyskanych w wyniku wyszukiwania nie jest uważana za aktualizację
+                  stanu, a zatem nie jest objęta tym kryterium sukcesu. Jednak krótkie komunikaty tekstowe
+                  wyświetlane <em>na temat</em> zakończenia lub statusu wyszukiwania, takie jak „Wyszukiwanie...”, „Zwrócono 18 wyników”
+                  lub „Nie zwrócono żadnych wyników” byłyby aktualizacjami stanu, gdyby nie otzymywały
+                  fokusu. Przykłady komunikatów o stanie podano w sekcji zatytułowanej <a href="#status-examples">Przykłady komunikatów o stanie</a> poniżej.
+                  
                </p>
-               <p>This Success Criterion specifically addresses scenarios where new content is added
-                  to the page without changing the user's context. <a href="#dfn-zmiana-kontekstu">Zmiana kontekstu</a>, by their nature, interrupt the user by taking focus. They are already surfaced by
-                  assistive technologies, and so have already met the goal to alert the user to new
-                  content. As such, messages that involve changes of context do not need to be considered
-                  and are not within the scope of this Success Criterion. Examples of scenarios that
-                  add new content by changing the context are given in the section titled <a href="#excepted-examples">Examples of Changes That Are Not Status Messages</a> below.
+               <p>
+                  To kryterium sukcesu odnosi się w szczególności do scenariuszy, w których o strony
+                  jest dodawana nowa treść d bez zmiany kontekstu użytkownika. <a href="#dfn-zmiana-kontekstu">Zmiany kontekstu</a> z natury przerywają użytkownikowi, skupiając jego uwagę. Są one już wyświetlane przez
+                  technologie wspomagające, a więc już osiągnęły cel, jakim jest ostrzeganie użytkownika
+                  o nowych treściach. W związku z tym komunikaty, które wiążą się ze zmianami kontekstu,
+                  nie muszą być brane pod uwagę i nie wchodzą w zakres tego kryterium sukcesu. Przykłady
+                  scenariuszy, które dodają nową treść poprzez zmianę kontekstu, podano w sekcji zatytułowanej
+                  <a href="#excepted-examples">Przykłady zmian, które nie są komunikatami o stanie</a> poniżej.
+                  
                </p>
             </section>
             <section id="benefits">
                <h2>Korzyści</h2>
                <ul>
-                  					
-                  <li>When appropriate roles or properties are assigned to status messages, the new content
-                     is spoken by screen readers in such a way as to assist blind and low vision users.
-                     Most sighted users can observe text peripherally added to the viewport. Such content
-                     provides additional information without affecting the user's current point of regard.
-                     The ability of an assistive technology to announce such new important text content
-                     allows more users to benefit from an awareness of the information in an equivalent
-                     manner.
+                  
+                  <li>
+                     Gdy odpowiednie role lub właściwości są przypisane do komunikatów o stanie, nowa treść
+                     jest wypowiadana przez czytniki ekranu w taki sposób, aby pomóc użytkownikom niewidomym
+                     i słabowidzącym. Większość widzących użytkowników może obserwować tekst dodany peryferyjnie
+                     do rzutni. Taka treść dostarcza dodatkowych informacji bez wpływu na aktualny punkt
+                     przeglądania użytkownika. Zdolność technologii wspomagającej do ogłaszania takich
+                     nowych ważnych treści tekstowych pozwala większej liczbie użytkowników korzystać ze
+                     świadomości informacji w równoważny sposób.
+                     
                   </li>
-                  			
-                  <li>Assigning proper roles or properties to status messages provides possible future uses
-                     and personalization opportunities, such as the potential to be exploited by assistive
-                     technologies created for users with some cognitive disabilities. Where page authors
-                     elect to design additions to the screen which do <em>not</em> change the user's context (i.e., take focus), the information is arguably of less
-                     importance than something presented using a modal dialog, which must be acknowledged
-                     by the user. As such, depending on the user's preferences, an assistive technology
-                     may choose to delay, suppress, or transform such messages so a user is not unnecessarily
-                     interrupted; or conversely the assistive technology may highlight such messages where
-                     the user finds it optimal to do so.
+                  
+                  <li>
+                     Przypisanie odpowiednich ról lub właściwości do komunikatów o stanie zapewnia możliwe
+                     przyszłe zastosowania i możliwości personalizacji, takie jak potencjał do wykorzystania
+                     przez technologie wspomagające stworzone dla użytkowników z niektórymi niepełnosprawnościami
+                     poznawczymi. Tam, gdzie autorzy stron decydują się na zaprojektowanie dodatków do
+                     ekranu, które <em>nie</em> zmieniają kontekstu użytkownika (tj. przejmują fokus), informacje są prawdopodobnie
+                     mniej ważne niż te prezentowane za pomocą modalnego okna dialogowego, które musi zostać
+                     potwierdzone przez użytkownika. W związku z tym, w zależności od preferencji użytkownika,
+                     technologia wspomagająca może zdecydować się na opóźnienie, stłumienie lub przekształcenie
+                     takich komunikatów, aby użytkownik nie był niepotrzebnie przerywany; lub odwrotnie,
+                     technologia wspomagająca może wyróżnić takie komunikaty, gdy użytkownik uzna to za
+                     optymalne.
+                     
                   </li>
                   
                </ul>
@@ -158,238 +182,288 @@
             <section id="examples">
                <h2>Przykłady</h2>
                <section class="example" id="status-examples">
-                  				
-                  <h3>Status Message Examples</h3>
                   
-                  				
+                  <h3>Przykłady komunikatów o stanie</h3>
+                  
                   <ul>
-                     					
-                     <li>After a user presses a Search button, the page content is updated to include the results
-                        of the search, which are displayed in a section below the Search button. The change
-                        to content also includes the message "5 results returned" near the top of this new
-                        content. This text is given an appropriate role for a status message. A screen reader
-                        announces, "Five results returned".
+                     
+                     <li>
+                        Po naciśnięciu przez użytkownika przycisku wyszukiwania, treść strony jest aktualizowana
+                        w celu uwzględnienia wyników wyszukiwania, które są wyświetlane w sekcji poniżej przycisku
+                        wyszukiwania. Zmiana treści obejmuje również komunikat „Zwrócono 5 wyników" w górnej
+                        części tej nowej treści. Tekst ten ma odpowiednią rolę dla komunikatu o stanie. Czytnik
+                        ekranu informuje: „Zwrócono pięć wyników".
+                        
                      </li>
-                     					
-                     <li>After a user presses an Add to Shopping Cart button, a section of content near the
-                        Shopping Cart icon adds the text "5 items". A screen reader announces "Five items"
-                        or "Shopping cart, five items".
+                     
+                     <li>
+                        Po naciśnięciu przez użytkownika przycisku Dodaj do koszyka sekcja treści w pobliżu
+                        ikony koszyka dodaje tekst „5 pozycji". Czytnik ekranu informuje „Pięć pozycji" lub
+                        „Koszyk, pięć pozycji".
+                        
                      </li>
-                     					
-                     <li>After a user enters incorrect text in an input called Postal Code, a message appears
-                        above the input reading "Invalid entry".  The screen reader announces, "Invalid entry"
-                        or "Postal code, invalid entry".
+                     
+                     <li>
+                        Gdy użytkownik wprowadzi nieprawidłowy tekst w polu o nazwie Kod pocztowy, nad polem
+                        pojawi się komunikat „Nieprawidłowy wpis". Czytnik ekranu wyświetli komunikat „Nieprawidłowy
+                        wpis" lub „Kod pocztowy, nieprawidłowy wpis”.
+                        
                      </li>
-                     					
-                     <li>After a user activates a process, an icon symbolizing 'busy'  appears on the screen.
-                        The screen reader announces "application busy". 
+                     
+                     <li>
+                        Gdy użytkownik aktywuje proces, na ekranie pojawia się ikona symbolizująca „zajęty”.
+                        Czytnik ekranu ogłasza „aplikacja zajęta".
+                        
                      </li>
-                     					
-                     <li>An application displays a progressbar to indicate the status of an upgrade. The element
-                        is assigned a suitable role. The screen reader provides intermittent announcements
-                        of the progress. 
+                     
+                     <li>
+                        Aplikacja wyświetla pasek postępu, aby wskazać stan aktualizacji. Elementowi przypisywana
+                        jest odpowiednia rola. Czytnik ekranu zapewnia przerywane powiadomienia o postępach.
+                        
                      </li>
-                     					
-                     <li>After a user submits a form, text is added to the existing form which reads, "Your
-                        form was successfully submitted." The screen reader announces the same message.
-                     </li> 
-                     					
-                     <li>After a user unsuccessfully fills in a form because some of the data is in the incorrect
-                        format, text is added to the existing form which reads "5 errors on page". The screen
-                        reader announces the same message.
+                     
+                     <li>
+                        Po przesłaniu formularza przez użytkownika do istniejącego formularza dodawany jest
+                        tekst o treści „Twój formularz został pomyślnie przesłany”. Czytnik ekranu wyświetla
+                        ten sam komunikat.
+                        
                      </li>
-                     					
-                     <li>After a user puts a photo in an album in an online photo app, a <a href="https://material.io/design/components/snackbars.html#">snackbar </a> displays the message "Saved in 'Wedding' album", which is also read by a screen reader.
+                     
+                     <li>
+                        Po nieudanym wypełnieniu formularza przez użytkownika, ponieważ niektóre dane mają
+                        nieprawidłowy format, do istniejącego formularza dodawany jest tekst o treści „5 błędów
+                        na stronie”. Czytnik ekranu wyświetla ten sam komunikat.
+                        
                      </li>
-                     				
+                     
+                     <li>
+                        Gdy użytkownik umieści zdjęcie w albumie w internetowej aplikacji fotograficznej,
+                        na <a href="https://material.io/design/components/snackbars.html#">pasku powiadomień </a> wyświetlany jest komunikat „Zapisane w albumie 'Ślub'”, który jest również odczytywany
+                        przez czytnik ekranu.
+                        
+                     </li>
+                     
                   </ul>
-                  			
+                  
                </section>
-               <section class="example" id="examples-of-status-messages-that-do-not-add-new-text-to-the-screen">
-                  				
-                  <h3>Examples of Status Messages that Do Not Add New Text to the Screen</h3>
-                  			
-                  <p>This Success Criterion was intentionally worded to apply primarily when visible text
-                     is added to (or becomes visible on) the page. The reason for this is that where new
-                     text is displayed, it is intended to be visible to all users. By providing a programmatic
-                     means of ensuring the text is also surfaced through assistive technologies, the Success
-                     Criterion provides the same information to users who cannot or may not see it. However,
-                     not all changes to content involve the addition of text to the screen. The following
-                     are all considerations relevant to this Success Criterion:
+               <section class="example" id="przykłady-komunikatów-o-stanie-które-nie-dodają-nowego-tekstu-do-ekranu">
+                  
+                  <h3>Przykłady komunikatów o stanie, które nie dodają nowego tekstu do ekranu</h3>
+                  
+                  <p>
+                     To kryterium sukcesu zostało celowo sformułowane tak, aby miało zastosowanie przede
+                     wszystkim wtedy, gdy widoczny tekst jest dodawany do strony (lub staje się na niej
+                     widoczny). Powodem tego jest to, że tam, gdzie wyświetlany jest nowy tekst, ma on
+                     być widoczny dla wszystkich użytkowników. Zapewniając programowe środki zapewniające
+                     wyświetlanie tekstu również za pomocą technologii wspomagających, kryterium sukcesu
+                     zapewnia te same informacje użytkownikom, którzy nie mogą lub nie mogą ich zobaczyć.
+                     Jednak nie wszystkie zmiany treści obejmują dodanie tekstu do ekranu. Poniżej przedstawiono
+                     wszystkie kwestie związane z tym kryterium sukcesu:
+                     
                   </p>
-                  				
+                  
                   <ul>
-                     					
-                     <li>Non-displayed text specific to AT users;</li>
                      
+                     <li>Niewyświetlany tekst specyficzny dla użytkowników technologii wspomagającej;</li>
                      
-                     <li>Modification of status text;</li>
+                     <li>Modyfikacja tekstu statusu;</li>
                      
-                     <li>Removal of status text; and</li>
+                     <li>Usunięcie tekstu statusu; oraz</li>
                      
-                     <li>Non-textual status content, such as images.</li>
-                     				
+                     <li>Nietekstowa treść statusu, taka jak obrazy.</li>
+                     
                   </ul>
-                  				
-                  <section id="non-displayed-text-specific-to-at-users">
-                     		
-                     <h4>Non-displayed text specific to AT users</h4>
-                     		
-                     		
-                     <p>There may be cases where the addition of visible text does not by itself convey sufficient
-                        information to the user of assistive technology. For example, the proximity of new
-                        content to other pieces of information on the screen may provide a visual context
-                        that is lacking in the text alone.
+                  
+                  <section id="niewyświetlany-tekst-specyficzny-dla-użytkowników-technologii-wspomagającej">
+                     
+                     <h4>Niewyświetlany tekst specyficzny dla użytkowników technologii wspomagającej</h4>
+                     
+                     <p>
+                        Mogą wystąpić przypadki, w których dodanie widocznego tekstu samo w sobie nie przekazuje
+                        wystarczających informacji użytkownikowi technologii wspomagającej. Na przykład bliskość
+                        nowej treści do innych informacji na ekranie może zapewnić wizualny kontekst, którego
+                        brakuje w samym tekście.
+                        
                      </p>
-                     		
-                     <p>In such cases, authors may wish to designate additional content for inclusion in the
-                        status message, including non-displayed text which can be provided to the assistive
-                        technologies, for added context. Important considerations regarding the appropriate
-                        use of such techniques are further discussed in the Sufficient Techniques.
+                     
+                     <p>
+                        W takich przypadkach twórcy mogą chcieć wyznaczyć dodatkową treść do włączenia do
+                        komunikatu o stanie, w tym niewyświetlany tekst, który może być dostarczony do technologii
+                        wspomagających w celu dodania kontekstu. Istotne kwestie dotyczące właściwego stosowania
+                        takich technik zostały omówione w sekcji Techniki wystarczające.
+                        
                      </p>
-                     				
+                     
                   </section>
-                  				
-                  <section id="modification-of-status-text">
-                     		
-                     <h4>Modification of status text</h4>
-                     		
-                     <p>If a status message persists on the page, modifications to this text are usually equivalent
-                        to a new status message. An example would be a shopping cart which updates text from
-                        reading "0 items" to "3 items". Typical methods of writing such changes in the page
-                        content result in the entire modified text string being considered a new change, and
-                        thus read by assistive technologies. However, where only the number in this string
-                        was coded as an updated chunk of content, the resulting experience for screen reader
-                        users could be to only hear "three", which may not be sufficient information to provide
-                        context for the user. In such situations, marking the entire "3 items" string as the
-                        status text would normally be a better solution. See Sufficient Techniques for more
-                        discussion, including the use of <code>aria-atomic</code>. In this case it would also be a courtesy to add offscreen text such as "in shopping
-                        cart" to the message.
+                  
+                  <section id="modyfikacja-tekstu-statusu">
+                     
+                     <h4>Modyfikacja tekstu statusu</h4>
+                     
+                     <p>
+                        Jeśli komunikat o stanie utrzymuje się na stronie, modyfikacje tego tekstu są zwykle
+                        równoważne z nowym komunikatem o stanie. Przykładem może być koszyk, który aktualizuje
+                        tekst z „0 pozycji” do „3 pozycji”. Typowe metody zapisywania takich zmian w treści
+                        strony powodują, że cały zmodyfikowany ciąg tekstowy jest uważany za nową zmianę,
+                        a zatem jest odczytywany przez technologie wspomagające. Jeśli jednak tylko liczba
+                        w tym ciągu została zakodowana jako zaktualizowany fragment treści, wynikowym doświadczeniem
+                        dla użytkowników czytników ekranu może być tylko usłyszenie „trzech”, co może nie
+                        być wystarczającą informacją, aby zapewnić kontekst dla użytkownika. W takich sytuacjach
+                        oznaczenie całego ciągu „3 pozycje” jako tekstu statusu byłoby zwykle lepszym rozwiązaniem.
+                        Zobacz Techniki wystarczające, aby uzyskać więcej informacji, w tym o użyciu <code>aria-atomic</code>. W takim przypadku uprzejmością byłoby również dodanie do wiadomości tekstu poza
+                        ekranem, takiego jak „w koszyku”.
+                        
                      </p>
-                     				
+                     
                   </section>
-                  				
-                  <section id="removal-of-status-text">
-                     		
-                     <h4>Removal of status text</h4>
-                     		
-                     <p>In situations where status text is entirely removed, its absence may itself convey
-                        information about the status. The most obvious example of this is where a message
-                        is displayed that the system is "busy" or "waiting". For a sighted user, when this
-                        text disappears, it is normally an indication that the state is now available. However
-                        non-sighted users would be unaware of this change, unless the end of the waiting state
-                        results in a change of context for the user. Where updating the visible message (e.g.,
-                        to "system available") is not feasible, the use of a non-visible status message, such
-                        as "system available", ensures equivalent status information is provided. See Sufficient
-                        Techniques for more discussion.
+                  
+                  <section id="usunięcie-tekstu-statusu">
+                     
+                     <h4>Usunięcie tekstu statusu</h4>
+                     
+                     <p>
+                        W sytuacjach, w których tekst statusu jest całkowicie usuwany, jego brak może sam
+                        w sobie przekazywać informacje o statusie. Najbardziej oczywistym tego przykładem
+                        jest wyświetlenie komunikatu, że system jest „zajęty” lub „oczekuje”. Dla widzącego
+                        użytkownika, gdy ten tekst znika, jest to zwykle wskazanie, że stan jest teraz dostępny.
+                        Jednak niewidomi użytkownicy nie będą świadomi tej zmiany, chyba że koniec stanu oczekiwania
+                        spowoduje zmianę kontekstu dla użytkownika. Tam, gdzie aktualizacja widocznego komunikatu
+                        (np. do "system dostępny”) nie jest możliwa, użycie niewidocznego komunikatu o stanie,
+                        takiego jak „system dostępny”, zapewnia dostarczenie równoważnych informacji o stanie.
+                        Więcej informacji na ten temat można znaleźć w sekcji Techniki wystarczające.
+                        
                      </p>
-                     				
+                     
                   </section>
-                  				
-                  <section id="non-textual-status-content">
-                     		
-                     <h4>Non-textual status content</h4>
-                     		
-                     <p>Changes in content are not restricted to text changes. Where an icon or sound indicates
-                        a status message, this information will be surfaced by the screen reader through a
-                        combination of two things: 1) existing WCAG requirements governing text alternatives
-                        (under SC 1.1.1 Non-Text Content), and 2) the requirement of this current Success
-                        Criterion to supply an appropriate role.
+                  
+                  <section id="nietekstowa-treść-statusu">
+                     
+                     <h4>Nietekstowa treść statusu</h4>
+                     
+                     <p>
+                        Zmiany treści nie ograniczają się do zmian tekstu. Tam, gdzie ikona lub dźwięk wskazuje
+                        komunikat o stanie, informacja ta zostanie wyświetlona przez czytnik ekranu poprzez
+                        połączenie dwóch rzeczy: 1) istniejące wymagania WCAG regulujące alternatywy tekstowe
+                        (w KS 1.1.1 Treści nietekstowe) oraz 2) wymóg tego kryterium sukcesu, aby zapewnić
+                        odpowiednią rolę.
+                        
                      </p>
-                     				
+                     
                   </section>
-                  			
+                  
                </section>
                <section class="example" id="excepted-examples">
-                  				
-                  <h3>Examples of Changes That Are Not Status Messages</h3>
                   
-                  			
-                  <p>The following examples identify situations where no additional author action is necessary.
-                     All cases are excepted from this Success Criterion since they do not meet the definition
-                     of "status messages."
+                  <h3>Przykłady zmian, które nie są komunikatami o stanie</h3>
+                  
+                  <p>
+                     Poniższe przykłady wskazują sytuacje, w których dodatkowe działania twórcy nie są
+                     konieczne. Wszystkie przypadki są wyłączone z tego kryterium sukcesu, ponieważ nie
+                     spełniają definicji „komunikatów o stanie”.
+                     
                   </p>
-                  			
+                  
                   <ul>
-                     			
+                     
                      <li>
-                        <p>An author displays an error message in a dialog.</p>
-                        				
-                        <p>Since the dialog takes focus, it is defined as a change of context and does not meet
-                           the definition of a status message. As a result of taking focus, the new change of
-                           context is already announced by the screen reader, and thus does not need to be included
-                           in the scope of this Success Criterion. 
-                        </p>
-                        			
-                     </li>
-                     			
-                     <li>
-                        				
-                        <p>Content is exposed or hidden when a user interacts with a user interface component,
-                           for example expanding components such as a menu, select, accordion or tree, or selecting
-                           a different tab item in a tablist.
-                        </p>
-                        				
-                        <p>None of the resulting changes to content meet the definition of status messages. Further,
-                           all components that meet the definition of a user interface component already have
-                           requirements specified under <a href="name-role-value" class="sc">4.1.2 Name, Role, Value</a>, including the need to make notifications of changes to values and states available
-                           to user agents, including assistive technologies. As a result, changes in state, such
-                           as "expanded" or "collapsed," would be announced by the screen reader, and thus the
-                           user would be alerted to the 'addition' or 'removal' of content. As such, such content
-                           does not need to be addressed by this Success Criterion.
+                        
+                        <p>Twórca wyświetla komunikat o błędzie w oknie dialogowym.</p>
+                        
+                        <p>
+                           Ponieważ okno dialogowe przyjmuje fokus, jest zdefiniowane jako zmiana kontekstu i
+                           nie spełnia definicji komunikatu o stanie. W wyniku skupienia uwagi nowa zmiana kontekstu
+                           jest już ogłaszana przez czytnik ekranu, a zatem nie musi być uwzględniana w zakresie
+                           tego kryterium sukcesu.
+                           
                         </p>
                         
-                        			
-                     </li>
-                     			
-                     <li>
-                        				
-                        <p>After a user completes a survey question which indicates they are unhappy, a series
-                           of new questions are added to the page about customer satisfaction.
-                        </p>
-                        				
-                        <p>The new inputs do not meet the definition of status message. They do not "provide
-                           information to the user on the success or results of an action, on the waiting state
-                           of an application, on the progress of a process or on the existence of errors," and
-                           so are not required to meet this Success Criterion.
-                        </p>
-                        				
-                        <div class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>Creating a status message about these questions being added, or notifying the user
-                              in advance that content changes may take place based on the user's response, are best
-                              practices but are not requirements in this scenario.
-                           </p>
-                        </div>
-                        				
                      </li>
                      
-                     			
+                     <li>
+                        
+                        <p>
+                           Treść jest wyświetlana lub ukrywana, gdy użytkownik wchodzi w interakcję z komponentem
+                           interfejsu użytkownika, na przykład rozwijając komponenty, takie jak menu, wybór,
+                           akordeon lub drzewo, lub wybierając inny element zakładki na liście zakładek.
+                           
+                        </p>
+                        
+                        <p>
+                           Żadna z wynikających z tego zmian treści nie spełnia definicji komunikatów o stanie.
+                           Ponadto wszystkie komponenty spełniające definicję komponentu interfejsu użytkownika
+                           mają już wymagania określone w punkcie <a href="nazwa-rola-wartosc" class="sc">4.1.2 Nazwa, rola, wartość</a>, w tym potrzebę udostępniania powiadomień o zmianach wartości i stanów programom
+                           użytkownika, w tym technologiom wspomagającym. W rezultacie zmiany stanu, takie jak
+                           „rozwinięcie” lub „zwinięcie”, byłyby ogłaszane przez czytnik ekranu, a tym samym
+                           użytkownik byłby powiadamiany o „dodaniu” lub „usunięciu” treści. W związku z tym
+                           takie treści nie muszą być uwzględniane w tym kryterium sukcesu.
+                           
+                        </p>
+                        
+                     </li>
+                     
+                     <li>
+                        
+                        <p>
+                           Po tym, jak użytkownik wypełni ankietę wskazującą, że jest niezadowolony, do strony
+                           dodawana jest seria nowych pytań dotyczących satysfakcji klienta.
+                           
+                        </p>
+                        
+                        <p>
+                           Nowe wejścia nie spełniają definicji komunikatu o stanie. Nie „dostarczają użytkownikowi
+                           informacji o powodzeniu lub wynikach działania, o stanie oczekiwania aplikacji, o
+                           postępie procesu lub o istnieniu błędów”, a zatem nie są wymagane do spełnienia tego
+                           kryterium sukcesu.
+                           
+                        </p>
+                        
+                        <div class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <div>
+                              
+                              <p>
+                                 Utworzenie komunikatu o statusie dodawanych pytań lub powiadomienie użytkownika z
+                                 wyprzedzeniem, że zmiany treści mogą nastąpić na podstawie odpowiedzi użytkownika,
+                                 to najlepsze praktyki, ale nie są one wymagane w tym scenariuszu.
+                                 
+                              </p>
+                              
+                           </div>
+                        </div>
+                        
+                     </li>
+                     
                   </ul>
-                  			
+                  
                </section>
-               <section class="example" id="other-uses-of-live-regions-or-alerts">
-                  		
-                  <h3>Other uses of live regions or alerts</h3>
+               <section class="example" id="inne-zastosowania-regionów-lub-alertów-na-żywo">
                   
+                  <h3>Inne zastosowania regionów lub alertów na żywo</h3>
                   
-                  <p>Live regions and alerts can be usefully applied in many situations where a change
-                     of content takes place which does not constitute a status message, as defined in this
-                     Success Criterion. However, there is a risk of making an application too "chatty"
-                     for a screen reader user. User testing should be carried out to ensure the appropriate
-                     level of feedback is achieved. The Advisory Techniques provide examples of how alerts
-                     or live regions can enhance the user experience.
+                  <p>
+                     Regiony na żywo i alerty mogą być z powodzeniem stosowane w wielu sytuacjach, w których
+                     następuje zmiana treści, która nie stanowi komunikatu o stanie, zgodnie z definicją
+                     w tym kryterium sukcesu. Istnieje jednak ryzyko, że aplikacja stanie się zbyt „gadatliwa”
+                     dla użytkownika czytnika ekranu. Aby zapewnić odpowiedni poziom informacji zwrotnej,
+                     należy przeprowadzić testy z użytkownikami. Techniki pomocnicze dostarczają przykładów,
+                     w jaki sposób alerty lub regiony na żywo mogą poprawić komfort użytkowania.
+                     
                   </p>
                   
                   <div class="note">
                      <p class="note-title marker">Uwaga</p>
-                     <p>The purpose of this success criterion is not to force authors to generate new status
-                        messages. Its intent is to ensure that when status messages <em>are</em> displayed, they are programmatically identified in a way that allows assistive technologies
-                        to present them to the user.
-                     </p>
+                     <div>
+                        
+                        <p>
+                           Celem tego kryterium sukcesu nie jest zmuszanie twórców do generowania nowych komunikatów
+                           o stanie. Jego celem jest zapewnienie, że gdy wyświetlane <em>są</em> komunikaty o stanie, są one programowo identyfikowane w sposób umożliwiający technologiom
+                           wspomagającym prezentowanie ich użytkownikowi.
+                           
+                        </p>
+                        
+                     </div>
                   </div>
                   
-                  		
                </section>
             </section>
             <section id="techniques">
@@ -405,90 +479,104 @@
                      lub kombinacje technik, które są znane i udokumentowane jako wystarczające w danej
                      sytuacji. 
                   </p>
+                  <p>
+                     Wybierz poniżej sytuację, która pasuje do Twojej treści. Każda sytuacja obejmuje techniki
+                     lub kombinacje technik, które są znane i udokumentowane jako wystarczające w danej
+                     sytuacji.
+                     
+                  </p>
                   <section class="situation" id="situation-a-if-a-status-message-advises-on-the-success-or-results-of-an-action-or-the-state-of-an-application">
                      
-                     					
-                     <h4>Situation A: If a status message advises on the success or results of an action, or
-                        the state of an application:
+                     <h4>
+                        Sytuacja A: Jeżeli komunikat o stanie informuje o powodzeniu lub wynikach działania,
+                        lub o stanie aplikacji:
+                        
                      </h4>
-                     					
+                     
                      <ul>
-                        						
-                        <li><a class="aria" href="https://w3c.github.io/wcag/techniques/aria/ARIA22">ARIA22: Using role=status to present status messages</a> in combination with any of the following:
-                           							
+                        
+                        <li>
+                           <a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA22">ARIA22: Użycie atrybutu role=status do prezentacji statusu komunikatu błędu</a> w połączeniu z jednym z poniższych:
+                           
                            <ul>
-                              								
-                              <li><a class="general" href="https://w3c.github.io/wcag/techniques/general/G199">G199: Providing success feedback when data is submitted successfully</a></li>
-                              							
+                              
+                              <li><a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G199">G199: Zapewnienie komunikatu o powodzeniu po pomyślnym przesłaniu danych</a></li>
+                              
                            </ul>
-                           							
-                           						
+                           
                         </li>
-                        					
+                        
                      </ul>
-                     				
+                     
                   </section>
                   <section class="situation" id="situation-b-if-a-status-message-conveys-a-suggestion-or-a-warning-on-the-existence-of-an-error">
                      
-                     					
-                     <h4>Situation B: If a status message conveys a suggestion, or a warning on the existence
-                        of an error:
+                     <h4>
+                        Sytuacja B: Jeżeli komunikat o stanie przekazuje sugestię lub ostrzeżenie o istnieniu
+                        błędu:
+                        
                      </h4>
-                     					
+                     
                      <ul>
-                        						
-                        <li><a class="aria" href="https://w3c.github.io/wcag/techniques/aria/ARIA19">ARIA19: Using ARIA role=alert or Live Regions to Identify Errors</a> in combination with any of the following:
-                           							
+                        
+                        <li>
+                           <a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA19">ARIA19: Użycie atrybutu role=alert lub role=live do identyfikacji błędów</a> w połączeniu z jednym z poniższych:
+                           
                            <ul>
-                              								
-                              								
-                              <li><a class="general" href="https://w3c.github.io/wcag/techniques/general/G83">G83: Providing text descriptions to identify required fields that were not completed</a></li>
-                              								
-                              <li><a class="general" href="https://w3c.github.io/wcag/techniques/general/G84">G84: Providing a text description when the user provides information that is not in the
-                                    list of allowed values</a></li>
-                              								
-                              <li><a class="general" href="https://w3c.github.io/wcag/techniques/general/G85">G85: Providing a text description when user input falls outside the required format or
-                                    values</a></li>
-                              								
-                              <li><a class="general" href="https://w3c.github.io/wcag/techniques/general/G177">G177: Providing suggested correction text</a></li>
-                              								
-                              <li><a class="general" href="https://w3c.github.io/wcag/techniques/general/G194">G194: Providing spell checking and suggestions for text input</a></li>
-                              								
-                              							
+                              
+                              <li><a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G83">G83: Zapewnienie opisów tekstowych wskazujących wymagane pola, które nie zostały wypełnione.</a></li>
+                              
+                              <li><a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G84">G84: Zapewnienie komunikatu tekstowego, gdy użytkownik podaje informacje, które nie
+                                    znajdują się na liście dozwolonych wartości</a></li>
+                              
+                              <li><a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G85">G85: Zapewnienie komunikatu tekstowego, gdy dane wprowadzane przez użytkownika nie
+                                    mieszczą się w wymaganym formacie lub zakresie wartości.</a></li>
+                              
+                              <li><a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G177">G177: Zapewnienie tekstu sugerującego korektę</a></li>
+                              
+                              <li><a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G194">G194: Zapewnienie sprawdzania pisowni i sugestii dotyczących poprawnej pisowni</a></li>
+                              
                            </ul>
-                           						
+                           
                         </li>
-                        					
+                        
                      </ul>
                      
-                     					
                      <div class="note">
                         <p class="note-title marker">Uwaga</p>
-                        <p>Not all examples in the preceding general techniques use status messages to convey
-                           warnings or errors to users. A role of "alert" is only necessary where a change of
-                           context does <em>not</em> take place.
-                        </p>
+                        <div>
+                           
+                           <div role="heading" class="note-title marker" aria-level="5">Uwaga</div>
+                           
+                           <p>
+                              Nie wszystkie przykłady w poprzednich technikach ogólnych wykorzystują komunikaty
+                              o stanie do przekazywania ostrzeżeń lub błędów użytkownikom. Rola "alert" jest konieczna
+                              tylko wtedy, gdy zmiana kontekstu <em>nie</em> ma miejsca.
+                              
+                           </p>
+                           
+                        </div>
                      </div>
                      
-                     				
                   </section>
                   <section class="situation" id="situation-c-if-a-status-message-conveys-information-on-the-progress-of-a-process">
                      
-                     					
-                     <h4>Situation C: If a status message conveys information on the progress of a process:</h4>
-                     					
+                     <h4>Sytuacja C: Jeżeli komunikat o stanie przekazuje informacje o postępie procesu:</h4>
+                     
                      <ul>
-                        					
-                        						
-                        <li><a class="aria" href="https://w3c.github.io/wcag/techniques/aria/ARIA23">ARIA23: Using role=log to identify sequential information updates</a></li>
-                        						
-                        <li>Using <code>role="progressbar"</code> (future link)
+                        
+                        <li><a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA23">ARIA23: ARIA23: Użycie atrybutu role=log do identyfikowania sekwencyjnych aktualizacji
+                              informacji</a></li>
+                        
+                        <li>
+                           Użycie atrybutu <code>role="progressbar"</code> (łącze w przyszłości)
+                           
                         </li>
-                        						
-                        <li><a class="aria" href="https://w3c.github.io/wcag/techniques/aria/ARIA22">ARIA22: Using role=status to present status messages</a> in combination with <a class="general" href="https://w3c.github.io/wcag/techniques/general/G193">G193: Providing help by an assistant in the Web page</a></li>
-                        					
+                        
+                        <li><a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA22">ARIA22: Użycie atrybutu role=status do prezentacji statusu komunikatu błędu </a> w połączeniu z <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G193">G193: Udzielanie pomocy na stronie internetowej przez asystenta</a></li>
+                        
                      </ul>
-                     				
+                     
                   </section>
                </section>
                <section id="advisory">
@@ -498,22 +586,28 @@
                      lub byłyby skuteczne we wszystkich sytuacjach.
                   </p>
                   <ul>
-                     		
-                     <li>Using aria-live regions with chat clients (future link)</li>
-                     		
-                     <li>Using aria-live regions to support <a href="https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html">1.4.13 Content on Hover or Focus</a> (future link)
+                     
+                     <li>Użycie regionów aria-live z klientami czatu (łącze w przyszłości)</li>
+                     
+                     <li>
+                        Użycie regionów aria-live do obsługi <a href="https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html">1.4.13 Treść spod kursora lub fokusu</a> (łącze w przyszłości)
+                        
                      </li>
-                     		
-                     <li>Using <code>role="marquee"</code> (future link)
+                     
+                     <li>
+                        Użycie <code>role="marquee"</code> (łącze w przyszłości)
+                        
                      </li>
-                     		
-                     <li>Using <code>role="timer"</code> (future link)
+                     
+                     <li>
+                        Użycie <code>role="timer"</code> (łącze w przyszłości)
+                        
                      </li>
-                     					
-                     <li>Where appropriate, moving focus to new content with <a class="aria" href="https://w3c.github.io/wcag/techniques/aria/ARIA18">ARIA18: Using aria-alertdialog to Identify Errors</a></li>
-                     					
-                     <li>Supporting personalization with <a class="script" href="https://w3c.github.io/wcag/techniques/client-side-script/SCR14">SCR14: Using scripts to make nonessential alerts optional</a></li>	
-                     	
+                     
+                     <li>W stosownych przypadkach przeniesienie uwagi na nową treść za pomocą <a class="aria" href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA18">ARIA18: Użycie atrybutu aria-alertdialog do identyfikacji błędów</a></li>
+                     
+                     <li>Wspieranie personalizacji za pomocą <a class="script" href="https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR14">SCR14: Użycie skryptów do opcjonalnych nieistotnych alertów</a></li>
+                     
                   </ul>
                </section>
                <section id="failure">
@@ -522,13 +616,15 @@
                      kryterium sukcesu.
                   </p>
                   <ul>
-                     						
-                     <li><a class="failure" href="https://w3c.github.io/wcag/techniques/failures/F103">F103: Failure of Success Criterion 4.1.3 due to providing status messages that cannot be
-                           programmatically determined through role or properties</a></li>
-                     				
-                     <li>Using <code>role="alert"</code> or <code>aria-live="assertive"</code> on content which is not important and time-sensitive (future link)
+                     
+                     <li><a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F103">F103: Niespełnienie kryterium sukcesu 4.1.3 z powodu dostarczania komunikatów o stanie,
+                           których nie można określić programowo za pomocą roli lub właściwości.</a></li>
+                     
+                     <li>
+                        Użycie atrybutu <code>role="alert"</code> lub <code>aria-live="assertive"</code>  w przypadku treści, która nie jest ważna i ma znaczenie chwilowe. (łącze w przyszłości)
+                        
                      </li>
-                     			
+                     
                   </ul>
                </section>
             </section>
