@@ -47,7 +47,7 @@
 	<xsl:function name="wcag:generate-id">
 		<xsl:param name="title"/>
 		<xsl:choose>
-			<xsl:when test="$title = 'Parsing (Obsolete and removed)'">parsing</xsl:when>
+			<xsl:when test="$title = 'Poprawność kodu (Przestarzałe i usunięte)'">poprawnosc-kodu</xsl:when>
 			<xsl:otherwise>
 				<xsl:value-of select="lower-case(replace(replace($title, '\s+', '-'), '[\s,\():]+', ''))"/>
 			</xsl:otherwise>
