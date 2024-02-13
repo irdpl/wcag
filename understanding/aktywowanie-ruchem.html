@@ -98,97 +98,113 @@
             <section id="brief">
                <h2>W skrócie</h2>
                <dl>
-                  			
-                  <dt>Goal</dt>
-                  <dd>Content is not dependent on a user's ability to move a device.</dd>
-                  			
-                  <dt>What to do</dt>
-                  <dd>Don't rely solely on device motion to control page content.</dd>
-                  			
-                  <dt>Why it's important</dt>
-                  <dd>Some people cannot hold or move a device steadily.</dd>
-                  		
+                  
+                  <dt>Cel</dt>
+                  
+                  <dd>Treść nie jest zależna od możliwości poruszania urządzeniem przez użytkownika.</dd>
+                  
+                  <dt>Co robić</dt>
+                  
+                  <dd>Nie polegaj wyłącznie na ruchu urządzenia, aby kontrolować treść strony.</dd>
+                  
+                  <dt>Dlaczego to jest ważne</dt>
+                  
+                  <dd>Niektóre osoby nie mogą stabilnie trzymać ani przesuwać urządzenia.</dd>
+                  
                </dl>
             </section>
             <section id="intent">
                <h2>Intencja</h2>
-               <p>The intent of this success criterion is to ensure that functions triggered by moving
-                  a device (for example, shaking or tilting) or by gesturing towards the device (so
-                  that sensors like a camera can pick up and interpret the gesturing), can also be operated
-                  by more conventional user interface components.
+               <p>
+                  Intencją tego kryterium sukcesu jest zapewnienie, że funkcje wyzwalane przez poruszanie
+                  urządzeniem (na przykład potrząsanie lub przechylanie) lub gestykulację w kierunku
+                  urządzenia (aby czujniki, takie jak kamera, mogły odbierać i interpretować gesty),
+                  mogą być również obsługiwane przez bardziej konwencjonalne komponenty interfejsu użytkownika.
+                  
                </p>
                <div class="note">
                   <p class="note-title marker">Uwaga</p>
-                  <p>This criterion concerns input through sensors which respond directly to motions such
-                     as gesturing towards, tilting or shaking a device. It does not cover the movement
-                     of users through space as registered by geolocation sensors or beacons, or events
-                     observed by the device other than intentional gesturing by the user. It also does
-                     not cover incidental motion associated with operating a keyboard, pointer, or assistive
-                     technology.
+                  <p>
+                     Kryterium to dotyczy danych wprowadzanych za pośrednictwem czujników, które reagują
+                     bezpośrednio na ruchy, takie jak gestykulacja w kierunku urządzenia, przechylanie
+                     lub potrząsanie. Nie obejmuje ruchu użytkowników w przestrzeni zarejestrowanego przez
+                     czujniki geolokalizacyjne lub beacony, ani obserwowanych przez urządzenie innych zdarzeń
+                     niż celowe gestykulacje użytkownika. Nie obejmuje również przypadkowych ruchów związanych
+                     z obsługą klawiatury, wskaźnika lub technologii wspomagających.
+                     
                   </p>
                </div>
-               <p>Devices often have sensors that can act as inputs, such as accelerometer and gyroscope
-                  sensors on a phone or tablet device. These sensors can allow the user to control something
-                  by simply changing the orientation or moving the device in particular ways. In other
-                  situations, web content can interpret user gestures via the camera or other sensors
-                  to actuate functions. For example, shaking the device might issue an "Undo" command,
-                  or a gentle hand wave might be used to move forward or backward in a sequence of pages.
-                  Some users with disabilities are not able to operate these device sensors (either
-                  not at all, or not precisely enough) because the device is on a fixed mount (perhaps
-                  a wheelchair) or due to motor impairments. Therefore, functionality offered through
-                  motion must also be available by another mechanism.
+               <p>
+                  Urządzenia często mają czujniki, które mogą działać jako wejścia, takie jak czujniki
+                  akcelerometru i żyroskopu w telefonie lub tablecie. Czujniki te mogą pozwolić użytkownikowi
+                  kontrolować coś, po prostu zmieniając orientację lub przesuwając urządzenie w określony
+                  sposób. W innych sytuacjach treści internetowe mogą interpretować gesty użytkownika
+                  za pośrednictwem kamery lub innych czujników w celu uruchomienia funkcji. Na przykład
+                  potrząsanie urządzeniem może spowodować wydanie polecenia "Cofnij" lub delikatne machnięcie
+                  ręką może być użyte do przejścia do przodu lub do tyłu w sekwencji stron. Niektórzy
+                  użytkownicy z niepełnosprawnością nie są w stanie obsługiwać tych czujników urządzenia
+                  (albo wcale, albo niewystarczająco precyzyjnie), ponieważ urządzenie znajduje się
+                  na stałym uchwycie (być może wózku inwalidzkim) lub z powodu niepełnosprawności ruchowej.
+                  W związku z tym funkcjonalność oferowana poprzez ruch musi być dostępna również za
+                  pośrednictwem innego mechanizmu.
+                  
                </p>
-               <p>In addition, some users may accidentally activate sensors due to tremors or other
-                  motor impairments. The user must have the ability to turn off motion actuation to
-                  prevent such accidental triggering of functions. Applications may be able to meet
-                  this requirement by supporting operating system settings which allow the user to disable
-                  motion detection at the system level.
+               <p>
+                  Ponadto niektórzy użytkownicy mogą przypadkowo aktywować czujniki z powodu drżenia
+                  lub innych zaburzeń motorycznych. Użytkownik musi mieć możliwość wyłączenia uruchamiania
+                  ruchu, aby zapobiec przypadkowemu uruchomieniu funkcji. Aplikacje mogą być w stanie
+                  spełnić to wymaganie, obsługując ustawienia systemu operacyjnego, które umożliwiają
+                  użytkownikowi wyłączenie detekcji ruchu na poziomie systemu.
+                  
                </p>
-               <p>There is an exception where motion is essential for the function or not using motions
-                  or gestures would invalidate the activity. Some applications are specifically created
-                  to use device sensor data. Examples of content that are exempt from this requirement
-                  include a pedometer that relies on device motion to count steps.
+               <p>
+                  Istnieje wyjątek, w którym ruch jest niezbędny dla funkcji lub nieużywanie ruchów
+                  lub gestów unieważniłoby czynność. Niektóre aplikacje są tworzone specjalnie do korzystania
+                  z danych z czujników urządzenia. Przykłady treści, które są zwolnione z tego wymogu,
+                  obejmują krokomierz, który polega na ruchu urządzenia w celu zliczenia kroków.
+                  
                </p>
             </section>
             <section id="benefits">
                <h2>Korzyści</h2>
                <ul>
-                  					
-                  <li>This Success Criterion helps people who may be unable to perform particular motions
-                     (such as tilting, shaking, or gesturing) because the device may be mounted or users
-                     may be physically unable to perform the necessary movement. This success criterion
-                     ensures that users can still operate all functionality by other means such as touch
-                     or via assistive technologies.
+                  
+                  <li>To kryterium sukcesu pomaga osobom, które mogą nie być w stanie wykonywać określonych
+                     ruchów (takich jak przechylanie, potrząsanie lub gestykulacja), ponieważ urządzenie
+                     może być zamontowane lub użytkownicy mogą być fizycznie niezdolni do wykonania niezbędnego
+                     ruchu. To kryterium sukcesu zapewnia, że użytkownicy mogą nadal obsługiwać wszystkie
+                     funkcje za pomocą innych środków, takich jak dotyk lub technologie wspomagające.
                   </li>
                   
-                  <li>Other users will benefit in situations where they are unable to move their devices.</li>
-                  				
+                  <li>Inni użytkownicy skorzystają w sytuacjach, gdy nie będą mogli przenieść swoich urządzeń.</li>
+                  
                </ul>
             </section>
             <section id="examples">
                <h2>Przykłady</h2>
                <ul>
-                  				
-                  <li>A user can choose an application setting which turns off Shake to Undo and other motion-activated
-                     features.
+                  
+                  <li>Użytkownik może wybrać ustawienie aplikacji, które wyłącza funkcję Potrząśnij, aby
+                     cofnąć i inne funkcje aktywowane ruchem.
                   </li>
-                  				
-                  <li>After text is input in a field, shaking a device shows a dialog offering users to
-                     undo the input. A cancel button next to the text field offers the same functionality.
+                  
+                  <li>Po wprowadzeniu tekstu w polu potrząśnięcie urządzeniem powoduje wyświetlenie okna
+                     dialogowego z propozycją cofnięcia danych wejściowych. Przycisk anulowania obok pola
+                     tekstowego oferuje tę samą funkcjonalność.
                   </li>
-                  				
-                  <li>A user can tilt a device to advance to the next or a previous page. Buttons are also
-                     provided to perform the same function.
+                  
+                  <li>Użytkownik może przechylić urządzenie, aby przejść do następnej lub poprzedniej strony.
+                     Istnieją również przyciski do wykonywania tej samej funkcji.
                   </li>
-                  				
-                  <li>A user can move or pan a device to change the view in an interactive photo. A control
-                     is also available to perform these same functions.
+                  
+                  <li>Użytkownik może przesuwać lub przesuwać urządzenie, aby zmienić widok na interaktywnym
+                     zdjęciu. Istnieje również sterownik do wykonywania tych samych funkcji.
                   </li>
-                  				
-                  <li>A user can gesture towards the device to navigate content. Controls are also available
-                     to navigate.
+                  
+                  <li>Użytkownik może gestem wskazać urządzenie, aby nawigować po zawartości. Istnieją 
+                     również elementy sterujące do nawigacji.
                   </li>
-                  			
+                  
                </ul>
             </section>
             <section id="resources">
@@ -196,10 +212,11 @@
                <p>Zasoby służą wyłącznie celom informacyjnym. Nie należy traktować ich jako zaleceń.</p>
                <ul>
                   
-                  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation">Detecting device orientation</a></li>
+                  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation" lang="en" hreflang="en">Detecting device orientation</a> (Wykrywanie orientacji urządzenia)
+                  </li>
                   
                   <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent">DeviceMotionEvent</a></li>
-                  			
+                  
                </ul>
             </section>
             <section id="techniques">
@@ -213,9 +230,12 @@
                   <h3>Techniki wystarczające</h3>
                   <ul>
                      
-                     <li><a href="https://w3c.github.io/wcag/techniques/general/G213">G213: Provide conventional controls and an application setting for motion activated input</a></li>
+                     <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/general/G213">G213: Zapewnienie konwencjonalnego sterowania i ustawienie aplikacji dla kontrolek
+                           aktywowanych ruchem</a></li>
                      
-                     <li>GXXX: Supporting system level features which allow the user to disable motion actuation</li>
+                     <li>GXXX: Obsługa na poziomie systemu funkcji, które pozwalają użytkownikowi wyłączyć
+                        aktywowanie ruchem
+                     </li>
                      
                   </ul>
                </section>
@@ -226,10 +246,11 @@
                   </p>
                   <ul>
                      
-                     <li><a href="https://w3c.github.io/wcag/techniques/failures/F106">F106: Failure due to inability to deactivate motion actuation</a></li>
+                     <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/failures/F106">F106: F106: Niespełnienie kryterium sukcesu 2.5.4 z powodu niemożności wyłączenia
+                           aktywowania ruchem</a></li>
                      
-                     <li>FXXX: Failure of Success Criterion 2.5.4 due to disrupting or disabling system level
-                        features which allow the user to disable motion actuation
+                     <li>FXXX: Niespełnienie kryterium sukcesu 2.5.4 z powodu zakłócania lub wyłączania na
+                        poziomie systemu funkcji, które pozwalają użytkownikowi wyłączyć aktywowanie ruchem
                      </li>
                      
                   </ul>
