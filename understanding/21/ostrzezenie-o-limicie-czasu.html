@@ -1,70 +1,93 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
-	<head>
-		<meta charset="UTF-8" />
-		<title>WCAG 2.0 Understanding Page</title>
-		<link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove" />
-	</head>
-	<body>
-		<h1>Understanding Timeouts</h1>
-
-		<section id="brief">
-			<h2>In brief</h2>
-			<dl>
-				<dt>Goal</dt><dd>Users do not lose data due to unknown timeouts.</dd>
-				<dt>Author task</dt><dd>Tell users how long their session can be inactive before they may lose information.</dd>
-				<dt>Why it's important</dt><dd>People with disabilities may need more time to complete actions.</dd>
-			</dl>
-	  
-		</section>
-
-		<section id="intent">
-			<h2>Intent</h2>
-			<p>The intent of this Success Criterion is to ensure that when a timeout is used, users know what duration of inactivity will cause the page to time out and result in lost data. The use of timed events can present significant barriers for users with cognitive disabilities, as these users may require more time to read content or to perform functions, such as completing an online form.</p>
-			<p>During the completion of an online process, such as to reserve a hotel room or purchase a plane ticket, a user with a cognitive impairment may become overwhelmed with lengthy instructions and data input required to complete the process. The user may not be able to complete the process in one sitting and may need to take a break. Users should be able to leave a process without losing their current place within the process, and without losing information that has already been entered. If users cannot take a break and check their work, many will often be unable to complete a task correctly.</p>
-			<p>This Success Criterion works in tandem with Success Criterion 2.2.1 Timing Adjustable, but is specifically focused on notification of timeouts related to user inactivity.</p>
-			<p>The best way to conform to this success criterion is to keep the user data for at least 20 hours. This enables the user with disabilities and the aging community to start and finish a task, taking breaks as needed. However, when it is not practical to save the user data the author must warn the user about the duration of inactivity which will result in a timeout. Timeouts should be displayed to the user once at the beginning of the related task or process and not at each step.</p>
-			<p>This success criterion only applies to timeouts that are within the content provider's knowledge or control. For example, if the user closes a web browser or device and loses content in an open page that has not yet been submitted, the success criterion has not been violated.</p>
-			<p>Examples of privacy regulations mentioned in the Success Criterion note, and related compliance standards, are PCI DSS (Payment Card Industry Data Security Standard) and HIPAA (Health Insurance Portability and Accountability Act of 1996).</p>
-		</section>
-		<section id="benefits">
-			<h2>Benefits</h2>
-			<p>This Success Criterion helps users by ensuring they are notified about timeouts related to inactivity.</p>
-			<p>When a user knows how much time they are allowed for a task, they will know whether they can take a needed break and resume their work without needing to start again. This enables many users to complete tasks online that they otherwise could not do. If a situation exists where a timeout is necessary, the user is warned at the start of the task about the length of inactivity that would generate a timeout. The user can then decide if they can manage this task or not in the given time, or if they need to prepare materials in advance of starting a process. This will reduce the frustration of losing work due to a timeout.</p>
-
-			<p>This Success Criterion helps people with many different cognitive disabilities, including people with:</p>
-			<ul>
-				<li>language-related disabilities; </li>
-				<li>memory-related disabilities; </li>
-				<li>focus-and-attention-related disabilities; and </li>
-				<li>disabilities that affect executive function and decision making. </li>
-			</ul>
-		</section>
-		<section id="examples">
-			<h2>Examples</h2>     
-			<ul>
-				<li>While making a purchase on an e-commerce Web site, the information input by the user is stored for more than 20 hours. This helps ensure that if they need to stop working for a while that they are more likely to be able to continue the purchase when they return.</li>
-				<li>A web application allowing people to file tax returns provides a notice that the application will time out for security purposes. The notice indicates that a lack of activity for a continuous period of time that is greater than an hour will trigger initiate the time out process.</li>
-				<li>An online contact form does not implement any type of time out process. Information entered into the contact form can be submitted at any time and would only be lost if the user closes their browser window.</li>
-			</ul>
-		</section>
-		<section id="resources">
-			<h2>Related Resources</h2>
-			<ul>
-        <li><a href="https://rawgit.com/w3c/coga/master/gap-analysis/table.html">User Needs Table 3: Entering data, error prevention &amp; recovery</a></li>
-        <li><a href="https://www.ssa.gov/accessibility/bpl/bps/forms/timeout/default.htm">SSA Best Practices Library: Timeouts</a></li>
-			</ul>
-		</section>
-		<section id="techniques">
-			<h2>Techniques</h2>
-			<section id="sufficient">
-				<h3>Sufficient</h3>
-				<ul>
-					<li>Setting a session timeout to occur following at least 20 hours of inactivity.</li>
-					<li>Store user data for more than 20 hours.</li>
-					<li>Provide a warning of the duration of user inactivity at the start of a process.</li>
-				</ul>
-			</section>
-		</section>
-	</body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Objaśnienie kryterium sukcesu Ostrzeżenie o limicie czasu</title>
+  <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove" />
+</head>
+<body>
+  <h1>Objaśnienie kryterium sukcesu Ostrzeżenie o limicie czasu</h1>
+  <section id="brief">
+    <h2>W skrócie</h2>
+    <dl>
+      <dt>Cel</dt>
+      <dd>Użytkownicy nie tracą danych z powodu nieznanych limitów czasu.</dd>
+      <dt>Co zrobić</dt>
+      <dd>Poinformuj użytkowników, jak długo ich sesja może być nieaktywna, zanim utracą informacje.</dd>
+      <dt>Dlaczego to jest ważne</dt>
+      <dd>Osoby z niepełnosprawnością mogą potrzebować więcej czasu na wykonanie działań.</dd>
+    </dl>
+  </section>
+  <section id="intent">
+    <h2>Intencja</h2>
+    <p>
+      Intencją tego kryterium sukcesu jest zapewnienie, że w przypadku korzystania z limitu czasu użytkownicy wiedzą, jaki czas bezczynności spowoduje przekroczenie limitu czasu strony i utratę danych. Korzystanie ze zdarzeń ograniczonych czasowo może stanowić poważną barierę dla użytkowników z zaburzeniami poznawczymi, ponieważ mogą oni potrzebować więcej czasu na przeczytanie treści lub wykonanie funkcji, takich jak wypełnienie formularza internetowego.
+    </p>
+    <p>
+      Podczas realizacji procesu internetowego, takiego jak rezerwacja pokoju hotelowego lub zakup biletu lotniczego, użytkownik z zaburzeniami poznawczymi może zostać przytłoczony długimi instrukcjami i wprowadzaniem danych wymaganych do ukończenia procesu. Użytkownik może nie być w stanie ukończyć procesu za jednym razem i może potrzebować przerwy. Użytkownicy powinni mieć możliwość opuszczenia procesu bez utraty bieżącego miejsca w procesie i bez utraty informacji, które zostały już wprowadzone. Jeśli użytkownicy nie mogą zrobić sobie przerwy i sprawdzić swojej pracy, wielu z nich często nie będzie w stanie poprawnie wykonać zadania.
+    </p>
+    <p>
+      To kryterium sukcesu działa w parze z kryterium sukcesu <a href="">2.2.1 Dostosowanie czasu</a>, ale koncentruje się w szczególności na powiadamianiu o przekroczeniu limitu czasu związanym z brakiem aktywności użytkownika.
+    </p>
+    <p>
+      Najlepszym sposobem na spełnienie tego kryterium sukcesu jest przechowywanie danych użytkownika przez co najmniej 20 godzin. Umożliwia to użytkownikom z niepełnosprawnościami i starzejącym się rozpoczęcie i zakończenie zadania z przerwami w razie potrzeby. Jednakże, gdy zapisanie danych użytkownika nie jest praktyczne, twórca musi ostrzec użytkownika o czasie nieaktywności, co spowoduje przekroczenie limitu czasu. Limity czasu powinny być wyświetlane użytkownikowi raz na początku powiązanego zadania lub procesu, a nie na każdym kroku.
+    </p>
+    <p>
+      To kryterium sukcesu ma zastosowanie tylko do przekroczeń limitu czasu, które są znane lub kontrolowane przez dostawcę treści. Na przykład, jeśli użytkownik zamknie przeglądarkę internetową lub urządzenie i utraci zawartość otwartej strony, która nie została jeszcze przesłana, kryterium sukcesu nie zostało naruszone.
+    </p>
+    <p>
+      Przykłady przepisów dotyczących prywatności wspomnianych w nocie dotyczącej kryterium sukcesu i powiązanych standardów zgodności to PCI DSS (Payment Card Industry Data Security Standard) i HIPAA (Health Insurance Portability and Accountability Act of 1996).
+    </p>
+  </section>
+  <section id="benefits">
+    <h2>Korzyści</h2>
+    <p>
+      To kryterium sukcesu pomaga użytkownikom, zapewniając im powiadomienia o przekroczeniu limitu czasu związanego z brakiem aktywności.
+    </p>
+    <p>
+      Gdy użytkownik wie, ile czasu ma na wykonanie zadania, będzie wiedział, czy może zrobić sobie potrzebną przerwę i wznowić pracę bez konieczności rozpoczynania jej od nowa. Umożliwia to wielu użytkownikom wykonywanie zadań internetowych, których inaczej nie mogliby wykonać. Jeśli istnieje sytuacja, w której konieczne jest przekroczenie limitu czasu, użytkownik jest ostrzegany na początku zadania o długości nieaktywności, która spowoduje przekroczenie limitu czasu. Użytkownik może wtedy zdecydować, czy jest w stanie wykonać to zadanie w określonym czasie, czy też musi przygotować materiały przed rozpoczęciem procesu. Zmniejszy to frustrację związaną z utratą pracy z powodu przekroczenia limitu czasu.
+    </p>
+    <p>
+      To kryterium sukcesu pomaga osobom z wieloma różnymi niepełnosprawnościami poznawczymi, w tym osobom z:
+    </p>
+    <ul>
+      <li>niepełnosprawnością językową; </li>
+      <li>niepełnosprawnością związaną z pamięcią; </li>
+      <li>zaburzeniami koncentracji i uwagi; oraz </li>
+      <li>niepełnosprawnościami, które wpływają na funkcje wykonawcze i podejmowanie decyzji. </li>
+    </ul>
+  </section>
+  <section id="examples">
+    <h2>Przykłady</h2>
+    <ul>
+      <li>
+        Podczas dokonywania zakupu w witrynie handlu elektronicznego informacje wprowadzane przez użytkownika są przechowywane przez ponad 20 godzin. Zapewnia to, że jeśli będą musieli przerwać pracę na jakiś czas, istnieje większe prawdopodobieństwo, że będą w stanie kontynuować zakup po powrocie.
+      </li>
+      <li>
+        Aplikacja internetowa umożliwiająca składanie zeznań podatkowych zapewnia powiadomienie, że aplikacja wygaśnie ze względów bezpieczeństwa. Powiadomienie wskazuje, że brak aktywności przez nieprzerwany okres dłuższy niż godzina spowoduje rozpoczęcie procesu limitu czasu.
+      </li>
+      <li>
+        Formularz kontaktowy nie implementuje żadnego rodzaju procesu limitu czasu. Informacje wprowadzone do formularza kontaktowego można przesłać w dowolnym momencie i zostaną one utracone tylko wtedy, gdy użytkownik zamknie okno przeglądarki.
+      </li>
+    </ul>
+  </section>
+  <section id="resources">
+    <h2>Powiązane zasoby</h2>
+    <ul>
+      <li><a href="https://rawgit.com/w3c/coga/master/gap-analysis/table.html" lang="en" hreflang="en">User Needs Table 3: Entering data, error prevention &amp; recovery</a> (Potrzeby użytkowników Tabela 3: Wprowadzanie danych, zapobieganie błędom i odzyskiwanie danych)</li>
+      <li><a href="https://www.ssa.gov/accessibility/bpl/bps/forms/timeout/default.htm" lang="en" hreflang="en">SSA Best Practices Library: Timeouts</a> (Biblioteka najlepszych praktyk SSA: Limity czasu)</li>
+    </ul>
+  </section>
+  <section id="techniques">
+    <h2>Techniki</h2>
+    <section id="sufficient">
+      <h3>Wystarczające techniki</h3>
+      <ul>
+        <li>Ustawienie limitu czasu sesji po co najmniej 20 godzinach braku aktywności.</li>
+        <li>Przechowywanie danych użytkownika przez ponad 20 godzin.</li>
+        <li>Ostrzeganie o dopuszczalnym czasie bezczynności użytkownika na początku procesu.</li>
+      </ul>
+    </section>
+  </section>
+</body>
 </html>

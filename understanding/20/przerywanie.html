@@ -1,141 +1,81 @@
 <!DOCTYPE html>
 <html lang="pl" xml:lang="pl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-   <meta charset="UTF-8"></meta>
-   <title>Understanding Interruptions</title>
-   <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove"></link>
+  <meta charset="UTF-8" />
+  <title>Objaśnienie kryterium sukcesu Przerywanie</title>
+  <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove" />
 </head>
 <body>
-   <h1>Understanding Interruptions</h1>
-   
-   <section id="brief">
-      <h2>In brief</h2>
-      <dl>
-         <dt>Goal</dt><dd>Users are not interrupted.</dd>
-         <dt>What to do</dt><dd>Let people delay or turn off updates, except in emergencies.</dd>
-         <dt>Why it's important</dt><dd>Updates distract and disrupt assistive technology users and people with attention deficits.</dd> 
-      </dl>
-
-   </section>
-     
-   <section id="intent">
-      <h2>Intent of Interruptions</h2>
-      
-      
-      <p>The intent of this Success Criterion is to allow users to turn off updates from the
-         author/server except in emergencies. Emergencies would include civil emergency alert
-         messages or any other messages that warn of danger to health, safety, or property,
-         including data loss, loss of connection, etcetera.
-      </p>
-      
-      <p>This allows access by people with cognitive limitations or attention disorders by
-         enabling them to focus on the content. It also allows users who are blind or have
-         low vision to keep their "viewing" focus on the content they are currently reading.
-      </p>
-      
-      
-   </section>
-   <section id="benefits">
-      <h2>Benefits of Interruptions</h2>
-      
-      
+  <h1>Objaśnienie kryterium sukcesu Przerywanie</h1>
+  <section id="brief">
+    <h2>W skrócie</h2>
+    <dl>
+      <dt>Cel</dt>
+      <dd>Użytkownikom nie przerywa się pracy.</dd>
+      <dt>Co zrobić</dt>
+      <dd>Pozwól ludziom opóźnić lub wyłączyć aktualizacje, z wyjątkiem sytuacji awaryjnych.</dd>
+      <dt>Dlaczego to jest ważne</dt>
+      <dd>Aktualizacje rozpraszają i przeszkadzają użytkownikom technologii wspomagających i osobom z deficytami uwagi.</dd>
+    </dl>
+  </section>
+  <section id="intent">
+    <h2>Intencja</h2>
+    <p>
+      Intencją tego kryterium sukcesu jest umożliwienie użytkownikom wyłączenia aktualizacji od twórcy/serwera, z wyjątkiem sytuacji awaryjnych. Sytuacje awaryjne obejmują publiczne komunikaty alarmowe lub wszelkie inne komunikaty ostrzegające o zagrożeniu dla zdrowia, bezpieczeństwa lub mienia, w tym o utracie danych, utracie połączenia itp.
+    </p>
+    <p>
+      Umożliwia to dostęp osobom z ograniczeniami poznawczymi lub zaburzeniami uwagi, pozwalając im skupić się na treści. Pozwala również użytkownikom niewidomym lub niedowidzącym skupić się na treści, którą aktualnie czytają.
+    </p>
+  </section>
+  <section id="benefits">
+    <h2>Korzyści</h2>
+    <ul>
+      <li>Osoby z zaburzeniami koncentracji uwagi mogą skupić się na treści bez rozpraszania uwagi.</li>
+      <li>
+        Osoby niedowidzące lub korzystające z czytników ekranu nie będą miały aktualizowanych treści podczas ich przeglądania (co może prowadzić do nieciągłości i nieporozumień, jeśli zaczną czytać w jednym temacie, a skończą w innym).
+      </li>
+    </ul>
+  </section>
+  <section id="examples">
+    <h2>Przykłady</h2>
+    <dl>
+      <dt>Przykład 1. Ustawianie preferencji użytkownika</dt>
+      <dd>Strona preferencji portalu internetowego zawiera opcję odroczenia wszystkich aktualizacji i alertów do końca bieżącej sesji, z wyjątkiem alertów dotyczących sytuacji awaryjnych.</dd>
+    </dl>
+  </section>
+  <section id="resources">
+    <h2>Resources for Interruptions</h2>
+  </section>
+  <section id="techniques">
+    <h2>Techniki</h2>
+    <section id="sufficient">
+      <h3>Wystarczające techniki</h3>
       <ul>
-         
-         <li>Individuals with attention deficit disorders can focus on content without distraction.</li>
-         
-         <li>Individuals with low vision or who use screen readers will not have content updated
-            while they are viewing it (which can lead to discontinuity and misunderstanding if
-            they start reading in one topic and finish in another).
-         </li>
-         
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G75" class="general">G75: Zapewnienie mechanizmu opóźniającego aktualizację treści</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G76" class="general">G76: Zapewnienie mechanizmu żądania aktualizacji treści zamiast automatycznej aktualizacji</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR14" class="script">SCR14: Użycie skryptów do opcjonalnych nieistotnych alertów</a>
+        </li>
       </ul>
-      
-   </section>
-   
-   <section id="examples">
-      <h2>Examples of Interruptions</h2>
-      
-      <dl>
-         <dt>Example 1. Setting user preferences</dt>
-         <dd>The preferences page of a Web portal includes an option to postpone all updates and
-               alerts until the end of the current session, except for alerts concerning emergencies.</dd>
-      </dl>
-      
-   </section>
-   
-   <section id="resources">
-      <h2>Resources for Interruptions</h2>
-      
-      
-   </section>
-   
-   <section id="techniques">
-      <h2>Techniques for Interruptions</h2>
-      
-      
-      <section id="sufficient">
-         <h3>Sufficient Techniques for Interruptions</h3>
-         
-         
-         <ul>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G75" class="general">Providing a mechanism to postpone any updating of content</a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G76" class="general">G76: Providing a mechanism to request an update of the content instead of updating
-                  automatically
-               </a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR14" class="script">Using scripts to make non-essential alerts optional</a>
-               								       
-            </li>
-            
-         </ul>
-         
-      </section>
-      
-      <section id="advisory">
-         <h3>Additional Techniques (Advisory) for Interruptions</h3>
-         
-         
-      </section>
-      
-      <section id="failure">
-         <h3>Failures for Interruptions</h3>
-         
-         
-         <ul>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F40" class="failure">Failure due to using meta redirect with a time limit
-                  
-               </a>
-               								       
-            </li>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F41" class="failure">Failure due to using meta refresh with a time limit
-                  
-               </a>
-               								       
-            </li>
-            
-         </ul>
-         
-      </section>
-      
-   </section>
-   
+    </section>
+    <section id="advisory">
+      <h3>Additional Techniques (Advisory) for Interruptions</h3>
+    </section>
+    <section id="failure">
+      <h3>Błędy</h3>
+      <ul>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F40" class="failure">F40: Niespełnienie kryterium sukcesu 2.2.1 i 2.2.4 z powodu zastosowania przekierowania meta z limitem czasu</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F41" class="failure">F41: Niespełnienie kryterium sukcesu 2.2.1, 2.2.4 i 3.2.5 z powodu zastosowania meta refresh w celu przeładowania strony</a>
+        </li>
+      </ul>
+    </section>
+  </section>
 </body>
 </html>
