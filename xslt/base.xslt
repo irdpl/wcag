@@ -360,7 +360,7 @@
     		<p>Treść została opracowana w ramach <a href="https://www.w3.org/WAI/about/projects/#us">projektów WAI-Core</a> finansowanych przez Fundusze federalne USA. Interfejs użytkownika został zaprojektowany przez Education and Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) z udziałem z udziałem Shadi Abou-Zahra, Steve Lee i Shawn Lawton Henry w ramach projektu <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a>, współfinansowanego przez Komisję Europejską.</p>
 			<p>Tłumaczenie na język polski zostało wykonane przez: xxx xxx xxx xxx xxx.</p>
 			<p>Wydanie polskie zostało przygotowane przez zespół: xxx xxx xxx xxx xxx.</p>  
-
+</div>
   	</footer>	
 	</xsl:template>
 
@@ -368,6 +368,20 @@
 		<footer class="site-footer grid-4q" aria-label="Site">
 			<div class="q1-start q3-end about">
 				<div>
+				    <p><a class="largelink" href="https://www.irdpl.pl/" dir="auto" translate="no" lang="pl">© Polska Izba Rzemiosła Dostępnościowego</a></p>
+					<p><a class="largelink" href="https://www.w3.org/WAI/" dir="auto" translate="no" lang="en">W3C Web Accessibility Initiative (WAI)</a></p>
+					<p>
+                    Platforma swobodnej współpracy osób i firm, które zajmują się dostępnością i chcą rozwijać w Polsce rynek rzetelnych usług dostępnościowych
+                </p>
+
+				</div>
+				<div dir="auto" translate="no" lang="pl">
+					<p>
+					Prawa autorskie do wszystkich materiałów w tej witrynie należą do W3C.<br /> Copyright © <xsl:value-of select="format-date(current-date(), '[Y]')"/> World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). Zobacz <a href="/WAI/about/using-wai-material/">Zezwolenie na wykorzystanie materiałów WAI</a>.</p>
+				</div>
+
+			</div>
+			<!--				<div>
 					<p><a class="largelink" href="https://www.w3.org/WAI/" dir="auto" translate="no" lang="en">W3C Web Accessibility Initiative (WAI)</a></p>
 					<p>Strategies, standards, and supporting resources to make the Web accessible to people with disabilities.</p>
 				</div>
@@ -382,7 +396,7 @@
 				<div dir="auto" translate="no" lang="en">
 					<p>Copyright © <xsl:value-of select="format-date(current-date(), '[Y]')"/> World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). See <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.</p>
 				</div>
-			</div>
+			</div> -->
 			<div dir="auto" translate="no" class="q4-start q4-end" lang="en">
 				<ul style="margin-bottom:0">
 					<li><a href="/WAI/about/contacting/">Contact WAI</a></li>
