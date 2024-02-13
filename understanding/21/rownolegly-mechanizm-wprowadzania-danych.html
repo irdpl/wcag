@@ -1,73 +1,74 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
-	<head>
-		<meta charset="UTF-8" />
-		<title>WCAG 2.0 Understanding Page</title>
-		<link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove" />
-	</head>
-	<body>
-		<h1>Understanding Concurrent Input Mechanisms</h1>
+<head>
+  <meta charset="UTF-8" />
+  <title>Objaśnienie kryterium sukcesu Równoległe mechanizmy wprowadzania danych</title>
+  <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove" />
+</head>
+<body>
+  <h1>Objaśnienie kryterium sukcesu Równoległy mechanizm wprowadzania danych</h1>
+  <section id="brief">
+    <h2>W skrócie</h2>
+    <dl>
+      <dt>Cel</dt>
+      <dd>Użytkownicy mogą wybierać różne sposoby wprowadzania treści.</dd>
+      <dt>Co zrobić</dt>
+      <dd>Nie uniemożliwiaj użytkownikom przełączania trybu wprowadzania danych.</dd>
+      <dt>Dlaczego to jest ważne</dt>
+      <dd>Ludzie mogą nie być w stanie pracować przy użyciu tylko jednej metody wprowadzania.</dd>
+    </dl>
+  </section>
+  <section id="intent">
+    <h2>Intencja</h2>
+    <p>Intencją tego kryterium sukcesu jest zapewnienie, że ludzie mogą korzystać z różnych trybów wprowadzania danych i przełączać się między nimi podczas interakcji z treściami internetowymi. Użytkownicy mogą korzystać z różnych mechanizmów wprowadzania danych podczas interakcji z treściami internetowymi. Może to być kombinacja mechanizmów, takich jak klawiatura lub interfejsy podobne do klawiatury oraz urządzeń wskazujących, takich jak mysz, rysik lub ekran dotykowy.</p>
+    <p>Nawet jeśli urządzenie może mieć podstawowy mechanizm wprowadzania danych, użytkownik może zdecydować się podczas interakcji z urządzeniem na zastosowanie alternatywnych mechanizmów wprowadzania danych . Na przykład podstawowym mechanizmem telefonów komórkowych i tabletów jest ekran dotykowy. Użytkownik tych urządzeń może zdecydować się na użycie sparowanej myszy lub klawiatury zewnętrznej jako alternatywy dla korzystania z ekranu dotykowego.</p>
+    <p>Użytkownicy powinni mieć możliwość przełączania mechanizmów wejściowych w dowolnym momencie, jeśli stwierdzą, że pewne zadania i interakcje są łatwiejsze do wykonania przy użyciu alternatywnego mechanizmu wprowadzania danych. Treść nie może ograniczać interakcji użytkownika do żadnego konkretnego mechanizmu wprowadzania danych, chyba że ograniczenie jest niezbędne lub jest wymagane w celu zapewnienia bezpieczeństwa treści lub poszanowania ustawień użytkownika.</p>
+    <p>Uwaga Aplikacja internetowa do pisania bezwzrokowego, która uczy użytkowników, jak pisać bezwzrokowo na klawiaturze i/lub mierzy ich biegłość i szybkość, byłaby przykładem istotnego ograniczenia określonego mechanizmu wprowadzania danych. </p>
+  </section>
 
-	<section id="brief">
-		<h2>In brief</h2>
-		<dl>
-			<dt>Goal</dt><dd>Users can choose different ways of inputting content.</dd>
-			<dt>What to do</dt><dd>Do not prevent users from switching their mode of input.</dd>
-			<dt>Why it's important</dt><dd>People may not be able to work using just one input method.</dd>
-		</dl>
-  
-	</section>
-    
-		<section id="intent">
-			<h2>Intent</h2>
-        <p>The intent of this Success Criterion is to ensure that people can use and switch between different modes of input when interacting with web content. Users may employ a variety of input mechanisms when interacting with web content. These may be a combination of mechanisms such as a keyboard or keyboard-like interfaces and pointer devices like a mouse, stylus or touchscreen.</p>
-        <p>Even though a device may have a primary input mechanism, the user may choose to employ alternative input mechanisms when interacting with the device. For example, the primary mechanism for mobile phones and tablets is the touchscreen.  The user of these devices may choose to use a paired mouse or external keyboard as an alternative to using the touchscreen.</p>
-        <p>Users should be able to switch input mechanisms at any point should the user determine that certain tasks and interactions are more easily accomplished by using an alternative input mechanism. Content must not limit the user's interaction to any particular input mechanism unless the restriction is essential, or is required to ensure the security of the content or to respect user settings.</p>
-        <p>Note: A touch-typing web application, which teaches users how to touch-type on a keyboard and/or measures their proficiency and speed, would be an example of an essential limitation to a particular input mechanism. </p>
-		</section>
-		<section id="benefits">
-        <h3>Benefits</h3>
-				<ul>
-					<li>Users can interact with web content with whichever input mechanism is preferred and available to them.</li>
-          <li>Users may switch between input mechanisms when they desire or the circumstances require it.</li>
-          <li>Users are allowed to add and remove input mechanisms at any point, where supported by the operating system.</li>
-				</ul>
-		</section>
-		<section id="examples">
-			<h2>Examples</h2>
+  <section id="benefits">
+    <h3>Korzyści</h3>
+    <ul>
+      <li>Użytkownicy mogą wchodzić w interakcje z treściami internetowymi za pomocą dowolnego mechanizmu wprowadzania danych, który jest dla nich preferowany i dostępny.</li>
+      <li>Użytkownicy mogą przełączać się między mechanizmami wprowadzania danych, gdy chcą lub wymagają tego okoliczności.</li>
+      <li>Użytkownicy mogą dodawać i usuwać mechanizmy wprowadzania danych w dowolnym momencie, jeśli jest to obsługiwane przez system operacyjny.</li>
+    </ul>
+  </section>
+  <section id="examples">
+    <h2>Przykłady</h2>
+    <ul>
+      <li>Użytkownik z niepełnosprawnością ruchową paruje mysz i klawiaturę ze swoim telefonem komórkowym za pomocą ekranu dotykowego. Telefon może być następnie obsługiwany przez te urządzenia wejściowe, a treść nie akceptuje ekranu dotykowego jako jedynego mechanizmu wprowadzania.</li>
+      <li>Na laptopie z obsługą dotykową z dużą precyzją osoby, które mają trudności z aktywacją małego celu z powodu drżenia rąk, ograniczonej zręczności lub z innych powodów, nadal mogą wchodzić w interakcje z treścią za pomocą klawiatury i gładzika.</li>
+      <li>Użytkownik rozpoczyna interakcję ze stroną za pomocą klawiatury pulpitu, a następnie podłącza dodatkowy monitor dotykowy. Treść może być obsługiwana za pomocą tego nowo dodanego mechanizmu wprowadzania i nie zakłada, że klawiatura, pierwszy wykryty mechanizm wprowadzania, jest jedynym używanym.</li>
+      <li>Użytkownik wprowadzający mowę nawiguje po treści za pomocą poleceń głosowych, które są tłumaczone tak, aby symulować polecenia myszy (i klawiatury). Jednak podczas rozmowy ze współpracownikiem użytkownik wyłącza rozpoznawanie mowy i zamiast tego używa myszy.</li>
+      <li>Użytkownik otwiera menu za pomocą myszy, a następnie przechodzi między elementami menu za pomocą strzałek.</li>
+    </ul>
+  </section>
+  <section id="resources">
+    <h2>Powiązane zasoby</h2>
+    <ul>
+      <li><a href="https://w3c.github.io/pointerevents/" lang="en" hreflang="en">W3C Pointer Events - Level 2</a> (Zdarzenia wskaźnika W3C — poziom 2)</li>
+      <li><a href="https://hacks.mozilla.org/2013/04/detecting-touch-its-the-why-not-the-how/" lang="en" hreflang="en">Patrick H. Lauke - Detecting touch: it's the 'why', not the 'how'</a> (Wykrywanie dotyku: to <q>dlaczego</q>, a nie <q>jak</q>)</li>
+      <li><a href="https://www.html5rocks.com/en/mobile/touchandmouse/" lang="en" hreflang="en">Chris Wilson / Paul Kinlan: Touch And Mouse - Together Again For The First Time</a> (Dotyk i mysz - znowu razem po raz pierwszy)</li>
+      <li><a href="https://w3c.github.io/touch-events/#mouse-events" lang="en" hreflang="en">W3C Touch Events - Level 2: Interaction with Mouse Events and click</a> (Wydarzenia dotykowe W3C - Poziom 2: Interakcja ze zdarzeniami myszy i kliknięcie)</li>
+      <li><a href="https://www.w3.org/TR/mediaqueries-4/#mf-interaction" lang="en" hreflang="en">W3C CSS Media Queries Level 4: Interaction Media Features</a> (Zapytania o media W3C CSS Poziom 4: Funkcje multimediów interakcji)</li>
+    </ul>
+  </section>
+  <section id="techniques">
+    <h2>Techniki</h2>
+    <section id="sufficient">
+      <h3>Wystarczające techniki</h3>
       <ul>
-        <li>A user with mobility impairment pairs a mouse and keyboard to her mobile phone with a touchscreen. The phone can thereafter be operated by those input devices and the content does not accept the touchscreen as the only input mechanism.</li>
-        <li>On a touch-enabled laptop with coarse precision, people who have difficulty activating a small target because of hand tremors, limited dexterity or other reasons are still able to interact with content using their keyboard and trackpad.</li>
-        <li>A user starts interacting with a page using a desktop keyboard, and then attaches a secondary touch-enabled monitor. Content can be operated using this newly added input mechanism and does not assume that the keyboard, the first input mechanism it detected, is the only one in use.</li>
-        <li>A speech input user navigates content using voice commands which translate to simulate mouse (and keyboard) commands. When talking with a colleague, however, the user turns speech recognition off and uses the mouse instead.</li>
-        <li>A user opens a menu with a mouse, and then navigates between the menu items with arrow keys.</li>
+        <li>Używanie tylko wysokopoziomowych, niezależnych od wejścia obsługi zdarzeń, takich jak<code>focus</code>, <code>blur</code>, <code>click</code> w języku JavaScript (potencjalna przyszła technika).</li>
+        <li> Rejestrowanie procedur obsługi zdarzeń dla klawiatury/klawiatury i wskaźników jednocześnie w Javascript; patrz <a href="https://w3c.github.io/pointerevents/#examples">Przykład 1 w Zdarzenia wskaźnikowe Poziom 2</a> (potencjalna przyszła technika)</li>
       </ul>
-		</section>
-		<section id="resources">
-			<h2>Resources</h2>
-			<ul>
-        <li><a href="https://w3c.github.io/pointerevents/">W3C Pointer Events - Level 2</a></li>
-        <li><a href="https://hacks.mozilla.org/2013/04/detecting-touch-its-the-why-not-the-how/">Patrick H. Lauke - Detecting touch: it's the 'why', not the 'how'</a></li>
-				<li><a href="https://www.html5rocks.com/en/mobile/touchandmouse/">Chris Wilson / Paul Kinlan: Touch And Mouse - Together Again For The First Time
-        </a></li><li><a href="https://w3c.github.io/touch-events/#mouse-events">W3C Touch Events - Level 2: Interaction with Mouse Events and click</a></li>
-        <li><a href="https://www.w3.org/TR/mediaqueries-4/#mf-interaction">W3C CSS Media Queries Level 4: Interaction Media Features</a></li>
-			</ul>
-		</section>
-		<section id="techniques">
-			<h2>Techniques</h2>
-			<section id="sufficient">
-				<h3>Sufficient</h3>
-				<ul>
-          <li>Only using high-level, input-agnostic event handlers, such as <code>focus</code>, <code>blur</code>, <code>click</code>, in Javascript (Potential future technique).</li>
-          <li> Registering event handlers for keyboard/keyboard-like and pointer inputs simultaneously in Javascript; see <a href="https://w3c.github.io/pointerevents/#examples">Example 1 in Pointer Events Level 2</a> (Potential future technique)</li>
-        </ul>
-			</section>
-			<section id="failure">
-				<h2>Failure</h2>
-        <ul>
-          <li><a href="../../techniques/failures/F98.html">F98</a></li>
-        </ul>
-			</section>
-		</section>
+    </section>
+    <section id="failure">
+      <h2>Błąd</h2>
+      <ul>
+        <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/failures/F98.html">F98: Błąd spowodowany interakcjami ograniczonymi do urządzeń z ekranem dotykowym</a></li>
+      </ul>
+    </section>
+  </section>
 </body>
 </html>

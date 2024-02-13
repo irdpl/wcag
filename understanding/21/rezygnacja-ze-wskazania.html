@@ -1,105 +1,102 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Understanding Pointer Cancellation</title>
-		<link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove" />
-	</head>
-	<body>
-		<h1>Understanding Pointer Cancellation</h1>
+<head>
+  <meta charset="UTF-8" />
+  <title>Objaśnienie kryterium sukcesu Rezygnacja ze wskazania</title>
+  <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove" />
+</head>
+<body>
+  <h1>Objaśnienie kryterium sukcesu Rezygnacja ze wskazania</h1>
+  <section id="brief">
+    <h2>W skrócie</h2>
+    <dl>
+      <dt>Cel</dt>
+      <dd>Ograniczenie przypadkowego aktywowania kontrolek myszą lub dotykiem.</dd>
+      <dt>Co zrobić</dt>
+      <dd>Spraw, aby anulowanie wskazania było przewidywalne i spójne.</dd>
+      <dt>Dlaczego to jest ważne</dt>
+      <dd>Ułatw każdemu powrót do stanu poprzedniego po czymś, czego nie chciał zrobić.</dd>
+    </dl>
+  </section>
+  <section id="intent">
+    <h2>Intencja</h2>
+    <p>Intencją tego kryterium sukcesu jest ułatwienie użytkownikom zapobiegania przypadkowemu lub błędnemu wprowadzeniu danych wskaźnika. Osoby z różnymi niepełnosprawnościami mogą nieumyślnie inicjować zdarzenia dotykowe lub myszy z niepożądanymi skutkami. Każda z poniższych podsekcji jest w przybliżeniu zgodna z punkami tego kryterium sukcesu i przedstawia sposób umożliwiający użytkownikom anulowanie operacji wskaźnika.</p>
+    <section>
+      <h3>Aktywacja lub zakończenie przed wydarzeniem</h3>
+      <p>Najbardziej dostępnym sposobem anulowania jest aktywacja  zdarzenia  up-event.</p>
+      <p>Aktywacja zdarzenia nadrzędnego odnosi się do aktywacji obiektu docelowego po zwolnieniu wskaźnika. W interakcji z ekranem dotykowym, gdy palec dotyka celu, aktywacja zdarzenia w górę (up-event) następuje tylko wtedy, gdy palec zostanie podniesiony, a jednocześnie znajduje się w granicach celu. Podobnie w przypadku interakcji z myszą, zdarzenie up-event występuje, gdy przycisk myszy jest zwolniony, ale kursor nadal znajduje się w granicach początkowego celu ustawionego po naciśnięciu przycisku myszy.</p>
+      <p>Twórcy mogą zmniejszyć problem nieumyślnego wyzwolenia akcji przez użytkowników, używając ogólnych zdarzeń aktywacji/kliknięcia platformy, które aktywują funkcjonalność zdarzenia nadrzędnego. Na przykład <code>zdarzenie click</code> w języku JavaScript jest wyzwalane po zwolnieniu podstawowego przycisku myszy i jest przykładem niejawnego zdarzenia up-event (w górę). Pomimo swojej nazwy, zdarzenie <code>click</code> jest niezależne od urządzenia i działa również w przypadku interakcji dotykowej i klawiatury.</p>
+      <p>Preferencja dla zdarzeń up-event jest ukryta w sformułowaniu pierwszego punktu kryterium sukcesu: <q>Naciskanie wskaźnikiem (zdarzenie down-event)  nie wywołuje jakiejkolwiek części zdarzenia</q> spełniają pierwszy punkt, używając tylko zdarzenia w górę (up-event).</p>
+    </section>
+    <section>
+      <h3>Przerwanie lub cofnięcie zdarzenia</h3>
+      <p>Tam, gdzie interakcja jest równoważna prostemu "click", aktywacja zdarzenia w górę (up-event) ma wbudowaną możliwość anulowania. Istnieje różnica między tym, kiedy ktoś dotyka ekranu, a kiedy zdejmuje palec. Podobnie w przypadku interakcji z myszą istnieje różnica między naciśnięciem i zwolnieniem przycisku myszy. Gdy aktywacja następuje tylko po zwolnieniu wskaźnika, użytkownicy mają możliwość przerwania (anulowania) aktywacji. Użytkownicy, którzy mają trudności z dokładnym korzystaniem z myszy lub ekranu dotykowego, odnoszą duże korzyści z tego podstawowego zachowania. Zwykle otrzymują wizualną informację zwrotną po naciśnięciu elementu. Jeśli odkryją, że wybrali niewłaściwy element, mogą anulować akcję, odsuwając wskaźnik lub palec od celu przed zwolnieniem.</p>
+      <p>W przypadku bardziej złożonych interakcji, takich jak przeciąganie i upuszczanie, zdarzenia w dół i w górę mogą inicjować i kończyć serię akcji w celu ukończenia procesu. Na przykład w przypadku przeciągania i upuszczania element może być:</p>
+      <ol>
+        <li>wybierany za pomocą naciśnięcia (zdarzenie w dół),</li>
+        <li>przeniesiony w nowe miejsce, wciąż będąc naciskany, oraz</li>
+        <li>zwolniony (zdarzenie w górę), aby zakończyć akcję upuszczania.</li>
+      </ol>
+      <p>W tak złożonej akcji wzrasta potrzeba funkcji Przerwij lub Cofnij. Projektanci mogą zdecydować się na potwierdzenie przejścia za pomocą czegoś w rodzaju okna dialogowego potwierdzenia lub przycisku cofania, dając użytkownikowi możliwość cofnięcia właśnie zakończonego procesu. Alternatywnie, możliwość przerwania akcji można uzyskać, jeśli przed wykonaniem kroku 3 użytkownik przywróci wybrany element do jego pierwotnej lokalizacji i tam zakończy proces. Jeśli inne części ekranu nie pozwalają na ruch, użytkownik może zakończyć przeciąganie i upuszczanie w tym miejscu, skutecznie unieważniając operację.</p>
+    </section>
+    <section>
+      <h3>Odwrócenie zdarzenia</h3>
+      <p>W innych interakcjach zdarzenie w dół może wywołać zachowanie, które można odwrócić po zakończeniu zdarzenia w górę. Przykładem tego są akcje typu "naciśnij i przytrzymaj", w których pojawia się przejściowe wyskakujące okienko (lub odtwarzany jest film), gdy użytkownik naciśnie obiekt (zdarzenie w dół), ale wyskakujące okienko (lub film) znika, gdy tylko użytkownik zwolni wskaźnik (zdarzenie w górę). Ponieważ zdarzenie up-event odwraca poprzednie zdarzenie down, użytkownik powraca do poprzedniego punktu i skutecznie anuluje operację.</p>
+    </section>
+    <section>
+      <h3>Zdarzenie w dół</h3>
+      <p>Zakończenie funkcji przy zdarzeniu w dół jest dozwolone tylko wtedy, gdy konieczne jest, aby zdarzenie w górę nie zostało użyte.</p>
+      <p>Najbardziej rozpowszechniona aktywacja istotnego zdarzenia w dół występuje w emulacji klawiatury. Na klawiaturze fizycznej domyślnie aktywują się po zdarzeniu down-event - po naciśnięciu pojawia się litera. Gdyby programowy emulator klawiatury próbował zastąpić to oczekiwane zachowanie, powodując pojawienie się liter po zwolnieniu, zachowanie to byłoby nieoczekiwane i niekorzystnie wpłynęłoby na oczekiwaną interakcję.</p>
+      <p>Zwróć uwagę, że klawiatura ma wbudowany przycisk Backspace lub Delete, który skutecznie zapewnia opcję Cofnij. Cofnięcie nie jest wymogiem wyjątku Istotne dla zdarzenia down-event; jednak zapewnienie użytkownikom łatwego sposobu na cofnięcie dowolnej akcji jest zalecaną praktyką (i może być funkcjonalną koniecznością), nawet jeśli nie jest to wymagane przez to kryterium sukcesu.</p>
+      <p>Inne przykłady, w których czas aktywacji jest niezbędny i wymaga wystąpienia zdarzenia w dół, to:</p>
+      <ul>
+        <li>Czynność, która emuluje fizyczny spust po naciśnięciu, na przykład podczas gry na ekranowej klawiaturze fortepianu. Aktywacja w zdarzeniu up-event znacząco zmieniłaby pożądane zachowanie.</li>
+        <li>Program do strzelania do rzutków, w którym oczekiwanie na zdarzenie "w górę" anulowałoby precyzyjny czas niezbędny do aktywacji.</li>
+      </ul>
+    </section>
+  </section>
+  <section id="benefits">
+    <h3>Korzyści</h3>
+    <ul>
+      <li>Ułatwia wszystkim użytkownikom odzyskanie sprawności po trafieniu w niewłaściwy cel.</li>
+      <li>Pomaga osobom z niepełnosprawnościami wzroku,  poznawczymi i motorycznymi, zmniejszając ryzyko przypadkowego aktywowania kontrolki lub nieoczekiwanego wystąpienia akcji, a także zapewnia, że w przypadku aktywacji złożonych elementów sterujących dostępny jest sposób cofnięcia lub przerwania działania.</li>
+      <li>Osoby, które nie są w stanie wykryć zmian kontekstu, są mniej narażone na dezorientację podczas poruszania się po witrynie.</li>
+    </ul>
+  </section>
+  <section id="examples">
+    <h2>Przykłady</h2>
+    <ul>
+      <li>W przypadku elementów interfejsu, których wejściem jest jedno dotknięcie lub długie naciśnięcie, odpowiednie zdarzenie jest wyzwalane, gdy palec zostanie  podniesiony wewnątrz tego elementu.</li>
+      <li>Interfejs "przeciągnij i upuść" umożliwia użytkownikom sortowanie pionowo ułożonych kart poprzez podniesienie jednej karty za pomocą wskaźnika (zdarzenie w dół), przeniesienie jej do nowej pozycji i umieszczenie w nowym miejscu po zwolnieniu wskaźnika (zdarzenie w górę). Zwolnienie wskaźnika poza obszarem celu upuszczenia cofa akcję, tj. przesuwa kartę z powrotem do starej pozycji przed rozpoczęciem interakcji.</li>
+    </ul>
+  </section>
+  <section id="resources">
+    <h2>Resources</h2>
+    <ul>
+      <li>Resource</li>
+    </ul>
+  </section>
+  <section id="techniques">
+    <h2>Techniki</h2>
+    <section id="sufficient">
+      <h3>Techniki wystarczające</h3>
+      <ul>
+        <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G210" class="general">G210: Zapewnienie możliwości anulowania działań typu „przeciągnij i upuść”</a></li>
+        <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G212" class="general">G212</a>Użycie rdzennych kontrolek HTML, aby zapewnić, że funkcjonalność zostanie uruchomiona w przypadku zdarzenia zwolnienia dotyku lub nacisku.</li>
 
-		<section id="brief">
-			<h2>In brief</h2>
-			<dl>
-				<dt>Goal</dt><dd>Reduce accidental activation of controls by mouse or touch.</dd>
-				<dt>What to do</dt><dd>Make pointer cancellation predictable and consistent.</dd>
-				<dt>Why it's important</dt><dd>Make it easier for anyone to recover from something they didn’t mean to do.</dd>
-			</dl>
-	  
-		</section>
-		<section id="intent">
-			<h2>Intent</h2>
-			<p>The intent of this success criterion is to make it easier for users to prevent accidental or erroneous pointer input. People with various disabilities can inadvertently initiate touch or mouse events with unwanted results. Each of the following subsections roughly aligns with the bullets of this Success Criterion, and outlines a means of allowing users to cancel pointer operations.</p>
-			<section>
-			<h3>Up-Event activation or completion</h3>
-			<p>The most accessible way to incorporate pointer cancellation is to make activation occur on the up-event.</p>
-      
-        <p>Up-event activation refers to the activation of a target when the pointer is released. In a touchscreen interaction, when the finger touches a target, the up-event activation only occurs when the finger is lifted while still being within the target boundary. Similarly in mouse interaction, the up-event occurs when the mouse button is released while the cursor is still within the boundary of the initial target set when the mouse button was pressed.</p>
-      <p>Authors can reduce the problem of users inadvertently triggering an action by using generic platform activation/click events that activate functionality on the up-event. For example, the <code>click</code> event in JavaScript triggers on release of the primary mouse button, and is an example of an implicit up-event. Despite its name, the <code>click</code> event is device-independent and also works for touch and keyboard interaction.</p>
-         <p>The preference for up-events is implicit in the Success Criterion wording of the first bullet: <q>The down-event of the pointer is not used to execute any part of the function.</q> Authors meet the first bullet by using only the up-event.</p> 
-			</section>
-			<section>
-      <h3>Up-Event Abort or Undo</h3>
-       <p>Where the interaction is equivalent to a simple "click", up-event activation has a built-in ability to cancel. There is a distinction between when someone touches a screen and when they remove their finger. Similarly, in mouse interaction, there is a difference between pressing and releasing the mouse button. When activation occurs only as the pointer is released, users have the opportunity to Abort (cancel) the activation. Users who have difficulty accurately using a mouse or touchscreen benefit greatly from this basic behaviour. They normally receive visual feedback when an item is pressed. If they discover they have selected the wrong item, they can cancel the action by moving their pointer or finger away from the target before releasing.</p>
-			
-      <p>For more complex interactions, such as drag and drop, the down- and up-events may initiate and end a series of actions to complete a process. For example, with drag and drop, the item may be:</p>
-  <ol>
-  <li>selected with a press (down-event),</li>
-  <li>moved to a new location, while still being depressed, and</li>
-  <li>released (up-event) to conclude the drop action.</li>
-</ol>
-<p>In such a complex action, the need for an Abort or Undo function increases. Designers may elect to confirm the move through something like a confirmation dialog or an undo button, giving the user the ability to Undo the process just completed. Alternatively, the ability to Abort the action can be achieved if, before completing step 3, the user returns the selected item to its original location and concludes the process there. If other parts of the screen disallow a move, the user can conclude the drag and drop there, effectively nullifying the operation.</p> 
-			</section>
-			<section>
-<h3>Up Reversal</h3>
-<p>In other interactions, the down-event may trigger a behaviour which can be reversed when the up-event concludes. Examples of this include press-and-hold actions such as where a transient popup appears (or a video plays) when the user presses on an object (down-event), but the popup (or video) disappears as soon as the user releases the pointer (up-event). Since the up-event reverses the preceding down event, the user is returned to their prior point, and has effectively cancelled the operation.</p>
-			</section>
-			<section>
-<h3>Down-Event</h3>
-<p>Completing the function on the down-event is only permitted when it is essential that the up-event not be used.</p>
-<p>The most prevalent essential down-event activation occurs in keyboard emulation. On a physical keyboard, keys by default activate on the down-event -- a letter appears when the key is pressed. If a software keyboard emulator tried to override this expected behaviour by making letters appear when the key is released, the behaviour would be unexpected and would adversely affect expected interaction.</p>
-<p>Note that a keyboard has a built-in Backspace or Delete button, which effectively provides an Undo option. Undo is not a requirement of the down-event Essential exception; however, providing an easy way for users to undo any action is a recommended practice (and may be a functional necessity), even where it is not a requirement of this Success Criterion.</p>
-			<p>Other examples where the timing of an activation is essential and requires the down-event would be:</p>
-			<ul>
-				<li>An activity that emulates a physical on-press trigger, such as when playing an on-screen piano keyboard. Activation on the up-event would significantly alter the desired behaviour.</li>
-				<li>A program for shooting skeets where waiting for the "up" event would invalidate the precise timing necessary for the activation.</li>
-			</ul>
-			</section>
-</section>
-					<section id="benefits">
-				<h3>Benefits</h3>
-					<ul>
-					<li>Makes it easier for all users to recover from hitting the wrong target.</li>
-					<li>Helps people with visual disabilities, cognitive limitations, and motor impairments by reducing the chance that a control will be accidentally activated or an action will occur unexpectedly, and also ensures that where complex controls are activated, a means of Undoing or Aborting the action is available.</li>
-					<li>Individuals who are unable to detect changes of context are less likely to become disoriented while navigating a site.</li>
-				</ul>
-		</section>
-		<section id="examples">
-			<h2>Examples</h2>
-			<ul>
-				<li>For interface elements that have a single tap or long press as input, the corresponding event is triggered when the finger is lifted inside that element.</li>
-				
-        <li>A drag-and-drop interface allows users to sort vertically stacked cards by picking up one card with the pointer (down-event), move it to a new position, and insert it at the new location when the pointer is released (up-event). Releasing the pointer outside the drop target area reverts the action, i.e., it moves the card back to the old position before the interaction started.</li>
-			</ul>
-		</section>
-		<section id="resources">
-			<h2>Resources</h2>
-			<ul>
-				<li>Resource</li>
-			</ul>
-		</section>
-		<section id="techniques">
-			<h2>Techniques</h2>
-			<section id="sufficient">
-				<h3>Sufficient</h3>
-					<ul>
-						<li><a href="../../techniques/general/G210" class="general">G210</a></li>
-						<li><a href="../../techniques/general/G212" class="general">G212</a></li>
-						<li>Touch events are only triggered when touch is removed from a control (Potential future technique)</li>		
-					</ul>
-			</section>
-			<!--<section id="advisory">
-				<h2>Advisory</h2>
-				<ul>
-					
-				</ul>
-			</section>-->
-			<section id="failure">
-				<h2>Failure</h2>
-				<ul>
-					<li><a href="../../techniques/failures/F101">Failure of Success Criterion 2.5.2 due to activating a control on the down-event</a></li>
-				</ul>
-			</section>
-		</section>
-	</body>
+      </ul>
+    </section>
+    <!--<section id="advisory">
+      <h2>Advisory</h2>
+      <ul>
+      </ul>
+    </section>-->
+    <section id="failure">
+      <h2>Błędy</h2>
+      <ul>
+        <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F101">F101: Niespełnienie kryterium sukcesu 2.5.2 ze względu na aktywację kontrolki przez naciśnięcie</a></li>
+      </ul>
+    </section>
+  </section>
+</body>
 </html>
