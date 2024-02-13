@@ -1,243 +1,134 @@
 <!DOCTYPE html>
 <html lang="pl" xml:lang="pl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-   <meta charset="UTF-8"></meta>
-   <title>Understanding Error Suggestion</title>
-   <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove"></link>
+  <meta charset="UTF-8" />
+  <title>Objaśnienie kryterium sukcesu Sugestie korekty błędów</title>
+  <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove" />
 </head>
 <body>
-   <h1>Understanding Error Suggestion</h1>
-   
-   <section id="brief">
-		<h2>In brief</h2>
-		<dl>
-         <dt>Goal</dt><dd>Users get suggestions on how to resolve errors.</dd>
-         <dt>What to do</dt><dd>Where errors are detected, suggest known ways to correct them.</dd>
-         <dt>Why it's important</dt><dd>People can address errors faster and with reduced effort.</dd> 
-      </dl>
-
-   </section>
-   
-   <section id="intent">
-      <h2>Intent of Error Suggestion</h2>
-      
-      
-      <p>The intent of this Success Criterion is to ensure that users receive appropriate suggestions
-         for correction of an input error if it is possible. The definition of "input error"
-         says that it is "information provided by the user that is not accepted" by
-         the system. Some examples of information that is not accepted include information
-         that is required but omitted by the user and information that is provided by the user
-         but that falls outside the required data format or allowed values.
-      </p>
-      
-      <p>Success Criterion 3.3.1 provides for notification of errors. However, persons with
-         cognitive limitations may find it difficult to understand how to correct the errors.
-         People with visual disabilities may not be able to figure out exactly how to correct
-         the error. In the case of an unsuccessful form submission, users may abandon the form
-         because they may be unsure of how to correct the error even though they are aware
-         that it has occurred. 
-      </p>
-      
-      <p>The content author may provide the description of the error, or the user agent may
-         provide the description of the error based on technology-specific, programmatically
-         determined information.
-         
-      </p>
-      
-      
-   </section>
-   <section id="benefits">
-      <h2>Benefits of Error Suggestion</h2>
-      
-      
+  <h1>Objaśnienie kryterium sukcesu Sugestie korekty błędów</h1>
+  <section id="brief">
+    <h2>W skrócie</h2>
+    <dl>
+      <dt>Cel</dt>
+      <dd>Użytkownicy otrzymują sugestie dotyczące rozwiązywania błędów.</dd>
+      <dt>Co zrobić</dt>
+      <dd>W przypadku wykrycia błędów zasugeruj znane sposoby ich poprawienia.</dd>
+      <dt>Dlaczego to jest ważne</dt>
+      <dd>Ludzie mogą rozwiązywać błędy szybciej i przy mniejszym wysiłku.</dd>
+    </dl>
+  </section>
+  <section id="intent">
+    <h2>Intencja</h2>
+    <p>
+      Intencją tego kryterium sukcesu jest zapewnienie, że użytkownicy otrzymają odpowiednie sugestie dotyczące korekty błędu wprowadzanych danych, jeśli jest to możliwe. Definicja <a class="glossary">błąd wprowadzania danych</a>  mówi, że jest to <q>informacja wprowadzona przez użytkownika, która nie jest akceptowana przez system</q>. Niektóre przykłady informacji, które nie są akceptowane, obejmują informacje wymagane, ale pominięte przez użytkownika, oraz informacje dostarczone przez użytkownika, ale które wykraczają poza wymagany format danych lub dozwolone wartości.
+    </p>
+    <p>
+      Kryterium sukcesu 3.3.1 przewiduje powiadomienie o błędach. Jednak osoby z ograniczeniami poznawczymi mogą mieć trudności ze zrozumieniem, jak poprawić błędy. Osoby z niepełnosprawnością wzroku mogą nie być w stanie dokładnie określić, jak poprawić błąd. W przypadku nieudanego przesłania formularza użytkownicy mogą zrezygnować z formularza, ponieważ mogą nie być pewni, jak naprawić błąd, mimo że wiedzą, że wystąpił.
+    </p>
+    <p>
+      Twórca treści może podać opis błędu lub program użytkownika może podać opis błędu w oparciu o specyficzne dla technologii informacje określone programowo.
+    </p>
+  </section>
+  <section id="benefits">
+    <h2>Korzyści</h2>
+    <ul>
+      <li>Podanie informacji o tym, jak korygować błędy wprowadzania, pozwala użytkownikom z trudnościami w uczeniu się pomyślnie wypełnić formularz.</li>
+      <li>Użytkownicy, którzy są niewidomi lub mają zaburzenia widzenia, łatwiej rozumieją charakter błędu wejściowego i sposób jego skorygowania.</li>
+      <li>Osoby z zaburzeniami ruchu mogą zmniejszyć liczbę konieczności zmiany wartości wejściowej.</li>
+    </ul>
+  </section>
+  <section id="examples">
+    <h2>Przykłady</h2>
+    <dl>
+      <dt>Dodatkowa pomoc dotycząca korygowania błędu wprowadzania</dt>
+      <dd>Wynik formularza, który nie został pomyślnie przesłany, opisuje błąd wprowadzania na miejscu na stronie wraz z poprawnym wejściem i oferuje dodatkową pomoc dla pola formularza, które spowodowało błąd wprowadzania.</dd>
+      <dt>Sugestie z ograniczonego zestawu wartości</dt>
+      <dd>
+        <p>Pole wejściowe wymaga wprowadzenia nazwy miesiąca. Jeśli użytkownik wprowadzi <q>12</q>, sugestie dotyczące korekty mogą obejmować:</p>
+        <ul>
+          <li>
+            Listę dopuszczalnych wartości, np. <q>Wybierz jedną z: styczeń, luty, marzec, kwiecień, maj, czerwiec, lipiec, sierpień, wrzesień, październik, listopad, grudzień.</q>
+          </li>
+          <li>
+            Konwersję danych wejściowych interpretowaną jako inny format miesiąca, np. <q>Czy masz na myśli <q>grudzień</q>? <q>
+          </li>
+        </ul>
+      </dd>
+    </dl>
+  </section>
+  <section id="resources">
+    <h2>Resources for Error Suggestion</h2>
+  </section>
+  <section id="techniques">
+    <h2>Techniki</h2>
+    <p class="note">
+      W niektórych przypadkach może mieć zastosowanie więcej niż jedna z tych sytuacji. Na przykład, gdy pole obowiązkowe wymaga również, aby dane były w określonym formacie.
+    </p>
+    <section id="sufficient">
+      <h3>Wystarczające techniki</h3>
+      <section class="situation" id="error-suggestion-situation-1">
+        <h4>Sytuacja A:  Jeżeli obowiązkowe pole nie zawiera żadnych informacji:</h4>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA18" class="aria">ARIA2: Identyfikacja wymaganych pól za pomocą właściwości aria-required</a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G85" class="general">G85: Zapewnienie opisów tekstowych wskazujących wymagane pola, które nie zostały wypełnione</a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G177" class="general">G177: Zapewnienie sugerowanego tekstu korekty</a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF22" class="pdf">PDF22: Wskazywanie, kiedy dane wprowadzone przez użytkownika nie mieszczą się w wymaganym formacie lub wartościach w formularzach PDF</a>
+          </li>
+        </ul>
+      </section>
+      <section class="situation" id="error-suggestion-situation-2">
+        <h4>
+          Sytuacja B: Jeżeli informacje w danym polu muszą być w określonym formacie danych:
+        </h4>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA18" class="aria">ARIA18: Użycie atrybutu aria-alertdialog do identyfikacji błędów</a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G84" class="general">G84: Zapewnienie komunikatu tekstowego, gdy użytkownik podaje informacje, które nie znajdują się na liście dozwolonych wartości</a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G177" class="general">G177: Zapewnienie sugerowanego tekstu korekty</a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF22" class="pdf">PDF22: Wskazywanie, kiedy dane wprowadzone przez użytkownika nie mieszczą się w wymaganym formacie lub wartościach w formularzach PDF</a>
+          </li>
+        </ul>
+      </section>
+    </section>
+    <section id="advisory">
+      <h3>Techniki pomocnicze</h3>
       <ul>
-         <li>Providing information about how to correct input errors allows users who have learning
-            disabilities to fill in a form successfully.</li>
-         <li>Users who are blind or have impaired vision understand more easily the nature of the
-            input error and how to correct it.</li>
-         <li>People with motion impairment can reduce the number of times they need to change an
-            input value.</li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G139" class="general">G139: Zapewnienie mechanizmu, który umożliwia użytkownikom przechodzenie do błędów</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G199" class="general">G199: Zapewnienie komunikatu o powodzeniu po pomyślnym przesłaniu danych</a>
+        </li>
       </ul>
-      
-   </section>
-   
-   <section id="examples">
-      <h2>Examples of Error Suggestion</h2>
-      
-      <dl>
-         <dt>Additional Help for Correcting An Input Error</dt>
-         <dd>The result of a form that was not successfully submitted describes an
-               input error in place in the page along with the correct input and offers additional
-               help for the form field that caused the input error.</dd>
-         <dt>Suggestions from a Limited Set of Values</dt>
-         <dd>
-            <p>An input field requires that a month name be entered. If the user enters "12," suggestions
-               for correction may include:</p>
-            
-            <ul>
-               <li>A list of the acceptable values, e.g., "Choose one of: January, February, March, April,
-                  May, June, July, August, September, October, November, December."
-               </li>
-               <li>The conversion of the input data interpreted as a different month format, e.g., "Do
-                  you mean 'December'?"
-               </li>
-            </ul>
-         </dd>
-      </dl>
-      
-   </section>
-   
-   <section id="resources">
-      <h2>Resources for Error Suggestion</h2>
-      
-      
-   </section>
-   
-   <section id="techniques">
-      <h2>Techniques for Error Suggestion</h2>
-      
-      
-      <div class="note">
-         
-         <p>
-            In some cases, more than one of these situations may apply. For example, when a mandatory
-            field also requires the data to be in a specific format.
-            
-            
-         </p>
-         
-      </div>
-      
-      <section id="sufficient">
-         <h3>Sufficient Techniques for Error Suggestion</h3>
-       
-         <section class="situation" id="error-suggestion-situation-1">
-            
-            <h4>Situation A: If information for a field is required to be in a specific data format:</h4>
-            
-            <ul>
-               
-               <li>
-                  
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA18" class="aria"></a>
-                  
-               </li>
-               
-               <li>
-
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G85" class="general">Providing a text description when user input falls outside the required format or
-                     values
-                  </a>
-
-               </li>
-               
-               <li>
-
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G177" class="general">Providing suggested correction text</a>
-
-               </li>
-
-               <li>
-                  
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF22" class="pdf"></a>
-                  
-               </li>
-               
-            </ul>
-            
-         </section>
-         
-         <section class="situation" id="error-suggestion-situation-2">
-            
-            <h4>Situation B: Information provided by the user is required to be one of a limited set
-               of values:
-            </h4>
-            
-            <ul>
-               
-               <li>
-                  
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA18" class="aria"></a>
-                  
-               </li>
-               
-               <li>
-
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G84" class="general">Providing a text description when the user provides information that is not in list
-                     of allowed values
-                  </a>
-
-               </li>
-               
-               <li>
-
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G177" class="general">Providing suggested correction text</a>
-
-               </li>
-               
-               <li>
-                  
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF22" class="pdf"></a>
-                  
-               </li>
-               
-            </ul>
-            
-         </section>
-         
+      <section>
+        <h4>Techniki skryptowe po stronie klienta (pomocnicze)</h4>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR18" class="script">SCR18: Zapewnienie sprawdzania poprawności i alertu po stronie klienta</a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR32" class="script">SCR32: Zapewnienie sprawdzania poprawności po stronie klienta i dodawania tekstu błędu przez DOM</a>
+          </li>
+        </ul>
       </section>
-      
-      <section id="advisory">
-         <h3>Additional Techniques (Advisory) for Error Suggestion</h3>
-         
-         
-         <ul>
-            
-            <li>
-
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G139" class="general">G139: Creating a mechanism that allows users to jump to errors</a>
-
-            </li>
-            
-            <li>
-
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G199" class="general">Providing success feedback when data is submitted successfully</a>
-
-            </li>
-            
-         </ul>
-         
-         <section>
-            
-            <h4>Client-Side Scripting Techniques (Advisory)</h4>
-            
-            <ul>
-               
-               <li>
-
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR18" class="script">Providing client-side validation and alert</a>
-
-               </li>
-               
-               <li>
-
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR32" class="script">Providing client-side validation and adding error text via the DOM</a>
-
-               </li>
-
-            </ul>
-            
-         </section>
-         
-      </section>
-      
-      <section id="failure">
-         <h3>Failures for Error Suggestion</h3>
-         
-         
-      </section>
-      
-   </section>
-   
+    </section>
+    <section id="failure">
+      <h3>Failures for Error Suggestion</h3>
+    </section>
+  </section>
 </body>
 </html>

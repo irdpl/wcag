@@ -1,91 +1,107 @@
 <!DOCTYPE html>
 <html lang="pl" xml:lang="pl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-   <meta charset="UTF-8"></meta>
-   <title>Understanding Error Prevention (All)</title>
-   <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove"></link>
+  <meta charset="UTF-8" />
+  <title>Objaśnienie kryterium sukcesu Zapobieganie błędom (wszystkim)</title>
+  <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove" />
 </head>
 <body>
-   <h1>Understanding Error Prevention (All)</h1>
-   
-		<section id="brief">
-			<h2>In brief</h2>
-			<dl>
-		         <dt>Goal</dt><dd>Users can avoid submitting incorrect information.</dd>
-		         <dt>What to do</dt><dd>Provide ways for users to confirm, correct, or reverse any submissions.</dd>
-			      <dt>Why it's important</dt><dd>People with disabilities may be more likely to make mistakes, or not notice them.</dd> 
-           </dl>
-
+  <h1>Objaśnienie kryterium sukcesu Zapobieganie błędom (wszystkim)</h1>
+  <section id="brief">
+    <h2>W skrócie</h2>
+    <dl>
+      <dt>Cel</dt>
+      <dd>Użytkownicy mogą uniknąć przesyłania nieprawidłowych informacji.</dd>
+      <dt>Co zrobić</dt>
+      <dd>Zapewnij użytkownikom możliwość potwierdzenia, poprawienia lub wycofania wszelkich przesłanych danych.</dd>
+      <dt>Dlaczego to jest ważne</dt>
+      <dd>Osoby z niepełnosprawnościami mogą częściej popełniać błędy lub ich nie zauważać.</dd>
+    </dl>
+  </section>
+  <section id="intent">
+    <h2>Intencja</h2>
+    <p>
+      Intencją tego kryterium sukcesu jest pomoc użytkownikom  z niepełnosprawnościami w uniknięciu konsekwencji, które mogą wynikać z popełnienia błędu podczas przesyłania danych w formularzu. To kryterium opiera się na <a href="zapobieganie-bledom-prawnym-finansowym-w-danych" class="guideline">kryterium sukcesu 3.3.4</a>, ponieważ ma zastosowanie do wszystkich formularzy wymagających od użytkowników przesłania informacji.
+    </p>
+    <p>
+      Użytkownicy z niepełnosprawnościami mogą częściej popełniać błędy i mogą mieć większe trudności z wykryciem lub naprawieniem błędów. Osoby z zaburzeniami czytania mogą przestawić cyfry i litery, a osoby z zaburzeniami motorycznymi mogą omyłkowo uderzać w klawisze. Zapewnienie możliwości cofnięcia działań pozwala użytkownikom poprawić błąd. Zapewnienie możliwości przeglądania i poprawiania informacji daje użytkownikowi możliwość wykrycia błędu przed podjęciem działań.
+    </p>
+  </section>
+  <section id="benefits">
+    <h2>Korzyści</h2>
+    <ul>
+      <li>
+        Zapewnienie zabezpieczeń w celu uniknięcia konsekwencji wynikających z błędów pomaga wszystkim użytkownikom z niepełnosprawnościami, którzy mogą być bardziej narażeni na popełnianie błędów.
+      </li>
+    </ul>
+  </section>
+  <section id="examples">
+    <h2>Examples of Error Prevention (All)</h2>
+  </section>
+  <section id="resources">
+    <h2>Resources for Error Prevention (All)</h2>
+  </section>
+  <section id="techniques">
+    <h2>Techniki</h2>
+    <p>Stosowanie <a href="zapobieganie-bledom-prawnym-finansowym-w-danych" class="understanding">technik wystarczających dla kryterium sukcesu 3.3.4</a> w przypadku wszystkich formularzy wymagających od użytkownika przesłania informacji.</p>
+    <section id="sufficient">
+      <h3>Techniki wystarczające</h3>
+      <section class="situation">
+        <h4>
+          Sytuacja A: Jeżeli aplikacja powoduje dokonanie czynności prawnej, takiej jak dokonanie zakupu lub złożenie zeznania podatkowego:
+        </h4>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G164" class="general">G164: Zapewnienie określonego czasu po złożeniu formularza, gdy przesłanie formularza może zostać zaktualizowane lub anulowane przez użytkownika</a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G98" class="general">G98: Zapewnienie użytkownikowi możliwości sprawdzenia i poprawienia odpowiedzi przed przesłaniem</a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G155" class="general">G155: Zapewnienie obok pola wyboru przycisku przesyłania</a>
+          </li>
+        </ul>
       </section>
-   
-   <section id="intent">
-      <h2>Intent of Error Prevention (All)</h2>
-      
-      
-      <p>The intent of this Success Criterion is to help users with disabilities avoid consequences
-         that may result from making a mistake when submitting form data. This criterion builds
-         on 
-         <a href="error-prevention-legal-financial-data" class="guideline">Success Criterion 3.3.4</a> in that it applies to all forms that require users to submit information. 
-      </p>
-      
-      <p>Users with disabilities may be more likely to make mistakes and may have more difficulty
-         detecting or recovering from mistakes. People with reading disabilities may transpose
-         numbers and letters, and those with motor disabilities may hit keys by mistake. Providing
-         the ability to reverse actions allows users to correct a mistake. Providing the ability
-         to review and correct information gives the user an opportunity to detect a mistake
-         before taking an action.
-      </p>
-      
-      
-   </section>
-   <section id="benefits">
-      <h2>Benefits of Error Prevention (All)</h2>
-      
-      
+      <section class="situation" id="error-prevention-legal-financial-data-situation-1">
+        <h4>Sytuacja B: Jeśli działanie powoduje usunięcie informacji:</h4>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G99" class="general">G99: Zapewnienie możliwości odzyskiwania usuniętych informacji</a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G168" class="general">G168: Żądanie potwierdzenia, aby kontynuować wybraną akcję</a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G155" class="general">G155: Zapewnienie obok pola wyboru przycisku przesyłania</a>
+          </li>
+        </ul>
+      </section>
+      <section class="situation" id="error-prevention-legal-financial-data-situation-2">
+        <h4>Sytuacja C: Jeśli strona internetowa zawiera aplikację do testów:</h4>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G98" class="general">G98: Zapewnienie użytkownikowi możliwości sprawdzenia i poprawienia odpowiedzi przed przesłaniem</a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G168" class="general">G168: Żądanie potwierdzenia, aby kontynuować wybraną akcję</a>
+          </li>
+        </ul>
+      </section>
+    </section>
+    <section id="advisory">
+      <h3>Techniki pomocnicze</h3>
       <ul>
-         
-         <li>
-            Providing safeguards to avoid consequences resulting from mistakes helps users with
-            all disabilities who may be more likely to make mistakes.
-            
-         </li>
-         
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR18" class="script">SCR18: Zapewnienie sprawdzania poprawności i alertu po stronie klienta</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G199" class="general">G199: Zapewnienie komunikatu o powodzeniu po pomyślnym przesłaniu danych</a>
+        </li>
       </ul>
-      
-   </section>
-   
-   <section id="examples">
-      <h2>Examples of Error Prevention (All)</h2>
-      
-      
-   </section>
-   
-   <section id="resources">
-      <h2>Resources for Error Prevention (All)</h2>
-      
-      
-   </section>
-   
-   <section id="techniques">
-      <h2>Techniques for Error Prevention (All)</h2>
-      
-      
-      <section id="sufficient">
-         <h3>Sufficient Techniques for Error Prevention (All)</h3>
-         
-         
-         <ul>
-            
-            <li>
-               	Following the 
-               <a href="error-prevention-legal-financial-data#techniques" class="understanding">sufficient techniques for Success Criterion 3.3.4</a> for all forms that require the user to submit information.
-            </li>
-            
-         </ul>
-         
-      </section>
-      
-   </section>
-   
+    </section>
+    <section id="failure">
+      <h3>Failures for Error Prevention (Legal, Financial, Data)</h3>
+    </section>
+  </section>
 </body>
 </html>

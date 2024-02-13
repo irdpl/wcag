@@ -1,179 +1,100 @@
 <!DOCTYPE html>
 <html lang="pl" xml:lang="pl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-   <meta charset="UTF-8"></meta>
-   <title>Understanding Help</title>
-   <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove"></link>
+  <meta charset="UTF-8" />
+  <title>Objaśnienie kryterium sukcesu Pomoc</title>
+  <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove" />
 </head>
 <body>
-   <h1>Understanding Help</h1>
-   
-   <section id="brief">
-      <h2>In brief</h2>
-      <dl>
-         <dt>Goal</dt><dd>Users can avoid making mistakes.</dd>
-         <dt>What to do</dt><dd>Provide help to users on the function currently being performed.</dd>
-         <dt>Why it's important</dt><dd>People with cognitive or other disabilities can complete their tasks more easily.</dd> 
-      </dl>
-
-   </section>
-   
-   <section id="intent">
-      <h2>Intent of Help</h2>
-      
-      
-      <p>The intent of this Success Criterion is to help users avoid making mistakes. Some
-         users with disabilities may be more likely to make mistakes than users without disabilities.
-         Using context-sensitive help, users find out how to perform an operation without losing
-         track of what they are doing.
-      </p>
-      
-      <p>Context-sensitive help only needs to be provided when the label is not
-         sufficient to describe all functionality. The existence of context-sensitive help
-         should be obvious to the user and they should be able to obtain it whenever they require
-         it. 
-         
-      </p>
-      
-      <p>The content author may provide the help text, or the user agent may provide the help
-         text based on technology-specific, programmatically determined information.
-         
-      </p>
-      
-      
-   </section>
-   <section id="benefits">
-      <h2>Benefits of Help</h2>
-      
-      
+  <h1>Objaśnienie kryterium sukcesu Pomoc</h1>
+  <section id="brief">
+    <h2>W skrócie</h2>
+    <dl>
+      <dt>Cel</dt>
+      <dd>Użytkownicy mogą uniknąć popełniania błędów.</dd>
+      <dt>Co robić</dt>
+      <dd>Udostępnij użytkownikom pomoc dotyczącą aktualnie wykonywanej funkcji.</dd>
+      <dt>Dlaczego to ważne</dt>
+      <dd>Osoby z niepełnosprawnością poznawczą lub inną niepełnosprawnością mogą łatwiej wykonywać swoje zadania.</dd>
+    </dl>
+  </section>
+  <section id="intent">
+    <h2>Intencja</h2>
+    <p>
+      Intencją tego kryterium sukcesu jest pomóc użytkownikom uniknąć popełniania błędów. Niektórzy użytkownicy z niepełnosprawnością mogą częściej popełniać błędy niż użytkownicy bez niepełnosprawności. Korzystając z pomocy kontekstowej, użytkownicy dowiadują się, jak wykonać daną operację, nie tracąc przy tym orientacji.
+    </p>
+    <p>
+      Pomoc uwzględniająca kontekst musi być udzielana tylko wtedy, gdy etykieta nie jest wystarczająca do opisania wszystkich funkcji. Istnienie pomocy kontekstowej powinno być oczywiste dla użytkownika i powinien on być w stanie ją uzyskać, gdy tylko tego potrzebuje.
+    </p>
+    <p>
+      Twórca treści może dostarczyć tekst pomocy lub program użytkownika może dostarczyć tekst pomocy w oparciu o specyficzne dla technologii informacje określone programowo.
+    </p>
+  </section>
+  <section id="benefits">
+    <h2>Korzyści</h2>
+    <ul>
+      <li>
+        Pomoc w wprowadzaniu tekstu pomaga osobom  z niepełnosprawnością w pisaniu oraz osobom z niepełnosprawnością czytania i intelektualną, które często mają trudności z pisaniem tekstu w formularzach lub innych miejscach wymagających wprowadzania tekstu.
+      </li>
+      <li>
+        Ponadto tego rodzaju pomoc pomaga osobom starzejącym się i mającym takie same trudności z wprowadzaniem tekstu i/lub obsługą myszy.
+      </li>
+    </ul>
+  </section>
+  <section id="examples">
+    <h2>Przykłady</h2>
+    <dl>
+      <dt>podanie o pracę on-line</dt>
+      <dd>Niektóre pytania mogą być trudne do zrozumienia dla nowych osób poszukujących pracy. Łącze pomocy obok każdego pytania zawiera instrukcje i wyjaśnienia dla każdego pytania.</dd>
+    </dl>
+  </section>
+  <section id="resources">
+    <h2>Resources for Help</h2>
+  </section>
+  <section id="techniques">
+    <h2>Techniki</h2>
+    <section id="sufficient">
+      <h3>Wystarczające techniki</h3>
+      <section class="situation" id="help-situation-0">
+        <h4>Sytuacja A: Jeśli formularz wymaga wprowadzenia tekstu:</h4>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G71" class="general">G71: Zapewnienie łącza pomocy na każdej stronie internetowej</a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G193" class="general">G193: Udzielanie pomocy na stronie internetowej przez asystenta</a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G194" class="general">G194: Zapewnienie sprawdzania pisowni i sugestii dotyczących poprawnej pisowni</a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G184" class="general">G184: Podanie na początku formularza lub zestawu pól instrukcji tekstowych opisujących niezbędne dane wejściowe</a>
+          </li>
+        </ul>
+      </section>
+      <section class="situation" id="help-situation-1">
+        <h4>Sytuacja B: Jeśli formularz wymaga wprowadzenia tekstu w oczekiwanym formacie danych:</h4>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G89" class="general">G89: Podanie oczekiwanego formatu danych i przykładu</a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G184" class="general">G184: Podanie na początku formularza lub zestawu pól instrukcji tekstowych opisujących niezbędne dane wejściowe</a>
+          </li>
+        </ul>
+      </section>
+    </section>
+    <section id="advisory">
+      <h3>Techniki pomocnicze</h3>
       <ul>
-         
-         <li>Assistance for text input helps individuals with writing disabilities and people with
-            reading and intellectual disabilities who often have difficulty writing text in forms
-            or other places that need text input.
-         </li>
-         
-         <li>Additionally, these kinds of assistance help people who are aging and have the same
-            difficulty in text input and/or mouse operation.
-         </li>
-         
+        <li>
+          <a href="https://www.w3.org/WAI/WCAG22/Techniques/html/H89" class="html">H89: Użycie atrybutu title w celu zapewnienia pomocy kontekstowej</a>
+        </li>
       </ul>
-      
-   </section>
-   
-   <section id="examples">
-      <h2>Examples of Help</h2>
-      
-      <dl>
-         <dt>on-line job application</dt>
-         <dd>Some of the questions may be hard for new job seekers to understand. A help link
-               next to each question provides instructions and explanations for each question.</dd>
-      </dl>
-      
-   </section>
-   
-   <section id="resources">
-      <h2>Resources for Help</h2>
-      
-      
-   </section>
-   
-   <section id="techniques">
-      <h2>Techniques for Help</h2>
-      
-      
-      <section id="sufficient">
-         <h3>Sufficient Techniques for Help</h3>
-         
-         
-         <section class="situation" id="help-situation-0">
-            
-            <h4>Situation A: If a form requires text input:</h4>
-            
-            <ul>
-               
-               <li>
-                  										           
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G71" class="general">Providing a help link on every Web page</a>
-                  									         
-               </li>
-               
-               
-               <li>
-                  										           
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G193" class="general">Providing help by an assistant in the Web page</a>
-                  									         
-               </li>
-               
-               <li>
-                  										           
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G194" class="general">Providing spell checking and suggestions for text input if applicable to the language
-                     
-                  </a>
-                  									         
-               </li>
-               
-               <li>
-                  										           
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G184" class="general">Providing text instructions at the beginning of a form or set of fields that describes
-                     the necessary input
-                  </a>
-                  									         
-               </li>
-               
-            </ul>
-            
-         </section>
-         
-         <section class="situation" id="help-situation-1">
-            
-            <h4>Situation B: If a form requires text input in an expected data format:</h4>
-            
-            <ul>
-               
-               <li>
-                  										           
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G89" class="general">Providing expected data format and example</a>
-                  									         
-               </li>
-               
-               <li>
-                  										           
-                  <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G184" class="general">Providing text instructions at the beginning of a form or set of fields that describes
-                     the necessary input 
-                  </a>
-                  									         
-               </li>
-               
-            </ul>
-            
-         </section>
-         
-      </section>
-      
-      <section id="advisory">
-         <h3>Additional Techniques (Advisory) for Help</h3>
-         
-         
-         <ul>
-            
-            <li>
-               									         
-               <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H89" class="html">Using the title attribute to provide context-sensitive help</a>
-               								       
-            </li>
-            
-         </ul>
-         
-      </section>
-      
-      <section id="failure">
-         <h3>Failures for Help</h3>
-         
-         
-      </section>
-      
-   </section>
-   
+    </section>
+    <section id="failure">
+      <h3>Failures for Help</h3>
+    </section>
+  </section>
 </body>
 </html>
