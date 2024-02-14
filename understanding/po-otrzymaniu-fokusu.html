@@ -80,58 +80,54 @@
                <h2>W skrócie</h2>
                <dl>
                   
-                  <dt>Goal</dt>
-                  <dd>Content can be navigated more predictably.</dd>
+                  <dt>Cel</dt>
                   
-                  <dt>What to do</dt>
-                  <dd>Do not change a user's context when items get focus.</dd>
+                  <dd>Nawigacja po treści jest bardziej przewidywalna.</dd>
                   
-                  <dt>Why it's important</dt>
-                  <dd>Content that behaves predictably is especially important to people with disabilities.</dd> 
+                  <dt>Co robić</dt>
+                  
+                  <dd>Nie zmieniaj kontekstu użytkownika, gdy elementy stają się aktywne.</dd>
+                  
+                  <dt>Dlaczego jest to ważne</dt>
+                  
+                  <dd>Treści, które zachowują się przewidywalnie, są szczególnie ważne dla osób z niepełnosprawnościami.</dd>
                   
                </dl>
             </section>
             <section id="intent">
                <h2>Intencja</h2>
-               <p>The intent of this Success Criterion is to ensure that functionality is predictable
-                  as visitors navigate their way through a document. Any component that is able to trigger
-                  an event when it receives focus must not change the context.          Examples of
-                  changing context when a component receives focus include, but are not limited to:
-                  
+               <p>
+                  Intencją tego kryterium sukcesu jest zapewnienie, że funkcjonalność jest przewidywalna,
+                  gdy odwiedzający poruszają się po dokumencie. Żaden komponent, który jest w stanie
+                  wyzwolić zdarzenie po otrzymaniu fokusu, nie może zmieniać kontekstu. Przykłady zmiany
+                  kontekstu, gdy składnik jest aktywny, obejmują między innymi:
                   
                </p>
                <ul>
                   
+                  <li>formularze przesyłane automatycznie, gdy komponent jest aktywny;</li>
                   
-                  <li>forms submitted automatically when a component receives focus;</li>
+                  <li>nowe okna uruchamiane po uaktywnieniu komponentu;</li>
                   
-                  
-                  <li>new windows launched when a component receives focus;</li>
-                  
-                  
-                  <li>focus is changed to another component when that component receives focus;</li>
-                  
+                  <li>fokus jest zmieniany na inny komponent, gdy ten komponent otrzymuje fokus;</li>
                   
                </ul>
-               <p>Focus may be moved to a control either via the keyboard (e.g. tabbing to a control)
-                  or the mouse (e.g. clicking on a text field). Moving the mouse over a control does
-                  not move the focus
-                  unless scripting implements this behavior. Note that for some types of controls, clicking
-                  on a control may also activate the control (e.g. button), which may, in turn, initiate
-                  a change in context.
-                  					
+               <p>
+                  Fokus można przenieść do kontrolki za pomocą klawiatury (np. przejście Tab do kontrolki)
+                  lub myszy (np. kliknięcie pola tekstowego). Przesunięcie wskaźnika myszy nad kontrolkę
+                  nie powoduje przeniesienia fokusu, chyba że skrypty implementują to zachowanie. Należy
+                  pamiętać, że w przypadku niektórych typów kontrolek kliknięcie kontrolki może również
+                  aktywować kontrolkę (np. przycisk), co z kolei może zainicjować zmianę kontekstu.
                   
                </p>
                <div class="note">
                   <p class="note-title marker">Uwaga</p>
                   <div>
                      
-                     
-                     <p>What is meant by "component" here is also sometimes called "user interface element"
-                        or "user interface component".
+                     <p>
+                        To, co rozumie się tutaj przez <q>komponent</q>, jest czasami nazywane <q>elementem interfejsu użytkownika</q> lub <q>komponentem interfejsu użytkownika</q>.
                         
                      </p>
-                     
                      
                   </div>
                </div>
@@ -140,12 +136,12 @@
                <h2>Korzyści</h2>
                <ul>
                   
-                  
-                  <li>This Success Criterion helps people with visual disabilities, cognitive limitations,
-                     and motor impairments by reducing the chance that a change of context will occur unexpectedly.
+                  <li>
+                     To kryterium sukcesu pomaga osobom z niepełnosprawnością wzrokową, ograniczeniami
+                     poznawczymi i upośledzeniem motorycznym, zmniejszając ryzyko nieoczekiwanej zmiany
+                     kontekstu.
                      
                   </li>
-                  
                   
                </ul>
             </section>
@@ -153,21 +149,21 @@
                <h2>Przykłady</h2>
                <dl>
                   
-                  <dt>Example 1: A dropdown menu</dt>
+                  <dt>Przykład 1: Menu rozwijane</dt>
                   
-                  <dd>A dropdown menu on a page allows users to choose between jump destinations. If the
-                     person uses the keyboard to move down to a choice and activates it (with a spacebar
-                     or enter key) it will jump to a new page.  However, if the person moves down to a
-                     choice and either hits the escape or the tab key to move out of the pulldown menu
-                     – it does not jump to a new screen as the focus shifts out of the dropdown menu.
+                  <dd>Menu rozwijane na stronie umożliwia użytkownikom wybór między miejscami docelowymi
+                     skoku. Jeśli dana osoba użyje klawiatury, aby przejść w dół do wyboru i aktywuje go
+                     (za pomocą spacji lub Enter), przeskoczy do nowej strony. Jeśli jednak osoba przejdzie
+                     w dół do wyboru i naciśnie ucieczki lub Tab, aby wyjść z menu rozwijanego – nie przeskoczy
+                     do nowego ekranu, ponieważ fokus zostanie przeniesiony z menu rozwijanego.
                   </dd>
                   
-                  <dt>Example of a Failure: A help dialog</dt>
+                  <dt>Przykład błędu: Okno dialogowe pomocy</dt>
                   
-                  <dd>When a field receives focus, a help dialog window describing the field and providing
-                     options opens. As a keyboard user tabs through the Web page, the dialog opens, moving
-                     the keyboard focus away from the control every time the user attempts to tab past
-                     the field.
+                  <dd>Gdy pole stanie się aktywne, zostanie otwarte okno dialogowe pomocy opisujące pole
+                     i udostępniające opcje. Gdy użytkownik klawiatury przechodzi przez stronę internetową
+                     za pomocą Tab, otwiera się okno dialogowe, które za każdym razem, gdy użytkownik próbuje
+                     przejść przez pole Tab, fokus klawiatury jest przenoszony z dala od kontrolki.
                   </dd>
                   
                </dl>
@@ -183,27 +179,21 @@
                   <h3>Techniki wystarczające</h3>
                   <ul>
                      
-                     
                      <li>
-                        									         
                         <a class="general" href="https://w3c.github.io/wcag/techniques/general/G107">G107: Using "activate" rather than "focus" as a trigger for changes of context</a>
-                        								       
                         
                      </li>
-                     
                      
                   </ul>
                   <div class="note">
                      <p class="note-title marker">Uwaga</p>
                      <div>
                         
-                        
-                        <p>A change of content is not always a 
-                           <a href="#dfn-zmiana-kontekstu">zmiana kontekstu</a>. This success criterion is automatically met if changes in content are not also changes
-                           of context.
+                        <p>
+                           Zmiana treści nie zawsze <a href="#">jest zmianą kontekstu</a>. To kryterium powodzenia jest automatycznie spełniane, jeśli zmiany treści nie są
+                           równocześnie zmianami kontekstu.
                            
                         </p>
-                        
                         
                      </div>
                   </div>
@@ -216,22 +206,15 @@
                   </p>
                   <ul>
                      
-                     
                      <li>
-                        									         
                         <a class="general" href="https://w3c.github.io/wcag/techniques/general/G200">G200: Opening new windows and tabs from a link only when necessary</a>
-                        								       
                         
                      </li>
-                     
                      
                      <li>
-                        									         
                         <a class="general" href="https://w3c.github.io/wcag/techniques/general/G201">G201: Giving users advanced warning when opening a new window</a>
-                        								       
                         
                      </li>
-                     
                      
                   </ul>
                </section>
@@ -242,15 +225,11 @@
                   </p>
                   <ul>
                      
-                     
                      <li>
-                        									         
                         <a class="failure" href="https://w3c.github.io/wcag/techniques/failures/F55">F55:  Failure of Success Criteria 2.1.1, 2.4.7, and 3.2.1 due to using script to remove
                            focus when focus is received</a>
-                        								       
                         
                      </li>
-                     
                      
                   </ul>
                </section>
@@ -592,7 +571,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Data:</strong> Aktualizacja 13 February 2024.
+            <p><strong>Data:</strong> Aktualizacja 14 February 2024.
             </p>
             <p><strong>Opracowane przez</strong> <a href="https://www.w3.org/groups/wg/ag/participants">uczestników Accessibility Guidelines Working Group (AG WG)</a> (współrzewodniczący: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery.
                Kontakt z obsadą W3C: Michael Cooper).
