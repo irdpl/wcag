@@ -863,7 +863,8 @@
 	</xsl:template>
 
 	<xsl:template match="term" mode="key-terms">
-		<dt id="{id}"><xsl:value-of select="name[1]"/></dt>
+		<xsl:variable name="safeHref" select="pl:replaceUnsafeChars(id)"/>
+		<dt id="{$safeHref}"><xsl:value-of select="name[1]"/></dt>
 		<dd><xsl:apply-templates select="definition"/></dd>
 	</xsl:template>
 
@@ -1133,9 +1134,19 @@
 	<xsl:template match="html:a[not(@href)]" mode="#all">
 		<xsl:param name="meta" tunnel="yes"/>
 		<xsl:variable name="dfn" select="lower-case(.)"/>
-		<a href="#{$meta/ancestor::guidelines/term[name = $dfn]/id}">
-			<xsl:value-of select="."/>
-		</a>
+		<xsl:variable name="href" select="$meta/ancestor::guidelines/term[name = $dfn]/id"/>
+		<xsl:choose>
+			<xsl:when test="$href">
+				<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+				<a href="#{$safeHref}">
+					<xsl:value-of select="."/>
+				</a>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:message terminate="no">[ERR] Nie znaleziono wyniku dla wyrażenia: <xsl:value-of select="$dfn"/>
+				</xsl:message>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 
 	<xsl:template match="html:*[@class = 'instructions']"/>
