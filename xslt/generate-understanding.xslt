@@ -30,7 +30,9 @@
 				<xsl:choose>
 					<xsl:when test="$meta/preceding-sibling::guideline">
 						<li class="pager--item previous">
-							<a href="{$meta/preceding-sibling::guideline[1]/file/@href}">
+							<xsl:variable name="href" select="$meta/preceding-sibling::guideline[1]/file/@href"/>
+							<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+							<a href="{$safeHref}">
 								<xsl:call-template name="prevnext-previous"/>
 								<span class="pager--item-text">
 									<span class="pager--item-text-direction">Poprzednie:</span>
@@ -41,7 +43,9 @@
 					</xsl:when>
 					<xsl:when test="$meta/parent::principle/preceding-sibling::principle">
 						<li class="pager--item previous">
-							<a href="{$meta/parent::principle/preceding-sibling::principle[1]/guideline[last()]/file/@href}">
+							<xsl:variable name="href" select="$meta/parent::principle/preceding-sibling::principle[1]/guideline[last()]/file/@href"/>
+							<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+							<a href="{$safeHref}">
 								<xsl:call-template name="prevnext-previous"/>
 								<span class="pager--item-text">
 									<span class="pager--item-text-direction">Poprzenia wytyczna</span>: <span class="pager--item-text-target"><xsl:value-of select="$meta/parent::principle/preceding-sibling::principle[1]/guideline[last()]/name"/></span>
@@ -51,7 +55,9 @@
 					</xsl:when>
 					<xsl:when test="$meta/parent::principle/preceding-sibling::understanding">
 						<li class="pager--item previous">
-							<a href="{$meta/parent::principle/preceding-sibling::understanding[1]/file/@href}">
+							<xsl:variable name="href" select="$meta/parent::principle/preceding-sibling::understanding[1]/file/@href"/>
+							<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+							<a href="{$safeHref}">
 								<xsl:call-template name="prevnext-previous"/>
 								<span class="pager--item-text">
 									<span class="pager--item-text-target">
@@ -65,7 +71,9 @@
 				<xsl:choose>
 					<xsl:when test="$meta/following-sibling::guideline">
 						<li class="pager--item next">
-							<a href="{$meta/following-sibling::guideline[1]/file/@href}">
+							<xsl:variable name="href" select="$meta/following-sibling::guideline[1]/file/@href"/>
+							<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+							<a href="{$safeHref}">
 								<xsl:call-template name="prevnext-next"/>
 								<span class="pager--item-text">
 									<span class="pager--item-text-direction">Następna wytyczna:</span>
@@ -78,7 +86,9 @@
 					</xsl:when>
 					<xsl:when test="$meta/parent::principle/following-sibling::principle">
 						<li class="pager--item next">
-							<a href="{$meta/parent::principle/following-sibling::principle[1]/guideline[1]/file/@href}">
+							<xsl:variable name="href" select="$meta/parent::principle/following-sibling::principle[1]/guideline[1]/file/@href"/>
+							<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+							<a href="{$safeHref}">
 								<xsl:call-template name="prevnext-next"/>
 								<span class="pager--item-text">
 									<span class="pager--item-text-direction">Następna wytyczna:</span>
@@ -91,7 +101,9 @@
 					</xsl:when>
 					<xsl:when test="$meta/parent::principle/following-sibling::understanding">
 						<li class="pager--item next">
-							<a href="{$meta/parent::principle/following-sibling::understanding[1]/file/@href}">
+							<xsl:variable name="href" select="$meta/parent::principle/following-sibling::understanding[1]/file/@href"/>
+							<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+							<a href="{$safeHref}">
 								<xsl:call-template name="prevnext-next"/>
 								<span class="pager--item-text">
 									<span class="pager--item-text-target">
@@ -105,7 +117,9 @@
 			</xsl:when>
 			<xsl:when test="name($meta) = 'success-criterion'">
 				<li class="pager--item context">
-					<a href="{$meta/parent::guideline[1]/file/@href}">
+					<xsl:variable name="href" select="$meta/parent::guideline[1]/file/@href"/>
+					<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+					<a href="{$safeHref}">
 						<span class="pager--item-text">
 							<span class="pager--item-text-direction"><abbr title="Wytyczna">Część wytycznej</abbr>:</span>
 							<span class="pager--item-text-target">
@@ -117,7 +131,9 @@
 				<xsl:choose>
 					<xsl:when test="$meta/preceding-sibling::success-criterion">
 						<li class="pager--item previous">
-							<a href="{$meta/preceding-sibling::success-criterion[1]/file/@href}">
+							<xsl:variable name="href" select="$meta/preceding-sibling::success-criterion[1]/file/@href"/>
+							<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+							<a href="{$safeHref}">
 								<xsl:call-template name="prevnext-previous"/>
 								<span class="pager--item-text">
 									<span class="pager--item-text-direction">Poprzednie <abbr title="kryterium sukcesu">KS</abbr>:</span>
@@ -130,7 +146,9 @@
 					</xsl:when>
 					<xsl:when test="$meta/parent::guideline/preceding-sibling::guideline">
 						<li class="pager--item previous">
-							<a href="{$meta/parent::guideline/preceding-sibling::guideline[1]/success-criterion[last()]/file/@href}">
+							<xsl:variable name="href" select="$meta/parent::guideline/preceding-sibling::guideline[1]/success-criterion[last()]/file/@href"/>
+							<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+							<a href="{$safeHref}">
 								<xsl:call-template name="prevnext-previous"/>
 								<span class="pager--item-text">
 									<span class="pager--item-text-direction">Poprzednie <abbr title="kryterium sukcesu">KS</abbr>:</span>
@@ -141,7 +159,9 @@
 							</a>
 						</li>
 						<li class="pager--item previous">
-							<a href="{$meta/parent::guideline/preceding-sibling::guideline[1]/success-criterion[last()]/file/@href}">
+							<xsl:variable name="href" select="$meta/parent::guideline/preceding-sibling::guideline[1]/success-criterion[last()]/file/@href"/>
+							<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+							<a href="{$safeHref}">
 								<xsl:call-template name="prevnext-previous"/>
 								<span class="pager--item-text">
 									<span class="pager--item-text-direction">Poprzednie <abbr title="kryterium sukcesu">KS</abbr>:</span>
@@ -154,7 +174,9 @@
 					</xsl:when>
 					<xsl:when test="$meta/ancestor::principle/preceding-sibling::principle">
 						<li class="pager--item previous">
-							<a href="{$meta/ancestor::principle/preceding-sibling::principle[1]/guideline[last()]/success-criterion[last()]/file/@href}">
+							<xsl:variable name="href" select="$meta/ancestor::principle/preceding-sibling::principle[1]/guideline[last()]/success-criterion[last()]/file/@href"/>
+							<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+							<a href="{$safeHref}">
 								<xsl:call-template name="prevnext-previous"/>
 								<span class="pager--item-text">
 									<span class="pager--item-text-direction">Poprzednie <abbr title="kryterium sukcesu">KS</abbr>:</span>
@@ -167,7 +189,9 @@
 					</xsl:when>
 					<xsl:when test="$meta/ancestor::principle/preceding-sibling::understanding">
 						<li class="pager--item previous">
-							<a href="{$meta/ancestor::principle/preceding-sibling::understanding[1]/file/@href}">
+							<xsl:variable name="href" select="$meta/ancestor::principle/preceding-sibling::understanding[1]/file/@href"/>
+							<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+							<a href="{$safeHref}">
 								<xsl:call-template name="prevnext-previous"/>
 								<span class="pager--item-text">
 									<span class="pager--item-text-direction">Poprzednie: </span>
@@ -182,7 +206,9 @@
 				<xsl:choose>
 					<xsl:when test="$meta/following-sibling::success-criterion">
 						<li class="pager--item next">
-							<a href="{$meta/following-sibling::success-criterion[1]/file/@href}">
+							<xsl:variable name="href" select="$meta/following-sibling::success-criterion[1]/file/@href"/>
+							<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+							<a href="{$safeHref}">
 								<xsl:call-template name="prevnext-next"/>
 								<span class="pager--item-text">
 									<span class="pager--item-text-direction">Następne <abbr title="kryterium sukcesu">KS</abbr>:</span>
@@ -195,7 +221,9 @@
 					</xsl:when>
 					<xsl:when test="$meta/parent::guideline/following-sibling::guideline">
 						<li class="pager--item next">
-							<a href="{$meta/parent::guideline/following-sibling::guideline[1]/success-criterion[1]/file/@href}">
+							<xsl:variable name="href" select="$meta/parent::guideline/following-sibling::guideline[1]/success-criterion[1]/file/@href"/>
+							<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+							<a href="{$safeHref}">
 								<xsl:call-template name="prevnext-next"/>
 								<span class="pager--item-text">
 									<span class="pager--item-text-direction">Następne <abbr title="kryterium sukcesu">KS</abbr>:</span>
@@ -208,7 +236,9 @@
 					</xsl:when>
 					<xsl:when test="$meta/ancestor::principle/following-sibling::principle">
 						<li class="pager--item next">
-							<a href="{$meta/ancestor::principle/following-sibling::principle[1]/guideline[1]/success-criterion[1]/file/@href}">
+							<xsl:variable name="href" select="$meta/ancestor::principle/following-sibling::principle[1]/guideline[1]/success-criterion[1]/file/@href"/>
+							<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+							<a href="{$safeHref}">
 								<xsl:call-template name="prevnext-next"/>
 								<span class="pager--item-text">
 									<span class="pager--item-text-direction">Następne <abbr title="kryterium sukcesu">KS</abbr>: </span>
@@ -221,7 +251,9 @@
 					</xsl:when>
 					<xsl:when test="$meta/ancestor::principle/following-sibling::understanding">
 						<li class="pager--item next">
-							<a href="{$meta/ancestor::principle/following-sibling::understanding[1]/file/@href}">
+							<xsl:variable name="href" select="$meta/ancestor::principle/following-sibling::understanding[1]/file/@href"/>
+							<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+							<a href="{$safeHref}">
 								<xsl:call-template name="prevnext-next"/>
 								<span class="pager--item-text">
 									<span class="pager--item-text-direction">Następne: </span>
@@ -237,7 +269,9 @@
 			<xsl:when test="name($meta) = 'understanding'">
 				<xsl:if test="name($meta/preceding-sibling::element()[1]) = 'understanding'">
 					<li class="pager--item previous">
-						<a href="{$meta/preceding-sibling::understanding[1]/file/@href}">
+						<xsl:variable name="href" select="$meta/preceding-sibling::understanding[1]/file/@href"/>
+						<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+						<a href="{$safeHref}">
 							<xsl:call-template name="prevnext-previous"/>
 							<span class="pager--item-text">
 								<span class="pager--item-text-direction">Poprzednie: </span>
@@ -250,7 +284,9 @@
 				</xsl:if>
 				<xsl:if test="name($meta/preceding-sibling::element()[1]) = 'principle'">
 					<li class="pager--item previous">
-						<a href="{$meta/preceding-sibling::principle[1]/guideline[last()]/file/@href}">
+						<xsl:variable name="href" select="$meta/preceding-sibling::principle[1]/guideline[last()]/file/@href"/>
+						<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+						<a href="{$safeHref}">
 							<xsl:call-template name="prevnext-previous"/>
 							<span class="pager--item-text-direction">
 								<span class="pager--item-text">Poprzednia wytyczna:</span>
@@ -261,7 +297,9 @@
 						</a>
 					</li>
 					<li class="pager--item previous">
-						<a href="{$meta/preceding-sibling::principle[1]/guideline[last()]/success-criterion[last()]/file/@href}">
+						<xsl:variable name="href" select="$meta/preceding-sibling::principle[1]/guideline[last()]/success-criterion[last()]/file/@href"/>
+						<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+						<a href="{$safeHref}">
 							<xsl:call-template name="prevnext-previous"/>
 							<span class="pager--item-text">
 								<span class="pager--item-text-direction">Poprzednie <abbr title="Success Criterion">SC</abbr>:</span>
@@ -274,7 +312,9 @@
 				</xsl:if>
 				<xsl:if test="name($meta/following-sibling::element()[1]) = 'primaar nciple'">
 					<li class="pager--item previous">
-						<a href="{$meta/following-sibling::principle[1]/guideline[1]/file/@href}">
+						<xsl:variable name="href" select="$meta/following-sibling::principle[1]/guideline[1]/file/@href"/>
+						<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+						<a href="{$safeHref}">
 							<xsl:call-template name="prevnext-previous"/>
 							<span class="pager--item-text">
 								<span class="pager--item-text-direction">Pierwsza wytyczna: </span>
@@ -285,7 +325,9 @@
 						</a>
 					</li>
 					<li class="pager--item next">
-						<a href="{$meta/following-sibling::principle[1]/guideline[1]/success-criterion[1]/file/@href}">
+						<xsl:variable name="href" select="$meta/following-sibling::principle[1]/guideline[1]/success-criterion[1]/file/@href"/>
+						<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+						<a href="{$safeHref}">
 							<xsl:call-template name="prevnext-previous"/>
 							<span class="pager--item-text">
 								<span class="pager--item-text-direction">Pierwsze <abbr title="Success Criterion">SC</abbr>: </span>
@@ -298,7 +340,9 @@
 				</xsl:if>
 				<xsl:if test="name($meta/following-sibling::element()[1]) = 'understanding'">
 					<li class="pager--item next">
-						<a href="{$meta/following-sibling::understanding[1]/file/@href}">
+						<xsl:variable name="href" select="$meta/following-sibling::understanding[1]/file/@href"/>
+						<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+						<a href="{$safeHref}">
 							<xsl:call-template name="prevnext-next"/>
 							<span class="pager--item-text">
 								<span class="pager--item-text-direction">Następne: </span>
@@ -580,7 +624,9 @@
 			</xsl:choose>
 		</xsl:variable>
 
-		<a href="{$meta-for-link/file/@href}">
+		<xsl:variable name="href" select="$meta-for-link/file/@href"/>
+		<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+		<a href="{$safeHref}">
 			<xsl:if test="$prevnextdir != 'next'">
 				<xsl:if test="$meta-for-link/self::guideline and $meta/self::success-criterion">
 					<svg alt="up" focusable="false" aria-hidden="true" class="icon-arrow-up-thin pager-icon" viewBox="0 0 16 16">
