@@ -376,7 +376,7 @@
 				</div>
 				<div dir="auto" translate="no" lang="pl">
 					<p>
-					Prawa autorskie do wszystkich materiałów w tej witrynie należą do W3C.<br /> Copyright © <xsl:value-of select="format-date(current-date(), '[Y]')"/> World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). Zobacz <a href="/WAI/about/using-wai-material/">Zezwolenie na wykorzystanie materiałów WAI</a>.</p>
+					Prawa autorskie do wszystkich materiałów w tej witrynie należą do W3C.<br /> Copyright © <xsl:value-of select="format-date(current-date(), '[Y]')"/> World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). Zobacz <a href="https://www.w3.org/WAI/about/using-wai-material/" lang="en" hreflang="en">Permission to Use WAI Material</a>.</p>
 				</div>
 
 			</div>
@@ -398,7 +398,7 @@
 			</div> -->
 			<div dir="auto" translate="no" class="q4-start q4-end" lang="en">
 				<ul style="margin-bottom:0">
-					<li><a href="https://irdpl.pl">Nowości</a></li>				
+					<li><a href="https://www.irdpl.pl">Nowości</a></li>				
 					<li><a href="https://biblio.irdpl.pl">Biblioteka Lidera Dostępności</a></li>
 					<li><a href="https://www.irdpl.pl/HTML_CodeSniffer">HTML_CodeSniffer</a></li>
 <!--					<li><a href="/WAI/about/contacting/">Contact WAI</a></li>
@@ -424,7 +424,8 @@
 		</script>
 		<script src="https://www.w3.org/WAI/assets/scripts/main.js"></script>
     <!-- Matomo -->
-    <script>
+    <!-- wyłączenie statystyk 
+	<script>
       var _paq = _paq || [];
       /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
       _paq.push(["setDoNotTrack", true]);
@@ -439,7 +440,10 @@
       })();
     </script>
     <noscript><p><img src="//www.w3.org/analytics/piwik/piwik.php?idsite=328&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+	-->
     <!-- End Matomo Code -->
+	
+	
 	</xsl:template>
 	
 	<xsl:function name="pl:replaceUnsafeChars" as="xs:string">
