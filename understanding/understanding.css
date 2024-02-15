@@ -211,18 +211,3 @@ video {
 .head p:not(.copyright) > a, .head > a:first-child {
 	font-weight: bold;
 }
-
-.site-footer {
-  background-color: #640050;
-  color: #ffffff;
-}
-
-.site-footer a.largelink {
-    color: #eed009;
-    color: var(--gold);
-}
-
-.button-backtotop {
-    background-color: #640050;
-    border-color: #640050;
-}
