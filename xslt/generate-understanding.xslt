@@ -797,7 +797,9 @@
 			<ul>
 				<xsl:for-each select="$meta/success-criterion">
 					<li>
-						<a href="{file/@href}">
+						<xsl:variable name="href" select="file/@href"/>
+						<xsl:variable name="safeHref" select="pl:replaceUnsafeChars($href)"/>
+						<a href="{$safeHref}">
 							<xsl:value-of select="num"/>
 							<xsl:text> </xsl:text>
 							<xsl:value-of select="name"/>

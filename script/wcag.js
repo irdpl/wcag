@@ -38,7 +38,7 @@ function linkUnderstanding() {
 	document.querySelectorAll('.sc,.guideline').forEach(function(node){
 		var heading = textNoDescendant(findHeading(node));
 		var pathFrag = titleToPathFrag(heading);
-		if (node.id == "parsing") pathFrag = "parsing"; // special case parsing
+		if (node.id == "poprawnosc-kodu-przestarzale-i-usuniete") pathFrag = "poprawnosc-kodu"; // special case parsing
 		var el = document.createElement("div");
 		el.setAttribute("class", "doclinks");
 		el.innerHTML = "<a href=\"" + understandingBaseURI + pathFrag + ".html\">Objaśnienie " + heading + "</a> <span class=\"screenreader\">|</span> <br /><a href=\"https://www.w3.org/WAI/WCAG" + version + "/quickref/#" + pathFrag + "\">Jak spełnić " + heading + "</a>";
