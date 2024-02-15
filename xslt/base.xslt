@@ -214,7 +214,7 @@
 
 	<xsl:template name="header">
     <a href="#main" class="button button--skip-link">Idź do treści</a>
-		<div class="minimal-header-container default-grid">
+		<!--div class="minimal-header-container default-grid">
 				<div class="minimal-header" id="site-header">
 					<div class="minimal-header-name">
 						<a>
@@ -287,7 +287,7 @@
 								</a>
 						</div>
 				</div>
-		</div>
+		</div-->
 	</xsl:template>
 
 	<xsl:template name="navigation">
