@@ -45,7 +45,7 @@
 			<xsl:apply-templates select="//html:section[@class='principle']"/>
 			<understanding>
 				<name>Objaśnienie zgodności</name>
-				<file href="conformance"/>
+				<file href="zgodnosc"/>
 			</understanding>
 			<understanding>
 				<name>Jak odwoływać się do WCAG <xsl:value-of select="$guidelines.version.decimal"/> z innych dokumentów</name>
