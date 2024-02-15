@@ -346,7 +346,7 @@
 				<div class="button-group">
 					<a href="mailto:kontakt@irdpl.pl?subject=%5BObjaśnienia%20i%20Techniki%20Informacja%20zwrotna%5D"
 						class="button"><span>E-mail</span></a>
-					<a href="https://github.com/irdpl/wcagissues/" class="button"><span>Rozwidlenie i edycja na Github</span></a>
+					<a href="https://github.com/irdpl/wcag/issues/" class="button"><span>Rozwidlenie i edycja na Github</span></a>
 					<a href="https://github.com/irdpl/wcag/issues/new" class="button"><span>Zgłoszenie problemu na Github</span></a>
 				</div>			
 			</div>
@@ -356,6 +356,9 @@
 	<xsl:template name="wai-site-footer">
 		<footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
     	<div class="inner" style="grid-column: 2 / 8">
+		<p class="note">Ta strona jest nieautoryzowaną polską wersją dokumentu W3C. Dokument może zawierać błędne lub nieścisłe tłumaczenia oryginału. Łącze do oryginalnego dokumentu W3C znajduje się <a href="#brief">w sekcji W skrócie</a>.</p>
+		
+		</p>
       	<p><strong>Data:</strong> Aktualizacja <xsl:value-of select="format-date(current-date(), '[D] [MNn] [Y]')"/>.</p> <p><strong>Opracowane przez</strong><xsl:text> </xsl:text><a href="https://www.w3.org/groups/wg/ag/participants">uczestników Accessibility Guidelines Working Group (AG WG)</a> (współrzewodniczący: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. Kontakt z obsadą W3C: Michael Cooper).</p>
     		<p>Treść została opracowana w ramach <a href="https://www.w3.org/WAI/about/projects/#us">projektów WAI-Core</a> finansowanych przez Fundusze federalne USA. Interfejs użytkownika został zaprojektowany przez Education and Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) z udziałem z udziałem Shadi Abou-Zahra, Steve Lee i Shawn Lawton Henry w ramach projektu <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a>, współfinansowanego przez Komisję Europejską.</p>
 			<p>Tłumaczenie na język polski zostało wykonane przez: xxx xxx xxx xxx xxx.</p>
