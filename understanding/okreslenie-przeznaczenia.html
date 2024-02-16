@@ -48,7 +48,7 @@
             <aside class="box">
                <header class="box-h  box-h-icon">Kryterium sukcesu (KS) </header>
                <div class="box-i">
-                  <p>W treściach zaimplementowanych przy użyciu języków znaczników przeznaczenie <a href="#dfn-komponent-interfejsu-uzytkownika">komponentów interfejsu użytkownika</a>, ikon oraz <a href="#dfn-obszar-kluczowy">obszarów kluczowych</a> może zostać <a href="#dfn-okreslony-programowo">określone programowo</a>.
+                  <p>W treściach zaimplementowanych przy użyciu języków znaczników przeznaczenie <a href="#dfn-komponent-interfejsu-uzytkownika">komponentów interfejsu użytkownika</a>, ikon oraz <a href="#dfn-region">regionów</a> strony może zostać <a href="#dfn-okreslony-programowo">określone programowo</a>.
                   </p>
                </div>
             </aside>
@@ -298,16 +298,33 @@
                         
                      </definition>
                   </dd>
-                  <dt id="dfn-obszar-kluczowy">obszar kluczowy</dt>
+                  <dt id="dfn-obszar-roboczy">obszar roboczy</dt>
                   <dd>
                      <definition xmlns="">
                         
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml">postrzegalna, programowo określona część treści</p>
+                        <p xmlns="http://www.w3.org/1999/xhtml">obiekt, w którym oprogramowanie użytkownika prezentuje treść</p>
+                        
                         
                         <div xmlns="http://www.w3.org/1999/xhtml" class="note">
                            <p class="note-title marker">Uwaga</p>
-                           <p>W HTML każdy obszar oznaczony jako punkt orientacyjny jest obszarem kluczowym.</p>
+                           <p>
+                              <a href="#dfn-program-uzytkownika">Oprogramowanie użytkownika</a> prezentuje treść poprzez jeden lub więcej obszarów roboczych. Do obszarów roboczych
+                              (operacyjnych) zaliczamy okna, ramki, głośniki, wirtualne okulary. Obszar roboczy
+                              może zawierać w sobie inny obszar roboczy (na przykład osadzone ramki). Komponenty
+                              interfejsu użytkownika generowane przez oprogramowanie użytkownika, jak podpowiedzi,
+                              menu i komunikaty, nie są obszarami roboczymi.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Definicja jest oparta o słowniczek z <a href="https://www.w3.org/TR/WAI-USERAGENT/glossary.html">User Agent Accessibility Guidelines 1.0 Glossary</a> [[UAAG10]].
+                              
+                           </p>
                         </div>
                         
                         
@@ -367,6 +384,21 @@
                            </p>
                            
                         </aside>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-region">region</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">postrzegalna, programowo określona część treści</p>
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>W HTML każdy obszar oznaczony jako punkt orientacyjny jest regionem.</p>
+                        </div>
                         
                         
                      </definition>
