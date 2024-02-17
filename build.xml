@@ -42,7 +42,6 @@
 		<delete file="${inputdir.guidelines}/index-flat.html" failonerror="false"/>
 		<delete file="${inputdir.techniques}/index-flat.html" failonerror="false"/>
 		<delete file="${inputdir.understanding}/index-flat.html" failonerror="false"/>
-		<!--delete file="${inputdir.understanding}/about-flat.html" failonerror="false"/-->
 		<delete file="${inputdir.understanding}/o-objasnieniach-flat.html" failonerror="false"/>
 		<delete file="${inputdir.guidelines}/wcag.xml" failonerror="false"/>
 		<delete file="${inputdir.guidelines}/wcag.json" failonerror="false"/>
@@ -290,7 +289,7 @@
 	</target>
 	
 	<target name="understanding-toc" depends="guidelines-xml" description="Generate the TOC for Understanding">
-		<xslt in="${inputdir.guidelines}/wcag.xml" out="understanding/toc.html" style="xslt/generate-understanding-toc.xslt" force="true">
+		<xslt in="${inputdir.guidelines}/wcag.xml" out="understanding/spistresci.html" style="xslt/generate-understanding-toc.xslt" force="true">
 			<classpath path="${classpath.saxon}"/>
 			<factory name="${xslt.factory}"/>
 		</xslt>
