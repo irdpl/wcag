@@ -31,6 +31,7 @@
 	  W interakcji z ekranem dotykowym, gdy palec dotyka celu, aktywacja zdarzenia <q>w górę</q> następuje tylko wtedy, gdy palec zostanie podniesiony, ale znajduje się w granicach celu. Podobnie w przypadku interakcji z myszą, zdarzenie <q>w górę</q> występuje, gdy przycisk myszy jest zwolniony, ale kursor nadal znajduje się w granicach pierwotnego celu ustawionego po naciśnięciu przycisku myszy.
 	  </p>
       <p>Twórcy mogą ograniczyć problem nieumyślnego wyzwalania akcji przez użytkowników, korzystając z ogólnych zdarzeń aktywacji/kliknięcia platformy, które aktywują funkcjonalność w przypadku <q>w górę</q>. Na przykład zdarzenie <code>click</code> w JavaScript wyzwala się po zwolnieniu głównego przycisku myszy i jest przykładem niejawnego zdarzenia <q>w górę</q>. Pomimo swojej nazwy, zdarzenie <code>click</code> jest niezależne od urządzenia i działa również w przypadku interakcji dotykowej i klawiatury.</p>
+
       <p>Preferencja dla zdarzeń typu <q>w górę</q> jest zawarta w pierwszym z czterech punktów: Zdarzenie wskaźnika <q>w dół</q> nie jest używane do wykonania żadnej części funkcjonalności. Twórcy spełniają ten pierwszy punkt, używając tylko zdarzenia <q>w górę</q>.</p>
     </section>
     <section>
@@ -53,8 +54,9 @@
     <section>
       <h3>Zdarzenie <q>w dół</q></h3>
       <p>Zakończenie funkcji przy zdarzeniu <q>w dół</q> jest dozwolone tylko wtedy, gdy jest niezbędne, gdy nie można użyć zdarzenia <q>w górę</q>.</p>
+	  <!-- 	Uwaga: To zdarzenie różni się od zdarzenia kliknięcia tym, że kliknięcie jest uruchamiane po wykonaniu pełnej akcji kliknięcia; to znaczy, przycisk myszy jest naciskany i zwalniany, gdy wskaźnik pozostaje wewnątrz tego samego elementu. mousedown jest uruchamiane w momencie początkowego naciśnięcia przycisku. -->
       <p>
-	  Najbardziej rozpowszechniona aktywacja niezbędnego zdarzenia w dół występuje w emulacji klawiatury.  Na klawiaturze fizycznej klawisze domyślnie aktywują się po zdarzeniu <q>w dół</q> — po naciśnięciu klawisza pojawia się litera. Gdyby programowy emulator klawiatury próbował obejść to oczekiwane zachowanie, wyświetlając litery po zwolnieniu klawisza, takie zachowanie byłoby nieoczekiwane i niekorzystnie wpływałoby na oczekiwaną interakcję.	  
+	  Najbardziej rozpowszechniona aktywacja niezbędnego zdarzenia w dół występuje w emulacji klawiatury.  Na klawiaturze fizycznej klawisze domyślnie aktywują się po zdarzeniu <q>w dół</q> - po naciśnięciu klawisza pojawia się litera. Gdyby programowy emulator klawiatury próbował obejść to oczekiwane zachowanie, wyświetlając litery po zwolnieniu klawisza, takie zachowanie byłoby nieoczekiwane i niekorzystnie wpływałoby na oczekiwaną interakcję.	  
 	  </p>
       <p>
 	  Zwróć uwagę, że klawiatura ma wbudowany przycisk <kbd>Backspace</kbd> lub <kbd>Delete</kbd>, który skutecznie zapewnia opcję Cofnij. Cofnięcie nie jest wymogiem wyjątku <em>Istotne</em> dotyczącego zdarzenia <q>w dół</q>; jednak zapewnienie użytkownikom łatwego sposobu cofania dowolnej akcji jest zalecaną praktyką (i może być funkcjonalną koniecznością), nawet jeśli nie jest to wymagane przez to kryterium sukcesu.</p>
