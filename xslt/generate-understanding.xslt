@@ -1104,7 +1104,7 @@
 		<xsl:copy>
 			<xsl:apply-templates select="@*"/>
 			<h2>Techniki</h2>
-			<p>Każdy numerowany element w tej sekcji reprezentuje technikę lub kombinację technik, które Grupa Robocza WCAG uważa za wystarczające do spełnienia tego kryterium sukcesu. Nie jest jednak konieczne stosowanie tych konkretnych technik. Aby uzyskać informacje na temat stosowania innych technik, zobacz <a href="understanding-techniques.html">Objaśnienie technik dla kryteriów sukcesu WCAG</a>, szczególnie w sekcji „Inne techniki”.</p>
+			<p>Każdy numerowany element w tej sekcji reprezentuje technikę lub kombinację technik, które Grupa Robocza WCAG uważa za wystarczające do spełnienia tego kryterium sukcesu. Nie jest jednak konieczne stosowanie tych konkretnych technik. Aby uzyskać informacje na temat stosowania innych technik, zobacz <a href="objasnienie-technik.html">Objaśnienie technik dla kryteriów sukcesu WCAG</a>, szczególnie w sekcji „Inne techniki”.</p>
 			<xsl:apply-templates select="html:*[not(wcag:isheading(.))]"/>
 		</xsl:copy>
 	</xsl:template>

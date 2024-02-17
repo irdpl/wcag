@@ -36,7 +36,7 @@
 			</understanding>
 			<understanding>
 				<name>Objaśnienie technik dla kryteriów sukcesu WCAG</name>
-				<file href="understanding-techniques"/>
+				<file href="objasnienie-technik"/>
 			</understanding>
 			<understanding>
 				<name>Objaśnienie zasad testowych dla kryteriów sukcesu WCAG</name>
