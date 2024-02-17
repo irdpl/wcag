@@ -875,7 +875,7 @@
 		<xsl:if test="$act.doc//func:array[@key = 'successCriteria'][func:string = $meta/@id]">
 			<section id="test-rules">
 				<h2>Zasady testowe</h2>
-				<p>Poniżej znajdują się zasady testowe dla niektórych aspektów tego kryterium sukcesu. Nie jest konieczne korzystanie z tych konkretnych zasad testowych w celu sprawdzenia zgodności z WCAG, ale są one zdefiniowanymi i zatwierdzonymi metodami testowymi. Aby uzyskać informacje na temat korzystania z zasad testowych, zobacz <a href="understanding-act-rules.html">Objaśnienie zasad testowych dla kryteriów sukcesu WCAG</a>.</p>
+				<p>Poniżej znajdują się zasady testowe dla niektórych aspektów tego kryterium sukcesu. Nie jest konieczne korzystanie z tych konkretnych zasad testowych w celu sprawdzenia zgodności z WCAG, ale są one zdefiniowanymi i zatwierdzonymi metodami testowymi. Aby uzyskać informacje na temat korzystania z zasad testowych, zobacz <a href="objasnienie-zasad-testowych.html">Objaśnienie zasad testowych dla kryteriów sukcesu WCAG</a>.</p>
 				<ul>
 					<xsl:for-each select="$act.doc//func:array[@key = 'successCriteria']/func:string[. = $meta/@id]">
 						<li>

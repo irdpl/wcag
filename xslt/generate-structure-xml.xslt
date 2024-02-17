@@ -40,7 +40,7 @@
 			</understanding>
 			<understanding>
 				<name>Objaśnienie zasad testowych dla kryteriów sukcesu WCAG</name>
-				<file href="understanding-act-rules"/>
+				<file href="objasnienie-zasad-testowych"/>
 			</understanding>
 			<xsl:apply-templates select="//html:section[@class='principle']"/>
 			<understanding>
@@ -49,11 +49,11 @@
 			</understanding>
 			<understanding>
 				<name>Jak odwoływać się do WCAG <xsl:value-of select="$guidelines.version.decimal"/> z innych dokumentów</name>
-				<file href="refer-to-wcag"/>
+				<file href="odwolania-do-wcag"/>
 			</understanding>
 			<understanding>
 				<name>Dokumentacja obsługi dostępności dla zastosowań technologii internetowej</name>
-				<file href="documenting-accessibility-support"/>
+				<file href="dokumentowanie-obslugi-dostepnosci"/>
 			</understanding>
 			<understanding>
 				<name>Objaśnienie metadanych</name>
