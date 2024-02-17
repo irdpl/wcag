@@ -57,7 +57,7 @@
 			</understanding>
 			<understanding>
 				<name>Objaśnienie metadanych</name>
-				<file href="understanding-metadata"/>
+				<file href="objasnienie-metadanych"/>
 			</understanding>
 			<xsl:apply-templates select="//html:dfn"/>
 		</guidelines>
