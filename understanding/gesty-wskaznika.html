@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Objaśnienie Kryterium sukcesu  2.5.1: Gesty wskaźnika | WAI | W3C</title>
+      <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
+      <link rel="stylesheet" href="base.css" />
+   </head>
+   <body dir="ltr"><a href="#main" class="button button--skip-link">Idź do treści</a><div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Objaśnienia">
+               <ul>
+                  <li class="nav__item"><a href=".">
+                        								Wszystkie objaśnienia
+                        							</a></li>
+                  <li class="nav__item"><a href="metody-obslugi">
+                        <svg alt="up" focusable="false" aria-hidden="true" class="icon-arrow-up-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path>
+                        </svg> Wytyczna: Metody obsługi</a></li>
+                  <li class="nav__item"></li>
+                  <li class="nav__item"><a href="rezygnacja-ze-wskazania">Następne KS: Rezygnacja ze wskazania</a></li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+      <div class="default-grid with-gap leftcol">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar ">
+            <nav>
+               <header class="box-h ">Treść strony</header>
+               <div class="box-i">
+                  <ul>
+                     <li><a href="#brief">W skrócie</a></li>
+                     <li><a href="#intent">Intencja</a></li>
+                     <li><a href="#benefits">Korzyści</a></li>
+                     <li><a href="#examples">Przykłady</a></li>
+                     <li><a href="#techniques">Techniki</a></li>
+                     <li><a href="#key-terms">Kluczowe pojęcia</a></li>
+                  </ul>
+               </div>
+            </nav>
+         </aside>
+         <main id="main" class="standalone-resource__main">
+            <h1><span class="standalone-resource__type-of-guidance">Objaśnienie
+                  				KS 2.5.1:</span>Gesty wskaźnika (Poziom A)
+            </h1>
+            <aside class="box">
+               <header class="box-h  box-h-icon">Kryterium sukcesu (KS) </header>
+               <div class="box-i">
+                  <p>Wszystkie <a href="#dfn-funkcjonalnosc">funkcjonalności</a> wykorzystujące do obsługi gesty wielopunktowe lub oparte na ścieżkach mogą być obsługiwane
+                     za pomocą <a href="#dfn-pojedynczy-wskaznik">pojedynczego wskaźnika</a> bez gestu opartego na ścieżce, chyba że gest wielopunktowy lub oparty na ścieżce
+                     jest istotny.
+                  </p>
+                  <div class="note">
+                     <p class="note-title marker">Uwaga</p>
+                     <p>Ten wymóg dotyczy treści internetowych, które interpretują działania dotykowe (tj.
+                        nie dotyczy to działań wymaganych do obsługi programu użytkownika (przeglądarki internetowej)
+                        lub technologii wspomagającej).
+                     </p>
+                  </div>
+               </div>
+            </aside>
+            <div class="excol-all"></div>
+            <section id="brief">
+               <h2>W skrócie</h2>
+               <dl>
+                  
+                  <dt>Cel</dt>
+                  
+                  <dd>Użytkownicy mogą obsługiwać ekrany dotykowe jednym palcem i ograniczyć liczbę gestów.</dd>
+                  
+                  <dt>Co zrobić</dt>
+                  
+                  <dd>Zapewnij jednopunktową obsługę wszystkich funkcji.</dd>
+                  
+                  <dt>Dlaczego to jest ważne</dt>
+                  
+                  <dd>Nie każdy może wykonywać złożone i wielodotykowe gesty.</dd>
+                  
+               </dl>
+            </section>
+            <section id="intent">
+               <h2>Intencja</h2>
+               <p>Intencją tego kryterium sukcesu jest zapewnienie możliwości kontrolowania treści za
+                  pomocą szeregu urządzeń wskazujących, możliwości i technologii wspomagających. Niektóre
+                  osoby nie potrafią wykonywać gestów w precyzyjny sposób lub mogą używać wyspecjalizowanego
+                  lub przystosowanego urządzenia wejściowego, takiego jak mysz nagłowna, system śledzenia
+                  wzroku lub emulator myszy sterowany mową. Niektórym metodom wskazywania brakuje możliwości
+                  lub dokładności wykonywania gestów wielopunktowych lub opartych na ścieżce.
+               </p>
+               <p><strong>Gest oparty na ścieżce</strong> obejmuje interakcję, w której liczą się nie tylko punkty końcowe, ale także sposób,
+                  w jaki wskaźnik porusza się między tymi punktami.
+               </p>
+               <p>Jeśli gest zostanie rozpoznany tylko wtedy, gdy użytkownik porusza się (przeważnie)
+                  po linii prostej od punktu początkowego do punktu końcowego, jest to przykład <strong>gestu opartego na ścieżce</strong>.
+               </p>
+               <figure id="figure-path-based-gesture-1">
+                  <img src="img/path-based-gesture-1.png" width="400" alt="Ręka pokazująca dotyk początkowy, 1. Przejście po linii prostej do drugiego punktu, 2." />
+                  
+                  <figcaption>Figure 1 <strong>Gest oparty na ścieżce</strong> , w którym ruch wskaźnika jest dozwolony tylko po linii prostej od punktu początkowego
+                     do punktu końcowego. Jeśli użytkownik zejdzie z prostej ścieżki kierunkowej, gest
+                     nie zostanie rozpoznany, nie przyniesie żadnego efektu lub zostanie przerwany.
+                  </figcaption>
+                  
+               </figure>
+               <p>Jeśli przejście przez punkt pośredni (zwykle w pobliżu początku gestu) wpływa na jego
+                  znaczenie, to jest to <strong>gest oparty na ścieżce</strong>. Użytkownik dotyka wskaźnika (punktu początkowego), wykonuje ruch, który przechodzi
+                  przez co najmniej jeden punkt pośredni, a następnie odłącza wskaźnik (punkt końcowy).
+                  Punkt pośredni definiuje gest jako wymagający określonej ścieżki, nawet jeśli nie
+                  zdefiniowano pełnej ścieżki.
+               </p>
+               <figure id="figure-path-based-gesture-2">
+                  <img src="img/path-based-gesture-2.png" width="400" alt="Ręka pokazująca dotyk startowy, 1. Przejście przez drugi punkt, 2. Przejście do jednego z kilku punktów, 3." />
+                  
+                  <figcaption>Figure 2 <strong>Gest oparty na ścieżce</strong> polega na rozpoczęciu ruchu wskaźnika, który przechodzi przez co najmniej jeden punkt
+                     pośredni przed punktem końcowym. Punktem końcowym może być kontynuacja lub umożliwiać
+                     różne ruchy.
+                  </figcaption>
+                  
+               </figure>
+               <p>Przykłady gestów opartych na ścieżce obejmują przesuwanie, suwaki i karuzele zależne
+                  od kierunku interakcji oraz inne gesty, które śledzą ustaloną ścieżkę, takie jak rysowanie
+                  określonego kształtu. Takie ścieżki można rysować palcem lub rysikiem na ekranie dotykowym,
+                  tablecie graficznym lub gładziku, albo za pomocą myszy, joysticka lub podobnego urządzenia
+                  wskazującego.
+               </p>
+               <p>Przeciąganie to ruch, podczas którego użytkownik podnosi obiekt za pomocą wskaźnika
+                  (takiego jak kursor myszy lub palec) i przesuwa go w inne miejsce. Ten ruch od punktu
+                  początkowego do punktu końcowego nie wymaga od użytkownika podążania żadną konkretną
+                  ścieżką ani kierunkiem. Dlatego przeciąganie nie opiera się na ścieżce. Natomiast
+                  gest wskaźnika oparty na ścieżce wymaga przejścia przez punkt pośredni, co jest technicznym
+                  sposobem wyrażenia, że kierunkowość i ewentualnie prędkość gestu przekazuje systemowi
+                  określone polecenie. Ruchy przeciągania są uwzględnione w <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging.html">Kryterium sukcesu 2.5.7: Ruch przeciągania</a>.
+               </p>
+               <figure id="figure-path-based-gesture-3">
+                  <img src="img/path-based-gesture-3.png" width="400" alt="Ręka pokazująca dotknięcie początkowe, 1. Przejście do drugiego punktu, 2. Podąża bardzo losową ścieżką." />
+                  
+                  <figcaption>Figure 3 <strong>Gest o dowolnej formie</strong> <strong>nie</strong> wymaga żadnej szczególnej ścieżki przed punktem końcowym, liczy się tylko punkt początkowy
+                     i (opcjonalnie) końcowy. To <strong>nie jest oparte na ścieżce</strong></figcaption>
+                  
+               </figure>
+               <div class="note">
+                  <p class="note-title marker">Uwaga</p>
+                  <p>Każdy ruch wskaźnika może być trudny lub niemożliwy do wykonania dla osoby, która
+                     nie potrafi wykonywać precyzyjnych ruchów, dlatego zawsze zalecane są alternatywne
+                     formy interakcji. To kryterium sukcesu obejmuje <em>gesty oparte na ścieżce,</em> ponieważ zapewnienie alternatywy dla <em>gestów o dowolnej formie</em>może być trudne lub niemożliwe.
+                  </p>
+               </div>
+               <p>Przykłady gestów <strong>wielopunktowych</strong> obejmują przybliżenie przez zsunięcie dwóch palców, rozdzielone dotknięcie w miejscu,
+                  w którym jeden palec spoczywa na ekranie, a dotknięcie drugim palcem, lub dotknięcie
+                  lub przesunięcie dwoma lub trzema palcami. Wykonanie tych czynności może być dla użytkowników
+                  trudne lub niemożliwe, jeśli będą pisać i wskazywać jednym palcem lub patykiem.
+               </p>
+               <p>Twórcy muszą zadbać o to, aby ich treści można było obsługiwać bez gestów wielopunktowych
+                  lub opartych na ścieżkach. Można używać gestów wielopunktowych lub opartych na ścieżce,
+                  pod warunkiem że tę funkcję można obsługiwać również inną metodą, np. dotknięciem,
+                  kliknięciem, podwójnym dotknięciem, podwójnym kliknięciem, długim naciśnięciem lub
+                  kliknięciem i przytrzymaniem. 
+               </p>
+               <p>To kryterium sukcesu dotyczy gestów w treści zapewnionej przez twórcę, a nie gestów
+                  zdefiniowanych przez system operacyjny, program użytkownika lub technologię wspomagającą.
+                  Przykładami gestów systemu operacyjnego może być przesunięcie w dół, aby wyświetlić
+                  powiadomienia systemowe i gesty dotyczące wbudowanych technologii wspomagających.
+                  Przykładami gestów zaimplementowanych przez program użytkownika może być przesuwanie
+                  w poziomie realizowane przez przeglądarki w celu nawigacji w historii strony lub przesuwanie
+                  w pionie w celu przewijania treści strony.
+               </p>
+               <p>Są chwile, gdy komponent wymaga gestu opartego na ścieżce w przypadku urządzeń z ekranem
+                  dotykowym, ale nie za pomocą myszy. Na ogólnym przykładzie suwaka:
+               </p>
+               <ul>
+                  
+                  <li><strong>Korzystanie z myszy:</strong> Jeśli użytkownik kliknie kciuk suwaka i przesunie się w pionie, suwak zareaguje przesunięciem
+                     w prawo lub w lewo, nawet jeśli ruch będzie głównie w górę. Nie będzie przewijania
+                     strony w wyniku ruchu pionowego, o ile fokus będzie na suwaku. Dlatego suwak nie wymaga
+                     gestu opartego na ścieżce za pomocą wskaźnika myszy.
+                  </li>
+                  
+                  <li><strong>Korzystanie z ekranu dotykowego:</strong> Jeśli użytkownik położy palec na kciuku suwaka i przesunie się bardziej w górę niż
+                     na boki, suwak może nie odpowiedzieć, ponieważ przeglądarka przejmie kontrolę nad
+                     przesunięciem i zinterpretuje je jako przewijanie oraz przesunie stronę w górę i w
+                     dół. Przesunięcie kciuka suwaka w lewo lub w prawo powoduje włączenie suwaka i użytkownik
+                     może zmieniać ruch w pionie. Ta implementacja wymaga 3-punktowej pracy palcem na urządzeniu
+                     z ekranem dotykowym, dlatego też jest to gest oparty na ścieżce.
+                  </li>
+                  
+               </ul>
+               <p>Ponieważ urządzenia z ekranem dotykowym mogą stosować domyślne gesty, ważne jest,
+                  aby przetestować je, jeśli nie masz pewności, czy dany komponent wymaga gestu opartego
+                  na ścieżce.
+               </p>
+               <p>Przeglądarki na urządzeniach z ekranem dotykowym zazwyczaj udostępniają pewne domyślne
+                  gesty, które wpływają na to, czy potrzebny jest gest oparty na ścieżce. Na przykład
+                  przeglądarka internetowa na urządzeniach z ekranem dotykowym może wykryć gest pionowy
+                  i przewinąć stronę. Jeśli użytkownik położy palec na kciuku suwaka i przesunie się
+                  w górę (aby przewinąć w dół), suwak może nie zostać aktywowany (w zależności od implementacji).
+                  Jeśli użytkownik najpierw poruszy się w poziomie, suwak może uchwycić ten gest i zignorować
+                  ruch w pionie, co spowoduje gest oparty na ścieżce. Jeśli uwzględnisz urządzenia z
+                  ekranem dotykowym jako obsługiwane w ramach ułatwień dostępu, tego typu interakcje
+                  wymagają przetestowania z ekranem dotykowym, ponieważ podobne użycie myszy nie spowodowałoby
+                  takiego samego zachowania przeglądarki.
+               </p>
+               <p>To kryterium sukcesu nie wymaga, aby cała funkcjonalność była dostępna za pośrednictwem
+                  urządzeń wskazujących, ale jeśli jest ona dostępna dla urządzeń wskazujących, nie
+                  powinna wymagać gestów opartych na ścieżce. Chociaż twórcy treści zazwyczaj muszą
+                  udostępniać polecenia klawiaturowe lub inne mechanizmy inne niż wskaźnik, które wykonują
+                  działania równoważne złożonym gestom (patrz kryterium sukcesu 2.1.1 Klawiatura), nie
+                  wystarczy to do spełnienia tego kryterium sukcesu. Dzieje się tak dlatego, że niektórzy
+                  użytkownicy polegają całkowicie na urządzeniach wskazujących lub uważają, że proste
+                  wprowadzanie danych za pomocą wskaźnika jest znacznie łatwiejsze do wykonania i zrozumienia
+                  niż alternatywne rozwiązania. Na przykład użytkownik korzystający ze wskaźnika nagłownego
+                  uzna, że ​​kliknięcie elementu sterującego będzie znacznie wygodniejsze niż aktywowanie
+                  klawiatury ekranowej w celu emulacji skrótu klawiaturowego, a osobie, która ma trudności
+                  z zapamiętaniem serii klawiszy (lub gestów), może znacznie łatwiej jest po prostu
+                  kliknąć element sterujący z etykietą. Dlatego też, jeśli obsługiwany jest jeden lub
+                  więcej mechanizmów opartych na wskaźnikach, korzyści z nich powinny być dostępne dla
+                  użytkowników jedynie poprzez proste, jednopunktowe działania.
+               </p>
+               <p>Operacje pojedynczym wskaźnikiem obejmują dotknięcia i kliknięcia, podwójne dotknięcia
+                  i podwójne kliknięcia, długie naciśnięcia, przesuwanie, przeciąganie i gesty oparte
+                  na ścieżce. Gesty takie jak „szczypanie, aby powiększyć” lub przesunięcie dwoma palcami
+                  są gestami <em>wielopunktowymi</em>, ponieważ wymagają użycia dwóch lub więcej wskaźników – w tym przypadku dwóch palców
+                  na ekranie dotykowym.
+               </p>
+               <p>Wyjątek stanowi funkcjonalność, która z natury i koniecznie opiera się na złożonych
+                  ścieżkach lub gestach wielopunktowych. Na przykład wpisanie podpisu może być z natury
+                  oparte na ścieżce (chociaż potwierdzenie czegoś lub potwierdzenie Twojej tożsamości
+                  nie musi być).
+               </p>
+               <p>To kryterium sukcesu <em>nie ma zastosowania</em> do gestów obejmujących przeciąganie w dowolnym kierunku, ponieważ w operacji przeciągania
+                  liczą się tylko punkty początkowe i końcowe. Jednak takie gesty wymagają doskonałej
+                  kontroli motorycznej. Twórców zachęca się do zapewniania metod innych niż przeciąganie,
+                  na przykład operację przeciągania i upuszczania można również przeprowadzić poprzez
+                  wybranie elementu (dotknięciem lub interakcją z klawiaturą), a następnie w drugim
+                  kroku wybranie miejsca docelowego.
+               </p>
+            </section>
+            <section id="benefits">
+               <h2>Korzyści</h2>
+               <ul>
+                  
+                  <li>
+                     <p>Użytkownicy, którzy nie mogą (dokładnie) wykonywać gestów wskaźnika opartych na ścieżce
+                        – na ekranie dotykowym lub za pomocą myszy – będą mieli alternatywne możliwości obsługi
+                        treści.
+                     </p>
+                  </li>
+                  
+                  <li>
+                     <p>Użytkownicy, którzy nie mogą wykonywać gestów wielowskaźnikowych na ekranie dotykowym
+                        (na przykład dlatego, że obsługują ekran dotykowy za pomocą alternatywnego wejścia,
+                        takiego jak wskaźnik nagłowny), będą mieli alternatywę do obsługi treści za pomocą
+                        wskaźnika jednopunktowego.
+                     </p>
+                  </li>
+                  
+                  <li>
+                     <p>Użytkownicy, którzy mogą nie rozumieć niestandardowej interakcji gestów zamierzonej
+                        przez twórcę, będą mogli polegać na prostych, często używanych gestach. Może to być
+                        szczególnie korzystne dla użytkowników z trudnościami poznawczymi lub trudnościami
+                        w uczeniu się.
+                     </p>
+                  </li>
+                  
+               </ul>
+            </section>
+            <section id="examples">
+               <h2>Przykłady</h2>
+               <ul>
+                  
+                  <li>
+                     <p>Witryna internetowa zawiera widok mapy obsługujący gest szczypania w celu powiększenia
+                        treści mapy. Elementy sterujące interfejsu użytkownika umożliwiają obsługę za pomocą
+                        przycisków plus i minus w celu powiększania i pomniejszania.
+                     </p>
+                  </li>
+                  
+                  <li>
+                     <p>Witryna internetowa zawiera widok mapy obsługujący gest szczypania w celu powiększenia
+                        treści mapy. Jako alternatywa dla jednego wskaźnika, mapa umożliwia także dwukrotne
+                        dotknięcie, przytrzymanie, a następnie przesunięcie wskaźnika w górę lub w dół w celu
+                        powiększenia lub pomniejszenia.
+                     </p>
+                  </li>
+                  
+                  <li>
+                     <p>Witryna z wiadomościami ma poziomy suwak treści z ukrytymi zwiastunami wiadomości,
+                        który można przenieść do widocznego obszaru szybkim poziomym ruchem przesuwania/poruszania.
+                        Oferuje także przyciski strzałek do przodu i do tyłu umożliwiające jednopunktową aktywację
+                        w celu przejścia do sąsiedniej treści slajdera.
+                     </p>
+                  </li>
+                  
+                  <li>
+                     <p>Widżet Kanban z kilkoma pionowymi obszarami reprezentującymi stany w zdefiniowanym
+                        procesie umożliwia użytkownikowi przesuwanie elementów w prawo lub w lewo w celu przeniesienia
+                        ich do sąsiedniego silosu. Użytkownik może to również osiągnąć, wybierając element
+                        jednym dotknięciem lub kliknięciem, a następnie aktywując przycisk ze strzałką, aby
+                        przesunąć wybrany element.
+                     </p>
+                  </li>
+                  
+                  <li>
+                     <p>Suwak niestandardowy wymaga ruchu ściśle w lewo/prawo, gdy jest obsługiwany poprzez
+                        przeciąganie kontrolki kciuka. Przyciski po obu stronach suwaka zwiększają i zmniejszają
+                        wybraną wartość oraz aktualizują pozycję kciuka.
+                     </p>
+                  </li>
+                  
+               </ul>
+            </section>
+            <section id="techniques">
+               <h2>Techniki</h2>
+               <p>Każdy numerowany element w tej sekcji reprezentuje technikę lub kombinację technik,
+                  które Grupa Robocza WCAG uważa za wystarczające do spełnienia tego kryterium sukcesu.
+                  Nie jest jednak konieczne stosowanie tych konkretnych technik. Aby uzyskać informacje
+                  na temat stosowania innych technik, zobacz <a href="objasnienie-technik.html">Objaśnienie technik dla kryteriów sukcesu WCAG</a>, szczególnie w sekcji „Inne techniki”.
+               </p>
+               <section id="sufficient">
+                  <h3>Techniki wystarczające</h3>
+                  <ul>
+                     
+                     <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G215">G215: Zapewnienie kontrolki, aby uzyskać taki sam efekt jak w przypadku gestów opartych
+                           na ścieżce lub gestów wielopunktowych</a></li>
+                     
+                     <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G216">G216: Zapewnienie jednopunktowego sposobu obsługi kontrolki suwaka</a></li>
+                     
+                  </ul>
+               </section>
+               <section id="failure">
+                  <h3>Błędy</h3>
+                  <p>Poniżej wymieniono typowe błędy, które Grupa Robocza WCAG uważa za niespełnienie tego
+                     kryterium sukcesu.
+                  </p>
+                  <ul>
+                     
+                     <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F105">F105: Niespełnienie kryterium sukcesu 2.5.1 z powodu zapewnienia funkcjonalności za
+                           pomocą gestu opartego na ścieżce bez prostej alternatywy w postaci wskazania</a></li>
+                     
+                  </ul>
+               </section>
+            </section>
+            <section id="key-terms">
+               <details>
+                  <summary>
+                     <h2>Kluczowe pojęcia</h2>
+                  </summary>
+                  <dt id="dfn-funkcjonalnosc">funkcjonalność</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           <a href="#dfn-procedura">procesy</a> i efekty osiągalne w wyniku działań użytkownika
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-pojedynczy-wskaznik">pojedynczy wskaźnik</dt>
+                  <dd>
+                     <definition xmlns="">
+                        	
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">wprowadzanie danych dotykiem, które działa z jednym punktem kontaktu z ekranem, w
+                           tym pojedyncze stuknięcia i kliknięcia, podwójne stuknięcia i kliknięcia, długie naciśnięcia
+                           i gesty oparte na ścieżce
+                        </p>
+                        				
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-procedura">procedura</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">seria czynności użytkownika, gdzie każda czynność jest niezbędna do zakończenia działania</p>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Zakończona sukcesem procedura korzystania ze stron sklepu internetowego wymaga od
+                              użytkownika obejrzenia alternatywnych produktów, cen i ofert, wybrania produktów,
+                              złożenia zamówienia, ustalenia warunków dostawy oraz podania informacji o wysyłce
+                              i płatności.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Strona rejestracji konta wymaga przejścia <a href="https://www.w3.org/TR/turingtest/">testu Turinga</a>, a następnie wypełnienia formularza rejestracyjnego.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                     </definition>
+                  </dd>
+               </details>
+            </section><a class="button button-backtotop" href="#top"><span>
+                  <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
+                  </svg> Początek strony
+                  			</span></a></main>
+         <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
+            <header class="box-h  box-h-icon box-h-space-above box-h-icon">
+               <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
+                  <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path>
+               </svg>
+               <h2> Pomóż ulepszyć tę stronę</h2>
+            </header>
+            <div class="box-i">
+               <p>Podziel się pomysłami, sugestiami lub uwagami za pośrednictwem poczty elektronicznej
+                  lub za pośrednictwem GitHub
+               </p>
+               <div class="button-group"><a href="mailto:kontakt@irdpl.pl?subject=%5BObja%C5%9Bnienia%20i%20Techniki%20Informacja%20zwrotna%5D" class="button"><span>E-mail</span></a><a href="https://github.com/irdpl/wcag/issues/" class="button"><span>Rozwidlenie i edycja na Github</span></a><a href="https://github.com/irdpl/wcag/issues/new" class="button"><span>Zgłoszenie problemu na Github</span></a></div>
+            </div>
+         </aside>
+      </div>
+      <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
+         <div class="inner" style="grid-column: 2 / 8">
+            <p class="note">Ta strona jest nieautoryzowaną polską wersją dokumentu W3C. Dokument może zawierać
+               błędne lub nieścisłe tłumaczenia oryginału. Łącze do oryginalnego dokumentu W3C znajduje
+               się <a href="#brief">w sekcji W skrócie</a>.
+            </p>
+            <p><strong>Data:</strong> Aktualizacja 19 February 2024.
+            </p>
+            <p><strong>Opracowane przez</strong> <a href="https://www.w3.org/groups/wg/ag/participants">uczestników Accessibility Guidelines Working Group (AG WG)</a> (współrzewodniczący: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery.
+               Kontakt z obsadą W3C: Michael Cooper).
+            </p>
+            <p>Treść została opracowana w ramach <a href="https://www.w3.org/WAI/about/projects/#us">projektów WAI-Core</a> finansowanych przez Fundusze federalne USA. Interfejs użytkownika został zaprojektowany
+               przez Education and Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) z udziałem z udziałem Shadi Abou-Zahra, Steve Lee i Shawn Lawton Henry w ramach
+               projektu <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a>, współfinansowanego przez Komisję Europejską.
+            </p>
+            <p>Tłumaczenie na język polski zostało wykonane przez: xxx xxx xxx xxx xxx.</p>
+            <p>Wydanie polskie zostało przygotowane przez zespół: xxx xxx xxx xxx xxx.</p>
+         </div>
+      </footer>
+      <footer class="site-footer grid-4q" aria-label="Site">
+         <div class="q1-start q3-end about">
+            <div>
+               <p><a class="largelink" href="https://www.irdpl.pl/" dir="auto" translate="no" lang="pl">© Polska Izba Rzemiosła Dostępnościowego</a></p>
+               <p>
+                  Platforma swobodnej współpracy osób i firm, które zajmują się dostępnością i chcą
+                  rozwijać w Polsce rynek rzetelnych usług dostępnościowych
+                  
+               </p>
+            </div>
+            <div dir="auto" translate="no" lang="pl">
+               <p>
+                  					Prawa autorskie do wszystkich materiałów w tej witrynie należą do W3C.<br /> Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). Zobacz <a href="https://www.w3.org/WAI/about/using-wai-material/" lang="en" hreflang="en">Permission to Use WAI Material</a>.
+               </p>
+            </div>
+         </div>
+         <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
+            <ul style="margin-bottom:0">
+               <li><a href="https://www.irdpl.pl">Nowości</a></li>
+               <li><a href="https://biblio.irdpl.pl">Biblioteka Lidera Dostępności</a></li>
+               <li><a href="https://www.irdpl.pl/HTML_CodeSniffer">HTML_CodeSniffer</a></li>
+            </ul>
+         </div>
+      </footer>
+      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+</html>
