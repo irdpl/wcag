@@ -18,7 +18,7 @@
                         <svg alt="up" focusable="false" aria-hidden="true" class="icon-arrow-up-thin pager-icon" viewBox="0 0 16 16">
                            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path>
                         </svg> Wytyczna: Metody obsługi</a></li>
-                  <li class="nav__item"><a href="gesty-dotykowe">Poprzednie KS: Gesty dotykowe</a></li>
+                  <li class="nav__item"><a href="gesty-wskaznika">Poprzednie KS: Gesty wskaźnika</a></li>
                   <li class="nav__item"><a href="etykieta-w-nazwie">Następne KS: Etykieta w nazwie</a></li>
                </ul>
             </nav>
@@ -47,32 +47,36 @@
             <aside class="box">
                <header class="box-h  box-h-icon">Kryterium sukcesu (KS) </header>
                <div class="box-i">
-                  <p>W przypadku <a href="#dfn-funkcjonalnosc">funkcjonalności</a>, które są wywoływane za pomocą <a href="#dfn-dotyk-jednopunktowy">dotyku jednopunktowego</a>, co najmniej jedno z poniższych twierdzeń jest prawdziwe:
+                  <p>W przypadku funkcjonalności, które są wywoływane za pomocą <a href="#dfn-wejscie-wskaznika">pojedynczego wejścia wskaźnika</a>, co najmniej jedno z poniższych twierdzeń jest prawdziwe:
                   </p>
                   <dl>
                      
                      
-                     <dt>Brak zdarzenia</dt>
+                     <dt>Brak zdarzenia „w dół”</dt>
                      
                      <dd>
-                        <a href="#dfn-gdy-naciskane">Naciskanie</a> nie wywołuje jakiejkolwiek części zdarzenia,
+                        <a href="#dfn-zdarzenie-w-dol">Zdarzenie w dół</a> nie jest używane do wykonania żadnej części funkcjonalności;
                      </dd>
                      						
                      
                      <dt>Przerwanie lub cofnięcie</dt>
                      
-                     <dd>Zdarzenie jest zależne od <a href="#dfn-zwolnienie-nacisku">zwolnienia nacisku</a> i istnieje <a href="#dfn-mechanizm">mechanizm</a>, którym można je przerwać lub cofnąć po zwolnieniu nacisku,
+                     <dd>Zakończenie funkcjonalności następuje po wystąpieniu <a href="#dfn-zdarzenie-%E2%80%9Ew-gore%E2%80%9D">zdarzenia w górę</a>  oraz istnieje <a href="#dfn-mechanizm">mechanizm</a>, którym można je przerwać lub cofnąć;
                      </dd>
                      						
                      
-                     <dt>Odwrócenie zdarzenia</dt>
+                     <dt>W górę - przywrócenie</dt>
                      
-                     <dd>Zwolnienie nacisku cofa wywołane zdarzenie i przywraca stan sprzed zdarzenia,</dd>
+                     <dd>
+                         przywraca stan sprzed <a href="#dfn-zdarzenie-w-dol">zdarzenia w dół</a>
+                        
+                     </dd>
                      						
                      
                      <dt>Istotne</dt>
                      
-                     <dd>Wciśnięcie jest <a href="#dfn-istotny">niezbędne</a> do wywołania zdarzenia.
+                     <dd>
+                        <a href="#dfn-zdarzenie-w-dol">Zdarzenie w dół</a> jest <a href="#dfn-istotny">niezbędne</a> do ukończenia funkcjonalności.
                      </dd>
                      						
                      
@@ -322,46 +326,6 @@
                   <summary>
                      <h2>Kluczowe pojęcia</h2>
                   </summary>
-                  <dt id="dfn-dotyk-jednopunktowy">dotyk jednopunktowy</dt>
-                  <dd>
-                     <definition xmlns="">
-                        	
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">wprowadzanie danych dotykiem, które działa z jednym punktem kontaktu z ekranem, w
-                           tym pojedyncze stuknięcia i kliknięcia, podwójne stuknięcia i kliknięcia, długie naciśnięcia
-                           i gesty oparte na ścieżce
-                        </p>
-                        				
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-funkcjonalnosc">funkcjonalność</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">
-                           <a href="#dfn-procedura">procesy</a> i efekty osiągalne w wyniku działań użytkownika
-                           
-                        </p>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-gdy-naciskane">gdy naciskane</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">zdarzenie dotykowe, które następuje potem, gdy bodziec wyzwalający wskaźnik naciska
-                           punkt interaktywny
-                        </p>
-                        	        
-                        <p xmlns="http://www.w3.org/1999/xhtml">Zdarzenie może mieć na różnych platformach różne nazwy, takie jak „touchstart” lub
-                           „mousedown”.
-                        </p>
-                        
-                     </definition>
-                  </dd>
                   <dt id="dfn-istotny">istotny</dt>
                   <dd>
                      <definition xmlns="">
@@ -576,13 +540,49 @@
                         
                      </definition>
                   </dd>
-                  <dt id="dfn-zwolnienie-nacisku">zwolnienie nacisku</dt>
+                  <dt id="dfn-wejscie-wskaznika">wejście wskaźnika</dt>
                   <dd>
                      <definition xmlns="">
                         
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml">zdarzenie dotykowe, które następuje potem, gdy bodziec wyzwalający wskaźnik zwalnia
-                           „wciśnięty” wcześniej punkt interaktywny
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           dane wejściowe z urządzenia, które może kierować określone współrzędne (lub zestaw
+                           współrzędnych) na ekranie, takie jak mysz, pióro lub kontakt dotykowy
+                           
+                        </p>
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Zobacz także <a href="https://www.w3.org/TR/pointerevents3/#dfn-pointer">Pointer Events definition for "pointer"</a> [[pointerevents]].
+                              
+                           </p>
+                        </div>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-zdarzenie-w-dol">zdarzenie w dół</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">zdarzenie platformy wywoływane w momencie naciśnięcia przycisku urządzenia wskazującego
+                           (wskaźnika), gdy wskaźnik znajduje się wewnątrz elementu 
+                        </p>
+                        	        
+                        <p xmlns="http://www.w3.org/1999/xhtml">Zdarzenie może mieć na różnych platformach różne nazwy, takie jak „touchstart” lub
+                           „mousedown”.
+                        </p>
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-zdarzenie-„w-gore”">zdarzenie „w górę”</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">zdarzenie platformy wywoływane, gdy przycisk wyzwalający urządzenia wskazującego (wskaźnika)
+                           zostanie zwolniony), gdy wskaźnik znajduje się wewnątrz elementu
                         </p>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml">Zwolnienie nacisku może mieć różne nazwy na różnych platformach, takie jak „touchend”
@@ -619,7 +619,7 @@
                błędne lub nieścisłe tłumaczenia oryginału. Łącze do oryginalnego dokumentu W3C znajduje
                się <a href="#brief">w sekcji W skrócie</a>.
             </p>
-            <p><strong>Data:</strong> Aktualizacja 18 February 2024.
+            <p><strong>Data:</strong> Aktualizacja 19 February 2024.
             </p>
             <p><strong>Opracowane przez</strong> <a href="https://www.w3.org/groups/wg/ag/participants">uczestników Accessibility Guidelines Working Group (AG WG)</a> (współrzewodniczący: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery.
                Kontakt z obsadą W3C: Michael Cooper).
