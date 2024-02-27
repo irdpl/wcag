@@ -32,7 +32,7 @@
 		<guidelines lang="{@lang}">
 			<understanding>
 				<name>Wprowadzenie do objaśnień WCAG <xsl:value-of select="$guidelines.version.decimal"/></name>
-				<file href="intro"/>
+				<file href="wstep"/>
 			</understanding>
 			<understanding>
 				<name>Objaśnienie technik dla kryteriów sukcesu WCAG</name>
