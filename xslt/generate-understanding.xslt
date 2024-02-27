@@ -413,7 +413,7 @@
 						<xsl:call-template name="meta-link">
 							<xsl:with-param name="meta-for-link" select="$meta1/parent::principle/preceding-sibling::understanding[1]"/>
 							<xsl:with-param name="prevnexttype">Poprzednie</xsl:with-param>
-							<xsl:with-param name="prevnextdir">poprzednie</xsl:with-param>
+							<xsl:with-param name="prevnextdir">previous</xsl:with-param>
 						</xsl:call-template>
 					</xsl:when>
 					<!-- is second guideline of first principle -->
@@ -421,7 +421,7 @@
 						<xsl:call-template name="meta-link">
 							<xsl:with-param name="meta-for-link" select="$meta1/preceding-sibling::guideline[1]"/>
 							<xsl:with-param name="prevnexttype">Poprzednia</xsl:with-param>
-							<xsl:with-param name="prevnextdir">poprzednie</xsl:with-param>
+							<xsl:with-param name="prevnextdir">previous</xsl:with-param>
 						</xsl:call-template>
 					</xsl:when>
 					<!-- is second guideline of another principle -->
@@ -429,7 +429,7 @@
 						<xsl:call-template name="meta-link">
 							<xsl:with-param name="meta-for-link" select="$meta1/preceding-sibling::guideline[1]"/>
 							<xsl:with-param name="prevnexttype">Poprzednia</xsl:with-param>
-							<xsl:with-param name="prevnextdir">poprzednie</xsl:with-param>
+							<xsl:with-param name="prevnextdir">previous</xsl:with-param>
 						</xsl:call-template>
 					</xsl:when>
 					<!-- guidelines after the second -->
@@ -437,7 +437,7 @@
 						<xsl:call-template name="meta-link">
 							<xsl:with-param name="meta-for-link" select="$meta1/preceding-sibling::guideline[1]"/>
 							<xsl:with-param name="prevnexttype">Poprzednia</xsl:with-param>
-							<xsl:with-param name="prevnextdir">poprzednie</xsl:with-param>
+							<xsl:with-param name="prevnextdir">previous</xsl:with-param>
 						</xsl:call-template>
 					</xsl:when>
 					<!-- go to last guideline of previous principle if needed-->
@@ -445,7 +445,7 @@
 						<xsl:call-template name="meta-link">
 							<xsl:with-param name="meta-for-link" select="$meta1/parent::principle/preceding-sibling::principle[1]/guideline[last()]"/>
 							<xsl:with-param name="prevnexttype">Poprzednia</xsl:with-param>
-							<xsl:with-param name="prevnextdir">poprzednie</xsl:with-param>
+							<xsl:with-param name="prevnextdir">previous</xsl:with-param>
 						</xsl:call-template>
 					</xsl:when>
 					<!-- is first understanding after guidelines -->
@@ -453,7 +453,7 @@
 						<xsl:call-template name="meta-link">
 							<xsl:with-param name="meta-for-link" select="$meta1/preceding-sibling::principle[1]/guideline[last()]"/>
 							<xsl:with-param name="prevnexttype">Poprzednie</xsl:with-param>
-							<xsl:with-param name="prevnextdir">poprzednie</xsl:with-param>
+							<xsl:with-param name="prevnextdir">previous</xsl:with-param>
 						</xsl:call-template>
 					</xsl:when>
 					<!-- any understanding page but first -->
@@ -461,7 +461,7 @@
 						<xsl:call-template name="meta-link">
 							<xsl:with-param name="meta-for-link" select="$meta1/preceding-sibling::understanding[1]"/>
 							<xsl:with-param name="prevnexttype">Poprzednie</xsl:with-param>
-							<xsl:with-param name="prevnextdir">poprzednie</xsl:with-param>
+							<xsl:with-param name="prevnextdir">previous</xsl:with-param>
 						</xsl:call-template>
 					</xsl:when>
 				</xsl:choose>
@@ -494,7 +494,7 @@
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta1/following-sibling::guideline[1]"/>
 					<xsl:with-param name="prevnexttype">Następne</xsl:with-param>
-					<xsl:with-param name="prevnextdir">następne</xsl:with-param>
+					<xsl:with-param name="prevnextdir">next</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<!-- is last guideline -->
@@ -502,7 +502,7 @@
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta1/parent::principle/following-sibling::understanding[1]"/>
 					<xsl:with-param name="prevnexttype">Następne</xsl:with-param>
-					<xsl:with-param name="prevnextdir">następne</xsl:with-param>
+					<xsl:with-param name="prevnextdir">next</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<!-- Go to first guideline of next principle if needed -->
@@ -510,7 +510,7 @@
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta1/parent::principle/following-sibling::principle[1]/guideline[1]"/>
 					<xsl:with-param name="prevnexttype">Następna</xsl:with-param>
-					<xsl:with-param name="prevnextdir">następne</xsl:with-param>
+					<xsl:with-param name="prevnextdir">next</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<!-- is last understanding before guidelines -->
@@ -518,7 +518,7 @@
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta1/following-sibling::principle[1]/guideline[1]"/>
 					<xsl:with-param name="prevnexttype">Następna</xsl:with-param>
-					<xsl:with-param name="prevnextdir">następne</xsl:with-param>
+					<xsl:with-param name="prevnextdir">next</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<!-- has a following guideline -->
@@ -526,7 +526,7 @@
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta1/following-sibling::guideline[1]"/>
 					<xsl:with-param name="prevnexttype">Następna</xsl:with-param>
-					<xsl:with-param name="prevnextdir">następne</xsl:with-param>
+					<xsl:with-param name="prevnextdir">next</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<!-- has a following understanding -->
@@ -534,7 +534,7 @@
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta1/following-sibling::understanding[1]"/>
 					<xsl:with-param name="prevnexttype">Następne</xsl:with-param>
-					<xsl:with-param name="prevnextdir">następne</xsl:with-param>
+					<xsl:with-param name="prevnextdir">next</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<xsl:otherwise>
@@ -554,7 +554,7 @@
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta/success-criterion[1]"/>
 					<xsl:with-param name="prevnexttype">Poprzednie</xsl:with-param>
-					<xsl:with-param name="prevnextdir">poprzednie</xsl:with-param>
+					<xsl:with-param name="prevnextdir">previous</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<!-- if previous SC is first -->
@@ -562,7 +562,7 @@
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta/preceding-sibling::success-criterion"/>
 					<xsl:with-param name="prevnexttype">Poprzednie</xsl:with-param>
-					<xsl:with-param name="prevnextdir">poprzednie</xsl:with-param>
+					<xsl:with-param name="prevnextdir">previous</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<!-- Otherwise Level 2 prev link, if any -->
@@ -570,7 +570,7 @@
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta/preceding-sibling::success-criterion[1]"/>
 					<xsl:with-param name="prevnexttype">Poprzednie</xsl:with-param>
-					<xsl:with-param name="prevnextdir">poprzednie</xsl:with-param>
+					<xsl:with-param name="prevnextdir">previous</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 		</xsl:choose>
@@ -595,7 +595,7 @@
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta/following-sibling::success-criterion[1]"/>
 					<xsl:with-param name="prevnexttype">Następne</xsl:with-param>
-					<xsl:with-param name="prevnextdir">następne</xsl:with-param>
+					<xsl:with-param name="prevnextdir">next</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<!-- Otherwise Level 2 Next link, if any -->
@@ -603,7 +603,7 @@
 				<xsl:call-template name="meta-link">
 					<xsl:with-param name="meta-for-link" select="$meta/following-sibling::success-criterion[1]"/>
 					<xsl:with-param name="prevnexttype">Następne</xsl:with-param>
-					<xsl:with-param name="prevnextdir">następne</xsl:with-param>
+					<xsl:with-param name="prevnextdir">next</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 		</xsl:choose>
@@ -647,7 +647,7 @@
 			<xsl:if test="$prefix-text != ''">
 				<xsl:text> </xsl:text>
 				<xsl:choose>
-					<xsl:when test="$prevnextdir != 'next'">
+					<xsl:when test="$prevnextdir != 'next' and $prevnextdir != 'previous'">
 						<xsl:value-of select="upper-case(substring($prefix-text, 1, 1))"/>
 						<xsl:value-of select="substring($prefix-text, 2)"/>
 					</xsl:when>
