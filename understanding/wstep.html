@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Wprowadzenie do objaśnień WCAG  | WAI | W3C</title>
+      <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
+      <link rel="stylesheet" href="base.css" />
+   </head>
+   <body dir="ltr"><a href="#main" class="button button--skip-link">Idź do treści</a><div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Objaśnienia">
+               <ul>
+                  <li class="nav__item"><a href=".">
+                        								Wszystkie objaśnienia
+                        							</a></li>
+                  <li class="nav__item"></li>
+                  <li class="nav__item"><a href="objasnienie-technik">Następne: Objaśnienie technik dla kryteriów sukcesu WCAG
+                        <svg focusable="false" aria-hidden="true" class="icon-arrow-right-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                        </svg></a></li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+      <div class="default-grid with-gap leftcol">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar ">
+            <nav>
+               <header class="box-h ">Treść strony</header>
+               <div class="box-i">
+                  <ul>
+                     <li><a href="#objasnienie-czterech-zasad-dost%C4%99pnosci">Objaśnienie czterech zasad dostępności</a></li>
+                     <li><a href="#layers-of-guidance">Warstwy wytycznych</a></li>
+                  </ul>
+               </div>
+            </nav>
+         </aside>
+         <main id="main" class="standalone-resource__main">
+            <h1></h1>
+            <div>
+               
+               
+               <p>
+                  Objaśnienia WCAG 2.2 są podstawowym przewodnikiem do zrozumienia i korzystania z <a href="../guidlines/index.html">Wytycznych dla dostępności treści internetowych 2.2</a>”. Chociaż normatywne definicje i wymagania dla WCAG 2.2 można znaleźć w samym dokumencie
+                  WCAG 2.2, pojęcia i przepisy mogą być nowe dla niektórych osób.  Objaśnienia WCAG
+                  2.2 zapewniają nienormatywny rozszerzony komentarz do każdej wytycznej i każdego kryterium
+                  sukcesu, aby pomóc czytelnikom lepiej zrozumieć intencje oraz jak wytyczne i kryteria
+                  sukcesu działają razem.  Podają również przykłady technik lub kombinacji technik,
+                  które Grupa Robocza W3C określiła jako wystarczające do spełnienia każdego Kryterium
+                  sukcesu.  Zamieszczono także łącza do opisów każdej z tych technik.
+                  
+               </p>
+               
+               
+               <p>
+                  Nie jest to dokument wprowadzający. Jest to szczegółowy opis techniczny wytycznych
+                  i ich kryteriów sukcesu. Zobacz <a href="https://lepszyweb.pl/blog2/omowienie-wcag">Omówienie Wytycznych dla dostępności treści internetowych (WCAG)</a> (<a href="https://www.w3.org/WAI/intro/wcag" lang="en" hreflang="en">WCAG 2 Overview</a>), aby zapoznać się z wprowadzeniem do WCAG i pomocniczych dokumentów technicznych
+                  oraz materiałów edukacyjnych.
+                  
+                  
+               </p>
+               
+               
+               <p>
+                  Objaśnienia WCAG 2.2 są zorganizowane według wytycznych. Istnieje sekcja Objaśnienia
+                  Wytycznej X.X dla każdej wytycznej. Intencje i wszelkie techniki pomocnicze, które
+                  są związane z wytyczną, ale nie są konkretnie związane z żadnym z jej kryteriów sukcesu,
+                  są tam również wymienione. Dla każdej wytycznej istnieje sekcja <em>Objaśnienia Wytycznej X.X</em>.  Wymienione są tam również intencje i wszelkie techniki pomocnicze, które są związane
+                  z wytyczną, ale nie są konkretnie związane z żadnym z jej kryteriów sukcesu.
+                  
+               </p>
+               
+               
+               <p>
+                  Po części <em>Objaśnienia Wytycznej X.X</em> <em>.</em> X następują sekcje <em>Objaśnienia kryterium sukcesu X.X.X </em> dla każdego kryterium sukcesu danej wytycznej.  Każda z tych sekcji zawiera:
+                  
+               </p>
+               
+               
+               <ul>
+                  
+                  
+                  <li>
+                     
+                     
+                     <p>Kryterium sukcesu w postaci, w jakiej występuje w WCAG 2.2</p>
+                     
+                     
+                  </li>
+                  
+                  
+                  <li>
+                     
+                     
+                     <p>Intencje kryterium sukcesu</p>
+                     
+                     
+                  </li>
+                  
+                  
+                  <li>
+                     
+                     
+                     <p>Korzyści (jak spełnienie kryterium sukcesu pomaga osobom niepełnosprawnym))</p>
+                     
+                     
+                  </li>
+                  
+                  
+                  <li>
+                     
+                     
+                     <p>Przykłady</p>
+                     
+                     
+                  </li>
+                  
+                  
+                  <li>
+                     
+                     
+                     <p> Powiązane zasoby </p>
+                     
+                     
+                  </li>
+                  
+                  
+                  <li>
+                     
+                     
+                     <p>Techniki lub kombinacje technik wystarczających do spełnienia kryterium</p>
+                     
+                     
+                  </li>
+                  
+                  
+                  <li>
+                     
+                     
+                     <p>Typowe błędy tego kryterium sukcesu</p>
+                     
+                     
+                  </li>
+                  
+                  
+                  <li>
+                     
+                     
+                     <p>
+                        Dodatkowe techniki pomocnicze, które wykraczają poza to, co jest wymagane do spełnienia
+                        kryterium sukcesu, ale mogą być wykorzystane do uczynienia niektórych lub wszystkich
+                        rodzajów treści bardziej dostępnymi.  Zastosowanie technik pomocniczych nie ma wpływu
+                        na deklarowany poziom zgodności.
+                        
+                     </p>
+                     
+                     
+                  </li>
+                  
+                  
+                  <li>
+                     
+                     
+                     <p>Kluczowe terminy dla tego Kryterium sukcesu (zaczerpnięte ze Słownika WCAG 2.2)</p>
+                     
+                     
+                  </li>
+                  
+                  
+               </ul>
+               
+               <p>
+                  Z każdej Wytycznej WCAG 2.2 podano łącza bezpośrednio do każdego <em>Objaśnienia Wytycznej X.X</em> w tym dokumencie. Podobnie, z każdego kryterium sukcesu w WCAG 2.2 istnieje łącze
+                  do sekcji <em>Objaśnienie Kryterium sukcesu X.X.X</em> w tym dokumencie.
+                  
+               </p>
+               
+               
+               <p>
+                  Aby uzyskać informacje o poszczególnych technikach, należy kierować się łączami w
+                  całym dokumencie do interesujących nas technik w dokumencie <a href="https://www.w3.org/WAI/WCAG22/Techniques/">Techniki dla WCAG 2.2</a>.
+                  
+               </p>
+               
+               
+               <p>
+                  Łącza do informacji na temat różnych niepełnosprawności i technologii wspomagających
+                  można znaleźć w Wikipedii na stronie <a href="https://pl.wikipedia.org/wiki/Niepe%C5%82nosprawno%C5%9B%C4%87">Niepełnosprawność&gt;</a> lub w języku angielskim <a href="https://en.wikipedia.org/wiki/Disability">Disability</a>.
+                  
+               </p>
+               
+               <section id="objasnienie-czterech-zasad-dostępnosci">
+                  
+                  
+                  <h2>Objaśnienie czterech zasad dostępności</h2>
+                  
+                  
+                  <p>
+                     Wytyczne i kryteria sukcesu są zorganizowane wokół następujących czterech zasad, które
+                     stanowią fundament niezbędny dla każdego, kto chce uzyskać dostęp i korzystać z treści
+                     internetowych.  Każdy, kto chce korzystać z Internetu musi mieć dostęp do treści,
+                     które są:
+                     
+                  </p>
+                  
+                  
+                  <ol>
+                     
+                     
+                     <li>
+                        
+                        
+                        <p>
+                           Postrzegalne - Informacje i elementy interfejsu użytkownika muszą być prezentowane
+                           użytkownikom w sposób, w jaki mogą je postrzegać.
+                           
+                        </p>
+                        
+                        
+                        <ul>
+                           
+                           
+                           <li>
+                              
+                              
+                              <p>
+                                 Oznacza to, że użytkownicy muszą być w stanie odebrać prezentowane informacje (nie
+                                 mogą one być niewidoczne dla wszystkich zmysłów).
+                                 
+                              </p>
+                              
+                              
+                           </li>
+                           
+                           
+                        </ul>
+                        
+                        
+                     </li>
+                     
+                     
+                     <li>
+                        
+                        
+                        <p>Funkcjonalne - komponenty interfejsu użytkownika i nawigacja muszą być możliwe do
+                           obsługi (sprawne i skuteczne).
+                        </p>
+                        
+                        
+                        <ul>
+                           
+                           
+                           <li>
+                              
+                              
+                              <p>
+                                 Oznacza to, że użytkownicy muszą być w stanie obsługiwać interfejs (interfejs nie
+                                 może wymagać interakcji, której użytkownik nie jest w stanie wykonać)
+                                 
+                              </p>
+                              
+                              
+                           </li>
+                           
+                           
+                        </ul>
+                        
+                        
+                     </li>
+                     
+                     
+                     <li>
+                        
+                        
+                        <p>Zrozumiałe - Informacje i działanie interfejsu użytkownika muszą być zrozumiałe.</p>
+                        
+                        
+                        <ul>
+                           
+                           
+                           <li>
+                              
+                              
+                              <p>
+                                 Oznacza to, że użytkownicy muszą być w stanie zrozumieć informacje, jak również działanie
+                                 interfejsu użytkownika (treść lub działanie nie może być poza ich zrozumieniem)
+                                 
+                              </p>
+                              
+                              
+                           </li>
+                           
+                           
+                        </ul>
+                        
+                        
+                     </li>
+                     
+                     
+                     <li>
+                        
+                        
+                        <p>
+                           Solidne - Treść musi być na tyle solidna, aby mogła być wiarygodnie interpretowana
+                           przez wiele różnych programów użytkownika, w tym technologie wspomagające.
+                           
+                        </p>
+                        
+                        
+                        <ul>
+                           
+                           
+                           <li>
+                              
+                              
+                              <p>
+                                 Oznacza to, że użytkownicy muszą być w stanie uzyskać dostęp do treści w miarę rozwoju
+                                 technologii (wraz z rozwojem technologii i programów użytkownika treść powinna pozostać
+                                 dostępna).
+                                 
+                              </p>
+                              
+                              
+                           </li>
+                           
+                           
+                        </ul>
+                        
+                        
+                     </li>
+                     
+                     
+                  </ol>
+                  
+                  
+                  <p>
+                     Jeśli którakolwiek z tych zasad nie jest realizowana, użytkownicy z niepełnosprawnościami
+                     nie będą mogli korzystać z treści internetowej.
+                     
+                  </p>
+                  
+                  
+                  <p>
+                     Pod każdą z zasad kryją się wytyczne i kryteria sukcesu, które pomagają w realizacji
+                     tych zasad w odniesieniu do osób z niepełnosprawnościami. Istnieje wiele ogólnych
+                     wytycznych dotyczących użyteczności, które sprawiają, że treści są bardziej użyteczne
+                     dla wszystkich ludzi, w tym osób z niepełnosprawnościami. Jednak w WCAG 2.2 uwzględniliśmy
+                     tylko te wytyczne, które dotyczą problemów specyficznych dla osób z niepełnosprawnościami.
+                     Obejmuje to kwestie, które blokują dostęp lub zakłócają dostęp do treści internetowych
+                     w poważniejszym stopniu dla osób z niepełnosprawnościami.
+                     
+                  </p>
+                  
+                  
+               </section>
+               
+               
+               <section id="layers-of-guidance">
+                  
+                  
+                  <h2>Warstwy wytycznych</h2>
+                  
+                  
+                  <section id="wytyczne">
+                     
+                     
+                     <h3>Wytyczne</h3>
+                     
+                     
+                     <p>
+                        Pod każdą zasadą znajduje się lista wytycznych, które odnoszą się do tej zasady. W
+                        sumie jest 13 wytycznych. Wygodną listę samych wytycznych można znaleźć w spisie treści
+                        WCAG 2.2. Jednym z głównych celów wytycznych jest zapewnienie, że treści są bezpośrednio
+                        dostępne dla jak największej liczby osób i może być ponownie prezentowane w różnych
+                        formach, aby dopasować je do zdolności sensorycznych, fizycznych i poznawczych różnych
+                        osób.
+                        
+                     </p>
+                     
+                     
+                  </section>
+                  
+                  
+                  <section id="kryteria-sukcesu">
+                     
+                     
+                     <h3>Kryteria sukcesu</h3>
+                     
+                     
+                     <p>
+                        Pod każdą wytyczną znajdują się kryteria sukcesu, które opisują, co należy osiągnąć,
+                        aby <a class="gl-ref" href="https://www.w3.org/TR/WCAG21/#dfn-conform">zachować zgodność</a> z tym standardem. Są one podobne do „punktów kontrolnych” w WCAG 1.0.  Każde Kryterium
+                        sukcesu jest napisane jako stwierdzenie, które będzie albo prawdziwe albo fałszywe,
+                        gdy określona treść internetowa zostanie przetestowana  pod kątem tego kryterium.
+                        Kryteria sukcesu zostały napisane tak, aby były neutralne pod względem technologicznym.
+                        
+                     </p>
+                     
+                     
+                     <p>
+                        Wszystkie kryteria sukcesu WCAG 2.2 są napisane jako testowalne kryteria obiektywnego
+                        określenia, czy treść spełnia kryteria sukcesu. Niektóre z testów mogą być zautomatyzowane
+                        przy użyciu programów do oceny oprogramowania, inne wymagają udziału człowieka w części
+                        lub całości testów.
+                        
+                     </p>
+                     
+                     
+                     <p>
+                        Chociaż treść może spełniać Kryteria sukcesu, nie zawsze może być użyteczna dla osób
+                        z różnymi rodzajami niepełnosprawności. Profesjonalne oceny wykorzystujące uznane
+                        heurystyki jakościowe są ważne dla osiągnięcia dostępności dla niektórych odbiorców.
+                        Ponadto, zaleca się przeprowadzenie testów użyteczności. Ponadto, zaleca się przeprowadzenie
+                        testów użyteczności. Testy użyteczności mają na celu określenie, jak dobrze ludzie
+                        mogą korzystać z treści zgodnie z jej przeznaczeniem.
+                        
+                     </p>
+                     
+                     
+                     <p>
+                        Treści powinny być testowane przez osoby, które rozumieją, w jaki sposób osoby z różnymi
+                        rodzajami niepełnosprawności korzystają z Internetu.  Zaleca się, aby użytkownicy
+                        z niepełnosprawnościami były włączani do grup testowych podczas przeprowadzania testów
+                        na ludziach.
+                        
+                     </p>
+                     
+                     
+                     <p>
+                        Każde kryterium sukcesu dla wytycznej ma łącze do sekcji dokumentu „Jak spełnić WCAG”,
+                        która zapewnia
+                        
+                     </p>
+                     
+                     
+                     <ul>
+                        
+                        
+                        <li>
+                           
+                           
+                           <p>techniki wystarczające do spełniania kryterium sukcesu,</p>
+                           
+                           
+                        </li>
+                        
+                        
+                        <li>
+                           
+                           
+                           <p>opcjonalne techniki pomocnicze oraz</p>
+                           
+                           
+                        </li>
+                        
+                        
+                        <li>
+                           
+                           
+                           <p>opisy intencji kryteriów sukcesu, w tym korzyści i przykłady.</p>
+                           
+                           
+                        </li>
+                        
+                        
+                     </ul>
+                     
+                     
+                  </section>
+                  
+                  
+                  <section id="techniki-wystarczajace-techniki-pomocnicze-i-błędy">
+                     
+                     
+                     <h3>Techniki wystarczające, techniki pomocnicze i błędy</h3>
+                     
+                     
+                     <p>
+                        Następna sekcja, <em><a href="./WCAG-objasnienie-technik.html">Objaśnienie technik dla kryteriów sukcesu WCAG</a></em>zawiera ważne informacje na temat technik.
+                        
+                     </p>
+                     
+                     
+                  </section>
+                  
+                  
+               </section>
+               
+               
+            </div><a class="button button-backtotop" href="#top"><span>
+                  <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
+                  </svg> Początek strony
+                  			</span></a></main>
+         <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
+            <header class="box-h  box-h-icon box-h-space-above box-h-icon">
+               <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
+                  <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path>
+               </svg>
+               <h2> Pomóż ulepszyć tę stronę</h2>
+            </header>
+            <div class="box-i">
+               <p>Podziel się pomysłami, sugestiami lub uwagami za pośrednictwem poczty elektronicznej
+                  lub za pośrednictwem GitHub
+               </p>
+               <div class="button-group"><a href="mailto:kontakt@irdpl.pl?subject=%5BObja%C5%9Bnienia%20i%20Techniki%20Informacja%20zwrotna%5D" class="button"><span>E-mail</span></a><a href="https://github.com/irdpl/wcag/issues/" class="button"><span>Rozwidlenie i edycja na Github</span></a><a href="https://github.com/irdpl/wcag/issues/new" class="button"><span>Zgłoszenie problemu na Github</span></a></div>
+            </div>
+         </aside>
+      </div>
+      <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
+         <div class="inner" style="grid-column: 2 / 8">
+            <p class="note">Ta strona jest nieautoryzowaną polską wersją dokumentu W3C. Dokument może zawierać
+               błędne lub nieścisłe tłumaczenia oryginału. Łącze do oryginalnego dokumentu W3C znajduje
+               się <a href="#brief">w sekcji W skrócie</a>.
+            </p>
+            <p><strong>Data:</strong> Aktualizacja 27 February 2024.
+            </p>
+            <p><strong>Opracowane przez</strong> <a href="https://www.w3.org/groups/wg/ag/participants">uczestników Accessibility Guidelines Working Group (AG WG)</a> (współrzewodniczący: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery.
+               Kontakt z obsadą W3C: Michael Cooper).
+            </p>
+            <p>Treść została opracowana w ramach <a href="https://www.w3.org/WAI/about/projects/#us">projektów WAI-Core</a> finansowanych przez Fundusze federalne USA. Interfejs użytkownika został zaprojektowany
+               przez Education and Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) z udziałem z udziałem Shadi Abou-Zahra, Steve Lee i Shawn Lawton Henry w ramach
+               projektu <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a>, współfinansowanego przez Komisję Europejską.
+            </p>
+            <p>Tłumaczenie na język polski zostało wykonane przez: xxx xxx xxx xxx xxx.</p>
+            <p>Wydanie polskie zostało przygotowane przez zespół: xxx xxx xxx xxx xxx.</p>
+         </div>
+      </footer>
+      <footer class="site-footer grid-4q" aria-label="Site">
+         <div class="q1-start q3-end about">
+            <div>
+               <p><a class="largelink" href="https://www.irdpl.pl/" dir="auto" translate="no" lang="pl">© Polska Izba Rzemiosła Dostępnościowego</a></p>
+               <p>
+                  Platforma swobodnej współpracy osób i firm, które zajmują się dostępnością i chcą
+                  rozwijać w Polsce rynek rzetelnych usług dostępnościowych
+                  
+               </p>
+            </div>
+            <div dir="auto" translate="no" lang="pl">
+               <p>
+                  					Prawa autorskie do wszystkich materiałów w tej witrynie należą do W3C.<br /> Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). Zobacz <a href="https://www.w3.org/WAI/about/using-wai-material/" lang="en" hreflang="en">Permission to Use WAI Material</a>.
+               </p>
+            </div>
+         </div>
+         <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
+            <ul style="margin-bottom:0">
+               <li><a href="https://www.irdpl.pl">Nowości</a></li>
+               <li><a href="https://biblio.irdpl.pl">Biblioteka Lidera Dostępności</a></li>
+               <li><a href="https://www.irdpl.pl/HTML_CodeSniffer">HTML_CodeSniffer</a></li>
+            </ul>
+         </div>
+      </footer>
+      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+</html>
