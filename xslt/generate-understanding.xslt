@@ -646,7 +646,15 @@
 			</xsl:if>
 			<xsl:if test="$prefix-text != ''">
 				<xsl:text> </xsl:text>
-				<xsl:value-of select="$prefix-text"/>
+				<xsl:choose>
+					<xsl:when test="$prevnextdir != 'next'">
+						<xsl:value-of select="upper-case(substring($prefix-text, 1, 1))"/>
+						<xsl:value-of select="substring($prefix-text, 2)"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="$prefix-text"/>
+					</xsl:otherwise>
+				</xsl:choose>
 				<xsl:text>: </xsl:text>
 			</xsl:if>
 			
