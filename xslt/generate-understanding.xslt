@@ -618,7 +618,7 @@
 		
 		<xsl:variable name="prefix-text">
 			<xsl:choose>
-				<xsl:when test="$meta-for-link/self::guideline">Wytyczna</xsl:when>
+				<xsl:when test="$meta-for-link/self::guideline">wytyczna</xsl:when>
 				<xsl:when test="$meta-for-link/self::success-criterion">KS</xsl:when>
 				<xsl:when test="$meta-for-link/self::understanding"/>
 			</xsl:choose>
@@ -641,9 +641,14 @@
 			</xsl:if>
 			
 			<xsl:value-of select="$prevnexttype"/>
-			<xsl:text> </xsl:text>
-			<xsl:value-of select="$prefix-text"/>
-			<xsl:text>: </xsl:text>
+			<xsl:if test="$prefix-text = ''">
+				<xsl:text>: </xsl:text>
+			</xsl:if>
+			<xsl:if test="$prefix-text != ''">
+				<xsl:text> </xsl:text>
+				<xsl:value-of select="$prefix-text"/>
+				<xsl:text>: </xsl:text>
+			</xsl:if>
 			
 			<xsl:value-of select="$meta-for-link/name"/>
 			
