@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Objaśnienie kryterium sukcesu Rezygnacja ze wskazania</title>
+  <link rel="stylesheet" type="text/css" href="../../css/sources.css" class="remove" />
+</head>
+<body>
+  <h1>Objaśnienie kryterium sukcesu Rezygnacja ze wskazania</h1>
+  <section id="brief">
+    <h2>W skrócie</h2>
+    <dl>
+      <dt>Cel</dt>
+      <dd>Ogranicz przypadkowe aktywowanie kontrolek myszą lub dotykiem.</dd>
+      <dt>Co zrobić</dt>
+      <dd>Spraw, aby anulowanie wskazania było przewidywalne i spójne.</dd>
+      <dt>Dlaczego to jest ważne</dt>
+      <dd>Ułatw każdemu powrót do stanu poprzedniego po czymś, czego nie chciał zrobić.</dd>
+    </dl>
+  </section>
+  <section id="intent">
+    <h2>Intencja</h2>
+    <p>Intencją tego kryterium sukcesu jest zapobieganie przypadkowemu lub błędnemu wprowadzeniu danych pojedynczym wskaźnikiem. Osoby z różnymi niepełnosprawnościami mogą nieumyślnie wykonać gest dotykowy lub poruszyć myszą. Może to skutkować niepożądanymi efektami. Sposoby anulowania takich operacji wskaźnika przedstawiono w kolejnych sekcjach poniżej. Każda z poniższych sekcji odnosi się do podpunktów tego kryterium sukcesu i opisuje sposoby, które umożliwiają użytkownikom anulowanie operacji pojedynczego wskaźnika.</p>
+	
+    <section>
+      <h3><q>W górę</q> - zdarzenie aktywujące lub kończące</h3>
+	  <h3><q>W górę</q> - zdarzenie aktywujące lub kończące</h3>
+	  Aktywacja lub zakończenie poprzez zwolnienie nacisku (up-event)
+      <p>
+	  Najbardziej dostępnym sposobem na uwzględnienie tego kryterium jest aktywowanie zdarzenia przy zwolnieniu nacisku.
+	  Najbardziej dostępnym sposobem anulowania wskaźnika jest aktywacja zdarzenia <q>w górę</q>.
+	  </p>
+      <p>
+	  Aktywacja zdarzenia <q>w górę</q> oznacza aktywację celu po zwolnieniu wskaźnika.
+	  Zwolnienie nacisku odnosi się do rezygnacji ze wskazania po zwolnieniu wskaźnika.
+
+
+	  
+	  W interakcji z ekranem dotykowym, gdy palec dotyka celu, aktywacja zdarzenia <q>w górę</q> następuje tylko wtedy, gdy palec zostanie podniesiony, ale znajduje się w granicach celu. 
+	  
+	  Podczas interakcji z ekranem dotykowym, kiedy palec dotyka celu, zwolnienie nacisku odbywa się jedynie wtedy, gdy palec zostaje podniesiony, pozostając w obrębie wybranego wcześniej celu.
+	  
+	  Podobnie w przypadku interakcji z myszą, zdarzenie <q>w górę</q> występuje, gdy przycisk myszy jest zwolniony, ale kursor nadal znajduje się w granicach pierwotnego celu ustawionego po naciśnięciu przycisku myszy.
+	  
+	  Podobnie w przypadku interakcji myszą, zwolnienie nacisku odbywa się wtedy, gdy przycisk myszy zostaje zwolniony przy jednoczesnym zachowaniu kursora w granicach celu wybranego podczas naciśnięcia klawisza.
+	  
+	  
+	  
+	  
+	  
+	  </p>
+      <p>Twórcy mogą ograniczyć problem nieumyślnego wyzwalania akcji przez użytkowników, korzystając z ogólnych zdarzeń aktywacji/kliknięcia platformy, które aktywują funkcjonalność w przypadku <q>w górę</q>. 
+	  
+	  Twórcy i twórczynie mogą zredukować problemy osób przypadkowo wywołujących akcje, używając generycznych zdarzeń aktywacji/kliknięcia, które aktywują funkcjonalność po zwolnieniu nacisku.
+	  
+	  
+	  
+	  Na przykład zdarzenie <code>click</code> w JavaScript jest wywołane przez zwolnienie głównego przycisku myszy i jest przykładem niejawnego zdarzenia <q>w górę</q>. Pomimo swojej nazwy, zdarzenie <code>click</code> jest niezależne od urządzenia i działa również w przypadku interakcji dotykowej i klawiatury.</p>  
+	  
+	  Na przykład zdarzenie <code>click</code> w JavaScript jest wywołane przez zwolnienie głównego przycisku myszy i jest przykładem [implicit] zwolnienia przycisku. 
+	  Pomimo swojej nazwy, zdarzenie <code>click</code> jest niezależne od urządzenia i działa także dla interakcji z wykorzystaniem dotyku i klawiatury.
+	  
+      <p>Preferencja dla zdarzeń typu <q>w górę</q> jest zawarta w pierwszym z czterech punktów: Zdarzenie wskaźnika <q>w dół</q> nie jest używane do wykonania żadnej części funkcjonalności. Twórcy spełniają ten pierwszy punkt, używając tylko zdarzenia <q>w górę</q>.</p> 
+	  
+	  Preferencję dla zdarzeń zwolnienia nacisku można wywnioskować z pierwszego podpunktu kryterium sukcesu: 
+	  
+	  Naciśnięcie wskaźnika (down-event) nie wywołuje żadnej funkcjonalności. Pierwszy punkt jest spełniony, kiedy używane jest tylko zwolnienie nacisku.
+    </section>
+	
+	
+	
+	
+	
+	
+    <section>
+      <h3>Przerwanie lub cofnięcie zdarzenia</h3>
+	  <h3>Przerwanie lub anulowanie zdarzenia zwolnieniem nacisku</h3>
+	  
+      <p>Tam, gdzie interakcja jest równoważna prostemu „kliknięciu” (zdarzenie <code>click</code>), aktywacja zdarzenia <q>w górę</q> ma wbudowaną możliwość anulowania. 
+	  Istnieje różnica między tym, gdy ktoś dotyka ekranu, a tym, gdy zdejmuje palec. 
+	  Podobnie w przypadku interakcji z myszą istnieje różnica między naciśnięciem i zwolnieniem przycisku myszy. 
+	  Gdy aktywacja następuje dopiero po zwolnieniu wskaźnika, użytkownicy mają możliwość przerwania (anulowania) aktywacji. 
+	  Użytkownicy, którzy mają trudności z precyzyjnym korzystaniem z myszy lub ekranu dotykowego, odnoszą duże korzyści z tego podstawowego zachowania. 
+	  Zwykle otrzymują wizualną informację zwrotną po naciśnięciu elementu. 
+	  Jeśli odkryją, że wybrali niewłaściwy element, mogą anulować akcję, odsuwając wskaźnik lub palec od celu przed zwolnieniem.
+	  </p>
+	  
+	  Tam, gdzie interakcja polega na prostym „kliknięciu”, zwolnienie nacisku ma wbudowaną możliwość anulowania zdarzenia.
+	  Odróżniane jest dotknięcie ekranu i zwolnienie dotyku.
+	  Podobnie w przypadku interakcji myszą, odróżniane jest naciśnięcie i zwolnienie przycisku. 
+	  Jeśli aktywacja zachodzi tylko po zwolnieniu nacisku, istnieje możliwość jej anulowania.
+	  Osoby, które mają trudność z dokładnym używaniem myszy lub ekranu dotykowego odnoszą duże korzyści z tego podstawowego zachowania.
+	  Zazwyczaj otrzymują też wizualną informację zwrotną, gdy element jest wciśnięty. 
+	  Jeśli ktoś zda sobie sprawę, że zaznaczony jest błędny element, może anulować tę akcję, przesuwając wskaźnik lub palec poza element przed zwolnieniem dotyku.
+
+
+
+
+
+
+      <p>
+	  W przypadku bardziej złożonych interakcji, takich jak przeciąganie i upuszczanie, zdarzenia w dół i w górę mogą inicjować i kończyć serię akcji w celu ukończenia procesu. Na przykład w przypadku przeciągania i upuszczania element może być:</p>
+	  
+	  Dla bardziej skomplikowanych interakcji, np. przeciąganie i upuszczanie (drag and drop), naciśnięcie i zwolnienie nacisku mogą rozpocząć serię akcji, która pozwoli dokończyć proces. 
+	  
+      <ol>
+        <li>wybrany za pomocą naciśnięcia (zdarzenie <q>w dół</q>),</li>
+        <li>przeniesiony w nowe miejsce, wciąż będąc naciskanym, oraz</li>
+        <li>zwolniony (zdarzenie <q>w górę</q>), aby zakończyć akcję upuszczania.</li>
+      </ol>
+	  
+	  Na przykład, w przypadku przeciągania i upuszczania element może być:
+	  
+	  zaznaczony naciśnięciem,
+	  przeniesiony do nowego miejsca, kiedy dalej jest naciskany, i
+	  zwolniony, żeby zakończyć przenoszenie.
+	  
+      <p>W tak złożonej akcji wzrasta potrzeba funkcji Przerwij lub Cofnij. 
+	  Projektanci mogą zdecydować się na potwierdzenie ruchu za pomocą okna dialogowego potwierdzenia lub przycisku cofania, dając użytkownikowi możliwość cofnięcia właśnie zakończonego procesu. 
+	  Alternatywnie, możliwość przerwania akcji można uzyskać, jeśli przed wykonaniem kroku 3 użytkownik przywróci wybrany element do jego pierwotnej lokalizacji i tam zakończy proces. 
+	  Jeśli inne części ekranu nie pozwalają na ruch, użytkownik może zakończyć przeciąganie i upuszczanie w tym miejscu, skutecznie unieważniając operację.</p>
+	  
+	  W tak złożonej interakcji, wzrasta potrzeba przerwania lub anulowania zdarzenia.
+	  Można zdecydować na potwierdzenie czynności przez np. okno dialogowe z potwierdzeniem lub przyciskiem “Anuluj”, umożliwiając anulowanie właśnie wykonanej akcji. 
+	  Alternatywnie, można umożliwić anulowanie akcji, jeśli przed ukończeniem trzeciego kroku osoba korzystająca z interfejsu przywróci wybrany element do jego pierwotnej lokalizacji i tam zakończy proces.
+	  Jeśli inne części ekranu uniemożliwiają ruch, można zakończyć przeciąganie i upuszczanie w tym miejscu, co anuluje operację.
+	  
+	  
+	  
+	  </section>
+    <section>
+      <h3><q>W górę</q> - przywrócenie</h3>
+	  
+	  Cofnięcie zdarzenia zwolnienia nacisku
+
+
+
+
+      <p>W innych interakcjach zdarzenie <q>w dół</q> może wywołać zachowanie, które można odwrócić po zakończeniu zdarzenia <q>w górę</q>. Przykładem tego są akcje typu „naciśnij i przytrzymaj”, w których pojawia się przejściowe wyskakujące okienko (lub odtwarzany jest film), gdy użytkownik naciśnie obiekt (zdarzenie <q>w dół</q>), ale wyskakujące okienko (lub film) znika, gdy tylko użytkownik zwolni wskaźnik (zdarzenie <q>w górę</q>). 
+	  Ponieważ zdarzenie <q>w górę</q> odwraca poprzednie zdarzenie <q>w dół</q>, użytkownik powraca do poprzedniego stanu i skutecznie anuluje operację.</p> 
+	  
+	  Podczas innych interakcji, zwolnienie nacisku może zainicjować zachowanie, które może być odwrócone, kiedy nacisk zostaje zwolniony.
+	  Przykładami takich interakcji są zdarzenia naciśnięcia i przytrzymania, np.  kiedy obiekt jest naciśnięty, pojawia się przejściowe okienko (lub włącza się wideo), które znika w momencie, gdy następuje zwolnienie nacisku.
+	  Zwolnienie nacisku odwraca zdarzenie naciśnięcia, więc następuje powrót do poprzedniego punktu, a zdarzenie jest anulowane.
+	  
+	  
+	  
+	  
+    </section>
+    <section>
+      <h3>Zdarzenie <q>w dół</q></h3>	  
+	  Naciśnięcie
+	  
+      <p>Zakończenie funkcji przy zdarzeniu <q>w dół</q> jest dozwolone tylko wtedy, gdy jest niezbędne, gdy nie można użyć zdarzenia <q>w górę</q>.</p>
+	  <!-- 	Uwaga: To zdarzenie różni się od zdarzenia kliknięcia tym, że kliknięcie jest uruchamiane po wykonaniu pełnej akcji kliknięcia; to znaczy, przycisk myszy jest naciskany i zwalniany, gdy wskaźnik pozostaje wewnątrz tego samego elementu. mousedown jest uruchamiane w momencie początkowego naciśnięcia przycisku. -->
+      <p>
+	  Najbardziej rozpowszechniona aktywacja niezbędnego zdarzenia w dół występuje w emulacji klawiatury.  
+	  Na klawiaturze fizycznej klawisze domyślnie aktywują się po zdarzeniu <q>w dół</q> - po naciśnięciu klawisza pojawia się litera.
+	  Gdyby programowy emulator klawiatury próbował obejść to oczekiwane zachowanie, wyświetlając litery po zwolnieniu klawisza, takie zachowanie byłoby nieoczekiwane i niekorzystnie wpływałoby na oczekiwaną interakcję.	  
+	  </p>
+	  
+	  Zakończenie akcji podczas naciśnięcia jest dozwolone wyłącznie wtedy, gdy nie można użyć zwolnienia nacisku.
+	  
+	  Najczęstszy przykład aktywacji podczas naciśnięcia to emulacja klawiatury.
+	  W przypadku fizycznej klawiatury, klawisze domyślnie aktywują się podczas naciśnięcia – litera pojawia się po naciśnięciu klawisza.
+	  Jeśli emulator klawiatury próbowałby zastąpić to zachowanie, sprawiając, że litery pojawiałyby się dopiero po zwolnieniu nacisku, byłoby to nieoczekiwane i negatywnie wpłynęłoby na oczekiwaną interakcję.
+
+      <p>
+	  Zwróć uwagę, że klawiatura ma wbudowany przycisk <kbd>Backspace</kbd> lub <kbd>Delete</kbd>, który skutecznie zapewnia opcję Cofnij. Cofnięcie nie jest wymogiem wyjątku <em>Istotne</em> dotyczącego zdarzenia <q>w dół</q>; jednak zapewnienie użytkownikom łatwego sposobu cofania dowolnej akcji jest zalecaną praktyką (i może być funkcjonalną koniecznością), nawet jeśli nie jest to wymagane przez to kryterium sukcesu.</p>
+	  
+	  Zwróć uwagę, że klawiatura ma wbudowany przycisk <kbd>Backspace</kbd> lub <kbd>Delete</kbd>, który daje możliwość anulowania akcji.
+	  Anulowanie nie jest wymagane w przypadku aktywacji podczas naciśnięcia, jednak rekomendowane (i często niezbędne) jest umożliwienie anulacji dowolnej akcji, mimo że nie jest to wymagane przez to kryterium sukcesu.
+
+
+      <p>Inne przykłady, w których czas aktywacji jest niezbędny i wymaga wystąpienia zdarzenia <q>w dół</q>, to:</p>
+      <ul>
+        <li>Czynność, która emuluje fizyczny wyzwalacz po naciśnięciu, na przykład podczas grania na ekranowej klawiaturze fortepianu. 
+		Aktywacja po zdarzeniu <q>w górę</q> znacząco zmieniłaby pożądane zachowanie.</li>
+        <li>Program do strzelania do rzutków, w którym oczekiwanie na zdarzenie "w górę" uniemożliwiłoby precyzyjne wyczucie czasu niezbędne do aktywacji.</li>
+		
+		Inne przykłady, w których czas aktywacji jest kluczowy i wymaga naciśnięcia to:
+		
+		akcja, która emuluje fizyczny wskaźnik, np. granie na ekranowej klawiaturze pianina.
+		aktywacja podczas zwolnienia nacisku znacząco zmieniłaby pożądane zachowanie.
+		Program do gry w rzutki, gdzie czekanie na zwolnienie nacisku uniemożliwiałoby niezbędną precyzyjną czasowo aktywacę.
+
+		
+		
+		
+		
+      </ul>
+    </section>
+  </section>
+  <section id="benefits">
+    <h3>Korzyści</h3>
+    <ul>
+      <li>Ułatwia wszystkim użytkownikom odzyskanie sprawności po trafieniu w niewłaściwy cel.</li>
+      <li>Pomaga osobom z niepełnosprawnościami wzroku, poznawczymi i motorycznymi, zmniejszając ryzyko przypadkowego aktywowania kontrolki lub nieoczekiwanego wystąpienia akcji, a także zapewnia, że w przypadku aktywacji złożonych elementów sterujących istnieje sposób cofnięcia lub przerwania działania.</li>
+      <li>Osoby, które nie są w stanie wykryć zmian kontekstu, są mniej narażone na dezorientację podczas poruszania się po witrynie.</li>
+    </ul>
+	Łatwiejsze naprawianie błędów po wybraniu błędnego celu.
+	Pomoc osobom z niepełnosprawnościami wzroku, poznawczymi i motorycznymi. Redukowana jest możliwość aktywacji elementu klikalnego lub niespodziewanej akcji, co zapewnia możliwość anulowania lub przerywania działania złożonych elementów klikalnych.
+	Osoby, które nie są w stanie dostrzec zmian w kontekście, są mniej narażone na dezorientację podczas korzystania ze strony.
+
+  </section>
+  <section id="examples">
+    <h2>Przykłady</h2>
+    <ul>
+      <li>W przypadku elementów interfejsu, których wejściem jest jedno dotknięcie lub długie naciśnięcie, odpowiednie zdarzenie jest wyzwalane, gdy palec zostanie  podniesiony wewnątrz tego elementu.</li>
+      <li>Interfejs „przeciągnij i upuść” umożliwia użytkownikom sortowanie pionowo ułożonych kart poprzez podniesienie jednej karty za pomocą wskaźnika (zdarzenie w dół), przeniesienie jej do nowej pozycji i umieszczenie w nowym miejscu po zwolnieniu wskaźnika (zdarzenie w górę). Zwolnienie wskaźnika poza obszarem celu upuszczenia cofa akcję, tj. przesuwa kartę z powrotem do starej pozycji przed rozpoczęciem interakcji.</li>
+	  
+	  Dla elementów interfejsu, które wymagają dotknięcia lub dłuższego naciśnięcia, akcja wyzwalana jest, gdy palec jest podniesiony.
+	  Interfejs “przeciągnij i upuść” pozwala na sortowanie pionowo ułożonych kart poprzez podnoszenie jednej karty wskaźnikiem (naciśnięcie), przesuwanie w inne miejsce i umieszczenie jej w nowym miejscu, kiedy następuje zwolnienie nacisku.
+	  Zwolnienie nacisku poza obszarem celu, anuluje akcję, czyli przesuwa kartę z powrotem do początkowej pozycji sprzed interakcji.
+	  
+	  
+	  
+    </ul>
+  </section>
+  <section id="resources">
+    <h2>Resources</h2>
+    <ul>
+      <li>Resource</li>
+    </ul>
+  </section>
+  <section id="techniques">
+    <h2>Techniki</h2>
+    <section id="sufficient">
+      <h3>Techniki wystarczające</h3>
+      <ul>
+        <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G210" class="general">G210: Zapewnienie możliwości anulowania działań typu „przeciągnij i upuść”</a></li>
+        <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G212" class="general">G212</a>Użycie rdzennych kontrolek HTML, aby zapewnić, że funkcjonalność zostanie uruchomiona w przypadku zdarzenia zwolnienia dotyku lub nacisku.</li>
+      </ul>
+    </section>
+    <!--<section id="advisory">
+      <h2>Advisory</h2>
+      <ul>
+      </ul>
+    </section>-->
+    <section id="failure">
+      <h2>Błędy</h2>
+      <ul>
+        <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F101">F101: Niespełnienie kryterium sukcesu 2.5.2 ze względu na aktywację kontrolki przez naciśnięcie</a></li>
+      </ul>
+    </section>
+  </section>
+</body>
+</html>
