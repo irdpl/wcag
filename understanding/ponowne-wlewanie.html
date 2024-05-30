@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Objaśnienie Kryterium sukcesu  1.4.10: Ponowne wlewanie | WAI | W3C</title>
+      <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
+      <link rel="stylesheet" href="base.css" />
+   </head>
+   <body dir="ltr"><a href="#main" class="button button--skip-link">Idź do treści</a><div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Objaśnienia">
+               <ul>
+                  <li class="nav__item"><a href=".">
+                        								Wszystkie objaśnienia
+                        							</a></li>
+                  <li class="nav__item"><a href="rozroznialne">
+                        <svg alt="up" focusable="false" aria-hidden="true" class="icon-arrow-up-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path>
+                        </svg> Wytyczna: Rozróżnialne</a></li>
+                  <li class="nav__item"><a href="obrazy-tekstu-bez-wyjatkow">
+                        <svg focusable="false" aria-hidden="true" class="icon-arrow-left-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path>
+                        </svg>Poprzednie KS: Obrazy tekstu (bez wyjątków)</a></li>
+                  <li class="nav__item"><a href="kontrast-elementow-nietekstowych">Następne KS: Kontrast elementów nietekstowych
+                        <svg focusable="false" aria-hidden="true" class="icon-arrow-right-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                        </svg></a></li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+      <div class="default-grid with-gap leftcol">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar ">
+            <nav>
+               <header class="box-h ">Treść strony</header>
+               <div class="box-i">
+                  <ul>
+                     <li><a href="#brief">W skrócie</a></li>
+                     <li><a href="#intent">Intencja</a></li>
+                     <li><a href="#benefits">Korzyści</a></li>
+                     <li><a href="#examples">Przykłady</a></li>
+                     <li><a href="#resources">Powiązane zasoby</a></li>
+                     <li><a href="#techniques">Techniki</a></li>
+                     <li><a href="#key-terms">Kluczowe pojęcia</a></li>
+                  </ul>
+               </div>
+            </nav>
+         </aside>
+         <main id="main" class="standalone-resource__main">
+            <h1><span class="standalone-resource__type-of-guidance">Objaśnienie
+                  				KS 1.4.10:</span>Ponowne wlewanie (Poziom AA)
+            </h1>
+            <aside class="box">
+               <header class="box-h  box-h-icon">Kryterium sukcesu (KS) </header>
+               <div class="box-i">
+                  <p>Treść może być prezentowana bez utraty informacji lub funkcjonalności, bez konieczności
+                     przewijania w dwóch wymiarach dla:
+                  </p>
+                  <ul>
+                     
+                     <li>Pionowego przewijania treści o szerokości odpowiadającej 320 <a href="#dfn-piksel-css">pikselom CSS</a>,
+                     </li>
+                     
+                     <li>Poziomego przewijania treści na wysokości odpowiadającej 256 <a href="#dfn-piksel-css">pikselom CSS</a>.
+                     </li>
+                     
+                  </ul>
+                  <p>Wyjątkiem są te części treści, które wymagają dwuwymiarowego układu ze względu na
+                     sposób używania lub znaczenie.
+                  </p>
+                  <div class="note">
+                     <p class="note-title marker">Uwaga</p>
+                     <p>320 pikseli CSS odpowiada początkowej szerokości <a href="#dfn-obszar-roboczy">obszaru roboczego</a> 1280 pikseli CSS przy 400% powiększeniu. Dla treści internetowych, które są przeznaczone
+                        do przewijania w poziomie (np. z tekstem pionowym), 256 pikseli CSS odpowiada początkowej
+                        wysokości obszaru roboczego 1024 pikseli CSS z 400% powiększeniem.
+                     </p>
+                  </div>
+                  <div class="note">
+                     <p class="note-title marker">Uwaga</p>
+                     <p>Przykładami treści, które wymagają dwuwymiarowego układu są obrazy prezentujące np.
+                        mapy i diagramy, wideo, gry, prezentacje, tabele danych (nie poszczególne komórki)
+                        oraz interfejsy, w których konieczne jest zachowanie pasków narzędzi w widoku podczas
+                        manipulacji treścią. Dopuszczalne jest zapewnienie przewijania dwuwymiarowego dla
+                        takich części treści.
+                     </p>
+                  </div>
+               </div>
+            </aside>
+            <div class="excol-all"></div>
+            <section id="brief">
+               <h2>W skrócie</h2>
+               <dl>
+                  
+                  <dt>Cel</dt>
+                  
+                  <dd>Treść można powiększać bez zwiększania długości wiersza.</dd>
+                  
+                  <dt>Co robić</dt>
+                  
+                  <dd>Umożliwiaj ponowne wlewanie wierszy tekstu w rzutni.</dd>
+                  
+                  <dt>Dlaczego jest to ważne</dt>
+                  
+                  <dd>Osoby, które potrzebują większego tekstu, mają trudności z przewijaniem, aby przeczytać
+                     długie wiersze.
+                  </dd>
+                  
+               </dl>
+            </section>
+            <section id="intent">
+               <h2>Intencja</h2>
+               <p>
+                  Intencją tego kryterium sukcesu jest wsparcie osób słabowidzących, które muszą powiększyć
+                  tekst i czytać go w jednej kolumnie. Gdy powiększenie przeglądarki jest używane do
+                  skalowania treści do 400%, zmienia się ona - tj. jest prezentowana w jednej kolumnie,
+                  dzięki czemu przewijanie w więcej niż jednym kierunku nie jest konieczne.
+                  
+               </p>
+               <p>
+                  Dla osób słabowidzących powiększony tekst ze zmianą przepływu umożliwia czytanie.
+                  To jest krytyczne. Powiększenie umożliwia postrzeganie znaków. Przepływ (ponowne ułożenie)
+                  umożliwia śledzenie. Śledzenie polega na podążaniu wzdłuż wierszy tekstu, w tym przechodzeniu
+                  od końca jednego wiersza do początku następnego wiersza.
+                  
+               </p>
+               <p>
+                  Unikanie konieczności przewijania w kierunku czytania w celu odsłonięcia linii, które
+                  są ucięte przez rzutnię, jest ważne, ponieważ takie przewijanie znacznie zwiększa
+                  wysiłek wymagany do czytania. Ważne jest również, aby treść nie była ukryta poza ekranem.
+                  Na przykład powiększenie strony przewijanej w pionie nie powinno powodować ukrycia
+                  treści z jednej strony.
+                  
+               </p>
+               <section id="jak-działa-ponowne-wlewanie">
+                  
+                  <h3>Jak działa ponowne wlewanie</h3>
+                  
+                  <p>
+                     Programy użytkownika dla technologii takich jak HTML/CSS, PDF i ePub mają metody ponownego
+                     wlewania treści w celu dopasowania do szerokości okna (rzutni). Po odpowiednim utworzeniu
+                     treść strony może być ponownie wlewana (układana), aby pozostać w granicach okna (rzutni),
+                     gdy użytkownicy powiększają rozmiar treści. Relacje przestrzenne treści mogą się zmieniać
+                     wraz z powiększaniem przez użytkowników, ale wszystkie informacje i funkcje powinny
+                     być nadal dostępne.
+                     
+                  </p>
+                  
+                  <p>
+                     Obsługa zmiany przepływu treści jest również znana jako »Responsive Web Design« (projektowanie
+                     responsywne). Jest to możliwe dzięki zapytaniom o media CSS, które przeformatowują
+                     treść strony internetowej dla różnych szerokości rzutni (w określonych punktach przerwania),
+                     aby zapewnić zoptymalizowany układ dla urządzeń mobilnych, takich jak tablety lub
+                     smartfon Co ważne, te punkty przerwania są uruchamiane nie tylko przez węższe rzutnie,
+                     ale także wtedy, gdy użytkownicy korzystają z funkcji powiększania przeglądarki, aby
+                     powiększyć stronę.
+                     
+                  </p>
+                  
+                  <p>
+                     W przeglądarce na komputerach stacjonarnych w 100% (domyślnej) skali, typowe strony
+                     internetowe obsługujące ponowne wlewanie wyświetlają treść w dwóch, trzech lub więcej
+                     kolumnach. Powiększenie w pewnym momencie spowoduje zmianę układu, więc treść będzie
+                     teraz wyświetlana w mniejszej liczbie kolumn. W większej skali powiększenia, wynoszącej
+                     200% lub więcej, treść jest zwykle renderowana w jednej kolumnie. Części treści, które
+                     znajdowały się w kolumnach marginalnych, takie jak menu nawigacyjne lub treść uzupełniająca,
+                     będą teraz zwykle wyświetlane nad lub pod treścią główną.
+                     
+                  </p>
+                  
+               </section>
+               <section id="zasięg-widzenia-i-rozdzielczość-wyświetlacza">
+                  
+                  <h3>Zasięg widzenia i rozdzielczość wyświetlacza</h3>
+                  
+                  <p>
+                     Wartość 320 pikseli CSS została wybrana jako rozsądny minimalny rozmiar, jaki autorzy
+                     mogą osiągnąć. Ta wartość jest zgodna z raportowaną szerokością widocznego obszaru
+                     małych ekranów popularnych urządzeń mobilnych. Szerokość 320 pikseli CSS dokładnie
+                     odpowiada oknu przeglądarki na komputerze ustawionemu na szerokość 1280px i powiększonemu
+                     do 400%. Należy zauważyć, że 400% dotyczy wymiaru, a nie powierzchni. Oznacza to czterokrotność
+                     domyślnej szerokości i czterokrotność domyślnej wysokości.
+                     
+                  </p>
+                  
+                  <figure id="figure-CSS-pixel-letter-4x">
+                     <img src="img/css-pixel-by-device.png" width="462" height="198" alt="Diagram pokazujący rozmiar znaku wymagany w zależności od odległości oglądania, aby uzyskać ten sam obraz na siatkówce, gdy urządzenia z małym ekranem są blisko, a urządzenia z dużym ekranem dalej." />
+                     
+                     <figcaption>Figure 1 Rysunek 1: litera o tym samym rozmiarze w pikselach CSS na różnych wyświetlaczach
+                        o różnych rozdzielczościach
+                     </figcaption>
+                     
+                  </figure>
+                  
+                  <p>
+                     Kiedy czytamy, rozmiar odbitki nie jest tak ważny, jak obraz, który rzutuje na siatkówkę
+                     naszego oka. Telefony są przeznaczone do oglądania z bliska, podczas gdy komputery
+                     stacjonarne są przeznaczone do oglądania z większej odległości. W konsekwencji wydruk
+                     16px na telefonie jest fizycznie mniejszy niż wydruk 16px na komputerze stacjonarnym.
+                     Nie stanowi to problemu, ponieważ oba rozmiary odbitek rzucają ten sam obraz na naszą
+                     siatkówkę, jeśli są oglądane z zamierzonej odległości.
+                     
+                  </p>
+                  
+               </section>
+               <section id="widoczność-i-osiągalność-treści">
+                  
+                  <h3>Widoczność i osiągalność treści</h3>
+                  
+                  <p>
+                     To, jaka część treści jest widoczna, może się zmieniać w różnych skalach. Na przykład
+                     menu nawigacyjne, które są w pełni widoczne w układzie komputerowym, są często zwijane
+                     do mniejszej liczby elementów lub nawet do pojedynczego przycisku menu (wzór ikony
+                     "hamburgera"), dzięki czemu zajmują mniej miejsca na ekranie.
+                     
+                  </p>
+                  
+                  <p>
+                     Kryterium sukcesu jest spełnione, o ile wszystkie treści i funkcje są nadal w pełni
+                     dostępne - albo bezpośrednio, albo ujawnione za pomocą dostępnych elementów sterujących,
+                     albo dostępne za pośrednictwem bezpośrednich łączy.
+                     
+                  </p>
+                  
+               </section>
+               <section id="wyjątki-dotyczące-treści-dla-ponownego-wlewania">
+                  
+                  <h3>Wyjątki dotyczące treści dla ponownego wlewania</h3>
+                  
+                  <p>
+                     Treści, które wymagają dwuwymiarowego układu ze względu na użycie lub znaczenie, nie
+                     mogą być ponownie wlane bez utraty znaczenia, a zatem są wyłączone z konieczności
+                     prezentowania bez przewijania dwuwymiarowego. Na przykład grafika i wideo są z natury
+                     dwuwymiarowe. Pocięcie obrazu i ułożenie bloków w stos sprawiłoby, że zawartość nie
+                     nadawałaby się do użytku. Możliwe jest jednak, aby te elementy pozostawały w granicach
+                     widocznego obszaru, <em>nawet gdy inna treść jest powiększana do 400% (patrz techniki pomocnicze).</em>
+                     
+                  </p>
+                  
+                  <p>
+                     Tabele danych mają dwuwymiarową relację między nagłówkami a komórkami danych. Ta relacja
+                     jest niezbędna do przekazania treści. To kryterium sukcesu zwalnia zatem tabele danych
+                     z konieczności wyświetlania bez przewijania w kierunku tekstu (np. w poziomie na stronie
+                     przewijanej w pionie). Komórki w tabelach danych nie są jednak wyjątkiem, chyba że
+                     komórka zawiera typy treści, które również wymagają dwuwymiarowego układu ze względu
+                     na użycie lub znaczenie.
+                     
+                  </p>
+                  
+                  <p>
+                     Interfejsy, które udostępniają paski narzędzi do edycji treści, muszą pokazywać zarówno
+                     treść, jak i pasek narzędzi w rzutni. W zależności od liczby przycisków paska narzędzi
+                     może być konieczne przewijanie paska narzędzi w kierunku tekstu.
+                     
+                  </p>
+                  
+               </section>
+               <section id="responsywne-projektowanie-stron-internetowych-i-inne-sposoby-na-spełnienie-tego-kryterium-sukcesu">
+                  
+                  <h3>Responsywne projektowanie stron internetowych i inne sposoby na spełnienie tego kryterium
+                     sukcesu
+                  </h3>
+                  
+                  <p>
+                     Korzystanie z responsywnego podejścia do projektowania stron internetowych jest najskuteczniejszą
+                     metodą osiągnięcia celu, jakim jest umożliwienie ludziom powiększenia do 400%. Każda
+                     odmiana (punkt przerwania CSS) strony pod tym samym adresem URL powinna być zgodna
+                     (porównaj <a href="https://www.w3.org/TR/WCAG21/#h-note-27">zgodność z WCAG 2.1</a>).
+                     
+                  </p>
+                  
+                  <p>
+                     Dla organizacji, które korzystają ze starszych systemów lub z jakiegoś powodu nie
+                     są w stanie zaktualizować swoich metod układu, alternatywną wersją zgodną może być
+                     witryna mobilna ze stałym układem o szerokości 320 pikseli. Użytkownik powinien być
+                     w stanie znaleźć tę wersję z domyślnej witryny internetowej.
+                     
+                  </p>
+                  
+               </section>
+               <section id="unikanie-przewijania-w-językach-pisanych-poziomo-i-pionowo">
+                  
+                  <h3>Unikanie przewijania w językach pisanych poziomo i pionowo</h3>
+                  
+                  <p>
+                     Kryterium sukcesu odnosi się zarówno do języków pisanych poziomo, jak i pionowo. Powiększanie
+                     strony w przypadku języków pisanych poziomo, w których strony są domyślnie przewijane
+                     w pionie (np. angielski), nie powinno wymagać przewijania w poziomie. Powiększanie
+                     strony w przypadku języków pisanych pionowo, które domyślnie przewijają się w poziomie,
+                     nie powinno wymagać przewijania w pionie.
+                     
+                  </p>
+                  
+               </section>
+               <section id="związek-między-ponownym-wlaniem-a-kryterium-sukcesu-1.4.4-zmiana-rozmiaru-tekstu">
+                  
+                  <h3>Związek między ponownym wlaniem a kryterium sukcesu 1.4.4 Zmiana rozmiaru tekstu</h3>
+                  
+                  <p>
+                     Kryterium sukcesu 1.4.10 Ponowne układanie skupia się na umożliwieniu użytkownikom
+                     powiększania bez konieczności przewijania w dwóch kierunkach. <a href="zmiana-rozmiaru-tekstu" class="sc">Kryterium sukcesu 1.4.4 Zmiana rozmiaru tekstu</a> również ma zastosowanie, więc powinno być możliwe zwiększenie rozmiaru całego tekstu
+                     do co najmniej 200% przy jednoczesnym spełnieniu wymagań dotyczących ponownego wlania.
+                     W przypadku większości implementacji oczekuje się, że tekst będzie się powiększał
+                     wraz ze wzrostem powiększenia, dzięki czemu użytkownicy mogą powiększać tekst do (i
+                     więcej) 400%. W implementacji, w której tekst nie zwiększa się stale w miarę powiększania
+                     (np. gdy jest przekształcany na podstawie zapytania o media w celu dostosowania go
+                     do użycia na małym ekranie), nadal musi być możliwe uzyskanie 200% powiększenia, aby
+                     spełnić kryterium zmiany rozmiaru tekstu.
+                     
+                  </p>
+                  
+                  <p>
+                     Na przykład, jeśli przy domyślnym ustawieniu przeglądarki na powiększenie 100% tekst
+                     jest ustawiony na 20 pikseli, gdy okno ma szerokość 1280 pikseli, te same 20 pikseli
+                     przy powiększeniu 200% oznaczałoby rozmiar tekstu 200%. Przy powiększeniu 400% autor
+                     może zdecydować się na ustawienie rozmiaru tekstu na 10px: tekst będzie teraz nadal
+                     powiększony do 200% w porównaniu z domyślnym ustawieniem przeglądarki na 100% powiększenia.
+                     Nie jest wymagane osiągnięcie 200% powiększenia tekstu w każdym punkcie przerwania,
+                     ale powinno być możliwe uzyskanie 200% powiększenia tekstu w jakiś sposób.
+                     
+                  </p>
+                  
+               </section>
+               <section id="przeglądarki-w-mobilnych-systemach-operacyjnych">
+                  
+                  <h3>Przeglądarki w mobilnych systemach operacyjnych</h3>
+                  
+                  <p>
+                     Większość przeglądarek w mobilnych systemach operacyjnych nie łączy ponownego wlewania
+                     i powiększania w taki sam sposób, jak w przeglądarkach komputerowych. Te przeglądarki
+                     mobilne zwykle obsługują ponowne wlewanie tekstu podczas zmiany orientacji urządzenia
+                     — treść zostanie dostosowana do nowej szerokości widocznego obszaru. Jednak te przeglądarki
+                     mobilne mogą powiększać treść tylko w celu spełnienia KS 1.4.4. Zmiana rozmiaru tekstu
+                     w sposób, który nie ogranicza ponownego wlewania do jednego wymiaru, na przykład za
+                     pomocą gestu szczypania, aby przeskalować treść lub dwukrotnego dotknięcia określonej
+                     kolumny, aby wypełnić szerokość rzutni. Oznacza to, że powiększona treść w większości
+                     przeglądarek mobilnych wymaga przewijania dwuwymiarowego, niezależnie od tego, co
+                     robi autor.
+                     
+                  </p>
+                  
+                  <p>
+                     Mobilne programy użytkownika <em>mogą</em> oferować ponowne wlewanie tekstu, gdy użytkownicy powiększają treść, o czym świadczy
+                     przeglądarka Dolphin dla systemu Android. Brak obsługi powiększonego ponownego wlewania
+                     tekstu w przeglądarkach w mobilnych systemach operacyjnych można zatem uznać za problem
+                     z obsługą programu użytkownika.
+                     
+                  </p>
+                  
+               </section>
+            </section>
+            <section id="benefits">
+               <h2>Korzyści</h2>
+               <dl>
+                  
+                  <dt>Widok jednej kolumny w projekcie responsywnym</dt>
+                  <dd>Witryna korzysta z projektowania responsywnego. Gdy osoba powiększy obraz do ponad
+                     300%, układ zostanie ponownie wlany do jednej kolumny. Użytkownik może łatwo odczytać
+                     treść i nie musi przewijać na boki, aby ją przeczytać.
+                  </dd>
+                  
+                  <dt>Plik PDF z możliwością ponownego wlania tekstu</dt>
+                  
+                  <dd>W pliku PDF utworzonym zgodnie z normą  PDF/Universal Accessibility (ISO 14289) treść
+                     może być ponownie wlewana i powiększana, aby umożliwić czytanie osobom niedowidzącym.
+                  </dd>
+                  
+               </dl>
+            </section>
+            <section id="examples">
+               <h2>Przykłady</h2>
+               <ul>
+                  
+                  <li>
+                     <strong>Projekt responsywny</strong>
+                     
+                     <p>
+                        
+                        <video controls="controls">
+                           
+                           <source src="https://alastairc.uk/w3c/reflow-example-1-BBC.mp4" type="video/mp4"></source>
+                           
+                           <source src="https://alastairc.uk/w3c/reflow-example-1-BBC.ogv" type="video/ogg"></source>Animacja powiększania witryny responsywnej. Treść wlewa się ponownie, aby dopasować
+                           ją do ekranu.
+                           
+                        </video>
+                        
+                     </p>
+                     
+                     <p>
+                        Zwróć uwagę, że wraz ze wzrostem procentu powiększenia nawigacja zmienia się najpierw,
+                        aby ukryć opcje za menu rozwijanym "Więcej". W miarę powiększania większość opcji
+                        nawigacji znajduje się za przyciskiem menu "hamburger". Wszystkie informacje i funkcjonalności
+                        są nadal dostępne z poziomu niniejszej strony internetowej. Nie ma przewijania w poziomie.
+                        
+                     </p>
+                     
+                  </li>
+                  
+               </ul>
+            </section>
+            <section id="resources">
+               <h2>Powiązane zasoby</h2>
+               <p>Zasoby służą wyłącznie celom informacyjnym. Nie należy traktować ich jako zaleceń.</p>
+               <ul>
+                  
+                  <li><a href="http://web.archive.org/web/20220121073555/http://nosetothepage.org/Fitz/2dScroll.html">Operational Overhead Caused by Horizontal Scrolling Text</a> by Wayne Dick, 2017. (Obciążenie operacyjne spowodowane przewijaniem tekstu w poziomie.
+                     Badanie pokazuje wpływ przewijania poziomego na wysiłek związany z czytaniem)
+                  </li>
+                  
+                  <li><a href="https://www.w3.org/TR/low-vision-needs/">Accessibility Requirements for People with Low Vision</a>. W3C First Public Working Draft 17 March 2016 (Wymagania dotyczące dostępności dla
+                     osób słabowidzących. Pierwszy publiczny szkic roboczy W3C 17 marca 2016)
+                  </li>
+                  
+                  <li><a href="https://developer.mozilla.org/en-US/Apps/Progressive/Responsive">Responsive design resources</a> (Zasoby do projektowania responsywnego) w dokumentacji internetowej MDN
+                  </li>
+                  
+                  <li><a href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/">Responsive web design basics</a> od Google (Samouczek dotyczący podstaw projektowania responsywnych stron internetowych)
+                  </li>
+                  
+               </ul>
+            </section>
+            <section id="techniques">
+               <h2>Techniki</h2>
+               <p>Każdy numerowany element w tej sekcji reprezentuje technikę lub kombinację technik,
+                  które Grupa Robocza WCAG uważa za wystarczające do spełnienia tego kryterium sukcesu.
+                  Nie jest jednak konieczne stosowanie tych konkretnych technik. Aby uzyskać informacje
+                  na temat stosowania innych technik, zobacz <a href="objasnienie-technik.html">Objaśnienie technik dla kryteriów sukcesu WCAG</a>, szczególnie w sekcji „Inne techniki”.
+               </p>
+               <section id="sufficient">
+                  <h3>Techniki wystarczające</h3>
+                  <ul>
+                     
+                     <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/css/C32">C32: Użycie zapytań medialnych i siatki CSS do ponownego wlewania kolumn</a></li>
+                     
+                     <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/css/C31">C31: Użycie technologii CSS flexbox do ponownego wlewania treści</a></li>
+                     
+                     <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/css/C33">C33: Umożliwienie ponownego wlewania z długimi adresami URL i ciągami tekstu</a></li>
+                     
+                     <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/css/C38">C38: Stosowanie własności CSS width, max-width i flexbox, aby dopasować etykiety i
+                           pola formularzy</a></li>
+                     
+                     <li><a class="script" href="https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR34">SCR34: Obliczanie rozmiaru i pozycji w sposób skalujący się z rozmiarem tekstu</a></li>
+                     
+                     <li><a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G206">G206: Zapewnienie opcji przełączania się na układ, który nie wymaga od użytkownika
+                           przewijania poziomo w celu odczytania wiersza tekstu</a></li>
+                     
+                     <li>Korzystanie ze standardu PDF/UA podczas tworzenia plików PDF (Potencjalna przyszła
+                        technika)
+                     </li>
+                     
+                  </ul>
+               </section>
+               <section id="advisory">
+                  <h3>Techniki pomocnicze</h3>
+                  <p>Chociaż nie jest to wymagane do uzyskania zgodności, należy rozważyć następujące dodatkowe
+                     techniki, aby zwiększyć dostępność treści. Nie wszystkie techniki mogą być stosowane
+                     lub byłyby skuteczne we wszystkich sytuacjach.
+                  </p>
+                  <ul>
+                     
+                     <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/css/C34">C34: Użycie zapytań medialnych do usuwania „przypięcia” nagłówków i stopek</a></li>
+                     
+                     <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/css/C37">C37: Użycie własności CSS max-width oraz height, aby dopasować obrazy</a></li>
+                     
+                     <li>CSS, Ponowne wlewanie prostych tabel danych (Potencjalna przyszła technika)</li>
+                     
+                     <li>CSS, Dopasowanie komórek danych do szerokości obszaru operacyjnego (viewport) (Potencjalna
+                        przyszła technika)
+                     </li>
+                     
+                     <li>Mechanizm umożliwiający w dowolnym momencie podgląd mobilny (Potencjalna przyszła
+                        technika)
+                     </li>
+                     
+                  </ul>
+               </section>
+               <section id="failure">
+                  <h3>Błędy</h3>
+                  <p>Poniżej wymieniono typowe błędy, które Grupa Robocza WCAG uważa za niespełnienie tego
+                     kryterium sukcesu.
+                  </p>
+                  <ul>
+                     
+                     <li><a class="failure" href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F102">F102: Niespełnienie kryterium sukcesu 1.4.10 z powodu zniknięcia treści i niedostępności
+                           po ponownym wlaniu treści</a></li>
+                     
+                  </ul>
+               </section>
+            </section>
+            <section id="key-terms">
+               <details>
+                  <summary>
+                     <h2>Kluczowe pojęcia</h2>
+                  </summary>
+                  <dt id="dfn-obszar-roboczy">obszar roboczy</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">obiekt, w którym program użytkownika prezentuje treść (ang. <span lang="en">viewport</span>
+                           
+                        </p>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              <a href="#dfn-program-uzytkownika">Program użytkownika</a> prezentuje treść poprzez jeden lub więcej obszarów roboczych (rzutni). Obszarami
+                              roboczymi są okna, ramki, głośniki, wirtualne okulary. Obszar roboczy może zawierać
+                              w sobie inne rzutnie (na przykład osadzone ramki). Komponenty interfejsu użytkownika
+                              generowane przez program użytkownika, jak podpowiedzi, menu i powiadomienia, nie są
+                              obszarami roboczymi. 
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Definicja jest oparta o słowniczek z <a href="https://www.w3.org/TR/WAI-USERAGENT/glossary.html">User Agent Accessibility Guidelines 1.0 Glossary</a> [[UAAG10]].
+                              
+                           </p>
+                        </div>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-piksel-css">piksel css</dt>
+                  <dd>
+                     <definition xmlns="">
+                        					
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">kąt widzenia wynoszący około 0,0213 stopnia</p>
+                        					
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">Piksel CSS jest kanoniczną jednostką miary dla wszystkich długości i pomiarów w CSS.
+                           Jednostka ta jest niezależna od gęstości i różni się od rzeczywistych pikseli sprzętowych
+                           obecnych na wyświetlaczu. Programy użytkownika i systemy operacyjne powinny zapewnić,
+                           że piksel CSS jest ustawiony jak najbliżej wartości i jednostek piksela referencyjnego
+                           zdefiniowanego w <a href="https://www.w3.org/TR/css3-values/#reference-pixel">CSS Values and Units Module Level 3 reference pixel</a> [[css3-values]], który uwzględnia fizyczne wymiary wyświetlacza oraz zakładaną odległość
+                           oglądania (czynniki, których autorzy treści nie mogą określić).
+                           
+                        </p>
+                        				
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-program-uzytkownika">program użytkownika</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych</p>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Przeglądarki internetowe, odtwarzacze multimediów, wtyczki oraz inne programy — również
+                              technologie wspomagające — które pomagają w wyszukiwaniu, przetwarzaniu i interakcji
+                              z treściami internetowymi.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                     </definition>
+                  </dd>
+               </details>
+            </section><a class="button button-backtotop" href="#top"><span>
+                  <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
+                  </svg> Początek strony
+                  			</span></a></main>
+         <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
+            <header class="box-h  box-h-icon box-h-space-above box-h-icon">
+               <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
+                  <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path>
+               </svg>
+               <h2> Pomóż ulepszyć tę stronę</h2>
+            </header>
+            <div class="box-i">
+               <p>Podziel się pomysłami, sugestiami lub uwagami za pośrednictwem poczty elektronicznej
+                  lub za pośrednictwem GitHub
+               </p>
+               <div class="button-group"><a href="mailto:kontakt@irdpl.pl?subject=%5BObja%C5%9Bnienia%20i%20Techniki%20Informacja%20zwrotna%5D" class="button"><span>E-mail</span></a><a href="https://github.com/irdpl/wcag/issues/" class="button"><span>Rozwidlenie i edycja na Github</span></a><a href="https://github.com/irdpl/wcag/issues/new" class="button"><span>Zgłoszenie problemu na Github</span></a></div>
+            </div>
+         </aside>
+      </div>
+      <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
+         <div class="inner" style="grid-column: 2 / 8">
+            <p class="note">Ta strona jest nieautoryzowaną polską wersją dokumentu W3C. Dokument może zawierać
+               błędne lub nieścisłe tłumaczenia oryginału. Łącze do oryginalnego dokumentu W3C znajduje
+               się <a href="#brief">w sekcji W skrócie</a>.
+            </p>
+            <p><strong>Data:</strong> Aktualizacja 30 May 2024.
+            </p>
+            <p><strong>Opracowane przez</strong> <a href="https://www.w3.org/groups/wg/ag/participants">uczestników Accessibility Guidelines Working Group (AG WG)</a> (współrzewodniczący: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery.
+               Kontakt z obsadą W3C: Michael Cooper).
+            </p>
+            <p>Treść została opracowana w ramach <a href="https://www.w3.org/WAI/about/projects/#us">projektów WAI-Core</a> finansowanych przez Fundusze federalne USA. Interfejs użytkownika został zaprojektowany
+               przez Education and Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) z udziałem z udziałem Shadi Abou-Zahra, Steve Lee i Shawn Lawton Henry w ramach
+               projektu <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a>, współfinansowanego przez Komisję Europejską.
+            </p>
+            <p>Tłumaczenie na język polski zostało wykonane przez: xxx xxx xxx xxx xxx.</p>
+            <p>Wydanie polskie zostało przygotowane przez zespół: xxx xxx xxx xxx xxx.</p>
+         </div>
+      </footer>
+      <footer class="site-footer grid-4q" aria-label="Site">
+         <div class="q1-start q3-end about">
+            <div>
+               <p><a class="largelink" href="https://www.irdpl.pl/" dir="auto" translate="no" lang="pl">© Polska Izba Rzemiosła Dostępnościowego</a></p>
+               <p>
+                  Platforma swobodnej współpracy osób i firm, które zajmują się dostępnością i chcą
+                  rozwijać w Polsce rynek rzetelnych usług dostępnościowych
+                  
+               </p>
+            </div>
+            <div dir="auto" translate="no" lang="pl">
+               <p>
+                  					Prawa autorskie do wszystkich materiałów w tej witrynie należą do W3C.<br /> Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). Zobacz <a href="https://www.w3.org/WAI/about/using-wai-material/" lang="en" hreflang="en">Permission to Use WAI Material</a>.
+               </p>
+            </div>
+         </div>
+         <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
+            <ul style="margin-bottom:0">
+               <li><a href="https://www.irdpl.pl">Nowości</a></li>
+               <li><a href="https://biblio.irdpl.pl">Biblioteka Lidera Dostępności</a></li>
+               <li><a href="https://www.irdpl.pl/HTML_CodeSniffer">HTML_CodeSniffer</a></li>
+            </ul>
+         </div>
+      </footer>
+      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+</html>
