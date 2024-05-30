@@ -4913,7 +4913,7 @@
                   "sufficient": [
                     {
                       "id": "TECH:H58",
-                      "title": "Użycie atrybutu lang do wskazywania zmian w ludzkim języku"
+                      "title": "Użycie atrybutu lang do wskazywania zmian w języku naturalnym"
                     },
                     {
                       "id": "TECH:PDF19",
