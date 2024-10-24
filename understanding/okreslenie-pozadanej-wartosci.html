@@ -92,11 +92,11 @@
             <section id="intent">
                <h2>Intencja</h2>
                <p>
-                  Celem tego kryterium powodzenia jest zapewnienie, że cel danych wprowadzanych w formularzu
+                  Celem tego kryterium sukcesu jest zapewnienie, że cel danych wprowadzanych w formularzu
                   gromadzącym informacje o użytkowniku można określić programowo, tak aby programy użytkownika
                   mogły wyodrębnić i przedstawić ten cel użytkownikom korzystającym z różnych modalności.
-                  Możliwość programowego zadeklarowania konkretnego rodzaju danych oczekiwanych w danym
-                  polu ułatwia wypełnianie formularzy, zwłaszcza osobom z zaburzeniami poznawczymi.
+                  Programowe zadeklarowanie konkretnego rodzaju danych oczekiwanych w danym polu ułatwia
+                  wypełnianie formularzy, zwłaszcza osobom z zaburzeniami poznawczymi.
                   
                </p>
                <p>
@@ -127,9 +127,7 @@
                   Atrybut autouzupełniania HTML akceptuje tylko określoną liczbę dobrze zdefiniowanych
                   stałych wartości. Pozwala to na bardziej szczegółową definicję lub identyfikację celu
                   niż atrybut type, na przykład poprzez umożliwienie autorowi określenia konkretnego
-                  typu nazwy: Nazwisko (autocomplete="name"), Pierwsze imię (autocomplete="given-name"),
-                  Nazwisko rodowe (autocomplete="family-name"), a także Nazwa użytkownika (autocomplete="username")
-                  i Pseudonim, nazwa ekranowa (autocomplete="nickname").
+                  typu nazwy: Nazwisko (<code>autocomplete="name"</code>), Pierwsze imię (<code>autocomplete="given-name"</code>), Nazwisko rodowe (<code>autocomplete="family-name"</code>), a także Nazwa użytkownika (<code>autocomplete="username"</code>) i Pseudonim, nazwa ekranowa (<code>autocomplete="nickname"</code>).
                   
                </p>
                <p>
@@ -138,8 +136,7 @@
                   wejściowych użytkownikom w różnych modalnościach. Na przykład technologie wspomagające
                   mogą wyświetlać znajome ikony obok pól wprowadzania danych, aby pomóc użytkownikom,
                   którzy mają trudności z czytaniem. Ikona tortu urodzinowego może być wyświetlana przed
-                  polem formularza z autouzupełnianiem="bday" lub ikona telefonu przed polem formularza
-                  z autouzupełnianiem="tel".
+                  polem formularza z <code>autocomplete="bday"</code> lub ikona telefonu przed polem formularza z <code>autocomplete="tel"</code>.
                   
                </p>
                <p>
@@ -148,14 +145,14 @@
                   mogą sugerować i „autouzupełniać” odpowiednią treść poprzez automatyczne uzupełnianie
                   tych pól na podstawie wcześniejszych danych wejściowych użytkownika przechowywanych
                   w przeglądarce. Definiując bardziej szczegółowe definicje typowych celów wejściowych,
-                  na przykład „Urodziny” (autouzupełnianie="bday"), przeglądarki mogą przechowywać spersonalizowane
-                  wartości dla każdego z tych pól (data urodzin użytkownika). Użytkownik jest zwolniony
-                  z konieczności wpisywania informacji i może zamiast tego potwierdzić lub, w razie
-                  potrzeby, zmienić wartość pola, co jest znaczącą korzyścią dla użytkowników z problemami
-                  z pamięcią, dysleksją i innymi niepełnosprawnościami. Ponieważ wartości autouzupełniania
-                  są niezależne od języka, użytkownicy, którzy mogą nie być zaznajomieni z tekstem używanym
-                  do wizualnej identyfikacji pól wprowadzania użytkownika (etykieta), mogą nadal konsekwentnie
-                  identyfikować ten cel ze względu na ustaloną taksonomię terminów.
+                  na przykład „Urodziny” (<code>autocomplete="bday"</code>), przeglądarki mogą przechowywać spersonalizowane wartości dla każdego z tych pól
+                  (data urodzin użytkownika). Użytkownik jest zwolniony z konieczności wpisywania informacji
+                  i może zamiast tego potwierdzić lub, w razie potrzeby, zmienić wartość pola, co jest
+                  znaczącą korzyścią dla użytkowników z problemami z pamięcią, dysleksją i innymi niepełnosprawnościami.
+                  Ponieważ wartości autouzupełniania są niezależne od języka, użytkownicy, którzy mogą
+                  nie być zaznajomieni z tekstem używanym do wizualnej identyfikacji pól wprowadzania
+                  użytkownika (etykieta), mogą nadal konsekwentnie identyfikować ten cel ze względu
+                  na ustaloną taksonomię terminów.
                   
                </p>
                <p>
@@ -167,7 +164,7 @@
                </p>
                <p>
                   Gdy program użytkownika i technologia wspomagająca będą obsługiwać inne formaty metadanych,
-                  schematy metadanych, takie jak <a href="https://www.w3.org/TR/adapt-symbols/" lang="en" hreflang="en">WAI-Adapt: Symbole Moduł</a> mogą być używane dodatkowo lub zamiast atrybutu autouzupełniania HTML w celu określenia
+                  schematy metadanych, takie jak <a href="https://www.w3.org/TR/adapt-symbols/" lang="en" hreflang="en">WAI-Adapt: Symbols Module</a> mogą być używane dodatkowo lub zamiast atrybutu autouzupełniania HTML w celu określenia
                   celu pól formularza. Mogą również obsługiwać automatyczne adaptacje, które identyfikują
                   i dopasowują etykiety wejściowe dostarczone przez autora do zdefiniowanych słowników
                   lub symboli, które są używane zamiast tego do etykietowania danych formularza.
@@ -212,7 +209,7 @@
                   <dd>Formularz kontaktowy automatycznie wypełnia pola imienia i nazwiska, ulicy, kodu pocztowego,
                      miasta, numeru telefonu i adresu e-mail z wartości autouzupełniania przechowywanych
                      w przeglądarce użytkownika. Technologia wspomagająca może oferować własny sposób identyfikacji
-                     poszczególnych pól wejściowych, na przykład w oparciu o zestaw symboli / ikon znanych
+                     poszczególnych pól wejściowych, na przykład w oparciu o zestaw symboli/ikon znanych
                      użytkownikowi, aby wizualnie przekazać cel pól.
                   </dd>
                   
@@ -474,7 +471,7 @@
                błędne lub nieścisłe tłumaczenia oryginału. Łącze do oryginalnego dokumentu W3C znajduje
                się <a href="#brief">w sekcji W skrócie</a>.
             </p>
-            <p><strong>Data:</strong> Aktualizacja 29 September 2024.
+            <p><strong>Data:</strong> Aktualizacja 24 October 2024.
             </p>
             <p><strong>Opracowane przez</strong> <a href="https://www.w3.org/groups/wg/ag/participants">uczestników Accessibility Guidelines Working Group (AG WG)</a> (współrzewodniczący: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery.
                Kontakt z obsadą W3C: Michael Cooper).

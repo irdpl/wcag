@@ -127,13 +127,13 @@
                   tablecie graficznym lub gładziku, albo za pomocą myszy, joysticka lub podobnego urządzenia
                   wskazującego.
                </p>
-               <p>Przeciąganie to ruch, podczas którego użytkownik podnosi obiekt za pomocą wskaźnika
-                  (takiego jak kursor myszy lub palec) i przesuwa go w inne miejsce. Ten ruch od punktu
-                  początkowego do punktu końcowego nie wymaga od użytkownika podążania żadną konkretną
-                  ścieżką ani kierunkiem. Dlatego przeciąganie nie opiera się na ścieżce. Natomiast
-                  gest wskaźnika oparty na ścieżce wymaga przejścia przez punkt pośredni, co jest technicznym
-                  sposobem wyrażenia, że kierunkowość i ewentualnie prędkość gestu przekazuje systemowi
-                  określone polecenie. Ruchy przeciągania są uwzględnione w <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging.html">Kryterium sukcesu 2.5.7: Ruch przeciągania</a>.
+               <p>Przeciąganie to ruch, podczas którego użytkownik chwyta i podnosi obiekt za pomocą
+                  wskaźnika (takiego jak kursor myszy lub palec) i przesuwa go w inne miejsce. Ten ruch
+                  od punktu początkowego do punktu końcowego nie wymaga od użytkownika podążania żadną
+                  konkretną ścieżką ani kierunkiem. Dlatego przeciąganie nie opiera się na ścieżce.
+                  Natomiast gest wskaźnika oparty na ścieżce wymaga przejścia przez punkt pośredni,
+                  co jest technicznym sposobem wyrażenia, że kierunkowość i ewentualnie prędkość gestu
+                  przekazuje systemowi określone polecenie. Ruchy przeciągania są uwzględnione w <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging.html">Kryterium sukcesu 2.5.7: Ruch przeciągania</a>.
                </p>
                <figure id="figure-path-based-gesture-3">
                   <img src="img/path-based-gesture-3.png" width="400" alt="Ręka pokazująca dotknięcie początkowe, 1. Przejście do drugiego punktu, 2. Podąża bardzo losową ścieżką." />
@@ -146,7 +146,7 @@
                   <p class="note-title marker">Uwaga</p>
                   <p>Każdy ruch wskaźnika może być trudny lub niemożliwy do wykonania dla osoby, która
                      nie potrafi wykonywać precyzyjnych ruchów, dlatego zawsze zalecane są alternatywne
-                     formy interakcji. To kryterium sukcesu obejmuje <em>gesty oparte na ścieżce,</em> ponieważ zapewnienie alternatywy dla <em>gestów o dowolnej formie</em>może być trudne lub niemożliwe.
+                     formy interakcji. To kryterium sukcesu obejmuje <em>gesty oparte na ścieżce</em>, ponieważ zapewnienie alternatywy dla <em>gestów o dowolnej formie</em> może być trudne lub niemożliwe.
                   </p>
                </div>
                <p>Przykłady gestów <strong>wielopunktowych</strong> obejmują przybliżenie przez zsunięcie dwóch palców, rozdzielone dotknięcie w miejscu,
@@ -191,8 +191,10 @@
                <p>Ponieważ urządzenia z ekranem dotykowym mogą stosować domyślne gesty, ważne jest,
                   aby przetestować je, jeśli nie masz pewności, czy dany komponent wymaga gestu opartego
                   na ścieżce.
+                  	
                </p>
-               <p>Przeglądarki na urządzeniach z ekranem dotykowym zazwyczaj udostępniają pewne domyślne
+               <p>
+                  	Przeglądarki na urządzeniach z ekranem dotykowym zazwyczaj udostępniają pewne domyślne
                   gesty, które wpływają na to, czy potrzebny jest gest oparty na ścieżce. Na przykład
                   przeglądarka internetowa na urządzeniach z ekranem dotykowym może wykryć gest pionowy
                   i przewinąć stronę. Jeśli użytkownik położy palec na kciuku suwaka i przesunie się
@@ -202,8 +204,10 @@
                   ekranem dotykowym jako obsługiwane w ramach ułatwień dostępu, tego typu interakcje
                   wymagają przetestowania z ekranem dotykowym, ponieważ podobne użycie myszy nie spowodowałoby
                   takiego samego zachowania przeglądarki.
+                  	
                </p>
-               <p>To kryterium sukcesu nie wymaga, aby cała funkcjonalność była dostępna za pośrednictwem
+               <p>
+                  	To kryterium sukcesu nie wymaga, aby cała funkcjonalność była dostępna za pośrednictwem
                   urządzeń wskazujących, ale jeśli jest ona dostępna dla urządzeń wskazujących, nie
                   powinna wymagać gestów opartych na ścieżce. Chociaż twórcy treści zazwyczaj muszą
                   udostępniać polecenia klawiaturowe lub inne mechanizmy inne niż wskaźnik, które wykonują
@@ -218,19 +222,25 @@
                   kliknąć element sterujący z etykietą. Dlatego też, jeśli obsługiwany jest jeden lub
                   więcej mechanizmów opartych na wskaźnikach, korzyści z nich powinny być dostępne dla
                   użytkowników jedynie poprzez proste, jednopunktowe działania.
+                  	
                </p>
-               <p>Operacje pojedynczym wskaźnikiem obejmują dotknięcia i kliknięcia, podwójne dotknięcia
+               <p>
+                  	Operacje pojedynczym wskaźnikiem obejmują dotknięcia i kliknięcia, podwójne dotknięcia
                   i podwójne kliknięcia, długie naciśnięcia, przesuwanie, przeciąganie i gesty oparte
                   na ścieżce. Gesty takie jak „szczypanie, aby powiększyć” lub przesunięcie dwoma palcami
                   są gestami <em>wielopunktowymi</em>, ponieważ wymagają użycia dwóch lub więcej wskaźników – w tym przypadku dwóch palców
                   na ekranie dotykowym.
+                  	
                </p>
-               <p>Wyjątek stanowi funkcjonalność, która z natury i koniecznie opiera się na złożonych
+               <p>
+                  	Wyjątek stanowi funkcjonalność, która z natury i koniecznie opiera się na złożonych
                   ścieżkach lub gestach wielopunktowych. Na przykład wpisanie podpisu może być z natury
                   oparte na ścieżce (chociaż potwierdzenie czegoś lub potwierdzenie Twojej tożsamości
                   nie musi być).
+                  	
                </p>
-               <p>To kryterium sukcesu <em>nie ma zastosowania</em> do gestów obejmujących przeciąganie w dowolnym kierunku, ponieważ w operacji przeciągania
+               <p>
+                  	To kryterium sukcesu <em>nie ma zastosowania</em> do gestów obejmujących przeciąganie w dowolnym kierunku, ponieważ w operacji przeciągania
                   liczą się tylko punkty początkowe i końcowe. Jednak takie gesty wymagają doskonałej
                   kontroli motorycznej. Twórców zachęca się do zapewniania metod innych niż przeciąganie,
                   na przykład operację przeciągania i upuszczania można również przeprowadzić poprzez
@@ -434,7 +444,7 @@
                błędne lub nieścisłe tłumaczenia oryginału. Łącze do oryginalnego dokumentu W3C znajduje
                się <a href="#brief">w sekcji W skrócie</a>.
             </p>
-            <p><strong>Data:</strong> Aktualizacja 29 September 2024.
+            <p><strong>Data:</strong> Aktualizacja 24 October 2024.
             </p>
             <p><strong>Opracowane przez</strong> <a href="https://www.w3.org/groups/wg/ag/participants">uczestników Accessibility Guidelines Working Group (AG WG)</a> (współrzewodniczący: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery.
                Kontakt z obsadą W3C: Michael Cooper).

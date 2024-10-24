@@ -84,47 +84,55 @@
             <section id="intent">
                <h2>Intencja</h2>
                <p>Intencją tego kryterium sukcesu jest zapewnienie, że słowa wizualnie oznaczające komponent
-                  są jednocześnie słowami skojarzonymi z komponentem programowo.  Dzięki temu osoby
-                  z niepełnosprawnościami mogą polegać na widocznych etykietach jako sposobie interakcji
+                  są jednocześnie słowami powiązanymi z komponentem programowo. Dzięki temu osoby z
+                  niepełnosprawnościami mogą polegać na widocznych etykietach jako sposobie interakcji
                   z komponentami.
                </p>
                <p>Większości kontrolek towarzyszy widoczna <strong>etykieta</strong> tekstowa. Te same kontrolki mają <strong>nazwę</strong> programową, znaną również jako <a href="https://www.w3.org/TR/accname-aam-1.1/">dostępna nazwa</a>. Użytkownicy zazwyczaj czują się znacznie lepiej, jeśli słowa i znaki w widocznej
-                  etykiecie kontrolki pasują do dostępnej nazwy lub są zawarte w niej Gdy tak jest,
+                  etykiecie kontrolki pasują do dostępnej nazwy lub są zawarte w niej. Gdy tak jest,
                   użytkownicy wprowadzający mowę (tj. użytkownicy aplikacji do rozpoznawania mowy) mogą
                   nawigować, wypowiadając widoczne etykiety tekstowe komponentów, takich jak menu, łącza
-                  i przyciski, które pojawiają się na ekranie.  Użytkownicy widzący, którzy korzystają
+                  i przyciski, które pojawiają się na ekranie. Użytkownicy widzący, którzy korzystają
                   z funkcji zamiany tekstu na mowę (np. czytników ekranu) również będą mieli lepsze
                   wrażenia, jeśli tekst, który słyszą, będzie zgodny z tekstem, który widzą na ekranie.
+                  	
                </p>
-               <p>Zauważ, że jeśli dla komponentu nie istnieje widoczna etykieta tekstowa, to kryterium
+               <p>
+                  	Zauważ, że jeśli dla komponentu nie istnieje widoczna etykieta tekstowa, to kryterium
                   sukcesu nie ma zastosowania do tego komponentu
+                  	
                </p>
-               <p>Tam, gdzie istnieją etykiety tekstowe i są one odpowiednio powiązane z komponentami
+               <p>
+                  	Tam, gdzie istnieją etykiety tekstowe i są one odpowiednio powiązane z komponentami
                   interfejsu użytkownika za pomocą ustalonych praktyk programistycznych, etykieta i
                   nazwa będą zwykle zgodne. Jeśli nie są one zgodne, użytkownicy wprowadzający mowę,
                   którzy próbują użyć widocznej etykiety tekstowej jako środka nawigacji lub wyboru
-                  (np. "przejdź do hasła"), nie odniosą sukcesu. Nawigacja oparta na mowie kończy się
-                  niepowodzeniem, ponieważ widoczna etykieta wymawiana przez użytkowników nie pasuje
-                  (lub nie jest częścią) dostępnej nazwy włączonej jako polecenie wprowadzania mowy.
-                  Ponadto, gdy dostępna nazwa różni się od widocznej etykiety, może działać jako ukryte
-                  polecenie, które może zostać przypadkowo aktywowane przez użytkowników wprowadzania
-                  mowy.
+                  (np. <q>przejdź do hasła</q>), nie odniosą sukcesu. Nawigacja oparta na mowie kończy się niepowodzeniem, ponieważ
+                  widoczna etykieta wymawiana przez użytkowników nie pasuje (lub nie jest częścią) dostępnej
+                  nazwy włączonej jako polecenie wprowadzania mowy.  Ponadto, gdy dostępna nazwa różni
+                  się od widocznej etykiety, może działać jako ukryte polecenie, które może zostać przypadkowo
+                  aktywowane przez użytkowników wprowadzania mowy.
+                  	
                </p>
-               <p>Rozbieżności między widocznymi etykietami a programowymi nazwami elementów sterujących
+               <p>
+                  	Rozbieżności między widocznymi etykietami a programowymi nazwami elementów sterujących
                   stanowią jeszcze większy problem dla użytkowników korzystających z funkcji wprowadzania
-                  mowy i zamiany tekstu na mowę, którzy również mają problemy poznawcze.  Niedopasowanie
+                  mowy i zamiany tekstu na mowę, którzy również mają problemy poznawcze. Niedopasowanie
                   powoduje dodatkowe obciążenie poznawcze dla użytkowników wprowadzania mowy, którzy
                   muszą pamiętać o wypowiedzeniu polecenia głosowego, innego niż etykieta widoczna na
-                  kontrolce.  Stwarza to również dodatkowe obciążenie poznawcze dla użytkownika syntezatora
+                  kontrolce. Stwarza to również dodatkowe obciążenie poznawcze dla użytkownika syntezatora
                   mowy, aby przyswoić i zrozumieć wyjście mowy, która nie odpowiada widocznej etykiecie
+                  	
                </p>
                <p>Aby dopasować tekst etykiety i dostępną nazwę, należy najpierw określić, który tekst
                   na ekranie powinien być uważany za etykietę dla danej kontrolki. W interfejsie użytkownika
                   często występuje wiele ciągów tekstowych, które mogą być istotne dla kontrolki. Istnieją
                   jednak powody, dla których najlepiej jest konserwatywnie interpretować etykietę jako
                   tylko tekst w bliskim sąsiedztwie.
+                  	
                </p>
-               <p>Zazwyczaj etykietą dla komponentów interfejsu użytkownika jest sąsiadujący ciąg tekstowy.
+               <p>
+                  	Zazwyczaj etykietą dla komponentów interfejsu użytkownika jest sąsiadujący ciąg tekstowy.
                   Typowe pozycjonowanie dla języków od lewej do prawej to:
                </p>
                <ul>
@@ -153,32 +161,34 @@
                   mowy na interakcję z elementem za pośrednictwem jego konwencjonalnie umieszczonej
                   etykiety, a użytkownikom technologii odczytu ekranu pozwala cieszyć się spójnością
                   między pobliską widoczną etykietą a ogłoszoną nazwą komponentu.
+                  	
                </p>
-               <p>Należy pamiętać, że tekst zastępczy w polu wejściowym nie jest uważany za odpowiedni
-                  sposób zapewniania etykiety. <a href="https://www.w3.org/TR/html52/sec-forms.html#the-placeholder-attribute">Specyfikacja HTML5</a> stanowi, że <q>atrybut placeholder nie powinien być używany jako alternatywa dla &lt;label&gt;</q>. Warto jednak zauważyć, że "etykieta" w tym oświadczeniu HTML5 znajduje się w nawiasach
-                  kodowych i łączy się z elementem <code>label</code>. Dla celów tego kryterium sukcesu Etykieta w nazwie, "etykieta" nie jest używana
+               <p>
+                  	Należy pamiętać, że tekst zastępczy w polu formularza nie jest uważany za odpowiedni
+                  sposób zapewniania etykiety. <a href="https://www.w3.org/TR/html52/sec-forms.html#the-placeholder-attribute">Specyfikacja HTML5</a> stanowi, że <q>atrybut placeholder nie powinien być używany jako alternatywa dla &lt;label&gt;</q>. Warto jednak zauważyć, że „etykieta” w tym oświadczeniu HTML5 znajduje się w nawiasach
+                  kodowych i łączy się z elementem <code>label</code>. Dla celów tego kryterium sukcesu Etykieta w nazwie, „etykieta” nie jest używana
                   w takim programistycznym znaczeniu, ale po prostu odnosi się do ciągu tekstowego znajdującego
                   się w bezpośredniej bliskości komponentu. Dlatego, w przypadku braku jakiegokolwiek
-                  innego ciągu tekstowego w pobliżu (jak opisano na poprzedniej liście), jeśli dane
-                  wejściowe zawierają tekst zastępczy, taki tekst może być kandydatem do etykiety w
-                  nazwie. Jest to wspierane zarówno przez obliczanie dostępnej nazwy (omówione później),
-                  jak i z praktycznego punktu widzenia, że jeśli widoczna etykieta nie jest dostarczana
-                  w inny sposób, prawdopodobne jest, że użytkownik wprowadzania mowy może próbować użyć
-                  zastępczej wartości tekstowej jako sposobu interakcji z danymi wejściowymi.
+                  innego ciągu tekstowego w pobliżu (jak opisano na poprzedniej liście), jeśli pole
+                  formularza zawiera tekst zastępczy (<code>placeholder</code>, taki tekst może być kandydatem do etykiety w nazwie. Jest to wspierane zarówno przez
+                  obliczanie dostępnej nazwy (omówione później), jak i z praktycznego punktu widzenia,
+                  że jeśli widoczna etykieta nie jest dostarczana w inny sposób, prawdopodobne jest,
+                  że użytkownik wprowadzania mowy może próbować użyć zastępczej wartości tekstowej jako
+                  sposobu interakcji z danymi wejściowymi.
                </p>
-               <section id="etykiety-tekstowe-&#34;wyrażają-coś-w-języku-naturalnym&#34;">
+               <section id="etykiety-tekstowe-„wyrażają-coś-w-języku-naturalnym”">
                   
-                  <h3>Etykiety tekstowe "wyrażają coś w języku naturalnym"</h3>
+                  <h3>Etykiety tekstowe „wyrażają coś w języku naturalnym”</h3>
                   
                   <section id="symboliczne-znaki-tekstowe">
                      
                      <h4>Symboliczne znaki tekstowe</h4>
                      
                      <p>Dla celów tego kryterium tekst nie powinien być uważany za widoczną etykietę, jeśli
-                        jest używany w sposób symboliczny, a nie bezpośrednio <q>wyrażający coś w naturalnym</q> języku, zgodnie z definicją <a href="#dfn-tekst">tekstu</a> w WCAG. Na przykład, <a href="https://www.w3.org/TR/WCAG21/#images-of-text">1.4.5 Obrazy tekstu</a> opisuje rozważania dotyczące "symbolicznych znaków tekstowych". Na obrazach przykładowego
-                        tekstu "B", "I" oraz "ABC" pojawiają się na ikonach w edytorze tekstu, gdzie mają
+                        jest używany w sposób symboliczny, a nie bezpośrednio <q>wyrażający coś w naturalnym</q> języku, zgodnie z definicją <a href="#dfn-tekst">tekstu</a> w WCAG. Na przykład, <a href="https://www.w3.org/TR/WCAG21/#images-of-text">1.4.5 Obrazy tekstu</a> opisuje rozważania dotyczące „symbolicznych znaków tekstowych”. Na obrazach przykładowego
+                        tekstu „B”, „I” oraz „ABC” pojawiają się na ikonach w edytorze tekstu, gdzie mają
                         symbolizować odpowiednio funkcje pogrubienia, kursywy i pisowni. W takim przypadku
-                        dostępną nazwą powinna być funkcja przycisku (np. "Sprawdź pisownię"), a nie widoczne
+                        dostępną nazwą powinna być funkcja przycisku (np. „Sprawdź pisownię”), a nie widoczne
                         znaki symboliczne. Podobny edytor tekstu pokazano na poniższym rysunku.
                      </p>
                      
@@ -191,10 +201,10 @@
                         
                      </figure>
                      
-                     <p>Podobnie, gdy autor użył symbolu większego niż ("&gt;"), aby naśladować wygląd strzałki
+                     <p>Podobnie, gdy autor użył symbolu większego niż („ &gt; ”), aby naśladować wygląd strzałki
                         skierowanej w prawo, tekst nie przekazuje czegoś w języku naturalnym. Jest to symbol,
-                        w tym scenariuszu prawdopodobnie mający naśladować ikony używane dla przycisku "Odtwórz"
-                        lub strzałki "Dalej".
+                        w tym scenariuszu prawdopodobnie mający naśladować ikony używane dla przycisku „Odtwórz”
+                        lub strzałki „Dalej”.
                      </p>
                      
                      <h4>Interpunkcja i wielkie litery</h4>
@@ -213,9 +223,9 @@
                      
                      <p>
                         Chociaż uwzględnienie dwukropka i wielkich liter w dostępnej nazwie z pewnością nie
-                        jest błędem, obliczona nazwa "Imię" nie powinna być traktowana jako błąd "Imię:".<br />
+                        jest błędem, obliczona nazwa „Imię” nie powinna być traktowana jako błąd „Imię:”.<br />
                         <label for="firstname">Imię: </label><input id="firstname" type="text" name="firstname" /><br />
-                        Podobnie, "Dalej..." widoczne na przycisku może mieć "Dalej" jako dostępną nazwę.
+                        Podobnie, „Dalej...” widoczne na przycisku może mieć „Dalej” jako dostępną nazwę.
                         W razie wątpliwości, gdy istnieje znacząca widoczna etykieta, należy dokładnie dopasować
                         ciąg znaków do dostępnej nazwy.<br />
                         <input type="submit" value="Dalej..." />
@@ -233,17 +243,17 @@
                         symbolicznych. Symbole matematyczne mogą być używane jako etykiety; na przykład "11×3=33"
                         i "A&gt;B" przekazują znaczenie. Etykieta nie powinna być nadpisywana w dostępnej nazwie
                         i należy unikać zastępowania słów, gdy używana jest formuła, ponieważ istnieje wiele
-                        sposobów wyrażenia tego samego równania. Na przykład, nadanie nazwy "jedenaście pomnożone
-                        przez trzy równa się trzydzieści trzy" może oznaczać, że użytkownik, który powiedział
-                        "jedenaście razy trzy równa się trzydzieści trzy" może nie pasować. Najlepiej jest
+                        sposobów wyrażenia tego samego równania. Na przykład, nadanie nazwy „jedenaście pomnożone
+                        przez trzy równa się trzydzieści trzy” może oznaczać, że użytkownik, który powiedział
+                        „jedenaście razy trzy równa się trzydzieści trzy” może nie pasować. Najlepiej jest
                         pozostawić formuły tak, jak zostały użyte w etykiecie i liczyć na to, że użytkownik
                         będzie zaznajomiony ze swoim oprogramowaniem mowy, aby uzyskać dopasowanie. Co więcej,
                         przekształcenie etykiety wzoru matematycznego w dostępną nazwę, która jest pisanym
                         odpowiednikiem, może powodować problemy z tłumaczeniem. Nazwa powinna być zgodna z
                         tekstem formuły etykiety. Należy pamiętać, że twórcy powinni używać odpowiedniego
                         symbolu w formule. Na przykład 11x3 (z małą lub dużą literą X), 11*3 (z symbolem gwiazdki)
-                        i 11×3 (z symbolem <code>&amp;times</code><code>;</code> ) są łatwe do zinterpretowania przez widzących użytkowników jako oznaczające tę samą
-                        formułę, ale nie wszystkie mogą być dopasowane do "11 razy 3" przez oprogramowanie
+                        i 11×3 (z symbolem <code>&amp;razy</code><code>;</code> ) są łatwe do zinterpretowania przez widzących użytkowników jako oznaczające tę samą
+                        formułę, ale nie wszystkie mogą być dopasowane do „11 razy 3” przez oprogramowanie
                         do rozpoznawania mowy. Należy użyć odpowiedniego symbolu operatora (w tym przypadku
                         symbolu czasu).<br />
                         <input type="radio" name="equation" id="answer1" value="A&gt;B" /><label for="answer1">A&gt;B</label> <input type="radio" name="equation" id="answer2" value="A=B" /><label for="answer2">A=B</label> <input type="radio" name="equation" id="answer3" value="A&lt;B" /><label for="answer3">A&lt;B</label>
@@ -281,8 +291,7 @@
                   </ul>
                   
                   <p>Takie informacje tekstowe mogą stanowić część <em>opisu</em> komponentu. Tak więc zarówno z programowego punktu widzenia, jak i z konserwatywnej
-                     taktyki uznawania etykiety za "sąsiadujący tekst", ani nagłówki, ani instrukcje, ani
-                     "etykiety" grup nie powinny być zwykle uważane za <strong>etykiety</strong> do celów tego kryterium sukcesu.
+                     taktyki uznawania etykiety za <q>sąsiadujący tekst</q>, ani nagłówki, ani instrukcje, ani <q>etykiety</q> grup nie powinny być zwykle uważane za <strong>etykiety</strong> do celów tego kryterium sukcesu.
                   </p>
                   
                   <p>Należy zauważyć, że specyfikacja pozwala autorom na zastąpienie nazwy obliczonej za
@@ -322,7 +331,7 @@
                   <li><strong>Dostępna nazwa pasuje do widocznej etykiety:</strong> Dostępna nazwa i widoczna etykieta kontrolki są takie same.
                   </li>
                   
-                  <li><strong>Dostępna nazwa zaczyna się od widocznej etykiety:</strong> Dostępna nazwa "Szukaj wartości" zaczyna się od tekstu widocznej etykiety "Szukaj".
+                  <li><strong>Dostępna nazwa zaczyna się od widocznej etykiety:</strong> Dostępna nazwa <q>Szukaj wartości</q> zaczyna się od tekstu widocznej etykiety <q>Szukaj</q>.
                   </li>
                   
                </ul>
@@ -369,7 +378,7 @@
                            postrzeganie relacji</a></li>
                      
                      <li>Jeśli ikona nie ma towarzyszącego jej tekstu, należy rozważyć użycie jej tekstu unoszącego
-                        się nad ikoną jako dostępnej nazwy (potencjalna przyszła technika)
+                        się nad ikoną jako dostępnej nazwy (Potencjalna przyszła technika)
                      </li>
                      
                   </ul>
@@ -381,7 +390,7 @@
                   </p>
                   <ul>
                      
-                     <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F96">F96: F96: Błąd spowodowany dostępną nazwą, która nie zawiera widocznego tekstu etykiety</a></li>
+                     <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F96">F96: Błąd spowodowany dostępną nazwą, która nie zawiera widocznego tekstu etykiety</a></li>
                      
                      <li>Dostępna nazwa zawiera widoczny tekst etykiety, ale słowa widocznej etykiety nie są
                         w tej samej kolejności, co w widocznym tekście etykiety (Potencjalna przyszła technika).
@@ -995,7 +1004,7 @@
                błędne lub nieścisłe tłumaczenia oryginału. Łącze do oryginalnego dokumentu W3C znajduje
                się <a href="#brief">w sekcji W skrócie</a>.
             </p>
-            <p><strong>Data:</strong> Aktualizacja 29 September 2024.
+            <p><strong>Data:</strong> Aktualizacja 24 October 2024.
             </p>
             <p><strong>Opracowane przez</strong> <a href="https://www.w3.org/groups/wg/ag/participants">uczestników Accessibility Guidelines Working Group (AG WG)</a> (współrzewodniczący: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery.
                Kontakt z obsadą W3C: Michael Cooper).

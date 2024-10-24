@@ -109,21 +109,21 @@
                </ul>
                <p>
                   Do stron można dodawać informacje, które nie spełniają definicji komunikatu o stanie.
-                  Na przykład lista wyników uzyskanych w wyniku wyszukiwania nie jest uważana za aktualizację
-                  stanu, a zatem nie jest objęta tym kryterium sukcesu. Jednak krótkie komunikaty tekstowe
-                  wyświetlane <em>na temat</em> zakończenia lub statusu wyszukiwania, takie jak „Wyszukiwanie...”, „Zwrócono 18 wyników”
-                  lub „Nie zwrócono żadnych wyników” byłyby aktualizacjami stanu, gdyby nie otzymywały
-                  fokusu. Przykłady komunikatów o stanie podano w sekcji zatytułowanej <a href="#status-examples">Przykłady komunikatów o stanie</a> poniżej.
+                  Na przykład lista wyników wyszukiwania nie jest uważana za aktualizację stanu, a zatem
+                  nie jest objęta tym kryterium sukcesu. Jednak krótkie komunikaty tekstowe wyświetlane
+                  <em>na temat</em> zakończenia lub statusu wyszukiwania, takie jak „Wyszukiwanie...”, „Zwrócono 18 wyników”
+                  lub „Nie zwrócono żadnych wyników” byłyby aktualizacjami stanu, gdyby nie otrzymywały
+                  fokusu. Przykłady komunikatów o stanie podano poniżej w sekcji zatytułowanej <a href="#status-examples">Przykłady komunikatów o stanie</a>.
                   
                </p>
                <p>
-                  To kryterium sukcesu odnosi się w szczególności do scenariuszy, w których o strony
-                  jest dodawana nowa treść d bez zmiany kontekstu użytkownika. <a href="#dfn-zmiana-kontekstu">Zmiany kontekstu</a> z natury przerywają użytkownikowi, skupiając jego uwagę. Są one już wyświetlane przez
+                  To kryterium sukcesu odnosi się w szczególności do scenariuszy, w których do strony
+                  jest dodawana nowa treść bez zmiany kontekstu użytkownika. <a href="#dfn-zmiana-kontekstu">Zmiany kontekstu</a> z natury przerywają użytkownikowi, skupiając jego uwagę. Są one już wyświetlane przez
                   technologie wspomagające, a więc już osiągnęły cel, jakim jest ostrzeganie użytkownika
                   o nowych treściach. W związku z tym komunikaty, które wiążą się ze zmianami kontekstu,
                   nie muszą być brane pod uwagę i nie wchodzą w zakres tego kryterium sukcesu. Przykłady
-                  scenariuszy, które dodają nową treść poprzez zmianę kontekstu, podano w sekcji zatytułowanej
-                  <a href="#excepted-examples">Przykłady zmian, które nie są komunikatami o stanie</a> poniżej.
+                  scenariuszy, które dodają nową treść poprzez zmianę kontekstu, podano poniżej w sekcji
+                  zatytułowanej <a href="#excepted-examples">Przykłady zmian, które nie są komunikatami o stanie</a>.
                   
                </p>
             </section>
@@ -168,7 +168,7 @@
                   <ul>
                      
                      <li>
-                        Po naciśnięciu przez użytkownika przycisku wyszukiwania, treść strony jest aktualizowana
+                        Po naciśnięciu przez użytkownika przycisku Szukaj, treść strony jest aktualizowana
                         w celu uwzględnienia wyników wyszukiwania, które są wyświetlane w sekcji poniżej przycisku
                         wyszukiwania. Zmiana treści obejmuje również komunikat „Zwrócono 5 wyników" w górnej
                         części tej nowej treści. Tekst ten ma odpowiednią rolę dla komunikatu o stanie. Czytnik
@@ -236,7 +236,7 @@
                      widoczny). Powodem tego jest to, że tam, gdzie wyświetlany jest nowy tekst, ma on
                      być widoczny dla wszystkich użytkowników. Zapewniając programowe środki zapewniające
                      wyświetlanie tekstu również za pomocą technologii wspomagających, kryterium sukcesu
-                     zapewnia te same informacje użytkownikom, którzy nie mogą lub nie mogą ich zobaczyć.
+                     zapewnia te same informacje użytkownikom, którzy nie widzą lub nie mogą ich zobaczyć.
                      Jednak nie wszystkie zmiany treści obejmują dodanie tekstu do ekranu. Poniżej przedstawiono
                      wszystkie kwestie związane z tym kryterium sukcesu:
                      
@@ -308,7 +308,7 @@
                         użytkownika, gdy ten tekst znika, jest to zwykle wskazanie, że stan jest teraz dostępny.
                         Jednak niewidomi użytkownicy nie będą świadomi tej zmiany, chyba że koniec stanu oczekiwania
                         spowoduje zmianę kontekstu dla użytkownika. Tam, gdzie aktualizacja widocznego komunikatu
-                        (np. do "system dostępny”) nie jest możliwa, użycie niewidocznego komunikatu o stanie,
+                        (np. do „system dostępny”) nie jest możliwa, użycie niewidocznego komunikatu o stanie,
                         takiego jak „system dostępny”, zapewnia dostarczenie równoważnych informacji o stanie.
                         Więcej informacji na ten temat można znaleźć w sekcji Techniki wystarczające.
                         
@@ -436,7 +436,7 @@
                         
                         <p>
                            Celem tego kryterium sukcesu nie jest zmuszanie twórców do generowania nowych komunikatów
-                           o stanie. Jego celem jest zapewnienie, że gdy wyświetlane <em>są</em> komunikaty o stanie, są one programowo identyfikowane w sposób umożliwiający technologiom
+                           o stanie. Jego celem jest zapewnienie, że gdy komunikaty o stanie <em>są</em> wyświetlane, są one programowo identyfikowane w sposób umożliwiający technologiom
                            wspomagającym prezentowanie ich użytkownikowi.
                            
                         </p>
@@ -1081,7 +1081,7 @@
                błędne lub nieścisłe tłumaczenia oryginału. Łącze do oryginalnego dokumentu W3C znajduje
                się <a href="#brief">w sekcji W skrócie</a>.
             </p>
-            <p><strong>Data:</strong> Aktualizacja 29 September 2024.
+            <p><strong>Data:</strong> Aktualizacja 24 October 2024.
             </p>
             <p><strong>Opracowane przez</strong> <a href="https://www.w3.org/groups/wg/ag/participants">uczestników Accessibility Guidelines Working Group (AG WG)</a> (współrzewodniczący: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery.
                Kontakt z obsadą W3C: Michael Cooper).

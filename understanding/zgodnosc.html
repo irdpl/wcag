@@ -53,7 +53,7 @@
                   ustalenia, czy treść je spełnia. Testowanie kryteriów sukcesu wymaga kombinacji testów
                   automatycznych i oceny ludzkiej. Treść powinna być testowana przez testerów, którzy
                   rozumieją, w jaki sposób osoby z różnymi rodzajami niepełnosprawności korzystają z
-                  internetu.
+                  Internetu.
                   
                </p>
                
@@ -65,7 +65,7 @@
                   też, oprócz wymaganych testów funkcjonalnych, zalecane jest przeprowadzenie testów
                   użyteczności. Testy użyteczności mają ma na celu określenie, jak skutecznie ludzie
                   mogą korzystać z treści zgodnie z jej przeznaczeniem. Zaleca się, aby w grupach testowych,
-                  które przeprowadzają testy użyteczności, znaleźli się użytkownicy z niepełnosprawnościami.
+                  które uczestniczą w testach użyteczności, znaleźli się użytkownicy z niepełnosprawnościami.
                   
                </p>
                
@@ -111,7 +111,7 @@
                   <p>
                      Istnieje pięć wymagań, które muszą być spełnione, aby treść została sklasyfikowana
                      jako „zgodna” z WCAG 2.2. Ta część zawiera krótkie uwagi na temat tych wymagań. Z
-                     czasem ta część będzie rozszerzana o kwestie, które mogą się pojawić lub o nowe przykłady
+                     czasem ta część będzie rozszerzana o kwestie, które mogą się pojawić, lub o nowe przykłady
                      sposobów spełnienia różnych wymagań zgodności.
                      
                   </p>
@@ -128,20 +128,19 @@
                         <ul>
                            
                            <li>
-                              <a href="#dfn-strona-internetowa">Strona internetowa</a> osiąga zgodność na poziomie A (minimalny poziom zgodności), gdy <a href="#dfn-spelnienie-kryterium-sukcesu">spełnia</a> wszystkie kryteria sukcesu poziomu A lub zapewniona jest <a href="#dfn-zgodna-wersja-alternatywna">wersja alternatywna zgodna</a>.
+                              <a href="#dfn-strona-internetowa">Strona internetowa</a> osiąga zgodność na poziomie A (minimalny poziom zgodności), gdy <a href="#dfn-spelnienie-kryterium-sukcesu">spełnia</a> wszystkie kryteria sukcesu poziomu A lub zapewniona jest <a href="#dfn-zgodna-wersja-alternatywna">zgodna wersja alternatywna</a>.
                               
                            </li>
                            
                            <li>
                               Strona internetowa osiąga zgodność na poziomie AA, gdy spełnia wszystkie kryteria
-                              sukcesu poziomu A i poziomu AA lub zapewniona jest wersja alternatywna zgodna.
+                              sukcesu poziomu A i poziomu AA lub zapewniona jest zgodna wersja alternatywna.
                               
                            </li>
                            
                            <li>
                               Strona internetowa osiąga zgodność na poziomie AAA, gdy spełnia wszystkie kryteria
-                              sukcesu poziomu A, poziomu AA i poziomu AAA lub zapewniona jest wersja alternatywna
-                              zgodna.
+                              sukcesu poziomu A, poziomu AA i poziomu AAA lub zapewniona jest zgodna wersja alternatywna.
                               
                            </li>
                            
@@ -167,7 +166,7 @@
                      
                      <p>
                         Pierwszy wymóg dotyczy poziomów zgodności. Zasadniczo mówi on, że wszystkie informacje
-                        na stronie muszą być zgodne lub mają <a href="#dfn-zgodna-wersja-alternatywna">zgodną alternatywną wersję</a>, do której jest dostęp ze strony. Wymóg ten wyjaśnia również, że żadna zgodność nie
+                        na stronie muszą być zgodne lub mieć <a href="#dfn-zgodna-wersja-alternatywna">zgodną alternatywną wersję</a>, do której jest dostęp ze strony. Wymóg ten wyjaśnia również, że żadna zgodność nie
                         jest możliwe bez spełnienia co najmniej wszystkich kryteriów sukcesu na poziomie A.
                         
                      </p>
@@ -181,7 +180,7 @@
                      
                      <p>
                         Zobacz także
-                        <a href="#conforming-alt-versions">Objaśnienie zgodnych wersji alternatywnych</a>, która określa techniki dostarczania wersji alternatywnych zgodnych.
+                        <a href="#conforming-alt-versions">Objaśnienie zgodnych wersji alternatywnych</a>, która określa techniki zapewniania zgodnych wersja alternatywnych.
                         
                      </p>
                      
@@ -250,12 +249,11 @@
                      
                      <p>
                         Czasami informacje uzupełniające mogą być podane na innej stronie. Przykładem jest
-                        atrybut longdesc w HTML. Dzięki longdesc długi opis grafiki może znajdować się na
-                        osobnej stronie, na którą użytkownik może przejść ze strony z grafiką. To sprawia,
-                        że taka treść jest uważana za część strony internetowej, więc wymóg nr 2 jest spełniony
-                        dla połączonego zestawu stron internetowych traktowanych jako pojedyncza strona internetowa.
-                        Alternatywy można również podać na tej samej stronie. Na przykład stworzenie odpowiednika
-                        kontrolki interfejsu użytkownika.
+                        atrybut <code>longdesc</code> w HTML. Dzięki <code>longdesc</code> długi opis grafiki może znajdować się na osobnej stronie, na którą użytkownik może
+                        przejść ze strony z grafiką. To sprawia, że taka treść jest uważana za część strony
+                        internetowej, więc wymóg nr 2 jest spełniony dla połączonego zestawu stron internetowych
+                        traktowanych jako pojedyncza strona internetowa. Alternatywy można również podać na
+                        tej samej stronie. Na przykład stworzenie odpowiednika kontrolki interfejsu użytkownika.
                         
                      </p>
                      
@@ -320,8 +318,8 @@
                      
                      <blockquote class="scquote" id="cc4">
                         
-                        <p><strong>Tylko obsługujące dostępność sposoby korzystania z technologii</strong>: Aby spełnić kryteria sukcesu, należy <a href="#dfn-polegac-na">polegać</a> wyłącznie na obsługujących dostępność sposobach korzystania z <a href="#dfn-technologia">technologii</a> Wszelkie informacje lub funkcjonalności, które są zapewnione w sposób nieobsługujący
-                           dostępności, muszą być również zapewnione w sposób obsługujący dostępność.
+                        <p><strong>Tylko sposoby korzystania z technologii</strong> obsługujące dostępność: Aby spełnić kryteria sukcesu, należy <a href="#dfn-polegac-na">polegać</a> wyłącznie na obsługujących dostępność sposobach korzystania z <a href="#dfn-technologia">technologii</a>. Wszelkie informacje lub funkcje, które są zapewnione w sposób nieobsługujący dostępności,
+                           muszą być również zapewnione w sposób obsługujący dostępność.
                         </p>
                         
                      </blockquote>
@@ -340,25 +338,28 @@
                      <blockquote class="scquote" id="cc5">
                         
                         <p>
-                           <strong>Bez zakłóceń</strong>: Jeśli stosowane na stronie <a href="#dfn-technologia">technologie</a> są użyte w sposób, który nie <a href="#dfn-obslugiwana-dostepnosc">obsługuje dostępności</a> lub, ub jeśli są użyte w sposób niezgodny z kryteriami sukcesu, , to technologie
-                           te nie blokują użytkownikom dostępu do reszty strony. Ponadto , <a href="#dfn-strona-internetowa">strona internetowa</a> jako całość nadal spełnia wymogi zgodności pod każdym z poniższych warunków:
+                           <strong>Bez zakłóceń</strong>: Jeśli stosowane na stronie <a href="#dfn-technologia">technologie</a> są użyte w sposób, który nie <a href="#dfn-obslugiwana-dostepnosc">obsługuje dostępności</a> lub, jeśli są użyte w sposób niezgodny z kryteriami sukcesu, to technologie te nie
+                           blokują użytkownikom dostępu do reszty strony. Ponadto, <a href="#dfn-strona-internetowa">strona internetowa</a> jako całość nadal spełnia wymogi zgodności w każdym z poniższych warunków:
                            
                         </p>
                         
                         <ol>
                            
                            <li>
-                              gdy jakakolwiek technologia, na której nie można <a href="#dfn-polegac-na">polegać</a>, jest włączona w programie użytkownika,
+                              jeśli jakakolwiek technologia, na której nie można <a href="#dfn-polegac-na">polegać</a>, jest włączona w programie użytkownika,
                               
                            </li>
                            
-                           <li>gdy jakaś technologia, na której nie można <a href="#dfn-polegac-na">polegać</a>, jest wyłączona w programie użytkownika, oraz
+                           <li>jeśli jakakolwiek technologia, na której nie można <a href="#dfn-polegac-na">polegać</a>, jest wyłączona w programie użytkownika, oraz
                            </li>
                            
-                           <li>gdy jakaś technologia, na której nie można <a href="#dfn-polegac-na">polegać</a>, nie jest obsługiwana przez program użytkownika.
+                           <li>jeśli jakakolwiek technologia, na której nie można <a href="#dfn-polegac-na">polegać</a>, nie jest obsługiwana przez program użytkownika.
                            </li>
+                           
                            
                         </ol>
+                        
+                        		
                         
                         <p>
                            Ponadto, następujące kryteria sukcesu dotyczą wszystkich treści na stronie, włącznie
@@ -425,8 +426,7 @@
                         Istnieją cztery regulacje, które w szczególności dotyczą kwestii zakłóceń w korzystaniu
                         ze strony. Te cztery regulacje zostały ujęte tutaj w uwadze. Uwaga dotycząca każdej
                         z regulacji wskazuje, że te kryteria sukcesu muszą być spełnione w przypadku wszystkich
-                        treści, w tym treści utworzonych przy użyciu technologii, które nie są obsługiwane
-                        pod kątem dostępności.
+                        treści, w tym treści utworzonych przy użyciu technologii, które nie obsługują dostępności.
                         
                      </p>
                      
@@ -470,14 +470,14 @@
                   
                   <p>
                      Schema.org zapewnia jedną z takich możliwości włączenia metadanych dotyczących dostępności
-                     strony internetowej. Zestaw opisowych właściwości dostępności jest dostępny w ramach
-                     typu CreativeWork, który między innymi zapewnia możliwość zawarcia podsumowania ogólnej
-                     dostępności strony (np. twierdzenie o zgodności z WCAG), opisania dostępnych cech
-                     treści (np. dostępność tekstu alternatywnego, rozszerzone audiodeskrypcje, napisy)
-                     oraz ostrzeżenia użytkowników o potencjalnych zagrożeniach (np. miganie). Informacje
-                     te mogą być osadzone na stronie za pomocą dowolnego rozwiązania - RDF, JSON i mikrodanych.
-                     Więcej informacji na temat tych właściwości i ich oczekiwanych wartości jest również
-                     dostępnych na wiki Web Schemas.
+                     strony internetowej. Zestaw opisowych właściwości dostępności jest przedstawiony w
+                     ramach typu CreativeWork, który między innymi zapewnia możliwość zawarcia podsumowania
+                     ogólnej dostępności strony (np. twierdzenie o zgodności z WCAG), opisania dostępnych
+                     cech treści (np. istnienie tekstu alternatywnego, rozszerzone audiodeskrypcje, napisy
+                     dla niesłyszących) oraz ostrzeżenia użytkowników o potencjalnych zagrożeniach (np.
+                     miganie). Informacje te mogą być osadzone na stronie za pomocą dowolnego rozwiązania
+                     - RDF, JSON i mikrodanych. Więcej informacji na temat tych właściwości i ich oczekiwanych
+                     wartości jest również dostępnych na wiki Web Schemas.
                      
                   </p>
                   
@@ -565,8 +565,8 @@ która może być dostępna za pomocą technologii wspomagających.&lt;/p&gt;
                         Pamiętaj, aby monitorować wszelkie treści, które mogą ulec zmianie bez zgody twórcy
                         strony internetowej, ponieważ strona, która raz była zgodna, może nagle przestać być
                         zgodna. Jeśli nie jest możliwe monitorowanie i naprawa treści osób trzecich, konieczne
-                        jest określenie niezgodnych części strony dla użytkowników. Jeśli reszta strony jest
-                        zgodna z WCAG, taka strona kwalifikuje się do deklaracji częściowej zgodności ze względu
+                        jest wskazanie użytkownikom niezgodnych części strony. Jeśli reszta strony jest zgodna
+                        z WCAG, taka strona kwalifikuje się do deklaracji częściowej zgodności ze względu
                         na treści osób trzecich.
                         
                      </p>
@@ -1056,16 +1056,16 @@ która może być dostępna za pomocą technologii wspomagających.&lt;/p&gt;
                      <h3>Objaśnienie zastosowań technologii internetowych obsługujących dostępność</h3>
                      
                      <p>
-                        Poszczególnitwórcy zazwyczaj nie będą w stanie przeprowadzić wszystkich testów niezbędnych
+                        Poszczególni twórcy zazwyczaj nie będą w stanie przeprowadzić wszystkich testów niezbędnych
                         do ustalenia, w jaki sposób dane technologie internetowe są faktycznie obsługiwane
                         przez które wersje technologii wspomagających i programów użytkownika. Twórcy mogą
-                        zatem polegać na publicznie udokumentowanych zestawieniach, które dokumentują, które
+                        zatem polegać na publicznie udokumentowanych zestawieniach dokumentujących, które
                         technologie wspomagające obsługują określone sposoby korzystania z określonych technologii
-                        internetowych. Mówiąc publicznie, nie mamy na myśli tego, że zestawienie i jej dokumentacja
-                        są koniecznie tworzone przez agencję publiczną, a jedynie, że są one dostępne publicznie.
-                        Każdy może tworzyć publicznie udokumentowane zestawienia „Zastosowań technologii internetowych
-                        i ich dostępności”. Ludzie mogą tworzyć zestawienia i nadawać im nazwy, za pomocą
-                        których autorzy mogą się do nich odwoływać. Tak długo jak są one publicznie udokumentowane,
+                        internetowych. Mówiąc <q>publicznie</q>, nie mamy na myśli tego, że zestawienie i jej dokumentacja są koniecznie tworzone
+                        przez agencję publiczną, a jedynie, że są one dostępne publicznie. Każdy może tworzyć
+                        publicznie udokumentowane zestawienia „Zastosowań technologii internetowych i ich
+                        dostępności”. Ludzie mogą tworzyć zestawienia i nadawać im nazwy, za pomocą których
+                        autorzy mogą się do nich odwoływać. Tak długo, jak są one publicznie udokumentowane,
                         twórcy lub klienci itp. mogą łatwo wybrać zastosowania, które odpowiadają ich potrzebom.
                         Klienci lub inne osoby mogą wybrać technologie, które pasują do ich środowiska lub
                         języka w dowolnym momencie i określić te, które mają być używane do tworzenia ich
@@ -1244,23 +1244,22 @@ która może być dostępna za pomocą technologii wspomagających.&lt;/p&gt;
    
    <ol>
       
-      <li>jest zgodna z określonym poziomem, oraz</li>
+      <li>jest zgodna na wyznaczonym poziomie, oraz</li>
       
-      <li>zapewnia te same informacje i <a>funkcjonalności</a> w tym samym <a>języku naturalnym</a>, oraz
+      <li>zapewnia te same informacje i <a>funkcje</a> w tym samym <a>języku naturalnym</a>, oraz
       </li>
       
       <li>jest tak samo aktualna jak wersja niezgodna, oraz</li>
       
-      <li>
-         <p>dla której przynajmniej jeden z poniższych warunków jest spełniony:</p>
+      <li>dla której przynajmniej jeden z poniższych warunków jest spełniony:
          
          <ol>
             
-            <li>wersja zgodna jest osiągalna z wersji niezgodnej za pomocą <a>mechanizmu</a> <a>obsługującego dostępność</a>, lub</li>
+            <li>zgodna wersja może być osiągnięta ze strony niezgodnej za pomocą <a>mechanizmu</a> <a>obsługującego dostępność</a>, lub</li>
             
-            <li>niezgodna wersja jest osiągalna jedynie z wersji zgodnej, lub</li>
+            <li>niezgodna wersja może być osiągalna tylko z wersji zgodnej, lub</li>
             
-            <li>wersja niezgodna może być osiągalna tylko z wersji zgodnej, o ile zawiera mechanizm osiągnięcia wersji zgodnej.</li>
+            <li>niezgodna wersja może być osiągalna tylko z wersji zgodnej, o ile zawiera mechanizm osiągnięcia wersji zgodnej.</li>
             
          </ol>
          
@@ -1268,25 +1267,25 @@ która może być dostępna za pomocą technologii wspomagających.&lt;/p&gt;
       
    </ol>
    
-   <p class="note">W tej definicji „może być osiągalna tylko” oznacza, że zapewniony jest jakiś mechanizm, jak na przykład warunkowe przekierowanie, który uchroni użytkownika przed „osiągnięciem” (załadowaniem) niezgodnej wersji, dopóki nie przejdzie z wersji zgodnej.
+   <p class="note">W tej definicji „może być osiągalna tylko” oznacza, że zapewniony jest jakiś mechanizm, jak na przykład warunkowe przekierowanie, który uchroni użytkownika przed „dotarciem” do niezgodnej wersji (załadowaniem), chyba że użytkownik przeszedł właśnie z wersji zgodnej.
+   </p>
+
+   <p class="note">Zgodna wersja alternatywna nie musi być identyczna, co do ilości stron z podstawową (np. może się składać z kilku stron).
    </p>
    
-   <p class="note">Zgodna wersja alternatywna nie musi być identyczna, co do ilości stron z podstawową (np. może się składać z kilku podstron).
+   <p class="note">Jeżeli istnieją różne wersje językowe witryny, to dla każdej powinny być zapewnione zgodne wersje alternatywne.
    </p>
    
-   <p class="note">Jeżeli dostępne są różne wersje językowe serwisu, to dla każdej powinny być zapewnione zgodne wersje alternatywne.
+   <p class="note">Zgodne wersje alternatywne mogą być zapewniane dla różnych technologii lub grup odbiorców. Każda wersja powinna być zgodna w jak najwyższym stopniu. Co najmniej jedna wersja musi być w pełni zgodna, aby spełnić <a href="#cc1">Wymóg zgodności nr 1</a>.
    </p>
    
-   <p class="note">Zgodne wersje alternatywne mogą być zapewniane dla różnych technologii lub grup odbiorców. Każda wersja powinna być zgodna w jak najwyższym stopniu. Jedna wersja powinna być w pełni zgodna, aby uzyskać <a href="#cc1">Wymóg zgodności nr 1</a>.
+   <p class="note">Zgodna wersja alternatywna nie musi się znajdować w zakresie zgodności, ani nawet w tej samej witrynie internetowej, o ile jest równie łatwo osiągalna, jak wersja niezgodna.
    </p>
    
-   <p class="note">Zgodna wersja alternatywna nie musi znajdować się w zakresie zgodności, ani nawet w tym samym serwisie internetowym, jeżeli jest równie łatwo dostępna, jak jej wersja niezgodna.
+   <p class="note">Zgodnej wersji alternatywnej nie należy mylić z <a>treścią uzupełniającą</a>, która mają wspierać i rozszerzać wersję podstawową.
    </p>
    
-   <p class="note">Zgodna wersja alternatywna nie powinna być mylona z <a>treścią uzupełniającą</a>, która ma wspierać i rozszerzać wersję podstawową.
-   </p>
-   
-   <p class="note">Ustawienie w preferencjach użytkownika, które pozwala na uzyskanie zgodnej wersji jest akceptowalnym mechanizmem dla osiągnięcia innej wersji, o ile mechanizm ustawień obsługuje dostępność.
+   <p class="note">Ustawienie w preferencjach użytkownika, które pozwala na osiągnięcie zgodnej wersji alternatywnej jest akceptowalnym mechanizmem dla osiągnięcia innej wersji, o ile mechanizm ustawień obsługuje dostępność.
    </p>
    
    <p>Czytaj więcej <a href="../../understanding/zgodnosc#conforming-alt-versions">Objaśnienie pojęcia <q>zgodna wersja alternatywna</q></a>.</p>
@@ -1739,7 +1738,7 @@ która może być dostępna za pomocą technologii wspomagających.&lt;/p&gt;
                błędne lub nieścisłe tłumaczenia oryginału. Łącze do oryginalnego dokumentu W3C znajduje
                się <a href="#brief">w sekcji W skrócie</a>.
             </p>
-            <p><strong>Data:</strong> Aktualizacja 29 September 2024.
+            <p><strong>Data:</strong> Aktualizacja 24 October 2024.
             </p>
             <p><strong>Opracowane przez</strong> <a href="https://www.w3.org/groups/wg/ag/participants">uczestników Accessibility Guidelines Working Group (AG WG)</a> (współrzewodniczący: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery.
                Kontakt z obsadą W3C: Michael Cooper).
