@@ -36,10 +36,10 @@
       <li> wiadomość nie jest dostarczana poprzez zmianę kontekstu.</li>
     </ul>
     <p>
-      Do stron można dodawać informacje, które nie spełniają definicji komunikatu o stanie. Na przykład lista wyników uzyskanych w wyniku wyszukiwania nie jest uważana za aktualizację stanu, a zatem nie jest objęta tym kryterium sukcesu. Jednak krótkie komunikaty tekstowe wyświetlane <em>na temat</em> zakończenia lub statusu wyszukiwania, takie jak „Wyszukiwanie...”, „Zwrócono 18 wyników” lub „Nie zwrócono żadnych wyników” byłyby aktualizacjami stanu, gdyby nie otzymywały fokusu. Przykłady komunikatów o stanie podano w sekcji zatytułowanej <a href="#status-examples">Przykłady komunikatów o stanie</a> poniżej.
+      Do stron można dodawać informacje, które nie spełniają definicji komunikatu o stanie. Na przykład lista wyników wyszukiwania nie jest uważana za aktualizację stanu, a zatem nie jest objęta tym kryterium sukcesu. Jednak krótkie komunikaty tekstowe wyświetlane <em>na temat</em> zakończenia lub statusu wyszukiwania, takie jak „Wyszukiwanie...”, „Zwrócono 18 wyników” lub „Nie zwrócono żadnych wyników” byłyby aktualizacjami stanu, gdyby nie otrzymywały fokusu. Przykłady komunikatów o stanie podano poniżej w sekcji zatytułowanej <a href="#status-examples">Przykłady komunikatów o stanie</a>.
     </p>
     <p>
-      To kryterium sukcesu odnosi się w szczególności do scenariuszy, w których o strony jest dodawana nowa treść d bez zmiany kontekstu użytkownika. <a class="glossary">Zmiany kontekstu</a> z natury przerywają użytkownikowi, skupiając jego uwagę. Są one już wyświetlane przez technologie wspomagające, a więc już osiągnęły cel, jakim jest ostrzeganie użytkownika o nowych treściach. W związku z tym komunikaty, które wiążą się ze zmianami kontekstu, nie muszą być brane pod uwagę i nie wchodzą w zakres tego kryterium sukcesu. Przykłady scenariuszy, które dodają nową treść poprzez zmianę kontekstu, podano w sekcji zatytułowanej <a href="#excepted-examples">Przykłady zmian, które nie są komunikatami o stanie</a> poniżej.
+      To kryterium sukcesu odnosi się w szczególności do scenariuszy, w których do strony jest dodawana nowa treść bez zmiany kontekstu użytkownika. <a class="glossary">Zmiany kontekstu</a> z natury przerywają użytkownikowi, skupiając jego uwagę. Są one już wyświetlane przez technologie wspomagające, a więc już osiągnęły cel, jakim jest ostrzeganie użytkownika o nowych treściach. W&nbsp;związku z tym komunikaty, które wiążą się ze zmianami kontekstu, nie muszą być brane pod uwagę i nie wchodzą w zakres tego kryterium sukcesu. Przykłady scenariuszy, które dodają nową treść poprzez zmianę kontekstu, podano poniżej w sekcji zatytułowanej <a href="#excepted-examples">Przykłady zmian, które nie są komunikatami o stanie</a>.
     </p>
     <section id="benefits">
       <h2>Korzyści</h2>
@@ -59,7 +59,7 @@
       <h3>Przykłady komunikatów o stanie</h3>
       <ul>
         <li>
-          Po naciśnięciu przez użytkownika przycisku wyszukiwania, treść strony jest aktualizowana w celu uwzględnienia wyników wyszukiwania, które są wyświetlane w sekcji poniżej przycisku wyszukiwania. Zmiana treści obejmuje również komunikat „Zwrócono 5 wyników" w górnej części tej nowej treści. Tekst ten ma odpowiednią rolę dla komunikatu o stanie. Czytnik ekranu informuje: „Zwrócono pięć wyników".
+          Po naciśnięciu przez użytkownika przycisku Szukaj, treść strony jest aktualizowana w&nbsp;celu uwzględnienia wyników wyszukiwania, które są wyświetlane w sekcji poniżej przycisku wyszukiwania. Zmiana treści obejmuje również komunikat „Zwrócono 5 wyników" w górnej części tej nowej treści. Tekst ten ma odpowiednią rolę dla komunikatu o stanie. Czytnik ekranu informuje: „Zwrócono pięć wyników".
         </li>
         <li>
           Po naciśnięciu przez użytkownika przycisku Dodaj do koszyka sekcja treści w pobliżu ikony koszyka dodaje tekst „5 pozycji". Czytnik ekranu informuje „Pięć pozycji" lub „Koszyk, pięć pozycji".
@@ -87,7 +87,7 @@
     <section class="example">
       <h3>Przykłady komunikatów o stanie, które nie dodają nowego tekstu do ekranu</h3>
       <p>
-        To kryterium sukcesu zostało celowo sformułowane tak, aby miało zastosowanie przede wszystkim wtedy, gdy widoczny tekst jest dodawany do strony (lub staje się na niej widoczny). Powodem tego jest to, że tam, gdzie wyświetlany jest nowy tekst, ma on być widoczny dla wszystkich użytkowników. Zapewniając programowe środki zapewniające wyświetlanie tekstu również za pomocą technologii wspomagających, kryterium sukcesu zapewnia te same informacje użytkownikom, którzy nie mogą lub nie mogą ich zobaczyć. Jednak nie wszystkie zmiany treści obejmują dodanie tekstu do ekranu. Poniżej przedstawiono wszystkie kwestie związane z tym kryterium sukcesu:
+        To kryterium sukcesu zostało celowo sformułowane tak, aby miało zastosowanie przede wszystkim wtedy, gdy widoczny tekst jest dodawany do strony (lub staje się na niej widoczny). Powodem tego jest to, że tam, gdzie wyświetlany jest nowy tekst, ma on być widoczny dla wszystkich użytkowników. Zapewniając programowe środki zapewniające wyświetlanie tekstu również za pomocą technologii wspomagających, kryterium sukcesu zapewnia te same informacje użytkownikom, którzy nie widzą lub nie mogą ich zobaczyć. Jednak nie wszystkie zmiany treści obejmują dodanie tekstu do ekranu. Poniżej przedstawiono wszystkie kwestie związane z tym kryterium sukcesu:
       </p>
       <ul>
         <li>Niewyświetlany tekst specyficzny dla użytkowników technologii wspomagającej;</li>
@@ -113,7 +113,7 @@
       <section>
         <h4>Usunięcie tekstu statusu</h4>
         <p>
-          W sytuacjach, w których tekst statusu jest całkowicie usuwany, jego brak może sam w sobie przekazywać informacje o statusie. Najbardziej oczywistym tego przykładem jest wyświetlenie komunikatu, że system jest „zajęty” lub „oczekuje”. Dla widzącego użytkownika, gdy ten tekst znika, jest to zwykle wskazanie, że stan jest teraz dostępny. Jednak niewidomi użytkownicy nie będą świadomi tej zmiany, chyba że koniec stanu oczekiwania spowoduje zmianę kontekstu dla użytkownika. Tam, gdzie aktualizacja widocznego komunikatu (np. do "system dostępny”) nie jest możliwa, użycie niewidocznego komunikatu o stanie, takiego jak „system dostępny”, zapewnia dostarczenie równoważnych informacji o stanie. Więcej informacji na ten temat można znaleźć w sekcji Techniki wystarczające.
+          W sytuacjach, w których tekst statusu jest całkowicie usuwany, jego brak może sam w sobie przekazywać informacje o statusie. Najbardziej oczywistym tego przykładem jest wyświetlenie komunikatu, że system jest „zajęty” lub „oczekuje”. Dla widzącego użytkownika, gdy ten tekst znika, jest to zwykle wskazanie, że stan jest teraz dostępny. Jednak niewidomi użytkownicy nie będą świadomi tej zmiany, chyba że koniec stanu oczekiwania spowoduje zmianę kontekstu dla użytkownika. Tam, gdzie aktualizacja widocznego komunikatu (np. do „system dostępny”) nie jest możliwa, użycie niewidocznego komunikatu o stanie, takiego jak „system dostępny”, zapewnia dostarczenie równoważnych informacji o stanie. Więcej informacji na ten temat można znaleźć w sekcji Techniki wystarczające.
         </p>
       </section>
       <section>
@@ -165,7 +165,7 @@
       </p>
       <div class="note">
         <p>
-          Celem tego kryterium sukcesu nie jest zmuszanie twórców do generowania nowych komunikatów o stanie. Jego celem jest zapewnienie, że gdy wyświetlane <em>są</em> komunikaty o stanie, są one programowo identyfikowane w sposób umożliwiający technologiom wspomagającym prezentowanie ich użytkownikowi.
+          Celem tego kryterium sukcesu nie jest zmuszanie twórców do generowania nowych komunikatów o stanie. Jego celem jest zapewnienie, że gdy komunikaty o stanie <em>są</em> wyświetlane, są one programowo identyfikowane w sposób umożliwiający technologiom wspomagającym prezentowanie ich użytkownikowi.
         </p>
       </div>
     </section>

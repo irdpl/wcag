@@ -21,22 +21,22 @@
   <section id="intent">
     <h2>Intencja</h2>
     <p>
-      Intencją tego kryterium sukcesu jest przedstawienie przez twórców treści instrukcji lub etykiet określających kontrolki w formularzu, aby użytkownicy wiedzieli, jakie dane wejściowe są oczekiwane. W przypadku przycisków radiowych, pól wyboru, pól kombi lub podobnych kontrolek, które udostępniają użytkownikom opcje, każda opcja musi mieć odpowiednią etykietę, aby użytkownicy wiedzieli, co faktycznie wybierają. Instrukcje lub etykiety mogą również określać formaty danych dla pól wprowadzania danych, zwłaszcza jeśli nie są one standardowymi formatami lub jeśli istnieją określone zasady poprawnego wprowadzania danych. Twórcy treści mogą również zdecydować się na udostępnienie takich instrukcji użytkownikom tylko wtedy, gdy konkretna kontrolka jest aktywna, zwłaszcza gdy instrukcje są długie i szczegółowe.
+      Intencją tego kryterium sukcesu jest przedstawienie przez twórców treści instrukcji lub etykiet określających elementy formularzy, aby użytkownicy wiedzieli, jakie dane mają w nich wprowadzić. W przypadku przycisków radiowych, pól wyboru, list wyboru (pól kombi) lub podobnych kontrolek, które udostępniają użytkownikom opcje, każda opcja musi mieć odpowiednią etykietę, aby użytkownicy wiedzieli, co faktycznie wybierają. Instrukcje lub etykiety mogą również określać formaty danych dla pól formularzy, zwłaszcza jeśli nie są one standardowymi formatami lub jeśli istnieją określone zasady poprawnego wprowadzania danych. Twórcy treści mogą się zdecydować na udostępnienie takich instrukcji użytkownikom tylko wtedy, gdy konkretna kontrolka jest aktywna, zwłaszcza gdy instrukcje są długie i szczegółowe.
     </p>
     <p>
       Nie jest intencją tego kryterium sukcesu zaśmiecanie strony niepotrzebnymi informacjami, ale dostarczenie ważnych wskazówek i instrukcji, które przyniosą korzyści osobom z niepełnosprawnościami. Zbyt duża ilość informacji lub instrukcji może być tak samo szkodliwa jak zbyt mała. Celem jest upewnienie się, że użytkownik ma wystarczającą ilość informacji, aby mógł wykonać zadanie bez zbędnego zamieszania lub nawigacji.
     </p>
     <p>
-      To kryterium sukcesu nie wymaga, aby etykiety lub instrukcje były prawidłowo oznaczone, zidentyfikowane lub powiązane z odpowiednimi kontrolami - aspekt ten jest omówiony oddzielnie w <a href="informacje-i-relacje">KS 1.3.1: Informacje i relacje</a>. Możliwe jest, że treść spełni to kryterium sukcesu (z odpowiednimi etykietami i instrukcjami), ale nie spełni kryterium sukcesu 1.3.1 (jeśli etykiety lub instrukcje nie są poprawnie oznaczone, zidentyfikowane lub skojarzone).
+      To kryterium sukcesu nie wymaga, aby etykiety lub instrukcje były prawidłowo oznaczone, zidentyfikowane lub powiązane z odpowiednimi kontrolkami - aspekt ten jest omówiony oddzielnie w <a href="informacje-i-relacje">KS 1.3.1: Informacje i relacje</a>. Możliwe jest, że treść spełni to kryterium sukcesu (z odpowiednimi etykietami i instrukcjami), ale nie spełni kryterium sukcesu 1.3.1 (jeśli etykiety lub instrukcje nie są poprawnie oznaczone, zidentyfikowane lub powiązane).
     </p>
     <p>
-      Co więcej, to kryterium sukcesu nie bierze pod uwagę, czy zastosowano alternatywne metody zapewniania dostępnej nazwy lub opisu dla kontrolek formularzy i danych wejściowych - aspekt ten został omówiony oddzielnie w <a href="nazwa-rola-wartosc">KS 4.1.2: Nazwa, rola i wartość</a>. Możliwe jest, aby kontrolki i wejścia miały odpowiednią, dostępną nazwę lub opis (np. za pomocą <code>aria-label="... ")</code>i w związku z tym spełniają kryterium sukcesu 4.1.2, ale nadal nie spełniają tego kryterium sukcesu (jeśli etykiety lub instrukcje nie są prezentowane wszystkim użytkownikom, a nie tylko tym, którzy korzystają z technologii wspomagających).
+      Co więcej, to kryterium sukcesu nie bierze pod uwagę, czy zastosowano alternatywne metody zapewniania dostępnej nazwy lub opisu dla kontrolek formularzy i danych wejściowych - aspekt ten został omówiony oddzielnie w <a href="nazwa-rola-wartosc">KS 4.1.2: Nazwa, rola i wartość</a>. Możliwe jest, że kontrolki i pola formularza będą miały odpowiednią, dostępną nazwę lub opis (np. za pomocą <code>aria-label="…")</code> i w związku z tym spełnią kryterium sukcesu 4.1.2, ale nadal nie spełnią tego kryterium sukcesu (jeśli etykiety lub instrukcje nie są prezentowane wszystkim użytkownikom, a nie tylko tym, którzy korzystają z technologii wspomagających).
     </p>
     <p>
       To kryterium sukcesu nie ma zastosowania do łączy ani innych kontrolek (takich jak widżet rozwijania/zwijania lub podobne składniki interaktywne), które nie są skojarzone z wprowadzaniem danych.
     </p>
     <p>
-      To kryterium sukcesu wymaga, aby kontrolki i i dane wejściowe miały etykiety lub instrukcje, ale to, czy etykiety (jeśli są używane) są wystarczająco jasne lub opisowe, jest omówione osobno w <a href="naglowki-i-etykiety">KS 2.4.6:  Nagłówki i etykiety</a>.
+      To kryterium sukcesu wymaga tylko, aby kontrolki i pola formularzy miały etykiety lub instrukcje, natomiast to, czy etykiety (jeśli są używane) są wystarczająco jasne lub opisowe, jest omówione osobno w <a href="naglowki-i-etykiety">KS 2.4.6:  Nagłówki i etykiety</a>.
     </p>
   </section>
   <section id="benefits">
@@ -63,8 +63,8 @@
         Aby wprowadzić swoje imię i nazwisko, użytkownicy otrzymują dwa oddzielne pola tekstowe. Zamiast pojedynczej etykiety <q>Imię i nazwisko</q>  (która pozostawiałaby drugie pole tekstowe bez etykiety), każde pole otrzymuje wyraźną etykietę - <q>Imię</q> i <q>Nazwisko</q>.
       </li>
       <li>
-        Amerykański numer telefonu dzieli numer kierunkowy, centralę i numer na trzy pola. Pole numeru kierunkowego jest otoczone nawiasami, a pola centrali i pola liczbowe są oddzielone myślnikiem. Chociaż znaki interpunkcyjne stanowią wizualne wskazówki dla osób zaznajomionych z amerykańskim formatem numeru telefonu, interpunkcja nie jest wystarczająca do oznaczenia pól. Pojedyncza etykieta <q>Numer telefonu</q> również nie może oznaczać wszystkich trzech pól. Aby rozwiązać ten problem, trzy pola są zgrupowane w zestawie pól z legendą <q>Numer telefonu</q>. Wizualne etykiety dla pól (poza interpunkcją) nie mogą być zapewnione w projekcie, więc niewidoczne etykiety są zapewnione w atrybutach "title" do każdego z trzech pól. Wartości tego atrybutu dla trzech pól to, odpowiednio, <q>Numer kierunkowy</q>, <q>Centrala</q> i <q>Numer</q>.
-</li>
+        Amerykański numer telefonu zawiera w trzech polach numer kierunkowy, numer centrali i numer abonenta. Pole numeru kierunkowego jest otoczone nawiasami, a pola centrali i pola abonenta są oddzielone myślnikami. Chociaż interpunkcja zapewnia wizualne wskazówki dla osób zaznajomionych z amerykańskim formatem numeru telefonu, interpunkcja nie jest wystarczająca do oznaczenia pól. Pojedyncza etykieta <q>Numer telefonu</q> również nie może oznaczać wszystkich trzech pól.  Aby temu zaradzić, trzy pola są zgrupowane w zestawie pól z legendą <q>Numer telefonu</q>. Wizualne etykiety dla pól (poza interpunkcją) nie mogą być zapewnione w projekcie, więc niewidoczne etykiety są zapewnione w atrybutach "title" do każdego z trzech pól. Wartości tego atrybutu dla trzech pól to, odpowiednio, <q>Numer kierunkowy</q>, <q>Centrala</q> i <q>Numer</q>.
+	</li>
     </ul>
   </section>
   <section id="resources">

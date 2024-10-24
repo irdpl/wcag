@@ -32,7 +32,7 @@
 	  </p>
       <p>Twórcy mogą ograniczyć problem nieumyślnego wyzwalania akcji przez użytkowników, korzystając z ogólnych zdarzeń aktywacji/kliknięcia platformy, które aktywują funkcjonalność w przypadku <q>w górę</q>. Na przykład zdarzenie <code>click</code> w JavaScript wyzwala się po zwolnieniu głównego przycisku myszy i jest przykładem niejawnego zdarzenia <q>w górę</q>. Pomimo swojej nazwy, zdarzenie <code>click</code> jest niezależne od urządzenia i działa również w przypadku interakcji dotykowej i klawiatury.</p>
 
-      <p>Preferencja dla zdarzeń typu <q>w górę</q> jest zawarta w pierwszym z czterech punktów: Zdarzenie wskaźnika <q>w dół</q> nie jest używane do wykonania żadnej części funkcjonalności. Twórcy spełniają ten pierwszy punkt, używając tylko zdarzenia <q>w górę</q>.</p>
+      <p>Preferencja dla zdarzeń typu <q>w górę</q> jest zawarta w pierwszym z czterech punktów: Zdarzenie wskaźnika <q>w dół</q> nie jest używane do wykonania żadnej części funkcji. Twórcy spełniają ten pierwszy punkt tylko, gdy używają zdarzenia <q>w górę</q>.</p>
     </section>
     <section>
       <h3>Przerwanie lub cofnięcie zdarzenia</h3>
@@ -47,23 +47,24 @@
       </ol>
       <p>W tak złożonej akcji wzrasta potrzeba funkcji Przerwij lub Cofnij. Projektanci mogą zdecydować się na potwierdzenie ruchu za pomocą okna dialogowego potwierdzenia lub przycisku cofania, dając użytkownikowi możliwość cofnięcia właśnie zakończonego procesu. Alternatywnie, możliwość przerwania akcji można uzyskać, jeśli przed wykonaniem kroku 3 użytkownik przywróci wybrany element do jego pierwotnej lokalizacji i tam zakończy proces. Jeśli inne części ekranu nie pozwalają na ruch, użytkownik może zakończyć przeciąganie i upuszczanie w tym miejscu, skutecznie unieważniając operację.</p>
 	  </section>
+
     <section>
       <h3><q>W górę</q> - przywrócenie</h3>
-      <p>W innych interakcjach zdarzenie <q>w dół</q> może wywołać zachowanie, które można odwrócić po zakończeniu zdarzenia <q>w górę</q>. Przykładem tego są akcje typu „naciśnij i przytrzymaj”, w których pojawia się przejściowe wyskakujące okienko (lub odtwarzany jest film), gdy użytkownik naciśnie obiekt (zdarzenie <q>w dół</q>), ale wyskakujące okienko (lub film) znika, gdy tylko użytkownik zwolni wskaźnik (zdarzenie <q>w górę</q>). Ponieważ zdarzenie <q>w górę</q> odwraca poprzednie zdarzenie <q>w dół</q>, użytkownik powraca do poprzedniego stanu i skutecznie anuluje operację.</p>
+      <p>W innych interakcjach zdarzenie <q>w dół</q> może wywołać zachowanie, które można odwrócić po zakończeniu zdarzenia <q>w górę</q>. Przykładem tego są akcje typu „naciśnij i przytrzymaj”, w&nbsp;których pojawia się przejściowe wyskakujące okienko (lub odtwarzany jest film), gdy użytkownik naciśnie obiekt (zdarzenie <q>w dół</q>), ale wyskakujące okienko (lub film) znika, gdy tylko użytkownik zwolni wskaźnik (zdarzenie <q>w górę</q>). Ponieważ zdarzenie <q>w górę</q> odwraca poprzednie zdarzenie <q>w dół</q>, użytkownik powraca do poprzedniego stanu i skutecznie anuluje operację.</p>
     </section>
     <section>
       <h3>Zdarzenie <q>w dół</q></h3>
       <p>Zakończenie funkcji przy zdarzeniu <q>w dół</q> jest dozwolone tylko wtedy, gdy jest niezbędne, gdy nie można użyć zdarzenia <q>w górę</q>.</p>
 	  <!-- 	Uwaga: To zdarzenie różni się od zdarzenia kliknięcia tym, że kliknięcie jest uruchamiane po wykonaniu pełnej akcji kliknięcia; to znaczy, przycisk myszy jest naciskany i zwalniany, gdy wskaźnik pozostaje wewnątrz tego samego elementu. mousedown jest uruchamiane w momencie początkowego naciśnięcia przycisku. -->
       <p>
-	  Najbardziej rozpowszechniona aktywacja niezbędnego zdarzenia w dół występuje w emulacji klawiatury.  Na klawiaturze fizycznej klawisze domyślnie aktywują się po zdarzeniu <q>w dół</q> - po naciśnięciu klawisza pojawia się litera. Gdyby programowy emulator klawiatury próbował obejść to oczekiwane zachowanie, wyświetlając litery po zwolnieniu klawisza, takie zachowanie byłoby nieoczekiwane i niekorzystnie wpływałoby na oczekiwaną interakcję.	  
+	  Najbardziej rozpowszechniona aktywacja niezbędnego zdarzenia w dół występuje w emulacji klawiatury. Na klawiaturze fizycznej klawisze domyślnie aktywują się po zdarzeniu <q>w dół</q> - po naciśnięciu klawisza pojawia się litera. Gdyby programowy emulator klawiatury próbował obejść to oczekiwane zachowanie, wyświetlając litery po zwolnieniu klawisza, takie zachowanie byłoby nieoczekiwane i niekorzystnie wpływałoby na oczekiwaną interakcję.	  
 	  </p>
       <p>
 	  Zwróć uwagę, że klawiatura ma wbudowany przycisk <kbd>Backspace</kbd> lub <kbd>Delete</kbd>, który skutecznie zapewnia opcję Cofnij. Cofnięcie nie jest wymogiem wyjątku <em>Istotne</em> dotyczącego zdarzenia <q>w dół</q>; jednak zapewnienie użytkownikom łatwego sposobu cofania dowolnej akcji jest zalecaną praktyką (i może być funkcjonalną koniecznością), nawet jeśli nie jest to wymagane przez to kryterium sukcesu.</p>
       <p>Inne przykłady, w których czas aktywacji jest niezbędny i wymaga wystąpienia zdarzenia <q>w dół</q>, to:</p>
       <ul>
         <li>Czynność, która emuluje fizyczny wyzwalacz po naciśnięciu, na przykład podczas grania na ekranowej klawiaturze fortepianu. Aktywacja po zdarzeniu <q>w górę</q> znacząco zmieniłaby pożądane zachowanie.</li>
-        <li>Program do strzelania do rzutków, w którym oczekiwanie na zdarzenie "w górę" uniemożliwiłoby precyzyjne wyczucie czasu niezbędne do aktywacji.</li>
+        <li>Program do strzelania do rzutków, w którym oczekiwanie na zdarzenie "w górę" uniemożliwiłoby precyzyjne wyczucie czasu niezbędnego do aktywacji.</li>
       </ul>
     </section>
   </section>
