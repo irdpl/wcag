@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Objaśnienie Kryterium sukcesu  1.2.7: Audiodeskrypcja rozszerzona (nagranie) | WAI | W3C</title>
+      <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
+      <link rel="stylesheet" href="base.css" />
+   </head>
+   <body dir="ltr"><a href="#main" class="button button--skip-link">Idź do treści</a><div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Objaśnienia">
+               <ul>
+                  <li class="nav__item"><a href=".">
+                        								Wszystkie objaśnienia
+                        							</a></li>
+                  <li class="nav__item"><a href="media-oparte-na-czasie">
+                        <svg alt="up" focusable="false" aria-hidden="true" class="icon-arrow-up-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path>
+                        </svg> Wytyczna: Media oparte na czasie</a></li>
+                  <li class="nav__item"><a href="jezyk-migowy-nagranie">
+                        <svg focusable="false" aria-hidden="true" class="icon-arrow-left-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path>
+                        </svg>Poprzednie KS: Język migowy (nagranie)</a></li>
+                  <li class="nav__item"><a href="alternatywa-dla-mediow-nagranie">Następne KS: Alternatywa dla mediów (nagranie)
+                        <svg focusable="false" aria-hidden="true" class="icon-arrow-right-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                        </svg></a></li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+      <div class="default-grid with-gap leftcol">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar ">
+            <nav>
+               <header class="box-h ">Treść strony</header>
+               <div class="box-i">
+                  <ul>
+                     <li><a href="#brief">W skrócie</a></li>
+                     <li><a href="#intent">Intencja</a></li>
+                     <li><a href="#benefits">Korzyści</a></li>
+                     <li><a href="#examples">Przykłady</a></li>
+                     <li><a href="#resources">Powiązane zasoby</a></li>
+                     <li><a href="#techniques">Techniki</a></li>
+                     <li><a href="#key-terms">Kluczowe pojęcia</a></li>
+                  </ul>
+               </div>
+            </nav>
+         </aside>
+         <main id="main" class="standalone-resource__main">
+            <h1><span class="standalone-resource__type-of-guidance">Objaśnienie
+                  				KS 1.2.7:</span>Audiodeskrypcja rozszerzona (nagranie) (Poziom AAA)
+            </h1>
+            <aside class="box">
+               <header class="box-h  box-h-icon">Kryterium sukcesu (KS) </header>
+               <div class="box-i">
+                  <p>Jeśli przerwy w ścieżce dźwiękowej nagrania nie pozwalają na zamieszczenie <a href="#dfn-audiodeskrypcja">audiodeskrypcji</a> przekazującej sens treści w wystarczającym stopniu, dla wszystkich <a href="#dfn-nagranie">nagrań</a> 
+                     <a href="#dfn-wideo">wideo</a> w <a href="#dfn-zsynchronizowane-media">mediach zsynchronizowanych</a> (dźwięk i obraz) zapewniona jest <a href="#dfn-audiodeskrypcja-rozszerzona">audiodeskrypcja rozszerzona</a>.
+                     
+                  </p>
+               </div>
+            </aside>
+            <div class="excol-all"></div>
+            <section id="brief">
+               <h2>W skrócie</h2>
+               <dl>
+                  
+                  <dt>Cel</dt>
+                  
+                  <dd>Filmy mogą być odtwarzane z bardziej szczegółową audiodeskrypcją</dd>
+                  
+                  <dt>Zadanie twórcy</dt>
+                  
+                  <dd>Zapewnij rozszerzoną audiodeskrypcję dla treści wizualnych w filmach wideo</dd>
+                  
+               </dl>
+            </section>
+            <section id="intent">
+               <h2>Intencja</h2>
+               <p>
+                  Celem tego kryterium sukcesu jest zapewnienie osobom niewidomym lub słabowidzącym
+                  dostępu do zsynchronizowanej prezentacji multimedialnej wykraczającej poza to, co
+                  można zapewnić za pomocą standardowej audiodeskrypcji. Odbywa się to poprzez okresowe
+                  zamrażanie zsynchronizowanej prezentacji multimedialnej i odtwarzanie dodatkowego
+                  opisu dźwiękiem. Następnie zsynchronizowana prezentacja multimedialna jest wznawiana.
+                  
+               </p>
+               <p>
+                  Ponieważ przeszkadza to w oglądaniu osobom, które nie potrzebują dodatkowego opisu,
+                  często udostępniane są techniki umożliwiające włączanie i wyłączanie tej funkcji.
+                  Alternatywnie można podać wersje z dodatkowym opisem i bez niego.
+                  
+               </p>
+            </section>
+            <section id="benefits">
+               <h2>Korzyści</h2>
+               <ul>
+                  
+                  <li>
+                     Osoby niewidome, osoby słabowidzące, które nie widzą ekranu, a także osoby z ograniczeniami
+                     poznawczymi, które mają trudności z interpretacją wizualną tego, co się dzieje, często
+                     korzystają z dźwiękowego opisu informacji wizualnych. Jeśli jednak dialogów jest zbyt
+                     wiele, audiodeskrypcja jest niewystarczająca. Rozszerzona audiodeskrypcja może dostarczyć
+                     dodatkowych informacji potrzebnych do zrozumienia filmu.
+                     
+                  </li>
+                  
+               </ul>
+            </section>
+            <section id="examples">
+               <h2>Przykłady</h2>
+               <dl>
+                  
+                  <dt>Przykład 1. Wideo z wykładu.</dt>
+                  
+                  <dd>
+                     Profesor fizyki wygłasza wykład. Tworzy odręczne szkice na tablicy, mówiąc szybko
+                     podczas rysowania. Gdy tylko skończy omawiać jeden problem, wymazuje rysunek i wykonuje
+                     kolejny szkic, jednocześnie mówiąc i gestykulując drugą ręką. Wideo jest wstrzymywane
+                     pomiędzy problemami i przedstawiana jest audiodeskrypcja rysunków i gestów profesora;
+                     wideo jest następnie wznawiane.
+                     
+                  </dd>
+                  
+               </dl>
+            </section>
+            <section id="resources">
+               <h2>Powiązane zasoby</h2>
+               <p>Zasoby służą wyłącznie celom informacyjnym. Nie należy traktować ich jako zaleceń.</p>
+               <ul>
+                  
+                  <li>
+                     <a href="https://www.w3.org/TR/REC-smil/" lang="en" hreflang="en">Synchronized Multimedia Integration Language (SMIL) 1.0</a> (Zsynchronizowany język integracji multimediów (SMIL) 1.0)
+                     
+                  </li>
+                  
+                  <li>
+                     <a href="https://www.w3.org/TR/SMIL/" lang="en" hreflang="en">Synchronized Multimedia Integration Language (SMIL 2.0)</a> (Zsynchronizowany język integracji multimediów (SMIL) 2.0)
+                     
+                  </li>
+                  
+                  <li>
+                     <a href="https://www.w3.org/TR/SMIL-access/" lang="en" hreflang="en">Accessibility Features of SMIL</a> (Funkcje dostępności SMIL)
+                     
+                  </li>
+                  
+                  <li>
+                     <a href="http://ncam.wgbh.org/invent_build/web_multimedia/accessible-digital-media-guide/guideline-h-multimedia#techH12" lang="en" hreflang="en">NCAM Rich Media Accessibility, Accessible SMIL Templates</a> (Dostępność multimediów NCAM, dostępne szablony SMIL)
+                     
+                  </li>
+                  
+                  
+                  <li>
+                     <a href="http://joeclark.org/access/description/ad-principles.html" lang="en" hreflang="en">Standard Techniques in Audio Description</a> (Standardowe techniki w audiodeskrypcji)
+                     
+                  </li>
+                  
+               </ul>
+            </section>
+            <section id="techniques">
+               <h2>Techniki</h2>
+               <p>Każdy numerowany element w tej sekcji reprezentuje technikę lub kombinację technik,
+                  które Grupa Robocza WCAG uważa za wystarczające do spełnienia tego kryterium sukcesu.
+                  Nie jest jednak konieczne stosowanie tych konkretnych technik. Aby uzyskać informacje
+                  na temat stosowania innych technik, zobacz <a href="objasnienie-technik.html">Objaśnienie technik dla kryteriów sukcesu WCAG</a>, szczególnie w sekcji „Inne techniki”.
+               </p>
+               <section id="sufficient">
+                  <h3>Techniki wystarczające</h3>
+                  <ul>
+                     
+                     <li>
+                        
+                        <p>
+                           <a class="general" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G8">G8: Udostępnianie filmu z rozszerzoną narracją dźwiękową (audiodeskrypcją)</a> za pomocą jednej z poniższych technik:
+                           
+                        </p>
+                        
+                        <ul>
+                           
+                           <li>
+                              <a class="smil" href="https://www.w3.org/WAI/WCAG22/Techniques/smil/SM1">SM1: Dodanie rozszerzonej narracji dźwiękowej (audiodeskrypcji) w SMIL 1.0</a>
+                              
+                           </li>
+                           
+                           <li>
+                              <a class="smil" href="https://www.w3.org/WAI/WCAG22/Techniques/smil/SM2">SM2: Dodanie rozszerzonej narracji dźwiękowej (audiodeskrypcji) w SMIL 2.0</a>
+                              
+                           </li>
+                           
+                           <li>Użycie dowolnego odtwarzacza, który obsługuje audio i wideo</li>
+                           
+                        </ul>
+                        
+                     </li>
+                     
+                  </ul>
+               </section>
+               <section id="advisory">
+                  <h3>Techniki pomocnicze</h3>
+                  <p>Chociaż nie jest to wymagane do uzyskania zgodności, należy rozważyć następujące dodatkowe
+                     techniki, aby zwiększyć dostępność treści. Nie wszystkie techniki mogą być stosowane
+                     lub byłyby skuteczne we wszystkich sytuacjach.
+                  </p>
+                  <ul>
+                     
+                     <li>
+                        <a class="html" href="https://www.w3.org/WAI/WCAG22/Techniques/html/H96">H96: Użycie elementu track, aby zapewnić audiodeskrypcję</a>
+                        
+                     </li>
+                     
+                  </ul>
+               </section>
+            </section>
+            <section id="key-terms">
+               <details>
+                  <summary>
+                     <h2>Kluczowe pojęcia</h2>
+                  </summary>
+                  <dt id="dfn-alternatywa-dla-tekstu">alternatywa dla tekstu</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           media, które nie przedstawiają więcej informacji niż jest już przedstawione w tekście
+                           (bezpośrednio lub za pośrednictwem alternatyw tekstowych)
+                           
+                        </p>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Media alternatywne dla tekstu są przeznaczone dla osób, które korzystają z alternatywnych
+                              reprezentacji tekstu. Media alternatywne dla tekstu mogą być tylko audio, tylko wideo
+                              (w tym wideo w języku migowym) lub audio-wideo.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-audio">audio</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">technologia powielania dźwięku</p>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Dźwięk może być tworzony syntetycznie (mowa syntetyczna), nagrywany z dźwięków świata
+                              rzeczywistego lub na oba sposoby.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-audiodeskrypcja">audiodeskrypcja</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           narracja dodana do ścieżki dźwiękowej w celu opisania istotnych szczegółów obrazu,
+                           które nie mogą być zrozumiane z samej głównej ścieżki dźwiękowej
+                           
+                        </p>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Dźwiękowy opis materiału <a href="#dfn-wideo">wideo</a> zapewnia informacje o akcji, postaciach, zmianie scenerii, tekstach wyświetlanych
+                              na ekranie i innych treściach wizualnych.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              W standardowym opisie audio narracja jest dodawana w przerwach między dialogami (zobacz
+                              także <a href="#dfn-audiodeskrypcja-rozszerzona">audiodeskrypcja rozszerzona</a>).
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Jeśli wszystkie informacje o <a href="#dfn-wideo">wideo</a> są już zapewnione przez podstawową <a href="#dfn-audio">ścieżkę dźwiękową</a> 
+                              
+                              <!-- audio -->, dodatkowa audiodeskrypcja jest zbędna.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>Nazywana również „opisem wideo”, „narracją opisową” i „narracją dźwiękową”.</p>
+                        </div>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-audiodeskrypcja-rozszerzona">audiodeskrypcja rozszerzona</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           audiodeskrypcja, dodawana do materiału <a href="#dfn-wideo">wideo</a> poprzez zatrzymanie odtwarzacza (pauza), dzięki czemu jest czas na wstawienie dodatkowego
+                           opisu.
+                           
+                        </p>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Ta technika jest stosowana tylko wówczas, gdy sensu materiału <a href="#dfn-wideo">wideo</a> nie da się zachować bez dodatkowej <a href="#dfn-audiodeskrypcja">audiodeskrypcji</a>, a przerwy pomiędzy dialogami i narracją są zbyt krótkie.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-na-zywo">na żywo</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           informacja przechwytywana z wydarzeń pochodzących z rzeczywistego świata, transmitowana
+                           bezpośrednio do odbiorcy, z opóźnieniem zależnym wyłącznie od nadawcy
+                           
+                        </p>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Opóźnienie zależne od nadawcy to krótkie (najczęściej automatyczne) opóźnienie, niezbędne
+                              na przykład w celu dania nadawcy czasu na kolejkowanie lub cenzurowanie treści wizualnej
+                              lub dźwiękowej. Opóźnienie to nie jest wystarczające, by nadawaną treść poddawać poważniejszej
+                              edycji.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>Jeżeli informacja jest całkowicie generowana przez komputer, to nie jest informacją
+                              na żywo.
+                           </p>
+                        </div>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-nagranie">nagranie</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">Informacja, która nie jest transmitowana <a href="#dfn-na-zywo">na żywo</a>
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-wideo">wideo</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">technologia poruszających się lub następujących po sobie obrazów</p>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>Wideo może być stworzone za pomocą animacji lub fotografii, lub obu naraz.</p>
+                        </div>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-zsynchronizowane-media">zsynchronizowane media</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           <a href="#dfn-audio">audio</a> lub <a href="#dfn-wideo">wideo</a> zsynchronizowane z innym formatem w celu prezentacji informacji lub interakcji z
+                           komponentami opartymi na czasie, o ile nie jest to wyraźnie oznaczona <a href="#dfn-alternatywa-dla-tekstu">alternatywa dla tekstu</a>
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+               </details>
+            </section><a class="button button-backtotop" href="#top"><span>
+                  <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
+                  </svg> Początek strony
+                  			</span></a></main>
+         <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
+            <header class="box-h  box-h-icon box-h-space-above box-h-icon">
+               <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
+                  <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path>
+               </svg>
+               <h2> Pomóż ulepszyć tę stronę</h2>
+            </header>
+            <div class="box-i">
+               <p>Podziel się pomysłami, sugestiami lub uwagami za pośrednictwem poczty elektronicznej
+                  lub za pośrednictwem GitHub
+               </p>
+               <div class="button-group"><a href="mailto:kontakt@irdpl.pl?subject=%5BObja%C5%9Bnienia%20i%20Techniki%20Informacja%20zwrotna%5D" class="button"><span>E-mail</span></a><a href="https://github.com/irdpl/wcag/issues/" class="button"><span>Rozwidlenie i edycja na Github</span></a><a href="https://github.com/irdpl/wcag/issues/new" class="button"><span>Zgłoszenie problemu na Github</span></a></div>
+            </div>
+         </aside>
+      </div>
+      <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
+         <div class="inner" style="grid-column: 2 / 8">
+            <p class="note">Ta strona jest nieautoryzowaną polską wersją dokumentu W3C. Dokument może zawierać
+               błędne lub nieścisłe tłumaczenia oryginału. Łącze do oryginalnego dokumentu W3C znajduje
+               się <a href="#brief">w sekcji W skrócie</a>.
+            </p>
+            <p><strong>Data:</strong> Aktualizacja 26 October 2024.
+            </p>
+            <p><strong>Opracowane przez</strong> <a href="https://www.w3.org/groups/wg/ag/participants">uczestników Accessibility Guidelines Working Group (AG WG)</a> (współrzewodniczący: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery.
+               Kontakt z obsadą W3C: Michael Cooper).
+            </p>
+            <p>Treść została opracowana w ramach <a href="https://www.w3.org/WAI/about/projects/#us">projektów WAI-Core</a> finansowanych przez Fundusze federalne USA. Interfejs użytkownika został zaprojektowany
+               przez Education and Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) z udziałem z udziałem Shadi Abou-Zahra, Steve Lee i Shawn Lawton Henry w ramach
+               projektu <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a>, współfinansowanego przez Komisję Europejską.
+            </p>
+            <p>Tłumaczenie na język polski zostało wykonane przez: xxx xxx xxx xxx xxx.</p>
+            <p>Wydanie polskie zostało przygotowane przez zespół: xxx xxx xxx xxx xxx.</p>
+         </div>
+      </footer>
+      <footer class="site-footer grid-4q" aria-label="Site">
+         <div class="q1-start q3-end about">
+            <div>
+               <p><a class="largelink" href="https://www.irdpl.pl/" dir="auto" translate="no" lang="pl">© Polska Izba Rzemiosła Dostępnościowego</a></p>
+               <p>
+                  Platforma swobodnej współpracy osób i firm, które zajmują się dostępnością i chcą
+                  rozwijać w Polsce rynek rzetelnych usług dostępnościowych
+                  
+               </p>
+            </div>
+            <div dir="auto" translate="no" lang="pl">
+               <p>
+                  					Prawa autorskie do wszystkich materiałów w tej witrynie należą do W3C.<br /> Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). Zobacz <a href="https://www.w3.org/WAI/about/using-wai-material/" lang="en" hreflang="en">Permission to Use WAI Material</a>.
+               </p>
+            </div>
+         </div>
+         <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
+            <ul style="margin-bottom:0">
+               <li><a href="https://www.irdpl.pl">Nowości</a></li>
+               <li><a href="https://biblio.irdpl.pl">Biblioteka Lidera Dostępności</a></li>
+               <li><a href="https://www.irdpl.pl/HTML_CodeSniffer">HTML_CodeSniffer</a></li>
+            </ul>
+         </div>
+      </footer>
+      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
+      hljs.configure({
+        cssSelector: 'pre'
+      });
+      hljs.highlightAll();
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+</html>
