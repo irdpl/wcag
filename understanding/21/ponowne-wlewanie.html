@@ -13,7 +13,7 @@
       <dt>Cel</dt>
       <dd>Treść można powiększać bez zwiększania długości wiersza.</dd>
       <dt>Co robić</dt>
-      <dd>Umożliwiaj ponowne wlewanie wierszy tekstu w rzutni.</dd>
+      <dd>Umożliwiaj ponowne wlewanie wierszy tekstu w obszarze roboczym.</dd>
       <dt>Dlaczego jest to ważne</dt>
       <dd>Osoby, które potrzebują większego tekstu, mają trudności z przewijaniem, aby przeczytać długie wiersze.</dd>
     </dl>
@@ -21,24 +21,25 @@
   <section id="intent">
     <h2>Intencja</h2>
     <p>
-      Intencją tego kryterium sukcesu jest wsparcie osób słabowidzących, które muszą powiększyć tekst i czytać go w jednej kolumnie. Gdy powiększenie przeglądarki jest używane do skalowania treści do 400%, zmienia się ona - tj. jest prezentowana w jednej kolumnie, dzięki czemu przewijanie w więcej niż jednym kierunku nie jest konieczne.
+      Intencją tego kryterium sukcesu jest wsparcie osób słabowidzących, które muszą powiększyć tekst i wyświetlić go w jednej kolumnie. Gdy do skalowania treści do 400% zostanie użyta funkcja powiększania w przeglądarce, treść jest ponownie układana, tj. prezentowana w jednej kolumnie, dzięki czemu przewijanie w więcej niż jednym kierunku nie jest konieczne.
     </p>
     <p>
-      Dla osób słabowidzących powiększony tekst ze zmianą przepływu umożliwia czytanie. To jest krytyczne. Powiększenie umożliwia postrzeganie znaków. Ponowne wlewanie umożliwia śledzenie. Śledzenie polega na podążaniu wzdłuż wierszy tekstu, w tym przechodzeniu od końca jednego wiersza do początku następnego wiersza.
+      Dla osób słabowidzących zarówno powiększanie, jak i przeformatowanie tekstu ma krytyczne znaczenie dla czytania. Powiększanie tekstu umożliwia postrzeganie znaków. Przeformatowanie umożliwia śledzenie. Śledzenie polega na podążaniu wzdłuż wierszy tekstu, w tym przechodzeniu od końca jednego wiersza do początku następnego.
     </p>
     <p>
-      Unikanie konieczności przewijania w kierunku czytania w celu odsłonięcia linii, które są ucięte przez rzutnię, jest ważne, ponieważ takie przewijanie znacznie zwiększa wysiłek wymagany do czytania. Ważne jest również, aby treść nie była ukryta poza ekranem. Na przykład powiększenie strony przewijanej w pionie nie powinno powodować ukrycia treści z jednej strony.
+      Unikanie konieczności przewijania w kierunku czytania w celu odsłonięcia wierszy, które są ucięte przez rzutnię (obszar wyświetlania), jest ważne, ponieważ takie przewijanie znacznie zwiększa wysiłek wymagany do czytania. Ważne jest również, aby treść nie była ukryta poza ekranem. Na przykład powiększenie strony przewijanej w pionie nie powinno powodować ukrycia treści z jednej strony.
     </p>
+
     <section>
       <h3>Jak działa ponowne wlewanie</h3>
       <p>
-        Programy użytkownika dla technologii takich jak HTML/CSS, PDF i ePub mają metody ponownego wlewania treści w celu dopasowania do szerokości okna (rzutni). Po odpowiednim utworzeniu treść strony może być ponownie wlewana (układana), aby pozostać w granicach okna (rzutni), gdy użytkownicy powiększają rozmiar treści. Relacje przestrzenne treści mogą się zmieniać wraz z powiększaniem przez użytkowników, ale wszystkie informacje i funkcje powinny być nadal dostępne.
+        Programy użytkownika dla technologii takich jak HTML/CSS, PDF i ePub mają metody ponownego wlewania treści w celu dopasowania do szerokości okna (rzutni). Po odpowiednim zaprojektowaniu treść strony może być ponownie wlewana (układana), aby pozostać w granicach okna (rzutni), gdy użytkownicy powiększają rozmiar treści. Relacje przestrzenne treści mogą ulec zmianie, gdy użytkownicy ją powiększają, ale wszystkie informacje i funkcje powinny być nadal dostępne.
       </p>
       <p>
-        Obsługa zmiany przepływu treści jest również znana jako »Responsive Web Design« (projektowanie responsywne). Jest to możliwe dzięki zapytaniom o media CSS, które przeformatowują treść strony internetowej dla różnych szerokości rzutni (w określonych punktach przerwania), aby zapewnić zoptymalizowany układ dla urządzeń mobilnych, takich jak tablety lub smartfon Co ważne, te punkty przerwania są uruchamiane nie tylko przez węższe rzutnie, ale także wtedy, gdy użytkownicy korzystają z funkcji powiększania przeglądarki, aby powiększyć stronę.
+        Obsługa ponownego wlewania treści jest również znana jako »<span lang="en">Responsive Web Design</span>« (projektowanie responsywne). Jest to możliwe dzięki zapytaniom o media CSS, które przeformatowują treść strony internetowej dla różnych szerokości rzutni (w określonych punktach przerwania), aby zapewnić zoptymalizowany układ dla urządzeń mobilnych, takich jak tablety lub smartfony. Co ważne, te punkty przerwania są uruchamiane nie tylko przez węższe rzutnie, ale także wtedy, gdy użytkownicy korzystają z funkcji powiększania przeglądarki, aby powiększyć stronę.
       </p>
       <p>
-        W przeglądarce na komputerach stacjonarnych w 100% (domyślnej) skali, typowe strony internetowe obsługujące ponowne wlewanie wyświetlają treść w dwóch, trzech lub więcej kolumnach. Powiększenie w pewnym momencie spowoduje zmianę układu, więc treść będzie teraz wyświetlana w mniejszej liczbie kolumn. W większej skali powiększenia, wynoszącej 200% lub więcej, treść jest zwykle renderowana w jednej kolumnie. Części treści, które znajdowały się w kolumnach marginalnych, takie jak menu nawigacyjne lub treść uzupełniająca, będą teraz zwykle wyświetlane nad lub pod treścią główną.
+        W przeglądarce na komputerach stacjonarnych w 100% (domyślnej) skali, typowe strony internetowe obsługujące ponowne wlewanie wyświetlają treść w dwóch, trzech lub więcej kolumnach. Powiększenie w pewnym momencie spowoduje zmianę układu, więc treść będzie teraz wyświetlana w mniejszej liczbie kolumn. W większej skali powiększenia, wynoszącej 200% lub więcej, treść jest zwykle renderowana w jednej kolumnie. Części treści, które znajdowały się w kolumnach bocznych, takie jak menu nawigacyjne lub treść uzupełniająca, będą teraz zwykle wyświetlane nad lub pod treścią główną.
       </p>
     </section>
     <section>
@@ -57,7 +58,7 @@
     <section>
       <h3>Widoczność i osiągalność treści</h3>
       <p>
-        To, jaka część treści jest widoczna, może się zmieniać w różnych skalach. Na przykład menu nawigacyjne, które są w pełni widoczne w układzie komputerowym, są często zwijane do mniejszej liczby elementów lub nawet do pojedynczego przycisku menu (wzór ikony "hamburgera"), dzięki czemu zajmują mniej miejsca na ekranie.
+        To, jaka część treści jest widoczna, może się zmieniać w różnych skalach. Na przykład menu nawigacyjne, które są w pełni widoczne w układzie komputerowym, są często zwijane do mniejszej liczby elementów lub nawet do pojedynczego przycisku menu (wzór ikony „hamburgera”), dzięki czemu zajmują mniej miejsca na ekranie.
       </p>
       <p>
         Kryterium sukcesu jest spełnione, o ile wszystkie treści i funkcje są nadal w pełni dostępne - albo bezpośrednio, albo ujawnione za pomocą dostępnych elementów sterujących, albo dostępne za pośrednictwem bezpośrednich łączy.
@@ -93,7 +94,7 @@
     <section>
       <h3>Związek między ponownym wlaniem a kryterium sukcesu 1.4.4 Zmiana rozmiaru tekstu</h3>
       <p>
-        Kryterium sukcesu 1.4.10 Ponowne układanie skupia się na umożliwieniu użytkownikom powiększania bez konieczności przewijania w dwóch kierunkach. <a href="zmiana-rozmiaru-tekstu" class="sc">Kryterium sukcesu 1.4.4 Zmiana rozmiaru tekstu</a> również ma zastosowanie, więc powinno być możliwe zwiększenie rozmiaru całego tekstu do co najmniej 200% przy jednoczesnym spełnieniu wymagań dotyczących ponownego wlania. W przypadku większości implementacji oczekuje się, że tekst będzie się powiększał wraz ze wzrostem powiększenia, dzięki czemu użytkownicy mogą powiększać tekst do (i więcej) 400%. W implementacji, w której tekst nie zwiększa się stale w miarę powiększania (np. gdy jest przekształcany na podstawie zapytania o media w celu dostosowania go do użycia na małym ekranie), nadal musi być możliwe uzyskanie 200% powiększenia, aby spełnić kryterium zmiany rozmiaru tekstu.
+        Kryterium sukcesu 1.4.10 Ponowne wlewanie skupia się na umożliwieniu użytkownikom powiększania bez konieczności przewijania w dwóch kierunkach. <a href="zmiana-rozmiaru-tekstu" class="sc">Kryterium sukcesu 1.4.4 Zmiana rozmiaru tekstu</a> również ma zastosowanie, więc powinno być możliwe zwiększenie rozmiaru całego tekstu do co najmniej 200% przy jednoczesnym spełnieniu wymagań dotyczących ponownego wlania. W przypadku większości implementacji oczekuje się, że tekst będzie się powiększał wraz ze wzrostem powiększenia, dzięki czemu użytkownicy mogą powiększać tekst do (i więcej) 400%. W implementacji, w której tekst nie zwiększa się stale w miarę powiększania (np. gdy jest przekształcany na podstawie zapytania o media w celu dostosowania go do użycia na małym ekranie), nadal musi być możliwe uzyskanie 200% powiększenia, aby spełnić kryterium zmiany rozmiaru tekstu.
       </p>
       <p>
         Na przykład, jeśli przy domyślnym ustawieniu przeglądarki na powiększenie 100% tekst jest ustawiony na 20 pikseli, gdy okno ma szerokość 1280 pikseli, te same 20 pikseli przy powiększeniu 200% oznaczałoby rozmiar tekstu 200%. Przy powiększeniu 400% autor może zdecydować się na ustawienie rozmiaru tekstu na 10px: tekst będzie teraz nadal powiększony do 200% w porównaniu z domyślnym ustawieniem przeglądarki na 100% powiększenia. Nie jest wymagane osiągnięcie 200% powiększenia tekstu w każdym punkcie przerwania, ale powinno być możliwe uzyskanie 200% powiększenia tekstu w jakiś sposób.
@@ -114,7 +115,7 @@
     <dl>
       <dt>Widok jednej kolumny w projekcie responsywnym</dt><dd>Witryna korzysta z projektowania responsywnego. Gdy osoba powiększy obraz do ponad 300%, układ zostanie ponownie wlany do jednej kolumny. Użytkownik może łatwo odczytać treść i nie musi przewijać na boki, aby ją przeczytać.</dd>
       <dt>Plik PDF z możliwością ponownego wlania tekstu</dt>
-        <dd>W pliku PDF utworzonym zgodnie z normą  PDF/Universal Accessibility (ISO 14289) treść może być ponownie wlewana i powiększana, aby umożliwić czytanie osobom niedowidzącym.</dd>
+        <dd>W pliku PDF utworzonym zgodnie z normą PDF/Universal Accessibility (ISO 14289) treść może być ponownie wlewana i powiększana, aby umożliwić czytanie osobom niedowidzącym.</dd>
     </dl>
   </section>
   <section id="examples">
