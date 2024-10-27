@@ -109,17 +109,15 @@
                </p>
                <p>
                   W przypadku niektórych pól formularza atrybut type oferuje już sposób na ogólne określenie
-                  przeznaczenia pola formularza, na przykład input type="tel", input type="email" lub
-                  input type="password". Są to jednak tylko bardzo szerokie kategorie, opisujące typ
-                  oczekiwanych danych, ale niekoniecznie ich cel, zwłaszcza w odniesieniu do pól formularza
-                  specyficznych dla użytkownika. Na przykład type="email" wskazuje, że pole jest przeznaczone
-                  na adres e-mail, ale nie wyjaśnia, czy celem jest wprowadzenie adresu e-mail użytkownika,
-                  czy adresu e-mail innej osoby.
+                  przeznaczenia pola formularza, na przykład <code>input type="tel"</code>, <code>input type="email"</code> lub <code>input type="password"</code>. Są to jednak tylko bardzo szerokie kategorie, opisujące typ oczekiwanych danych,
+                  ale niekoniecznie ich cel, zwłaszcza w odniesieniu do pól formularza specyficznych
+                  dla użytkownika. Na przykład <code>type="email"</code> wskazuje, że pole jest przeznaczone na adres e-mail, ale nie wyjaśnia, czy celem
+                  jest wprowadzenie adresu e-mail użytkownika, czy adresu e-mail innej osoby.
                   
                </p>
                <p>
                   To kryterium sukcesu definiuje typy celów wejściowych komponentów interfejsu użytkownika,
-                  określone w <a href="../guidelines/22/#okreslenie-przeznaczenia">sekcji 7 zalecenia WCAG 2.</a>1, które muszą być określane programowo. Jeśli cele wprowadzania danych przez użytkownika
+                  określone w <a href="../guidelines/22/#okreslenie-pozadanej-wartosci">sekcji 7 zalecenia WCAG 2.2</a>, które muszą być określane programowo. Jeśli cele wprowadzania danych przez użytkownika
                   istnieją i jeśli technologia to umożliwia, cel pola musi być identyfikowalny programowo.
                   
                </p>
@@ -127,7 +125,7 @@
                   Atrybut autouzupełniania HTML akceptuje tylko określoną liczbę dobrze zdefiniowanych
                   stałych wartości. Pozwala to na bardziej szczegółową definicję lub identyfikację celu
                   niż atrybut type, na przykład poprzez umożliwienie autorowi określenia konkretnego
-                  typu nazwy: Nazwisko (<code>autocomplete="name"</code>), Pierwsze imię (<code>autocomplete="given-name"</code>), Nazwisko rodowe (<code>autocomplete="family-name"</code>), a także Nazwa użytkownika (<code>autocomplete="username"</code>) i Pseudonim, nazwa ekranowa (<code>autocomplete="nickname"</code>).
+                  typu nazwy: Nazwa (<code>autocomplete="name"</code>), Pierwsze imię (<code>autocomplete="given-name"</code>), Nazwisko rodowe (<code>autocomplete="family-name"</code>), a także Nazwa użytkownika (<code>autocomplete="username"</code>) i Pseudonim, nazwa ekranowa (<code>autocomplete="nickname"</code>).
                   
                </p>
                <p>
@@ -260,8 +258,8 @@
                   </p>
                   <ul>
                      
-                     <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F107">F107: Niepowodzenie kryterium sukcesu 1.3.5 z powodu nieprawidłowych wartości atrybutów
-                           autouzupełniania</a></li>
+                     <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F107">F107: Niespełnienie kryterium sukcesu 1.3.5 z powodu niepoprawnych wartości atrybutu
+                           autocomplete</a></li>
                      
                   </ul>
                </section>
@@ -471,7 +469,7 @@
                błędne lub nieścisłe tłumaczenia oryginału. Łącze do oryginalnego dokumentu W3C znajduje
                się <a href="#brief">w sekcji W skrócie</a>.
             </p>
-            <p><strong>Data:</strong> Aktualizacja 26 October 2024.
+            <p><strong>Data:</strong> Aktualizacja 27 October 2024.
             </p>
             <p><strong>Opracowane przez</strong> <a href="https://www.w3.org/groups/wg/ag/participants">uczestników Accessibility Guidelines Working Group (AG WG)</a> (współrzewodniczący: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery.
                Kontakt z obsadą W3C: Michael Cooper).
