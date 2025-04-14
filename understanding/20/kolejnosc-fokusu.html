@@ -13,7 +13,7 @@
       <dt>Cel</dt>
       <dd>Użytkownicy klawiatury poruszają się po treściach w prawidłowej kolejności</dd>
       <dt>Zadanie autora</dt>
-      <dd>Elementy otrzymują fokus w kolejności, która zachowuje znaczenie</dd>
+      <dd>Elementy otrzymują fokus w kolejności, która zachowuje znaczenie treści</dd>
       <dt>Dlaczego to jest ważne</dt>
       <dd>Poruszanie się po witrynie lub aplikacji za pomocą samej klawiatury będzie miało sens.</dd>
     </dl>
@@ -24,7 +24,7 @@
       Intencją tego kryterium sukcesu jest zapewnienie, że użytkownicy poruszający się po treści sekwencyjnie napotkają informacje w kolejności zgodnej ze znaczeniem treści i umożliwiającej obsługę za pomocą klawiatury. Zmniejsza to zamieszanie, umożliwiając użytkownikom utworzenie spójnego mentalnego modelu treści. Mogą istnieć różne porządki, które odzwierciedlają logiczne relacje w treści. Na przykład poruszanie się po komponentach tabeli po wierszu lub po kolumnie odzwierciedla logiczne relacje w treści. Każdy z tych porządków może spełnić to kryterium sukcesu.
     </p>
     <p>
-      Sposób, w jaki ustalana jest kolejność nawigacji sekwencyjnej w treściach internetowych, jest definiowany przez technologię treści. Na przykład prosty HTML definiuje nawigację sekwencyjną poprzez pojęcie kolejności tabulacji. Dynamiczny HTML może modyfikować sekwencję nawigacji za pomocą skryptów wraz z dodatkiem atrybutu tabindex, aby umożliwić ustawienie fokusu na dodatkowych elementach. Jeśli nie są używane żadne atrybuty skryptowe ani <code>tabindex</code>, kolejność nawigacji to kolejność, w jakiej komponenty pojawiają się w strumieniu treści. (Zobacz specyfikację HTML 4.01, sekcja 17.11, „Przydzielanie elementowi fokusu”).
+      Sposób, w jaki ustalana jest kolejność nawigacji sekwencyjnej w treściach internetowych, jest definiowany przez technologię treści. Na przykład prosty HTML definiuje nawigację sekwencyjną poprzez pojęcie kolejności tabulacji. Dynamiczny HTML może modyfikować sekwencję nawigacji za pomocą skryptów wraz z dodatkiem atrybutu <code>tabindex</code>, aby umożliwić ustawienie fokusu na dodatkowych elementach. Jeśli nie są używane żadne atrybuty skryptowe ani <code>tabindex</code>, kolejność nawigacji to kolejność, w jakiej komponenty pojawiają się w strumieniu treści. (Zobacz specyfikację HTML 4.01, sekcja 17.11, „Przydzielanie elementowi fokusu”).
     </p>
     <p>
       Przykładem nawigacji za pomocą klawiatury, która nie jest nawigacją sekwencyjną, o której mowa w tym kryterium sukcesu, jest używanie nawigacji za pomocą klawiszy strzałek do poruszania się po komponencie drzewa. Użytkownik może używać klawiszy strzałek w górę i w dół, aby przechodzić od węzła drzewa do węzła drzewa. Naciśnięcie klawisza strzałki w prawo może rozwinąć węzeł, a następnie użycie klawisza strzałki w dół spowoduje przejście do nowo rozwiniętych węzłów. Ta sekwencja nawigacji jest zgodna z oczekiwaną sekwencją kontrolki drzewa — w miarę rozwijania lub zwijania dodatkowych elementów są one dodawane lub usuwane z sekwencji nawigacji.
