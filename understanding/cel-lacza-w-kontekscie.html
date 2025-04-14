@@ -55,7 +55,7 @@
                <header class="box-h  box-h-icon">Kryterium sukcesu (KS) </header>
                <div class="box-i">
                   <p>
-                     <a href="#dfn-cel-lacza">Cel każdego łącza</a> może wynikać z samej treści łącza lub z treści tekstu powiązanego z <a href="#dfn-kontekst-lacza-okreslony-programowo">kontekstem łącza określonym programowo</a>, poza tymi przypadkami, kiedy cel łącza i tak byłby <a href="#dfn-niejednoznaczny-dla-uzytkownikow">niejednoznaczny dla użytkowników</a>.
+                     <a href="#dfn-cel-lacza">Cel każdego łącza</a> można określić na podstawie samego tekstu łącza lub tekstu łącza wraz z , poza tymi przypadkami, kiedy cel łącza i tak byłby <a href="#dfn-niejednoznaczny-dla-uzytkownikow">niejednoznaczny dla użytkowników</a>.
                      
                   </p>
                </div>
@@ -93,20 +93,19 @@
                   
                </p>
                <p>
-                  Tekst łącza lub powiązany z nim ma na celu opisanie celu łącza. W przypadkach, gdy
-                  łącze przenosi się do dokumentu lub aplikacji internetowej, nazwa dokumentu lub aplikacji
-                  internetowej będzie wystarczająca do opisania celu łącza (czyli przeniesienia Cię
-                  do dokumentu lub aplikacji internetowej). Należy pamiętać, że nie jest wymagane używanie
-                  nazwy dokumentu lub aplikacji internetowej; inne rzeczy mogą również opisywać cel
-                  łącza.
+                  Tekst łącza lub tekst łącza i tekst z nim powiązany bezpośrednio ma na celu opisanie
+                  celu łącza. W przypadkach, gdy łącze przenosi się do dokumentu lub aplikacji internetowej,
+                  nazwa dokumentu lub aplikacji internetowej będzie wystarczająca do opisania celu łącza
+                  (czyli przeniesienia Cię do dokumentu lub aplikacji internetowej). Należy pamiętać,
+                  że nie jest wymagane używanie nazwy dokumentu lub aplikacji internetowej; inne rzeczy
+                  mogą również opisywać cel łącza.
                   
                </p>
                <p>
                   <a href="tytul-strony" class="understanding">Kryterium sukcesu 2.4.2</a> dotyczy tytułów stron. Tutaj również nazwa dokumentu lub aplikacji internetowej prezentowanej
                   na stronie byłaby wystarczająca do opisania celu strony. Dobra praktyka polega na
-                  tym, że łącze i tytułu są takie same lub są bardzo podobne, jest dobrą praktyką, co
-                  zapewnia ciągłość między łączem „klikniętym” a stroną internetową, na którą trafia
-                  użytkownik.
+                  tym, że łącze i tytuł są takie same lub są bardzo podobne, co zapewnia ciągłość między
+                  łączem „klikniętym” a stroną internetową, na którą trafia użytkownik.
                   
                </p>
                <p>
@@ -115,14 +114,14 @@
                   w stanie zidentyfikować cel łącza bez przesuwania fokusu z łącza. Innymi słowy, mogą
                   dotrzeć do łącza i dowiedzieć się o nim więcej bez utraty miejsca. Można to osiągnąć,
                   umieszczając opis łącza w tym samym zdaniu, akapicie, elemencie listy lub komórce
-                  tabeli co łącze lub w komórce nagłówka tabeli dla łącza w tabeli danych, ponieważ
+                  tabeli, co łącze, lub w komórce nagłówka tabeli dla łącza w tabeli danych, ponieważ
                   są one bezpośrednio powiązane z samym łączem. Alternatywnie, autorzy mogą zdecydować
                   się na użycie techniki ARIA, aby skojarzyć dodatkowy tekst na stronie z łączem.
                   
                </p>
                <p>
                   Ten kontekst będzie najbardziej użyteczny, jeśli poprzedzi łącze. (Na przykład, jeśli
-                  musisz użyć niejednoznacznego tekstu łącza, lepiej umieścić go na końcu zdania opisującego
+                  musisz użyć niejednoznacznego tekstu łącza, lepiej umieścić je na końcu zdania opisującego
                   jego przeznaczenie, zamiast umieszczać dwuznaczną frazę na początku zdania). Jeśli
                   opis znajduje się pod łączem, może to powodować zamieszanie i trudności dla użytkowników
                   czytników ekranu, którzy czytają stronę w kolejności (od góry do dołu).
@@ -143,7 +142,7 @@
                </p>
                <p>
                   Kryterium sukcesu obejmuje wyjątek dla łączy, dla których celu łącza nie można określić
-                  na podstawie informacji na stronie internetowej. W tej sytuacji osoba z niepełnosprawnością
+                  na podstawie informacji na stronie internetowej. W tych przypadkach osoba z niepełnosprawnością
                   nie jest w gorszej sytuacji; nie ma dodatkowego kontekstu, aby zrozumieć cel  łącza.
                   Jednak niezależnie od tego, jaka ilość kontekstu jest dostępna na stronie internetowej,
                   która może być użyta do interpretacji celu łącza, musi być udostępniona w tekście
@@ -527,43 +526,6 @@
                         
                      </definition>
                   </dd>
-                  <dt id="dfn-kontekst-lacza-okreslony-programowo">kontekst łącza określony programowo</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">
-                           dodatkowe informacje, które mogą być <a href="#dfn-okreslony-programowo">określone programowo</a> na podstawie <a href="#dfn-relacja">relacji</a> między łączem oraz tekstem przyległym do łącza, i przedstawione użytkownikom na różne
-                           sposoby
-                           
-                        </p>
-                        
-                        
-                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
-                           
-                           <p>
-                              W języku HTML informacje, które można programowo określić z kontekstu łącza, obejmują
-                              tekst, który znajduje się w tym samym akapicie, na tej samej liście albo w komórce
-                              tabeli, co łącze, lub w komórce nagłówka tabeli, która jest powiązana z komórką tabeli,
-                              w której znajduje się łącze.
-                              
-                           </p>
-                           
-                        </aside>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>
-                              Ponieważ czytnik ekranu (ang. screen reader) interpretuje interpunkcję, może też podać
-                              kontekst bieżącego zdania, kiedy fokus znajdzie się na łączu w tym zdaniu.
-                              
-                           </p>
-                        </div>
-                        
-                        
-                     </definition>
-                  </dd>
                   <dt id="dfn-mechanizm">mechanizm</dt>
                   <dd>
                      <definition xmlns="">
@@ -799,42 +761,6 @@
                         
                      </definition>
                   </dd>
-                  <dt id="dfn-okreslony-programowo">określony programowo</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">
-                           takie przedstawienie danych przez oprogramowanie dostawcy, które pozwala różnym <a href="#dfn-program-uzytkownika">programom użytkownika</a>, w tym <a href="#dfn-technologie-wspomagajace">technologiom wspomagającym</a>, odczytać i przedstawić daną informację w sposób, jakiego potrzebuje użytkownik
-                           
-                        </p>
-                        
-                        
-                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
-                           
-                           <p>
-                              	  Przedstawienie danych w języku znaczników z elementami i atrybutami, które są dostępne
-                              bezpośrednio dla najczęściej używanych technologii wspomagających
-                              
-                           </p>
-                           
-                        </aside>
-                        
-                        
-                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
-                           
-                           <p>
-                              Przedstawienie za pomocą technologii – szczególnie struktury danych sformułowanych
-                              w języku innym niż język znaczników i nastawionych na technologie wspomagające poprzez
-                              API dostępności, które jest obsługiwane przez najczęściej spotykane technologie wspomagające.
-                              
-                           </p>
-                           
-                        </aside>
-                        
-                        
-                     </definition>
-                  </dd>
                   <dt id="dfn-polegac-na">polegać na</dt>
                   <dd>
                      <definition xmlns="">
@@ -912,16 +838,6 @@
                            </p>
                            
                         </aside>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-relacja">relacja</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">posiadające znaczenie powiązanie między różnymi elementami treści</p>
                         
                         
                      </definition>
@@ -1407,7 +1323,7 @@
                błędne lub nieścisłe tłumaczenia oryginału. Łącze do oryginalnego dokumentu W3C znajduje
                się <a href="#brief">w sekcji W skrócie</a>.
             </p>
-            <p><strong>Data:</strong> Aktualizacja 2 November 2024.
+            <p><strong>Data:</strong> Aktualizacja 14 April 2025.
             </p>
             <p><strong>Opracowane przez</strong> <a href="https://www.w3.org/groups/wg/ag/participants">uczestników Accessibility Guidelines Working Group (AG WG)</a> (współrzewodniczący: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery.
                Kontakt z obsadą W3C: Michael Cooper).
@@ -1432,7 +1348,7 @@
             </div>
             <div dir="auto" translate="no" lang="pl">
                <p>
-                  					Prawa autorskie do wszystkich materiałów w tej witrynie należą do W3C.<br /> Copyright © 2024 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). Zobacz <a href="https://www.w3.org/WAI/about/using-wai-material/" lang="en" hreflang="en">Permission to Use WAI Material</a>.
+                  					Prawa autorskie do wszystkich materiałów w tej witrynie należą do W3C.<br /> Copyright © 2025 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). Zobacz <a href="https://www.w3.org/WAI/about/using-wai-material/" lang="en" hreflang="en">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>

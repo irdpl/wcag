@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl"><head>
 <meta charset="UTF-8">
-<meta name="generator" content="ReSpec 35.1.2">
+<meta name="generator" content="ReSpec 35.3.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -101,6 +101,23 @@ dd{margin-left:0}
 <meta name="description" content="Wytyczne dla dostępności treści internetowych (WCAG) 2.2 obejmują szeroki wachlarz zaleceń dotyczących zwiększenia dostępności treści internetowych. Ich wdrożenie sprawi, że treści będą bardziej dostępne dla szerszego grona osób z niepełnosprawnościami, w tym dla niewidomych i słabowidzących, głuchych i niedosłyszących, osób z niepełnosprawnością ruchową, z zaburzeniami mowy, nadwrażliwością na światło, z niepełnosprawnościami sprzężonymi. A także dla niektórych osób mających trudności w uczeniu się i ograniczenia poznawcze; ale nie zaspokoją potrzeb każdego użytkownika z niepełnosprawnością. Wytyczne te dotyczą dostępności treści internetowych na komputerach stacjonarnych, laptopach, tabletach i urządzeniach mobilnych. Postępowanie zgodnie z tymi wytycznymi sprawi również, że treści internetowe  w ogóle będą bardziej użyteczne dla użytkowników.">
 <link rel="canonical" href="https://www.w3.org/TR/WCAG22/">
 <style>
+var:hover{text-decoration:underline;cursor:pointer}
+var.respec-hl{color:var(--color,#000);background-color:var(--bg-color);box-shadow:0 0 0 2px var(--bg-color)}
+@media (prefers-color-scheme:dark){
+var.respec-hl{filter:saturate(.9) brightness(.9)}
+}
+var.respec-hl-c1{--bg-color:#f4d200}
+var.respec-hl-c2{--bg-color:#ff87a2}
+var.respec-hl-c3{--bg-color:#96e885}
+var.respec-hl-c4{--bg-color:#3eeed2}
+var.respec-hl-c5{--bg-color:#eacfb6}
+var.respec-hl-c6{--bg-color:#82ddff}
+var.respec-hl-c7{--bg-color:#ffbcf2}
+@media print{
+var.respec-hl{background:0 0;color:#000;box-shadow:unset}
+}
+</style>
+<style>
 var{position:relative;cursor:pointer}
 var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
 var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#222}
@@ -116,7 +133,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "permalinkHide": false,
   "tocIntroductory": true,
   "specStatus": "REC",
-  "publishDate": "2024-11-02",
+  "publishDate": "2025-04-14",
   "diffTool": "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
   "shortName": "WCAG22",
   "copyrightStart": "2020",
@@ -214,20 +231,20 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "id": "unesco"
     }
   },
-  "publishISODate": "2024-11-02T00:00:00.000Z",
-  "generatedSubtitle": "W3C Recommendation 2 listopada 2024"
+  "publishISODate": "2025-04-14T00:00:00.000Z",
+  "generatedSubtitle": "W3C Recommendation 14 kwietnia 2025"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-REC"></head>
 <body class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Wytyczne dla dostępności treści internetowych (WCAG) 2.2</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#REC">W3C Recommendation</a> <time class="dt-published" datetime="2024-11-02">2 listopada 2024</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#REC">W3C Recommendation</a> <time class="dt-published" datetime="2025-04-14">14 kwietnia 2025</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
         <dt>This version:</dt><dd>
-                <a class="u-url" href="https://www.w3.org/TR/2024/REC-WCAG22-20241102/">https://www.w3.org/TR/2024/REC-WCAG22-20241102/</a>
+                <a class="u-url" href="https://www.w3.org/TR/2025/REC-WCAG22-20250414/">https://www.w3.org/TR/2025/REC-WCAG22-20250414/</a>
               </dd>
         <dt>Latest published version:</dt><dd>
                 <a href="https://www.w3.org/TR/WCAG22/">https://www.w3.org/TR/WCAG22/</a>
@@ -277,7 +294,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <p class="copyright">
     <a href="https://www.w3.org/policies/#copyright">Copyright</a>
     ©
-    2020-2024
+    2020-2025
     
     <a href="https://www.w3.org/">World Wide Web Consortium</a>.
     <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup>
@@ -298,7 +315,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   <section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
       document at the time of its publication. A list of current <abbr title="World Wide Web Consortium">W3C</abbr>
       publications and the latest revision of this technical report can be found
-      in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      in the
+      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> standards and drafts index</a> at
       https://www.w3.org/TR/.</em></p>
     <section id="status-dokumentu"><div class="header-wrapper"><h3 id="status-dokumentu-0">Status dokumentu</h3><a class="self-link" href="#status-dokumentu" aria-label="Permalink for this Section"></a></div>
 	<p>
@@ -1369,7 +1387,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
    
    <div class="doclinks"><a href="../../understanding/cel-lacza-w-kontekscie.html">Objaśnienie Cel łącza (w kontekście)</a> <span class="screenreader">|</span> <br><a href="https://www.w3.org/WAI/WCAG22/quickref/#cel-lacza-w-kontekscie">Jak spełnić Cel łącza (w kontekście)</a></div><p class="conformance-level">(Poziom A)</p>
    
-   <p><a href="#dfn-cel-lacza" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-cel-lacza-1" title="oczekiwany skutek aktywacji łącza">Cel każdego łącza</a> może wynikać z samej treści łącza lub z treści tekstu powiązanego z <a href="#dfn-kontekst-lacza-okreslony-programowo" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-kontekst-lacza-okreslony-programowo-1" title="dodatkowe informacje, które mogą być określone programowo na podstawie relacji między łączem oraz tekstem przyległym do łącza, i przedstawione użytkownikom na różne sposoby">kontekstem łącza określonym programowo</a>, poza tymi przypadkami, kiedy cel łącza i tak byłby <a href="#dfn-niejednoznaczny-dla-uzytkownikow" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-niejednoznaczny-dla-uzytkownikow-1" title="celu nie można określić na podstawie łącza i wszystkich informacji o stronie internetowej prezentowanych użytkownikowi z łączem (tj. użytkownicy bez niepełnosprawności nie wiedzą, do czego służy łącze, dopóki go nie odwiedzą)">niejednoznaczny dla użytkowników</a>.
+   <p><a href="#dfn-cel-lacza" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-cel-lacza-1" title="oczekiwany skutek aktywacji łącza">Cel każdego łącza</a> można określić na podstawie samego tekstu łącza lub tekstu łącza wraz z <a class="respec-offending-element" title="No matching definition found." id="respec-offender-no-matching-definition-found">programowo określonym kontekstem łącza</a>, poza tymi przypadkami, kiedy cel łącza i tak byłby <a href="#dfn-niejednoznaczny-dla-uzytkownikow" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-niejednoznaczny-dla-uzytkownikow-1" title="celu nie można określić na podstawie łącza i wszystkich informacji o stronie internetowej prezentowanych użytkownikowi z łączem (tj. użytkownicy bez niepełnosprawności nie wiedzą, do czego służy łącze, dopóki go nie odwiedzą)">niejednoznaczny dla użytkowników</a>.
    </p>
    
 </section>
@@ -1592,10 +1610,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <dl>
 	<dt>Odpowiednik</dt> 
   <dd>Cel jest dostępny za pośrednictwem równoważnego łącza lub kontrolki na tej samej stronie, która ma co najmniej 44 na 44 piksele CSS,</dd>
-	<dt>Śródliniowe</dt> 
+	<dt>Wierszowe</dt> 
   <dd>Cel znajduje się w zdaniu lub w bloku tekstu,</dd>
-	<dt>Kontrola programu użytkownika</dt> 
-  <dd>Rozmiar obiektu docelowego jest określony przez program użytkownika (przeglądarkę) i nie jest modyfikowany przez autora,</dd>
+	<dt>Kontrolka programu użytkownika</dt> 
+  <dd>Rozmiar celu jest określany przez <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-2" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">program użytkownika</a> i nie jest modyfikowany przez twórcę;</dd>
 	<dt>Istotny</dt> 
   <dd>Szczególna prezentacja celu ma <a href="#dfn-istotny" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-istotny-11" title="jeżeli taki element zostanie usunięty, może to całkowicie zmienić informację lub funkcjonalność treści, a informacja i funkcjonalność nie mogą zostać osiągnięte w inny sposób, zapewniający zgodność">istotne</a> znaczenie dla przekazywanych informacji.</dd>
 </dl>  
@@ -1618,7 +1636,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <div class="doclinks"><a href="../../understanding/ruch-przeciagania.html">Objaśnienie Ruch przeciągania</a> <span class="screenreader">|</span> <br><a href="https://www.w3.org/WAI/WCAG22/quickref/#ruch-przeciagania">Jak spełnić Ruch przeciągania</a></div><p class="conformance-level">(Poziom AA)</p>
 	<p class="change">[Nowe]</p>
     
-  <p>Wszystkie <a href="#dfn-funkcjonalnosc" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-funkcjonalnosc-5" title="procesy i efekty osiągalne w wyniku działań użytkownika">funkcjonalności</a>, które wykorzystują do działania <a href="#dfn-dragging-movements" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-dragging-movements-1" title="[Nowe]">ruch przeciągania</a> można zrealizować za pomocą <a href="#dfn-pojedynczy-wskaznik" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-pojedynczy-wskaznik-3" title="wprowadzanie danych wskaźnikiem, które działa z jednym punktem kontaktu z ekranem, w tym pojedyncze stuknięcia i kliknięcia, podwójne stuknięcia i kliknięcia, długie naciśnięcia i gesty oparte na ścieżce">pojedynczego wskaźnika</a> bez przeciągania, chyba że przeciąganie jest <a href="#dfn-istotny" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-istotny-13" title="jeżeli taki element zostanie usunięty, może to całkowicie zmienić informację lub funkcjonalność treści, a informacja i funkcjonalność nie mogą zostać osiągnięte w inny sposób, zapewniający zgodność">niezbędne</a> lub funkcjonalność została określona przez <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-2" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">program użytkownika</a>, a nie twórcę.</p>
+  <p>Wszystkie <a href="#dfn-funkcjonalnosc" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-funkcjonalnosc-5" title="procesy i efekty osiągalne w wyniku działań użytkownika">funkcjonalności</a>, które wykorzystują do działania <a href="#dfn-dragging-movements" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-dragging-movements-1" title="[Nowe]">ruch przeciągania</a> można zrealizować za pomocą <a href="#dfn-pojedynczy-wskaznik" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-pojedynczy-wskaznik-3" title="wprowadzanie danych wskaźnikiem, które działa z jednym punktem kontaktu z ekranem, w tym pojedyncze stuknięcia i kliknięcia, podwójne stuknięcia i kliknięcia, długie naciśnięcia i gesty oparte na ścieżce">pojedynczego wskaźnika</a> bez przeciągania, chyba że przeciąganie jest <a href="#dfn-istotny" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-istotny-13" title="jeżeli taki element zostanie usunięty, może to całkowicie zmienić informację lub funkcjonalność treści, a informacja i funkcjonalność nie mogą zostać osiągnięte w inny sposób, zapewniający zgodność">niezbędne</a> lub funkcjonalność została określona przez <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-3" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">program użytkownika</a>, a nie twórcę.</p>
     <div class="note" role="note" id="issue-container-generatedID-31"><div role="heading" class="note-title marker" id="h-note-31" aria-level="5"><span>Note</span></div><p class="">Wymóg ten dotyczy treści internetowych, które odczytują działania wskaźnika (tj. nie dotyczy działań, które są wymagane do obsługi programu użytkownika lub technologii wspomagającej).</p></div>
    
  </section>
@@ -1631,10 +1649,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
     <p>Rozmiar <a href="#dfn-cele" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-cele-2" title="obszar wyświetlacza, który zaakceptuje akcję wskaźnika, taki jak obszar interaktywny komponentu interfejsu użytkownika">celu</a> dla <a href="#dfn-wejscie-wskaznika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-wejscie-wskaznika-2" title="dane wejściowe z urządzenia, które może kierować określone współrzędne (lub zestaw współrzędnych) na ekranie, takie jak mysz, pióro lub kontakt dotykowy">wejścia wskaźnika</a> wynosi co najmniej 24 na 24 <a href="#dfn-pikseli-css" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-pikseli-css-5" title="kąt widzenia wynoszący około 0,0213 stopnia">piksele CSS</a>, z wyjątkiem sytuacji, gdy:</p>
     <ul>
-        <li><strong>Odstępy:</strong> Niewielkie cele (mniejsze niż 24 na 24 piksele CSS) są umieszczane w taki sposób, że jeśli okrąg o średnicy 24 pikseli CSS jest wyśrodkowany na <a href="#dfn-minimalna-obwiednia" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-minimalna-obwiednia-1" title="[Nowy]">obwiedni</a> każdego z nich, okręgi nie przecinają innego celu ani okręgu innego niewielkiego celu;</li>
-        <li><strong>Odpowiednik:</strong> Efekt może być osiągnięty na tej samej stronie za pomocą innej kontrolki, która spełnia to kryterium;</li>
+        <li><strong>Odstępy:</strong> Niewielkie cele (mniejsze niż 24 na 24 piksele CSS) są umieszczane w taki sposób, że jeśli okrąg o średnicy 24 pikseli CSS jest wyśrodkowany na <a href="#dfn-minimalna-obwiednia" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-minimalna-obwiednia-1" title="[Nowy]">obwiedni</a> każdego z nich, okręgi nie przecinają innego celu, ani okręgu innego niewielkiego celu;</li>
+        <li><strong>Odpowiednik:</strong> Cel może być osiągnięty na tej samej stronie za pomocą innej kontrolki, która spełnia to kryterium;</li>
         <li><strong>Wierszowe:</strong> Cel znajduje się w zdaniu lub jego rozmiar jest w inny sposób ograniczony przez wysokość linii tekstu innego niż wiersz z celem;</li>
-        <li><strong>Kontrolka programu użytkownika:</strong> Rozmiar celu jest określany przez <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-3" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">program użytkownika</a> i nie jest modyfikowany przez twórcę;</li>
+        <li><strong>Kontrolka programu użytkownika:</strong> Rozmiar celu jest określany przez <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-4" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">program użytkownika</a> i nie jest modyfikowany przez twórcę;</li>
         <li><strong>Istotny:</strong> Sposób <a href="#dfn-prezentacja" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-prezentacja-4" title="renderowanie treści w sposób, który jest postrzegalny dla użytkownika">przedstawienia</a> celu jest <a href="#dfn-istotny" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-istotny-14" title="jeżeli taki element zostanie usunięty, może to całkowicie zmienić informację lub funkcjonalność treści, a informacja i funkcjonalność nie mogą zostać osiągnięte w inny sposób, zapewniający zgodność">niezbędny</a> albo jest prawnie wymagany przy przekazywaniu informacji.</li>
     </ul>
     <div class="note" role="note" id="issue-container-generatedID-32"><div role="heading" class="note-title marker" id="h-note-32" aria-level="5"><span>Uwaga 1</span></div><p class="">Cele, które umożliwiają przestrzenny wybór wartości na podstawie pozycji w obrębie celu, są uważane za jeden cel na potrzeby tego kryterium sukcesu. Przykładami mogą być suwaki, selektory kolorów wyświetlające gradient kolorów lub edytowalne obszary, w których umieszcza się kursor.</p></div>
@@ -1971,7 +1989,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
    
    <div class="doclinks"><a href="../../understanding/nazwa-rola-wartosc.html">Objaśnienie Nazwa, rola, wartość</a> <span class="screenreader">|</span> <br><a href="https://www.w3.org/WAI/WCAG22/quickref/#nazwa-rola-wartosc">Jak spełnić Nazwa, rola, wartość</a></div><p class="conformance-level">(Poziom A)</p>
    
-   <p>Dla wszystkich <a href="#dfn-komponent-interfejsu-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-komponent-interfejsu-uzytkownika-12" title="fragment treści internetowej odbierany przez użytkownika jako pojedyncza kontrolka dla określonej funkcji">komponentów interfejsu użytkownika</a> (w tym, ale nie tylko, elementów formularzy, łączy oraz komponentów wygenerowanych przez skrypty) <a href="#dfn-nazwa" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-nazwa-3" title="tekst, po którym oprogramowanie może zidentyfikować obiekty w treści">nazwa</a> oraz <a href="#dfn-rola" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-rola-1" title="tekst lub liczba, poprzez którą oprogramowanie może określić funkcję komponentu w treści internetowej">rola</a> mogą być <a href="#dfn-okreslony-programowo" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-okreslony-programowo-7" title="takie przedstawienie danych przez oprogramowanie dostawcy, które pozwala różnym programom użytkownika, w tym technologiom wspomagającym, odczytać i przedstawić daną informację w sposób, jakiego potrzebuje użytkownik">określone programowo</a>; stan, właściwości oraz wartości, które mogą być ustawione przez użytkownika, mogą również być <a href="#dfn-programowo-ustawione" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-programowo-ustawione-1" title="ustawione przez oprogramowanie, które wykorzystuj metody obsługiwane przez programy użytkownika, w tym przez technologie wspomagające">ustawione programowo</a>; powiadomienie o zmianach w tych elementach dostępne jest dla <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-4" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">programów użytkownika</a>, w tym <a href="#dfn-technologie-wspomagajace" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-technologie-wspomagajace-3" title="sprzęt i oprogramowanie, które działa jako program użytkownika lub współdziała z popularnymi programami użytkownika, aby zapewnić osobom z niepełnosprawnościami niezbędne funkcjonalności, wykraczające poza możliwości oferowane przez popularne programy użytkownika;">technologii wspomagających</a>.
+   <p>Dla wszystkich <a href="#dfn-komponent-interfejsu-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-komponent-interfejsu-uzytkownika-12" title="fragment treści internetowej odbierany przez użytkownika jako pojedyncza kontrolka dla określonej funkcji">komponentów interfejsu użytkownika</a> (w tym, ale nie tylko, elementów formularzy, łączy oraz komponentów wygenerowanych przez skrypty) <a href="#dfn-nazwa" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-nazwa-3" title="tekst, po którym oprogramowanie może zidentyfikować obiekty w treści">nazwa</a> oraz <a href="#dfn-rola" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-rola-1" title="tekst lub liczba, poprzez którą oprogramowanie może określić funkcję komponentu w treści internetowej">rola</a> mogą być <a href="#dfn-okreslony-programowo" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-okreslony-programowo-7" title="takie przedstawienie danych przez oprogramowanie dostawcy, które pozwala różnym programom użytkownika, w tym technologiom wspomagającym, odczytać i przedstawić daną informację w sposób, jakiego potrzebuje użytkownik">określone programowo</a>; stan, właściwości oraz wartości, które mogą być ustawione przez użytkownika, mogą również być <a href="#dfn-programowo-ustawione" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-programowo-ustawione-1" title="ustawione przez oprogramowanie, które wykorzystuj metody obsługiwane przez programy użytkownika, w tym przez technologie wspomagające">ustawione programowo</a>; powiadomienie o zmianach w tych elementach dostępne jest dla <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-5" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">programów użytkownika</a>, w tym <a href="#dfn-technologie-wspomagajace" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-technologie-wspomagajace-3" title="sprzęt i oprogramowanie, które działa jako program użytkownika lub współdziała z popularnymi programami użytkownika, aby zapewnić osobom z niepełnosprawnościami niezbędne funkcjonalności, wykraczające poza możliwości oferowane przez popularne programy użytkownika;">technologii wspomagających</a>.
    </p>
    
    <div class="note" role="note" id="issue-container-generatedID-39"><div role="heading" class="note-title marker" id="h-note-39" aria-level="5"><span>Note</span></div><p class="">To kryterium sukcesu jest przede wszystkim dla autorów stron internetowych, którzy opracowują lub skryptują własne komponenty interfejsu użytkownika. Na przykład, standardowe kontrolki HTML już spełniają to kryterium, gdy są używane zgodnie ze specyfikacją.
@@ -2590,7 +2608,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 </dd>
 
-      <dt><dfn id="dfn-kontekst-lacza-okreslony-programowo" data-lt="kontekst linku określony programowo|kontekstem łącza określonym programowo|kontekst łącza określony programowo" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">kontekst łącza określony programowo</dfn></dt>
+      <dt><dfn id="dfn-kontekst-lacza-okreslony-programowo" data-lt="kontekst linku określony programowo|kontekstem łącza określonym programowo|kontekst łącza określony programowo" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn" class="respec-offending-element" title="Found definition for &quot;kontekst łącza określony programowo&quot;, but nothing links to it. This is usually a spec bug!">kontekst łącza określony programowo</dfn></dt>
 <dd>
 
   <p>
@@ -2628,7 +2646,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </p>
 
   <div class="note" role="note" id="issue-container-generatedID-87"><div role="heading" class="note-title marker" id="h-note-87" aria-level="3"><span>Uwaga 1</span></div><p class="">
-    Mechanizm może być dostarczany bezpośrednio w treści albo może być oparty zarówno na platformie, jak i na <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-5" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">oprogramowaniu użytkownika</a>, w tym na <a href="#dfn-technologie-wspomagajace" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-technologie-wspomagajace-5" title="sprzęt i oprogramowanie, które działa jako program użytkownika lub współdziała z popularnymi programami użytkownika, aby zapewnić osobom z niepełnosprawnościami niezbędne funkcjonalności, wykraczające poza możliwości oferowane przez popularne programy użytkownika;">technologiach wspomagających</a>.
+    Mechanizm może być dostarczany bezpośrednio w treści albo może być oparty zarówno na platformie, jak i na <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-6" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">oprogramowaniu użytkownika</a>, w tym na <a href="#dfn-technologie-wspomagajace" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-technologie-wspomagajace-5" title="sprzęt i oprogramowanie, które działa jako program użytkownika lub współdziała z popularnymi programami użytkownika, aby zapewnić osobom z niepełnosprawnościami niezbędne funkcjonalności, wykraczające poza możliwości oferowane przez popularne programy użytkownika;">technologiach wspomagających</a>.
   </p></div>
 
   <div class="note" role="note" id="issue-container-generatedID-88"><div role="heading" class="note-title marker" id="h-note-88" aria-level="3"><span>Uwaga 2</span></div><p class="">Mechanizm wymaga spełnienia wszystkich kryteriów sukcesu żądanych dla danego poziomu.</p></div>
@@ -2788,7 +2806,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
       <dt><dfn id="dfn-obslugiwana-dostepnosc" data-lt="obsługujące dostępność|obsługują dostępności|obsługują dostępność|obsługuje dostępności|obsługiwania dostępności|obsługiwany przez dostępność|obsługującego dostępność|obsługi dostępności|wspierania dostępności|wspieranie dostępności|wspierających dostępność|obsługujących dostępność|obsługa dostępności|obsługiwana dostępność" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">obsługiwana dostępność</dfn></dt>
 <dd>
-  <p>wspierana przez <a href="#dfn-technologie-wspomagajace" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-technologie-wspomagajace-6" title="sprzęt i oprogramowanie, które działa jako program użytkownika lub współdziała z popularnymi programami użytkownika, aby zapewnić osobom z niepełnosprawnościami niezbędne funkcjonalności, wykraczające poza możliwości oferowane przez popularne programy użytkownika;">technologie wspomagające</a> oraz przez przeglądarki i inne <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-6" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">programy użytkownika</a></p>
+  <p>wspierana przez <a href="#dfn-technologie-wspomagajace" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-technologie-wspomagajace-6" title="sprzęt i oprogramowanie, które działa jako program użytkownika lub współdziała z popularnymi programami użytkownika, aby zapewnić osobom z niepełnosprawnościami niezbędne funkcjonalności, wykraczające poza możliwości oferowane przez popularne programy użytkownika;">technologie wspomagające</a> oraz przez przeglądarki i inne <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-7" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">programy użytkownika</a></p>
   <p>
     Żeby zakwalifikować użycie technologii tworzenia treści internetowych jako obsługującą dostępność, muszą być spełnione oba poniższe warunki:
   </p>
@@ -2861,7 +2879,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   <p>obiekt, w którym program użytkownika prezentuje treść (ang. <span lang="en">viewport</span>)</p>
 
   <div class="note" role="note" id="issue-container-generatedID-110"><div role="heading" class="note-title marker" id="h-note-110" aria-level="3"><span>Uwaga 1</span></div><p class="">
-    <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-7" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">Program użytkownika</a> prezentuje treść poprzez jeden lub więcej obszarów roboczych (rzutni). Obszarami roboczymi są okna, ramki, głośniki, wirtualne okulary. Obszar roboczy może zawierać w sobie inne rzutnie (na przykład osadzone ramki). Komponenty interfejsu użytkownika generowane przez program użytkownika, jak podpowiedzi, menu i powiadomienia, nie są obszarami roboczymi. 
+    <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-8" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">Program użytkownika</a> prezentuje treść poprzez jeden lub więcej obszarów roboczych (rzutni). Obszarami roboczymi są okna, ramki, głośniki, wirtualne okulary. Obszar roboczy może zawierać w sobie inne rzutnie (na przykład osadzone ramki). Komponenty interfejsu użytkownika generowane przez program użytkownika, jak podpowiedzi, menu i powiadomienia, nie są obszarami roboczymi. 
   </p></div>
 
   <div class="note" role="note" id="issue-container-generatedID-111"><div role="heading" class="note-title marker" id="h-note-111" aria-level="3"><span>Uwaga 2</span></div><p class="">
@@ -2887,7 +2905,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <dd>
 
   <p>
-    takie przedstawienie danych przez oprogramowanie dostawcy, które pozwala różnym <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-8" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">programom użytkownika</a>, w tym <a href="#dfn-technologie-wspomagajace" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-technologie-wspomagajace-7" title="sprzęt i oprogramowanie, które działa jako program użytkownika lub współdziała z popularnymi programami użytkownika, aby zapewnić osobom z niepełnosprawnościami niezbędne funkcjonalności, wykraczające poza możliwości oferowane przez popularne programy użytkownika;">technologiom wspomagającym</a>, odczytać i przedstawić daną informację w sposób, jakiego potrzebuje użytkownik
+    takie przedstawienie danych przez oprogramowanie dostawcy, które pozwala różnym <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-9" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">programom użytkownika</a>, w tym <a href="#dfn-technologie-wspomagajace" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-technologie-wspomagajace-7" title="sprzęt i oprogramowanie, które działa jako program użytkownika lub współdziała z popularnymi programami użytkownika, aby zapewnić osobom z niepełnosprawnościami niezbędne funkcjonalności, wykraczające poza możliwości oferowane przez popularne programy użytkownika;">technologiom wspomagającym</a>, odczytać i przedstawić daną informację w sposób, jakiego potrzebuje użytkownik
   </p>
 
   <aside class="example" id="example-15"><div class="marker">Przykład 1</div>
@@ -3155,7 +3173,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <dt><dfn id="dfn-strona-internetowa" data-lt="strony internetowe|strony internetowej|stronach internetowych|stron internetowych|stronę internetową|strona internetowa" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">strona internetowa</dfn></dt>
 <dd>
 
-  <p>nieosadzony zasób uzyskany z pojedynczego identyfikatora URI za pomocą protokołu HTTP wraz z wszelkimi innymi zasobami użytymi do renderowania strony w <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-9" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">programie użytkownika</a> lub takimi, które potencjalnie mogą być użyte do renderowania</p>
+  <p>nieosadzony zasób uzyskany z pojedynczego identyfikatora URI za pomocą protokołu HTTP wraz z wszelkimi innymi zasobami użytymi do renderowania strony w <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-10" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">programie użytkownika</a> lub takimi, które potencjalnie mogą być użyte do renderowania</p>
 
   <div class="note" role="note" id="issue-container-generatedID-120"><div role="heading" class="note-title marker" id="h-note-120" aria-level="3"><span>Uwaga 1</span></div><p class="">
     Mimo że każdy z „pozostałych zasobów” mógłby być renderowany razem z podstawowym zasobem, to niekoniecznie muszą być renderowane równocześnie.
@@ -3247,7 +3265,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <dd>
 
   <p>
-    <a href="#dfn-mechanizm" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-mechanizm-16" title="procedura lub technika prowadząca do osiągnięcia rezultatu">mechanizm</a> kodowania danych, które mają być renderowane, odtwarzane lub wykonywane przez <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-10" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">programy użytkownika</a>
+    <a href="#dfn-mechanizm" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-mechanizm-16" title="procedura lub technika prowadząca do osiągnięcia rezultatu">mechanizm</a> kodowania danych, które mają być renderowane, odtwarzane lub wykonywane przez <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-11" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">programy użytkownika</a>
   </p>
 
   <div class="note" role="note" id="issue-container-generatedID-123"><div role="heading" class="note-title marker" id="h-note-123" aria-level="3"><span>Uwaga 1</span></div><p class="">
@@ -3273,7 +3291,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <dd>
 
   <p>
-	sprzęt i oprogramowanie, które działa jako <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-11" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">program użytkownika</a> lub współdziała z popularnymi programami użytkownika, aby zapewnić osobom z niepełnosprawnościami niezbędne funkcjonalności, wykraczające poza możliwości oferowane przez popularne programy użytkownika; 
+	sprzęt i oprogramowanie, które działa jako <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-12" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">program użytkownika</a> lub współdziała z popularnymi programami użytkownika, aby zapewnić osobom z niepełnosprawnościami niezbędne funkcjonalności, wykraczające poza możliwości oferowane przez popularne programy użytkownika; 
 
   </p>
 
@@ -3379,7 +3397,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <dd>
 
   <p>
-    informacje i wrażenia sensoryczne, które mają być przekazywane użytkownikowi za pośrednictwem <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-12" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">programu użytkownika</a>, w tym kod lub znaczniki definiujące <a href="#dfn-struktura" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-struktura-2" title="Sposób, w jaki poszczególne części strony internetowej są ułożone i połączone ze sobą; oraz Sposób ułożenia zbioru stron internetowych.">strukturę</a>, <a href="#dfn-prezentacja" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-prezentacja-5" title="renderowanie treści w sposób, który jest postrzegalny dla użytkownika">prezentację</a> i interakcje
+    informacje i wrażenia sensoryczne, które mają być przekazywane użytkownikowi za pośrednictwem <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-13" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">programu użytkownika</a>, w tym kod lub znaczniki definiujące <a href="#dfn-struktura" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-struktura-2" title="Sposób, w jaki poszczególne części strony internetowej są ułożone i połączone ze sobą; oraz Sposób ułożenia zbioru stron internetowych.">strukturę</a>, <a href="#dfn-prezentacja" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-prezentacja-5" title="renderowanie treści w sposób, który jest postrzegalny dla użytkownika">prezentację</a> i interakcje
   </p>
 
 </dd>
@@ -3482,7 +3500,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <dt><dfn data-lt="właściwości stylu|właściwości stylów|właściwość stylu" id="dfn-w-asciwosci-stylu" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">właściwość stylu</dfn></dt>
 <dd>
 
-  <p>właściwość, której wartość określa sposób prezentacji (np. czcionka, kolor, rozmiar, lokalizacja, wypełnienie, głośność, synteza mowy) elementów treści w trakcie ich renderowania (np. na ekranie, przez głośnik, przez wyświetlacz brajlowski, przez <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-13" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">programy użytkownika</a>).</p>
+  <p>właściwość, której wartość określa sposób prezentacji (np. czcionka, kolor, rozmiar, lokalizacja, wypełnienie, głośność, synteza mowy) elementów treści w trakcie ich renderowania (np. na ekranie, przez głośnik, przez wyświetlacz brajlowski, przez <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-14" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">programy użytkownika</a>).</p>
   <p>Właściwości stylu mogą mieć kilka źródeł:</p>
 
   <ul>
@@ -3771,7 +3789,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   <ol>
 
     <li>
-      <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-14" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">w programie użytkownika</a>,
+      <a href="#dfn-program-uzytkownika" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-program-uzytkownika-15" title="oprogramowanie umożliwiające pobieranie i przeglądanie treści internetowych">w programie użytkownika</a>,
     </li>
 
     <li>
@@ -4031,7 +4049,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <section id="references" class="appendix"><div class="header-wrapper"><h2 id="c-references"><bdi class="secno">C. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix C."></a></div><section id="informative-references"><div class="header-wrapper"><h3 id="c-1-informative-references"><bdi class="secno">C.1 </bdi>Informative references</h3><a class="self-link" href="#informative-references" aria-label="Permalink for Appendix C.1"></a></div>
     
     <dl class="bibliography"><dt id="bib-css3-values">[css3-values]</dt><dd>
-      <a href="https://www.w3.org/TR/css-values-3/"><cite>CSS Values and Units Module Level 3</cite></a>. Tab Atkins Jr.; Elika Etemad.  W3C. 22 March 2024. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/css-values-3/">https://www.w3.org/TR/css-values-3/</a>
+      <a href="https://www.w3.org/TR/css-values-3/"><cite>CSS Values and Units Module Level 3</cite></a>. Tab Atkins Jr.; Elika Etemad.  W3C. 22 March 2024. CRD. URL: <a href="https://www.w3.org/TR/css-values-3/">https://www.w3.org/TR/css-values-3/</a>
     </dd><dt id="bib-iso_9241-391">[ISO_9241-391]</dt><dd>
       <a href="https://www.iso.org/standard/56350.html"><cite>Ergonomics of human-system interaction—Part 391: Requirements, analysis and compliance test methods for the reduction of photosensitive seizures</cite></a>.  International Standards Organization. URL: <a href="https://www.iso.org/standard/56350.html">https://www.iso.org/standard/56350.html</a>
     </dd><dt id="bib-pointerevents">[pointerevents]</dt><dd>
@@ -4045,9 +4063,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </dd><dt id="bib-unesco">[UNESCO]</dt><dd>
       <a href="https://unesdoc.unesco.org/ark:/48223/pf0000219109"><cite>International Standard Classification of Education</cite></a>. 2011. URL: <a href="https://unesdoc.unesco.org/ark:/48223/pf0000219109">https://unesdoc.unesco.org/ark:/48223/pf0000219109</a>
     </dd><dt id="bib-wai-webcontent">[WAI-WEBCONTENT]</dt><dd>
-      <a href="https://www.w3.org/TR/WAI-WEBCONTENT/"><cite>Web Content Accessibility Guidelines 1.0</cite></a>. Wendy Chisholm; Gregg Vanderheiden; Ian Jacobs.  W3C. 5 May 1999. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WAI-WEBCONTENT/">https://www.w3.org/TR/WAI-WEBCONTENT/</a>
+      <a href="https://www.w3.org/TR/WAI-WEBCONTENT/"><cite>Web Content Accessibility Guidelines 1.0</cite></a>. Wendy Chisholm; Gregg Vanderheiden; Ian Jacobs.  W3C. 5 May 1999. W3C Proposed Recommendation. URL: <a href="https://www.w3.org/TR/WAI-WEBCONTENT/">https://www.w3.org/TR/WAI-WEBCONTENT/</a>
     </dd><dt id="bib-wcag21">[WCAG21]</dt><dd>
-      <a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Michael Cooper; Andrew Kirkpatrick; Joshue O'Connor; Alastair Campbell.  W3C. 21 September 2023. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a>
+      <a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Michael Cooper; Andrew Kirkpatrick; Joshue O'Connor; Alastair Campbell.  W3C. 12 December 2024. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a>
     </dd></dl>
   </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
@@ -4519,10 +4537,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
-    <li>
-      <a href="#ref-for-dfn-kontekst-lacza-okreslony-programowo-1" title="§ 2.4.4 Cel łącza (w kontekście)">§ 2.4.4 Cel łącza (w kontekście)</a> 
-    </li>
-  </ul>
+      <li>Not referenced in this document.</li>
+    </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-kontrolowane-przez-uzytkownika" aria-label="Links in this document to definition: kontrolowane przez użytkownika">
       <span class="caret"></span>
       <div>
@@ -4996,13 +5012,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <li>
       <a href="#ref-for-dfn-program-uzytkownika-1" title="§ 2.4.13 Wygląd fokusu">§ 2.4.13 Wygląd fokusu</a> 
     </li><li>
-      <a href="#ref-for-dfn-program-uzytkownika-2" title="§ 2.5.7 Ruch przeciągania">§ 2.5.7 Ruch przeciągania</a> 
+      <a href="#ref-for-dfn-program-uzytkownika-2" title="§ 2.5.5 Rozmiar celu (ulepszone)">§ 2.5.5 Rozmiar celu (ulepszone)</a> 
     </li><li>
-      <a href="#ref-for-dfn-program-uzytkownika-3" title="§ 2.5.8 Rozmiar celu (minimalny)">§ 2.5.8 Rozmiar celu (minimalny)</a> 
+      <a href="#ref-for-dfn-program-uzytkownika-3" title="§ 2.5.7 Ruch przeciągania">§ 2.5.7 Ruch przeciągania</a> 
     </li><li>
-      <a href="#ref-for-dfn-program-uzytkownika-4" title="§ 4.1.2 Nazwa, rola, wartość">§ 4.1.2 Nazwa, rola, wartość</a> 
+      <a href="#ref-for-dfn-program-uzytkownika-4" title="§ 2.5.8 Rozmiar celu (minimalny)">§ 2.5.8 Rozmiar celu (minimalny)</a> 
     </li><li>
-      <a href="#ref-for-dfn-program-uzytkownika-5" title="§ 6. Słownik">§ 6. Słownik</a> <a href="#ref-for-dfn-program-uzytkownika-6" title="Reference 2">(2)</a> <a href="#ref-for-dfn-program-uzytkownika-7" title="Reference 3">(3)</a> <a href="#ref-for-dfn-program-uzytkownika-8" title="Reference 4">(4)</a> <a href="#ref-for-dfn-program-uzytkownika-9" title="Reference 5">(5)</a> <a href="#ref-for-dfn-program-uzytkownika-10" title="Reference 6">(6)</a> <a href="#ref-for-dfn-program-uzytkownika-11" title="Reference 7">(7)</a> <a href="#ref-for-dfn-program-uzytkownika-12" title="Reference 8">(8)</a> <a href="#ref-for-dfn-program-uzytkownika-13" title="Reference 9">(9)</a> <a href="#ref-for-dfn-program-uzytkownika-14" title="Reference 10">(10)</a> 
+      <a href="#ref-for-dfn-program-uzytkownika-5" title="§ 4.1.2 Nazwa, rola, wartość">§ 4.1.2 Nazwa, rola, wartość</a> 
+    </li><li>
+      <a href="#ref-for-dfn-program-uzytkownika-6" title="§ 6. Słownik">§ 6. Słownik</a> <a href="#ref-for-dfn-program-uzytkownika-7" title="Reference 2">(2)</a> <a href="#ref-for-dfn-program-uzytkownika-8" title="Reference 3">(3)</a> <a href="#ref-for-dfn-program-uzytkownika-9" title="Reference 4">(4)</a> <a href="#ref-for-dfn-program-uzytkownika-10" title="Reference 5">(5)</a> <a href="#ref-for-dfn-program-uzytkownika-11" title="Reference 6">(6)</a> <a href="#ref-for-dfn-program-uzytkownika-12" title="Reference 7">(7)</a> <a href="#ref-for-dfn-program-uzytkownika-13" title="Reference 8">(8)</a> <a href="#ref-for-dfn-program-uzytkownika-14" title="Reference 9">(9)</a> <a href="#ref-for-dfn-program-uzytkownika-15" title="Reference 10">(10)</a> 
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-programowo-ustawione" aria-label="Links in this document to definition: programowo ustawione">
@@ -5695,7 +5713,104 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <a href="#ref-for-dfn-zargon-1" title="§ 3.1.3 Nietypowe słowa">§ 3.1.3 Nietypowe słowa</a> 
     </li>
   </ul>
-    </div><script id="respec-dfn-panel">(() => {
+    </div><script id="respec-highlight-vars">(() => {
+// @ts-check
+
+if (document.respec) {
+  document.respec.ready.then(setupVarHighlighter);
+} else {
+  setupVarHighlighter();
+}
+
+function setupVarHighlighter() {
+  document
+    .querySelectorAll("var")
+    .forEach(varElem => varElem.addEventListener("click", highlightListener));
+}
+
+function highlightListener(ev) {
+  ev.stopPropagation();
+  const { target: varElem } = ev;
+  const hightligtedElems = highlightVars(varElem);
+  const resetListener = () => {
+    const hlColor = getHighlightColor(varElem);
+    hightligtedElems.forEach(el => removeHighlight(el, hlColor));
+    [...HL_COLORS.keys()].forEach(key => HL_COLORS.set(key, true));
+  };
+  if (hightligtedElems.length) {
+    document.body.addEventListener("click", resetListener, { once: true });
+  }
+}
+
+// availability of highlight colors. colors from var.css
+const HL_COLORS = new Map([
+  ["respec-hl-c1", true],
+  ["respec-hl-c2", true],
+  ["respec-hl-c3", true],
+  ["respec-hl-c4", true],
+  ["respec-hl-c5", true],
+  ["respec-hl-c6", true],
+  ["respec-hl-c7", true],
+]);
+
+function getHighlightColor(target) {
+  // return current colors if applicable
+  const { value } = target.classList;
+  const re = /respec-hl-\w+/;
+  const activeClass = re.test(value) && value.match(re);
+  if (activeClass) return activeClass[0];
+
+  // first color preference
+  if (HL_COLORS.get("respec-hl-c1") === true) return "respec-hl-c1";
+
+  // otherwise get some other available color
+  return [...HL_COLORS.keys()].find(c => HL_COLORS.get(c)) || "respec-hl-c1";
+}
+
+function highlightVars(varElem) {
+  const textContent = norm(varElem.textContent);
+  const parent = varElem.closest(".algorithm, section");
+  const highlightColor = getHighlightColor(varElem);
+
+  const varsToHighlight = [...parent.querySelectorAll("var")].filter(
+    el =>
+      norm(el.textContent) === textContent &&
+      el.closest(".algorithm, section") === parent
+  );
+
+  // update availability of highlight color
+  const colorStatus = varsToHighlight[0].classList.contains("respec-hl");
+  HL_COLORS.set(highlightColor, colorStatus);
+
+  // highlight vars
+  if (colorStatus) {
+    varsToHighlight.forEach(el => removeHighlight(el, highlightColor));
+    return [];
+  } else {
+    varsToHighlight.forEach(el => addHighlight(el, highlightColor));
+  }
+  return varsToHighlight;
+}
+
+function removeHighlight(el, highlightColor) {
+  el.classList.remove("respec-hl", highlightColor);
+  // clean up empty class attributes so they don't come in export
+  if (!el.classList.length) el.removeAttribute("class");
+}
+
+function addHighlight(elem, highlightColor) {
+  elem.classList.add("respec-hl", highlightColor);
+}
+
+/**
+ * Same as `norm` from src/core/utils, but our build process doesn't allow
+ * imports in runtime scripts, so duplicated here.
+ * @param {string} str
+ */
+function norm(str) {
+  return str.trim().replace(/\s+/g, " ");
+}
+})()</script><script id="respec-dfn-panel">(() => {
 // @ts-check
 if (document.respec) {
   document.respec.ready.then(setupPanel);
