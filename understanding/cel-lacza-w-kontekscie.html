@@ -55,7 +55,7 @@
                <header class="box-h  box-h-icon">Kryterium sukcesu (KS) </header>
                <div class="box-i">
                   <p>
-                     <a href="#dfn-cel-lacza">Cel każdego łącza</a> można określić na podstawie samego tekstu łącza lub tekstu łącza wraz z , poza tymi przypadkami, kiedy cel łącza i tak byłby <a href="#dfn-niejednoznaczny-dla-uzytkownikow">niejednoznaczny dla użytkowników</a>.
+                     <a href="#dfn-cel-lacza">Cel każdego łącza</a> można określić na podstawie samego tekstu łącza lub tekstu łącza wraz z <a href="#dfn-kontekst-lacza-okreslony-programowo">programowo określonym kontekstem łącza</a>, poza tymi przypadkami, kiedy cel łącza i tak byłby <a href="#dfn-niejednoznaczny-dla-uzytkownikow">niejednoznaczny dla użytkowników</a>.
                      
                   </p>
                </div>
@@ -526,6 +526,43 @@
                         
                      </definition>
                   </dd>
+                  <dt id="dfn-kontekst-lacza-okreslony-programowo">kontekst łącza określony programowo</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           dodatkowe informacje, które mogą być <a href="#dfn-okreslony-programowo">określone programowo</a> na podstawie <a href="#dfn-relacja">relacji</a> między łączem oraz tekstem przyległym do łącza, i przedstawione użytkownikom na różne
+                           sposoby
+                           
+                        </p>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              W języku HTML informacje, które można programowo określić z kontekstu łącza, obejmują
+                              tekst, który znajduje się w tym samym akapicie, na tej samej liście albo w komórce
+                              tabeli, co łącze, lub w komórce nagłówka tabeli, która jest powiązana z komórką tabeli,
+                              w której znajduje się łącze.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <p class="note-title marker">Uwaga</p>
+                           <p>
+                              Ponieważ czytnik ekranu (ang. screen reader) interpretuje interpunkcję, może też podać
+                              kontekst bieżącego zdania, kiedy fokus znajdzie się na łączu w tym zdaniu.
+                              
+                           </p>
+                        </div>
+                        
+                        
+                     </definition>
+                  </dd>
                   <dt id="dfn-mechanizm">mechanizm</dt>
                   <dd>
                      <definition xmlns="">
@@ -761,6 +798,44 @@
                         
                      </definition>
                   </dd>
+                  <dt id="dfn-okreslony-programowo">określony programowo</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">
+                           	określony przez oprogramowanie na podstawie danych dostarczonych przez autora, przekazanych
+                           w taki sposób, że różne <a href="#dfn-program-uzytkownika">programy użytkownika</a>, w tym technologie wspomagające, mogą wyodrębnić i przedstawić te informacje użytkownikom
+                           w różnych trybach
+                           
+                        </p>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              	 Określane w języku znaczników na podstawie elementów i atrybutów, do których dostęp
+                              bezpośredni uzyskuje się za pomocą powszechnie dostępnej technologii wspomagającej.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
+                           
+                           <p>
+                              Określone na podstawie struktur danych specyficznych dla danej technologii w języku
+                              innym niż język znaczników i udostępnione technologii wspomagającej poprzez API dostępności,
+                              które jest obsługiwane przez najczęściej spotykane technologie wspomagające.
+                              
+                           </p>
+                           
+                        </aside>
+                        
+                        
+                     </definition>
+                  </dd>
                   <dt id="dfn-polegac-na">polegać na</dt>
                   <dd>
                      <definition xmlns="">
@@ -838,6 +913,16 @@
                            </p>
                            
                         </aside>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-relacja">relacja</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">posiadające znaczenie powiązanie między różnymi elementami treści</p>
                         
                         
                      </definition>
@@ -1323,7 +1408,7 @@
                błędne lub nieścisłe tłumaczenia oryginału. Łącze do oryginalnego dokumentu W3C znajduje
                się <a href="#brief">w sekcji W skrócie</a>.
             </p>
-            <p><strong>Data:</strong> Aktualizacja 14 April 2025.
+            <p><strong>Data:</strong> Aktualizacja 2 February 2026.
             </p>
             <p><strong>Opracowane przez</strong> <a href="https://www.w3.org/groups/wg/ag/participants">uczestników Accessibility Guidelines Working Group (AG WG)</a> (współrzewodniczący: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery.
                Kontakt z obsadą W3C: Michael Cooper).
@@ -1348,7 +1433,7 @@
             </div>
             <div dir="auto" translate="no" lang="pl">
                <p>
-                  					Prawa autorskie do wszystkich materiałów w tej witrynie należą do W3C.<br /> Copyright © 2025 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). Zobacz <a href="https://www.w3.org/WAI/about/using-wai-material/" lang="en" hreflang="en">Permission to Use WAI Material</a>.
+                  					Prawa autorskie do wszystkich materiałów w tej witrynie należą do W3C.<br /> Copyright © 2026 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). Zobacz <a href="https://www.w3.org/WAI/about/using-wai-material/" lang="en" hreflang="en">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>

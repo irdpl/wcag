@@ -22,7 +22,7 @@
                         <svg focusable="false" aria-hidden="true" class="icon-arrow-left-thin pager-icon" viewBox="0 0 16 16">
                            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path>
                         </svg>Poprzednie KS: Prezentacja wizualna</a></li>
-                  <li class="nav__item"><a href="ponowne-wlewanie">Następne KS: Ponowne wlewanie
+                  <li class="nav__item"><a href="dopasowanie-do-ekranu">Następne KS: Dopasowanie do ekranu
                         <svg focusable="false" aria-hidden="true" class="icon-arrow-right-thin pager-icon" viewBox="0 0 16 16">
                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                         </svg></a></li>
@@ -407,7 +407,9 @@
                         
                         
                         <p xmlns="http://www.w3.org/1999/xhtml">
-                           takie przedstawienie danych przez oprogramowanie dostawcy, które pozwala różnym <a href="#dfn-program-uzytkownika">programom użytkownika</a>, w tym <a href="#dfn-technologie-wspomagajace">technologiom wspomagającym</a>, odczytać i przedstawić daną informację w sposób, jakiego potrzebuje użytkownik
+                           	określony przez oprogramowanie na podstawie danych dostarczonych przez autora, przekazanych
+                           w taki sposób, że różne <a href="#dfn-program-uzytkownika">programy użytkownika</a>, w tym technologie wspomagające, mogą wyodrębnić i przedstawić te informacje użytkownikom
+                           w różnych trybach
                            
                         </p>
                         
@@ -415,8 +417,8 @@
                         <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
                            
                            <p>
-                              	  Przedstawienie danych w języku znaczników z elementami i atrybutami, które są dostępne
-                              bezpośrednio dla najczęściej używanych technologii wspomagających
+                              	 Określane w języku znaczników na podstawie elementów i atrybutów, do których dostęp
+                              bezpośredni uzyskuje się za pomocą powszechnie dostępnej technologii wspomagającej.
                               
                            </p>
                            
@@ -426,9 +428,9 @@
                         <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
                            
                            <p>
-                              Przedstawienie za pomocą technologii – szczególnie struktury danych sformułowanych
-                              w języku innym niż język znaczników i nastawionych na technologie wspomagające poprzez
-                              API dostępności, które jest obsługiwane przez najczęściej spotykane technologie wspomagające.
+                              Określone na podstawie struktur danych specyficznych dla danej technologii w języku
+                              innym niż język znaczników i udostępnione technologii wspomagającej poprzez API dostępności,
+                              które jest obsługiwane przez najczęściej spotykane technologie wspomagające.
                               
                            </p>
                            
@@ -455,121 +457,6 @@
                            </p>
                            
                         </aside>
-                        
-                        
-                     </definition>
-                  </dd>
-                  <dt id="dfn-technologie-wspomagajace">technologie wspomagające</dt>
-                  <dd>
-                     <definition xmlns="">
-                        
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml">
-                           	sprzęt i oprogramowanie, które działa jako <a href="#dfn-program-uzytkownika">program użytkownika</a> lub współdziała z popularnymi programami użytkownika, aby zapewnić osobom z niepełnosprawnościami
-                           niezbędne funkcjonalności, wykraczające poza możliwości oferowane przez popularne
-                           programy użytkownika; 
-                           
-                           
-                        </p>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>
-                              	Funkcjonalności zapewniane przez technologie wspomagające obejmują alternatywny sposób
-                              prezentacji treści (np. mowa syntetyczna lub powiększenie obrazu), alternatywne sposoby
-                              wprowadzania danych (np. za pomocą głosu), dodatkowe mechanizmy nawigacji i orientacji
-                              oraz przekształcania treści (np. w celu uczynienia tabel bardziej dostępnymi).
-                              
-                           </p>
-                        </div>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>
-                              Technologie wspomagające często przekazują informacje i dane do standardowych aplikacji
-                              za pośrednictwem specjalnych API.
-                              
-                           </p>
-                        </div>
-                        
-                        
-                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           <p class="note-title marker">Uwaga</p>
-                           <p>
-                              	Rozróżnienie pomiędzy popularnymi programami użytkownika a technologiami wspomagającymi
-                              nie jest oczywiste. Wiele popularnych programów użytkownika posiada różne rozwiązania
-                              wspomagające osoby z niepełnosprawnościami. Główna różnica pomiędzy nimi polega na
-                              tym, że popularne programy użytkownika są ukierunkowane na szerokie i zróżnicowane
-                              grupy odbiorców, zarówno z niepełnosprawnościami, jak i bez niepełnosprawności. Natomiast
-                              technologie wspomagające skierowane są do wąskiej grupy odbiorców z określonymi rodzajami
-                              niepełnosprawności. Wsparcie świadczone za pomocą technologii wspomagających jest
-                              zatem bardziej wyspecjalizowane i nakierowane na odbiorcę z konkretnymi potrzebami.
-                              Popularne programy użytkownika mogą dostarczać technologiom wspomagającym niezbędne
-                              funkcjonalności, takie jak pobieranie treści internetowych z obiektów programowych
-                              lub odwzorowanie kodu do postaci przyjaźniejszej dla tych technologii.
-                              
-                           </p>
-                        </div>
-                        
-                        
-                        <aside xmlns="http://www.w3.org/1999/xhtml" class="example">
-                           
-                           <p>
-                              Technologie wspomagające ważne w kontekście tego dokumentu to między innymi:
-                              
-                           </p>
-                           
-                        </aside>
-                        
-                        
-                        <ul xmlns="http://www.w3.org/1999/xhtml">
-                           
-                           
-                           <li>
-                              	  lupy ekranowe i inne programy wspomagające czytanie wzrokowe, używane przez osoby
-                              z niepełnosprawnościami wzroku, percepcyjnymi i innymi związanymi z korzystaniem z
-                              druku, pozwalające na zmianę czcionki, jej rozmiaru, odstępów, koloru oraz na synchronizację
-                              głosu z tekstem itp., w celu poprawienia czytelności wyświetlanego tekstu i obrazów;
-                              
-                           </li>
-                           
-                           
-                           <li>
-                              czytniki ekranu, używane przez osoby niewidome do odczytu treści tekstowych za pomocą
-                              mowy syntetycznej lub brajla;
-                              
-                           </li>
-                           
-                           
-                           <li>
-                              programy przetwarzające tekst na mowę syntetyczną, używane przez niektóre osoby z
-                              niepełnosprawnościami poznawczymi, językowymi i trudnościami w nauce w celu przekształcenia
-                              tekstu w mowę syntetyczną;
-                              
-                           </li>
-                           
-                           
-                           <li>programy rozpoznające mowę, używane przez niektóre osoby z niepełnosprawnościami fizycznymi;</li>
-                           
-                           
-                           <li>
-                              specjalne klawiatury, używane przez osoby z niektórymi niepełnosprawnościami fizycznymi,
-                              które symulują standardową klawiaturę (w tym klawiatury specjalne wyposażone we wskaźniki
-                              nagłowne, przełączniki, urządzenia „wciągnij/dmuchnij” (<span lang="en">sip-and-puff</span>) i inne specjalne urządzenia do wprowadzania danych);
-                              
-                           </li>
-                           
-                           
-                           <li>
-                              specjalne wskaźniki, używane przez osoby z niektórymi rodzajami niepełnosprawności
-                              fizycznych w celu symulowania kursora myszy i naciskania przycisków.
-                              
-                           </li>
-                           
-                           
-                        </ul>
                         
                         
                      </definition>
@@ -613,7 +500,7 @@
                błędne lub nieścisłe tłumaczenia oryginału. Łącze do oryginalnego dokumentu W3C znajduje
                się <a href="#brief">w sekcji W skrócie</a>.
             </p>
-            <p><strong>Data:</strong> Aktualizacja 14 April 2025.
+            <p><strong>Data:</strong> Aktualizacja 2 February 2026.
             </p>
             <p><strong>Opracowane przez</strong> <a href="https://www.w3.org/groups/wg/ag/participants">uczestników Accessibility Guidelines Working Group (AG WG)</a> (współrzewodniczący: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery.
                Kontakt z obsadą W3C: Michael Cooper).
@@ -638,7 +525,7 @@
             </div>
             <div dir="auto" translate="no" lang="pl">
                <p>
-                  					Prawa autorskie do wszystkich materiałów w tej witrynie należą do W3C.<br /> Copyright © 2025 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). Zobacz <a href="https://www.w3.org/WAI/about/using-wai-material/" lang="en" hreflang="en">Permission to Use WAI Material</a>.
+                  					Prawa autorskie do wszystkich materiałów w tej witrynie należą do W3C.<br /> Copyright © 2026 World Wide Web Consortium (<a href="https://www.w3.org/">W3C</a><sup>®</sup>). Zobacz <a href="https://www.w3.org/WAI/about/using-wai-material/" lang="en" hreflang="en">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
