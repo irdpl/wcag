@@ -39,7 +39,6 @@ jobs:
       - name: script
         run: |
           mkdir -p output
-          git clone --depth=1 --branch=gh-pages https://github.com/irdpl/wcag.git output
 
           curl -f --retry 3 \
             "https://www.w3.org/publications/spec-generator/?type=respec&url=https://raw.githack.com/irdpl/wcag/pl-wcag-22-nowe/guidelines/index.html" \
