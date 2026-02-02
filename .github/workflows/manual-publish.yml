@@ -20,21 +20,23 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-      - name: Checkout repository
+      - name: Checkout the repository
         uses: actions/checkout@v4
 
       - name: Setup Java
+        # see https://github.com/actions/setup-java#supported-distributions
+        # note that this also deploys ant
         uses: actions/setup-java@v4
         with:
-          distribution: adopt
+          distribution: 'adopt'
           java-version: '11'
 
-      - name: Install Ant
+      - name: before_install
         run: |
           tar -xzvf lib/apache-ant-1.10.6-bin.tar.gz
           echo "$(pwd)/apache-ant-1.10.6/bin" >> $GITHUB_PATH
 
-      - name: Build site
+      - name: script
         run: |
           mkdir -p output
           git clone --depth=1 --branch=gh-pages https://github.com/irdpl/wcag.git output
@@ -52,6 +54,14 @@ jobs:
             -o output/conformance-challenges/index.html
 
           ant deploy
+
+      - name: Upload Artifact
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: failed-artifact
+          path: |
+            ./output
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
