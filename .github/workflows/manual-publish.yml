@@ -1,58 +1,72 @@
 name: CI
 
-# Reference documentation: https://docs.github.com/en/actions/reference
-
-# See https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#onpushpull_requestbranchestags
 on:
   push:
     branches: [pl-wcag-22-nowe]
-   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-  
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  main:
-    name: deploy
+  build:
+    name: Build pages
     runs-on: ubuntu-24.04
-    env:
-      GH_REF: github.com/irdpl/wcag.git
+
     steps:
-      - name: Checkout the repository
+      - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Setup Java
-        # see https://github.com/actions/setup-java#supported-distributions
-        # note that this also deploys ant
         uses: actions/setup-java@v4
         with:
-          distribution: 'adopt'
+          distribution: adopt
           java-version: '11'
-      - name: before_install
+
+      - name: Install Ant
         run: |
           tar -xzvf lib/apache-ant-1.10.6-bin.tar.gz
-          export PATH=`pwd`/apache-ant-1.10.6/bin:$PATH
-      - name: script
+          echo "$(pwd)/apache-ant-1.10.6/bin" >> $GITHUB_PATH
+
+      - name: Build site
         run: |
-          mkdir output
+          mkdir -p output
           git clone --depth=1 --branch=gh-pages https://github.com/irdpl/wcag.git output
-          curl https://www.w3.org/publications/spec-generator/?type=respec"&"url=https://raw.githack.com/irdpl/wcag/pl-wcag-22-nowe/guidelines/index.html -o output/guidelines/22/index.html -f  --retry 3
-          curl https://www.w3.org/publications/spec-generator/?type=respec"&"url=https://raw.githack.com/irdpl/wcag/pl-wcag-22-nowe/requirements/22/index.html -o output/requirements/22/index.html -f  --retry 3
-          curl https://www.w3.org/publications/spec-generator/?type=respec"&"url=https://raw.githack.com/irdpl/wcag/pl-wcag-22-nowe/conformance-challenges/index.html -o output/conformance-challenges/index.html -f  --retry 3
+
+          curl -f --retry 3 \
+            "https://www.w3.org/publications/spec-generator/?type=respec&url=https://raw.githack.com/irdpl/wcag/pl-wcag-22-nowe/guidelines/index.html" \
+            -o output/guidelines/22/index.html
+
+          curl -f --retry 3 \
+            "https://www.w3.org/publications/spec-generator/?type=respec&url=https://raw.githack.com/irdpl/wcag/pl-wcag-22-nowe/requirements/22/index.html" \
+            -o output/requirements/22/index.html
+
+          curl -f --retry 3 \
+            "https://www.w3.org/publications/spec-generator/?type=respec&url=https://raw.githack.com/irdpl/wcag/pl-wcag-22-nowe/conformance-challenges/index.html" \
+            -o output/conformance-challenges/index.html
+
           ant deploy
 
-      - name: Upload Artifact
-        #if: failure()  # Upload artifact only if the previous step (Build) fails
-        uses: actions/upload-artifact@v4
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: failed-artifact
-          path: |
-                ./output
+          path: ./output
 
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-         github_token: ${{ secrets.GITHUB_TOKEN }}
-         publish_dir: ./output
-         cname: wcag.irdpl.pl
+        id: deployment
+        uses: actions/deploy-pages@v4
