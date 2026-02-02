@@ -38,7 +38,10 @@ jobs:
 
       - name: script
         run: |
-          mkdir -p output
+          mkdir -p \
+                output/guidelines/22 \
+                output/requirements/22 \
+                output/conformance-challenges
 
           curl -f --retry 3 \
             "https://www.w3.org/publications/spec-generator/?type=respec&url=https://raw.githack.com/irdpl/wcag/pl-wcag-22-nowe/guidelines/index.html" \
