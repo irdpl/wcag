@@ -48,8 +48,7 @@ jobs:
         with:
           name: failed-artifact
           path: |
-                ./
-                !output
+                ./output
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
