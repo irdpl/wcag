@@ -55,6 +55,8 @@ jobs:
             "https://www.w3.org/publications/spec-generator/?type=respec&url=https://raw.githack.com/irdpl/wcag/pl-wcag-22-nowe/conformance-challenges/index.html" \
             -o output/conformance-challenges/index.html
 
+            echo wcag.irdpl.pl > output/CNAME
+
           ant deploy
 
       - name: Upload Artifact
